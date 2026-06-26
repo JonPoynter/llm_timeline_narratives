@@ -23,6 +23,11 @@ border-radius:8px;padding:12px 14px;margin:10px 0}
 .event.t-single_source{border-left-color:var(--single)}
 .event.t-web_only_verified{border-left-color:var(--webv)}
 .event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
 .ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
 .date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
 .eh{font-weight:600;font-size:15px;flex:1 1 auto}
@@ -71,7 +76,7 @@ ul.q{font-size:14px;color:#374151}
 <div class='range'>2024-08-27 → 2024-12-31</div>
 <div class='psum'>Cerebras publicly launched its high-speed inference platform, positioning it as substantially faster than incumbent GPU-based solutions and API-compatible with OpenAI’s Chat Completions interface. The launch underscored a go-to-market centered on ultra-low-latency token generation and easy developer migration.
 Concurrently, the broader AI infrastructure landscape intensified as xAI scaled Colossus with NVIDIA Hopper GPUs, highlighting the competitive backdrop for training and inference capacity that Cerebras would face in subsequent years.</div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0001">
 <div class="ev-top">
 <span class="date">2024-08-27</span>
 <span class="eh">Cerebras launches Cerebras Inference, positioned as the world’s fastest AI inference</span>
@@ -89,7 +94,7 @@ Concurrently, the broader AI infrastructure landscape intensified as xAI scaled 
 <span class="span">OpenAI Chat Completions API</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0002">
 <div class="ev-top">
 <span class="date">2024-10-28</span>
 <span class="eh">xAI’s Colossus grows to 100k+ NVIDIA Hopper GPUs, underscoring competitive scale</span>
@@ -112,7 +117,7 @@ Concurrently, the broader AI infrastructure landscape intensified as xAI scaled 
 <div class='range'>2025-01-01 → 2025-12-31</div>
 <div class='psum'>Cerebras accelerated product integrations with leading open-weight ecosystems. It launched DeepSeek R1 Llama-70B on its inference stack with record token generation rates, partnered with Mistral on a speed milestone, and collaborated with Meta to power ultra-fast inference in the new Llama API, aimed at dramatically improving developer experience.
 These integrations reinforced Cerebras’s positioning as a low-latency inference specialist across multiple model families, expanding addressable developer and enterprise demand outside of GPU-centric stacks.</div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0003">
 <div class="ev-top">
 <span class="date">2025-01-29</span>
 <span class="eh">DeepSeek R1 Llama-70B launches on Cerebras Inference with record speeds</span>
@@ -130,7 +135,7 @@ These integrations reinforced Cerebras’s positioning as a low-latency inferenc
 <span class="span">100% on U.S. AI infrastructure</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0004">
 <div class="ev-top">
 <span class="date">2025-02-06</span>
 <span class="eh">Cerebras partners with Mistral; Reuters notes speed record claim</span>
@@ -149,7 +154,7 @@ These integrations reinforced Cerebras’s positioning as a low-latency inferenc
 <span class="span">first announced major win at a tier-one model maker</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0005">
 <div class="ev-top">
 <span class="date">2025-04-29</span>
 <span class="eh">Meta teams with Cerebras to power ultra-fast inference in new Llama API</span>
@@ -174,7 +179,7 @@ These integrations reinforced Cerebras’s positioning as a low-latency inferenc
 <div class='range'>2026-01-01 → 2026-04-30</div>
 <div class='psum'>OpenAI publicly disclosed a partnership to add 750MW of Cerebras-powered low-latency inference to its platform, with phased activation through 2028. In February, OpenAI launched GPT-5.3-Codex-Spark on Cerebras hardware, noting it as a first production deployment beyond NVIDIA for certain inference tasks.
 In April, The Information (via Investing.com) reported OpenAI would spend over $20B on Cerebras systems over three years and extend warrants for an equity stake, alongside $1B for data center build-outs, foreshadowing the significant RPO and financing structure Cerebras later detailed.</div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0007">
 <div class="ev-top">
 <span class="date">2026-01-14</span>
 <span class="eh">OpenAI announces 750MW Cerebras low-latency inference partnership</span>
@@ -191,7 +196,7 @@ In April, The Information (via Investing.com) reported OpenAI would spend over $
 <span class="span">come online in multiple tranches through 2028</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0008">
 <div class="ev-top">
 <span class="date">2026-02-13</span>
 <span class="eh">OpenAI deploys GPT-5.3-Codex-Spark on Cerebras chips</span>
@@ -210,7 +215,7 @@ In April, The Information (via Investing.com) reported OpenAI would spend over $
 <span class="span">1,000 tokens per second</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0009">
 <div class="ev-top">
 <span class="date">2026-04-16</span>
 <span class="eh">Report: OpenAI to spend over $20B on Cerebras with warrants and $1B for data centers</span>
@@ -234,7 +239,7 @@ In April, The Information (via Investing.com) reported OpenAI would spend over $
 <div class='range'>2026-05-01 → 2026-06-25</div>
 <div class='psum'>Cerebras completed a blockbuster IPO in May 2026, followed by its first earnings release as a public company in late June. The company disclosed a multi-year OpenAI agreement to deploy 750MW of inference capacity valued at over $20B, and reported RPO of $25.0B largely tied to the OpenAI MRA, with a recognition schedule extending through 2028 and beyond. Q1 showed rapid cloud revenue growth and rising cloud mix, alongside robust cash balances but negative free cash flow due to capital intensity.
 Cerebras also unveiled a multi-year AWS partnership for a disaggregated inference architecture (Trainium for prefill, CS‑3 for decode) with expected revenue contribution from 2027. Management flagged constraints around data centers, power, and site additions across regions. Meanwhile, OpenAI announced testing of “Jalapeño,” its first custom chip with Broadcom, indicating potential long-term substitution risk even as OpenAI cited ongoing use of Cerebras for inference.</div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0010">
 <div class="ev-top">
 <span class="date">2026-05-16</span>
 <span class="eh">Cerebras completes blockbuster IPO; TechCrunch cites ~$5.55B raised</span>
@@ -252,7 +257,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">jumped as much as 108 percent</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0011">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">First earnings as a public company; shares fell after-hours on margin caution</span>
@@ -269,7 +274,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">fell about 7–9% in after-hours</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0012">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Execution of multi-year OpenAI 750MW inference agreement (&gt; $20B) with early revenue</span>
@@ -287,7 +292,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">early revenue</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0013">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">RPO reached $25.0B, largely tied to OpenAI MRA</span>
@@ -305,7 +310,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">OpenAI Master Relationship Agreement</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0014">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">RPO recognition schedule disclosed through 2028 and beyond</span>
@@ -323,7 +328,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">the remainder thereafter</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0015">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Deferred revenue increased by $36.8M q/q in Q1</span>
@@ -339,7 +344,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">q/q in Q1</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0016">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">AWS multi-year disaggregated inference partnership (Trainium prefill; CS‑3 decode)</span>
@@ -357,7 +362,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">CS‑3 for decode</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0017">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">AWS revenue contribution expected to begin in 2027</span>
@@ -372,7 +377,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">AWS revenue contribution is expected to begin in 2027.</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0018">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Management: Data centers are the constraint</span>
@@ -388,7 +393,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">The constraint is data centers.</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0019">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">2026 wafer supply secured; pacing is power and sites</span>
@@ -404,7 +409,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">adding power and sites</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0020">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Additional facilities coming online 2026–2027; back-end loaded growth</span>
@@ -420,7 +425,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">back‑end loaded</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0021">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">OpenAI can consume via Cerebras Cloud or its own data centers</span>
@@ -437,7 +442,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">“all of the above”</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0022">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Only two hardware vendors currently serve OpenAI models; Cerebras is one</span>
@@ -455,7 +460,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">Cerebras is one</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0023">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Fast tokens are sold at a premium</span>
@@ -471,7 +476,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">“sold at a premium”</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0024">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Pricing supports margins; rentals embedded in guidance</span>
@@ -489,7 +494,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">embedded in Q2</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0025">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Hardware expected to decline slightly as mix shifts to cloud</span>
@@ -505,7 +510,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">mix shifts</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0026">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">FY2026 Core guidance: $855–$865M revenue; GM 38–41%; OpM (28)–(32)%</span>
@@ -522,7 +527,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">(28)–(32)%</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0027">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Q2 2026 Core guidance: revenue ~$194M; GM 36–38%; OpM (30)–(32)%</span>
@@ -539,7 +544,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">(30)–(32)%</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0028">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Cloud &amp; other services revenue $82.8M (+178% y/y); 43% mix</span>
@@ -556,7 +561,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">+178% y/y</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0029">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Hardware revenue $110.6M (+59% y/y); 57% mix</span>
@@ -573,7 +578,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">+59% y/y</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0030">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Cloud GAAP gross margin 48.9%</span>
@@ -588,7 +593,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">Cloud &amp; other services 48.9%.</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0031">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Core Cloud gross margin 52.9%</span>
@@ -603,7 +608,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">Cloud &amp; other services 52.9%.</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0032">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Cloud mix rose to 43% vs 30% prior year</span>
@@ -619,7 +624,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">vs 30%</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0033">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Series H preferred financing of $1.0B (January)</span>
@@ -636,7 +641,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">(January)</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0034">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">OpenAI working capital loan of $1.0B (January)</span>
@@ -653,7 +658,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">(January)</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0035">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Established $850M revolving credit facility (April)</span>
@@ -670,7 +675,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">(April)</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0036">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">IPO gross proceeds of $6.4B (Q2)</span>
@@ -687,7 +692,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">in Q2</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0037">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Q1 capex of $132.0M</span>
@@ -703,7 +708,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">purchases of property and equipment</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0038">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Free cash flow approximately -$119.6M in Q1</span>
@@ -719,7 +724,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">OCF minus capex</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0039">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Operating cash flow $12.3M in Q1</span>
@@ -735,7 +740,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">$12.3M</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0040">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Cash and investments totaled $3.3B at March 31, 2026</span>
@@ -752,7 +757,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">March 31, 2026</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0041">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Risk: Customer concentration tied to OpenAI could affect revenue timing and margins</span>
@@ -770,7 +775,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">materially affect</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0042">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Risk: Margin sensitivity to data-center pass-through costs and utilization</span>
@@ -787,7 +792,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">below Q1 levels</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0043">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Risk: Capital intensity and long-term data-center lease commitments increase leverage</span>
@@ -804,7 +809,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">increase financial leverage</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0044">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Risk: Conversion of large RPO depends on build-out and power availability</span>
@@ -821,7 +826,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">slippage could defer revenue</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0045">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">2H26 growth back-end loaded to DC capacity adds and OpenAI ramp</span>
@@ -838,7 +843,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">OpenAI ramp</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0046">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Pricing remains a near-term tailwind</span>
@@ -853,7 +858,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">pricing remains a tailwind</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0047">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Hardware revenue expected to drift slightly lower sequentially as mix tilts to cloud</span>
@@ -869,7 +874,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">mix tilts to cloud</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0048">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Pursuing additional decode partnerships with GPU-based operators</span>
@@ -885,7 +890,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">GPU‑based operators</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0049">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Global site additions underway; exploration across multiple regions</span>
@@ -903,7 +908,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">Singapore, India, and Indonesia</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0050">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Near-term margin pressure from pass-through costs and scaling cloud capacity</span>
@@ -920,7 +925,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">scaling cloud capacity</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0051">
 <div class="ev-top">
 <span class="date">2026-05-27</span>
 <span class="eh">Cerebras highlights open-source alternatives to Claude, GPT, and Gemini</span>
@@ -940,7 +945,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">Gemma 4 31B</span>
 </details>
 </div>
-<div class="event t-web_only_unverified">
+<div class="event t-web_only_unverified" id="E0052">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Q1 update: Enterprise trials of Kimi K2.6 and Gemma 4; Gemma 4 31B runs much faster</span>
@@ -958,7 +963,7 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 <span class="span">order of magnitude faster</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0053">
 <div class="ev-top">
 <span class="date">2026-06-24</span>
 <span class="eh">OpenAI unveils ‘Jalapeño’ custom inference chip with Broadcom; long-term platform risk</span>
@@ -980,29 +985,29 @@ Cerebras also unveiled a multi-year AWS partnership for a disaggregated inferenc
 </div>
 </div>
 <section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
-<tr><td class='k'>equity_investment_exposure</td><td>E0009, E0033, E0036</td></tr>
-<tr><td class='k'>cloud_compute_revenue_exposure</td><td>E0016, E0017, E0028, E0030, E0031, E0032, E0045, E0049, E0012</td></tr>
-<tr><td class='k'>chip_accelerator_exposure</td><td>E0012, E0020, E0049</td></tr>
-<tr><td class='k'>data_center_power_exposure</td><td>E0018, E0019, E0044, E0049, E0020</td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td>E0016, E0005</td></tr>
-<tr><td class='k'>product_integration_exposure</td><td>E0001, E0003, E0004, E0005, E0016, E0048, E0051, E0052</td></tr>
-<tr><td class='k'>enterprise_adoption_exposure</td><td>E0028, E0021, E0008, E0012</td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td>E0001, E0003, E0005, E0023</td></tr>
-<tr><td class='k'>strategic_option_value</td><td>E0016, E0007, E0051</td></tr>
-<tr><td class='k'>competitive_threat_from_provider</td><td>E0053, E0002</td></tr>
-<tr><td class='k'>provider_as_platform_absorber</td><td>E0053, E0016, E0021</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0049'>E0049</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0049'>E0049</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0044'>E0044</a>, <a class='evref' href='#E0049'>E0049</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0048'>E0048</a>, <a class='evref' href='#E0051'>E0051</a>, <a class='evref' href='#E0052'>E0052</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0051'>E0051</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0053'>E0053</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0053'>E0053</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td>E0021</td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0021'>E0021</a></td></tr>
 <tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td>E0016, E0005</td></tr>
-<tr><td class='k'>ecosystem_control_loss</td><td>E0016, E0007, E0053</td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0053'>E0053</a></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>provider_specificity</td><td>E0012, E0013, E0041</td></tr>
-<tr><td class='k'>multi_model_hedge</td><td>E0003, E0004, E0005, E0051, E0052</td></tr>
-<tr><td class='k'>switching_flexibility</td><td>E0016, E0051</td></tr>
-<tr><td class='k'>dependency_duration</td><td>E0014, E0012, E0007</td></tr>
-<tr><td class='k'>contractual_commitment_strength</td><td>E0013, E0012</td></tr>
-<tr><td class='k'>user_lock_in_relevance</td><td>E0001</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0041'>E0041</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0051'>E0051</a>, <a class='evref' href='#E0052'>E0052</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0051'>E0051</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What is the definitive structure and percentage for OpenAI’s reported warrant-based equity stake, and how is it tied to future spend milestones?</li>

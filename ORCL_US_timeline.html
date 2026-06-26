@@ -23,6 +23,11 @@ border-radius:8px;padding:12px 14px;margin:10px 0}
 .event.t-single_source{border-left-color:var(--single)}
 .event.t-web_only_verified{border-left-color:var(--webv)}
 .event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
 .ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
 .date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
 .eh{font-weight:600;font-size:15px;flex:1 1 auto}
@@ -71,7 +76,7 @@ ul.q{font-size:14px;color:#374151}
 <div class='range'>2023-06-13 → 2024-06-11</div>
 <div class='psum'>Oracle began embedding generative AI capabilities across OCI and its applications stack, anchored by an enterprise-focused partnership with Cohere and subsequent limited availability of the OCI Generative AI service. By January 2024, Oracle made the service generally available, adding model choice from Cohere and Meta Llama 2, and in early June 2024 expanded supported models with Meta Llama 3.
 On June 11, 2024, Oracle announced OpenAI would extend Microsoft’s Azure AI platform onto Oracle Cloud Infrastructure, signaling that OCI would directly support capacity for OpenAI workloads. The same day, Oracle highlighted record AI-driven deals in its FY2024 results, including more than $12.5 billion in AI sales contracts and an agreement with OpenAI to train ChatGPT in the Oracle Cloud.</div>
-<div class="event t-web_only_unverified">
+<div class="event t-web_only_unverified" id="E0001">
 <div class="ev-top">
 <span class="date">2023-06-13</span>
 <span class="eh">Oracle announces enterprise generative AI services with Cohere</span>
@@ -89,7 +94,7 @@ On June 11, 2024, Oracle announced OpenAI would extend Microsoft’s Azure AI pl
 <span class="span">best-in-class AI infrastructure</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0002">
 <div class="ev-top">
 <span class="date">2023-09-19</span>
 <span class="eh">OCI Generative AI enters limited availability</span>
@@ -107,7 +112,7 @@ On June 11, 2024, Oracle announced OpenAI would extend Microsoft’s Azure AI pl
 <span class="span">via an available API</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0003">
 <div class="ev-top">
 <span class="date">2024-01-23</span>
 <span class="eh">OCI Generative AI GA with model choice from Cohere and Meta Llama 2</span>
@@ -125,7 +130,7 @@ On June 11, 2024, Oracle announced OpenAI would extend Microsoft’s Azure AI pl
 <span class="span">consumed via API calls</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0004">
 <div class="ev-top">
 <span class="date">2024-06-04</span>
 <span class="eh">Meta Llama 3 (70B) available in OCI Generative AI</span>
@@ -143,7 +148,7 @@ On June 11, 2024, Oracle announced OpenAI would extend Microsoft’s Azure AI pl
 <span class="span">LoRA</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0005">
 <div class="ev-top">
 <span class="date">2024-06-11</span>
 <span class="eh">OpenAI to extend Microsoft Azure AI platform on Oracle Cloud Infrastructure</span>
@@ -161,7 +166,7 @@ On June 11, 2024, Oracle announced OpenAI would extend Microsoft’s Azure AI pl
 <span class="span">world’s fastest and most cost-effective AI infrastructure</span>
 </details>
 </div>
-<div class="event t-web_only_unverified">
+<div class="event t-web_only_unverified" id="E0006">
 <div class="ev-top">
 <span class="date">2024-06-11</span>
 <span class="eh">Oracle reports $12.5B+ AI sales contracts in Q4 FY24, incl. OpenAI</span>
@@ -185,7 +190,7 @@ On June 11, 2024, Oracle announced OpenAI would extend Microsoft’s Azure AI pl
 <div class='range'>2024-12-09 → 2025-10-22</div>
 <div class='psum'>Oracle broadened its provider ecosystem across foundation models and agent frameworks. In December 2024 it announced an agreement with Meta to use Oracle’s AI Cloud Infrastructure and co-develop AI Agents based on Llama. By mid‑2025, xAI’s Grok models were available via OCI Generative AI, and Oracle and Google expanded partnership plans to surface Gemini models through OCI and Vertex AI integrations.
 Oracle also advanced enterprise AI orchestration: the AI Agent Studio added an AI Agent Marketplace and extended LLM support spanning OpenAI, Anthropic, Cohere, Google, Meta, and xAI. Oracle published an Anthropic Adapter for Oracle Integration, enabling Claude-powered workflows in enterprise integrations.</div>
-<div class="event t-web_only_unverified">
+<div class="event t-web_only_unverified" id="E0007">
 <div class="ev-top">
 <span class="date">2024-12-09</span>
 <span class="eh">Oracle-Meta agreement on OCI AI Cloud Infrastructure and AI Agents</span>
@@ -203,7 +208,7 @@ Oracle also advanced enterprise AI orchestration: the AI Agent Studio added an A
 <span class="span">based on Meta’s Llama models</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0008">
 <div class="ev-top">
 <span class="date">2025-01-21</span>
 <span class="eh">Stargate Project announced: $500B over 4 years (OpenAI/Oracle/SoftBank/MGX)</span>
@@ -222,7 +227,7 @@ Oracle also advanced enterprise AI orchestration: the AI Agent Studio added an A
 <span class="span">White House</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0009">
 <div class="ev-top">
 <span class="date">2025-06-17</span>
 <span class="eh">xAI’s Grok models available on OCI Generative AI; xAI to train on OCI</span>
@@ -240,7 +245,7 @@ Oracle also advanced enterprise AI orchestration: the AI Agent Studio added an A
 <span class="span">Grok 3</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0010">
 <div class="ev-top">
 <span class="date">2025-08-14</span>
 <span class="eh">Oracle to offer Google’s Gemini models via OCI Generative AI</span>
@@ -258,7 +263,7 @@ Oracle also advanced enterprise AI orchestration: the AI Agent Studio added an A
 <span class="span">new integrations with Vertex AI</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0011">
 <div class="ev-top">
 <span class="date">2025-10-15</span>
 <span class="eh">AI Agent Studio expands with marketplace and support for multiple LLMs</span>
@@ -276,7 +281,7 @@ Oracle also advanced enterprise AI orchestration: the AI Agent Studio added an A
 <span class="span">agent teams across the enterprise</span>
 </details>
 </div>
-<div class="event t-web_only_unverified">
+<div class="event t-web_only_unverified" id="E0012">
 <div class="ev-top">
 <span class="date">2025-10-22</span>
 <span class="eh">Oracle Integration adds Anthropic Adapter for Claude</span>
@@ -300,7 +305,7 @@ Oracle also advanced enterprise AI orchestration: the AI Agent Studio added an A
 <div class='range'>2025-07-22 → 2025-09-23</div>
 <div class='psum'>Through mid- to late-2025, reporting and follow-on confirmations described very large capacity and spend commitments between OpenAI and Oracle under the Stargate program. On July 22, 2025, OpenAI confirmed a 4.5GW Oracle deal (with &gt;5GW total including Stargate I), while parallel coverage referenced $30B per year of compute purchases under Stargate.
 By September, WSJ reporting described a $300B five-year compute contract between OpenAI and Oracle starting 2027; further reports cited additional five US sites (~7GW, $400B+) expanding Stargate. Separate coverage noted Oracle was in talks with Meta on a ~$20B multi-year AI cloud deal.</div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0013">
 <div class="ev-top">
 <span class="date">2025-07-22</span>
 <span class="eh">OpenAI confirms 4.5GW Oracle deal; &gt;5GW under development with Stargate</span>
@@ -319,7 +324,7 @@ By September, WSJ reporting described a $300B five-year compute contract between
 <span class="span">more than two million chips</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0014">
 <div class="ev-top">
 <span class="date">2025-07-22</span>
 <span class="eh">Report: OpenAI signs $30B/year Oracle cloud deal under Stargate</span>
@@ -337,7 +342,7 @@ By September, WSJ reporting described a $300B five-year compute contract between
 <span class="span">$30B/yr</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0015">
 <div class="ev-top">
 <span class="date">2025-09-10</span>
 <span class="eh">WSJ report: OpenAI and Oracle $300B compute contract over five years</span>
@@ -356,7 +361,7 @@ By September, WSJ reporting described a $300B five-year compute contract between
 <span class="span">over roughly five years</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0016">
 <div class="ev-top">
 <span class="date">2025-09-20</span>
 <span class="eh">Report: Oracle in talks with Meta on ~$20B multi-year AI cloud deal</span>
@@ -375,7 +380,7 @@ By September, WSJ reporting described a $300B five-year compute contract between
 <span class="span">training and deploying AI models</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0017">
 <div class="ev-top">
 <span class="date">2025-09-23</span>
 <span class="eh">Report: Stargate expanded with five new US sites (~7GW, $400B+)</span>
@@ -399,7 +404,7 @@ By September, WSJ reporting described a $300B five-year compute contract between
 <div class='range'>2025-12-09 → 2026-06-05</div>
 <div class='psum'>Late 2025 brought financing scrutiny and volatility: Oracle’s Q2 FY26 revenue miss and heavy AI capex weighed on shares; Blue Owl reportedly exited funding talks for a $10B Michigan 1GW data center. In March 2026, Oracle’s Q3 FY26 results underscored the scale of backlog and AI momentum with RPO at $553B and strong IaaS growth, though management emphasized sites under construction as a near-term margin drag.
 Concurrently, operational risks surfaced: The Information reported Stargate as stalled (no staff/datacenters), and a Bloomberg item on OpenAI missing sales/user targets spurred demand concerns, echoed in market commentary. Oracle continued to progress ecosystem moves, including an expanded Oracle AI Database@Google Cloud integration, Bloom Energy power arrangements, Arm data center CPU customer status, and participation in Linux Foundation’s Tokenomics initiative.</div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0018">
 <div class="ev-top">
 <span class="date">2026-02-23</span>
 <span class="eh">Report: Stargate ‘stalled’ (no staff/datacenters) amid buildout uncertainty</span>
@@ -416,7 +421,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">reports of Stargate struggles emerge</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0019">
 <div class="ev-top">
 <span class="date">2025-12-10</span>
 <span class="eh">Q2 FY26: revenue miss and heavy AI capex drive −11% after-hours move</span>
@@ -434,7 +439,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">heavy AI capex</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0020">
 <div class="ev-top">
 <span class="date">2025-12-17</span>
 <span class="eh">Blue Owl exits $10B Michigan data center funding talks (1GW)</span>
@@ -452,7 +457,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">Rising leverage and AI capex scrutiny</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0021">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">RPO reaches $553B (+$29B q/q; +325% y/y) in Q3 FY26</span>
@@ -469,7 +474,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">remaining performance obligations reached 553B USD</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0022">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">Cloud revenue $8.9B (+44% y/y); IaaS $4.9B (+84%) in Q3 FY26</span>
@@ -486,7 +491,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">SaaS $4.0B (+13%)</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0023">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">Multicloud database revenue up 531% y/y</span>
@@ -501,7 +506,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">multicloud database revenue up 531% YoY</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0024">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">2026 financing plan up to $50B</span>
@@ -516,7 +521,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">intent to raise up to $50B of financing in 2026</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0025">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">~$30B already raised via bonds and mandatory converts</span>
@@ -532,7 +537,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">investment‑grade bonds and mandatory convertible preferreds</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0026">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">No more 2026 bonds; ATM not yet initiated</span>
@@ -548,7 +553,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">ATM equity program not yet initiated</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0027">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">FY26 CapEx plan ~$50B; partners/customer prepay reduce net funding</span>
@@ -564,7 +569,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">partners/customer prepayments reducing net funding needs</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0028">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">Management emphasizes ‘uncoupling of CapEx’ via customer prepay/BYOH</span>
@@ -580,7 +585,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">customer-supplied hardware and upfront payments</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0029">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">Inferencing demand ‘everywhere’; latency tied to accelerator architecture</span>
@@ -596,7 +601,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">latency is more a function of accelerator architecture</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0030">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">Enterprises combine ‘the best models’ with private data</span>
@@ -612,7 +617,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">rather than training bespoke LLMs</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0031">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">Oracle adds AI Database (NL2SQL) and AI Data Platform features</span>
@@ -628,7 +633,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">AI Data Platform</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0032">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">Sovereign Alloy model: ‘It’s not a subset … it’s all of OCI.’</span>
@@ -643,7 +648,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">It’s not a subset … it’s all of OCI.</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0033">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">Delivered 1,000+ AI agents; many at no additional cost</span>
@@ -659,7 +664,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">many at no additional cost</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0034">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">OCI supports ‘all of the popular AI models’</span>
@@ -674,7 +679,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">supports “all of the popular AI models” in OCI.</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0035">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">Accelerator GMs 30%–40%; adjacencies lift margins</span>
@@ -690,7 +695,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">10%–20% of spend going to higher‑margin adjacent services</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0036">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">Near-term margin drag from sites ‘under construction’</span>
@@ -705,7 +710,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">near‑term margin drag is from multiple sites “under construction,”</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0037">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">Delivered capacity already contracted at profitable rates</span>
@@ -720,7 +725,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">delivered capacity is “already contracted … at a very profitable rate.”</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0038">
 <div class="ev-top">
 <span class="date">2026-03-10</span>
 <span class="eh">CapEx outlook detail deferred: ‘More to come … after next quarter’</span>
@@ -735,7 +740,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">More to come … after next quarter</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0039">
 <div class="ev-top">
 <span class="date">2026-04-15</span>
 <span class="eh">Oracle extends Bloom Energy deal; AI data center power in focus</span>
@@ -752,7 +757,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">Power bottleneck</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0040">
 <div class="ev-top">
 <span class="date">2026-04-22</span>
 <span class="eh">Oracle AI Database@Google Cloud adds Gemini Enterprise agent integration</span>
@@ -769,7 +774,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">Oracle AI Database@Google Cloud</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0041">
 <div class="ev-top">
 <span class="date">2026-04-25</span>
 <span class="eh">FT: Oracle-backed data center ABS faces pricing concessions</span>
@@ -786,7 +791,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">Spread discipline</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0042">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Bloomberg: OpenAI misses targets; Oracle/CoreWeave trade softer on demand fears</span>
@@ -804,7 +809,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">utilization fears weigh</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0043">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">Arm CEO cites Oracle as data center CPU customer</span>
@@ -821,7 +826,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">Neoverse adoption</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0044">
 <div class="ev-top">
 <span class="date">2026-06-05</span>
 <span class="eh">Linux Foundation to launch Tokenomics Foundation; Oracle among supporters</span>
@@ -838,7 +843,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <span class="span">including ... Oracle</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0074">
 <div class="ev-top">
 <span class="date">2025-09-09</span>
 <span class="eh">Oracle posts strong revenue; massive RPO jump (news coverage)</span>
@@ -862,7 +867,7 @@ Concurrently, operational risks surfaced: The Information reported Stargate as s
 <div class='range'>2026-06-01 → 2026-06-23</div>
 <div class='psum'>Oracle’s Q4 FY2026 results showed a step-function increase in backlog and cloud growth, with RPO at $638B (+$85B q/q), cloud revenue at $9.9B (+47%), and IaaS at $5.8B (+93%). Management outlined FY2027 plans: revenue guidance of $90B, cloud growth +58% to +64% for Q1 FY27, net cash CapEx of ~$70B offset by $20–$25B in prepayments, and expected FY27 financing raises of ~$40B including a $20B ATM. Free cash flow was −$23.7B in FY2026 given accelerated AI/OCI capacity investments, and contracts include pass‑throughs to protect margins.
 Oracle expanded model access and customer procurement pathways: OpenAI models became consumable via OCI Universal Credits; DeepSeek V4 Flash/Pro were enabled for import; and Oracle reiterated exceptionally high utilization. Separately, Oracle disclosed workforce reductions of about 21,000 employees (~13%) over the year, attributing them in part to AI adoption and deployment.</div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0045">
 <div class="ev-top">
 <span class="date">2026-06-01</span>
 <span class="eh">OCI Generative AI: Compatible DeepSeek models for import documented</span>
@@ -880,7 +885,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">have been assessed … by Oracle</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0046">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">RPO jumps to $638B (+$85B q/q; +363% y/y) in Q4 FY26</span>
@@ -897,7 +902,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">+363% y/y</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0047">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Approx. $75B prepaid/BYOH embedded in large AI contracts</span>
@@ -913,7 +918,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">reduces Oracle’s own capital needs</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0048">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">OCI IaaS $5.8B (+93% y/y); SaaS $4.1B (+10%)</span>
@@ -929,7 +934,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">SaaS $4.1B (+10% y/y)</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0049">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Cloud revenue $9.9B (+47%) in Q4 FY26</span>
@@ -946,7 +951,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">SaaS $4.1B (+10%)</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0050">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Q1 FY27 guide: Cloud +58% to +64%; total revenue +27% to +29%</span>
@@ -962,7 +967,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">total revenue growth +27% to +29%</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0051">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">FY27 revenue guidance $90B; EPS to $8.05</span>
@@ -978,7 +983,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">non‑GAAP EPS guidance raised to $8.05</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0052">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">FY27 to raise ~$40B (incl. $20B ATM); no more 2026 debt</span>
@@ -995,7 +1000,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">does not expect to issue additional debt in calendar 2026</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0053">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">FY26 financing raised ~$43B debt and $5B equity</span>
@@ -1010,7 +1015,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">raised ~$43B in debt and $5B in equity</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0054">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">$20B at-the-market equity program highlighted</span>
@@ -1025,7 +1030,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">previously announced $20B at‑the‑market equity program</span>
 </details>
 </div>
-<div class="event t-corroborated">
+<div class="event t-corroborated" id="E0055">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">FY2026 free cash flow −$23.7B on accelerated AI/OCI capex</span>
@@ -1041,7 +1046,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">accelerated AI/OCI capacity investments</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0056">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Contracts include pass-throughs/fixed-price to protect margins</span>
@@ -1058,7 +1063,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">don’t compress margins</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0057">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Steady‑state infrastructure ROIC guided to ‘high 20s’</span>
@@ -1073,7 +1078,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">steady‑state ROIC for the infrastructure business is in the “high 20s.”</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0058">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">FY27 net cash CapEx about $70B; $20–$25B covered by prepayments</span>
@@ -1089,7 +1094,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">$20–$25B covered by customer prepayments</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0059">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Utilization exceptionally high; renewals ‘instantly snapped up’</span>
@@ -1105,7 +1110,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">“instantly snapped up.”</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0060">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Revenue/EPS expected to accelerate in 2H FY27 as capacity energizes</span>
@@ -1120,7 +1125,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">revenue/earnings expected to accelerate in 2H FY2027</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0061">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Outcome‑based pricing expanding across the suite</span>
@@ -1136,7 +1141,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">expanding across the suite</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0062">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">AI token bundles; much embedded AI at no extra charge</span>
@@ -1152,7 +1157,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">embedded AI remains included at no extra charge</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0063">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Multicloud database revenue roughly 4x y/y</span>
@@ -1167,7 +1172,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">multicloud revenue roughly quadrupling year over year</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0064">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Vector search and security innovations for AI use cases</span>
@@ -1183,7 +1188,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">supporting broader AI use cases</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0065">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Risk: Execution/returns on very large AI/OCI build-out</span>
@@ -1199,7 +1204,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">could pressure margins and defer cash flow inflection</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0066">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Risk: Financing and dilution from ~$40B FY27 raise</span>
@@ -1215,7 +1220,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">could weigh on EPS and shareholder returns</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0067">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Risk: Backlog conversion with ~$75B prepay/BYOH in RPO</span>
@@ -1231,7 +1236,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">operational and accounting complexities</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0068">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">Risk: Competitive intensity in cloud/AI</span>
@@ -1246,7 +1251,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">Competitive intensity in cloud infrastructure and applications</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0069">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">AI datacenters to emphasize cleaner energy sources</span>
@@ -1261,7 +1266,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">AI datacenters will emphasize cleaner energy sources.</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0070">
 <div class="ev-top">
 <span class="date">2026-06-10</span>
 <span class="eh">OpenAI models and Codex purchasable via OCI Universal Credits</span>
@@ -1278,7 +1283,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">Availability will begin in the coming weeks.</span>
 </details>
 </div>
-<div class="event t-web_only_verified">
+<div class="event t-web_only_verified" id="E0071">
 <div class="ev-top">
 <span class="date">2026-06-15</span>
 <span class="eh">DeepSeek V4 Flash/Pro import compatibility added in OCI Generative AI</span>
@@ -1295,7 +1300,7 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <span class="span">context lengths of up to 1 million tokens</span>
 </details>
 </div>
-<div class="event t-single_source">
+<div class="event t-single_source" id="E0072">
 <div class="ev-top">
 <span class="date">2026-06-23</span>
 <span class="eh">Oracle workforce down ~21,000 (~13%); cites AI adoption</span>
@@ -1316,15 +1321,15 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 </div>
 <section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>cloud_compute_revenue_exposure</td><td>E0005, E0013, E0014, E0015, E0046</td></tr>
-<tr><td class='k'>chip_accelerator_exposure</td><td>E0013, E0043</td></tr>
-<tr><td class='k'>data_center_power_exposure</td><td>E0039, E0069</td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td>E0010, E0011, E0070, E0009</td></tr>
-<tr><td class='k'>product_integration_exposure</td><td>E0001, E0003, E0011, E0012, E0040</td></tr>
-<tr><td class='k'>enterprise_adoption_exposure</td><td>E0022, E0048, E0049, E0063</td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td>E0033, E0061, E0062, E0040</td></tr>
-<tr><td class='k'>strategic_option_value</td><td>E0011, E0010, E0009, E0012, E0071</td></tr>
-<tr><td class='k'>competitive_threat_from_provider</td><td>E0068</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0046'>E0046</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0043'>E0043</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0069'>E0069</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0070'>E0070</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0040'>E0040</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0048'>E0048</a>, <a class='evref' href='#E0049'>E0049</a>, <a class='evref' href='#E0063'>E0063</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0061'>E0061</a>, <a class='evref' href='#E0062'>E0062</a>, <a class='evref' href='#E0040'>E0040</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0071'>E0071</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0068'>E0068</a></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
@@ -1332,12 +1337,12 @@ Oracle expanded model access and customer procurement pathways: OpenAI models be
 <tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>provider_specificity</td><td>E0014, E0015</td></tr>
-<tr><td class='k'>multi_model_hedge</td><td>E0011, E0003, E0004, E0010, E0009, E0012, E0045, E0071</td></tr>
-<tr><td class='k'>switching_flexibility</td><td>E0011, E0034</td></tr>
-<tr><td class='k'>dependency_duration</td><td>E0013, E0015, E0046</td></tr>
-<tr><td class='k'>contractual_commitment_strength</td><td>E0046, E0021, E0047, E0067</td></tr>
-<tr><td class='k'>user_lock_in_relevance</td><td>E0033, E0061, E0062</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0071'>E0071</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0046'>E0046</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0046'>E0046</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0047'>E0047</a>, <a class='evref' href='#E0067'>E0067</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0061'>E0061</a>, <a class='evref' href='#E0062'>E0062</a></td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What proportion of the reported ~$300B five-year OpenAI contract (WSJ) is reflected in Oracle’s disclosed RPO and what is the ramp profile starting 2027?</li>
