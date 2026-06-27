@@ -1,0 +1,445 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>FFIV US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+</style></head><body><div class='wrap'>
+<header>
+<h1>F5 Inc <span class='sub'>(FFIV US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.364</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>18 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 6</span>
+<span class='chip'>single source: 12</span>
+<span class='chip'>web-only (verified): 3</span>
+<span class='chip'>web-only (unverified): 3</span>
+</div>
+<div class='phase'>
+<h2>Foundation: AI Gateway and LLM traffic control</h2>
+<div class='range'>2024-11-12 → 2025-09-16</div>
+<div class='psum'>F5 began formalizing its AI product posture by introducing the AI Gateway to manage and secure surging AI traffic across applications and APIs. The offering emphasized model-agnostic connectivity and policy enforcement while explicitly supporting OpenAI and other cloud providers.
+This period set the architectural baseline for F5&#x27;s subsequent push into AI security and governance, positioning its platform between enterprise applications and a growing ecosystem of proprietary and open-source LLMs.</div>
+<div class="event t-web_only_verified" id="E0001">
+<div class="ev-top">
+<span class="date">2024-11-12</span>
+<span class="eh">F5 announces AI Gateway (early access) for securing and optimizing LLM traffic</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">F5 introduced an AI Gateway in early access to streamline and protect interactions between apps/APIs and LLM services. The containerized solution emphasizes performance, observability, and protection, and supports integrations including OpenAI and major cloud providers.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">F5 Introduces AI Gateway</span>
+<span class="span">Published November 12, 2024.</span>
+<span class="span">early access of F5 AI Gateway</span>
+<span class="span">models from OpenAI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI security buildout: CalypsoAI acquisition and Google Cloud alignment</h2>
+<div class='range'>2025-09-17 → 2025-12-01</div>
+<div class='psum'>F5 moved to consolidate AI security capabilities through M&amp;A and partnerships. It agreed to acquire CalypsoAI and closed the deal within weeks, simultaneously launching F5 AI Guardrails and F5 AI Red Team to provide runtime security, testing, and governance across AI systems. The company emphasized model-agnostic control spanning proprietary and open-source models.
+Concurrently, F5 deepened alignment with Google Cloud, publishing an integrated solution that pairs F5’s security and delivery stack with Google Cloud’s AI infrastructure and Vertex AI, including guidance consistent with SAIF and Google Cloud Model Armor. These actions broadened F5&#x27;s distribution and reinforced its position at the security-and-delivery layer of enterprise AI.</div>
+<div class="event t-web_only_unverified" id="E0002">
+<div class="ev-top">
+<span class="date">2025-09-17</span>
+<span class="eh">F5 to acquire CalypsoAI for $180M to bolster AI security</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$180M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">F5 announced an agreement to acquire CalypsoAI, adding adaptive AI security capabilities. The $180 million purchase, financed primarily with cash, expands F5’s AI security portfolio and talent base.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">CalypsoAI to Be Acquired by F5</span>
+<span class="span">September 17, 2025</span>
+<span class="span">for $180 million</span>
+<span class="span">financed primarily with cash</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003">
+<div class="ev-top">
+<span class="date">2025-09-29</span>
+<span class="eh">F5 completes CalypsoAI acquisition; debuts F5 AI Guardrails and AI Red Team</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">F5 closed the CalypsoAI deal and launched F5 AI Guardrails and F5 AI Red Team to provide runtime security and governance for enterprise AI, stating the approach is model-agnostic across proprietary and public models.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">F5 completes acquisition of CalypsoAI</span>
+<span class="span">F5 AI Guardrails</span>
+<span class="span">F5 AI Red Team</span>
+<span class="span">model-agnostic solution</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004">
+<div class="ev-top">
+<span class="date">2025-12-01</span>
+<span class="eh">F5 and Google Cloud publish joint solution for secure, optimized AI on Vertex AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">F5 and Google Cloud described an integrated solution combining F5’s application security/delivery with Google Cloud’s AI-optimized infrastructure and Vertex AI. The solution highlights layered protections and controls aligned with SAIF and Google Cloud Model Armor.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">F5 and Google Cloud</span>
+<span class="span">Google Cloud Vertex AI</span>
+<span class="span">integrated solution for layered protection</span>
+<span class="span">adaptive controls recommended by SAIF</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>FY26 acceleration: product releases and AI customer growth</h2>
+<div class='range'>2026-01-27 → 2026-04-28</div>
+<div class='psum'>F5 launched BIG-IP v21.0 with AI-era workload enhancements and reported accelerating AI customer additions, including early traction in government. Management characterized AI revenue as in the double-digit millions per quarter, with adoption balanced across data delivery and runtime security use cases and driven by hybrid multicloud trends.
+By April, F5 quantified approximately $50 million in AI-related sales for the first half of FY26 and noted it was approaching about 100 AI customers. The company highlighted a performance advantage from its NVIDIA integration, enabling 30%–40% more tokens per GPU set. Risks included margin headwinds from rising memory costs in H2 FY26 and an outlook for elevated memory prices into FY27.</div>
+<div class="event t-single_source" id="E0005">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">BIG-IP v21.0 launched with AI-era workload enhancements</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">F5 released BIG-IP v21.0 with features aimed at AI-era workloads, extending its core application delivery and security stack to support emerging AI use cases.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">BIG-IP v21.0</span>
+<span class="span">launched</span>
+<span class="span">AI-era workloads</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">AI customer adds matched all of FY25 within last 90 days</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported a sharp acceleration in new AI customers, stating that adds in the last 90 days equaled the total for all of FY25.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">won as many new customers in AI</span>
+<span class="span">last 90 days</span>
+<span class="span">for all of FY 2025</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">Direct AI-use-case revenue at double-digit millions per quarter</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">F5 indicated that direct AI-use-case revenue was running at a healthy double-digit millions per quarter in Q1 FY26.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">healthily in the double-digit millions of dollars a quarter.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">AI demand drivers: data delivery and runtime security across hybrid multicloud</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted AI-related data delivery and runtime security as key demand drivers within hybrid multicloud environments, with preference for converged platforms.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Demand drivers</span>
+<span class="span">AI-related data delivery</span>
+<span class="span">runtime security</span>
+<span class="span">converged delivery + security</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">AI use-case mix roughly balanced between delivery and security</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">F5 reported that AI use cases were now approximately balanced between data delivery and runtime security, indicating diversified adoption pathways.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Mix is now roughly balanced</span>
+<span class="span">data delivery</span>
+<span class="span">runtime security</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">Risk: FY26 gross margin headwind from rising memory costs</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">F5 guided FY26 non-GAAP gross margin to 82.5%–83.5% and flagged a modest H2 headwind from rising memory costs tied to component pricing trends.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">82.5%–83.5%</span>
+<span class="span">headwind</span>
+<span class="span">rising memory costs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">Initial AI use cases observed in government</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">F5 noted that the first government-sector AI use cases were emerging, broadening the customer footprint.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">first AI use cases in government</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">H1 FY26 AI sales ≈$50M; approaching ~100 AI customers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$50M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management quantified approximately $50 million in first-half FY26 sales tied to AI use cases and said they were nearing about 100 active AI customers.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">approximately $50 million in sales in the first half</span>
+<span class="span">now approaching about 100 customers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">NVIDIA integration boosts token output 30%–40% per GPU set</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">F5 stated that its NVIDIA integration helps AI factories generate 30%–40% more tokens per GPU set, highlighting performance optimization benefits.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">NVIDIA integration</span>
+<span class="span">30% to 40% more tokens</span>
+<span class="span">per given GPU set</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">AI inference inflection supporting systems demand</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited an AI inference inflection as a contributor to stronger systems demand alongside hybrid multicloud and cybersecurity needs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI inference inflection</span>
+<span class="span">supporting systems demand</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Risk: memory prices expected to stay elevated into FY27</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">F5 warned that memory prices are likely to remain elevated into at least the better part of FY27, posing a cost headwind.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">for at least the better part of FY 2027</span>
+<span class="span">memory prices</span>
+<span class="span">stay elevated</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Platform consolidation and market signaling</h2>
+<div class='range'>2026-05-31 → 2026-06-22</div>
+<div class='psum'>External signals and platform expansion characterized this period. F5 Labs’ CASI leaderboard highlighted comparative performance across LLMs (including multiple OpenAI models), reinforcing F5’s model-agnostic stance and testing capabilities. A Barclays note citing AI security demand contributed to positive investor sentiment.
+F5 launched the AI Security Platform to unify visibility, governance, and protection across enterprise AI, and acquired SurePath AI to strengthen shadow AI discovery and classification. These moves advanced F5’s aim to be the control plane for enterprise AI risk.</div>
+<div class="event t-web_only_unverified" id="E0016">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">F5 Labs CASI leaderboard highlights OpenAI model performance</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">F5 Labs published its June 2026 CASI leaderboard, listing several OpenAI models with measured performance and risk trade-offs, underscoring F5’s benchmarking and evaluation capabilities.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">CASI Leaderboard - June 2026</span>
+<span class="span">Updated 3rd June, 2026.</span>
+<span class="span">OpenAI GPT-5.4 Mini 82.93</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017">
+<div class="ev-top">
+<span class="date">2026-05-31</span>
+<span class="eh">Barclays lifts FFIV price target citing AI security demand</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">A Barclays note increased its price target on F5, referencing AI and security themes; secondary coverage flagged investor-day catalysts and the platforms angle in app security.</p>
+<p class="cav">⚠ Secondary aggregation; underlying analyst report not included.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Barclays PT hike</span>
+<span class="span">AI security demand</span>
+<span class="span">Investor‑day catalyst flagged</span>
+<span class="span">AI + security</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0018">
+<div class="ev-top">
+<span class="date">2026-06-22</span>
+<span class="eh">F5 launches AI Security Platform; acquires SurePath AI for shadow AI visibility</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">F5 introduced the AI Security Platform to centralize visibility, governance, and protection across enterprise AI and announced the acquisition of SurePath AI to enhance discovery and intent classification of shadow AI.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">F5 launches AI Security Platform</span>
+<span class="span">acquires SurePath AI</span>
+<span class="span">shadow AI</span>
+<span class="span">continuous visibility, governance, and protection</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the current quarterly run-rate and pipeline conversion for AI use cases post-H1 FY26 (~$50M) and how does it trend into FY27?</li>
+<li>What are the financial terms (purchase price and earn-out, if any) of the SurePath AI acquisition?</li>
+<li>How are the ~100 AI customers distributed by industry (including government) and by use-case mix (delivery vs runtime security)?</li>
+<li>What proportion of AI-related revenue is tied to specific model providers (e.g., OpenAI vs Google Vertex AI) versus open-source models?</li>
+<li>How sensitive are FY27 gross margins to sustained memory price elevation, and what mitigation levers exist?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items are F5-authored press releases/solution briefs and may reflect marketing positioning rather than independent validation.</li>
+<li>Barclays price target change is sourced via secondary aggregation; the primary analyst report was not included.</li>
+<li>CASI leaderboard model naming and scores are published by F5 Labs and may not reflect providers’ official benchmarks.</li>
+<li>No dollar amount disclosed for the SurePath AI acquisition in the provided materials.</li>
+</ul></section>
+</div></body></html>

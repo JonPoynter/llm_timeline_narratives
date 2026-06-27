@@ -1,0 +1,666 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>NTAP US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+</style></head><body><div class='wrap'>
+<header>
+<h1>NetApp Inc <span class='sub'>(NTAP US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.44</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>31 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 3</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 11</span>
+<span class='chip'>single source: 20</span>
+<span class='chip'>web-only (unverified): 7</span>
+<span class='chip'>web-only (verified): 4</span>
+</div>
+<div class='phase'>
+<h2>Foundational AI demos and early RAG patterns</h2>
+<div class='range'>2024-03-05 → 2025-03-17</div>
+<div class='psum'>NetApp’s AI relevance initially centered on enablement content and proofs-of-concept that showed how its data infrastructure can ground generative AI. Early community guidance demonstrated Retrieval-Augmented Generation (RAG) workloads using Meta’s Llama family and common developer tooling on NetApp-powered storage.
+By late 2024, AWS showcased a reference solution using Amazon FSx for NetApp ONTAP with Amazon Bedrock, explicitly grounding Anthropic Claude v3 Sonnet on enterprise file data. By early 2025, NetApp community examples advanced toward agentic AI workflows orchestrating GPU-aware bursting, again emphasizing that enterprise data locality and performance on NetApp remain crucial in AI application patterns.</div>
+<div class="event t-web_only_verified" id="E0001">
+<div class="ev-top">
+<span class="date">2024-03-05</span>
+<span class="eh">Community guide: Llama 2 RAG chatbot on NetApp-backed storage</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">NetApp community content demonstrated RAG with Meta’s Llama 2 using llama-cpp-python and LangChain, illustrating a practical path to ground LLMs on enterprise data hosted on NetApp systems.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Llama 2 LLMs</span>
+<span class="span">llama-cpp-python</span>
+<span class="span">Langchain</span>
+<span class="span">./chat.py</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002">
+<div class="ev-top">
+<span class="date">2024-09-17</span>
+<span class="eh">AWS publishes FSx for ONTAP + Bedrock RAG solution using Anthropic Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">AWS’s ML Blog detailed how Amazon FSx for NetApp ONTAP can source enterprise files to drive RAG with Amazon Bedrock, using Anthropic Claude v3 Sonnet as the example model, reinforcing NetApp’s role in grounding generative AI on enterprise data.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Build RAG-based generative AI applications</span>
+<span class="span">Amazon FSx for NetApp ONTAP</span>
+<span class="span">Amazon Bedrock</span>
+<span class="span">Anthropic Claude v3 Sonnet</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003">
+<div class="ev-top">
+<span class="date">2025-03-17</span>
+<span class="eh">Agentic AI demo: GPU-aware bursting with Llama 3 via NVIDIA NIM</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">NetApp community demonstrated an agentic AI workflow combining NetApp ONTAP automation, NVIDIA NIM for LLMs, and CrewAI, using Meta Llama 3 70B to trigger cloud bursting when GPU thresholds are reached.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Agentic AI in action</span>
+<span class="span">Meta Llama 3 70B</span>
+<span class="span">NVIDIA NIM for LLMs</span>
+<span class="span">CrewAI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Hyperscaler integrations: Vertex AI, Gemini Enterprise, Azure OpenAI, AWS S3/Bedrock</h2>
+<div class='range'>2025-04-09 → 2025-12-02</div>
+<div class='psum'>In 2025, NetApp deepened direct integrations connecting its managed file services to leading AI platforms. With Google Cloud, NetApp Volumes advanced from planned Vertex AI connectivity to private preview and public confirmation that NetApp Volumes can serve as a governed data store for Gemini Enterprise, unlocking RAG and agentic patterns directly on enterprise data.
+Simultaneously, Azure NetApp Files introduced an Object REST API enabling native use of Azure AI services, including Azure OpenAI, without duplicating datasets. On AWS, Amazon S3 Access Points for FSx for NetApp ONTAP, plus Bedrock Knowledge Bases interoperability, made it easier to ground generative AI on existing file data. These steps collectively positioned NetApp as a multi-cloud data plane for AI.</div>
+<div class="event t-web_only_unverified" id="E0004">
+<div class="ev-top">
+<span class="date">2025-04-09</span>
+<span class="eh">NetApp Volumes adds planned integration with Google Vertex AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">NetApp and Google Cloud announced that customers will soon use NetApp Volumes data directly within Vertex AI to build custom agents and RAG applications, with scale up to PiB-sized volumes and high throughput.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Vertex AI Platform</span>
+<span class="span">build custom agents</span>
+<span class="span">RAG applications</span>
+<span class="span">1PiB</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005">
+<div class="ev-top">
+<span class="date">2025-09-30</span>
+<span class="eh">Private preview: Google Cloud NetApp Volumes integrates with Gemini Enterprise</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">NetApp announced a private preview where data in NetApp Volumes can be used to create datastores in AI Applications for Gemini Enterprise, streamlining access for chat, search, summarization, and multimodal generation.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">private preview integration with Gemini Enterprise</span>
+<span class="span">Google Cloud NetApp Volumes</span>
+<span class="span">create datastores in AI Applications</span>
+<span class="span">their data is accessible to Gemini Enterprise</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006">
+<div class="ev-top">
+<span class="date">2025-10-14</span>
+<span class="eh">Google confirms NetApp Volumes as a data store for Gemini Enterprise</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google Cloud stated NetApp Volumes now serves as a data store for Gemini Enterprise, enabling governed RAG over enterprise data without complex ETL.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">serves as a data store for Gemini Enterprise</span>
+<span class="span">retrieval-augmented generation (RAG)</span>
+<span class="span">NetApp Volumes</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007">
+<div class="ev-top">
+<span class="date">2025-10-14</span>
+<span class="eh">Azure NetApp Files adds Object REST API to access Azure AI services incl. Azure OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">NetApp announced that ANF data can be accessed via an Object REST API, connecting NFS/SMB datasets to Azure OpenAI and other Azure AI services without duplicating data.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Object REST API</span>
+<span class="span">Azure NetApp Files</span>
+<span class="span">Azure OpenAI</span>
+<span class="span">Azure AI Search</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008">
+<div class="ev-top">
+<span class="date">2025-12-02</span>
+<span class="eh">AWS: FSx for NetApp ONTAP integrates with S3 for Bedrock Knowledge Bases</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AWS announced S3 access for FSx for ONTAP, enabling file data to ground Bedrock Knowledge Bases for RAG and other AI services, while data remains in FSx for ONTAP.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">access your data in Amazon FSx for NetApp ONTAP</span>
+<span class="span">Amazon S3</span>
+<span class="span">Amazon Bedrock Knowledge Bases</span>
+<span class="span">first and only fully AWS managed NetApp ONTAP</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009">
+<div class="ev-top">
+<span class="date">2025-12-02</span>
+<span class="eh">NetApp collaborates with AWS: S3 Access Points for FSx for ONTAP to unlock AI/ML</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">NetApp said Amazon S3 Access Points for FSx for ONTAP allow direct S3 API access to ONTAP-resident file data for AWS AI/ML services, citing the potential to connect to more than 100 exabytes of enterprise data.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Amazon S3 Access Points for Amazon FSx for NetApp ONTAP</span>
+<span class="span">connects ONTAP data to AWS&#x27;s wide range of AI</span>
+<span class="span">more than 100 exabytes</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>FY26 scale-up: productization, internal AI adoption, and sales traction</h2>
+<div class='range'>2026-02-01 → 2026-06-27</div>
+<div class='psum'>By FY26, NetApp translated integrations into tangible go-to-market momentum, reporting hundreds of AI-related customer wins and highlighting growing AI-oriented product features (AI Data Engine, EF series) and multi-cloud data paths. Management emphasized expanding specialized AI sales coverage and cited robust cloud storage growth.
+The company also became a reference adopter by using Google’s Gemini Enterprise internally for product development and sales. Backlog indicators (RPO and unbilled RPO) increased, while strong free cash flow supported execution. NetApp also clarified a Google Distributed Cloud agreement positioning its infrastructure in sovereign and regulated contexts.</div>
+<div class="event t-web_only_verified" id="E0010">
+<div class="ev-top">
+<span class="date">2026-02-01</span>
+<span class="eh">NetApp AIPod Mini sizing includes Meta Llama and DeepSeek models</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">deepseek</span></div>
+<p class="narr">NetApp’s AIPod Mini documentation describes reference sizing for enterprise RAG inferencing, explicitly listing Llama families and DeepSeek Distill models among supported options.</p>
+<p class="cav">⚠ Publication date presented at month-level; event dated to first of month.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Llama-8B</span>
+<span class="span">Qwen 14B</span>
+<span class="span">DeepSeek Distill 8B</span>
+<span class="span">Concurrent users  32.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Q3 FY26: ~300 AI wins as AFX momentum builds</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited approximately 300 AI customer wins in Q3 and noted early momentum for AFX, while declining to guide to a C‑Series-like ramp.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">~300 AI customer wins</span>
+<span class="span">early AFX momentum</span>
+<span class="span">C‑Series‑like ramp</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Q3 FY26: AI use-cases split ~60% data prep vs ~40% training/inference</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">NetApp characterized Q3 AI use cases as roughly 60% data prep/lake/readiness and 40% training/inference, with regulated sectors leading adoption.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">60% data prep/lake/readiness</span>
+<span class="span">40% training/inference</span>
+<span class="span">regulated industries</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Q3 FY26: New integrations enable easier AI data access</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted recent hyperscaler integrations—S3 Access Points for FSxN and Azure ANF Object REST API—to make AI data access simpler from NetApp-resident datasets.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">S3 Access Points for FSxN</span>
+<span class="span">Azure ANF Object REST API</span>
+<span class="span">easier AI data access</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Q3 FY26: Growth lever—connect to hyperscaler AI via integrations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO outlined growth levers including expanding adoption across cohorts and connecting to hyperscaler AI growth via integrations such as AWS S3 Access Points for FSxN and Azure ANF Object REST API.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">three growth levers</span>
+<span class="span">connect to hyperscaler AI growth via integrations</span>
+<span class="span">AWS S3 Access Points for FSxN</span>
+<span class="span">Azure ANF Object REST API</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Q3 FY26: Early AFX momentum; Keystone STaaS growth; pricing actions vs memory inflation</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">NetApp reported early AFX momentum, ~65% y/y Keystone STaaS growth, and actions to offset unprecedented memory price inflation.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">early AFX (AI‑focused, disaggregated storage) momentum</span>
+<span class="span">Keystone STaaS growth (~+65% y/y)</span>
+<span class="span">“unprecedented” memory price inflation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Q3 FY26 backlog: RPO $5.11B; unbilled RPO $482M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.1B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">NetApp reported RPO of $5.11B (+14% y/y) and unbilled RPO of $482M (+38% y/y), citing leading indicators for Keystone revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Remaining Performance Obligations (RPO) $5.11B</span>
+<span class="span">Unbilled RPO $482M</span>
+<span class="span">+14% y/y</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0017">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">NetApp adopts Google Gemini Enterprise internally for productivity</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">After enabling customers with Gemini Enterprise on NetApp Volumes, NetApp adopted Gemini Enterprise internally to improve productivity in product development and sales operations, highlighting agentic AI potential grounded on enterprise data.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">adopted Gemini Enterprise</span>
+<span class="span">product development and sales operations</span>
+<span class="span">data connector with Gemini Enterprise</span>
+<span class="span">agentic AI capabilities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Q4 FY26: 500 AI wins in quarter; 1,100 in FY26, all on-prem for Q4 wins</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported 500 AI wins in Q4 and 1,100 for FY26, noting all 500 Q4 wins were on-prem, with use cases split roughly across data prep, training/fine-tuning, and inference.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“500” AI wins in Q4</span>
+<span class="span">“1,100” for FY26</span>
+<span class="span">“All of the 500 AI wins are on‑prem wins,”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Q4 FY26: AI Data Engine co-engineered with NVIDIA; Azure and Google Cloud enhancements</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">NetApp highlighted new EF50/EF80 systems, an AI Data Engine co‑engineered with NVIDIA, and enhancements to Azure NetApp Files and Google Cloud NetApp Volumes to accelerate AI data pipelines.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI Data Engine</span>
+<span class="span">co‑engineered with NVIDIA</span>
+<span class="span">Azure NetApp Files</span>
+<span class="span">Google Cloud NetApp Volumes</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">FY26 marked a record year, driven by hybrid cloud and AI</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management called FY2026 a record year across key metrics, attributing strength to hybrid cloud and AI-related workload demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">FY2026 as a record year</span>
+<span class="span">hybrid cloud and AI‑related workloads</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Google Distributed Cloud agreement positions NetApp in sovereign/regulated AI contexts</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">NetApp clarified that the GDC agreement benefits the hybrid cloud segment and broadens access to sovereign and regulated environments, with NetApp as a large component of the data infrastructure.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">GDC agreement</span>
+<span class="span">sovereign/regulated environments</span>
+<span class="span">a large chunk of the data infrastructure</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Specialist AI sales team and expanded direct account coverage</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO said NetApp built a specialist AI sales team and expanded account coverage, adding more directly managed accounts to capture AI-related share.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">specialist AI sales team</span>
+<span class="span">expanded coverage of accounts</span>
+<span class="span">more directly managed accounts</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Cloud storage 1P/marketplace grew 30% y/y; faster growth expected</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said first‑party and marketplace cloud storage grew 30% y/y and expects faster growth in FY27 at strong margins.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">grew 30% y/y</span>
+<span class="span">cloud to grow faster in FY27</span>
+<span class="span">really strong gross margin</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Risk: AI roadmap execution and adoption could temper FY27 acceleration</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">NetApp flagged execution and adoption risk across AI-oriented offerings (AI Data Engine, EF series, cloud integrations), cautioning that delays or under‑adoption could affect FY2027 guidance.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑oriented offerings (AI Data Engine, EF series, cloud integrations)</span>
+<span class="span">Delays or under‑adoption</span>
+<span class="span">FY2027 guidance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Disclosure: NetApp does not break out AI revenue</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reiterated that AI revenue is not separately disclosed, limiting visibility into AI’s direct contribution.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">we don’t break out [AI revenue]</span>
+<span class="span">[AI revenue]</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Q4 FY26 backlog: RPO $5.65B (+14% y/y); unbilled RPO $807M (+88% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.7B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">NetApp reported RPO of $5.65B and unbilled RPO of $807M, aided by large agreements, reinforcing multi-period demand for services including AI-related workloads.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Remaining performance obligations (RPO) $5.65B</span>
+<span class="span">unbilled RPO $807M</span>
+<span class="span">+88% y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Q4 FY26 FCF $900M (~46% of revenue)</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$900M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">NetApp reported operating cash flow of $950M and free cash flow of $900M in Q4, reflecting strong cash generation as AI momentum builds.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow $950M</span>
+<span class="span">free cash flow $900M</span>
+<span class="span">46% of revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">FY26 FCF $1.869B (+~40%) on $6.925B revenue</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.9B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">For FY2026, NetApp reported revenue of $6.925B, OCF of $2.067B, and FCF of $1.869B (~+40%), providing financial capacity to pursue AI initiatives.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">FCF $1.869B</span>
+<span class="span">revenue $6.925B</span>
+<span class="span">OCF $2.067B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029">
+<div class="ev-top">
+<span class="date">2026-05-29</span>
+<span class="eh">Reuters: NTAP rallies with AI peers on Dell read-through</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters reported NTAP trading higher alongside AI infrastructure peers on read-through from Dell’s AI server demand and backlog.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">US tech and AI peers rally alongside Dell</span>
+<span class="span">HPE, NTAP higher intraday</span>
+<span class="span">AI server demand</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030">
+<div class="ev-top">
+<span class="date">2026-05-30</span>
+<span class="eh">Investing.com: AI leaders’ gains broaden to storage; NTAP among top movers</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Investing.com highlighted that the AI rally’s breadth expanded beyond GPUs into storage, networking, and services, with NTAP among notable gainers.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">AI leaders dominate top gainers list</span>
+<span class="span">DELL NTAP HPE NOW</span>
+<span class="span">value chain expands beyond GPUs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031">
+<div class="ev-top">
+<span class="date">2026-05-30</span>
+<span class="eh">Investing.com: Storage/networking breadth as NTAP and HPE rally on AI servers</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">A separate Investing.com note underscored positive read-across from AI servers to adjacent storage/networking names, citing NTAP and HPE moves.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">NTAP and HPE rally on AI servers</span>
+<span class="span">storage and networking</span>
+<span class="span">double digit moves</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of the 1,100 FY26 AI wins are contracted as recurring Keystone STaaS versus one-time system sales?</li>
+<li>What is the expected revenue and margin contribution of the Google Distributed Cloud agreement across FY27–FY28?</li>
+<li>How much of the 30% y/y cloud storage growth is attributable to AI workloads versus non-AI migrations?</li>
+<li>Will NetApp provide any AI-related revenue disclosure or win-rate KPIs by hyperscaler in FY27?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Investing.com and Reuters items reflect market commentary and may not indicate realized customer demand.</li>
+<li>Some web documents (e.g., AIPod Mini) provide month-only dates; event dates use the first day of the month for timeline consistency.</li>
+<li>No frontier_events were provided; absence does not imply lack of frontier-model usage beyond cited sources.</li>
+</ul></section>
+</div></body></html>

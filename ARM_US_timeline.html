@@ -1,0 +1,652 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>ARM US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+</style></head><body><div class='wrap'>
+<header>
+<h1>ARM Holdings PLC <span class='sub'>(ARM US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.481</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>31 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 4</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 22</span>
+<span class='chip'>web-only (verified): 5</span>
+<span class='chip'>web-only (unverified): 2</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='phase'>
+<h2>Neoverse momentum and cloud/AI integrations foundation</h2>
+<div class='range'>2024-03-19 → 2024-09-16</div>
+<div class='psum'>Arm’s AI foundation strengthens across hyperscalers and frameworks through 2024. NVIDIA’s Blackwell generation highlights Arm’s role via the Grace CPU in rack-scale AI systems adopted by leading labs. Google announces its first Arm-based data-center CPU, Axion, built on Neoverse V2, with performance and energy efficiency advantages to be delivered to Google Cloud customers.
+Across the AI software stack, Arm advances developer performance and portability. Arm’s Kleidi optimizations are integrated into PyTorch/ExecuTorch, demonstrating multi-x gains on AWS Graviton, and showcasing real-time LLM chat on Arm CPUs with Meta’s Llama 3 — evidence of Arm’s relevance from cloud to edge.</div>
+<div class="event t-web_only_unverified" id="E0001">
+<div class="ev-top">
+<span class="date">2024-03-19</span>
+<span class="eh">NVIDIA unveils Blackwell platform built with Grace CPU; broad hyperscaler/lab adoption signaled</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">xai_grok</span></div>
+<p class="narr">NVIDIA announced the Blackwell platform, centered on the GB200 Grace Blackwell Superchip, with industry adoption spanning Google, Meta, Microsoft, OpenAI, Oracle, xAI and others. For Arm, Blackwell underscores the role of Arm-based Grace CPUs in next-gen AI systems and broad market pull across leading AI providers.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">GB200 Grace Blackwell Superchip</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>Blackwellプラットフォーム</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>Google、Meta、Microsoft、OpenAI、Oracle、Tesla、xAI、Amazon傘下のAWS、Dell</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>今年後半からパートナーから提供される予定</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002">
+<div class="ev-top">
+<span class="date">2024-04-09</span>
+<span class="eh">Google announces Axion Arm-based CPUs for Google Cloud, built on Neoverse V2</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google introduced Google Axion Processors, its first Arm-based CPUs for the data center, built on Arm Neoverse V2. Google cites up to 50% better performance and up to 60% better energy efficiency vs comparable x86 instances, with availability to Google Cloud customers later in the year — expanding Arm’s footprint in hyperscale compute for AI and general workloads.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[1]</div>
+<span class="span">Google Axion Processors</span>
+<span class="span">Arm Neoverse V2</span>
+<span class="span">up to 60% better energy efficiency</span>
+<span class="span">will be available to Google Cloud customers later this year</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003">
+<div class="ev-top">
+<span class="date">2024-09-16</span>
+<span class="eh">Arm integrates Kleidi/PyTorch and ExecuTorch to speed AI on Graviton; Llama 3 demo</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Arm detailed PyTorch and ExecuTorch integrations (Kleidi) boosting AI performance on Arm from cloud to edge. Arm showcased a demo chatbot running the Meta Llama 3 LLM on AWS Graviton with faster time to first token, reinforcing Arm’s software stack enablement for AI inference on CPUs.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Kleidi</span>
+<span class="span">Meta Llama 3</span>
+<span class="span">2.5x faster time to first token</span>
+<span class="span">AWS Graviton4</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AGI CPU reveal and rising AI-on-Arm adoption signals</h2>
+<div class='range'>2026-03-24 → 2026-04-24</div>
+<div class='psum'>Arm launched the AGI CPU, its first data-center chip designed for the agentic AI era, with Meta as lead partner and co-developer and OpenAI cited as a key operator where the chip will strengthen AI workload orchestration. Arm also highlighted gigawatt-scale data-center targets, positioning CPUs alongside accelerators in tightly integrated AI infrastructure.
+Ecosystem momentum included Google’s Gemma 4 optimized for on-device AI on Arm, and industry demand signals: Amazon announced Anthropic’s multi-year, triple-digit-billion-dollar AWS commitment including tens of millions of Graviton cores and up to 5 GW of power, and CNBC reported Meta’s plan to adopt hundreds of thousands of AWS Graviton chips — all constructive indicators for Arm-based CPU penetration in AI.</div>
+<div class="event t-web_only_verified" id="E0004">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Arm unveils AGI CPU with Meta as lead partner; OpenAI cited as infrastructure user</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Arm announced the AGI CPU to underpin agentic AI, with Meta serving as lead partner and co-developer for multiple generations and targeting gigawatt-scale infrastructure. Arm’s newsroom also cited OpenAI’s large-scale operations and the AGI CPU’s role in orchestration and efficiency.</p>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2], web_search_findings[3]</div>
+<span class="span">Arm AGI CPU</span>
+<span class="span">Meta is our lead partner and customer</span>
+<span class="span">gigawatt-scale infrastructure</span>
+<span class="span">lead partner and co-developer</span>
+<span class="span">OpenAI runs AI systems at massive scale</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005">
+<div class="ev-top">
+<span class="date">2026-04-02</span>
+<span class="eh">Google’s Gemma 4 optimized on Arm for fast, private on-device AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Arm highlighted Gemma 4 on Arm for on-device AI, citing speedups and Armv9 CPU innovations improving prefill and decode performance. This strengthens Arm’s developer story for mobile and edge AI applications.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Gemma 4 on Arm</span>
+<span class="span">on-device AI</span>
+<span class="span">5.5x speedup</span>
+<span class="span">Armv9</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Anthropic commits &gt;$100B to AWS over 10 years, incl. tens of millions of Graviton cores</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100.0B · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">EL PAÍS reported Anthropic’s commitment to invest more than $100 billion over 10 years in AWS technologies, including future Trainium and tens of millions of Graviton CPU cores, and access to up to 5 GW of power. Given Graviton’s Arm-based design, this signals long-duration cloud CPU demand supportive of Arm’s data-center trajectory.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">100.000 millones</span>
+<span class="span">decenas de millones de núcleos Graviton</span>
+<span class="span">hasta cinco gigavatios (GW)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">CNBC: Meta to adopt hundreds of thousands of AWS Graviton chips</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">CNBC reported Meta’s plan to adopt hundreds of thousands of AWS Graviton chips, highlighting cost/performance gains and deepening cloud capex cycles. Graviton’s Arm lineage indicates rising Arm CPU deployment at scale by a top AI platform company.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">Meta to adopt hundreds of thousands of AWS Graviton chips</span>
+<span class="span">Cross-cloud deals deepen AI capex cycle</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AGI CPU commercialization path; supply, backlog and Computex ecosystem updates</h2>
+<div class='range'>2026-05-06 → 2026-06-13</div>
+<div class='psum'>On its May 2026 quarter print, Arm launched the AGI CPU as a new monetization vector and outlined commercialization: first revenue expected in fiscal Q4, &gt;$2B demand across FY27–FY28, and initial supply secured to support $1B of demand. Royalty engines remained robust with data-center and Neoverse strength; ACV rose 22% y/y to $1.66B while RPO stood at $2.07B (−7% y/y) amid faster conversions.
+Management flagged risks including incomplete supply beyond the initial $1B, potential capital-intensity and partner-conflict risks as Arm moves deeper into silicon, RPO trends as a pipeline signal, and near-term royalty volatility. At Computex, external signals corroborated ecosystem traction: Reuters cited ByteDance and Oracle as AGI CPU customers; Arm announced OCI joining the AGI CPU ecosystem; and NVIDIA unveiled an Arm-based RTX Spark PC SoC with major OEM support. Arm’s developer ecosystem also showcased running DeepSeek-R1 on Arm servers using optimized llama.cpp.</div>
+<div class="event t-single_source" id="E0008">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: Hyperscaler AI momentum; AWS custom silicon &gt;$20B annualized run-rate</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20.0B · run_rate_annual</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Arm cited broad cloud momentum: Google TPU8 with Arm-based Axion hosts, NVIDIA Vera Arm-based CPU, Microsoft Cobalt scaling, and AWS custom silicon (incl. Graviton) at &gt;$20B annualized run-rate. This underpins Arm CPU scale in AI-era data centers.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Google’s TPU8 replaces x86 hosts with Arm‑based Axion CPUs</span>
+<span class="span">NVIDIA announced the Vera Arm‑based CPU</span>
+<span class="span">Microsoft scaled Cobalt CPUs</span>
+<span class="span">running at &gt;$20B annualized</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: Arm launches AGI CPU, first data-center chip</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Arm introduced the AGI CPU as its first data-center chip, establishing a new monetization vector beyond IP and compute subsystems.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">launch of the Arm AGI CPU—Arm’s first data‑center chip</span>
+<span class="span">adding a new monetization vector</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: AGI CPU systems orderable from major ODMs</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Arm disclosed that commercial systems based on AGI CPU are now orderable from Supermicro, Lenovo, Quanta and ASRock, indicating channel readiness for deployment.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">commercial systems based on Arm AGI CPU</span>
+<span class="span">orderable from Supermicro, Lenovo, Quanta, ASRock</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: &gt;$2B AGI CPU demand across FY27–FY28</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management provided an AGI CPU demand update of more than $2B across FY27–FY28, reinforcing expectations that data center could become Arm’s largest business over time.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">demand update:</span>
+<span class="span">&gt;$2B AGI CPU demand across FYE27–FYE28</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: Data center could become Arm’s largest business</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Arm asserted that data center could become its largest business, consistent with rising AI CPU adoption and AGI CPU commercialization plans.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">assertion that data center could become Arm’s largest business;</span>
+<span class="span">Arm’s largest business</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: Data center royalty more than doubled y/y in Q4</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Arm stated that data-center royalties more than doubled year-over-year in Q4.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Data center royalty more than doubled y/y in Q4</span>
+<span class="span">per company.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: Royalty $671M (+11% y/y) with strength across AI</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$671M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Total royalty revenue was $671M, up 11% y/y, with contributions from smartphones, Edge AI, Physical AI and Cloud AI.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Royalty $671M (+11% y/y)</span>
+<span class="span">Edge AI, Physical AI, and Cloud AI;</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: Initial AGI CPU supply secured for $1B of demand</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management said supply is in place to support $1B of AGI CPU demand including foundry, packaging and test equipment, and the team is now securing capacity for the next $1B.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">supply in place to support $1 billion of demand</span>
+<span class="span">includes foundry … packaging … test equipment</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: Good line of sight to Q4 AGI CPU delivery</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management indicated a good line of sight to AGI CPU deliveries in fiscal Q4.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">good line of sight</span>
+<span class="span">deliver in Q4</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: First AGI CPU revenue in Q4; $1B outlook across FY27–FY28</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Arm expects first production AGI CPU chip revenue in fiscal Q4 and maintained a $1B revenue outlook across FY27–FY28 while working to expand capacity.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">First production AGI CPU chip revenue expected to land in Q4</span>
+<span class="span">$1B revenue outlook across FY27–FY28</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: Neoverse royalties doubled; expected to double again</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Arm’s CEO said Neoverse-based royalties doubled year-over-year and are expected to double again this year as data-center deployments expand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">have doubled year-on-year</span>
+<span class="span">double year-on-year again this year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: CFO upbeat on royalty outlook for balance of year</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CFO expressed confidence in the royalty outlook for the remainder of the fiscal year.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">feel pretty good about the royalty outlook</span>
+<span class="span">for the balance of the year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: Long-term growth floor set at ≥10% y/y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management framed at least 10% year-over-year growth as a long-term floor, underpinned by secular CPU adoption in AI-era workloads.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">at least 10% year-on-year</span>
+<span class="span">the floor</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0021">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Risk (Filing/Press): AGI CPU supply beyond initial $1B not yet secured; investor concern</span>
+<span class="badge">risk</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Arm acknowledged that not all supply is secured beyond the initial $1B of AGI CPU demand. Coverage flagged supply constraints versus demand uptake following the earnings release.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], news_rows[2]</div>
+<span class="span">not all supply has been secured</span>
+<span class="span">initial $1B of AGI CPU demand</span>
+<span class="span">supply constraints</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Risk (Filing): RPO declined 7% y/y; conversion timing a factor</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.1B · contract_value</span> <span class="badge">mixed</span></div>
+<p class="narr">Management noted RPO declined 7% year-over-year due to faster conversion; while supportive for near-term revenue, sustained declines could signal a lighter forward pipeline if not offset by ACV growth.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">RPO declined 7% y/y</span>
+<span class="span">faster conversion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Risk (Filing): Silicon shift raises capital intensity and partner-conflict risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Arm cautioned that expanding from IP/CSS into Arm-designed data-center CPUs raises capital intensity and potential competitive/partner conflicts, with execution risk to margins and returns.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">increases capital intensity</span>
+<span class="span">competitive/partner conflicts</span>
+<span class="span">dilute returns</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Risk (Filing): Royalty volatility and mix/timing pressures</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Arm flagged that Q4 royalty revenue missed consensus and can be affected by demand, product mix, and timing/estimation of customer reports, which may drive near-term volatility.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q4 royalty revenue missed LSEG consensus</span>
+<span class="span">product mix</span>
+<span class="span">drive volatility</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: ACV $1.66B (+22% y/y) as normalized licensing run-rate</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.7B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Arm reported ACV of $1.66B, up 22% year-over-year, as a normalized view of the licensing run-rate.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ACV $1.66B (+22% y/y)</span>
+<span class="span">normalized view of licensing run‑rate</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: RPO $2.07B (−7% y/y) on faster conversion timing</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.1B · contract_value</span> <span class="badge">mixed</span></div>
+<p class="narr">RPO stood at $2.07B, down 7% year-over-year due to faster conversion timing, providing context alongside ACV growth.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">RPO $2.07B (−7% y/y)</span>
+<span class="span">faster conversion timing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: Arm will not build application-level software</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Arm reaffirmed strategic scope by stating it will not build application-level software, keeping focus on IP, subsystems, and silicon platforms.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Arm will not build application-level software.</span>
+<span class="span">application-level software</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Filing: Efficiency/performance driving Arm CPU adoption</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized efficiency and performance benefits as key drivers of Arm-based CPU adoption across AI workloads.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">efficiency and performance advantages</span>
+<span class="span">Arm-based CPU adoption</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0029">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">Computex: ByteDance and Oracle named AGI CPU customers; OCI joins AGI CPU ecosystem</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters reported Arm CEO naming ByteDance and Oracle as customers for its data-center CPU at Computex. Arm concurrently announced Oracle Cloud Infrastructure joining the AGI CPU ecosystem, reinforcing cloud traction.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[1], web_search_findings[4]</div>
+<span class="span">ByteDance and Oracle are customers</span>
+<span class="span">Computex</span>
+<span class="span">Oracle Cloud Infrastructure (OCI)</span>
+<span class="span">joining the Arm AGI CPU ecosystem</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">NVIDIA debuts Arm-based RTX Spark PC SoC with major OEMs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">At Computex, NVIDIA revealed the RTX Spark Windows PC SoC co-developed with MediaTek, combining a Grace Arm CPU with an RTX-class GPU and up to 128GB unified memory, with systems expected from leading OEMs in fall 2026. This expands Arm CPU exposure to agentic AI at the device edge.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Arm-based RTX Spark PC chip</span>
+<span class="span">co-developed with MediaTek</span>
+<span class="span">Grace Arm CPU</span>
+<span class="span">up to 128GB of unified memory</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0031">
+<div class="ev-top">
+<span class="date">2026-06-13</span>
+<span class="eh">Learning Path: Run DeepSeek-R1 671B chatbot on Arm servers (llama.cpp optimized)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
+<p class="narr">Arm published a Learning Path showing deployment of the DeepSeek-R1 671B LLM chatbot on Arm-based servers using llama.cpp with Arm-optimized kernels, tested on AWS Graviton4. This illustrates Arm CPU viability for large-model inference workflows.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">DeepSeek-R1 chatbot</span>
+<span class="span">any Arm server running Ubuntu 24.04 LTS</span>
+<span class="span">AWS Graviton4 r8g.24xlarge</span>
+<span class="span">llama.cpp</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the precise unit economics (ASP, gross margin) of Arm’s AGI CPU across early customers (OCI, ByteDance, Meta) and how do royalty/license structures differ from traditional IP/CSS?</li>
+<li>How quickly can Arm secure supply beyond the initial $1B AGI CPU demand, and what foundry/packaging/test bottlenecks are most constraining?</li>
+<li>What is the expected scale and timing of Meta’s AWS Graviton adoption and how much of that work will migrate to Arm AGI CPU vs remain on Graviton?</li>
+<li>What portion of AWS’s &gt;$20B annualized custom silicon run-rate is attributable to Arm-based Graviton vs other silicon, and how does this translate to Arm revenue?</li>
+<li>What is the near-term revenue contribution and cadence for OCI’s participation in the AGI CPU ecosystem and the implied capacity ramp?</li>
+<li>How will NVIDIA’s RTX Spark PC SoC and other Arm-based client compute wins translate into Arm licensing/royalty flows versus OEM pricing dynamics?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items rely on company newsroom posts and curated summaries; timelines and customer intentions may evolve before volume deployment.</li>
+<li>The Anthropic–AWS commitment is reported by EL PAÍS and may reflect translation and secondary reporting nuances; underlying contracts were not provided.</li>
+<li>The ITmedia Blackwell article paraphrases NVIDIA announcements and adoption indications; integration depth and volumes for Arm-based Grace in each deployment are not disclosed.</li>
+<li>The Arm Learning Path demonstrates feasibility on test instances and open-source tooling; it is not evidence of production SLAs or commercial contracts.</li>
+</ul></section>
+</div></body></html>

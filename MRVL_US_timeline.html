@@ -1,0 +1,887 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>MRVL US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+</style></head><body><div class='wrap'>
+<header>
+<h1>Marvell Technology Inc <span class='sub'>(MRVL US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.551</div>
+</header>
+<div class='stats'>
+<span class='chip'>6 phases</span>
+<span class='chip'>43 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 8</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 33</span>
+<span class='chip'>web-only (verified): 6</span>
+<span class='chip'>web-only (unverified): 3</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='phase'>
+<h2>Foundational cloud security integrations (HSM) with major clouds</h2>
+<div class='range'>2019-03-04 → 2024-08-06</div>
+<div class='psum'>Marvell’s LiquidSecurity hardware security modules (HSMs) were integrated into major public clouds beginning in 2019, starting with Oracle Cloud Infrastructure Key Management and extending to Google Cloud Platform Cloud HSM and Amazon CloudHSM. These integrations positioned Marvell hardware as a core building block for cloud key management and cryptographic operations underpinning enterprise workloads.
+By August 2024, Microsoft publicly confirmed that Azure updated its fleet of Marvell LiquidSecurity HSMs to FIPS 140-3 Level 3 for Azure Key Vault and Managed HSM, reinforcing Marvell’s role across hyperscaler security stacks. These relationships form an indirect but meaningful adjacency to AI/LLM services hosted on these clouds.</div>
+<div class="event t-web_only_verified" id="E0001">
+<div class="ev-top">
+<span class="date">2019-03-06</span>
+<span class="eh">Oracle and Marvell collaborate to enhance OCI Key Management using FIPS Level 3 HSM</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Marvell announced a strategic collaboration with Oracle to provide FIPS 140-2 Level 3 certified HSMs for Oracle Cloud Infrastructure Key Management, enabling secure key storage for OCI customers.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Oracle and Marvell Collaborate</span>
+<span class="span">Oracle Cloud Infrastructure Key Management</span>
+<span class="span">FIPS 140-2 Level 3</span>
+<span class="span">cryptographic keys</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002">
+<div class="ev-top">
+<span class="date">2019-03-04</span>
+<span class="eh">Marvell debuts LiquidSecurity Network HSM; deployments span AWS, Google Cloud, and Oracle</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Marvell introduced its LiquidSecurity Network HSM for enterprise and private cloud. The release highlighted existing FIPS Level 3 deployments at multiple public clouds including Amazon CloudHSM, Google Cloud Platform Cloud HSM, and Oracle Cloud Infrastructure Key Management.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">LiquidSecurity® Network Hardware Security Module (HSM)</span>
+<span class="span">FIPS 140-2 level 3</span>
+<span class="span">Amazon CloudHSM, Google Cloud Platform Cloud HSM and Oracle Cloud Infrastructure Key Management</span>
+<span class="span">public cloud</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003">
+<div class="ev-top">
+<span class="date">2024-08-06</span>
+<span class="eh">Microsoft to update Azure Key Vault and Managed HSM to Marvell FIPS 140-3 Level‑3 HSMs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Marvell announced that Microsoft will update its Azure fleet of LiquidSecurity HSMs to NIST FIPS 140‑3 Level‑3, reinforcing Marvell’s role in Azure Key Vault and Managed HSM services.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Microsoft Integrates Marvell NIST FIPS 140-3 Level-3</span>
+<span class="span">LiquidSecurity HSMs</span>
+<span class="span">Azure Key Vault</span>
+<span class="span">FIPS 140-3 Level-3</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Platform expansion and photonics M&amp;A; model-adjacent cloud placements</h2>
+<div class='range'>2024-09-25 → 2025-12-02</div>
+<div class='psum'>Through late 2024 and 2025, model availability on hyperscaler AI platforms expanded, indirectly increasing Marvell’s HSM adjacency, particularly on Google Cloud where Cloud HSM uses Marvell LiquidSecurity hardware. Marvell’s integration with Azure deepened when Microsoft selected LiquidSecurity for Azure Cloud HSM in August 2025.
+Concurrently, xAI brought Grok models to Oracle Cloud Infrastructure, where Marvell previously enabled OCI Key Management with FIPS Level 3 HSMs. Marvell also announced a $3.25B acquisition of Celestial AI, bolstering its silicon photonics and interconnect roadmap tied to AI data centers.</div>
+<div class="event t-web_only_verified" id="E0004">
+<div class="ev-top">
+<span class="date">2024-09-25</span>
+<span class="eh">Meta’s Llama 3.2 arrives on Google Cloud Vertex AI; adjacency to Marvell-backed Cloud HSM</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google announced availability of Meta’s Llama 3.2 on Vertex AI Model Garden. Given Google Cloud documentation later confirming Cloud HSM uses Marvell LiquidSecurity HSMs, the expanding model catalog increases indirect demand adjacency for Marvell’s HSM footprint.</p>
+<p class="cav">⚠ Adjacency inference: event does not quantify incremental HSM demand tied specifically to Llama 3.2.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7], web_search_findings[5]</div>
+<span class="span">Llama 3.2 is now available on Vertex AI</span>
+<span class="span">Model Garden</span>
+<span class="span">over 160 enterprise-ready</span>
+<span class="span">Cloud HSM uses Marvell LiquidSecurity HSMs</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005">
+<div class="ev-top">
+<span class="date">2025-06-17</span>
+<span class="eh">xAI’s Grok models on Oracle Cloud Infrastructure; OCI previously integrated Marvell HSM for KMS</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI selected Oracle Cloud Infrastructure to offer Grok models and run training/inferencing. Marvell had earlier collaborated with Oracle to enhance OCI Key Management with FIPS Level 3 HSMs, indicating second‑order adjacency for Marvell hardware within OCI’s security stack.</p>
+<p class="cav">⚠ Indirect linkage; Oracle PR confirms HSM integration, but no quantified Grok-related HSM uplift.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11], web_search_findings[0]</div>
+<span class="span">xAI&#x27;s Grok Models are Now on Oracle Cloud Infrastructure</span>
+<span class="span">train and run inferencing</span>
+<span class="span">Oracle Cloud Infrastructure Key Management</span>
+<span class="span">FIPS 140-2 Level 3</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006">
+<div class="ev-top">
+<span class="date">2025-08-18</span>
+<span class="eh">Microsoft selects Marvell LiquidSecurity for Azure Cloud HSM (FIPS 140‑3 Level 3)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Microsoft expanded collaboration with Marvell by selecting the LiquidSecurity HSM family for Azure Cloud HSM, in addition to powering Azure Key Vault and Managed HSM. The platform is FIPS 140‑3 Level 3 certified.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">selected the Marvell® LiquidSecurity® family of hardware security modules (HSMs)</span>
+<span class="span">Microsoft Azure Cloud HSM</span>
+<span class="span">FIPS 140-3 Level 3 certified</span>
+<span class="span">Azure Key Vault Managed HSM services</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007">
+<div class="ev-top">
+<span class="date">2025-12-02</span>
+<span class="eh">Marvell to acquire Celestial AI for $3.25B to bolster photonics and AI interconnect</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.2B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Reuters reported Marvell’s 3.25 billion acquisition of Celestial AI alongside Q3 results, strengthening Marvell’s silicon photonics roadmap and data center interconnect strategy for AI workloads.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[7]</div>
+<span class="span">3.25 billion acquisition of Celestial AI</span>
+<span class="span">photonic</span>
+<span class="span">Q3 revenue 2.075 USD bn</span>
+<span class="span">AI interconnect</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>FY26 Q4 beat; multi-hyperscaler ramps; Nvidia $2B strategic partnership</h2>
+<div class='range'>2026-03-05 → 2026-03-31</div>
+<div class='psum'>Marvell’s fiscal Q4 FY26 print (March 5, 2026) highlighted accelerating AI data center demand across optics, switching, and custom programs, with DCI modules expected at all five major hyperscalers and switching revenue to exceed $600M in FY27. Management guided to sequential growth through FY27 and outlined multi-year supply readiness.
+On March 31, 2026, Nvidia disclosed a $2B investment and strategic partnership with Marvell, including participation in the NVLink Fusion ecosystem and a silicon photonics tie-up, reinforcing confidence in Marvell’s AI infrastructure positioning.</div>
+<div class="event t-single_source" id="E0008">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">FY27 switch revenue to exceed $600M; DCI to all five major hyperscalers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$600M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management cited leadership in optical interconnects and anticipated supplying DCI modules to all five major hyperscalers in FY27, with switch revenue expected to exceed $600M.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">anticipated supply of DCI modules to all five major hyperscalers in FY27</span>
+<span class="span">switch revenue expected to exceed $600M in FY27</span>
+<span class="span">leadership in optical interconnects</span>
+<span class="span">1.6T ramp in FY27</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">CPO scale-up shipments next year at a large customer</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Marvell stated it will be shipping co-packaged optics (CPO) for scale‑up at one large customer next year, with additional programs beyond that.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">shipping CPO for scale‑up</span>
+<span class="span">one large customer next year</span>
+<span class="span">additional programs beyond that</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">Supply secured for multi‑year growth</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">COO noted suppliers have multi‑year visibility and expressed being very confident supply is secured for the growth outlined this year, next year, and beyond.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">multi‑year visibility</span>
+<span class="span">“very confident” supply is secured</span>
+<span class="span">this year, next year, and beyond</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">FY27 exit above $3B quarterly revenue</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated sequential growth every quarter in fiscal 2027, exiting above $3B in quarterly revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">sequential growth every quarter in fiscal 2027</span>
+<span class="span">exiting above $3B revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">FY27 revenue approaching $11B; FY28 near $15B; EPS $5‑plus</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$11.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Marvell guided overall revenue approaching $11B in FY27 with FY28 near $15B and non‑GAAP EPS $5‑plus.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">approaching $11B</span>
+<span class="span">fiscal 2028 near $15B</span>
+<span class="span">“$5‑plus.”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">Switching &gt;$600M in FY27; 51.2T ramp; UALink sampling timeline set</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$600M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Data center switching revenue is expected to surpass ~$600M in FY27 with a 51.2T ramp; UALink sampling is planned for 2H FY27 and volume in FY28.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">surpass ~$600M in fiscal 2027</span>
+<span class="span">51.2T ramp</span>
+<span class="span">UALink sampling 2H fiscal 2027</span>
+<span class="span">volume in fiscal 2028</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">Risk: Hyperscaler AI demand concentration</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that results and FY27 outlook are led by data center AI demand; a slowdown or capex reprioritization by major hyperscalers could materially affect growth and mix.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">led by data center AI demand</span>
+<span class="span">A slowdown or capex reprioritization by major hyperscalers</span>
+<span class="span">could materially affect growth and mix</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">800G strength; 1.6T ramps; switch &gt;$300M FY26 to &gt;$600M FY27; custom doubling</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$300M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Company commentary cited robust 800G PAM4 demand, a rapid ramp to 1.6T in FY27, switches rising from &gt;$300M in FY26 to &gt;$600M in FY27, and custom silicon revenue doubling in FY26.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">800G PAM4</span>
+<span class="span">1.6T ramp in FY27</span>
+<span class="span">switch revenue &gt;$300M in FY26</span>
+<span class="span">surpass $600M in FY27</span>
+<span class="span">custom silicon revenue doubling</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">Diversification across top four U.S. hyperscalers; 20+ sockets layering in</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized diversification across the top four U.S. hyperscalers and noted that 20‑plus design wins/sockets are layering in over time.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">diversification across the top four U.S. hyperscalers</span>
+<span class="span">20‑plus design wins/sockets are layering in over time</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">XPU attach on a &quot;double‑plus&quot; trajectory; ~$1B next year; &gt;$2B by FY2029</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted XPU attach as potentially ~$1B next year with line‑of‑sight to &gt;$2B by FY2029 from NIC and CXL attach use cases.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">potentially ~$1B next year</span>
+<span class="span">line‑of‑sight to &gt;$2B by fiscal 2029</span>
+<span class="span">NIC and CXL attach</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">Q4 FY26 beats and guides up on AI datacenter demand; +15% after-hours</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.2B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Marvell reported Q4 revenue of $2.219B and guided up, with shares rising 15% after-hours on strong AI data center demand.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[6]</div>
+<span class="span">Q4 revenue 2.219B</span>
+<span class="span">stock +15% after-hours</span>
+<span class="span">AI datacenter demand</span>
+<span class="span">guides above</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019">
+<div class="ev-top">
+<span class="date">2026-03-31</span>
+<span class="eh">Nvidia invests $2B; strategic AI infrastructure partnership (NVLink Fusion, photonics)</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Marvell announced a $2B investment from Nvidia and a strategic AI infrastructure partnership, including participation in the NVLink Fusion ecosystem and a silicon photonics tie-up.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">Nvidia invests 2 billion in Marvell</span>
+<span class="span">NVLink Fusion ecosystem</span>
+<span class="span">silicon photonics tie-up</span>
+<span class="span">strategic AI infrastructure partnership</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Google custom-chip talks; FY27 Q1 print and raised multi-year AI outlook</h2>
+<div class='range'>2026-04-19 → 2026-05-28</div>
+<div class='psum'>Reports surfaced in April 2026 that Google was in talks with Marvell to develop new AI inference chips, including a memory processing unit to work with Google’s TPU. On May 27, Marvell’s FY27 Q1 release emphasized exceptional AI-related bookings, a raised multi-year outlook, planned capacity prepayments, and detailed product revenue trajectories across optics, switching, and XPU attach.
+The following day, press coverage highlighted Marvell’s beat and raised outlook, reinforcing momentum across custom silicon and data center bookings.</div>
+<div class="event t-corroborated" id="E0020">
+<div class="ev-top">
+<span class="date">2026-04-19</span>
+<span class="eh">Google in talks with Marvell to develop two new AI inference chips</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">According to Reuters summarizing The Information, Google is in talks with Marvell to develop two new chips for AI inference: a memory processing unit to work with Google’s TPU and a new TPU built for running AI models.</p>
+<p class="cav">⚠ Discussions stage; no signed contract disclosed in sources.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[4], web_search_findings[6]</div>
+<span class="span">in talks with Marvell Technology</span>
+<span class="span">two new chips</span>
+<span class="span">memory processing unit</span>
+<span class="span">tensor processing unit (TPU)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">AI-driven demand across interconnect, 51.2T switching, custom XPU and attach</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized strong AI-driven demand across interconnect (800G/1.6T optics), 51.2T Ethernet switching, custom XPU and attach solutions, and data-center interconnect modules.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">strong AI-driven demand across interconnect (800G/1.6T optics)</span>
+<span class="span">51.2T Ethernet switching</span>
+<span class="span">custom XPU and attach solutions</span>
+<span class="span">data-center interconnect modules</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">FY27 outlook: nearly $11.5B; DC +50% y/y; interconnect &gt;+70% y/y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$11.5B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Marvell guided FY2027 revenue to nearly $11.5B with data center up ~50% y/y and interconnect growth &gt;70% y/y.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">nearly $11.5B</span>
+<span class="span">data center ~+50% y/y</span>
+<span class="span">interconnect &gt;+70% y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">FY27 cadence: ≥10% q/q growth; Q3 revenue around $3B</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management expects at least ~10% sequential revenue growth in Q2–Q4, with Q3 around $3B.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">at least ~10% sequential revenue growth</span>
+<span class="span">Q3 revenue around $3B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Exceptional AI-related bookings; multiyear outlook raised</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Marvell cited exceptional AI-related bookings and raised its multiyear revenue outlook accordingly.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“exceptional AI-related bookings”</span>
+<span class="span">raised multiyear revenue outlook</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Plans for ~$1B FY27 supply-chain prepayments to secure capacity</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">To support growth, the company plans approximately $1B of supply-chain prepayments during FY27 to secure capacity.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">approximately $1B</span>
+<span class="span">supply-chain prepayments</span>
+<span class="span">secure capacity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Custom revenue line‑of‑sight: &gt;$10B in FY2029; FY28 custom to more than double</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reaffirmed line‑of‑sight to over $10B in custom revenue in FY2029 and said FY2028 custom revenue will more than double.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">over $10 billion</span>
+<span class="span">custom revenue in fiscal 2029</span>
+<span class="span">fiscal 2028 custom revenue will more than double</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Scale‑up optics about $300M next year (true NPO/CPO)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$300M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Marvell expects roughly $300M of next‑year revenue from scale‑up optics covering true NPO/CPO solutions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">about $300 million</span>
+<span class="span">true NPO/CPO</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Scale‑out switching to exceed $600M in FY27</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$600M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management guided scale‑out switching revenue to exceed $600M in FY27.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">exceed $600M in fiscal 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Scale‑out switching tracking to &gt;$1B annualized in FY28</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Scale‑out switching is tracking to more than $1B annualized in FY28.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">track to &gt;$1B annualized</span>
+<span class="span">fiscal 2028</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">XPU‑attach alone to exceed $1B over the next couple of years</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Marvell reiterated its internal plan for XPU‑attach revenue alone to exceed $1B over the next couple of years.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">exceed $1B</span>
+<span class="span">over the next couple of years</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">5‑year supplier forecasts backed by contractual prepayments</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Marvell provides key suppliers with five‑year forecasts and backs them with contractual prepayments to secure capacity.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“5 year forecast”</span>
+<span class="span">backs it with contractual prepayments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Record operating cash flow of $638.8M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$639M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Marvell reported record operating cash flow of $638.8M for the quarter.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow $638.8M (record)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Issued $2.0B Series A convertible preferred</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · equity_stake</span> <span class="badge">neutral</span></div>
+<p class="narr">Marvell issued $2.0B of Series A convertible preferred stock to support growth initiatives and balance sheet flexibility.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Series A convertible preferred stock $2.0B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Data Center revenue $1.833B (76% of total; +27% y/y, +11% q/q)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.8B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Data Center revenue reached $1,832.7M, representing 76% of total, up 27% year over year and 11% sequentially.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Data Center revenue $1,832.7M</span>
+<span class="span">76% of total</span>
+<span class="span">+27% y/y, +11% q/q</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Risk: ~$1B FY27 supply prepayments could pressure cash flow/margins</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Management warned that if demand falls short or mix shifts, the planned ~$1B in FY27 supply prepayments could pressure cash flow and margins.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">plans ~$1B of supply prepayments in FY2027</span>
+<span class="span">could pressure cash flow and margins</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Risk: Execution/ramp vs. &gt;50% DC and &gt;70% interconnect growth targets</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">The FY27–FY28 outlook embeds &gt;50% y/y data center growth and &gt;70% y/y interconnect growth; any slip in customer qualifications, yields, or supply ramp could derail the multiquarter acceleration.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">&gt;50% y/y data center growth</span>
+<span class="span">&gt;70% y/y interconnect growth</span>
+<span class="span">could derail the multiquarter acceleration</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0038">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Beat and raised outlook on exceptional AI demand; bookings surge</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.7B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Press coverage noted Marvell beat and lifted guidance on exceptional AI demand, citing custom silicon and data center bookings surge with revenue guide around $2.7B vs $2.6B est.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">beats and lifts outlook on exceptional AI demand</span>
+<span class="span">Custom silicon and data center bookings surge</span>
+<span class="span">about 2.7 billion vs 2.6 billion est</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Market re-rating, index inclusion, and CFO transition</h2>
+<div class='range'>2026-06-03 → 2026-06-13</div>
+<div class='psum'>Following high-profile commentary by Nvidia’s CEO, Marvell shares surged roughly 33% to a valuation just under $250B. Days later, S&amp;P Dow Jones Indices announced Marvell’s addition to the S&amp;P 500. Marvell also appointed Adobe’s Dan Durn as CFO, effective June 15, with the outgoing CFO advising through April 2027, as the company scales into an AI infrastructure build-out.</div>
+<div class="event t-single_source" id="E0039">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Stock surges 32.5% after Nvidia CEO calls Marvell the &quot;next trillion‑dollar company&quot;</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$250.0B · market_cap_impact</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AP reported Marvell leaped 32.5% for its best day since 2000 after Nvidia’s CEO said it could be the “next trillion‑dollar company,” lifting valuation to just under $250B.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">leaped 32.5%</span>
+<span class="span">“next trillion‑dollar company.”</span>
+<span class="span">just under $250 billion</span>
+<span class="span">best single‑day gain since the stock began trading in 2000</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0040">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">Marvell to join S&amp;P 500 in June 22 quarterly rebalance</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">S&amp;P Dow Jones Indices announced Marvell will join the S&amp;P 500 effective prior to the open on June 22, 2026, as part of the quarterly rebalance.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">add Marvell Technology</span>
+<span class="span">S&amp;P 500</span>
+<span class="span">June 22</span>
+<span class="span">quarterly rebalance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0041">
+<div class="ev-top">
+<span class="date">2026-06-13</span>
+<span class="eh">Adobe’s Dan Durn named CFO effective June 15; outgoing CFO to advise through April 2027</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Marvell appointed Dan Durn as CFO effective June 15, 2026, with outgoing CFO Willem Meintjes advising through April 2027. CEO Matt Murphy cited readiness for a once‑in‑a‑generation AI infrastructure build‑out.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Dan Durn</span>
+<span class="span">effective June 15, 2026</span>
+<span class="span">advisory capacity through April 2027</span>
+<span class="span">once‑in‑a‑generation AI infrastructure build‑out</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Cloud confirmations linking Marvell HSMs to AI platform ecosystems</h2>
+<div class='range'>2026-06-18 → 2026-06-27</div>
+<div class='psum'>June 2026 cloud documentation confirmed that Google Cloud’s Cloud HSM uses Marvell LiquidSecurity HSMs, while AWS CloudHSM device info reflects Cavium/Marvell lineage. OpenAI’s Enterprise Key Management documentation shows Azure Key Vault integration; Microsoft previously confirmed Azure’s use of Marvell LiquidSecurity HSMs—together indicating indirect exposure to LLM platform security workflows.</div>
+<div class="event t-web_only_verified" id="E0042">
+<div class="ev-top">
+<span class="date">2026-06-18</span>
+<span class="eh">Google Cloud HSM documentation: uses Marvell LiquidSecurity HSMs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google Cloud updated documentation states Cloud HSM uses Marvell LiquidSecurity HSMs (models CNL3560), confirming Marvell hardware underpins managed and single‑tenant HSM offerings.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Cloud HSM uses Marvell LiquidSecurity HSMs</span>
+<span class="span">CNL3560-NFBE-2.0-G</span>
+<span class="span">Last updated 2026-06-18 UTC</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0043">
+<div class="ev-top">
+<span class="date">2026-06-23</span>
+<span class="eh">OpenAI EKM uses Azure Key Vault; Azure fleet runs Marvell LiquidSecurity HSMs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI’s EKM documentation details Azure Key Vault integration for encrypt/decrypt operations. Microsoft previously confirmed Azure’s use of Marvell LiquidSecurity HSMs at FIPS 140‑3 Level‑3, linking OpenAI’s enterprise encryption flows to Marvell-powered HSM backends.</p>
+<p class="cav">⚠ Indirect linkage via Azure architecture; OpenAI doc does not name Marvell.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[2]</div>
+<span class="span">Enterprise Key Management (EKM)</span>
+<span class="span">Azure Key Vault</span>
+<span class="span">Microsoft Integrates Marvell</span>
+<span class="span">FIPS 140-3, Level-3</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0044">
+<div class="ev-top">
+<span class="date">2026-06-27</span>
+<span class="eh">AWS CloudHSM device info shows Cavium NITROX-III (Marvell lineage) hardware</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AWS CloudHSM tooling output identifies Cavium NITROX‑III CNN35XX hardware in clusters, reflecting Marvell’s Cavium lineage in AWS HSM infrastructure.</p>
+<p class="cav">⚠ AWS doc reflects device identifiers; it does not quantify Marvell volumes or timing.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">getHSMInfo</span>
+<span class="span">Label                :cavium</span>
+<span class="span">Model                :NITROX-III CNN35XX-NFBE</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0044'>E0044</a>, <a class='evref' href='#E0043'>E0043</a></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0044'>E0044</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0038'>E0038</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0043'>E0043</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0044'>E0044</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Have Google–Marvell custom inference chip talks (memory processing unit and new TPU) advanced into a signed development or production contract with defined volumes and milestones?</li>
+<li>What is the timing and allocation of the planned ~$1B FY27 supply-chain prepayments across specific suppliers and nodes, and how are protections structured if demand mix shifts?</li>
+<li>What scale of Azure Key Vault/Managed HSM and Azure Cloud HSM capacity runs on Marvell LiquidSecurity for OpenAI EKM and other AI services, and how does that translate to unit demand?</li>
+<li>How much of AWS CloudHSM’s installed base has transitioned from legacy Cavium-branded devices to newer Marvell LiquidSecurity generations?</li>
+<li>What revenue contribution is expected from Celestial AI integration in FY27–FY29 and how does it specifically accelerate Marvell’s CPO/silicon photonics attach in AI data centers?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several cloud-HSM events represent indirect adjacency (e.g., OpenAI EKM on Azure, model availability on Google Cloud) and do not quantify Marvell-specific demand uplift.</li>
+<li>The Google–Marvell chip collaboration is reported as being in talks; no definitive agreement or revenue recognition details are disclosed in the cited sources.</li>
+<li>AWS device identifiers (Cavium NITROX) indicate lineage but do not specify current procurement volumes, refresh cadence, or Marvell’s latest-generation penetration.</li>
+</ul></section>
+</div></body></html>

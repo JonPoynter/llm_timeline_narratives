@@ -1,0 +1,741 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>VICR US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+</style></head><body><div class='wrap'>
+<header>
+<h1>Vicor Corp <span class='sub'>(VICR US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.489</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>37 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 9</span>
+<span class='chip'>single source: 28</span>
+<span class='chip'>web-only (verified): 7</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='phase'>
+<h2>48V and Power Delivery Foundations (OCP to ORV3)</h2>
+<div class='range'>2016-03-10 → 2022-10-19</div>
+<div class='psum'>Vicor established foundational positioning in data center power delivery aligned with the industry shift to 48V distribution. Following Google’s advocacy for 48V server infrastructure at OCP in 2016, Vicor introduced 48V Direct-to-PoL components. Ecosystem partners such as Wiwynn incorporated Vicor’s Factorized Power Architecture into 48V server platforms. Vicor further advanced co-packaged power with its Power-on-Package modular current multipliers, explicitly targeting AI, ML, and high-current XPU workloads.
+By 2022, Meta showcased AI platforms and Open Rack v3 implementations enabling 48V power distribution and higher rack power densities, reinforcing industry momentum toward architectures that Vicor solutions address. These developments framed the market context for Vicor’s later acceleration in AI/HPC-specific vertical power delivery and licensing.</div>
+<div class="event t-web_only_verified" id="E0001">
+<div class="ev-top">
+<span class="date">2016-03-10</span>
+<span class="eh">Vicor debuts 48V Direct-to-PoL after Google’s OCP 48V initiative</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Vicor announced its latest generation of 48V Direct-to-PoL power components following Google’s push for 48V server and distribution infrastructure as an OCP standard. This aligned Vicor’s modules with hyperscaler data center power trends that would later support AI compute growth.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">48V Direct-to-PoL (Point-of-Load) power components</span>
+<span class="span">Open Compute Project</span>
+<span class="span">Google announced its initiative to promote 48V</span>
+<span class="span">as a standard for data centers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002">
+<div class="ev-top">
+<span class="date">2017-03-08</span>
+<span class="eh">Wiwynn unveils 48V OCP server using Vicor Factorized Power Architecture</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">At OCP U.S. Summit 2017, Wiwynn previewed its 48V server platform based on next-gen Intel Xeon, implementing Vicor’s Factorized Power Architecture. This highlighted early enterprise adoption paths for Vicor’s 48V approach within open compute ecosystems.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Wiwynn</span>
+<span class="span">48V Server Platform</span>
+<span class="span">Open Compute Project</span>
+<span class="span">Factorized Power Architecture™</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003">
+<div class="ev-top">
+<span class="date">2017-08-22</span>
+<span class="eh">Vicor introduces Power-on-Package current multipliers for AI processors</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Vicor launched Power-on-Package modular current multipliers designed to co-package with high-performance XPUs. Targeting AI and ML workloads with rising current demands, the solution addressed last-inch delivery losses and enabled higher performance.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Power-on-Package</span>
+<span class="span">modular current multipliers</span>
+<span class="span">artificial intelligence</span>
+<span class="span">risen to hundreds of Amperes</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004">
+<div class="ev-top">
+<span class="date">2022-10-19</span>
+<span class="eh">Meta showcases AI platform and ORV3 racks enabling 48V distribution</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta presented the Grand Teton AI platform and Open Rack v3 implementations with 48V distribution and liquid cooling, supporting high power density racks and AI hardware—industry context supportive of Vicor’s 48V and point-of-load strategies.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Meta shows AI system</span>
+<span class="span">Grand Teton AI platform</span>
+<span class="span">Open Rack v3</span>
+<span class="span">48V power distribution</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>ITC Enforcement and Licensing Traction</h2>
+<div class='range'>2025-02-14 → 2025-10-20</div>
+<div class='psum'>In early 2025 the ITC issued a Final Determination confirming infringement of Vicor patents and barring importation of infringing power modules and unlicensed computing systems, with a Limited Exclusion Order and Cease and Desist Orders against named respondents. This heightened licensing urgency among OEMs and hyperscalers to avoid U.S. import risks.
+Vicor reported licensing traction and underscored progress toward second‑generation Vertical Power Delivery (VPD) for leading AI applications. By October 2025, Vicor stated that settlements and licenses with OEMs and hyperscalers were expected to contribute nearly $300 million to revenues through 2026, positioning IP monetization as a meaningful component of the AI/HPC power delivery opportunity.</div>
+<div class="event t-web_only_verified" id="E0005">
+<div class="ev-top">
+<span class="date">2025-02-14</span>
+<span class="eh">ITC Final Determination: LEO and C&amp;D orders on infringing modules and systems</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The ITC confirmed certain Vicor patents were valid and infringed, issuing a Limited Exclusion Order and Cease and Desist Orders. The decision explicitly warned of AI and computing systems being barred from U.S. import if unlicensed, catalyzing licensing among affected OEMs.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">ITC bars importation</span>
+<span class="span">Limited Exclusion Order</span>
+<span class="span">Cease and Desist Orders</span>
+<span class="span">AI and computing systems being barred</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006">
+<div class="ev-top">
+<span class="date">2025-04-29</span>
+<span class="eh">Licensing gains traction; 2nd‑gen VPD progressing for leading AI applications</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Vicor reported licensing traction with OEMs and hyperscalers aiming to avoid import exclusion risks and highlighted progress toward delivering very high density 2nd‑generation VPD to a lead customer before broader demos.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Licensing has been gaining traction</span>
+<span class="span">OEMs and hyper-scalers</span>
+<span class="span">2^nd generation VPD</span>
+<span class="span">lead customer</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007">
+<div class="ev-top">
+<span class="date">2025-10-20</span>
+<span class="eh">Vicor forecasts nearly $300m revenue contribution from IP licensing through 2026</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$300M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Vicor stated that ITC exclusion orders drove settlements and licenses with OEMs and hyperscalers, with nearly $300 million expected to contribute to revenues through 2026. The company emphasized the need for licenses to ensure supply chain resilience and scalability for AI power systems.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">nearly $300 million</span>
+<span class="span">remains in force</span>
+<span class="span">OEMs and hyperscalers</span>
+<span class="span">need a license</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Backlog Surge, Capacity Plans, and Licensing Upside</h2>
+<div class='range'>2026-04-21 → 2026-05-26</div>
+<div class='psum'>Vicor’s Q1’26 release highlighted a sharp demand inflection: one‑year backlog reached $301m (+75% y/y; +70% q/q) with book‑to‑bill above 2.0, led by high‑performance compute and a hyperscaler. Guidance called for Q2 revenue nearly $126m and FY’26 nearly $570m, while management detailed capacity expansions including a second 3DI line and planning for a second fab. Despite expansion, management expects capacity to remain constrained for a substantial timeframe and to be selective in customer additions.
+The company emphasized VPD differentiation (≈3 A/mm², up to 40× multiplication, ~1.5 mm package) and a lead HPC customer transition/ramp in H2’26. IP enforcement and licensing remain strategic with no new licenses assumed until a 2027 ITC determination, though royalties from existing deals are expected to grow modestly. On May 26, Vicor raised Q2 guidance to $142m, citing rising product revenues and royalties from an additional all‑inclusive license to its patented power system technology.</div>
+<div class="event t-single_source" id="E0008">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">One‑year backlog reaches $301m; +75% y/y and +70% q/q</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$301M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Vicor reported a significant demand surge with one‑year backlog of $301m, up 75% year over year and 70% sequentially, reflecting strong HPC and hyperscaler momentum.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">One‑year backlog $301m</span>
+<span class="span">+75% y/y</span>
+<span class="span">+70% q/q</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Book‑to‑bill above 2.0 in Q1’26</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported a Q1’26 book‑to‑bill ratio above 2.0, indicating robust order intake relative to shipments.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Book‑to‑bill ratio above 2.0 in Q1.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Backlog expected to roll over next 12 months</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management guided that the one‑year backlog is quoted and expected to roll within the next twelve months, supporting revenue visibility.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expected to roll over the next twelve months</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q2’26 revenue guidance set nearly $126m</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$126M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Vicor guided Q2’26 revenue nearly $126m with expected margin expansion.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q2 2026 revenue</span>
+<span class="span">$126m</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">FY’26 revenue guidance nearly $570m</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$570M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Vicor projected FY’26 revenue nearly $570m with margin expansion.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">FY2026 revenue</span>
+<span class="span">$570m</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">No new IP license agreements assumed until 2027 ITC decision</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The outlook assumes no new IP licenses until a 2027 final ITC determination; existing royalty agreements are included.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">no new IP license agreements</span>
+<span class="span">final determination in 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">HPC‑led demand; backlog up 70% sequentially</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited robust demand across high‑performance compute and other verticals, reflected in a 70% sequential backlog increase.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">high‑performance compute</span>
+<span class="span">70% sequential increase in backlog</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Capacity expansion: second 3DI line and planning for a second fab</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Vicor is adding equipment in its current CHiP fab, purchasing a second 3DI interconnect line for 2H’26 installation, and planning a second fab to accelerate ramp.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">second 3DI interconnect line</span>
+<span class="span">planning a second fab</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Interim outsourcing to extend capacity at current site</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Some manufacturing steps will be outsourced to interim facilities to extend capacity within the current site footprint.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">outsourced to interim facilities</span>
+<span class="span">extend capacity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Management expects to remain capacity‑constrained and selective</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Vicor expects to remain capacity‑constrained for the near term and selective in new customer additions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">remain capacity‑constrained</span>
+<span class="span">selective in customer additions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">IP enforcement and licensing strategic; licenses needed to avoid disruption</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management emphasized the market impact of IP enforcement actions and the need for licenses to avoid supply disruption; royalty revenue and licensing remain strategic.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">IP enforcement actions are impacting the market</span>
+<span class="span">need for licenses to avoid supply disruption</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Fab 1 capacity path to at least $1.5B annual run‑rate</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.5B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management outlined a path to increase Fab 1 capacity from roughly $1.0B to at least $1.5B run‑rate via cycle‑time reductions and process moves to nearby interim locations.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">at least $1.5B</span>
+<span class="span">run-rate</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Second 3DI interconnect line slated for Q3–Q4’26 install</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Vicor disclosed purchase of a second 3DI interconnect line, targeting installation in Q3–Q4 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">second 3DI interconnect line</span>
+<span class="span">installed in Q3–Q4 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Capacity constraints expected for a substantial timeframe</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management reiterated expectations to remain capacity‑constrained for a substantial timeframe and declined to date the $1.5B capacity milestone.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">remain capacity-constrained</span>
+<span class="span">substantial timeframe</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Royalty growth from existing deals; no new licenses before 2027 ITC</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">FY’26 guidance includes modest growth in royalties from existing agreements; new licenses are not assumed ahead of a 2027 ITC final determination.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">royalties growing modestly</span>
+<span class="span">not assumed ahead of a 2027 ITC</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Licensing expenses booked as operating expense (contingent shares)</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management explained that licensing expenses are recorded as operating expense for law‑firm partners’ contingent shares.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">licensing expenses are recorded as operating expense</span>
+<span class="span">contingent shares</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Demand breadth includes lead HPC customer and a hyperscaler</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Vicor cited broad‑based strength spanning a lead HPC customer, a hyperscaler, and industrial/aerospace &amp; defense verticals.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">lead HPC customer</span>
+<span class="span">a hyperscaler</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q2 bookings well above 1 book‑to‑bill</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management indicated Q2 bookings remain well above 1 on book‑to‑bill, extending Q1 strength.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">remain “well above 1”</span>
+<span class="span">book‑to‑bill</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">2nd‑gen VPD: ≈3 A/mm² and up to 40× current multiplication (~1.5 mm package)</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Vicor emphasized second‑generation VPD performance metrics, asserting competitor limitations due to thermal and mechanical tradeoffs.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">≈3 A/mm²</span>
+<span class="span">up to 40×</span>
+<span class="span">in a ~1.5 mm package</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">CEO: 800V→6V bus schemes are “ill‑conceived”</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management criticized 800V→6V bus schemes as ill‑conceived due to distribution losses at low voltage, reinforcing Vicor’s focus on vertical power delivery at the point of load.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">800V→6V bus schemes</span>
+<span class="span">“ill‑conceived”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Lead HPC customer next‑gen transition in H2’26; ramp before year‑end</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Vicor expects a generational transition at its lead HPC customer in H2’26 with ramp before year‑end, with additional VPD engagements to follow.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">H2 2026</span>
+<span class="span">ramp before year‑end</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Licensing/IP outlook: no new licenses until 2027; potential alternate sourcing for 2nd‑gen VPD</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">While no new licenses are assumed before 2027, management signaled confidence in multi‑year licensing growth and potential alternate sourcing for 2nd‑gen VPD.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">No new licenses assumed</span>
+<span class="span">alternate sourcing for 2nd‑gen VPD</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Capacity “essentially sold out” near‑term; constraints to persist</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management noted capacity is essentially sold out near‑term and expects to remain capacity constrained for a substantial timeframe.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“essentially sold out” near‑term</span>
+<span class="span">remain capacity constrained for a substantial timeframe</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Royalty revenue disclosed at $14.97m; product revenue $98.00m</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$15M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Vicor reported Q1’26 product revenue and royalty revenue, quantifying the growing licensing contribution alongside product sales.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Product revenue $98.00m</span>
+<span class="span">royalty revenue $14.97m</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Capex $12.4m in Q1; estimated FCF $(16.3)m</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$12M · capex</span> <span class="badge">mixed</span></div>
+<p class="narr">Vicor invested $12.4m in capex during Q1’26; estimated free cash flow was negative, reflecting investment and operating cash dynamics.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Capex $12.4m</span>
+<span class="span">estimated free cash flow $(16.3)m</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Risk: execution on capacity ramp, second fab and outsourcing transfers</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that delays in equipment installation (e.g., second 3DI line), building acquisition, or process transfers could constrain shipments and margin expansion relative to guidance.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expand current fab capacity</span>
+<span class="span">Delays in equipment install</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Risk: customer concentration amid capacity limits</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Selectivity and a lead HPC program elevate exposure to program timing, qualification and potential inventory digestion at large customers.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">lead high‑performance compute customer ramp</span>
+<span class="span">Concentration heightens exposure</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Risk: backlog conversion and supply chain constraints</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Strong book‑to‑bill and backlog must convert amid tight capacity and potential bottlenecks; slippage could affect revenue cadence and margin trajectory.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Very strong book‑to‑bill and backlog</span>
+<span class="span">any slippage could affect revenue cadence</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0036">
+<div class="ev-top">
+<span class="date">2026-05-03</span>
+<span class="eh">Earnings Q&amp;A cites OpenAI wafer‑scale deal; Vicor affirms lead customer advantage</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">In Q1’26 Q&amp;A, management addressed a large OpenAI wafer‑scale supplier announcement and reiterated confidence in Vicor’s lead customer’s technological advantage for certain AI applications.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">OpenAI</span>
+<span class="span">wafer-scale supplier</span>
+<span class="span">lead customer</span>
+<span class="span">technological advantage</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0037">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Q2 guidance raised to $142m on new all‑inclusive IP license and rising royalties</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$142M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Vicor revised Q2’26 revenue guidance from $126m to $142m driven by rising product revenues and royalties from an additional OEM taking an all‑inclusive license to Vicor’s patented power system technology.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">revised its Q2 revenue guidance</span>
+<span class="span">from $126 million to $142 million</span>
+<span class="span">all-inclusive license</span>
+<span class="span">patented power system technology</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0037'>E0037</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0037'>E0037</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Who is the unnamed &#x27;lead HPC customer&#x27; referenced for the H2’26 transition and ramp?</li>
+<li>Which OEM secured the all-inclusive IP license announced May 26, 2026, and what is the royalty structure and duration?</li>
+<li>What is the targeted capacity and timeline for the planned second fab, and what is the expected capex profile?</li>
+<li>To what extent do hyperscalers versus OEMs contribute to the $301m one-year backlog and subsequent bookings?</li>
+<li>How will alternate sourcing for 2nd‑gen VPD be structured (licensee mix, manufacturing locations, and qualification timelines)?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items rely on company press releases and earnings highlights; independent third-party corroboration may be limited.</li>
+<li>References to hyperscalers and a lead HPC customer are non-specific; counterparties are not identified in the cited materials.</li>
+<li>Older OCP-related context (2016–2017) and Meta ORV3 coverage (2022) are used to frame industry alignment rather than direct commercial contracts.</li>
+<li>Guidance figures are subject to change and assume no new licenses before a 2027 ITC determination.</li>
+</ul></section>
+</div></body></html>

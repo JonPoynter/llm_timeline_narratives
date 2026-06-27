@@ -1,0 +1,930 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>AAPL US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+</style></head><body><div class='wrap'>
+<header>
+<h1>Apple Inc <span class='sub'>(AAPL US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.557</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>46 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 23</span>
+<span class='chip'>frontier 11</span>
+<span class='chip'>web 13</span>
+<span class='chip'>single source: 32</span>
+<span class='chip'>web-only (verified): 8</span>
+<span class='chip'>corroborated: 5</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='phase'>
+<h2>Foundation and external model partnerships</h2>
+<div class='range'>2023-05-18 → 2024-12-31</div>
+<div class='psum'>Apple’s AI distribution surfaced early via third‑party apps on iOS as OpenAI launched the ChatGPT iOS app in 2023, giving Apple users direct access to frontier models. In 2024, Apple explored and then announced major external model integrations: it publicly unveiled ChatGPT integration into Apple experiences and signaled openness to multiple models, with Craig Federighi indicating a model‑choice strategy. Fortune reported Apple isn’t paying OpenAI initially, underscoring unsettled economics.
+In parallel, Apple weighed additional partners. Reports indicated discussions with Meta to bring Llama into Apple Intelligence, followed by reporting that Apple rejected Meta over privacy concerns and that no active talks were underway. By October 2024, Apple Intelligence began rolling out broadly across iPhone, iPad, and Mac with optional ChatGPT integration.</div>
+<div class="event t-web_only_verified" id="E0001">
+<div class="ev-top">
+<span class="date">2023-05-18</span>
+<span class="eh">OpenAI launches ChatGPT app for iOS, expanding AI access on Apple devices</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI released a native ChatGPT iOS app, bringing GPT‑4 and Whisper capabilities directly to iPhone users. This expanded third‑party AI distribution on Apple’s platform ahead of Apple’s own Apple Intelligence program.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">ChatGPT app for iOS</span>
+<span class="span">free to use</span>
+<span class="span">integrates Whisper</span>
+<span class="span">GPT-4’s capabilities</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002">
+<div class="ev-top">
+<span class="date">2024-03-17</span>
+<span class="eh">Reports: Apple exploring Google Gemini for iPhone AI features</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">TechCrunch, citing Bloomberg, reported Apple was in talks to team up with Google to license Gemini for iPhone features later in 2024, alongside discussions with OpenAI. The exploration suggested a pragmatic multi‑model approach.</p>
+<p class="cav">⚠ Exploratory talks; terms and execution were not final at this time.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">team up with Google</span>
+<span class="span">Gemini AI model</span>
+<span class="span">features on iPhone</span>
+<span class="span">Bloomberg reported</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0003">
+<div class="ev-top">
+<span class="date">2024-06-10</span>
+<span class="eh">Apple and OpenAI announce ChatGPT integration into Apple experiences</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Apple announced that Siri and systemwide Writing Tools can invoke ChatGPT, with privacy protections like IP address obfuscation and no request storage by OpenAI. The integration, powered by GPT‑4o, was slated to arrive later in 2024.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">frontier_events[10], web_search_findings[0]</div>
+<span class="span">integrating ChatGPT into experiences within iOS, iPadOS, and macOS</span>
+<span class="span">Siri can also tap into ChatGPT’s intelligence</span>
+<span class="span">GPT‑4o</span>
+<span class="span">later this year</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004">
+<div class="ev-top">
+<span class="date">2024-06-11</span>
+<span class="eh">Apple signals model‑choice strategy; Gemini and other models could be options</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">After WWDC, Craig Federighi emphasized that Apple may allow users to choose among third‑party models for different tasks, hinting Gemini could join Apple’s integrations beyond OpenAI as Apple Intelligence matures.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">third-party AI models like Google Gemini</span>
+<span class="span">users might prefer different AI models</span>
+<span class="span">bring a model of their choice</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005">
+<div class="ev-top">
+<span class="date">2024-06-13</span>
+<span class="eh">Report: Apple isn’t paying OpenAI initially for ChatGPT integration</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Fortune reported that Apple is not paying OpenAI at the outset of the partnership, with value exchanged via distribution to Apple’s large device base. Monetization may rely on converting free users to paid accounts over time.</p>
+<p class="cav">⚠ Third‑party reporting on private terms; figures and revenue impact may evolve.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">isn’t paying OpenAI</span>
+<span class="span">not expected to generate meaningful revenue</span>
+<span class="span">hundreds of millions of its devices</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006">
+<div class="ev-top">
+<span class="date">2024-06-24</span>
+<span class="eh">WSJ/Reuters: Apple and Meta discussed potential AI partnership</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Reporting indicated Apple and Meta discussed integrating Meta’s generative AI, potentially selling premium AI subscriptions through Apple Intelligence. Talks were preliminary and could vary by region.</p>
+<p class="cav">⚠ Discussions not finalized; terms and timing uncertain.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">discussed integrating its generative AI model</span>
+<span class="span">Apple Intelligence</span>
+<span class="span">deals with Apple would help AI companies</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0007">
+<div class="ev-top">
+<span class="date">2024-06-25</span>
+<span class="eh">Reports: Apple not in active talks with Meta; prior overtures rejected over privacy</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Reuters reported no current Apple–Meta talks and cited Bloomberg that Apple rejected Meta’s Llama integration over privacy concerns. Apple was prioritizing privacy standards while advancing OpenAI and Google discussions.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4], frontier_events[9]</div>
+<span class="span">not in talks currently</span>
+<span class="span">AI partnership</span>
+<span class="span">Llama chatbot</span>
+<span class="span">rejects Meta partnership</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008">
+<div class="ev-top">
+<span class="date">2024-10-28</span>
+<span class="eh">Apple Intelligence begins public rollout with optional ChatGPT integration</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Apple announced Apple Intelligence availability via iOS 18.1, iPadOS 18.1, and macOS 15.1. Users can optionally enable ChatGPT, with privacy protections like IP obfuscation and no request storage by OpenAI.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Apple Intelligence is available today</span>
+<span class="span">iOS 18.1</span>
+<span class="span">Users can choose whether or not to enable the ChatGPT integration</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem competition and third‑party integrations</h2>
+<div class='range'>2025-01-01 → 2025-12-31</div>
+<div class='psum'>Third‑party AI competition grew within Apple’s ecosystem. xAI’s Grok shipped as a standalone iOS app and China‑based DeepSeek topped the App Store, signaling rapid consumer AI adoption and potential commoditization pressure. Apple deepened developer tooling with Anthropic’s Claude Sonnet in Xcode.
+Legal friction emerged as xAI sued Apple and OpenAI over alleged App Store/ChatGPT favoritism, and a federal court allowed the case to proceed later in the year, increasing regulatory and litigation risk around Apple’s AI distribution policies.</div>
+<div class="event t-web_only_verified" id="E0009">
+<div class="ev-top">
+<span class="date">2025-01-09</span>
+<span class="eh">xAI’s Grok launches as a standalone iOS app</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Grok became available on the App Store for iPhone and iPad, broadening direct consumer access to xAI’s chatbot within Apple’s ecosystem and intensifying competition among AI assistants on iOS.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Grok Now Available as Standalone App in the US</span>
+<span class="span">App Store</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010">
+<div class="ev-top">
+<span class="date">2025-01-27</span>
+<span class="eh">DeepSeek AI app tops free charts on Apple’s App Store</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">deepseek</span></div>
+<p class="narr">DeepSeek’s iOS app reached the number one position across multiple countries, highlighting strong traction for budget AI models on Apple’s platform and raising commoditization questions for premium AI services.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">DeepSeek Overtakes ChatGPT on App Store</span>
+<span class="span">number one position on Apple&#x27;s App Store</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011">
+<div class="ev-top">
+<span class="date">2025-05-07</span>
+<span class="eh">Apple integrates Anthropic’s Claude Sonnet into Xcode</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic disclosed that Apple integrated Claude Sonnet into Xcode, expanding AI‑assisted development tooling for Apple’s developer ecosystem.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[8]</div>
+<span class="span">Apple integrates Claude Sonnet into Xcode</span>
+<span class="span">Claude Sonnet</span>
+<span class="span">Xcode</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012">
+<div class="ev-top">
+<span class="date">2025-08-25</span>
+<span class="eh">xAI sues Apple and OpenAI alleging anticompetitive conduct</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">xai_grok</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">xAI filed suit against Apple and OpenAI alleging anticompetitive App Store practices and favoritism toward ChatGPT, escalating legal scrutiny of Apple’s AI distribution policies.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[7]</div>
+<span class="span">xAI sues Apple and OpenAI</span>
+<span class="span">anticompetitive App Store</span>
+<span class="span">ChatGPT favoritism</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013">
+<div class="ev-top">
+<span class="date">2025-11-14</span>
+<span class="eh">Federal court allows xAI lawsuit against Apple/OpenAI to proceed</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">xai_grok</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">A federal court allowed xAI’s case to proceed, prolonging legal uncertainty around Apple’s AI distribution and relationships with third‑party AI providers.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[6]</div>
+<span class="span">Federal court allows xAI lawsuit against Apple/OpenAI to proceed</span>
+<span class="span">allows xAI lawsuit</span>
+<span class="span">to proceed</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Apple–Google Gemini tie‑up, filings disclosure, and infrastructure build</h2>
+<div class='range'>2026-01-01 → 2026-04-30</div>
+<div class='psum'>Apple and Google announced a multi‑year Gemini deal for a revamped Siri, with additional confirmation at Google Cloud Next. Apple’s filings framed a hybrid on‑device/Private Cloud Compute strategy, ongoing capacity additions, and withheld commercial terms for its Google partnership. Anthropic links surfaced via reports of internal Claude usage and security program participation. Apple provided formal support details for ChatGPT within Apple Intelligence.
+April saw leadership transition news (Ternus named next CEO) and WWDC‑adjacent groundwork, while R&amp;D messaging in Apple’s April quarter emphasized accelerating spend and progress with Google. The MacBook Neo launch broadened Apple’s hardware funnel ahead of AI feature rollouts.</div>
+<div class="event t-corroborated" id="E0014">
+<div class="ev-top">
+<span class="date">2026-01-12</span>
+<span class="eh">Multi‑year Apple–Google Gemini deal announced for revamped Siri (est. ~$1B/yr)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Press and frontier reporting indicated a multi‑year Gemini partnership powering a revamped Siri, with some reports estimating around $1B per year and a custom large‑scale Gemini. Reuters corroborated that Apple will use Google’s Gemini models for Siri.</p>
+<p class="cav">⚠ Dollar magnitude and model scale come from press estimates in frontier reporting; Apple/Google have not disclosed commercial terms.</p>
+<details>
+<summary>evidence — 4 source(s), 5 span(s)</summary>
+<div class="ev-src">frontier_events[5], web_search_findings[6], web_search_findings[11], news_rows[22]</div>
+<span class="span">multi-year Gemini partnership</span>
+<span class="span">~$1B/yr</span>
+<span class="span">1.2T-param</span>
+<span class="span">Apple will use Google&#x27;s Gemini models</span>
+<span class="span">revamped Siri</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Filings: Google collaboration to power AFM and a more personalized Siri</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Apple disclosed collaboration with Google on next‑generation Apple foundation models to power Apple Intelligence features and a more personalized Siri, aligning with the Gemini announcement.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">collaboration with Google on next‑generation Apple foundation models</span>
+<span class="span">power future Apple Intelligence features</span>
+<span class="span">a more personalized Siri</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Filings: Hybrid CapEx model and Private Cloud Compute build‑out</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described a hybrid CapEx model blending first‑ and third‑party capacity and referenced prior investments in Private Cloud Compute, signaling ongoing infrastructure build.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">hybrid CapEx model (first- and third‑party capacity)</span>
+<span class="span">build out Private Cloud Compute</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Filings: On‑device + Private Cloud Compute capacity being added</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Apple emphasized on‑device plus Private Cloud Compute as privacy‑differentiated and noted capacity would be added as needed, reinforcing its hybrid AI strategy.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">on‑device and Private Cloud Compute</span>
+<span class="span">capacity is being added</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Filings: Google partnership economics undisclosed</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Apple said Google’s AI will help power AFM and Siri but withheld commercial terms, leaving revenue share and cost allocations undisclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">we’re not releasing the details</span>
+<span class="span">Google’s AI will help power Apple Foundation Models</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019">
+<div class="ev-top">
+<span class="date">2026-01-30</span>
+<span class="eh">Report: “Apple runs on Anthropic” indicating internal Claude usage</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Frontier reporting suggested Apple had internal usage of Anthropic’s Claude, further highlighting Apple’s multi‑provider engagement across AI tooling.</p>
+<p class="cav">⚠ Press reporting; not an official Apple disclosure.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[4]</div>
+<span class="span">Apple runs on Anthropic</span>
+<span class="span">internal Claude usage</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0020">
+<div class="ev-top">
+<span class="date">2026-03-01</span>
+<span class="eh">Apple Support details: Using ChatGPT with Apple Intelligence on iPhone</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Apple Support documented how users can enable the ChatGPT extension within Apple Intelligence on iPhone, including account linking options, regional availability, and strong privacy constraints on data use and IP handling.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Use ChatGPT with Apple Intelligence on iPhone</span>
+<span class="span">Connect your ChatGPT account</span>
+<span class="span">You don’t need a ChatGPT account</span>
+<span class="span">IP address is obscured</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021">
+<div class="ev-top">
+<span class="date">2026-04-07</span>
+<span class="eh">Anthropic announces Project Glasswing / Claude Mythos Preview with Apple among partners</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic launched Project Glasswing for cybersecurity with 11 initial partners including Apple, indicating Apple’s participation in defensive AI initiatives.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[3]</div>
+<span class="span">Project Glasswing / Claude Mythos Preview announced</span>
+<span class="span">11 launch partners</span>
+<span class="span">Apple</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022">
+<div class="ev-top">
+<span class="date">2026-04-11</span>
+<span class="eh">Apple unveils lower‑priced MacBook Neo to expand hardware funnel</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Apple introduced a lower‑priced MacBook Neo to broaden the device base that may later benefit from Apple Intelligence features and services monetization.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[20]</div>
+<span class="span">MacBook Neo</span>
+<span class="span">broaden hardware funnel for services</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Google Cloud Next: Gemini–Siri partnership confirmed; Apple exploring Google data centers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">At Cloud Next 2026, Google Cloud confirmed the Gemini–Siri partnership and indicated Apple’s exploration of Google data centers for inference workloads, reinforcing a hybrid cloud/on‑device approach.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">frontier_events[2]</div>
+<span class="span">Google Cloud confirms</span>
+<span class="span">Gemini-Siri partnership</span>
+<span class="span">Cloud Next 2026</span>
+<span class="span">data centers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024">
+<div class="ev-top">
+<span class="date">2026-04-25</span>
+<span class="eh">Apple names John Ternus next CEO; Cook to become executive chairman</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Apple announced leadership succession with John Ternus as next CEO and Tim Cook transitioning to executive chairman effective September 1, maintaining strategic continuity as AI initiatives accelerate.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[19]</div>
+<span class="span">John Ternus</span>
+<span class="span">executive chairman Sept 1</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Filings: R&amp;D accelerating; Google collaboration going well</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Apple said it is investing more with R&amp;D accelerating, and that collaboration with Google is going well alongside internal model work, signaling continued momentum toward Apple Intelligence.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">investing more</span>
+<span class="span">R&amp;D “accelerating,”</span>
+<span class="span">collaboration with Google is going well</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Filings: AI spend up; no product timing disclosed</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Apple flagged increased AI R&amp;D spend but did not provide new product timing, reflecting an execution pace with limited near‑term visibility for some features.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI: increased R&amp;D spend</span>
+<span class="span">no new product timing disclosed</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Filings: AI monetization and capex details remain unclear</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management provided limited detail on AI/agent monetization, device vs. cloud cost sharing, and incremental AI capex, leaving investors with open questions on long‑term economics.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Limited detail on AI/agent monetization model</span>
+<span class="span">incremental AI capex</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>WWDC 2026 rollout, supply chain strain, and regulatory pressure</h2>
+<div class='range'>2026-05-01 → 2026-06-27</div>
+<div class='psum'>Ahead of WWDC 2026, Apple signaled stronger financial flexibility (ending net‑cash‑neutral target, tapping overseas bonds) and elevated R&amp;D intensity. Legal clean‑up continued with a $250m Siri AI settlement. Apple’s ecosystem scale update (App Store $1.4T in 2025) highlighted AI app momentum.
+At WWDC, Apple introduced ‘Siri AI’ under Apple Intelligence, with Google’s Gemini participation, and disclosed that AFM Cloud Pro runs on Nvidia GPUs in Google Cloud as part of Private Cloud Compute. Apple also unveiled AFM 3 on‑device architecture that stores model weights in flash, while Morgan Stanley flagged hardware RAM constraints limiting adoption. Regulatory friction mounted (Italy’s DMA probe), and AI‑driven datacenter demand spiked memory costs, prompting Apple to raise Mac and iPad prices and seek U.S. approval to buy DRAM from blacklisted CXMT.</div>
+<div class="event t-single_source" id="E0028">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Apple beats on EPS and revenue; AI commentary supports sentiment</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Apple’s March‑quarter beat and AI commentary lifted shares premarket, reinforcing investor confidence ahead of WWDC AI updates.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[18]</div>
+<span class="span">beats on EPS and revenue</span>
+<span class="span">shares rise premarket</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029">
+<div class="ev-top">
+<span class="date">2026-05-02</span>
+<span class="eh">Apple ends net‑cash‑neutral target, boosting AI M&amp;A optionality</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">MarketWatch reported Apple ended its net‑cash‑neutral target, increasing balance sheet flexibility for potential AI investments and acquisitions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[17]</div>
+<span class="span">ends net-cash-neutral target</span>
+<span class="span">M&amp;A speculation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Reports: Apple explores U.S. chip production with Intel and Samsung</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Bloomberg/9to5Mac reporting said Apple held exploratory talks with Intel and Samsung on building main device chips in the U.S., reflecting supply chain reshoring amid AI/SoC demand.</p>
+<p class="cav">⚠ Exploratory; outcome and scale not finalized.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[16]</div>
+<span class="span">held exploratory talks</span>
+<span class="span">Supply chain reshoring</span>
+<span class="span">AI/SoC demand</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Report: Apple R&amp;D spend tops 10% of sales, underscoring AI urgency</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CNBC coverage highlighted Apple’s R&amp;D intensity exceeding 10% of sales, reflecting elevated AI investment cadence.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[14]</div>
+<span class="span">R and D spend tops 10 percent of sales</span>
+<span class="span">underscoring AI urgency</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Apple to pay $250m to settle Siri AI feature lawsuit</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$250M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">TechCrunch reported Apple agreed to pay $250 million to settle a Siri AI feature lawsuit, reducing legal overhang with limited strategic impact.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[15]</div>
+<span class="span">pay 250m</span>
+<span class="span">settle Siri AI feature lawsuit</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033">
+<div class="ev-top">
+<span class="date">2026-05-11</span>
+<span class="eh">Apple taps overseas bond markets to fund AI datacenters</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters reported Apple and Alphabet issued overseas bonds to help fund AI data centers, reflecting capex acceleration and investor demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[13]</div>
+<span class="span">overseas bond markets</span>
+<span class="span">fund AI datacenters</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Report: OpenAI explores legal action against Apple over integration</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">TechCrunch reported tensions as OpenAI reportedly considered legal action against Apple related to integration, highlighting partner‑relationship risk.</p>
+<p class="cav">⚠ Single‑source report; legal posture unconfirmed by parties.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[12]</div>
+<span class="span">explores legal action</span>
+<span class="span">against Apple</span>
+<span class="span">over integration</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0035">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">Anthropic expands Project Glasswing; Apple listed among partners</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic expanded Glasswing access to ~150 additional organizations, listing Apple among launch partners with access to the Claude Mythos Preview model, focused on securing critical infrastructure sectors.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[11], frontier_events[1]</div>
+<span class="span">approximately 150 new organizations</span>
+<span class="span">Claude Mythos Preview</span>
+<span class="span">Launch partners include Apple</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">Poke approved as first AI agent on Apple’s Messages for Business</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Apple approved Poke as the first standalone third‑party AI agent on Messages for Business, with per‑user pricing that could create a new revenue stream and distribution toll for agent startups.</p>
+<p class="cav">⚠ Pricing terms undisclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[9]</div>
+<span class="span">first stand‑alone third‑party AI agent</span>
+<span class="span">Messages for Business</span>
+<span class="span">per‑user basis</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">App Store facilitated $1.4T in 2025 billings/sales; AI app momentum highlighted</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1400.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Apple’s annual study indicated the App Store facilitated over $1.4T in 2025, with ~90% outside commission and 850M weekly users. About 40 of the top 100 apps had consumer‑facing AI, showing rising AI penetration.</p>
+<p class="cav">⚠ Ecosystem gross billings metric; not Apple revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[10]</div>
+<span class="span">$1.4T</span>
+<span class="span">90% outside its commission</span>
+<span class="span">850M weekly users</span>
+<span class="span">40 of the top 100 apps had consumer‑facing AI</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0038">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">Apple unveils ‘Siri AI’ at WWDC, integrating Google’s Gemini under Apple Intelligence</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Apple debuted a rebuilt assistant, ‘Siri AI,’ powered by Apple models and Google’s Gemini, shipping as a beta later in the year with a privacy‑first stance and initial regional limitations.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[8], frontier_events[0]</div>
+<span class="span">‘Siri AI’</span>
+<span class="span">Google’s Gemini</span>
+<span class="span">public beta later this year</span>
+<span class="span">will not initially launch in the EU or China</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0039">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">Apple confirms AFM Cloud Pro runs on Nvidia GPUs in Google Cloud (PCC)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Around WWDC, Apple said AFM Cloud Pro executes on Nvidia GPUs within Google Cloud as part of Private Cloud Compute, with verifiable privacy safeguards and no use of Google Search infrastructure.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">AFM Cloud Pro</span>
+<span class="span">Nvidia GPUs</span>
+<span class="span">Google Cloud</span>
+<span class="span">Private Cloud Compute</span>
+<span class="span">does not use Google Search</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0040">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">Apple unveils AFM 3 on‑device architecture using flash to bypass DRAM limits</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Apple detailed AFM 3 Core Advanced as a sparsely activated ~20B parameter model that stores full weights in flash and activates 1–4B parameters per prompt, boosting on‑device AI quality without large DRAM.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[6]</div>
+<span class="span">stores model weights in flash</span>
+<span class="span">sparsely activated 20B‑parameter</span>
+<span class="span">activates 1–4B parameters</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0041">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">Morgan Stanley: 12 GB on‑device memory limits new Siri AI adoption</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Reuters coverage of Morgan Stanley’s note said more than 850M iPhones cannot run basic Apple Intelligence queries and over 1.3B cannot use advanced features, with 12 GB of unified memory required on device.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[7]</div>
+<span class="span">12 GB of unified memory</span>
+<span class="span">cannot run basic Apple Intelligence queries</span>
+<span class="span">iPhone 15 Pro/Pro Max</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0042">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">Italy’s AGCM opens DMA probe into Apple’s iCloud interoperability</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Italy’s antitrust authority opened its first DMA investigation, probing whether third‑party consumer cloud services on iOS/iPadOS receive equal treatment to Apple’s iCloud, with findings to be sent to the European Commission.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[4]</div>
+<span class="span">Italy’s competition regulator (AGCM)</span>
+<span class="span">Digital Markets Act</span>
+<span class="span">interoperability</span>
+<span class="span">first investigation under the DMA</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0043">
+<div class="ev-top">
+<span class="date">2026-06-18</span>
+<span class="eh">Memory costs surge on AI demand; Apple warns on price increases</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Coverage noted tight memory supply and rising DRAM/NAND prices. Apple told the WSJ it will need to raise prices to offset soaring memory costs as AI datacenters strain supply.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">memory supply remains tight</span>
+<span class="span">will need to raise prices</span>
+<span class="span">Micron shares rose</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0044">
+<div class="ev-top">
+<span class="date">2026-06-21</span>
+<span class="eh">TechCrunch details practical Apple Intelligence features in iOS 27</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TechCrunch outlined Apple Intelligence features across iOS 27 developer beta, with a public beta soon and general release this fall, emphasizing on‑device privacy and embedded assistant behaviors.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">Apple Intelligence</span>
+<span class="span">developer beta</span>
+<span class="span">public beta</span>
+<span class="span">this fall</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0045">
+<div class="ev-top">
+<span class="date">2026-06-26</span>
+<span class="eh">Apple raises Mac and iPad prices citing AI‑driven memory shortage</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Apple lifted prices on several Macs and iPads, attributing the move to unprecedented memory/storage chip cost spikes tied to AI datacenter demand. TheStreet framed it as Apple no longer able to shield buyers.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">AI-driven memory shortage</span>
+<span class="span">price increases for multiple Macs and iPads</span>
+<span class="span">had been absorbing costs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0046">
+<div class="ev-top">
+<span class="date">2026-06-26</span>
+<span class="eh">Reports: Apple seeks U.S. approval to source DRAM from blacklisted CXMT</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Reuters‑sourced reporting said Apple lobbied U.S. officials for clearance to buy DRAM from ChangXin Memory Technologies (CXMT), which faces Entity List restrictions, amid rising memory prices—highlighting policy risk.</p>
+<p class="cav">⚠ Licensing outcome uncertain; potential supply chain and geopolitical risk.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">ChangXin Memory Technologies (CXMT)</span>
+<span class="span">Entity List</span>
+<span class="span">lobbied the Trump administration</span>
+<span class="span">pressure from rising memory chip prices</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0040'>E0040</a>, <a class='evref' href='#E0044'>E0044</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0044'>E0044</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0041'>E0041</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0046'>E0046</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the precise commercial terms (revenue share, per‑query costs, minimums) of the Apple–Google Gemini multi‑year deal for Siri and AFM support?</li>
+<li>How does Apple allocate and recover AI inference costs between on‑device, Private Cloud Compute, and third‑party clouds (e.g., Google Cloud) across Services vs. Hardware P&amp;Ls?</li>
+<li>What is the multi‑year capex trajectory and power footprint for Private Cloud Compute, and how much third‑party capacity (Google Cloud) will Apple rely upon?</li>
+<li>Will Apple expand third‑party model options (e.g., Anthropic, Google Gemini chatbot) within Apple Intelligence globally, and how will regional regulations (EU, China) affect rollout timing?</li>
+<li>What guardrails and auditing apply to AFM Cloud Pro deployments on Google Cloud (e.g., Nvidia Confidential Computing, Intel TDX) and how are they independently verified?</li>
+<li>Will U.S. regulators grant Apple approval to source DRAM from CXMT, and what are the contingency plans if licenses are denied amid Entity List restrictions?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some commercial figures (e.g., ~$1B/yr for Gemini) derive from press/frontier reports and have not been disclosed by Apple or Google.</li>
+<li>Regulatory and legal items (e.g., OpenAI exploring action, DMA probe) are evolving; outcomes and impacts remain uncertain.</li>
+<li>Supply chain and pricing commentary reflects fast‑changing market conditions for memory and accelerators amid AI datacenter demand.</li>
+</ul></section>
+</div></body></html>

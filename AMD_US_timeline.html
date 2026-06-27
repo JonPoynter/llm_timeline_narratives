@@ -1,0 +1,873 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>AMD US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+</style></head><body><div class='wrap'>
+<header>
+<h1>Advanced Micro Devices Inc <span class='sub'>(AMD US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.545</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>44 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 19</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 36</span>
+<span class='chip'>web-only (unverified): 3</span>
+<span class='chip'>web-only (verified): 3</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='phase'>
+<h2>Foundations and early hyperscaler traction</h2>
+<div class='range'>2023-03-08 → 2024-09-26</div>
+<div class='psum'>AMD’s AI position was seeded by broad ecosystem participation and early hyperscaler wins. In March 2023, AMD joined industry leaders to co-develop OpenXLA, signaling commitment to open tooling that can accelerate model workloads across diverse hardware. By December 2023’s Advancing AI event, Microsoft, Meta, Oracle and major OEMs were publicly aligning to deploy Instinct MI300-series accelerators, with Azure, OCI and Meta detailing deployment plans.
+Throughout 2024, AMD deepened cloud distribution: Azure ND MI300X V5 became generally available and powered Azure OpenAI Service workloads including GPT‑3.5/4; OCI unveiled BM.GPU.MI300X.8 bare metal clusters scaling to 16,384 GPUs. This period established AMD’s footprint across key channels—Azure and Oracle—while reinforcing software readiness via ROCm and open ecosystems.</div>
+<div class="event t-web_only_unverified" id="E0004">
+<div class="ev-top">
+<span class="date">2023-03-08</span>
+<span class="eh">AMD joins industry to launch OpenXLA compiler ecosystem</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Google announced OpenXLA with AMD and other leaders co-developing an open ML compiler stack to optimize models across varied hardware, reinforcing AMD’s software ecosystem posture for AI workloads.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">OpenXLA is an open source ML compiler ecosystem</span>
+<span class="span">co-developed by AI/ML industry leaders including</span>
+<span class="span">AMD</span>
+<span class="span">optimize models from all leading ML frameworks</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001">
+<div class="ev-top">
+<span class="date">2023-12-06</span>
+<span class="eh">Advancing AI 2023: Azure, Meta, OCI adopt MI300X</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span></div>
+<p class="narr">At AMD’s Advancing AI event, Microsoft detailed the Azure ND MI300x v5 VM series, Meta shared it is adding MI300X for inference with ROCm 6, and Oracle unveiled OCI plans—demonstrating multi-cloud adoption momentum for AMD Instinct.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Azure ND MI300x v5 Virtual Machine (VM) series</span>
+<span class="span">Meta shared that the company is adding AMD Instinct MI300X accelerators</span>
+<span class="span">ROCm 6</span>
+<span class="span">Oracle unveiled plans to offer OCI bare metal compute solutions</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002">
+<div class="ev-top">
+<span class="date">2024-05-21</span>
+<span class="eh">Azure MI300X V5 GA; powering Azure OpenAI GPT-3.5/4</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">AMD announced Azure ND MI300X V5 instances reached GA, with Microsoft using MI300X and ROCm to power Azure OpenAI Service workloads including GPT‑3.5 and GPT‑4, highlighting price/performance positioning.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Azure ND MI300X V5 instances are now generally available</span>
+<span class="span">Azure OpenAI Chat GPT 3.5 and 4 services</span>
+<span class="span">Hugging Face as the first customer</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003">
+<div class="ev-top">
+<span class="date">2024-09-26</span>
+<span class="eh">OCI launches BM.GPU.MI300X.8 with scale to 16,384 GPUs</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Oracle Cloud Infrastructure introduced BM.GPU.MI300X.8 bare metal instances using AMD Instinct MI300X, supporting Supercluster configurations of up to 16,384 GPUs for demanding LLM training and inference workloads.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">BM.GPU.MI300X.8</span>
+<span class="span">up to 16,384 GPUs</span>
+<span class="span">Oracle Cloud Infrastructure</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Multi‑gigawatt AI contracts and ecosystem signaling</h2>
+<div class='range'>2025-06-12 → 2025-11-12</div>
+<div class='psum'>AMD broadened AI validation in 2025: at Advancing AI 2025, Meta, OpenAI, Microsoft and xAI discussed production workloads on Instinct, with Meta highlighting Llama inference and OpenAI emphasizing close MI400 design engagements. In October 2025, AMD and OpenAI announced a multi‑year, multi‑generation agreement to deploy 6 GW of GPUs (initial 1 GW in 2H26) with a performance‑based warrant to further align interests—an inflection underscoring AMD’s role in frontier compute infrastructure.
+Market and investor communications reinforced the trajectory: Analyst Day targets, MI400/system strategy, and record AI‑driven results supported sentiment, even as shares reacted variably around earnings. These signals framed AMD as a credible second source and strategic partner at hyperscale.</div>
+<div class="event t-web_only_unverified" id="E0005">
+<div class="ev-top">
+<span class="date">2025-06-12</span>
+<span class="eh">Advancing AI 2025: Meta, OpenAI, Microsoft, xAI detail Instinct usage</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span> <span class="prov">xai_grok</span></div>
+<p class="narr">AMD said seven of the 10 largest model builders run production on Instinct GPUs; Meta described broad MI300X deployment for Llama 3/4 inference, and OpenAI’s CEO discussed deep design engagements on MI400 platforms.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">seven of the 10 largest model builders</span>
+<span class="span">Meta detailed how Instinct MI300X is broadly deployed</span>
+<span class="span">Llama 3 and Llama 4 inference</span>
+<span class="span">OpenAI CEO Sam Altman</span>
+<span class="span">MI400 Series platforms</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0006">
+<div class="ev-top">
+<span class="date">2025-10-06</span>
+<span class="eh">AMD and OpenAI sign multi‑year deal to deploy 6 GW of GPUs; warrant included</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6 · other</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">AMD and OpenAI announced a multi‑generation agreement to deploy 6 GW of Instinct GPUs, starting with an initial 1 GW of MI450 in 2H26; AMD also issued OpenAI a performance‑based warrant for up to 160M shares.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3], news_rows[18]</div>
+<span class="span">6 gigawatts of AMD GPUs</span>
+<span class="span">Initial 1 gigawatt</span>
+<span class="span">warrant for up to 160 million shares</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008">
+<div class="ev-top">
+<span class="date">2025-11-04</span>
+<span class="eh">Record Q3 aided by AI; outlook above consensus, muted stock reaction</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AMD reported record revenue with AI demand and provided an outlook above consensus; shares were little changed to slightly lower after hours, reflecting elevated expectations.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[17]</div>
+<span class="span">Record revenue and AI demand</span>
+<span class="span">outlook above consensus</span>
+<span class="span">shares slightly lower AH</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007">
+<div class="ev-top">
+<span class="date">2025-11-12</span>
+<span class="eh">Analyst Day: AI accelerator roadmap and $100B data center ambition</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AMD shares rose premarket as management outlined multi‑year AI targets including a $100B data center ambition, highlighting MI400 and a systems strategy.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[16]</div>
+<span class="span">soars premarket</span>
+<span class="span">$100B data center ambition</span>
+<span class="span">AMD +7 to +10 percent premarket</span>
+<span class="span">AI accelerator roadmap; MI400 and system strategy</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Systems push, mixed earnings cadence, and Meta expansion</h2>
+<div class='range'>2026-01-06 → 2026-02-29</div>
+<div class='psum'>At CES 2026, AMD introduced the Helios rack and MI500 series, advancing its rack‑scale AI systems strategy. Early February results beat but guided sequential revenue lower, tempering near‑term sentiment. Later in February, AMD announced a definitive multi‑gigawatt GPU partnership with Meta, including a performance‑based 160M‑share warrant, and Meta open‑sourced RCCLX to improve collective communications on AMD platforms, citing tangible MI300X performance gains. AMD also invested $150M in Nutanix alongside a multi‑year enterprise AI partnership.</div>
+<div class="event t-single_source" id="E0009">
+<div class="ev-top">
+<span class="date">2026-01-06</span>
+<span class="eh">AMD unveils Helios AI rack and MI500 series at CES</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">At CES, AMD detailed the Helios rack and MI500 roadmap to compete more directly at rack‑scale against incumbent AI systems.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[15]</div>
+<span class="span">Helios AI rack</span>
+<span class="span">MI500 series</span>
+<span class="span">CES</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0043">
+<div class="ev-top">
+<span class="date">2026-02-03</span>
+<span class="eh">AMD beats but guides sequential revenue lower; shares fall AH</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">AMD reported a beat on the top and bottom line but guided sequential revenue lower, leading shares to fall after hours.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[14]</div>
+<span class="span">guides sequential revenue lower</span>
+<span class="span">shares fall after hours</span>
+<span class="span">about -5.2 percent after hours</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0011">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">AMD and Meta sign multi‑year, multi‑generation 6 GW Instinct deal; performance‑based warrant</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6 · other</span> <span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">AMD and Meta announced a definitive partnership to deploy up to 6 GW of Instinct GPUs across multiple generations, with first gigawatt shipments expected to begin in 2H26 on a custom MI450‑based part; AMD issued Meta a performance‑based warrant for up to 160M shares.</p>
+<details>
+<summary>evidence — 3 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[13], web_search_findings[4], filings[0]</div>
+<span class="span">deploy up to 6 gigawatts of AMD Instinct™ GPUs</span>
+<span class="span">shipments to support the first gigawatt deployment are expected to begin in 2H 2026</span>
+<span class="span">performance-based warrant for up to 160 million shares</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0012">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Meta open-sources RCCLX; reports MI300X comms gains and ~10% TTIT reduction</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta released RCCLX integrated with Torchcomms to iterate on collectives and transports on AMD platforms, citing 10–50% decode and 10–30% prefill speedups on MI300X and ~10% TTIT reduction for user experience.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">RCCLX</span>
+<span class="span">AMD MI300X GPUs</span>
+<span class="span">10-50% for decode</span>
+<span class="span">approximately 10% reduction in time-to-incremental-token (TTIT)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">AMD invests $150M in Nutanix; multi‑year enterprise AI partnership</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$150M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AMD and Nutanix announced a multi‑year enterprise AI partnership with AMD investing $150M equity (up to $250M including R&amp;D/GTMS), catalyzing a sharp re‑rating in Nutanix shares.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[12]</div>
+<span class="span">multi‑year enterprise AI partnership</span>
+<span class="span">AMD investing $150M equity</span>
+<span class="span">up to $250M including R&amp;D/GTMS</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scaling, supply risks, ecosystem investments and regulatory headwinds</h2>
+<div class='range'>2026-05-02 → 2026-06-25</div>
+<div class='psum'>AMD’s May 2026 quarter highlighted Data Center as the primary growth engine, with revenue of $5.775B and record free cash flow, alongside guidance to scale server supply. Management flagged supply‑chain tightness, HBM‑mix margin sensitivity, and China export controls pressuring sequential accelerator sales. AMD broadened collaborations (AWS, Google Cloud, Azure, Tencent) and detailed Samsung HBM4 alignment.
+Concurrently, AMD announced $10B Taiwan ecosystem capex and led a $350M Series B in TensorWave, invested in Odyssey’s $310M round, finalized a 30MW AI compute deal with Rackspace, and acquired memory‑optimization startup MEXT. Macro/regulatory risks included TSMC pricing signals and tightened U.S. China export rules. OpenAI’s custom ‘Jalapeño’ chip posed a competitive threat even as it cited ongoing arrangements with AMD.</div>
+<div class="event t-single_source" id="E0042">
+<div class="ev-top">
+<span class="date">2026-05-02</span>
+<span class="eh">Riot Platforms up on AI data center revenue and expanded AMD deal</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$33M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Riot highlighted AI data center revenue and an expanded AMD deal, driving a double‑digit intraday gain and signaling broader enterprise AI compute demand adjacent to crypto mining.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[11]</div>
+<span class="span">expanded AMD deal</span>
+<span class="span">data center revenue 33.2 million</span>
+<span class="span">RIOT +10 to +13 percent intraday May 1</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0041">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Semis lift as AMD outlook strong; TSMC capex raised; hyperscaler capex seen ~$725B in 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters noted AMD’s upbeat guidance and TSMC’s raised guidance/capex, with analysts seeing 2026 hyperscaler capex near $725B—reinforcing AI infrastructure investment momentum.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[10]</div>
+<span class="span">AMD issued upbeat guidance</span>
+<span class="span">TSMC raised guidance and capex</span>
+<span class="span">hyperscaler capex near $725B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Management: AI infrastructure demand now primary DC growth driver</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AMD highlighted accelerating AI infrastructure demand with Data Center now the primary driver of revenue and earnings growth.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">accelerating AI infrastructure demand</span>
+<span class="span">Data Center now the primary driver of revenue and earnings growth.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Expanded hyperscaler collaborations across major clouds</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AMD reported expanded collaborations with leading hyperscalers including AWS, Google Cloud, Microsoft Azure and Tencent, broadening distribution for EPYC and Instinct.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expanded hyperscaler collaborations (AWS, Google Cloud, Microsoft Azure, Tencent)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Samsung collaboration on HBM4 and advanced DRAM for next‑gen EPYC</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AMD cited supply‑chain partnerships including Samsung on HBM4 and advanced DRAM to support next‑generation EPYC platforms.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Samsung collaboration on HBM4</span>
+<span class="span">advanced DRAM</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q2 2026 guidance: ~$11.2B revenue and ~56% non‑GAAP GM</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$11.2B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AMD guided Q2 2026 revenue to approximately $11.2B (±$300M), up ~46% y/y and ~9% q/q at the midpoint, with non‑GAAP gross margin around 56%.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q2 2026: revenue approximately $11.2B</span>
+<span class="span">non-GAAP gross margin ~56%.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Guidance emphasizes scaling server supply and GM expansion</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized scaling server supply to meet demand and near‑term non‑GAAP GM expansion as Data Center mix rises.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">scaling server supply to meet demand</span>
+<span class="span">non-GAAP GM expansion near term as Data Center mix rises.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Data Center revenue $5.775B, +57% y/y; ~28% segment margin</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.8B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AMD reported Data Center revenue of $5,775M (+57% y/y) with segment operating income of $1,599M (~28% margin), underscoring AI‑led growth.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Data Center revenue $5,775M (+57% y/y)</span>
+<span class="span">segment operating income $1,599M (~28% margin).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Record free cash flow $2.566B; OCF $2.955B</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.6B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AMD delivered record free cash flow of $2,566M on operating cash flow of $2,955M, reflecting strong AI‑driven profitability and mix.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow $2,955M</span>
+<span class="span">free cash flow $2,566M (25% FCF margin).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Capex $389M to support scaling</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$389M · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">AMD reported capital expenditures of $389M in the quarter to support capacity scaling.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Capex $389M.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk: supply‑chain tightness and DC build‑out constraints</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that supply‑chain tightness and constraints in data center build‑outs could limit the pace of server CPU/GPU shipments despite strong demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">supply-chain tightness</span>
+<span class="span">constraints in data center build-outs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk: accelerator mix/HBM costs may dilute gross margin</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">AMD noted near‑term non‑GAAP gross margin could face dilution as MI450‑series accelerators ramp and margin is sensitive to HBM memory costs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">non-GAAP gross margin could face dilution</span>
+<span class="span">HBM memory costs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Regulatory risk: China AI GPU shipments subject to export controls</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management addressed risks to 2H26 cadence from export controls and approvals affecting AI accelerator sales to China.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI accelerator sales to China</span>
+<span class="span">export controls and approvals</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q2 2026: EPYC server CPU revenue expected to grow &gt;70% y/y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AMD indicated server CPU revenue growth above 70% y/y in Q2 2026, implying outsized EPYC contribution versus the corporate average.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">&gt;70% year over year in Q2 2026</span>
+<span class="span">outsized EPYC contribution</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Server CPU TAM projection raised to &gt;$120B by 2030</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$120.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AMD discussed a larger long‑term server CPU TAM, projecting over $120B by 2030 on AI orchestration and inference needs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">over $120B</span>
+<span class="span">to 2030</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">China AI accelerator sales down sequentially; cadence variability</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">AMD noted sequential declines in AI accelerator sales to China, contributing to near‑term variability despite a strengthening broader pipeline.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">sales to China were down sequentially</span>
+<span class="span">near‑term variability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">MI450/Helios large‑deal pipeline building; capacity scaling planned</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management pointed to a growing large‑deal pipeline tied to MI450‑series and Helios systems and reiterated plans to scale wafer and back‑end capacity.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">growing large-deal pipeline</span>
+<span class="span">MI450-series and Helios systems</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q2 growth framed as data center‑led</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AMD framed Q2 growth as data center‑led with server CPU growth well ahead of the corporate average.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q2 growth as data center‑led</span>
+<span class="span">server CPU growth running well ahead of the corporate average.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Backlog: no quantified RPO/booking disclosed</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">AMD stated it does not disclose quantified backlog, RPO or bookings; management cited multi‑year AI engagements as qualitative visibility without numeric disclosure.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">does not disclose quantified backlog, RPO or bookings.</span>
+<span class="span">no numeric backlog was provided.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Product updates: EPYC 8005, Ryzen AI PRO 400, Kintex US+ Gen2, Ryzen AI Embedded P100</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AMD announced updates spanning server CPUs, Pro and embedded AI PCs, and FPGAs, highlighting breadth from data center to edge.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">EPYC 8005 server CPUs</span>
+<span class="span">Ryzen AI PRO 400 series</span>
+<span class="span">Ryzen AI Embedded P100</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Data Center mix continues to support higher non‑GAAP GM</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AMD said mix shift toward Data Center continued, supporting higher non‑GAAP gross margin.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Mix shift toward Data Center continued</span>
+<span class="span">supporting higher non-GAAP gross margin.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">AMD to invest $10B in Taiwan AI ecosystem for advanced packaging/manufacturing</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CNBC/AP reported AMD will invest $10B in Taiwan’s AI ecosystem focused on advanced packaging and manufacturing to address key bottlenecks.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[8]</div>
+<span class="span">invest $10b in Taiwan’s AI ecosystem</span>
+<span class="span">advanced packaging and manufacturing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Microsoft to still buy Nvidia/AMD chips despite Maia</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TechRadar reported Microsoft will continue buying Nvidia and AMD accelerators despite its Maia custom silicon, implying sustained multi‑vendor demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[9]</div>
+<span class="span">Microsoft to still buy Nvidia/AMD chips despite Maia</span>
+<span class="span">Hedged supply strategy</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0038">
+<div class="ev-top">
+<span class="date">2026-06-06</span>
+<span class="eh">U.S. tightens AI‑chip export rules affecting China‑owned subsidiaries</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Reuters reported Commerce clarified licensing rules apply to foreign subsidiaries of China‑headquartered firms, affecting shipments including AMD MI350x; the move tightens compliance and limits addressable demand.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[7]</div>
+<span class="span">tightens AI‑chip export rules</span>
+<span class="span">apply to foreign subsidiaries of China‑headquartered firms</span>
+<span class="span">AMD MI350x shipments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">TSMC CFO: inflation lifts costs; price increases not ruled out</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Citing a BBC interview, TSMC’s CFO said inflation has raised costs and price increases are not ruled out, posing upstream cost pressure for fabless customers including AMD.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[6]</div>
+<span class="span">inflation has raised the company’s costs</span>
+<span class="span">not ruling out price increases</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">TensorWave raises $350M Series B led by AMD to expand AMD‑based AI clouds</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$350M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AMD co‑led TensorWave’s $350M Series B at a $1.55B post‑money valuation, supporting expansion of AMD‑based AI data centers and alternative GPU cloud capacity.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">$350 million Series B</span>
+<span class="span">led by Advanced Micro Devices</span>
+<span class="span">$1.55 billion post-money</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">Rackspace signs definitive deal for initial 30 MW of AMD‑based AI compute</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Rackspace and AMD finalized an agreement for a phased deployment of an initial 30 MW of AMD‑based AI compute across Rackspace data centers starting in late 2026 through 2028.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">definitive agreement for a phased deployment</span>
+<span class="span">30 MW of AMD-based AI compute</span>
+<span class="span">deployments scheduled to begin in late 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0046">
+<div class="ev-top">
+<span class="date">2026-06-17</span>
+<span class="eh">Odyssey raises $310M Series B; AMD Ventures participates</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$310M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">TechCrunch reported Odyssey raised $310M at a $1.45B valuation with participation from AMD Ventures; Odyssey will make AWS its preferred cloud and optimize for Trainium.</p>
+<p class="cav">⚠ AMD’s specific check size not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">raised a $310 million Series B</span>
+<span class="span">AMD Ventures</span>
+<span class="span">optimize its models for AWS’s Trainium</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">AMD acquires MEXT; shares near $900B market value on AI memory strategy</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$900.0B · market_cap_impact</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AMD acquired MEXT, whose memory‑tiering technology makes NAND appear as DRAM to ease data‑center memory constraints; shares rallied, nearing a $900B market value.</p>
+<p class="cav">⚠ Acquisition price not disclosed; market cap figure referenced intraday estimates.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[4]</div>
+<span class="span">acquired MEXT</span>
+<span class="span">makes NAND flash appear as DRAM</span>
+<span class="span">nears $900B market value</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0039">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">OpenAI and Broadcom unveil ‘Jalapeño’ custom inference chip</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI announced ‘Jalapeño,’ a custom Intelligence Processor for LLM inference, aiming to improve efficiency and reduce reliance on GPUs; OpenAI also cited ongoing arrangements with AWS/Trainium, Nvidia, AMD and Cerebras.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">Jalapeño</span>
+<span class="span">first custom ‘Intelligence Processor’</span>
+<span class="span">reduce reliance on Nvidia GPUs</span>
+<span class="span">ongoing arrangements with AWS/Trainium, Nvidia, AMD</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0040">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">RAISE US workforce coalition launches ~$500M; AMD among backers</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$500M · other</span> <span class="badge">neutral</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Axios reported the RAISE US nonprofit launched with roughly $500M to pilot AI‑era workforce policies with states and employers; backers include Amazon, Microsoft, Anthropic, OpenAI’s foundation, GM, AMD and others.</p>
+<p class="cav">⚠ Coalition funding is aggregate; AMD’s specific contribution not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">RAISE US</span>
+<span class="span">roughly $500 million</span>
+<span class="span">AMD</span>
+<span class="span">Anthropic, OpenAI’s foundation</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0046'>E0046</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0042'>E0042</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0046'>E0046</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0039'>E0039</a></td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the implied dollar value and vesting schedule of the 160M-share performance-based warrants issued to OpenAI and Meta?</li>
+<li>What proportion of AMD’s 6 GW commitments (OpenAI and Meta) are tied to MI450 vs. future MI500/MI400-series generations, and what are the delivery phasings by half year?</li>
+<li>How much China exposure (as % of DC accelerator revenue) does AMD have post–export-control tightening, and what is the expected 2H26 impact?</li>
+<li>To what extent will OpenAI’s ‘Jalapeño’ and Microsoft’s Maia reduce AMD accelerator demand in 2027–2028, and how are these offset by ongoing multi-vendor purchases?</li>
+<li>What pass-through rate to customers does AMD expect from potential TSMC wafer price increases and HBM cost inflation, and how does this affect non-GAAP GM trajectory?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some third-party news items summarize market reactions without disclosing underlying contract economics; figures like market cap and hyperscaler capex are indicative and may vary intraday or by analyst source.</li>
+<li>Equity round participation amounts for AMD Ventures (e.g., Odyssey, TensorWave) are undisclosed; magnitudes reflect total round size rather than AMD’s check.</li>
+<li>Rackspace 30 MW agreement lacks disclosed pricing and specific rack/GPU configurations; deployment timing spans multiple years.</li>
+<li>RAISE US coalition total funding is aggregate; AMD’s specific contribution and commitments are not itemized.</li>
+</ul></section>
+</div></body></html>

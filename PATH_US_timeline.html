@@ -1,0 +1,908 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>PATH US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+</style></head><body><div class='wrap'>
+<header>
+<h1>UiPath Inc <span class='sub'>(PATH US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.519</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>46 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 2</span>
+<span class='chip'>web 15</span>
+<span class='chip'>single source: 31</span>
+<span class='chip'>web-only (verified): 9</span>
+<span class='chip'>web-only (unverified): 5</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='phase'>
+<h2>Foundational GenAI connectors and cloud model access</h2>
+<div class='range'>2023-05-10 → 2023-10-09</div>
+<div class='psum'>UiPath began integrating frontier LLM capabilities into its Business Automation Platform via native connectors. Initial launches brought OpenAI for ChatGPT and Amazon SageMaker access into Studio workflows, enabling generative text and LLM application patterns. Shortly after, UiPath expanded support to OpenAI and Azure OpenAI with GPT-4, previewed Google Vertex AI (PaLM 2), and later made a Vertex AI connector generally available.
+By October 2023, UiPath added an Integration Service Connector for Amazon Bedrock, broadening access to multiple foundation models including Anthropic Claude and Amazon Titan, reinforcing a multi-model strategy to embed LLMs into automations.</div>
+<div class="event t-web_only_verified" id="E0001">
+<div class="ev-top">
+<span class="date">2023-05-10</span>
+<span class="eh">OpenAI for ChatGPT and Amazon SageMaker connectors enter UiPath platform</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">UiPath introduced an OpenAI Connector in public preview and added Amazon SageMaker support, enabling developers to call GPT-based text completions and deploy LLM applications inside UiPath automations.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">OpenAI for ChatGPT</span>
+<span class="span">Amazon SageMaker</span>
+<span class="span">public preview</span>
+<span class="span">OpenAI Connector</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002">
+<div class="ev-top">
+<span class="date">2023-06-27</span>
+<span class="eh">GA of OpenAI/Azure OpenAI connectors with GPT-4; Vertex (PaLM 2) preview</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">UiPath announced general availability of OpenAI and Azure OpenAI connectors with GPT-4 support, added Falcon LLM via SageMaker, and previewed a Google Vertex connector with PaLM 2, expanding multi-model options.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">general availability of OpenAI and Azure OpenAI connectors</span>
+<span class="span">support for GPT-4</span>
+<span class="span">support for the Falcon Large Language Model (LLM)</span>
+<span class="span">preview of the Google Vertex connector</span>
+<span class="span">PaLM 2</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003">
+<div class="ev-top">
+<span class="date">2023-08-29</span>
+<span class="eh">Vertex AI connector GA and expanded Google partnership</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">UiPath made its connector for Google Cloud Vertex AI generally available, providing curated activities for PaLM 2 text generation and expanding Google Cloud and Workspace integrations.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">connector for Google Cloud Vertex AI—now generally available</span>
+<span class="span">PaLM 2 large language model (LLM)</span>
+<span class="span">Google Workspace</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004">
+<div class="ev-top">
+<span class="date">2023-10-09</span>
+<span class="eh">UiPath launches Amazon Bedrock connector including Anthropic Claude access</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">UiPath released an Integration Service Connector for Amazon Bedrock, allowing Studio developers to integrate generative AI using Amazon Titan and third-party FMs, including Anthropic Claude for conversational and text tasks.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">new Integration Service Connector</span>
+<span class="span">Amazon Bedrock</span>
+<span class="span">Customers can also choose Claude, Anthropic’s LLM</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Marketplace access and Anthropic-powered assistants</h2>
+<div class='range'>2024-02-29 → 2024-10-22</div>
+<div class='psum'>UiPath broadened distribution by becoming available on Google Cloud Marketplace while deepening integration with Vertex AI. Documentation updates added Gemini text-completion activities and model selection controls in Google Vertex activities.
+At FORWARD 2024, UiPath integrated Anthropic’s Claude 3.5 Sonnet into Autopilot and Clipboard AI, indicating a focus on trusted, agentic assistants improving daily work and document processing with stronger accuracy.</div>
+<div class="event t-web_only_unverified" id="E0005">
+<div class="ev-top">
+<span class="date">2024-02-29</span>
+<span class="eh">UiPath available on Google Cloud Marketplace; Vertex AI integration</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">UiPath listed its platform on Google Cloud Marketplace, enabling consolidated billing and faster procurement, and highlighted integration with Google’s Vertex AI and Workspace collaboration tools.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">UiPath is now available on Google Cloud Marketplace</span>
+<span class="span">integrates with Google Vertex AI</span>
+<span class="span">Consolidated Google Cloud billing</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006">
+<div class="ev-top">
+<span class="date">2024-03-13</span>
+<span class="eh">New Vertex activity: Generate Text Completion using Gemini</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">UiPath added a Google Vertex activity for Gemini text generation and exposed a Model ID field to select specific large language models for completion requests.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Generate Text Completion using Gemini</span>
+<span class="span">Model ID field</span>
+<span class="span">choose the large language model</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007">
+<div class="ev-top">
+<span class="date">2024-10-22</span>
+<span class="eh">Anthropic Claude 3.5 Sonnet powers UiPath Autopilot and Clipboard AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">UiPath integrated Anthropic’s Claude 3.5 Sonnet to deliver new AI features in Autopilot for everyone and Clipboard AI, and launched a medical record summarization solution to enhance accuracy and task execution via automations.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Claude 3.5 Sonnet</span>
+<span class="span">Autopilot for everyone</span>
+<span class="span">Clipboard AI</span>
+<span class="span">medical record summarization</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>BYOM, OpenAI collaboration, and multi-model orchestration</h2>
+<div class='range'>2025-04-22 → 2025-11-03</div>
+<div class='psum'>UiPath reinforced a model-agnostic posture: it shipped BYOM to connect any OpenAI API–compatible model (including Grok and DeepSeek via partners), published an OpenAI V1 compliant connector, and expanded Bedrock integrations listing Anthropic Claude variants and Meta Llama models. Documentation noted Google’s deprecation of older Gemini models, guiding users to Gemini 2.0 Flash.
+The company announced a collaboration with OpenAI for enterprise agentic automation, including a ChatGPT connector and Maestro orchestration alongside other third-party agents. An OpenAI corporate restructuring into a PBC was tracked as a frontier event with potential long-term ecosystem implications.</div>
+<div class="event t-web_only_verified" id="E0008">
+<div class="ev-top">
+<span class="date">2025-04-22</span>
+<span class="eh">UiPath updates for Google Vertex: deprecated Gemini models and migration guidance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">UiPath documented deprecations affecting specific Vertex Gemini models and advised transitioning Generate Text Completion activities to Gemini 2.0 Flash to maintain continuity.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Deprecated models and activities.</span>
+<span class="span">Gemini Pro</span>
+<span class="span">Gemini 1.5 Flash</span>
+<span class="span">Gemini 2.0 Flash</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009">
+<div class="ev-top">
+<span class="date">2025-05-14</span>
+<span class="eh">UiPath launches BYOM and OpenAI API–compatible connector; cites Grok and DeepSeek</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1 · other</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">xai_grok</span> <span class="prov">deepseek</span></div>
+<p class="narr">UiPath introduced Bring Your Own Model (BYOM), enabling integration of models hosted on Azure, AWS, GCP, or providers like Fireworks AI using an OpenAI V1–compliant connector; the post highlights options such as Grok and DeepSeek with performance and cost data.</p>
+<p class="cav">⚠ Performance and cost examples are vendor-supplied illustrations.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Bring Your Own Model (BYOM)</span>
+<span class="span">OpenAI V1 Compliant LLM connector</span>
+<span class="span">Grok</span>
+<span class="span">DeepSeek v3</span>
+<span class="span">$0.55/ million input tokens</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0010">
+<div class="ev-top">
+<span class="date">2025-06-11</span>
+<span class="eh">UiPath Bedrock activity adds Meta Llama 2 text completion</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Documentation added a Bedrock activity to generate text using Meta’s Llama 2 models, listing selectable options such as 13B and 70B.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">Get Text Completion Using Llama 2</span>
+<span class="span">Llama2 13B</span>
+<span class="span">Llama2 70B</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0011">
+<div class="ev-top">
+<span class="date">2025-07-28</span>
+<span class="eh">Bedrock integration lists Anthropic Claude 3.5 and Meta Llama 3 options</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">meta_llama</span></div>
+<p class="narr">UiPath’s Bedrock activity documentation enumerated supported models including multiple Anthropic Claude 3.x variants and Meta Llama 3 Instruct models, underscoring multi-model breadth.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Anthropic Claude 3.5 Sonnet</span>
+<span class="span">Meta Llama 3 8b Instruct</span>
+<span class="span">Mistral Large</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0012">
+<div class="ev-top">
+<span class="date">2025-07-31</span>
+<span class="eh">Docs: OpenAI V1 Compliant LLM connector enables broad model access</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">UiPath documented its OpenAI V1–compliant connector, allowing connection to any LLM that follows the OpenAI V1 API standard and enabling Generate Chat Completion in Studio.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">OpenAI V1 Compliant LLM connector</span>
+<span class="span">OpenAI V1 standard</span>
+<span class="span">Generate Chat Completion</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0013">
+<div class="ev-top">
+<span class="date">2025-09-30</span>
+<span class="eh">UiPath announces collaboration with OpenAI for agentic automation</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">UiPath and OpenAI announced a collaboration featuring a ChatGPT connector and Maestro orchestration across UiPath, OpenAI, and third-party agents, noting that OpenAI models (including GPT-5 in Agent Builder) power UiPath agents.</p>
+<p class="cav">⚠ Future availability and performance of referenced GPT-5 features may evolve.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">collaboration with OpenAI</span>
+<span class="span">ChatGPT connector</span>
+<span class="span">GPT-5 available in UiPath Agent Builder</span>
+<span class="span">Maestro will orchestrate UiPath</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0014">
+<div class="ev-top">
+<span class="date">2025-10-29</span>
+<span class="eh">Vertex agents callable in UiPath agent flows; deprecation notes localized</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Localized docs introduced an activity to execute Vertex AI agents within Maestro agent flows and reiterated model deprecation timelines for Gemini Pro and 1.5 Flash.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>执行 Google Vertex 代理</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>已弃用的模型和活动</span>
+<span class="span">Gemini Pro</span>
+<span class="span">Gemini 1.5 Flash</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015">
+<div class="ev-top">
+<span class="date">2025-11-03</span>
+<span class="eh">Frontier context: OpenAI restructures as Public Benefit Corporation</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI completed a recapitalization into a Public Benefit Corporation with the nonprofit retaining ~26% ownership, a step described as clearing a path to an eventual IPO; relevant to UiPath as an ecosystem signal.</p>
+<p class="cav">⚠ Ecosystem event; no direct contractual impact disclosed for UiPath.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[1]</div>
+<span class="span">Public Benefit Corporation</span>
+<span class="span">nonprofit retaining a ~26% stake</span>
+<span class="span">path to IPO</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Enterprise AI attachment, agentic orchestration, and financial posture</h2>
+<div class='range'>2026-03-11 → 2026-06-02</div>
+<div class='psum'>UiPath reported deep AI attachment across its customer base and growing RPO/cRPO, alongside significant cash, no debt, and ongoing buybacks. Management reiterated a model-agnostic strategy, vendor-agnostic orchestration (Maestro), and non-consumption ARR pricing. Competitive risks from hyperscaler-native agent offerings were explicitly acknowledged.
+Product-wise, UiPath launched Coding Agents and highlighted agentic AI across industries. Distribution expanded with Intelligent Xtraction &amp; Processing (IXP) on Google Cloud Marketplace using Gemini as the default third‑party model. Frontier developments included OpenAI’s ability to sell on rival clouds after ending exclusivity with Microsoft.</div>
+<div class="event t-single_source" id="E0016">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">AI attachment: 90% of $1M+ ARR customers using UiPath AI</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported broad AI product usage: 90% of $1M+ ARR customers, ~60% of $100k+ ARR, and 42% of &gt;$30k ARR customers are using UiPath AI products.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">90% of $1M+ ARR customers</span>
+<span class="span">~60% of $100k+ ARR customers</span>
+<span class="span">42% of &gt;$30k ARR customers</span>
+<span class="span">using UiPath AI products</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">RPO at $1.475B, +19% Y/Y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.5B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">UiPath disclosed remaining performance obligations of $1.475B, up 19% year over year (approximately +14% excluding FX).</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Remaining performance obligations (RPO): $1.475B</span>
+<span class="span">+19% Y/Y</span>
+<span class="span">+14% Y/Y excluding FX</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Current RPO $913M, +13% Y/Y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$913M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">UiPath reported cRPO of $913M, up 13% year over year.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Current RPO $913M</span>
+<span class="span">(+13% Y/Y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Model-agnostic stance with zero impact on U.S. public sector</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">UiPath emphasized a model-agnostic approach offering customer optionality and stated there was zero impact on U.S. public-sector work.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">model‑agnostic</span>
+<span class="span">zero impact</span>
+<span class="span">U.S. public‑sector</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Maestro as vendor-agnostic orchestration; governs open-source agents</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management framed Maestro as vendor-agnostic orchestration, noting that open-source agents can run under UiPath governance.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">vendor-agnostic orchestration</span>
+<span class="span">open‑source agents</span>
+<span class="span">UiPath governance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Revenue model remains ARR, not consumption-based</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">UiPath reiterated it is not on a consumption basis and remains on an ARR model.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">we’re not on a consumption basis</span>
+<span class="span">we’re still on an ARR basis</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">AIUC-1 certification; joined Agentic AI Foundation</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">UiPath reported obtaining AIUC-1 certification for AI agent security and joining the Agentic AI Foundation.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">AIUC-1 certification</span>
+<span class="span">Agentic AI Foundation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">UiPath acquires WorkFusion to expand agentic AI in fincrime compliance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UiPath announced the acquisition of WorkFusion to bolster agentic AI solutions for financial crime compliance.</p>
+<p class="cav">⚠ Financial terms not disclosed in the cited highlight.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">acquisition of WorkFusion</span>
+<span class="span">agentic AI solutions in financial crime compliance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Completed $1B share repurchase program</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">UiPath completed its $1B repurchase program, including 14M shares repurchased through March 10, 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">completed the $1B repurchase program</span>
+<span class="span">14M shares repurchased</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Authorized new $500M buyback</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$500M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">UiPath’s Board authorized a new $500M share repurchase program following completion of the prior authorization.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">authorized a new $500M buyback</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026">
+<div class="ev-top">
+<span class="date">2026-04-27</span>
+<span class="eh">OpenAI and Microsoft end exclusivity, enabling sales on rival clouds</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Reuters reported OpenAI and Microsoft ended exclusivity, allowing OpenAI to sell models on AWS and Google while Microsoft retains a long-term IP license and revenue share—potentially easing multi-cloud agent access for UiPath customers.</p>
+<p class="cav">⚠ Ecosystem development; no direct UiPath commercial terms disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[0]</div>
+<span class="span">end exclusivity</span>
+<span class="span">sell models directly on rival clouds</span>
+<span class="span">long‑term IP license and revenue share</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">AI present in 16 of top 20 deals; AI-led expansions 6x larger</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted growing adoption of agentic AI in large deals, noting AI was present in 16 of the top 20 transactions and that AI‑influenced expansions were six times larger.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">agentic AI</span>
+<span class="span">16 of top 20</span>
+<span class="span">AI‑influenced expansions 6x larger</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Launched UiPath for Coding Agents</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UiPath announced the launch of UiPath for Coding Agents, expanding its agentic portfolio aimed at software development workflows.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">launch of UiPath for Coding Agents</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">New agentic AI solutions across industries</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UiPath introduced additional agentic AI solutions targeting multiple industries, reinforcing platform breadth.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">new agentic AI solutions across industries</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Expanded Deloitte alliance for Agentic ERP and testing</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UiPath expanded its Deloitte alliance to include Agentic ERP and agentic-led testing on Deloitte Ascend.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expanded Deloitte alliance</span>
+<span class="span">Agentic ERP</span>
+<span class="span">agentic-led testing on Deloitte Ascend</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Partnership with Databricks highlighted</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UiPath noted a partnership with Databricks to strengthen data and AI workflows within its automation platform.</p>
+<p class="cav">⚠ No financial terms disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">a Databricks partnership</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0032">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">IXP listed on Google Cloud Marketplace; Gemini set as default 3P model</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">UiPath Intelligent Xtraction &amp; Processing (IXP) became available on Google Cloud Marketplace with Gemini as the default third‑party model, enabling customers to apply Google Cloud commitments to UiPath document processing solutions.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[12]</div>
+<span class="span">Intelligent Xtraction &amp; Processing (IXP)</span>
+<span class="span">Google Cloud Marketplace</span>
+<span class="span">Gemini as default third‑party model</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>Google Cloud の確約利用枠を活用</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">New CX orchestration on Salesforce AgentExchange</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UiPath introduced customer experience orchestration offerings on Salesforce AgentExchange, extending distribution and integration touchpoints.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Salesforce AgentExchange</span>
+<span class="span">new CX orchestration offerings</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Security automation initiative with Microsoft</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UiPath announced a security automation initiative with Microsoft to enhance security-related automation use cases.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">security automation initiative with Microsoft</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Model-agnostic, bring-your-own-model approach reiterated</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management underscored a model‑agnostic, bring‑your‑own‑model approach to maximize customer choice and resilience across AI providers.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">model‑agnostic, bring‑your‑own‑model approach</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Plans to deploy coding agents across the SDLC</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UiPath outlined plans to deploy coding agents across the software development lifecycle from planning through code generation.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">deploy coding agents across the SDLC</span>
+<span class="span">planning through code generation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Maestro fit: not in every deal; best for end-to-end orchestration</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The CEO clarified Maestro is most relevant for complex end‑to‑end orchestration and not required in every customer deal; task automation can start smaller.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Maestro is not in every deal</span>
+<span class="span">end‑to‑end orchestration</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0038">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Consumption revenue very small; pricing mainly subscription/server</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The CFO said consumption-based revenue remains a very small part of UiPath’s model, with pricing dominated by subscription and server-based structures and outcome-based pricing emerging in large enterprise deals.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">consumption‑based revenue is a very small part</span>
+<span class="span">subscription and server‑based</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0039">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Top-tier deals increasingly have a material AI component</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated that for the largest customers, transactions increasingly have a material AI component rather than piecemeal SKUs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">material AI component</span>
+<span class="span">piecemeal SKUs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0040">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">RPO $1.413B; 64% due within 12 months</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.4B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">UiPath reported RPO of $1.4132B as of April 30, 2026, with 64% expected to be recognized as revenue over the next 12 months.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Remaining performance obligations (RPO) $1,413.2M</span>
+<span class="span">64% expected to be recognized</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0041">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">cRPO ~$988M, up 17% Y/Y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$988M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">UiPath cited current RPO of approximately $988M, up 17% year over year.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">current RPO (cRPO) of ~$988M</span>
+<span class="span">up 17% y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0042">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Q1 adjusted free cash flow of $130.3M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$130M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">UiPath reported non‑GAAP adjusted free cash flow of $130.3M for the quarter.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">adjusted free cash flow $130.3M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0043">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Cash and investments $1.42B; no debt</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.4B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">UiPath ended the quarter with $1.42B in cash, cash equivalents, and marketable securities, and no debt.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Cash, cash equivalents and marketable securities $1.42B</span>
+<span class="span">no debt</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0044">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">FY27 adjusted FCF reiterated at approximately $425M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$425M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated full-year non‑GAAP adjusted free cash flow guidance of about $425M.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">FY non‑GAAP adjusted FCF ≈$425M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0045">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Competitive threat from hyperscaler-native AI automation platforms</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">UiPath cautioned that shifts in partner priorities or competition from larger ecosystems with native AI automation could compress win rates or pricing.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">competing native AI automation offerings</span>
+<span class="span">larger ecosystems</span>
+<span class="span">compress win rates or pricing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0046">
+<div class="ev-top">
+<span class="date">2026-05-29</span>
+<span class="eh">Yahoo Finance: in-line quarter; ARR trends support automation theme</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Coverage noted an in-line print with solid ARR keeping the AI automation narrative intact; PATH shares were choppy and closed little changed amid steady enterprise AI adoption.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">in-line quarter</span>
+<span class="span">ARR</span>
+<span class="span">closes little changed</span>
+<span class="span">Enterprise AI adoption</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0046'>E0046</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0045'>E0045</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0045'>E0045</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0045'>E0045</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0045'>E0045</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0040'>E0040</a>, <a class='evref' href='#E0041'>E0041</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0040'>E0040</a>, <a class='evref' href='#E0041'>E0041</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of ARR or new ACV is explicitly attributable to agentic AI products (e.g., Maestro, Coding Agents, Autopilot)?</li>
+<li>What is the revenue or GM uplift tied to Google Cloud Marketplace listings (platform and IXP) and Salesforce AgentExchange?</li>
+<li>What are the commercial terms (if any) of the UiPath–OpenAI collaboration beyond the connector (e.g., revenue share, co-selling)?</li>
+<li>How widely is Gemini used as the default model in IXP deployments versus alternatives, and what is the measured accuracy/cost delta in production?</li>
+<li>What is the dollar scale and scope of the Databricks partnership and expanded Deloitte alliance for agentic ERP/testing?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several product announcements and performance claims are sourced from vendor press/blogs or documentation and may reflect marketing positioning rather than audited outcomes.</li>
+<li>Frontier provider ecosystem changes (e.g., OpenAI–Microsoft terms) are contextual; no direct UiPath contractual impact is disclosed in the sources.</li>
+<li>Localization documents (e.g., Chinese/Japanese pages) reflect feature availability notes; translation nuances may affect interpretation of model names or timelines.</li>
+</ul></section>
+</div></body></html>

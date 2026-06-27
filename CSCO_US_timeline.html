@@ -1,0 +1,835 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>CSCO US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+</style></head><body><div class='wrap'>
+<header>
+<h1>Cisco Systems Inc <span class='sub'>(CSCO US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.507</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>42 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 4</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 16</span>
+<span class='chip'>single source: 22</span>
+<span class='chip'>web-only (verified): 12</span>
+<span class='chip'>web-only (unverified): 4</span>
+<span class='chip'>corroborated: 4</span>
+</div>
+<div class='phase'>
+<h2>Pre-scale groundwork: contact center AI and private LLM options</h2>
+<div class='range'>2018-07-24 → 2024-12-31</div>
+<div class='psum'>Cisco’s earliest AI relationship signals centered on bringing third‑party AI into its collaboration and contact center stack and offering customers private LLM deployment options. In 2018, Cisco and Google Cloud announced integrations that added Google’s Contact Center AI to Cisco Customer Journey Solutions and explored meeting transcription/translation and summaries.
+By late 2023, Cisco formalized resale/provisioning of Google CCAI within Webex Contact Center, documenting the CCW ordering and provisioning flow. In 2024, Cisco published a Validated Design with Nutanix “GPT‑in‑a‑Box” supporting popular open‑weight models like Llama 2 for on‑prem/private deployments — an early proof of Cisco’s multi‑model, customer‑controlled stance.</div>
+<div class="event t-web_only_verified" id="E0001">
+<div class="ev-top">
+<span class="date">2018-07-24</span>
+<span class="eh">Cisco integrates Google Contact Center AI into Customer Journey Solutions</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Cisco and Google Cloud announced initial collaboration integrations, adding Google’s Contact Center AI to Cisco Customer Journey Solutions and exploring AI features for meetings. This established an early product integration with Google’s AI for 150M+ users of Cisco Collaboration apps.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">streamline work for 150M+ people</span>
+<span class="span">Google Cloud’s new Contact Center AI</span>
+<span class="span">AI-enhanced assist</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002">
+<div class="ev-top">
+<span class="date">2023-12-13</span>
+<span class="eh">Cisco documents provisioning and resale of Google CCAI with Webex Contact Center</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Cisco published an implementation guide showing how partners and customers order Google CCAI through Cisco Commerce and provision it to work with Webex Contact Center. This formalized Cisco’s role as a channel for Google’s CCAI services within the WxCC portfolio.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Provision Google CCAI with Webex Contact Center</span>
+<span class="span">Place the order on Cisco Commerce Portal (CCW)</span>
+<span class="span">Virtual Agent Voice (VAV)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003">
+<div class="ev-top">
+<span class="date">2024-07-01</span>
+<span class="eh">Cisco Validated Design: Nutanix GPT‑in‑a‑Box with Llama 2 options</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Cisco released a Validated Design for Cisco Compute Hyperconverged with Nutanix GPT‑in‑a‑Box to simplify enterprise gen‑AI adoption using popular open LLMs. The design explicitly supports Meta’s Llama 2 model variants for private deployment and testing.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Nutanix GPT-in-a-Box</span>
+<span class="span">Llama 2 – 7B</span>
+<span class="span">meta-llama/Llama-2-7b-hf</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem expansion and open-source/security posture</h2>
+<div class='range'>2025-01-31 → 2025-11-12</div>
+<div class='psum'>In 2025 Cisco broadened its AI ecosystem across open source, security testing of frontier models, and strategic partnerships. A Cisco security blog detailed automated attacks on DeepSeek R1 and comparisons to OpenAI O1‑preview, highlighting material safety concerns. Cisco also announced a strategic partnership with Mistral AI, debuting its first jointly developed AI Renewals Agent for internal process improvement and on‑premises deployment.
+Cisco’s Foundation AI group released an open‑weight cybersecurity reasoning model based on Meta’s Llama 3.1 at RSAC 2025, while Cisco joined the AI Infrastructure Partnership (AIP) alongside hyperscale leaders to mobilize tens of billions in data‑center investment. Governance depth increased with OpenAI executive Kevin Weil joining Cisco’s Board. By November 2025, Reuters reported Cisco raising its full‑year outlook, with AI networking orders and pipeline cited as drivers.</div>
+<div class="event t-web_only_verified" id="E0004">
+<div class="ev-top">
+<span class="date">2025-01-31</span>
+<span class="eh">Cisco flags security risks in DeepSeek R1 vs. other frontier models</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">deepseek</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">A Cisco blog reported automated jailbreaking tests where DeepSeek R1 failed to block harmful prompts, contrasting it with other models and OpenAI O1‑preview. The post underscores model‑safety risks relevant to Cisco’s AI evaluation and product security posture.</p>
+<p class="cav">⚠ Single Cisco blog source; results are specific to the described test setup.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">DeepSeek R1</span>
+<span class="span">100% attack success rate</span>
+<span class="span">OpenAI O1-preview</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005">
+<div class="ev-top">
+<span class="date">2025-02-10</span>
+<span class="eh">Cisco announces first jointly developed AI Agent with Mistral AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cisco and Mistral AI unveiled the AI Renewals Agent to streamline renewal proposal creation using over 50 signals with real‑time sentiment and recommendations. The solution is designed for strategic on‑premises deployment to meet security and compliance requirements.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[15]</div>
+<span class="span">first, jointly developed AI Agent</span>
+<span class="span">AI Renewals Agent</span>
+<span class="span">Strategic On-Premises Deployment</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006">
+<div class="ev-top">
+<span class="date">2025-05-05</span>
+<span class="eh">Cisco open-sources a compact cybersecurity model based on Llama 3.1</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">At RSAC 2025, VentureBeat reported Cisco’s Foundation AI group released an open‑weight, 8B‑parameter cybersecurity model based on Meta’s Llama 3.1, trained on a Cisco‑curated security dataset for SOC workflows.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">open-source LLMs</span>
+<span class="span">Llama 3.1</span>
+<span class="span">8-billion parameter</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007">
+<div class="ev-top">
+<span class="date">2025-05-13</span>
+<span class="eh">Cisco joins AI Infrastructure Partnership targeting up to $100B in AI infrastructure</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cisco became a technology partner to the AIP led by BlackRock, GIP, MGX, Microsoft, NVIDIA and xAI, an initiative seeking to unlock $30B and mobilize up to $100B in secure, scalable AI data‑center infrastructure investment.</p>
+<p class="cav">⚠ Funding figures reflect AIP platform targets, not Cisco-specific commitments.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">AI Infrastructure Partnership</span>
+<span class="span">unlock $30 billion</span>
+<span class="span">up to $100 billion</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008">
+<div class="ev-top">
+<span class="date">2025-05-13</span>
+<span class="eh">OpenAI executive Kevin Weil joins Cisco’s Board of Directors</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Cisco appointed Kevin Weil, then Chief Product Officer at OpenAI, to its Board effective May 12, 2025. The appointment brings frontier AI product experience directly into Cisco’s governance.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Kevin Weil</span>
+<span class="span">Chief Product Officer at OpenAI</span>
+<span class="span">board of directors</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009">
+<div class="ev-top">
+<span class="date">2025-11-12</span>
+<span class="eh">Cisco raises full-year outlook; AI networking orders drive upside</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$14.9B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Reuters reported Cisco raised its full‑year outlook as AI networking orders and pipeline expanded. Shares jumped over 7% after hours with revenue at $14.88B versus $14.77B expected.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">raises full-year outlook</span>
+<span class="span">stock jumps over 7 percent</span>
+<span class="span">Revenue 14.88B vs 14.77B exp</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>FY26 acceleration: hyperscaler AI orders, security alliances, and platform launches</h2>
+<div class='range'>2026-01-15 → 2026-06-25</div>
+<div class='psum'>In FY26, Cisco’s AI narrative shifted to hyperscaler infrastructure scale and platformization. Q2 (Feb 2026) established $2.1B in quarterly AI hyperscaler orders, &gt;$5B expected for FY26, three new hyperscaler wins, and rising NVIDIA engagements; risks included memory-driven APC increases and revenue recognition timing. Q3 (May 2026) materially raised the FY26 AI orders target to ~$9B and AI revenue outlook to ~$4B, disclosed P200 scale‑across wins, and signaled at least $6B in FY27 AI revenue recognition. Management also announced a restructuring to reallocate spending toward silicon, optics, security and AI.
+Concurrently, Cisco deepened ties across frontier security programs — as a charter member of Anthropic’s Project Glasswing and OpenAI’s Daybreak — and launched an agentic platform (Cloud Control Studio) that embeds OpenAI Codex. External references highlighted access to Anthropic’s Mythos and OpenAI’s GPT‑5.5‑Cyber for security evaluation. Cisco and Red Hat advanced an “AI Factory” approach supporting OpenAI API and LlamaStack compatibility. Separately, Cisco joined the RAISE US workforce coalition pilots to address AI’s labor‑market impacts.</div>
+<div class="event t-web_only_unverified" id="E0010">
+<div class="ev-top">
+<span class="date">2026-01-15</span>
+<span class="eh">Cisco announces Second Annual AI Summit featuring OpenAI and Anthropic leaders</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Cisco set Feb. 3, 2026 for its second AI Summit, featuring leaders including Sam Altman (OpenAI) and Mike Krieger (Anthropic). The program showcases Cisco’s convening role across AI model providers and cloud partners.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Second Annual AI Summit</span>
+<span class="span">Sam Altman, Co-Founder &amp; CEO, OpenAI</span>
+<span class="span">Mike Krieger, CPO, Anthropic</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">FY26 AI orders expected to exceed $5B; Q2 detail reiterated</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cisco guided that FY26 AI orders are expected to exceed $5B, reiterating strong momentum exiting Q2. This set the initial fiscal year benchmark prior to the later Q3 upgrade.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">expected to exceed $5B</span>
+<span class="span">Q2 hyperscaler AI orders of $2.1B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">Q2 AI hyperscaler infrastructure orders totaled $2.1B</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.1B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted $2.1B of AI infrastructure orders from hyperscalers in Q2, evidencing accelerating demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">$2.1B of AI infrastructure orders</span>
+<span class="span">from hyperscalers in the quarter</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">AI mix ~60% systems / 40% optics; $5B excludes G300/P200 and latest optics</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cisco disclosed AI order mix and clarified that the &gt;$5B FY26 figure excludes newly announced G300/P200 and the latest optics, implying potential upside beyond initial targets.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">mix at roughly 60% systems/40% optics</span>
+<span class="span">$5B does not include newly announced G300/P200</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">Three new hyperscaler AI use‑case wins in Q2</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cisco recorded three new hyperscaler AI use‑case wins in Q2 — two systems and one optics — expanding its design‑win footprint.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Three new hyperscaler use‑case wins in Q2</span>
+<span class="span">two systems, one optics</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">NVIDIA engagements +70%; sovereign/neo cloud expected FY27‑weighted</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cisco noted a ~70% sequential rise in NVIDIA field engagements and reiterated intent to participate in scale‑up; sovereign/neo cloud contributions are expected to ramp meaningfully in FY27 with limited FY26 impact.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">NVIDIA field engagements rose ~70% sequentially</span>
+<span class="span">Sovereign/neo cloud contributions are expected to ramp more meaningfully in FY27</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0016">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">APCs up ~$1.8B in 90 days, ~73% YoY; largely for memory components</span>
+<span class="badge">risk</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.8B · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Advanced purchase commitments rose by about $1.8B over 90 days and ~73% YoY, largely tied to memory components — reflecting cost and supply positioning amid AI demand; Reuters also cited higher memory costs pressuring margins.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1], news_rows[2]</div>
+<span class="span">Advanced purchase commitments up ~$1.8B</span>
+<span class="span">largely for memory components</span>
+<span class="span">higher memory costs spooked investors</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">Sovereign/neo cloud minimal in FY26; ramps in FY27</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Cisco expects minimal FY26 contribution from sovereign/neo cloud with a more meaningful ramp in FY27, aligning deployment timing with capacity buildouts.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Sovereign/neo cloud ramps more in FY27</span>
+<span class="span">minimal FY26 impact assumed</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">RPO of $43.4B (+5% y/y), including $11.8B long‑term product RPO</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$43.4B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Remaining performance obligations reached $43.4B (+5% y/y), with long‑term product RPO at $11.8B (+11% y/y), indicating multi‑period backlog supporting AI and core networking.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">RPO $43.4B (+5% y/y)</span>
+<span class="span">long-term product RPO $11.8B (+11% y/y)</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0019">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">Risk: AI order conversion timing and supply constraints could drive volatility</span>
+<span class="badge">risk</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management warned that shipment timing, customer acceptance and supply constraints could create revenue recognition volatility and working‑capital swings; Reuters coverage highlighted investor concern over margin pressure.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1], news_rows[2]</div>
+<span class="span">timing of shipments, customer acceptance, and supply constraints</span>
+<span class="span">may drive revenue recognition volatility</span>
+<span class="span">Gross margin of 67.5%</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0020">
+<div class="ev-top">
+<span class="date">2026-03-15</span>
+<span class="eh">Splunk AI Assistant adds option to use models hosted in Azure OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Splunk (a Cisco company) documented that version 1.4.0+ of Splunk AI Assistant can use frontier models hosted in Azure OpenAI, in addition to open‑source LLMs hosted in Splunk Cloud Platform.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Splunk AI Assistant</span>
+<span class="span">option to use models hosted in Azure OpenAI</span>
+<span class="span">frontier models from Azure OpenAI</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0021">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Cisco UCS X580p MLPerf paper validates Llama and Whisper workloads</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">meta_llama</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">A Cisco white paper benchmarked AI inference including Llama2‑70b and Llama3.1‑8b, and referenced OpenAI’s Whisper ASR, demonstrating platform readiness for modern LLM and speech workloads.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Llama2-70b</span>
+<span class="span">Llama3.1-8b</span>
+<span class="span">OpenAI’s Whisper</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0022">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">FY26 AI hyperscaler orders target raised to ~$9B; FY26 AI revenue outlook upgraded</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$9.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cisco raised its expected FY26 AI orders to about $9B (from $5B) and FY26 AI revenue to ~$4B (from $3B), reflecting stronger‑than‑anticipated hyperscaler demand; press coverage tied the upgrade to broad AI momentum.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], news_rows[1]</div>
+<span class="span">raised expected FY2026 AI orders to ~$9B (from $5B)</span>
+<span class="span">FY2026 AI revenue to ~$4B (from $3B)</span>
+<span class="span">boosting AI order forecast to 9 billion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Q3 AI hyperscaler infrastructure orders of $1.9B; YTD $5.3B</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.9B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reported $1.9B of AI infrastructure orders in Q3 and $5.3B year‑to‑date, underscoring continued hyperscaler demand into the back half of FY26.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI hyperscaler infrastructure orders: $1.9B in Q3</span>
+<span class="span">$5.3B YTD</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">YTD AI hyperscaler orders reached $5.3B</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.3B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cisco’s cumulative AI hyperscaler orders hit $5.3B year‑to‑date by Q3 FY26, indicating multi‑quarter ramp into FY27.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$5.3B YTD</span>
+<span class="span">AI hyperscaler infrastructure orders</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Management signals at least $6B of AI hyperscaler revenue in FY27</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Beyond FY26 guidance, Cisco said it is reasonable to expect at least $6B of AI hyperscaler revenue recognition in fiscal 2027.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">at least $6B of AI hyperscaler revenue recognition in fiscal 2027</span>
+<span class="span">beyond formal guidance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">P200 scale‑across hyperscaler design wins disclosed</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cisco disclosed two P200 scale‑across design wins in Q3 and a third in early Q4, noting the scale‑across effect was not yet reflected in Q3 numbers.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">two P200 scale-across design wins in Q3</span>
+<span class="span">a third in early Q4</span>
+<span class="span">not yet reflected in Q3 numbers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">About half of AI orders relate to systems using Silicon One</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cisco highlighted Silicon One and optics as differentiators and said approximately half of AI orders are tied to systems using Silicon One.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">about half of AI orders relate to systems using Silicon One</span>
+<span class="span">silicon and optics are key differentiators</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Q3 beat driven by strength in AI infrastructure and campus networking</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said results were above the high end of guidance, with particular strength in AI infrastructure contributing to the upside.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">above the high end of guidance</span>
+<span class="span">particular strength in AI infrastructure</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Cisco secures silicon supply through CY2026; saw no de‑commits in Q3</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Cisco directly manages key silicon supply stages and has secured supply through calendar 2026, reporting no de‑commits in Q3 while negotiating 2027.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">secured silicon supply through calendar 2026</span>
+<span class="span">no de‑commits in Q3</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Programs launched to reduce memory usage and expand strategic inventory</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Cisco initiated 20+ programs to curb memory usage (e.g., wireless requiring ~50% less memory) and expanded advance purchase commitments/strategic inventory.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">20+ programs to reduce memory usage</span>
+<span class="span">requiring ~50% less memory</span>
+<span class="span">expanded advance purchase commitments/strategic inventory</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0031">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Restructuring to reallocate toward silicon, optics, security and AI; up to $1.0B in charges</span>
+<span class="badge">personnel</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Cisco announced a restructuring plan with up to $1.0B in pretax charges and fewer than 4,000 role reductions to accelerate investment in silicon, optics, security and AI; press characterized the move alongside a major AI orders upgrade.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], news_rows[1]</div>
+<span class="span">expected to incur up to $1.0B in pretax charges</span>
+<span class="span">fewer than 4,000 roles</span>
+<span class="span">announces 4000 job cuts</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Total product orders +35% y/y; +19% ex‑hyperscalers</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cisco reported broad‑based order growth with total product orders up 35% year over year, or 19% excluding hyperscalers.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Total product orders +35% y/y</span>
+<span class="span">+19% ex‑hyperscalers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">RPO reached $43.5B (+4% y/y); LT product RPO $11.7B (+6%)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$43.5B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Remaining performance obligations stood at $43.5B, with long‑term product RPO at $11.7B, supporting multi‑period visibility into AI and core networking backlog.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">RPO $43.5B (+4% y/y)</span>
+<span class="span">long‑term product RPO $11.7B +6%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Margin headwinds from memory cost inflation and AI mix</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Cisco cited non‑GAAP gross margin headwinds from memory cost inflation and product mix (e.g., AI hardware vs. software/subscriptions), potentially limiting near‑term expansion.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">memory cost inflation and mix</span>
+<span class="span">headwinds to non-GAAP gross margins</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Risk from hyperscaler AI deployment timing and lumpiness</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Cisco warned that the timing of hyperscaler AI deployments and potential order lumpiness could affect revenue recognition and working capital.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">timing of deployments</span>
+<span class="span">potential order lumpiness</span>
+<span class="span">revenue recognition and working-capital risk</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Early Q4 orders expected from new P200 scale‑across wins</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expected early Q4 orders stemming from newly secured P200 scale‑across wins, with contribution weighted to FY27.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Expect early Q4 orders</span>
+<span class="span">new P200 scale‑across wins</span>
+<span class="span">weighted to FY27</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0037">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Cisco open-sources Foundry Security Spec and cites access to Mythos and GPT‑5.5‑Cyber</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">SDxCentral reported Cisco’s open‑sourcing of a model‑agnostic Foundry Security Spec for agentic security evaluation, noting access to Anthropic’s Mythos and OpenAI’s GPT‑5.5‑Cyber as a differentiator.</p>
+<p class="cav">⚠ Third-party media report; access details not independently confirmed here.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">Foundry Security Spec</span>
+<span class="span">Anthropic’s Mythos</span>
+<span class="span">GPT-5.5-Cyber</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0038">
+<div class="ev-top">
+<span class="date">2026-06-01</span>
+<span class="eh">Cisco + Red Hat advance Secure AI Factory with OpenAI API and LlamaStack compatibility</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Cisco and Red Hat announced support for Red Hat AI Factory Software within Cisco Secure AI Factory with NVIDIA, including compatibility with OpenAI API and LlamaStack API, plus eval/safety tooling.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">OpenAI API / LlamaStack API</span>
+<span class="span">Red Hat AI Factory Software</span>
+<span class="span">NVIDIA AI Enterprise</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0039">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">Cisco unveils agentic platform; embeds OpenAI Codex and joins Glasswing and Daybreak</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">At Cisco Live, Cisco introduced Cloud Control Studio with Agent Builder and App Builder, featuring “OpenAI Codex” built in. Cisco also cited being a charter member of Anthropic’s Project Glasswing and an OpenAI Daybreak partner for stress‑testing with frontier models.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Agent Builder</span>
+<span class="span">OpenAI Codex</span>
+<span class="span">Project Glasswing</span>
+<span class="span">OpenAI&#x27;s Daybreak</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0040">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">Cisco joins RAISE US coalition backing $500M in AI-era workforce pilots</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$500M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Axios reported the launch of RAISE US, a nonprofit initiative with about $500M to pilot AI workforce policies with states and employers. Cisco is listed among corporate backers, alongside AI labs and other major firms.</p>
+<p class="cav">⚠ Coalition funding is collective; Cisco’s specific financial contribution not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">RAISE US</span>
+<span class="span">about $500 million</span>
+<span class="span">Cisco</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0041">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">OpenAI launches Daybreak for cybersecurity; Cisco named among trusted organizations</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI announced Daybreak to help defenders find, validate and fix vulnerabilities with models like GPT‑5.5‑Cyber. Cisco is listed among the organizations trusting the program.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Daybreak</span>
+<span class="span">GPT‑5.5‑Cyber</span>
+<span class="span">Cloudflare Salesforce Cisco</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0042">
+<div class="ev-top">
+<span class="date">2026-04-07</span>
+<span class="eh">Anthropic announces Project Glasswing; Cisco listed as a member</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · other</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic introduced Project Glasswing to secure critical software using a new frontier model (Claude Mythos Preview), committing up to $100M in usage credits; Cisco was named among participating organizations.</p>
+<p class="cav">⚠ Usage credits are for the broader initiative; allocation to Cisco not specified.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Project Glasswing</span>
+<span class="span">Claude Mythos Preview</span>
+<span class="span">up to $100M in usage credits</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0039'>E0039</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0041'>E0041</a>, <a class='evref' href='#E0042'>E0042</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0041'>E0041</a>, <a class='evref' href='#E0042'>E0042</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which specific hyperscalers account for the majority of Cisco’s AI infrastructure orders and what are the contract terms (tenor, cancellation, delivery schedules)?</li>
+<li>How much of the FY27 &quot;at least $6B&quot; AI revenue recognition is tied to P200 scale‑across wins versus other pipelines?</li>
+<li>What is the gross margin profile of Silicon One systems versus optics in the AI orders mix as memory costs normalize?</li>
+<li>To what extent will Cisco’s Agentic Platform rely on external frontier models versus customer‑hosted/open models in production deployments?</li>
+<li>What is Cisco’s concrete role and economic participation within AIP investments (fees, hardware pull‑through, services)?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some ecosystem announcements (AIP, Glasswing, Daybreak) cite initiative-wide figures or memberships without Cisco-specific financial attribution.</li>
+<li>Press and third-party articles (e.g., SDxCentral, VentureBeat, Reuters) are used as corroboration; primary filings remain the authoritative source for company financials.</li>
+<li>Model and program names may evolve (e.g., Llama versions, GPT‑5.5‑Cyber, Mythos); references reflect the cited materials’ timing.</li>
+</ul></section>
+</div></body></html>

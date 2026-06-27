@@ -1,0 +1,774 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>TSLA US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+</style></head><body><div class='wrap'>
+<header>
+<h1>Tesla Inc <span class='sub'>(TSLA US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.478</div>
+</header>
+<div class='stats'>
+<span class='chip'>2 phases</span>
+<span class='chip'>37 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 9</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 26</span>
+<span class='chip'>web-only (verified): 4</span>
+<span class='chip'>corroborated: 4</span>
+<span class='chip'>web-only (unverified): 3</span>
+</div>
+<div class='phase'>
+<h2>External AI shocks and early China pathway</h2>
+<div class='range'>2024-02-29 → 2025-09-17</div>
+<div class='psum'>From early 2024 through late 2025, Tesla’s AI context was shaped by competitive and regulatory developments and by groundwork for China operations. OpenAI’s move into humanoid robotics via Figure and Boston Dynamics’ alliance with Google DeepMind highlighted rising competition for Tesla’s Optimus program, while Elon Musk’s lawsuit against OpenAI underscored strained ties with a leading frontier lab. In China, reporting indicated a prospective Baidu mapping arrangement that would clear a key hurdle for FSD data collection on public roads.
+Within this window, Tesla’s compute supply posture faced scrutiny amid reports that Nvidia GPUs initially slated for Tesla were redirected to X and xAI. Commercially, Tesla’s 2025 Proxy disclosed significant xAI purchases of Megapacks in 2024 and into early 2025, marking tangible revenue flows from a related party and foreshadowing the deeper strategic alignment that would be formalized in 2026.</div>
+<div class="event t-web_only_verified" id="E0001">
+<div class="ev-top">
+<span class="date">2024-02-29</span>
+<span class="eh">Figure raises $675M and signs collaboration with OpenAI for humanoid robots</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$675M · other</span> <span class="badge">negative_displacement</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Figure’s $675M Series B and collaboration with OpenAI to develop next‑gen AI for humanoid robots raises competitive pressure on Tesla’s Optimus roadmap. While not a Tesla transaction, it elevates a rival’s capital base and AI model access.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Figure Raises $675M</span>
+<span class="span">collaboration agreement with OpenAI</span>
+<span class="span">humanoid robots</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002">
+<div class="ev-top">
+<span class="date">2024-03-01</span>
+<span class="eh">Elon Musk sues OpenAI and Sam Altman alleging breach of contract</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Musk filed suit against OpenAI and its CEO, signaling adversarial dynamics with a leading AI provider. While not a Tesla legal action, it could complicate any prospective Tesla–OpenAI engagements.</p>
+<p class="cav">⚠ Third‑party litigation not at the Tesla entity level.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">has sued OpenAI and its chief executive Sam Altman</span>
+<span class="span">breach of contract</span>
+<span class="span">self-driving technology</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003">
+<div class="ev-top">
+<span class="date">2024-04-29</span>
+<span class="eh">Reuters: Baidu–Tesla mapping access reported for FSD data collection in China</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters reported Baidu agreed to grant Tesla access to its mapping license and lane‑level navigation in China, clearing a key step for FSD data collection. This would unlock local road testing/collection under China’s regulatory framework.</p>
+<p class="cav">⚠ Sourced to unnamed individuals; not an official filing.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">grant the car company access to its mapping license</span>
+<span class="span">Full Self Driving (FSD)</span>
+<span class="span">in China</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004">
+<div class="ev-top">
+<span class="date">2024-06-04</span>
+<span class="eh">Reports: Nvidia H100 GPUs initially slated for Tesla were redirected to X/xAI</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Reuters and Ars Technica relayed reporting that Nvidia emails showed 12k H100s originally for Tesla were redirected to X, with later swaps returning volume to Tesla. This highlights near‑term compute procurement friction.</p>
+<p class="cav">⚠ Based on media‑reported internal Nvidia communications.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[5]</div>
+<span class="span">prioritize shipments of AI processors to his companies X and xAI</span>
+<span class="span">redirecting 12K of shipped H100 GPUs</span>
+<span class="span">to X instead</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006">
+<div class="ev-top">
+<span class="date">2025-09-17</span>
+<span class="eh">Tesla 2025 Proxy: xAI incurred ~$198.3M with Tesla in 2024, mostly Megapacks</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$198M · other</span> <span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Tesla’s 2025 DEF 14A disclosed that xAI incurred ~$198.3M in 2024 and ~$36.9M through Feb 2025 under commercial agreements, largely for Megapack purchases. This evidences meaningful related‑party energy sales.</p>
+<p class="cav">⚠ Related‑party volumes; broader commercial terms not fully disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">incurred expenses of approximately $198.3 million in 2024</span>
+<span class="span">approximately $36.9 million through February 2025</span>
+<span class="span">purchase of our Megapack products</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>‘Physical AI’ pivot: xAI tie‑up, big capex, robotaxi progress and regulatory heat</h2>
+<div class='range'>2026-01-05 → 2026-06-26</div>
+<div class='psum'>In 2026 Tesla emphasized a ‘physical AI’ strategy, committing &gt;$20B–$25B capex for AI/compute, robotics, and semiconductors, and formalizing alignment with xAI via a ~$2B minority investment and framework for collaborations. Management said Grok is already used in vehicles and began rolling out a voice assistant internationally, while paid driverless robotaxi rides started on a limited basis in Austin. Hardware plans included AI4.1/AI4+ in 2027 and an in‑house ‘Terafab’ concept with Intel 14A for AI chips, alongside micro‑factory retrofits for HW3→HW4 upgrades.
+Regulatory and safety scrutiny intensified: NHTSA’s Engineering Analysis into FSD performance remained open; NTSB opened a separate probe into a fatal crash in Katy, Texas; and Tesla settled a 2023 FSD‑related wrongful death suit. In parallel, Tesla announced a 16 GW distributed power framework with Sunrun and Renew Home aimed at utilities and hyperscale data centers, while vehicle and battery capacity ramps continued in Berlin.</div>
+<div class="event t-single_source" id="E0007">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">CFO guides 2026 CapEx in excess of $20B for factories and AI/compute</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Tesla guided to &gt;$20B CapEx in 2026 across six factories and AI/compute, funded initially by $44B cash/investments with potential structured asset financing and debt for longer‑tail infrastructure.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">in excess of $20B</span>
+<span class="span">in 2026</span>
+<span class="span">$44B cash/investments</span>
+<span class="span">AI/compute</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0008">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Tesla to invest ~$2B as a minority in xAI; framework for collaborations</span>
+<span class="badge">equity</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Tesla announced an approximately $2B minority investment in xAI (announced Jan 16, 2026) with a framework agreement to evaluate collaborations, subject to approvals and fiduciary policies.</p>
+<p class="cav">⚠ Closing subject to customary limited conditions and approvals.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1], web_search_findings[0]</div>
+<span class="span">~$2B</span>
+<span class="span">minority investment in xAI</span>
+<span class="span">January 16, 2026</span>
+<span class="span">framework for evaluating potential collaborations</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0009">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Grok already used in Tesla vehicles; in‑car AI assistant rollout begins</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Management noted Grok is already being used in vehicles for certain functions, with media reporting a consumer rollout of a Grok conversational assistant adding expanded voice control and personalities.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1], web_search_findings[2]</div>
+<span class="span">Grok is already being used</span>
+<span class="span">in vehicles</span>
+<span class="span">Grok artificial intelligence chatbot</span>
+<span class="span">adults-only mode</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Driverless paid Robotaxi rides began in Austin on a limited basis</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tesla reported that driverless (no safety monitor) paid Robotaxi rides began in Austin in January, with plans to expand coverage.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">driverless (no safety monitor)</span>
+<span class="span">paid Robotaxi rides</span>
+<span class="span">began in Austin</span>
+<span class="span">on a limited basis</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Memory cited as a medium‑term bottleneck; ‘TerraFab’ floated</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Musk flagged memory as a likely medium‑term bottleneck and floated a domestic integrated fab (‘TerraFab’) to secure logic/memory/packaging, noting external chip sales are unlikely near‑term.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">medium‑term bottleneck</span>
+<span class="span">integrated fab (‘TerraFab’)</span>
+<span class="span">external chip sales are unlikely</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Optimus Gen‑3 prototype near; volume build targeted for 2026</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tesla indicated Optimus Gen‑3 prototype is near with the first‑gen production line installation underway and volume build targeted for 2026 in Fremont.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Gen‑3 prototype near</span>
+<span class="span">volume build targeted for 2026</span>
+<span class="span">Fremont (repurposed S/X space)</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0013">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Model S/X production to wind down; Fremont to convert to Optimus factory</span>
+<span class="badge">model_release</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Tesla said S/X production will be wound down next quarter and the footprint converted to an Optimus factory, consistent with a pivot toward AI and robotics.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1], news_rows[8]</div>
+<span class="span">production will be wound down</span>
+<span class="span">converted to an Optimus factory</span>
+<span class="span">pivots to AI and robotics</span>
+<span class="span">ending Model S and X production</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Company highlights continued transition to a “physical AI” model</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tesla emphasized a continued transition toward a ‘physical AI’ model focused on autonomy and robotics investment.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">“physical AI” model</span>
+<span class="span">increased investment</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">FSD monetization shifting toward subscriptions; up‑front option sunset in some markets</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated an ongoing shift of FSD monetization to subscriptions as the up‑front purchase option sunsets in select markets.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">FSD monetization toward subscriptions</span>
+<span class="span">up‑front purchase option is sunset</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">FSD subscriptions reach 1.1M (+38% y/y)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Active FSD subscriptions grew to 1.1M, up 38% year over year, supporting the shift to recurring revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Active FSD subscriptions</span>
+<span class="span">1.1M</span>
+<span class="span">(+38% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Vision reiterated: “the future is autonomous”</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Musk framed a long‑term vision of autonomy and ‘amazing abundance,’ while responses on funding and chip supply were qualified.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">the future is autonomous</span>
+<span class="span">“amazing abundance”</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0018">
+<div class="ev-top">
+<span class="date">2026-01-05</span>
+<span class="eh">Boston Dynamics to use Google DeepMind foundation models for next‑gen humanoid</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Boston Dynamics and Google DeepMind announced a robotics research partnership leveraging DeepMind’s foundation models for Atlas and other platforms, adding competitive momentum against Tesla’s Optimus.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Boston Dynamics&#x27; next-gen humanoid robot</span>
+<span class="span">Google DeepMind’s AI foundation models</span>
+<span class="span">Atlas</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0019">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Australia/New Zealand rollout starts for Grok in‑car assistant</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Tesla began rolling out the Grok AI assistant to customers in Australia and New Zealand, initially to HW3 vehicles, expanding in stages to HW4.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">begun rolling out its Grok</span>
+<span class="span">Australia and New Zealand</span>
+<span class="span">vehicles equipped with Hardware 3 (HW3)</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0020">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">2026 capex outlook raised to above $25B for AI, robotics and semiconductors</span>
+<span class="badge">financing</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$25.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">On Q1 results, management lifted 2026 capex to above $25B to build AI, robotics and semiconductor capabilities, corroborated by market coverage noting the after‑hours reaction.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], news_rows[6]</div>
+<span class="span">above $25B</span>
+<span class="span">build AI, robotics and semiconductor</span>
+<span class="span">over 25 billion dollars</span>
+<span class="span">AI and robotics</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">EU approval (NL) and launch of unsupervised robotaxi rides in Dallas/Houston</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tesla reported approvals for FSD (Supervised) in the Netherlands and the launch of unsupervised robotaxi rides in Dallas and Houston.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">approvals for FSD (Supervised)</span>
+<span class="span">in the Netherlands</span>
+<span class="span">unsupervised robotaxi rides</span>
+<span class="span">Dallas and Houston</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Targeting customer release of unsupervised FSD in Q4’26 across ~a dozen states</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Elon Musk said customer release of unsupervised FSD is probably in Q4 2026, with potential expansion to a dozen or so states during 2026.</p>
+<p class="cav">⚠ Timeline remains guidance‑dependent on regulatory approvals.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">unsupervised FSD</span>
+<span class="span">probably in the fourth quarter</span>
+<span class="span">a dozen or so states</span>
+<span class="span">in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Management notes “zero incidents” to date in unsupervised pilots</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tesla emphasized safety validation, saying unsupervised pilots have had zero incidents to date, tracking interventions, accidents, simulations and convenience failure modes.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">zero incidents</span>
+<span class="span">unsupervised pilots</span>
+<span class="span">interventions, accidents, simulations</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Musk: Hardware 3 cannot achieve unsupervised FSD</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management stated that Hardware 3 simply does not have the capability to achieve unsupervised FSD, implying upgrade needs for part of the fleet.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Hardware 3</span>
+<span class="span">does not have the capability</span>
+<span class="span">unsupervised FSD</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">HW3→HW4 upgrades via metro micro‑factories and retrofits</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tesla outlined discounted trade‑ins and paid retrofits with micro‑factories in major metros to process HW upgrades efficiently.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">discounted trade-ins</span>
+<span class="span">paid retrofits</span>
+<span class="span">micro-factories</span>
+<span class="span">major metros</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">‘Terafab’ plan: ~$3B Giga Texas research fab; intended Intel 14A node</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Tesla detailed a Giga Texas research fab (~$3B) with SpaceX handling initial scaled Terafab phase and intended use of Intel’s 14A node, subject to related‑party approvals.</p>
+<p class="cav">⚠ Plan elements involve related parties and process dependencies.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">(~$3B</span>
+<span class="span">Giga Texas research fab</span>
+<span class="span">Intel’s 14A node</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Intel 14A chosen as intended process node for Tesla AI chips</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said Intel’s 14A process is the intended node for Tesla’s AI chips, aligning with the Terafab plan.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Intel’s 14A process</span>
+<span class="span">intended node</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Industry cannot keep up with future AI chip and memory needs, Tesla says</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Tesla argued existing industry capacity cannot keep up with long‑term AI chip and memory needs, supporting internal fab rationale.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">not leverage over suppliers</span>
+<span class="span">AI chip and memory</span>
+<span class="span">can’t keep up</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">AI4.1/AI4+: RAM to 32GB/SoC, ~10% uplift; production targeted mid‑2027</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tesla outlined AI4.1/AI4+ with RAM increasing to 32GB per SoC (64GB total) and roughly 10% compute/bandwidth uplift, targeting production around mid‑2027.</p>
+<p class="cav">⚠ Dependent on Samsung modifications per management.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI4.1/AI4+ upgrade</span>
+<span class="span">32GB per SoC</span>
+<span class="span">10% compute</span>
+<span class="span">mid-2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1 added ~180k new paid FSD users; churn declining</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited roughly 180k new paid users in the quarter and said subscription churn is declining as usage rises.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">roughly 180k</span>
+<span class="span">new paid users</span>
+<span class="span">churn is declining</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">FSD subscriptions reach ~1.28M (+51% y/y)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Active FSD subscriptions reached approximately 1.28M, up 51% year on year, extending the subscription shift.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Active FSD subscriptions</span>
+<span class="span">~1.28M</span>
+<span class="span">(+51% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">NHTSA ends probe on Tesla Model Y without requiring action</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Reuters reported NHTSA closed a Model Y probe without actions required, trimming part of the regulatory overhang though other probes remain.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">ends probe</span>
+<span class="span">Model Y</span>
+<span class="span">without requiring action</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Reuters: Tesla registers AI voice assistant in Shanghai</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Reports indicated Tesla registered an AI voice assistant in Shanghai, signaling software push in China alongside regulatory pathways for ADAS features.</p>
+<p class="cav">⚠ Registration specifics and branding not detailed.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[7]</div>
+<span class="span">registers AI voice assistant</span>
+<span class="span">Shanghai</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">CPCA: China‑made Tesla sales 85,982 in May, +39.4% y/y (7th straight monthly gain)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Reuters/CPCA data showed China‑made sales of 85,982 in May, up 39.4% y/y and 8.2% m/m, marking a seventh consecutive monthly gain amid competitive pressure and pending FSD approvals.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[4]</div>
+<span class="span">85,982</span>
+<span class="span">39.4% y/y</span>
+<span class="span">seventh straight monthly gain</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">Sunrun, Renew Home and Tesla unveil framework for 16 GW of flexible capacity</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The partners announced a framework to aggregate distributed resources into over 16 GW of fast, flexible capacity for utilities and hyperscale data centers, including immediate 300+ MW in Virginia.</p>
+<p class="cav">⚠ Framework terms and pricing not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">16 GW of fast, flexible capacity</span>
+<span class="span">hundreds of thousands of Sunrun/Tesla home batteries</span>
+<span class="span">over 8 million smart thermostats</span>
+<span class="span">more than 300 MW ready for immediate deployment in Virginia</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">NTSB opens investigation into fatal Tesla crash in Katy, Texas</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">NTSB initiated a probe into a fatal Model 3 crash in Katy, Texas; reports cite the driver saying Autopilot was engaged, while onboard data reportedly indicated heavy accelerator input.</p>
+<p class="cav">⚠ Findings pending; investigators to obtain vehicle logs.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">NTSB opens investigation</span>
+<span class="span">Katy, Texas</span>
+<span class="span">Autopilot</span>
+<span class="span">73 mph</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">Tesla says Berlin plant to lift output 20% to 7,500/week from October</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Reports cited Tesla targeting a 20% output increase to 7,500 vehicles/week at Giga Berlin from October, with 1,000 hires planned and added battery investment at the site.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">7,500 vehicles per week</span>
+<span class="span">20% to 7,500/week</span>
+<span class="span">+1,000 employees</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0038">
+<div class="ev-top">
+<span class="date">2026-06-26</span>
+<span class="eh">Tesla settles lawsuit tied to 2023 fatal FSD crash; NHTSA FSD probe remains open</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">TechCrunch reported Tesla quietly settled a wrongful death suit from a 2023 FSD incident; NHTSA’s Engineering Analysis into FSD remains open, focusing on degradation detection in impaired camera conditions.</p>
+<p class="cav">⚠ Settlement terms undisclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">quietly settled a lawsuit</span>
+<span class="span">71‑year‑old pedestrian Johna Story</span>
+<span class="span">Engineering Analysis in March 2026</span>
+<span class="span">degradation detection</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What specific collaboration workstreams and KPIs are defined under the Tesla–xAI framework agreement, and how are related‑party safeguards enforced?</li>
+<li>What is Tesla’s updated 2026–2027 GPU/accelerator procurement schedule after the reported Nvidia H100 redirections, and how does it align with AI4.1/AI4+ timing?</li>
+<li>What regulatory pathway and validation metrics govern unsupervised FSD expansion to “a dozen or so states,” and how will learnings translate to China deployment?</li>
+<li>What are the detailed capex phasing and expected returns for the Giga Texas ‘Terafab’ research fab and any subsequent scaled phases?</li>
+<li>How will HW3→HW4 micro‑factory retrofits be priced and scheduled to minimize downtime and optimize FSD eligibility for unsupervised operations?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items rely on third‑party media reporting (e.g., Baidu mapping access, Nvidia GPU redirections) and may not reflect final contracted terms.</li>
+<li>Regulatory investigations are evolving; outcomes (including recalls or additional conditions) are uncertain as of the as‑of date.</li>
+<li>Settlement terms for the 2023 FSD case were undisclosed; financial impact, if any, is not quantified in sources.</li>
+</ul></section>
+</div></body></html>

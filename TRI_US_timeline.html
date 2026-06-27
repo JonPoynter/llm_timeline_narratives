@@ -1,0 +1,526 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>TRI US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+</style></head><body><div class='wrap'>
+<header>
+<h1>Thomson Reuters Corp <span class='sub'>(TRI US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.429</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>24 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 12</span>
+<span class='chip'>web-only (verified): 9</span>
+<span class='chip'>web-only (unverified): 3</span>
+</div>
+<div class='phase'>
+<h2>Foundations: Casetext GPT-4 lineage and first TR GenAI integrations</h2>
+<div class='range'>2023-03-14 → 2023-11-15</div>
+<div class='psum'>Thomson Reuters’ AI journey for legal workflows traces to Casetext’s March 2023 launch of CoCounsel powered by OpenAI’s GPT-4. Thomson Reuters moved quickly to secure these capabilities by signing a definitive agreement in June 2023 to acquire Casetext for $650 million in cash, closing in August 2023. This brought CoCounsel and its GPT-4 lineage fully in-house.
+By November 2023, Thomson Reuters launched generative AI-powered solutions, including AI-Assisted Research on Westlaw Precision and a unified platform strategy designed to scale across multiple LLM providers, while integrating CoCounsel across its legal portfolio. These steps established early product integration and distribution foundations for GenAI within the company’s core franchises.</div>
+<div class="event t-web_only_verified" id="E0001">
+<div class="ev-top">
+<span class="date">2023-03-14</span>
+<span class="eh">Casetext launches CoCounsel powered by OpenAI GPT-4</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Casetext announced CoCounsel, an AI legal assistant powered by OpenAI’s GPT-4, highlighting GPT-4’s capability to pass the Uniform Bar Exam. This model choice set the technical lineage for CoCounsel later acquired and scaled by Thomson Reuters.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">powered by GPT-4</span>
+<span class="span">passed both the multiple-choice and written portions of the Uniform Bar Exam (UBE)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002">
+<div class="ev-top">
+<span class="date">2023-06-26</span>
+<span class="eh">TR signs definitive agreement to acquire Casetext for $650M cash</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$650M · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Thomson Reuters signed a definitive agreement to acquire Casetext for $650 million in cash to accelerate its GenAI roadmap. The transaction brought GPT-4-powered CoCounsel capabilities into TR’s portfolio and reinforced its commitment to invest over $100 million annually in AI.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">signed a definitive agreement to acquire Casetext</span>
+<span class="span">$650 million cash</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003">
+<div class="ev-top">
+<span class="date">2023-08-17</span>
+<span class="eh">TR completes acquisition of Casetext for $650M in cash</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$650M · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Thomson Reuters closed the acquisition of Casetext for a purchase price of $650 million in cash, adding CoCounsel—an AI assistant powered by GPT-4—and a base of more than 10,000 legal customers.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">completes acquisition of Casetext, Inc.</span>
+<span class="span">purchase price of $650 million in cash</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004">
+<div class="ev-top">
+<span class="date">2023-11-15</span>
+<span class="eh">GenAI launched in Westlaw Precision; CoCounsel integrated across TR legal products</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Thomson Reuters introduced AI-Assisted Research on Westlaw Precision (available in the U.S.) and announced that CoCounsel would be integrated across Westlaw Precision, Practical Law Dynamic Tool Set, Document Intelligence, and HighQ. The company also unveiled a Generative AI platform designed for scalability across a wide range of LLM providers.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">AI-Assisted Research on Westlaw Precision</span>
+<span class="span">Available now to customers in the United States</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Multi-model expansion and ecosystem partnerships</h2>
+<div class='range'>2024-04-17 → 2024-11-25</div>
+<div class='psum'>Thomson Reuters broadened its multi-model approach through 2024. In April, it articulated an expanded vision for CoCounsel and emphasized its ongoing partnership with OpenAI, with GPT-4 powering CoCounsel. In June, Google Cloud announced Vertex AI’s expanded grounding capabilities and the inclusion of Thomson Reuters as a specialized third-party data provider, indicating a distribution channel for TR datasets into AI agents and applications.
+By August, TR unveiled CoCounsel 2.0, combining strengths from OpenAI, Google, and its proprietary tech while testing Google Gemini 1.5 Pro. In October, Axios reported Meta’s multi-year deal with Reuters to power answers in its Meta AI chatbot, signaling distribution exposure for Reuters content. In November, TR disclosed tests of a custom CoCounsel model built on OpenAI o1-mini and evaluations of Anthropic Claude 3.5 and Google Gemini 1.5 Pro, underscoring its deepening multi-model and provider-agnostic strategy.</div>
+<div class="event t-web_only_verified" id="E0005">
+<div class="ev-top">
+<span class="date">2024-04-17</span>
+<span class="eh">TR expands CoCounsel vision; ongoing OpenAI partnership with GPT-4</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Thomson Reuters announced an expanded vision for CoCounsel and reaffirmed that CoCounsel is powered by GPT-4 via an early and ongoing partnership with OpenAI.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">expanded vision for CoCounsel</span>
+<span class="span">powered by GPT-4</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006">
+<div class="ev-top">
+<span class="date">2024-06-27</span>
+<span class="eh">Google Vertex AI to offer TR datasets for grounding in AI agents</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google Cloud announced expanded grounding capabilities on Vertex AI and named Thomson Reuters among specialized third‑party data providers whose datasets would be accessible for grounding AI agents and applications.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Vertex AI will offer a new service</span>
+<span class="span">Thomson Reuters</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007">
+<div class="ev-top">
+<span class="date">2024-08-12</span>
+<span class="eh">CoCounsel 2.0 unveiled; combining OpenAI, Google, and TR capabilities</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Thomson Reuters announced CoCounsel 2.0, a professional-grade GenAI assistant that leverages multiple LLMs. The company is testing Google Gemini 1.5 Pro in production alongside OpenAI and proprietary TR technology.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">CoCounsel 2.0</span>
+<span class="span">testing adding Google Gemini 1.5 Pro</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008">
+<div class="ev-top">
+<span class="date">2024-10-25</span>
+<span class="eh">Meta strikes multi-year AI deal with Reuters for Meta AI chatbot answers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Axios reported that Meta entered a multi-year deal with Reuters to supply real-time news content for Meta’s AI chatbot. Answers will cite Reuters’ stories and link out to its coverage, expanding Reuters’ AI distribution exposure.</p>
+<p class="cav">⚠ Commercial terms were not disclosed; Axios cited sources familiar with the agreement.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">multi-year deal with Reuters</span>
+<span class="span">Meta&#x27;s AI chatbot</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009">
+<div class="ev-top">
+<span class="date">2024-11-25</span>
+<span class="eh">TR tests custom CoCounsel model on OpenAI o1-mini; evaluates Claude 3.5 and Gemini 1.5</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Thomson Reuters announced testing of a custom model built on OpenAI o1-mini for CoCounsel, evaluations of Anthropic’s Claude 3.5 models, and continued integration of Google Gemini 1.5 Pro. The company also noted enablement through AWS, including early use of SageMaker HyperPod.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">custom model built on OpenAI o1-mini</span>
+<span class="span">Anthropic’s Claude 3.5 Haiku and Claude 3.5 Sonnet</span>
+<span class="span">Google Gemini 1.5 Pro</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Trust, policy, and scaled adoption</h2>
+<div class='range'>2026-01-14 → 2026-02-24</div>
+<div class='psum'>In early 2026, Thomson Reuters convened the Trust in AI Alliance, bringing together Anthropic, AWS, Google Cloud, and OpenAI with TR Labs to define shared principles for trustworthy, agentic AI. Shortly after, TR published Legal AI Product Specific Terms reinforcing data safeguards and commitments not to use customer prompts or outputs to train models, clarifying compliance posture.
+By February 2026, scale was evident: one million professionals across 107 countries were using CoCounsel. TR emphasized a governed multi-model architecture spanning Anthropic’s Claude, OpenAI’s GPT, Google’s Gemini, proprietary AI, and curated datasets.</div>
+<div class="event t-web_only_verified" id="E0010">
+<div class="ev-top">
+<span class="date">2026-01-14</span>
+<span class="eh">TR launches Trust in AI Alliance with Anthropic, Google Cloud, and OpenAI</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Thomson Reuters announced the Trust in AI Alliance to advance development of trustworthy, agentic AI systems, with founding participants including Anthropic, AWS, Google Cloud, and OpenAI, alongside TR experts.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Trust in AI Alliance</span>
+<span class="span">Anthropic, AWS, Google Cloud, and OpenAI</span>
+<span class="span">agentic AI systems</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0011">
+<div class="ev-top">
+<span class="date">2026-01-23</span>
+<span class="eh">Legal AI Terms published: no training on user prompts/outputs; safeguards outlined</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Thomson Reuters published product-specific Legal AI terms committing to safeguards and stating that neither TR nor third-party providers will train or fine-tune models on user prompts, content, or outputs without separate written agreement.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">We will not, and will not permit our third-party providers to, develop, train, or fine-tune</span>
+<span class="span">User Prompts, User Content, or Outputs</span>
+<span class="span">Third‑Party AI Providers</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0012">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">CoCounsel reaches one million professionals across 107 countries; multi-model at scale</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Thomson Reuters reported one million professionals using CoCounsel across 107 countries and territories. The company highlighted a governed multi-model architecture spanning Anthropic’s Claude, OpenAI’s GPT, Google’s Gemini, and proprietary AI.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">one million professionals have chosen CoCounsel</span>
+<span class="span">across 107 countries and territories</span>
+<span class="span">Anthropic’s Claude, OpenAI’s GPT and Google’s Gemini</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>26Q1: Internal LLM option, Anthropic-favored agents, costs and launch timeline</h2>
+<div class='range'>2026-05-05 → 2026-05-05</div>
+<div class='psum'>TR’s 26Q1 disclosures emphasized internal LLM progress and cost leverage alongside active multi-model optionality. Management noted agents are model‑agnostic but currently favor Anthropic’s latest models for Westlaw Advantage and CoCounsel Legal, while the in‑house ‘Thompson’ legal LLM outperforms on some legal tasks and can operate at a fraction of frontier model costs. LLM costs remain a small portion of total costs, though Q2 guidance flagged higher LLM costs as a margin headwind and identified risk from elevated usage costs and product rollout cadence.
+On adoption, GenAI-enabled ACV reached ~30% (up from 28% in Q4 2025 and ~15% five quarters ago). Westlaw Advantage deep‑research usage was up 7x over six months, and CoCounsel Tax &amp; Audit conversations rose ~5x since September. CoCounsel Legal Next is in beta with a full launch targeted for Q3 2026; revenue impact skews to 2027 due to recognition timing.</div>
+<div class="event t-single_source" id="E0013">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">GenAI-enabled products reach ~30% of ACV</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported that roughly 30% of annualized contract value now comes from GenAI-enabled products as of March 31, 2026, up from 28% in Q4 2025 and ~15% five quarters ago.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-related KPI: ~30% of annualized contract value (ACV)</span>
+<span class="span">as of 3/31/26</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">In-house legal LLM (“Thompson”) progressing; potential to reduce external model costs</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">TR’s in-house legal LLM is progressing and could reduce external model costs, providing product optionality over time.</p>
+<p class="cav">⚠ Source uses the name “Thompson”; brand references elsewhere may use “Thomson.”</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">in‑house legal LLM (“Thompson”) is progressing</span>
+<span class="span">reduce external model costs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Agents are model-agnostic; favor Anthropic for Westlaw and CoCounsel Legal</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Management emphasized optionality with model‑agnostic agents that currently favor Anthropic’s latest models for Westlaw Advantage and CoCounsel Legal. The Thomson LLM outperforms frontier models on some legal tasks and could assume more workloads.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">favoring Anthropic’s latest models</span>
+<span class="span">Thomson LLM is outperforming frontier models</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Internal LLM can operate at a fraction of frontier model per‑unit costs</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">TR noted its internal Thomson LLM can be run at a fraction of the per‑unit cost of frontier models, reiterating independence in model selection.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">operated at a fraction of the per‑unit cost of frontier models</span>
+<span class="span">independence in model selection</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q2 2026 margin guidance cites higher LLM costs</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">TR guided to Q2 2026 adjusted EBITDA margin of approximately 38%, noting higher LLM costs as a factor alongside seasonality and modest M&amp;A dilution.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">- Q2 2026: Organic revenue growth expected at 7%–8%</span>
+<span class="span">higher LLM costs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk flagged: Elevated LLM usage costs and product cadence may pressure margins</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management highlighted that elevated LLM usage costs and product rollout cadence (e.g., CoCounsel Next) could pressure near‑term margins and affect adoption or pricing if efficacy/integration benefits lag expectations.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Elevated LLM usage costs and product rollout cadence</span>
+<span class="span">could pressure near‑term margins</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">AI-enabled ACV rose from 28% in Q4 to 30%; expected to increase each quarter</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TR reported AI‑enabled ACV rose sequentially to 30% and is expected to increase each quarter.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑enabled ACV rose from 28% in Q4 to 30%</span>
+<span class="span">expected to increase each quarter</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Usage surges: Westlaw Advantage deep‑research 7x; CoCounsel T&amp;A conversations ~5x since Sep</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management clarified deep‑research usage on Westlaw Advantage increased 7x over the last six months and CoCounsel Tax &amp; Audit conversations rose approximately 5x since September.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">7x Westlaw Advantage</span>
+<span class="span">rose ~5x since September</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">LLM costs small portion of total; internal LLM to help manage unit costs</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">TR stated LLM costs remain a small portion of total company cost and reiterated that the Thomson LLM could further help manage unit costs over time.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">LLM costs remain a small portion of total TR cost</span>
+<span class="span">could further help manage unit costs over time</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">CoCounsel Legal Next in beta; full launch targeted for Q3 2026</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TR said CoCounsel Legal Next is in beta with a full launch targeted for Q3 2026; revenue contribution in 2026 is modest with larger impact expected in 2027 due to revenue recognition.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">CoCounsel Legal Next in beta</span>
+<span class="span">full launch targeted for Q3 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Momentum in fiduciary‑grade AI and faster upgrade cycles</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TR emphasized momentum in ‘fiduciary‑grade AI,’ citing faster‑than‑historical upgrade cycles for Westlaw Advantage and broader CoCounsel adoption across firm sizes.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">momentum in “fiduciary‑grade AI,”</span>
+<span class="span">faster‑than‑historical upgrade cycles</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">LLM cost growth to normalize; internal LLM offers lower unit costs over time</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management expects LLM cost growth to normalize as the company laps prior increases, while the internal Thomson LLM offers lower unit costs over time.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">LLM cost growth expected to normalize</span>
+<span class="span">offers lower unit costs over time</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the commercial terms and revenue impact of the Meta–Reuters multi-year AI deal (license scope, geography, and usage rights)?</li>
+<li>What portion of TR’s LLM workloads run on each provider (OpenAI, Anthropic, Google) and through which hyperscaler channels (Azure, AWS, Google Cloud)?</li>
+<li>When will the in-house ‘Thompson’ legal LLM take over substantial production workloads, and what unit-cost savings versus frontier models are realized at scale?</li>
+<li>What revenue contribution is expected from Vertex AI’s third‑party data grounding service featuring Thomson Reuters datasets?</li>
+<li>How will higher LLM usage costs trend beyond Q2 2026, and what pricing/packaging levers mitigate margin pressure?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Axios reporting on the Meta–Reuters deal is single‑source and lacks disclosed financial terms.</li>
+<li>Several items rely on company press releases, which may present initiatives with promotional framing.</li>
+<li>The filings excerpt uses the name “Thompson” for the internal LLM; other materials may reference it as ‘Thomson’—official naming may evolve.</li>
+</ul></section>
+</div></body></html>
