@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Rightmove PLC <span class='sub'>(RMV LN)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.407</div>
@@ -73,115 +83,51 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (verified): 2</span>
 <span class='chip'>corroborated: 2</span>
 </div>
-<div class='phase'>
-<h2>Foundations: Google Cloud migration and data platform build-out</h2>
-<div class='range'>2021-12-09 → 2025-11-05</div>
-<div class='psum'>Rightmove began laying its AI and data infrastructure foundations by moving core workloads to Google Cloud. A Google blog in late 2021 detailed the company’s adoption of containers at scale, the start of Google Kubernetes Engine (GKE) usage, and expanding use of BigQuery for analytics. This period established cloud-native building blocks to support subsequent AI features and model experimentation.
-With this groundwork, Rightmove positioned its platform for greater agility, centralized data, and the ability to iterate AI use cases. The emphasis on Google Cloud services foreshadowed deeper collaboration on Vertex AI and Gemini models that would emerge in later phases.</div>
-<div class="event t-web_only_verified" id="E0001">
-<div class="ev-top">
-<span class="date">2021-12-09</span>
-<span class="eh">Rightmove adopts Google Cloud services, containers at scale, GKE and BigQuery</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Google announced Rightmove’s shift toward Google Cloud, including large-scale containerization, initial adoption of Google Kubernetes Engine (GKE), and plans to expand BigQuery usage. This set the cloud and data foundation for future AI capabilities.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">over two billion visits</span>
-<span class="span">using containers - over 1,000 of them at any time</span>
-<span class="span">start using Google Kubernetes Engine (GKE)</span>
-<span class="span">expand its use of BigQuery</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Acceleration: Multi-year Google Cloud + Vertex/Gemini; first consumer AI features</h2>
-<div class='range'>2025-11-06 → 2026-02-11</div>
-<div class='psum'>In November 2025, Rightmove disclosed a multi-year collaboration with Google Cloud spanning infrastructure, platform, data and AI, specifying use of Vertex AI and Gemini models. Management also reported substantial cloud migration progress and plans to route the majority of traffic through the cloud by end-2025.
-Concurrently, Rightmove launched user-facing AI features: AI Keywords to improve search specificity and Style with AI to visualize home potential. Company materials tied Style with AI to OpenAI, while also signaling the breadth of AI activity underway, with 27 initiatives in development. These launches demonstrated early productization of AI on top of the modernized platform.</div>
-<div class="event t-web_only_unverified" id="E0002">
-<div class="ev-top">
-<span class="date">2025-11-06</span>
-<span class="eh">Rightmove signs multi-year Google Cloud collaboration; Vertex AI and Gemini named</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">A trading update announced a multi-year collaboration with Google Cloud across platform, data and AI, explicitly calling out Vertex AI and Gemini. It also cited c.60% platform cloud migration and an ambition to route ~90% of traffic via cloud by end-2025.</p>
-<details>
-<summary>evidence — 1 source(s), 5 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">c.60% of the platform cloud-migrated</span>
-<span class="span">90% of trafic to be routed through the cloud by the end of 2025</span>
-<span class="span">multi-year collaboration with Google Cloud</span>
-<span class="span">Vertex AI platform</span>
-<span class="span">transformative power of Gemini</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0003">
-<div class="ev-top">
-<span class="date">2025-11-07</span>
-<span class="eh">Rightmove launches AI Keywords and experimental Style with AI; 27 AI initiatives disclosed</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Rightmove introduced AI Keywords to improve specificity in property search and Style with AI to help users imagine a home’s potential. A company presentation ties Style with AI to OpenAI and describes a model-agnostic approach, while the press release cites 27 AI initiatives in development.</p>
-<details>
-<summary>evidence — 2 source(s), 5 span(s)</summary>
-<div class="ev-src">web_search_findings[8], web_search_findings[7]</div>
-<span class="span">AI Keywords</span>
-<span class="span">Style with AI</span>
-<span class="span">Rightmove currently has 27 AI initiatives in development</span>
-<span class="span">OpenAI (Style with AI)</span>
-<span class="span">model-agnostic framework</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>Conversational search with Gemini; ChatGPT app; FY25 results posture and AI operating model</h2>
 <div class='range'>2026-02-12 → 2026-05-08</div>
 <div class='psum'>Rightmove launched a beta of AI-powered conversational property search on its site in February 2026, built with Google’s Gemini models in close collaboration with Google Cloud. Two weeks later, the firm submitted an experimental app to launch within ChatGPT to test discovery behaviors in conversational environments. By March 2026, Rightmove became the first UK property portal to have a live app in ChatGPT.
 The FY25 results in late February laid out the broader AI posture: 31 live AI initiatives, a vendor-agnostic (currently Gemini) architecture with the ability to swap models, explicit LLM optionality and data custody for the ChatGPT app, and early engagement signals (circa 3x higher lead propensity) albeit with caution on causality. Management noted rapid token cost deflation (80–90% annually) and framed compute as a cost-to-deliver opportunity, but guided to lower margins in 2026 due to step-up AI investment. They also downplayed immediate competitive risk from ChatGPT traffic for home search, while emphasizing controls to block or allow LLM access.</div>
-<div class="event t-web_only_verified" id="E0004">
+<div class="event t-web_only_unverified" id="E0009" data-providers="openai_chatgpt">
 <div class="ev-top">
-<span class="date">2026-02-12</span>
-<span class="eh">Beta conversational property search launches on-site, built with Google’s Gemini</span>
+<span class="date">2026-05-08</span>
+<span class="eh">Trading statement: ChatGPT app launched in March; AI Keywords and new app features expanding</span>
 <span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Rightmove released a beta of AI-powered conversational property search on its homepage search bar, built with Google’s Gemini models in collaboration with Google Cloud.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">beta version of AI-powered conversational property search</span>
-<span class="span">built with Google’s Gemini models</span>
-<span class="span">available via the property search bar</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0005">
-<div class="ev-top">
-<span class="date">2026-02-24</span>
-<span class="eh">Rightmove submits experimental app to launch in ChatGPT</span>
-<span class="badge">product_integration</span>
-<span class="badge b-corroborated">corroborated</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Rightmove announced it built and submitted an app to launch in ChatGPT to test early-stage property discovery. The FY25 release also referenced the app submission as part of accelerated AI innovation.</p>
+<p class="narr">Rightmove reiterated that it launched a ChatGPT app in March and continues expanding app features, including Track a Property and AI Keywords, while trading remained in line with expectations.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · OAI <b>2</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>2</b></span></div>
 <details>
-<summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[3], filings[0]</div>
-<span class="span">built and submitted an app to launch in ChatGPT</span>
-<span class="span">users of both free and paid versions of ChatGPT</span>
-<span class="span">@Rightmove</span>
-<span class="span">app submission to ChatGPT</span>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">We launched a ChatGPT app in March</span>
+<span class="span">Track a Property</span>
+<span class="span">AI Keywords</span>
+<span class="span">trading in line with expectations</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0007">
+<div class="event t-web_only_unverified" id="E0006" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-03-13</span>
+<span class="eh">Rightmove app goes live in ChatGPT — first UK property portal to launch</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Rightmove launched its app in ChatGPT, becoming the first UK property portal with a live app, accessible to both free and paid ChatGPT users via the app directory and invoked with @Rightmove. Approval was secured in under two weeks.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · OAI <b>2</b></span> <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>2</b></span> <span class="chchip">ecosystem_control_loss · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>2</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[9]</div>
+<span class="span">first UK property portal to launch in ChatGPT</span>
+<span class="span">app is now live and accessible</span>
+<span class="span">@Rightmove</span>
+<span class="span">approval secured in under two weeks</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="google_gemini_deepmind openai_chatgpt anthropic_claude">
 <div class="ev-top">
 <span class="date">2026-02-27</span>
 <span class="eh">FY25 deck: multi-provider relationships; model-agnostic framework; unified data platform scale</span>
@@ -190,6 +136,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
 <p class="narr">Rightmove’s FY25 presentation outlined relationships with Google (platform), OpenAI (Style with AI), and Anthropic, within a model-agnostic framework. It also highlighted scale of AI-ready data on a Unified Data Platform.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>4</b> OAI <b>2</b> ANT <b>1</b></span> <span class="chchip">provider_specificity · GEM <b>3</b> OAI <b>2</b> ANT <b>1</b></span> <span class="chchip">multi_model_hedge · GEM <b>3</b> OAI <b>3</b> ANT <b>2</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 5 span(s)</summary>
 <div class="ev-src">web_search_findings[7]</div>
@@ -200,7 +147,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 <span class="span">4PB of AI-ready data</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0008">
+<div class="event t-web_only_unverified" id="E0008" data-providers="google_gemini_deepmind openai_chatgpt">
 <div class="ev-top">
 <span class="date">2026-02-27</span>
 <span class="eh">FY25 audited results note on-platform conversational search and ChatGPT ecosystem submission</span>
@@ -209,6 +156,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
 <p class="narr">Rightmove’s audited results highlighted the launch of conversational search on its platform leveraging Google Cloud and Gemini, and confirmed submission of an app within the ChatGPT ecosystem under its ‘However you discover’ approach.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>4</b> OAI <b>2</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>3</b> OAI <b>2</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
 <div class="ev-src">web_search_findings[5]</div>
@@ -218,7 +166,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 <span class="span">However you discover, we have you covered</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0010">
+<div class="event t-single_source" id="E0010" data-providers="google_gemini_deepmind openai_chatgpt">
 <div class="ev-top">
 <span class="date">2026-02-27</span>
 <span class="eh">FY25: 31 live AI initiatives; conversational search; ChatGPT app submission; multi-year Google Cloud</span>
@@ -227,6 +175,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
 <p class="narr">Management characterized FY25 as strong with accelerated AI integration, citing 31 live initiatives, conversational search, app submission to ChatGPT, and a multi-year collaboration with Google Cloud.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>4</b> OAI <b>2</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -236,7 +185,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 <span class="span">multi‑year collaboration with Google Cloud</span>
 </details>
 </div>
-<div class="event t-corroborated" id="E0011">
+<div class="event t-corroborated" id="E0011" data-providers="google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-02-27</span>
 <span class="eh">FY25: Conversational search runs on Google Gemini; architecture is swap-ready</span>
@@ -245,6 +194,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
 <p class="narr">Rightmove disclosed its on-site conversational search uses Google Gemini and that the architecture is designed to allow switching to other LLMs, emphasizing flexibility.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>4</b></span> <span class="chchip">strategic_option_value · GEM <b>3</b></span> <span class="chchip">provider_specificity · GEM <b>3</b></span> <span class="chchip">multi_model_hedge · GEM <b>3</b></span> <span class="chchip">switching_flexibility · GEM <b>4</b></span></div>
 <details>
 <summary>evidence — 2 source(s), 4 span(s)</summary>
 <div class="ev-src">filings[0], web_search_findings[2]</div>
@@ -254,7 +204,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 <span class="span">built with Google’s Gemini models</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0012">
+<div class="event t-single_source" id="E0012" data-providers="openai_chatgpt">
 <div class="ev-top">
 <span class="date">2026-02-27</span>
 <span class="eh">FY25: LLM opt-in/opt-out; ChatGPT app as test-and-learn with data retained on-platform</span>
@@ -263,6 +213,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
 <p class="narr">Management stated it can opt in or out of LLM environments. The ChatGPT app is an experiment, with Rightmove retaining valuable user-journey data on its own platform.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">strategic_option_value · OAI <b>3</b></span> <span class="chchip">data_rights_or_content_commoditization_risk · OAI <b>1</b></span> <span class="chchip">switching_flexibility · OAI <b>4</b></span> <span class="chchip">user_lock_in_relevance · OAI <b>2</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -271,7 +222,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 <span class="span">retaining the valuable user‑journey data</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0013">
+<div class="event t-single_source" id="E0013" data-providers="google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-02-27</span>
 <span class="eh">FY25: Early conversational-search impact suggests ~3x higher lead propensity (caveated)</span>
@@ -280,6 +231,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
 <p class="narr">The CEO cited early data indicating roughly 3x higher propensity to send a lead for users of conversational search, though cautioned it is too early to determine causality.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement · GEM <b>3</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -288,7 +240,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 <span class="span">too early to determine causality</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0014">
+<div class="event t-single_source" id="E0014" data-providers="">
 <div class="ev-top">
 <span class="date">2026-02-27</span>
 <span class="eh">FY25: Token costs falling 80–90% annually; stack designed to swap models</span>
@@ -297,6 +249,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
 <p class="narr">Rightmove framed compute as a cost-to-deliver opportunity, citing rapid token cost deflation (80–90% annually) and a stack designed to swap models.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -305,7 +258,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 <span class="span">stack is designed to swap models</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0015">
+<div class="event t-single_source" id="E0015" data-providers="">
 <div class="ev-top">
 <span class="date">2026-02-27</span>
 <span class="eh">FY26 outlook: step-up in AI-powered operations implies margin risk and slower OP growth</span>
@@ -323,7 +276,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 <span class="span">FY25 70% underlying margin</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0016">
+<div class="event t-single_source" id="E0016" data-providers="openai_chatgpt">
 <div class="ev-top">
 <span class="date">2026-02-27</span>
 <span class="eh">Mgmt view: ChatGPT traffic ‘meaningless today’ for home-search; control to block/allow LLMs</span>
@@ -332,6 +285,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
 <p class="narr">Management downplayed current ChatGPT-driven home-search intent as ‘meaningless today’ and emphasized optionality to block or allow LLM access, highlighting both the perceived near-term competitive risk and available mitigations.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value · OAI <b>3</b></span> <span class="chchip">competitive_threat_from_provider · OAI <b>2</b></span> <span class="chchip">provider_as_platform_absorber · OAI <b>2</b></span> <span class="chchip">traffic_or_distribution_bypass_risk · OAI <b>2</b></span> <span class="chchip">data_rights_or_content_commoditization_risk · OAI <b>1</b></span> <span class="chchip">customer_relationship_disintermediation · OAI <b>2</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -340,7 +294,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 <span class="span">block/allow LLM access</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0017">
+<div class="event t-single_source" id="E0017" data-providers="google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-02-27</span>
 <span class="eh">FY25: Vendor-agnostic AI stack (currently Gemini); ability to swap; token-cost deflation expected</span>
@@ -349,6 +303,7 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
 <p class="narr">Rightmove described a vendor-agnostic architecture (currently Gemini) with the ability to swap LLMs, expected token-cost deflation, and iterative improvements to conversational search.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>4</b></span> <span class="chchip">enterprise_adoption_exposure · GEM <b>4</b></span> <span class="chchip">strategic_option_value · GEM <b>3</b></span> <span class="chchip">multi_model_hedge · GEM <b>3</b></span> <span class="chchip">switching_flexibility · GEM <b>4</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -358,67 +313,156 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 <span class="span">conversational search will iterate</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0006">
+<div class="event t-corroborated" id="E0005" data-providers="openai_chatgpt">
 <div class="ev-top">
-<span class="date">2026-03-13</span>
-<span class="eh">Rightmove app goes live in ChatGPT — first UK property portal to launch</span>
+<span class="date">2026-02-24</span>
+<span class="eh">Rightmove submits experimental app to launch in ChatGPT</span>
 <span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
+<span class="badge b-corroborated">corroborated</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Rightmove launched its app in ChatGPT, becoming the first UK property portal with a live app, accessible to both free and paid ChatGPT users via the app directory and invoked with @Rightmove. Approval was secured in under two weeks.</p>
+<p class="narr">Rightmove announced it built and submitted an app to launch in ChatGPT to test early-stage property discovery. The FY25 release also referenced the app submission as part of accelerated AI innovation.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · OAI <b>2</b></span> <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>2</b></span></div>
 <details>
 <summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[4], web_search_findings[9]</div>
-<span class="span">first UK property portal to launch in ChatGPT</span>
-<span class="span">app is now live and accessible</span>
+<div class="ev-src">web_search_findings[3], filings[0]</div>
+<span class="span">built and submitted an app to launch in ChatGPT</span>
+<span class="span">users of both free and paid versions of ChatGPT</span>
 <span class="span">@Rightmove</span>
-<span class="span">approval secured in under two weeks</span>
+<span class="span">app submission to ChatGPT</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0009">
+<div class="event t-web_only_verified" id="E0004" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-05-08</span>
-<span class="eh">Trading statement: ChatGPT app launched in March; AI Keywords and new app features expanding</span>
+<span class="date">2026-02-12</span>
+<span class="eh">Beta conversational property search launches on-site, built with Google’s Gemini</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Rightmove released a beta of AI-powered conversational property search on its homepage search bar, built with Google’s Gemini models in collaboration with Google Cloud.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>4</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">beta version of AI-powered conversational property search</span>
+<span class="span">built with Google’s Gemini models</span>
+<span class="span">available via the property search bar</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Acceleration: Multi-year Google Cloud + Vertex/Gemini; first consumer AI features</h2>
+<div class='range'>2025-11-06 → 2026-02-11</div>
+<div class='psum'>In November 2025, Rightmove disclosed a multi-year collaboration with Google Cloud spanning infrastructure, platform, data and AI, specifying use of Vertex AI and Gemini models. Management also reported substantial cloud migration progress and plans to route the majority of traffic through the cloud by end-2025.
+Concurrently, Rightmove launched user-facing AI features: AI Keywords to improve search specificity and Style with AI to visualize home potential. Company materials tied Style with AI to OpenAI, while also signaling the breadth of AI activity underway, with 27 initiatives in development. These launches demonstrated early productization of AI on top of the modernized platform.</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-11-07</span>
+<span class="eh">Rightmove launches AI Keywords and experimental Style with AI; 27 AI initiatives disclosed</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Rightmove reiterated that it launched a ChatGPT app in March and continues expanding app features, including Track a Property and AI Keywords, while trading remained in line with expectations.</p>
+<p class="narr">Rightmove introduced AI Keywords to improve specificity in property search and Style with AI to help users imagine a home’s potential. A company presentation ties Style with AI to OpenAI and describes a model-agnostic approach, while the press release cites 27 AI initiatives in development.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>2</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span">We launched a ChatGPT app in March</span>
-<span class="span">Track a Property</span>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[8], web_search_findings[7]</div>
 <span class="span">AI Keywords</span>
-<span class="span">trading in line with expectations</span>
+<span class="span">Style with AI</span>
+<span class="span">Rightmove currently has 27 AI initiatives in development</span>
+<span class="span">OpenAI (Style with AI)</span>
+<span class="span">model-agnostic framework</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-11-06</span>
+<span class="eh">Rightmove signs multi-year Google Cloud collaboration; Vertex AI and Gemini named</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A trading update announced a multi-year collaboration with Google Cloud across platform, data and AI, explicitly calling out Vertex AI and Gemini. It also cited c.60% platform cloud migration and an ambition to route ~90% of traffic via cloud by end-2025.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>4</b></span> <span class="chchip">enterprise_adoption_exposure · GEM <b>4</b></span> <span class="chchip">ecosystem_control_loss · GEM <b>1</b></span> <span class="chchip">provider_specificity · GEM <b>3</b></span> <span class="chchip">dependency_duration · GEM <b>3</b></span> <span class="chchip">contractual_commitment_strength · GEM <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">c.60% of the platform cloud-migrated</span>
+<span class="span">90% of trafic to be routed through the cloud by the end of 2025</span>
+<span class="span">multi-year collaboration with Google Cloud</span>
+<span class="span">Vertex AI platform</span>
+<span class="span">transformative power of Gemini</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class='phase'>
+<h2>Foundations: Google Cloud migration and data platform build-out</h2>
+<div class='range'>2021-12-09 → 2025-11-05</div>
+<div class='psum'>Rightmove began laying its AI and data infrastructure foundations by moving core workloads to Google Cloud. A Google blog in late 2021 detailed the company’s adoption of containers at scale, the start of Google Kubernetes Engine (GKE) usage, and expanding use of BigQuery for analytics. This period established cloud-native building blocks to support subsequent AI features and model experimentation.
+With this groundwork, Rightmove positioned its platform for greater agility, centralized data, and the ability to iterate AI use cases. The emphasis on Google Cloud services foreshadowed deeper collaboration on Vertex AI and Gemini models that would emerge in later phases.</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-12-09</span>
+<span class="eh">Rightmove adopts Google Cloud services, containers at scale, GKE and BigQuery</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google announced Rightmove’s shift toward Google Cloud, including large-scale containerization, initial adoption of Google Kubernetes Engine (GKE), and plans to expand BigQuery usage. This set the cloud and data foundation for future AI capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure · GEM <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">over two billion visits</span>
+<span class="span">using containers - over 1,000 of them at any time</span>
+<span class="span">start using Google Kubernetes Engine (GKE)</span>
+<span class="span">expand its use of BigQuery</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0.15</td><td>0.05</td><td>0.35</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.4</td><td>0.15</td><td>0.75</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>-1.2</td><td>0</td><td>-0.1</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>-0.1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.745</td><td>0.775</td><td>0.805</td><td>0.775</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>-0.2496</td><td>0.0445</td><td>0.411</td><td>0</td><td>0</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What are the commercial terms, minimum commits, and exact duration of the multi-year Google Cloud collaboration (including Vertex/Gemini usage)?</li>
@@ -433,4 +477,19 @@ The FY25 results in late February laid out the broader AI posture: 31 live AI in
 <li>Financial magnitudes for AI and cloud commitments are not disclosed; magnitude_usd fields are therefore mostly null.</li>
 <li>Some extracted filing quotes contain typographic punctuation; spans are chosen as literal substrings to minimize normalization issues.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

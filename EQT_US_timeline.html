@@ -1,0 +1,460 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>EQT US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>EQT Corp <span class='sub'>(EQT US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.392</div>
+</header>
+<div class='stats'>
+<span class='chip'>2 phases</span>
+<span class='chip'>17 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>single source: 9</span>
+<span class='chip'>web-only (unverified): 8</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Quantification of AI/power demand pull and permitting/dependency risks</h2>
+<div class='range'>2026-02-18 → 2026-04-22</div>
+<div class='psum'>In early 2026, EQT quantified a step-up in potential demand from power and data center developments and detailed execution timelines. On February 18, 2026, management cited line of sight to ~45 GW of data center capacity under construction, including ~12 GW in EQT’s core footprint. On April 22, 2026 (Q1’26), management framed 2–3 Bcf/d of demand already underpinned with a path to 8–10 Bcf/d of incremental Appalachia egress under discussion, highlighted multiple large PA/OH/WV power/data center announcements, and emphasized partnering with midstream leveraging ~3,000 miles of EQT pipes.
+
+EQT also provided timing context (Southeast power plants online 2029–2031, midstream visibility through 2027–2028) and reiterated progress at Homer City/Shippingport alongside other utility-led demand-pull examples like MVP Boost’s 100% utility take-up. Management explicitly flagged risks that timing and permitting slippage across third-party projects could defer the expected volume pull and value realization.</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1’26: 2–3 Bcf/d demand already underpinned; path to 8–10 Bcf/d egress over time</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management quantified already-announced projects underpinning 2–3 Bcf/d of demand growth and discussed potential to expand Appalachia egress by 8–10 Bcf/d over time via additional midstream under discussion.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">2–3 Bcf/d of demand growth</span>
+<span class="span">8–10 Bcf/d of incremental egress</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1’26: Multiple PA/OH/WV power/data center announcements; multi-Bcf/d opps</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EQT highlighted multiple large power/data center announcements across PA/OH/WV and said it is negotiating multiple Bcf/day of supply opportunities connected to these developments.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">multiple large power/data center announcements in PA/OH/WV</span>
+<span class="span">multiple Bcf a day of supply opportunities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1’26: Leverage ~3,000 miles of pipe; partner-first approach with midstream</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3,000 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized using EQT’s ~3,000 miles of pipeline and partnering rather than competing with midstream developers to serve emerging power/data center loads.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~3,000 miles of pipe</span>
+<span class="span">act as partner rather than compete</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1’26: Robust demand-pull projects; 2–3 Bcf/d already underwritten</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EQT described a robust pipeline of midstream and demand-pull projects with 2–3 Bcf/d already underwritten, indicating tangible buyer commitment tied to power and data centers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">robust pipeline of midstream and demand‑pull projects</span>
+<span class="span">2–3 Bcf/d of already‑underwritten demand</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1’26: Management hopes for near-term permit reform but no timeline</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">EQT’s CEO expressed hope for permit reform in the coming months to enable infrastructure build-out but provided no concrete timing, underscoring policy uncertainty around project schedules.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">permit reform occurs “in the next few months”</span>
+<span class="span">provided no concrete timeline</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1’26: MVP Boost open season taken 100% by utilities; demand-pull validation</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management cited MVP Boost’s open season, where utilities took 100% of capacity, as evidence that demand-pull projects can proceed without producers backstopping capacity.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">MVP Boost’s open season (utilities taking 100%)</span>
+<span class="span">demand‑pull projects not requiring producers to backstop capacity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1’26: Timing — SE power plants 2029–2031; midstream visibility 2027–2028</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">EQT outlined expected timing for power and midstream additions, noting many Southeast power plants likely online in 2029–2031 and midstream growth visibility through 2027–2028.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">online in 2029–2031</span>
+<span class="span">growth visibility through 2027–2028</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1’26: Demand build-out supports reinvestment and structural growth</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said the demand build-out supports reinvestment and potential structural growth for the next 2–3 years as midstream and power projects mature.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">supporting reinvestment and potential structural growth</span>
+<span class="span">next 2–3 years</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1’26 risk: Timing/permitting slippage could defer expected demand pull</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">EQT cautioned that its growth thesis depends on third-party projects and permits; slippage in timelines or approvals could defer anticipated volume pull and value realization from power/data center-linked projects.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">depends on third‑party projects and permits</span>
+<span class="span">Slippage in timelines or approvals could defer</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1’26 call Q&amp;A: ~2.6 Bcf/d across large supply deals; Homer City progressing</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">On the Q1’26 call, management noted approximately 2.6 Bcf/d across Homer City, Shippingport, and utility-linked deals (Duke Energy and Southern Company), and observed visible construction progress at Homer City.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ Specific contract signings for utility-linked deals not disclosed in excerpt.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Homer City, Shippingport, and the Duke Energy and Southern Company deals</span>
+<span class="span">2.6 Bcf a day of supply in total</span>
+<span class="span">putting a lot of steel up</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-18</span>
+<span class="eh">EQT: Line of sight to ~45 GW of data center capacity; 12 GW in core footprint</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$45 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">On the Q4’25 call, EQT cited structural AI/power demand drivers with approximately 45 GW of data center capacity under construction, including about 12 GW located in its core operating region.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">line of sight to approximately 45 gigawatts of data center capacity</span>
+<span class="span">12 gigawatts in our core operating footprint</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Initial AI-driven power campus deals in Pennsylvania</h2>
+<div class='range'>2025-04-02 → 2025-11-20</div>
+<div class='psum'>EQT’s AI-linked demand exposure surfaced in 2025 via two marquee natural-gas power projects designed to serve hyperscale data centers: the Homer City Energy Campus and the Shippingport Power Station redevelopment. On April 2, 2025, owners of the retired Homer City coal plant announced a $10 billion plan to convert the site into a 4.5 GW gas-powered data center campus. By July 15, 2025, Homer City Redevelopment disclosed an agreement in principle naming EQT as exclusive gas supplier for a 4.4 GW facility with up to 665,000 MMBtus/day of fuel, while on the same day The Frontier Group’s Shippingport project indicated EQT intended to be the plant’s gas supplier for an estimated 800 MMcf/d of demand.
+
+EQT corroborated progress on July 23, 2025, stating it was working to finalize 20-year definitive gas-supply agreements for both Homer City and Shippingport, with phased ramps beginning in 2027. Through the fall, EQT signaled a growing pipeline of similar opportunities, and on November 20, 2025, Homer City obtained its PA DEP Air Permit, clearing the way for full construction and reinforcing EQT’s supplier role.</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-20</span>
+<span class="eh">PA DEP issues Air Permit for 4.4-GW Homer City Energy Campus; EQT role reaffirmed</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Homer City Generation received PA DEP Air Permit approval authorizing construction and initial operation of the 4.4-GW facility, with materials reiterating the earlier agreement in principle for EQT to be the exclusive gas supplier.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Project execution still contingent on financing and construction milestones.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Air Permit</span>
+<span class="span">PA DEP</span>
+<span class="span">4.4-GW natural gas-powered energy and data center campus</span>
+<span class="span">exclusive partner to source and supply</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-24</span>
+<span class="eh">EQT sees more data center gas-supply deals beyond Homer City and Shippingport</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Local reporting indicated EQT had secured two marquee Pennsylvania AI/data center gas-supply agreements and expected additional opportunities ahead, citing significant progress on in-basin power projects.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">more natural gas deals for data centers</span>
+<span class="span">two of Pennsylvania’s biggest data and AI center projects</span>
+<span class="span">expecting to get even more</span>
+<span class="span">have made significant progress</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-23</span>
+<span class="eh">EQT: Finalizing 20-year definitive supply deals for Homer City and Shippingport</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">On its Q2’25 call, EQT said it was working to finalize 20-year definitive agreements for Shippingport (3.6 GW; ~800 MMcf/d peak) and Homer City (seven turbines; ~665 MMcf/d peak) with phased ramps beginning in 2027–2028, reinforcing multi-year AI/power demand pull.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Definitive documentation not yet signed as of the call date.</p>
+<details>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2], web_search_findings[0], web_search_findings[1]</div>
+<span class="span">working to finalize our 20-year definitive agreement</span>
+<span class="span">3.6 gigawatt</span>
+<span class="span">800 million cubic feet per day</span>
+<span class="span">665 million cubic feet per day</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-15</span>
+<span class="eh">Agreement in principle: EQT to be exclusive gas supplier to 4.4 GW Homer City campus</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Homer City Redevelopment named EQT as its exclusive partner to source and supply natural gas for a 4.4 GW facility powering an AI/HPC campus, with potential fuel of up to 665,000 MMBtus/day. This establishes a material, AI-driven, long-term regional demand anchor for EQT.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Agreement is in principle; definitive contracts and permits still required.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[5]</div>
+<span class="span">agreement in principle</span>
+<span class="span">exclusive partner to source and supply</span>
+<span class="span">4.4 gigawatt</span>
+<span class="span">665,000 MMBTUs per day</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-15</span>
+<span class="eh">Shippingport Power Station plan: EQT intends to serve as gas supplier (~800 MMcf/d)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$800 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">The Frontier Group’s Shippingport redevelopment disclosed a plan to convert the former Bruce Mansfield plant into a major gas facility with a collocated data center; EQT intends to serve as the new plant’s gas supplier, with expected demand of ~800 MMcf/d.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ Project scope and timing subject to development milestones and permitting.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1], web_search_findings[2]</div>
+<span class="span">Shippingport Power Station</span>
+<span class="span">800 million cubic feet per day</span>
+<span class="span">intends to serve as the new plant’s natural gas supplier</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2025-04-02</span>
+<span class="eh">Homer City owners unveil $10B plan for gas-powered AI/data center campus</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">The owners of Pennsylvania’s former Homer City Generating Station announced a $10 billion redevelopment into a gas-powered campus intended to supply up to 4.5 GW to data centers and the grid, setting up prospective long-term natural gas demand tied to AI and cloud growth.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">$10 billion natural gas‑powered data center campus</span>
+<span class="span">4.5 gigawatts of electricity</span>
+<span class="span">Homer City Generating Station</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Have the 20-year definitive gas-supply agreements for Homer City and Shippingport reached execution and FID, and what are the start and ramp schedules?</li>
+<li>What midstream expansions are required to deliver the cited 2–3 Bcf/d underpinned demand and the potential 8–10 Bcf/d egress, and what is their permitting status?</li>
+<li>What percentage of Homer City and Shippingport output will be dedicated to on-site data centers vs. the PJM grid, and how does that affect EQT’s volume commitments?</li>
+<li>Are there take-or-pay or exclusivity clauses that materially impact EQT’s flexibility if project timelines slip?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some items are described as agreements in principle or in-progress negotiations; definitive terms, volumes, and start dates may differ at signing.</li>
+<li>Project execution and EQT volumes remain contingent on third-party permits, financing, and construction schedules outside EQT’s direct control.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

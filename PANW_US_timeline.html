@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Palo Alto Networks Inc <span class='sub'>(PANW US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.485</div>
@@ -73,402 +83,32 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (unverified): 3</span>
 <span class='chip'>corroborated: 1</span>
 </div>
-<div class='phase'>
-<h2>Foundational AI controls and early workflow integrations</h2>
-<div class='range'>2023-05-12 → 2024-07-18</div>
-<div class='psum'>Palo Alto Networks began operationalizing generative AI in 2023 by shipping product-level controls to identify and manage OpenAI traffic and by embedding ChatGPT into security operations playbooks. These efforts focused on safe enablement and visibility, including dedicated App-IDs for OpenAI services and a Cortex XSOAR integration that allowed analysts to invoke ChatGPT within incident-response workflows.
-In 2024 the firm expanded enterprise-grade governance and channel reach. A strategic partnership with IBM positioned watsonx LLMs within Cortex XSIAM and established PANW as IBM’s preferred cybersecurity partner across multiple domains. Shortly after, PANW launched a ChatGPT Enterprise Compliance integration to give customers enhanced visibility and policy controls for sensitive data inside ChatGPT Enterprise workspaces — extending its &quot;secure AI&quot; posture from network controls to SaaS governance.</div>
-<div class="event t-web_only_verified" id="E0001">
-<div class="ev-top">
-<span class="date">2023-05-12</span>
-<span class="eh">App-IDs shipped to secure and manage OpenAI ChatGPT traffic</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">PANW released three OpenAI-specific App-IDs (openai-base, openai-chatgpt, openai-api) enabling NGFW customers to identify and control ChatGPT and OpenAI API usage distinctly across interfaces.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[7]</div>
-<span class="span">three OpenAI-related App-IDs</span>
-<span class="span">openai-base</span>
-<span class="span">openai-chatgpt</span>
-<span class="span">openai-api</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0002">
-<div class="ev-top">
-<span class="date">2023-05-18</span>
-<span class="eh">Cortex XSOAR integration enables ChatGPT in IR playbooks</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">PANW documented how to use ChatGPT within Cortex XSOAR playbooks to generate readable analyses and improve incident response, including setup via the OpenAi ChatGPT v3 integration and API key configuration.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span">Cortex XSOAR has a ChatGPT integration</span>
-<span class="span">OpenAi ChatGPT v3</span>
-<span class="span">Generate an OpenAI API key</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0003">
-<div class="ev-top">
-<span class="date">2024-05-15</span>
-<span class="eh">IBM partnership to platformize AI security and infuse watsonx LLMs</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">PANW and IBM announced a broad collaboration: IBM will deliver services across PANW platforms while PANW plans to integrate IBM’s watsonx LLMs into Cortex XSIAM to drive automation and support outcomes.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[9]</div>
-<span class="span">watsonx large language models (LLMs)</span>
-<span class="span">Cortex XSIAM</span>
-<span class="span">preferred cybersecurity partner</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0004">
-<div class="ev-top">
-<span class="date">2024-07-18</span>
-<span class="eh">Launched ChatGPT Enterprise Compliance integration for SaaS governance</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">PANW introduced an integration with OpenAI’s ChatGPT Enterprise Compliance API to provide visibility into sensitive data shared within ChatGPT Enterprise and allow policy controls across prompts, responses, and files.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">ChatGPT Enterprise Compliance API</span>
-<span class="span">sensitive data</span>
-<span class="span">custom GPTs</span>
-<span class="span">near real-time</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Strategic cloud alliances and KPI inflection into FY26</h2>
-<div class='range'>2025-12-19 → 2026-02-17</div>
-<div class='psum'>PANW deepened its strategic alignment with Google Cloud in late 2025, announcing a new multibillion-dollar agreement to migrate key internal workloads onto Google Cloud while expanding the use of Vertex AI and Gemini LLMs to power copilots. The company highlighted an extensive GTM history with Google Cloud Marketplace and over 75 integrations, indicating a maturing distribution channel alongside infrastructure and model-layer adoption. In parallel, PANW scaled internal developer AI usage through AWS Bedrock-hosted Anthropic models, reporting notable productivity gains across 2,000 developers.
-By fiscal Q2 2026, Next-Generation Security ARR and RPO accelerated meaningfully, with management outlining robust guidance for Q3 and FY26. The quarter also detailed emerging AI-driven demand signals (e.g., SASE and XSIAM ARR milestones), clarified that LLMs are not a structural threat to PANW’s platforms, and quantified acquisition contributions — including a large LLM customer in Chronosphere’s base tied to $200M ARR.</div>
-<div class="event t-web_only_unverified" id="E0005">
-<div class="ev-top">
-<span class="date">2025-12-19</span>
-<span class="eh">PANW–Google Cloud expand to multibillion-dollar deal; copilots on Vertex AI/Gemini</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">PANW announced a new multibillion-dollar Google Cloud agreement to migrate key internal workloads and to power its copilots using Vertex AI and Gemini LLMs, building on 75+ integrations and $2B in Marketplace sales.</p>
-<p class="cav">⚠ Deal value characterized as “multibillion-dollar” without a specific dollar amount or term.</p>
-<details>
-<summary>evidence — 1 source(s), 5 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">more than 75 joint integrations</span>
-<span class="span">$2 billion in sales through the Google Cloud Marketplace</span>
-<span class="span">Vertex AI</span>
-<span class="span">Gemini LLMs</span>
-<span class="span">multibillion-dollar agreement</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0006">
-<div class="ev-top">
-<span class="date">2026-01-15</span>
-<span class="eh">AWS/Anthropic developer AI: 2,000 engineers onboarded, +25% avg productivity</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">An AWS case study reported PANW onboarded 2,000 developers to secure AI coding tools using Anthropic models via Amazon Bedrock, achieving on average 25% productivity improvement (up to 40%).</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[8]</div>
-<span class="span">2,000 developers</span>
-<span class="span">average of 25 percent</span>
-<span class="span">Claude 3.5 Sonnet</span>
-<span class="span">Amazon Bedrock</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0007">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">Q2 FY26: NGS ARR reaches $6.33B (+33% y/y)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$6.3B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Management reported Next-Generation Security ARR of $6.33B in Q2 FY26, up 33% year over year, underscoring momentum in platformized cybersecurity subscriptions.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Next-Generation Security (NGS) ARR $6.33B</span>
-<span class="span">(+33% y/y)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0008">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">Q2 FY26: RPO stands at $16.0B (+23% y/y)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$16.0B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">PANW disclosed remaining performance obligation of $16.0B in Q2 FY26, up 23% year over year, reflecting multi-period contracted demand.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">RPO $16.0B</span>
-<span class="span">(+23% y/y)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0009">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">SASE ARR surpasses $1.5B (~40% y/y)</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$1.5B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">SASE ARR exceeded $1.5B with approximately 40% year-over-year growth, indicating continued adoption of cloud-delivered network security.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">SASE ARR &gt;$1.5B</span>
-<span class="span">(~40% y/y)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0010">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">Cortex XSIAM ARR exceeds $0.5B</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$500M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Cortex XSIAM ARR was above $0.5B, reflecting scaling demand for AI-driven security operations analytics and automation.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Cortex XSIAM ARR &gt;$0.5B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0011">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">Q3 FY26 guidance: NGS ARR $7.94–$7.96B (+56% y/y)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$7.9B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">For Q3 FY26, PANW guided NGS ARR to a range of $7.94–$7.96B, implying ~56% year-over-year growth as platform demand accelerates.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Q3 FY26</span>
-<span class="span">NGS ARR $7.94–$7.96B</span>
-<span class="span">(+56% y/y)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0012">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">Q3 FY26 guidance: RPO $17.85–$17.95B (+32–33% y/y)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$17.9B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">For Q3 FY26, PANW guided RPO to $17.85–$17.95B, indicating sustained multi-period bookings growth.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Q3 FY26</span>
-<span class="span">RPO $17.85–$17.95B</span>
-<span class="span">(+32–33% y/y)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0013">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">FY26 guidance: NGS ARR $8.52–$8.62B (+53–54% y/y)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$8.5B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">For FY26, PANW guided NGS ARR to $8.52–$8.62B, supporting a thesis of expanding AI-driven security demand across its platforms.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">FY26</span>
-<span class="span">NGS ARR $8.52–$8.62B</span>
-<span class="span">(+53–54% y/y)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0014">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">FY26 guidance: RPO $20.2–$20.3B (+28% y/y)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$20.2B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Management guided FY26 RPO to $20.2–$20.3B, implying strong multi-year contracted revenue visibility.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">FY26</span>
-<span class="span">RPO $20.2–$20.3B</span>
-<span class="span">(+28% y/y)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0015">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">Management: LLMs are not a threat to delivering security</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Addressing competitive concerns, management stated that large language models do not threaten PANW’s ability to deliver security outcomes across its platforms.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">LLMs…are not a threat to delivering security</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0016">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">Chronosphere: large LLM customer tied to $200M ARR addition</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$200M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Management cited a large LLM vendor within Chronosphere’s base contributing to the $200M NGS ARR addition, with an expected incumbent displacement over 6–12 months.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">$200M ARR</span>
-<span class="span">displace an incumbent</span>
-<span class="span">6–12 months</span>
-<span class="span">this LLM vendor</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0017">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">Deal attribution: CyberArk about $1.2B ARR; Chronosphere ~$200M ARR</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$1.2B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">CFO quantified acquired ARR at close: CyberArk at ~$1.2B and Chronosphere at ~$200M contributing to NGS ARR, with organic trends roughly in line with consensus.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">about $1.2B</span>
-<span class="span">Chronosphere contributed ~$200M to NGS ARR</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0018">
-<div class="ev-top">
-<span class="date">2026-02-17</span>
-<span class="eh">AI agents/network traffic: early days; growth expected with adoption</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Management noted it’s still early with AI agents and that network traffic impacts are not yet material, but pointed to developer/edge activity (Koi) and large AI data center buildouts as future drivers.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">it’s early</span>
-<span class="span">traffic not yet materially impacting networks</span>
-<span class="span">Koi</span>
-<span class="span">large AI data center buildouts</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>Frontier model integrations, agentic security, and accelerated KPIs</h2>
 <div class='range'>2026-04-22 → 2026-06-11</div>
 <div class='psum'>In spring 2026, PANW advanced deep integrations with frontier AI providers. With Google Cloud it launched Prisma AIRS Model Security as a native agent in the Gemini Enterprise Agent Platform and joined the Agent‑as‑a‑Service marketplace. With Anthropic, Unit 42 Frontier AI Defense began leveraging Claude Opus 4.7, and PANW joined Anthropic’s Cyber Verification Program. Axios reported early access to Anthropic’s Mythos Preview and OpenAI’s GPT‑5.5‑Cyber enabled discovery of 75 vulnerabilities across 130+ products in a month — more than seven times normal — which PANW says were patched.
 On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+60% y/y) and RPO to $18.4B (+36% y/y), with Q4 and FY26 guidance raised. Management highlighted accelerating AI‑driven bookings and platform consolidation, noted no near‑term &quot;AI windfall,&quot; and flagged a temporary drag from Prisma Cloud migrating to Cortex Cloud. Days later PANW announced the Frontier AI SOC with native multi‑model support (Claude Sonnet 4.6, Claude Opus 4.8, Gemini 3.5 Flash) spanning Cortex XSIAM, AgentiX, XDR, and Cloud, reinforcing a multi‑provider strategy. PANW also appeared as a launch partner in Anthropic’s expanded Project Glasswing.</div>
-<div class="event t-web_only_verified" id="E0019">
+<div class="event t-web_only_verified" id="E0035" data-providers="anthropic_claude google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-04-22</span>
-<span class="eh">Prisma AIRS integrates natively with Gemini Enterprise Agent Platform</span>
+<span class="date">2026-06-11</span>
+<span class="eh">Frontier AI SOC: native support for Claude Sonnet/Opus and Gemini Flash</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">At Google Cloud Next 2026, PANW announced Prisma AIRS native integration with the Gemini Enterprise Agent Platform and joined the Agent‑as‑a‑Service marketplace via the Prisma AIRS Model Security agent available in the Agent Gallery.</p>
-<details>
-<summary>evidence — 1 source(s), 5 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">Prisma AIRS™ natively</span>
-<span class="span">Gemini Enterprise Agent Platform</span>
-<span class="span">Agent-as-a-Service</span>
-<span class="span">Prisma AIRS Model Security agent</span>
-<span class="span">Agent Gallery</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0020">
-<div class="ev-top">
-<span class="date">2026-04-30</span>
-<span class="eh">Unit 42 Frontier AI Defense adopts Anthropic Claude Opus 4.7</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">PANW’s Unit 42 Frontier AI Defense began leveraging Anthropic’s Claude Security powered by Opus 4.7 and joined Anthropic’s Cyber Verification Program to credential legitimate defensive use of frontier models.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">Claude Opus 4.7</span>
-<span class="span">Unit 42 Frontier AI Defense</span>
-<span class="span">Cyber Verification Program</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0021">
-<div class="ev-top">
-<span class="date">2026-05-13</span>
-<span class="eh">PANW reports 75 vulns found using Anthropic Mythos and OpenAI GPT‑5.5‑Cyber</span>
-<span class="badge">risk</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Axios reported PANW used Anthropic’s Mythos Preview and OpenAI’s GPT‑5.5‑Cyber to scan 130+ products, uncovering 75 vulnerabilities in a month — over 7x typical — which PANW says were patched, signaling both elevated capability and emerging risk outlook.</p>
-<p class="cav">⚠ Single press report; underlying provider model access and counts are company-disclosed.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">PANW announced native support for Anthropic Claude Sonnet 4.6, Claude Opus 4.8, and Google Gemini 3.5 Flash across the Cortex platform (XSIAM, AgentiX, XDR, and Cloud), enabling task‑appropriate model selection.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>4</b> GEM <b>4</b></span> <span class="chchip">customer_experience_enhancement · ANT <b>3</b> GEM <b>3</b></span> <span class="chchip">strategic_option_value · ANT <b>3</b> GEM <b>4</b></span> <span class="chchip">provider_specificity · ANT <b>2</b> GEM <b>2</b></span> <span class="chchip">multi_model_hedge · ANT <b>4</b> GEM <b>4</b></span> <span class="chchip">switching_flexibility · ANT <b>4</b> GEM <b>4</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">found 75 vulnerabilities</span>
-<span class="span">Mythos Preview</span>
-<span class="span">GPT-5.5-Cyber</span>
-<span class="span">more than seven times</span>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Claude Sonnet 4.6</span>
+<span class="span">Claude Opus 4.8</span>
+<span class="span">Gemini 3.5 Flash</span>
+<span class="span">across the Cortex platform</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0022">
-<div class="ev-top">
-<span class="date">2026-06-01</span>
-<span class="eh">AI Access Security catalogs Meta AI application identifiers</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">PANW’s AI Access Security documentation lists Meta AI application identifiers, reflecting product support for classifying and controlling Meta AI-related traffic.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[10]</div>
-<span class="span">AI Access Security</span>
-<span class="span">Meta AI  meta-ai</span>
-<span class="span">Meta Galactica  meta-galactica</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0023">
+<div class="event t-corroborated" id="E0023" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">Q3 FY26 reported: revenue $3.0B; outlook raised; NGS ARR and RPO accelerate</span>
@@ -486,7 +126,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">RPO to $18.4B</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0024">
+<div class="event t-single_source" id="E0024" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">Management: AI deployments accelerating bookings and consolidation</span>
@@ -495,6 +135,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">On the Q3 FY26 release, management highlighted accelerating organic bookings as enterprises deploy AI at scale and consolidate on PANW platforms.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -503,7 +144,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">consolidate on PANW’s platforms</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0025">
+<div class="event t-single_source" id="E0025" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">Q3 FY26: RPO reaches $18.4B (+36% y/y)</span>
@@ -512,6 +153,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="mag">$18.4B · contract_value</span> <span class="badge">positive_demand</span></div>
 <p class="narr">RPO ended Q3 FY26 at $18.4B, up 36% year over year, reflecting strong multi-year customer commitments.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -519,7 +161,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">(+36% y/y)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0026">
+<div class="event t-single_source" id="E0026" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">Q3 FY26: NGS ARR hits $8.13B (+60% y/y)</span>
@@ -528,6 +170,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="mag">$8.1B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
 <p class="narr">NGS ARR reached $8.13B in Q3 FY26, up 60% year over year, underscoring rapid platform adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -535,7 +178,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">(+60% y/y)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0027">
+<div class="event t-single_source" id="E0027" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">Q4 FY26 guidance: NGS ARR $8.90–$8.95B (+59–60% y/y)</span>
@@ -551,7 +194,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">(+59–60% y/y)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0028">
+<div class="event t-single_source" id="E0028" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">Q4 FY26 guidance: RPO $20.9–$21.0B (+32–33% y/y)</span>
@@ -567,7 +210,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">(+32–33% y/y)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0029">
+<div class="event t-single_source" id="E0029" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">Acquisitions contributed ~$1.6B NGS ARR and ~$1.8B RPO to Q3 totals</span>
@@ -584,7 +227,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">recently closed acquisitions (CyberArk, Chronosphere)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0030">
+<div class="event t-single_source" id="E0030" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">No near-term AI windfall expected despite robust growth</span>
@@ -601,7 +244,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">I expect robust growth.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0031">
+<div class="event t-single_source" id="E0031" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">Endpoint activity is becoming agentic, requiring specialized controls</span>
@@ -617,7 +260,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">requiring specialized controls</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0032">
+<div class="event t-single_source" id="E0032" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">Chronosphere positioning: approximately half the cost for AI-native workloads</span>
@@ -633,7 +276,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">AI-native environments</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0033">
+<div class="event t-single_source" id="E0033" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">Prisma Cloud to Cortex Cloud migration cited as near-term drag</span>
@@ -650,7 +293,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">several months of work remaining</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0034">
+<div class="event t-single_source" id="E0034" data-providers="anthropic_claude">
 <div class="ev-top">
 <span class="date">2026-06-02</span>
 <span class="eh">PANW named among Anthropic Project Glasswing partners</span>
@@ -659,6 +302,7 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
 <p class="narr">Anthropic expanded Project Glasswing access to ~150 additional organizations and named Palo Alto Networks among its partners for the Claude Mythos Preview program.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>4</b></span> <span class="chchip">strategic_option_value · ANT <b>3</b></span> <span class="chchip">provider_specificity · ANT <b>2</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 5 span(s)</summary>
 <div class="ev-src">news_rows[1]</div>
@@ -669,49 +313,451 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <span class="span">Palo Alto Networks</span>
 </details>
 </div>
-<div class="event t-web_only_verified" id="E0035">
+<div class="event t-web_only_unverified" id="E0022" data-providers="meta_llama">
 <div class="ev-top">
-<span class="date">2026-06-11</span>
-<span class="eh">Frontier AI SOC: native support for Claude Sonnet/Opus and Gemini Flash</span>
+<span class="date">2026-06-01</span>
+<span class="eh">AI Access Security catalogs Meta AI application identifiers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">PANW’s AI Access Security documentation lists Meta AI application identifiers, reflecting product support for classifying and controlling Meta AI-related traffic.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>1</b></span> <span class="chchip">provider_specificity · LLA <b>1</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">AI Access Security</span>
+<span class="span">Meta AI  meta-ai</span>
+<span class="span">Meta Galactica  meta-galactica</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0021" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">PANW reports 75 vulns found using Anthropic Mythos and OpenAI GPT‑5.5‑Cyber</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Axios reported PANW used Anthropic’s Mythos Preview and OpenAI’s GPT‑5.5‑Cyber to scan 130+ products, uncovering 75 vulnerabilities in a month — over 7x typical — which PANW says were patched, signaling both elevated capability and emerging risk outlook.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk · ANT <b>1</b> OAI <b>1</b></span></div>
+<p class="cav">⚠ Single press report; underlying provider model access and counts are company-disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">found 75 vulnerabilities</span>
+<span class="span">Mythos Preview</span>
+<span class="span">GPT-5.5-Cyber</span>
+<span class="span">more than seven times</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0020" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Unit 42 Frontier AI Defense adopts Anthropic Claude Opus 4.7</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">PANW announced native support for Anthropic Claude Sonnet 4.6, Claude Opus 4.8, and Google Gemini 3.5 Flash across the Cortex platform (XSIAM, AgentiX, XDR, and Cloud), enabling task‑appropriate model selection.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">PANW’s Unit 42 Frontier AI Defense began leveraging Anthropic’s Claude Security powered by Opus 4.7 and joined Anthropic’s Cyber Verification Program to credential legitimate defensive use of frontier models.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>4</b></span> <span class="chchip">customer_experience_enhancement · ANT <b>3</b></span> <span class="chchip">provider_specificity · ANT <b>2</b></span> <span class="chchip">multi_model_hedge · ANT <b>4</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">Claude Sonnet 4.6</span>
-<span class="span">Claude Opus 4.8</span>
-<span class="span">Gemini 3.5 Flash</span>
-<span class="span">across the Cortex platform</span>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Claude Opus 4.7</span>
+<span class="span">Unit 42 Frontier AI Defense</span>
+<span class="span">Cyber Verification Program</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0019" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Prisma AIRS integrates natively with Gemini Enterprise Agent Platform</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">At Google Cloud Next 2026, PANW announced Prisma AIRS native integration with the Gemini Enterprise Agent Platform and joined the Agent‑as‑a‑Service marketplace via the Prisma AIRS Model Security agent available in the Agent Gallery.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · GEM <b>3</b></span> <span class="chchip">product_integration_exposure · GEM <b>4</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>3</b></span> <span class="chchip">strategic_option_value · GEM <b>4</b></span> <span class="chchip">provider_specificity · GEM <b>2</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b></span> <span class="chchip">switching_flexibility · GEM <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Prisma AIRS™ natively</span>
+<span class="span">Gemini Enterprise Agent Platform</span>
+<span class="span">Agent-as-a-Service</span>
+<span class="span">Prisma AIRS Model Security agent</span>
+<span class="span">Agent Gallery</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class='phase'>
+<h2>Strategic cloud alliances and KPI inflection into FY26</h2>
+<div class='range'>2025-12-19 → 2026-02-17</div>
+<div class='psum'>PANW deepened its strategic alignment with Google Cloud in late 2025, announcing a new multibillion-dollar agreement to migrate key internal workloads onto Google Cloud while expanding the use of Vertex AI and Gemini LLMs to power copilots. The company highlighted an extensive GTM history with Google Cloud Marketplace and over 75 integrations, indicating a maturing distribution channel alongside infrastructure and model-layer adoption. In parallel, PANW scaled internal developer AI usage through AWS Bedrock-hosted Anthropic models, reporting notable productivity gains across 2,000 developers.
+By fiscal Q2 2026, Next-Generation Security ARR and RPO accelerated meaningfully, with management outlining robust guidance for Q3 and FY26. The quarter also detailed emerging AI-driven demand signals (e.g., SASE and XSIAM ARR milestones), clarified that LLMs are not a structural threat to PANW’s platforms, and quantified acquisition contributions — including a large LLM customer in Chronosphere’s base tied to $200M ARR.</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">Q2 FY26: NGS ARR reaches $6.33B (+33% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6.3B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reported Next-Generation Security ARR of $6.33B in Q2 FY26, up 33% year over year, underscoring momentum in platformized cybersecurity subscriptions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Next-Generation Security (NGS) ARR $6.33B</span>
+<span class="span">(+33% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">Q2 FY26: RPO stands at $16.0B (+23% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$16.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">PANW disclosed remaining performance obligation of $16.0B in Q2 FY26, up 23% year over year, reflecting multi-period contracted demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">RPO $16.0B</span>
+<span class="span">(+23% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">SASE ARR surpasses $1.5B (~40% y/y)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.5B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">SASE ARR exceeded $1.5B with approximately 40% year-over-year growth, indicating continued adoption of cloud-delivered network security.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">SASE ARR &gt;$1.5B</span>
+<span class="span">(~40% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">Cortex XSIAM ARR exceeds $0.5B</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$500M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cortex XSIAM ARR was above $0.5B, reflecting scaling demand for AI-driven security operations analytics and automation.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Cortex XSIAM ARR &gt;$0.5B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">Q3 FY26 guidance: NGS ARR $7.94–$7.96B (+56% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$7.9B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">For Q3 FY26, PANW guided NGS ARR to a range of $7.94–$7.96B, implying ~56% year-over-year growth as platform demand accelerates.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Q3 FY26</span>
+<span class="span">NGS ARR $7.94–$7.96B</span>
+<span class="span">(+56% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">Q3 FY26 guidance: RPO $17.85–$17.95B (+32–33% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$17.9B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">For Q3 FY26, PANW guided RPO to $17.85–$17.95B, indicating sustained multi-period bookings growth.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Q3 FY26</span>
+<span class="span">RPO $17.85–$17.95B</span>
+<span class="span">(+32–33% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">FY26 guidance: NGS ARR $8.52–$8.62B (+53–54% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$8.5B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">For FY26, PANW guided NGS ARR to $8.52–$8.62B, supporting a thesis of expanding AI-driven security demand across its platforms.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">FY26</span>
+<span class="span">NGS ARR $8.52–$8.62B</span>
+<span class="span">(+53–54% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">FY26 guidance: RPO $20.2–$20.3B (+28% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20.2B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management guided FY26 RPO to $20.2–$20.3B, implying strong multi-year contracted revenue visibility.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">FY26</span>
+<span class="span">RPO $20.2–$20.3B</span>
+<span class="span">(+28% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">Management: LLMs are not a threat to delivering security</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Addressing competitive concerns, management stated that large language models do not threaten PANW’s ability to deliver security outcomes across its platforms.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">LLMs…are not a threat to delivering security</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">Chronosphere: large LLM customer tied to $200M ARR addition</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$200M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management cited a large LLM vendor within Chronosphere’s base contributing to the $200M NGS ARR addition, with an expected incumbent displacement over 6–12 months.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">$200M ARR</span>
+<span class="span">displace an incumbent</span>
+<span class="span">6–12 months</span>
+<span class="span">this LLM vendor</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">Deal attribution: CyberArk about $1.2B ARR; Chronosphere ~$200M ARR</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.2B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CFO quantified acquired ARR at close: CyberArk at ~$1.2B and Chronosphere at ~$200M contributing to NGS ARR, with organic trends roughly in line with consensus.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">about $1.2B</span>
+<span class="span">Chronosphere contributed ~$200M to NGS ARR</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">AI agents/network traffic: early days; growth expected with adoption</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management noted it’s still early with AI agents and that network traffic impacts are not yet material, but pointed to developer/edge activity (Koi) and large AI data center buildouts as future drivers.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">it’s early</span>
+<span class="span">traffic not yet materially impacting networks</span>
+<span class="span">Koi</span>
+<span class="span">large AI data center buildouts</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-01-15</span>
+<span class="eh">AWS/Anthropic developer AI: 2,000 engineers onboarded, +25% avg productivity</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">An AWS case study reported PANW onboarded 2,000 developers to secure AI coding tools using Anthropic models via Amazon Bedrock, achieving on average 25% productivity improvement (up to 40%).</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>4</b></span> <span class="chchip">strategic_option_value · ANT <b>3</b></span> <span class="chchip">provider_specificity · ANT <b>2</b></span> <span class="chchip">switching_flexibility · ANT <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">2,000 developers</span>
+<span class="span">average of 25 percent</span>
+<span class="span">Claude 3.5 Sonnet</span>
+<span class="span">Amazon Bedrock</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-12-19</span>
+<span class="eh">PANW–Google Cloud expand to multibillion-dollar deal; copilots on Vertex AI/Gemini</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">PANW announced a new multibillion-dollar Google Cloud agreement to migrate key internal workloads and to power its copilots using Vertex AI and Gemini LLMs, building on 75+ integrations and $2B in Marketplace sales.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · GEM <b>4</b></span> <span class="chchip">distribution_channel_exposure · GEM <b>3</b></span> <span class="chchip">product_integration_exposure · GEM <b>4</b></span> <span class="chchip">strategic_option_value · GEM <b>4</b></span> <span class="chchip">provider_specificity · GEM <b>2</b></span> <span class="chchip">dependency_duration · GEM <b>3</b></span> <span class="chchip">contractual_commitment_strength · GEM <b>3</b></span></div>
+<p class="cav">⚠ Deal value characterized as “multibillion-dollar” without a specific dollar amount or term.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">more than 75 joint integrations</span>
+<span class="span">$2 billion in sales through the Google Cloud Marketplace</span>
+<span class="span">Vertex AI</span>
+<span class="span">Gemini LLMs</span>
+<span class="span">multibillion-dollar agreement</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational AI controls and early workflow integrations</h2>
+<div class='range'>2023-05-12 → 2024-07-18</div>
+<div class='psum'>Palo Alto Networks began operationalizing generative AI in 2023 by shipping product-level controls to identify and manage OpenAI traffic and by embedding ChatGPT into security operations playbooks. These efforts focused on safe enablement and visibility, including dedicated App-IDs for OpenAI services and a Cortex XSOAR integration that allowed analysts to invoke ChatGPT within incident-response workflows.
+In 2024 the firm expanded enterprise-grade governance and channel reach. A strategic partnership with IBM positioned watsonx LLMs within Cortex XSIAM and established PANW as IBM’s preferred cybersecurity partner across multiple domains. Shortly after, PANW launched a ChatGPT Enterprise Compliance integration to give customers enhanced visibility and policy controls for sensitive data inside ChatGPT Enterprise workspaces — extending its &quot;secure AI&quot; posture from network controls to SaaS governance.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-07-18</span>
+<span class="eh">Launched ChatGPT Enterprise Compliance integration for SaaS governance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">PANW introduced an integration with OpenAI’s ChatGPT Enterprise Compliance API to provide visibility into sensitive data shared within ChatGPT Enterprise and allow policy controls across prompts, responses, and files.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>1</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">ChatGPT Enterprise Compliance API</span>
+<span class="span">sensitive data</span>
+<span class="span">custom GPTs</span>
+<span class="span">near real-time</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-05-15</span>
+<span class="eh">IBM partnership to platformize AI security and infuse watsonx LLMs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PANW and IBM announced a broad collaboration: IBM will deliver services across PANW platforms while PANW plans to integrate IBM’s watsonx LLMs into Cortex XSIAM to drive automation and support outcomes.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">watsonx large language models (LLMs)</span>
+<span class="span">Cortex XSIAM</span>
+<span class="span">preferred cybersecurity partner</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-05-18</span>
+<span class="eh">Cortex XSOAR integration enables ChatGPT in IR playbooks</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">PANW documented how to use ChatGPT within Cortex XSOAR playbooks to generate readable analyses and improve incident response, including setup via the OpenAi ChatGPT v3 integration and API key configuration.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>1</b></span> <span class="chchip">switching_flexibility · OAI <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Cortex XSOAR has a ChatGPT integration</span>
+<span class="span">OpenAi ChatGPT v3</span>
+<span class="span">Generate an OpenAI API key</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-05-12</span>
+<span class="eh">App-IDs shipped to secure and manage OpenAI ChatGPT traffic</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">PANW released three OpenAI-specific App-IDs (openai-base, openai-chatgpt, openai-api) enabling NGFW customers to identify and control ChatGPT and OpenAI API usage distinctly across interfaces.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>1</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">three OpenAI-related App-IDs</span>
+<span class="span">openai-base</span>
+<span class="span">openai-chatgpt</span>
+<span class="span">openai-api</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0</td><td>0.15</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.4</td><td>0.75</td><td>1.2</td><td>0.15</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>-0.05</td><td>-0.05</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.73</td><td>0.715</td><td>0.805</td><td>0.745</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.1214</td><td>0.3095</td><td>0.8418</td><td>0.0304</td><td>0</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What is the specific term length and committed spend of the Google Cloud &quot;multibillion-dollar&quot; agreement, and how is spend allocated between compute, storage, Vertex AI, and Marketplace fees?</li>
@@ -725,4 +771,19 @@ On June 2, 2026, PANW reported Q3 FY26 results: NGS ARR accelerated to $8.13B (+
 <li>Axios reporting on Mythos/GPT‑5.5‑Cyber access and 75 vulnerabilities is single-source and relies on company disclosures.</li>
 <li>Localization in the AI Access Security document (zh_TW) may reflect regional documentation and not global feature availability.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

@@ -1,0 +1,583 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>MANH US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Manhattan Associates Inc <span class='sub'>(MANH US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.433</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>23 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 9</span>
+<span class='chip'>single source: 14</span>
+<span class='chip'>web-only (unverified): 6</span>
+<span class='chip'>web-only (verified): 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Scale-up on Google Cloud, commercialization cadence, and ecosystem build-out</h2>
+<div class='range'>2026-01-09 → 2026-05-19</div>
+<div class='psum'>Entering 2026, Manhattan brought additional agentic capabilities into commercial availability, including agents for store associates, contact centers, and OMS configuration. The company articulated its AI-native architecture philosophy—emphasizing deterministic orchestration over LLM-generated code—via a widely shared blog post.
+A Google Cloud engineering case study highlighted Manhattan Active’s modernization from Oracle/DB2 to Cloud SQL and BigQuery, with over a billion daily API calls at sub-150ms latencies and prebuilt agent examples. Q1’26 commentary outlined a paid 90‑day pilot-to-subscription motion, expected to scale through 2026 with greater impact in 2027; it also cited autonomous agent operations, hiring to accelerate activations, and Google Cloud Marketplace’s role in closing large OMS deals and retiring customer hyperscaler commitments. Manhattan further announced its own Manhattan Marketplace for agents, extensions, and accelerators on ActivePlatform, expanding the ecosystem.</div>
+<div class="event t-web_only_unverified" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-19</span>
+<span class="eh">Launches Manhattan Marketplace on ActivePlatform for agents and extensions</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Manhattan announced Manhattan Marketplace, a shared ecosystem on ActivePlatform where customers and partners can discover and deploy intelligent agents, extensions, and accelerators, leveraging Agent Foundry to ensure native interoperability and guardrails.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Manhattan Marketplace</span>
+<span class="span">ActivePlatform™</span>
+<span class="span">Agent Foundry™</span>
+<span class="span">upcoming quarters</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: Highlights AI-powered, cloud-native supply chain innovation</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized an AI-powered, cloud-native roadmap across supply chain and omnichannel solutions, citing a strong overall product pipeline.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">a strong pipeline across product suites</span>
+<span class="span">continued innovation in AI-powered</span>
+<span class="span">cloud-native supply chain</span>
+<span class="span">omnichannel solutions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: Paid 90‑day AI pilots converting to subscription; ramp through 2026–2027</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The company’s primary GTM is a paid 90‑day pilot that converts to subscription. Q1 pilots start converting in Q2, with revenue scaling through 2026 and more material impact in 2027.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">paid 90‑day pilot</span>
+<span class="span">converts to subscription</span>
+<span class="span">conversions for Q1 pilots begin in Q2</span>
+<span class="span">impact should scale through 2026</span>
+<span class="span">more meaningful impact in 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: Agents operate autonomously once customers are comfortable</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted that most AI agents can run autonomously after customers gain comfort, implying reduced ongoing human-in-the-loop requirements for mature deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Most agents can operate autonomously</span>
+<span class="span">once customers are comfortable</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: Simple AI pricing; margins modeled to hold</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Manhattan emphasized simple subscription pricing uplift informed by observed pilot consumption and stated that AI has been modeled to maintain SaaS margins.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">declined to disclose specific uplift percentages</span>
+<span class="span">simple subscription uplift</span>
+<span class="span">observed consumption during pilots</span>
+<span class="span">AI has been modeled to keep SaaS margins consistent</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: WAVE planning and labor agents see strongest interest</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Early demand is concentrated around WAVE planning and labor agents, signaling customer prioritization of planning and workforce use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">WAVE planning</span>
+<span class="span">labor agents</span>
+<span class="span">seeing the most interest</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: ~23% of on‑prem customers have converted or started conversion</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Manhattan reported continued progress converting its on‑prem customer base, with around 23% having converted or initiating conversion—supporting the SaaS and AI upsell pathway.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">About 23% of on‑prem customers</span>
+<span class="span">have converted or started conversion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: Fixed‑fee programs and day‑one base agents on Active platform boost interest</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Fixed‑fee, fixed‑timeline programs and day‑one availability of base agents on the Active platform are increasing interest, with a sizable conversion opportunity remaining.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Fixed‑fee, fixed‑timeline programs</span>
+<span class="span">day‑one availability of base agents</span>
+<span class="span">Active platform</span>
+<span class="span">increasing interest</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: Hiring to accelerate AI agent activation and time‑to‑value</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Manhattan added services capacity and has additional open roles to support AI agent activation and faster customer time‑to‑value.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Approximately 120 services heads were added</span>
+<span class="span">~70 pending/open</span>
+<span class="span">support AI agent activation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: Largest OMS deal executed via Google Cloud Marketplace</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Management highlighted its largest OMS booking to date, executed through Google Cloud Marketplace, underscoring the channel’s role in closing significant transactions.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">largest OMS booking to date</span>
+<span class="span">one of APAC’s largest deals</span>
+<span class="span">executed through Google Cloud Marketplace</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: Marketplace helps customers retire hyperscaler commits</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">The Google Cloud Marketplace route reduces friction by letting customers retire committed hyperscaler spend, serving as a helpful differentiator to close deals.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">retire committed hyperscaler spend</span>
+<span class="span">helpful differentiator to close deals</span>
+<span class="span">rather than a primary pipeline source</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: Base agents are included in Marketplace deals where relevant</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Management clarified that base agents are included in Marketplace-transacted deals when relevant, aligning AI adoption with channel execution.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Base agents are included</span>
+<span class="span">where relevant</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26: AI modeled to maintain SaaS margins</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The company reiterated that AI has been modeled to maintain SaaS margins despite the new pricing dynamics.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI modeled to maintain</span>
+<span class="span">SaaS margins</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26 risk: No disclosure of AI uplift percentages or contract terms</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management did not disclose AI subscription uplift percentages or typical agent contract durations, reducing visibility into pricing power and commitment length.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">No disclosure of AI subscription uplift percentages</span>
+<span class="span">typical contract durations for agents</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Q1’26 risk: No AI adoption KPIs (pilots, conversion, AI ARR) disclosed</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The company reported no new AI-specific KPIs such as pilot counts, conversion rates, or AI ARR, limiting investors’ ability to track AI monetization progress.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">No new KPIs specific to AI adoption</span>
+<span class="span">number of pilots</span>
+<span class="span">conversion rates</span>
+<span class="span">AI ARR</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-26</span>
+<span class="eh">Google Cloud case study: Manhattan Active scales to &gt;1B daily API calls</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A Google Cloud blog detailed Manhattan Active’s migration from Oracle/DB2 to Cloud SQL and BigQuery, reporting over a billion daily API calls at sub-150ms response times. It tied this foundation to Manhattan’s Agentic AI suite with prebuilt agents for store and DC operations.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">over a billion API calls per day</span>
+<span class="span">under 150 milliseconds</span>
+<span class="span">Cloud SQL and BigQuery</span>
+<span class="span">legacy Oracle and DB2</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Publishes AI-native architecture stance: reliability over LLM-generated code</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Manhattan argued that true AI-native systems must be reliably orchestrated by AI rather than dynamically written by LLMs. The post contrasted creative LLM capabilities (e.g., Claude or ChatGPT) with enterprise requirements for deterministic behavior in mission-critical operations.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">The 6% Fallacy</span>
+<span class="span">Claude or ChatGPT</span>
+<span class="span">The true ‘AI-native’ system</span>
+<span class="span">safely orchestrated by AI</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-09</span>
+<span class="eh">Ships new embedded agentic AI for retail: three agents across Omni UI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Manhattan announced major enhancements to Active Omni and the commercial availability of three new AI agents embedded in the UI—Store Associate Agent, Contact Center Agent, and OMS Configuration Agent—offering natural-language insights for sales, fulfillment, and service workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">major enhancements to Manhattan Active® Omni</span>
+<span class="span">commercial availability of three new AI agents</span>
+<span class="span">Store Associate Agent</span>
+<span class="span">OMS Configuration Agent</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Deepening Google Cloud alignment and Agentic AI platformization</h2>
+<div class='range'>2025-04-24 → 2025-05-20</div>
+<div class='psum'>In 2025 Manhattan’s partnership with Google Cloud became more explicit and expansive. Manhattan received Google Cloud’s 2025 Business Applications Partner of the Year Award for Supply Chain and Logistics, highlighting its application of Agentic AI and GenAI within the Active Suite and referencing Google Gemini models.
+At Momentum 2025, Manhattan announced that all Active solutions are available on Google Cloud Marketplace and detailed technical underpinnings that include GKE, Cloud SQL, Pub/Sub, Interconnect, and BigQuery. The company also unveiled Manhattan Agent Foundry, engineered using Google Agentspace and Vertex AI, with compatibility to A2A and MCP protocols—signaling a broader, interoperable agent platform positioned to accelerate customer innovation.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-05-20</span>
+<span class="eh">All Manhattan Active solutions available on Google Cloud Marketplace; Agent Foundry uses Agentspace/Vertex AI</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Manhattan expanded its GTM with Google Cloud, making all Active solutions available on Google Cloud Marketplace and detailing broad use of core Google services. The newly announced Agent Foundry is engineered using Google Agentspace and Vertex AI, extending agentic execution across enterprise applications.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">available on Google Cloud Marketplace</span>
+<span class="span">Google Kubernetes Engine (GKE)</span>
+<span class="span">Google Cloud SQL</span>
+<span class="span">Google Agentspace technology</span>
+<span class="span">Vertex AI platform</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-05-20</span>
+<span class="eh">Unveils Agentic AI innovation and Manhattan Agent Foundry with interoperability standards</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">At Momentum 2025 Manhattan announced sweeping Agentic AI support within Active solutions, including Manhattan Agent Foundry. Agents built on the Foundry are compatible with A2A and MCP protocols and interoperate with third-party platforms such as Google Agentspace.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Momentum 2025</span>
+<span class="span">Manhattan Agent Foundry™</span>
+<span class="span">A2A and MCP protocols</span>
+<span class="span">Google Agentspace</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-04-24</span>
+<span class="eh">Wins Google Cloud 2025 Partner of the Year Award (Supply Chain &amp; Logistics)</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Manhattan received Google Cloud’s 2025 Business Applications Partner of the Year Award for Supply Chain and Logistics, citing its pioneering application of Agentic AI and GenAI in the Manhattan Active Suite and explicitly noting use of Google Gemini models.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">2025 Google Cloud Business Applications Partner of the Year Award</span>
+<span class="span">Supply Chain and Logistics</span>
+<span class="span">Agentic AI and Generative AI (GenAI)</span>
+<span class="span">Google Gemini models</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>GenAI product debut and first customer deployment</h2>
+<div class='range'>2024-05-15 → 2024-12-12</div>
+<div class='psum'>Manhattan Associates introduced its first branded GenAI capabilities for commerce and customer service with the launch of Manhattan Active Maven and Manhattan Assist. The initial positioning emphasized native embedding within Manhattan Active solutions and customer service outcomes, including a GenAI-powered chatbot with direct access to order and store data.
+By year-end, the Army &amp; Air Force Exchange Service went live on Maven, with Manhattan citing faster resolution times and improved NPS. These milestones anchored GenAI as a customer-facing enhancement across the firm’s omnichannel commerce suite, setting the stage for broader agentic AI expansion.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-12</span>
+<span class="eh">Army &amp; Air Force Exchange Service deploys Manhattan Active Maven</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The Army &amp; Air Force Exchange Service deployed Manhattan Active Maven within weeks, reducing inquiry volume handled by humans and improving service metrics. Manhattan estimates time savings per interaction, with reported gains in customer satisfaction and NPS.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Army &amp; Air Force Exchange Service</span>
+<span class="span">deployed Manhattan Active Maven</span>
+<span class="span">save up to 30 seconds per interaction</span>
+<span class="span">net promoter score (NPS)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-05-15</span>
+<span class="eh">Manhattan launches GenAI offerings: Manhattan Active Maven and Manhattan Assist</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Manhattan announced Manhattan Active Maven, a specialized GenAI solution for customer service, and Manhattan Assist to add GenAI across Manhattan Active solutions. Maven provides a GenAI-powered consumer chatbot with native access to operational data within the omnichannel commerce stack.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Manhattan Active® Maven</span>
+<span class="span">Manhattan Assist</span>
+<span class="span">GenAI-powered chatbot</span>
+<span class="span">native access to orders, payments, store locations, and product availability</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which specific LLMs power Manhattan Active Maven and other agents beyond the cited use of Google Gemini models?</li>
+<li>What was the contract value and term for the largest OMS booking executed via Google Cloud Marketplace?</li>
+<li>What are the current AI adoption KPIs (pilot counts, conversion rates, AI ARR) and how are they trending by cohort?</li>
+<li>What are the typical contract durations and pricing uplifts for AI agents post-pilot?</li>
+<li>Are there any minimum spend commitments or long-term agreements with Google Cloud underpinning Manhattan Active workloads?</li>
+<li>Can customers bring their own model (BYOM) into Agent Foundry and Manhattan Marketplace, and how is model governance handled?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many items are company press releases or blogs with limited third-party corroboration and no disclosed dollar magnitudes.</li>
+<li>Filings highlights provide directional clarity but omit detailed AI pricing, term structures, and KPI disclosures, limiting economic precision.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

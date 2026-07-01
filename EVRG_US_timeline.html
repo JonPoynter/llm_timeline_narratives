@@ -1,0 +1,649 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>EVRG US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Evergy Inc <span class='sub'>(EVRG US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.456</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>27 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 15</span>
+<span class='chip'>single source: 12</span>
+<span class='chip'>web-only (verified): 7</span>
+<span class='chip'>web-only (unverified): 6</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Contracted scale-up with Google and Meta; LLPS-backed backlog and capex expansion</h2>
+<div class='range'>2026-01-01 → 2026-05-07</div>
+<div class='psum'>In early 2026, Google published its Capacity Commitment Framework (CCF) advocating long-term, amount-based utility contracts, which aligned with Evergy’s LLPS structure. Days later, Google confirmed a second Kansas City campus (Project Mica), stating it would cover full energy costs under an agreement with Evergy and qualify for the Large Load Power Tariff.
+Evergy’s February 2026 materials disclosed four executed ESAs totaling ~1.9 GW with Google, Meta, and Beale Infrastructure, and raised its five-year capex plan to $21.6B. The Q1 2026 release then quantified an ~$8.7B minimum-bill LLPS backlog with 10–17 year terms, cited data center–driven demand growth, lifted peak contracted load to ~3.0 GW, detailed multi-year ramps, and emphasized credit protections and visibility, while flagging regulatory timing and affordability risks.</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">LLPS minimum-bill backlog totals ~$8.7B with 10–17 year terms</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$8.7B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Evergy reported remaining contractual minimum consideration under LLPS minimum-bill provisions of approximately $8.7B at 3/31/2026, with remaining terms of roughly 10–17 years, reinforcing multi-year revenue visibility.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">minimum‑bill provisions</span>
+<span class="span">totaled ~$8.7B</span>
+<span class="span">remaining terms of ~10–17 years</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Evergy signs a fifth large-customer ESA; amends two contracts; 2030 growth visibility</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management announced a fifth large-customer ESA and favorable amendments to two prior ESAs, expected to boost 2026 margins and support higher load growth through 2030, alongside reaffirmed 2026 EPS guidance.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[8]</div>
+<span class="span">fifth large‑customer ESA</span>
+<span class="span">support higher load growth through 2030</span>
+<span class="span">$4.14–$4.34</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">At least one more ESA expected in 2026; long-lead items pre-reserved</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Evergy indicated it expects to sign at least one additional ESA in 2026 and has pre-reserved long-lead items such as turbines and T&amp;D equipment to meet anticipated ramps.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">we will sign at least one additional ESA this year</span>
+<span class="span">long‑lead items have been pre‑reserved</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Signed ESAs provide line of sight; confidence to exceed 8% growth beyond 2028–2030</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized that signed ESAs with minimum bills give strong visibility, expressing confidence in exceeding 8% adjusted EPS growth in the out-years.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">minimum bills give “tremendous line of sight”</span>
+<span class="span">exceed 8% in those out years</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Peak demand tied to signed large-load deals now ~3.0 GW (from ~2.4 GW)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Evergy raised its view of peak demand associated with signed large-load agreements to roughly 3.0 GW from about 2.4 GW the prior quarter, citing amendments and a new ESA.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Peak demand tied to signed large-load agreements</span>
+<span class="span">roughly 3.0 GW</span>
+<span class="span">from about 2.4 GW</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">ESA ramps begin 2026–2028; ~5-year ramps; some extend to 2032</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Evergy outlined that the five ESAs commence between 2026–2028, generally ramp over ~5 years, and some extend to 2032 under LLPS provisions, shaping multi-year load trajectories.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">commence between 2026–2028</span>
+<span class="span">ramp over ~5 years</span>
+<span class="span">extend to 2032</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Risk profile: ESA counterparty BBB+; hyperscaler off-take visibility and credit protections</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management characterized the new ESA developer as BBB+ rated and highlighted hyperscaler off-take visibility along with LLPS collateral and credit protections, balancing risk and assurance.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">BBB+ corporate rating</span>
+<span class="span">hyperscaler off‑take visibility</span>
+<span class="span">LLPS collateral/credit protections</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="google_gemini_deepmind meta_llama">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Management references relationships with Google and Meta on other projects</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Evergy noted existing relationships with Google and Meta on other projects, reinforcing ongoing engagement with leading hyperscalers in its territory.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">relationships with Google and Meta</span>
+<span class="span">other projects</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Capex plan ~$21.6B (2026–2030) with balanced funding mix to support large-load growth</span>
+<span class="badge">financing</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$21.6B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Evergy detailed a 2026–2030 financing plan to support a ~$21.6B capex program, using cash from operations and a mix of debt, hybrids, and equity ($700–$900M per year on average 2026–2029). The uplift is linked to serving large-load customers under LLPS.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[12]</div>
+<span class="span">~$21.6B capex program</span>
+<span class="span">$700–$900M per year</span>
+<span class="span">repurchased $244.1M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Equity cadence affirmed; $125M raised YTD via ATM; no block issuance planned</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$125M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Evergy reiterated equity plans of $700–$900M per year (2026–2029), disclosed $125M already raised in 2026 via its ATM, and said no current plans for a block issuance.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">we have already raised $125 million</span>
+<span class="span">no plans currently for a block issuance</span>
+<span class="span">ATM program</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Risk: Timing of approvals and builds critical to meet data center ESA load</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management warned that timely approvals (IRP filings and CCNs in 2026) and on-schedule builds are required to meet accelerated large-load growth; delays could pressure reliability, capex timing, and allowed returns.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">requires timely approvals</span>
+<span class="span">IRP filings and CCNs in 2026</span>
+<span class="span">delays could pressure service reliability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Affordability watch: Missouri West bills may run a little higher than inflation near term</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Evergy cautioned that Missouri West residential bills could be a little higher than inflation over the next five years, albeit moderated by strong LLPS load growth, indicating potential affordability and regulatory sensitivity.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">a little higher than inflation over the next five years</span>
+<span class="span">under LLPS</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Trajectory update: Peak ESAs to ~3.0 GW; retail load CAGR 7–8%; FFO-to-debt 14–15%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Evergy reported increased confidence with signed ESA peak moving to ~3.0 GW, raised retail load CAGR outlook to ~7–8%, and FFO-to-debt tightened to 14–15% through 2028.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">peak moved to ~3.0 GW</span>
+<span class="span">retail load CAGR outlook raised to ~7%–8%</span>
+<span class="span">FFO‑to‑debt tightened to 14%–15%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Q1 demand: +4.7% y/y; commercial +3.3% including data centers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Evergy’s weather-normalized retail demand rose 4.7% y/y in Q1, with commercial sales up 3.3% including data centers, evidencing early contribution from large-load ramps.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">+4.7% y/y in Q1</span>
+<span class="span">commercial +3.3% incl. data centers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Five ESAs total ~2.5 GW steady-state; minimum monthly bills required under LLPS</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On the Q1 2026 call, Evergy said it has executed ESAs for five data center projects under LLPS totaling ~2.5 GW steady-state load, with contracts requiring minimum monthly bill payments irrespective of actual usage, reinforcing revenue protection.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">signing of a 5th large customer electric service agreement</span>
+<span class="span">five data center projects under our LLPS tariffs</span>
+<span class="span">steady-state peak load of approximately 2.5 GW</span>
+<span class="span">minimum monthly bill payments</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">Capex plan lifted 24% to $21.6B; ESA total 1.9 GW re-affirmed</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$21.6B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Utility Dive reported Evergy’s five-year capital spending plan increased 24% to $21.6B, driven by generation investments to serve large-load customers. The article also cites the four ESAs totaling ~1.9 GW signed in February 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[12], web_search_findings[6]</div>
+<span class="span">jumps 24%, to $21.6B</span>
+<span class="span">1.9 GW — Total of four electric service agreements</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0011" data-providers="google_gemini_deepmind meta_llama">
+<div class="ev-top">
+<span class="date">2026-02-19</span>
+<span class="eh">Evergy signs 1.9 GW of ESAs with Google, Meta and Beale Infrastructure</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Evergy’s Q4 2025 presentation disclosed executed ESAs for four data center projects—Google (new and expansion), Meta (expansion), and Beale Infrastructure—totaling ~1.9 GW of steady-state peak load under LLPS tariffs, embedding protective cost-recovery structures.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">executed ESAs for 4 data center projects</span>
+<span class="span">These first four ESAs include steady-state peak load of ~1.9 GW</span>
+<span class="span">Google | New | Signed</span>
+<span class="span">Meta | Expansion</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">Google confirms second KC data center (Project Mica); will cover full energy costs under Evergy agreement</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10.0B · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google revealed it is the customer behind Project Mica and, under its agreement with Evergy, will cover the full energy costs for its KC campuses. Reports note Port KC authorized up to $10B in bonds and that Google will qualify for Evergy’s Large Load Power Tariff; the campus could require up to 500 MW, with materials referencing nearly 700 MW.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[5], web_search_findings[10]</div>
+<span class="span">customer behind a development dubbed Project Mica</span>
+<span class="span">up to $10 billion in taxable revenue bonds</span>
+<span class="span">will cover the full energy costs</span>
+<span class="span">Large Load Power Tariff</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-01-01</span>
+<span class="eh">Google publishes Capacity Commitment Framework for large energy customers</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google outlined a contract model where large energy customers make long-term, amount-based commitments covering the utility’s infrastructure costs, with security deposits and cancellation protections—principles consistent with Evergy’s LLPS approach used for hyperscaler ESAs.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">The Capacity Commitment Framework (CCF)</span>
+<span class="span">make a fnancial promise to pay for the infrastructure</span>
+<span class="span">amount-based approach, not a use-based one</span>
+<span class="span">Regulators should require a security deposit</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Regulatory enablement and first waves of data center load</h2>
+<div class='range'>2024-12-12 → 2025-11-14</div>
+<div class='psum'>Through 2024–2025, the region saw tangible data center progress and enabling regulation. Edged opened a 26 MW Kansas City facility with Evergy participating as a utility provider. Media covered the growing energy needs of incoming Meta and Google campuses. Meta confirmed its Kansas City data center came online in August 2025.
+Critically, both Kansas and Missouri commissions approved Large Load Power Service (LLPS) frameworks in November 2025, establishing long-term, minimum-bill, collateralized contracts for ≥75 MW customers, designed to protect existing ratepayers. Evergy also highlighted an AI data center project by Lambda poised to scale from 24 MW to 100 MW, underscoring near-term incremental load.</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-14</span>
+<span class="eh">Missouri approves LLPS tariff with 12–17 year commitments, collateral and exit fees</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The Missouri PSC approved a LLPS plan for Evergy’s Missouri utilities with minimum 12-year terms, optional five-year ramp, automatic five-year extensions, collateral equal to two years of minimum bills, and exit fee provisions—mirroring Kansas—ensuring large-load costs are fully recovered.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">minimum contract term is 12 years</span>
+<span class="span">optional load ramp period of five years</span>
+<span class="span">collateral equal to two years of minimum monthly bills</span>
+<span class="span">exit fee equal to the nominal value of their minimum monthly bill</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-06</span>
+<span class="eh">Kansas approves LLPS tariff with strong collateral and minimum-bill protections</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The Kansas Corporation Commission approved a Large Load Power Service plan requiring ≥75 MW customers to sign long-term contracts with minimum bills and collateral equal to two years of minimum monthly bills, alongside exit fees. The structure protects existing ratepayers while enabling utility investment for large loads like data centers.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">greater than 75 megawatts (75 MW)</span>
+<span class="span">minimum of 12 years</span>
+<span class="span">80% of their contract demand</span>
+<span class="span">collateral equal to two years of minimum monthly bills</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-06</span>
+<span class="eh">Evergy highlights Lambda AI factory: 24 MW launching early 2026; potential 100 MW</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On its Q3 2025 call, Evergy noted Lambda’s plan to transform a Kansas City facility into an AI factory data center, launching in early 2026 with 24 MW and potential to scale to more than 100 MW, indicating near-term incremental AI-related load.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Lambda announced its plan</span>
+<span class="span">AI factory</span>
+<span class="span">24 megawatts of capacity</span>
+<span class="span">100 megawatts</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2025-08-20</span>
+<span class="eh">Meta’s Kansas City data center goes online; renewables-matched; Evergy recognized</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta announced its Kansas City data center is now serving traffic, noting electricity use matched with 100% renewable energy and acknowledging Evergy among partners. The go-live converts pipeline load into active consumption.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Kansas City, we are online!</span>
+<span class="span">electricity use is matched with 100% clean and renewable energy</span>
+<span class="span">Evergy</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="meta_llama google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-02-07</span>
+<span class="eh">Report: Meta and Google data centers could demand energy equal to 100 Walmarts</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Coverage highlighted the scale of anticipated demand from Meta and Google campuses in Kansas City, describing major power needs that Evergy will need to plan for, reinforcing the magnitude of hyperscaler-driven load growth.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Meta and Google are building gigantic data center campuses</span>
+<span class="span">as much energy as 100 Walmarts</span>
+<span class="span">Evergy</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-12</span>
+<span class="eh">Edged opens 26 MW Kansas City data center; Evergy noted as utility provider</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Edged inaugurated a 26 MW Kansas City data center designed for high-density AI workloads, with Evergy cited among utility providers involved. The project adds near-term digital infrastructure load within Evergy’s service area.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">Edged Kansas City</span>
+<span class="span">26 MW of critical capacity</span>
+<span class="span">utility providers Evergy</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Hyperscaler siting and early planning</h2>
+<div class='range'>2022-03-24 → 2023-12-31</div>
+<div class='psum'>Evergy’s AI-adjacent exposure began with hyperscaler siting in its service territory. In March 2022, Meta selected Kansas City, Missouri, for an $800 million hyperscale data center, explicitly listing Evergy among regional partners. This established a direct link between Evergy and a top-tier AI model provider’s infrastructure footprint.
+In June 2023, Evergy filed updates to its long-term resource plans with Kansas and Missouri regulators, citing rapid demand growth from projects including the Meta data center. The plan contemplated large-scale additions of renewables and dispatchable generation through 2035, laying the groundwork for serving accelerating data center and industrial load while maintaining reliability.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2023-06-15</span>
+<span class="eh">Evergy updates long-term plans; cites Meta data center and robust demand growth</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Evergy filed annual updates to its long-term resource plans with Kansas and Missouri regulators, highlighting demand from large projects including the Meta data center. The plan targets more than 3,300 MW of additional renewables and 1,300 MW of hydrogen-capable combined cycle by 2035.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Evergy updates long-term plan</span>
+<span class="span">Meta datacenter</span>
+<span class="span">add more than 3,300 megawatts (MW) of renewable energy</span>
+<span class="span">1,300 MW of hydrogen-capable advanced combined cycle</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2022-03-24</span>
+<span class="eh">Meta selects Kansas City, MO for a new $800M data center; Evergy named among partners</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$800M · other</span> <span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta announced an $800 million hyperscale data center in Kansas City, MO, citing Evergy among key partners. The project anchors hyperscaler load growth in Evergy’s footprint and signals future power demand tied to Meta’s AI and cloud workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Meta Selects Missouri For New $800 Million Data Center</span>
+<span class="span">Golden Plains Technology Park</span>
+<span class="span">Evergy</span>
+<span class="span">be operational in Kansas City in 2024</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Who is the unnamed premier developer behind the fifth ESA and what is the specific capacity profile and ramp schedule for that site?</li>
+<li>How do the ~2.5 GW steady-state (call) and ~3.0 GW peak (filing) figures reconcile across signed ESAs—what portion reflects diversity factors or non-LLPS load?</li>
+<li>What is the jurisdictional and counterparty breakdown of the ~$8.7B LLPS minimum-bill backlog across Evergy Kansas Central, Metro, and Missouri West?</li>
+<li>What are the precise MW milestones and in-service dates for Google’s Project Mica phases relative to LLPS ramp provisions?</li>
+<li>Status and timing of 2026 IRP and CCN approvals tied to generation and T&amp;D projects supporting ESA ramps—any gating items or contested components?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some items rely on company transcripts and media reports; specific ESA contract values and customer identities (beyond those disclosed) are confidential.</li>
+<li>Backlog and MW figures are reported on a steady-state or peak basis and may not directly translate to near-term revenue; ramps typically span ~5 years.</li>
+<li>Regulatory approvals (IRP/CCN) and construction timelines are subject to change and may impact load-ready dates and allowed returns.</li>
+<li>Third-party project capex (e.g., $800M Meta DC; $10B bonds for Project Mica) are not Evergy capex but indicate scale of customer investments and implied power demand.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

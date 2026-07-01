@@ -1,0 +1,834 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>WULF US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Terawulf Inc <span class='sub'>(WULF US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.366</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>38 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 15</span>
+<span class='chip'>single source: 26</span>
+<span class='chip'>web-only (verified): 9</span>
+<span class='chip'>web-only (unverified): 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Contracted backlog crystallizes; Q1’26 financing and buildout milestones</h2>
+<div class='range'>2026-02-26 → 2026-06-30</div>
+<div class='psum'>By February 2026, TeraWulf reported 522 contracted critical IT MW totaling over $12.8 billion of revenue and said contracted capacity was fully funded with construction aligned to tenant timelines. The 10‑K detailed Core42’s 60 MW ten‑year leases, 378 MW of Fluidstack at Lake Mariner with Google credit support, and the Abernathy 168 MW 25‑year lease, also supported by Google.
+On May 8, 2026, the company disclosed Q1 operational and financial updates, including ~$60 MW energized HPC capacity for a tenant at Lake Mariner, acquisition of a Hawesville, KY site with ~480 MW of grid power, a new $250M revolver, $523M capex, and negative free cash flow. Management outlined long‑term targets (250–500 MW/yr), advanced Kentucky and PJM/Maryland regulatory steps, and highlighted execution and refinancing risks. Additional developments included a Schneider Electric $290M infrastructure partnership and media coverage of a second Kentucky AI campus. External trackers cited likely Google TPU/Anthropic usage at Lake Mariner via Fluidstack.</div>
+<div class="event t-web_only_verified" id="E0037" data-providers="anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">Tracker cites likely Google TPU usage at Lake Mariner for Anthropic via Fluidstack</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A third‑party directory lists Fluidstack’s Lake Mariner as an operational AI data center reportedly serving Google TPUs for Anthropic (likely) and G42 (likely). While indicative of workload mix, this is not a confirmed company disclosure.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Third‑party directory; ‘likely’ language indicates uncertainty.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">Fluidstack Lake Mariner is an operational AI data center</span>
+<span class="span">Google TPUs</span>
+<span class="span">Anthropic (likely)</span>
+<span class="span">G42 (likely)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Shares rally on second Kentucky AI data campus acquisition coverage</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Media highlighted TeraWulf’s expansion to two Kentucky AI campuses and referenced 480 MW of existing site power, underscoring investor focus on AI data center demand.</p>
+<p class="cav">⚠ Headline-driven; details limited in news snippet.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">second Kentucky AI data campus acquisition</span>
+<span class="span">AI data center demand</span>
+<span class="span">WULF up</span>
+<span class="span">two KY campuses plus 480 MW existing site</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0036" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-20</span>
+<span class="eh">Schneider Electric selected in $290M power and cooling infrastructure deal</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$290M · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">TeraWulf engaged Schneider Electric to deliver power and cooling infrastructure at Lake Mariner, described as a strategic blueprint pairing on‑site power, liquid cooling, and digital intelligence for large‑scale AI deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<p class="cav">⚠ Article provides limited commercial terms beyond headline value.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">$290 million</span>
+<span class="span">Schneider Electric</span>
+<span class="span">power and cooling infrastructure</span>
+<span class="span">flagship campus in New York</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Q1’26: HPC lease revenue of $21.02M (new y/y)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$21M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reported new year‑over‑year HPC lease revenue of $21.02 million in Q1’26 as the AI/HPC leasing transition began contributing.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">HPC lease revenue $21.02M (new y/y).</span>
+<span class="span">$21.02M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">~60 MW energized HPC capacity for tenant at Lake Mariner</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Operational KPIs showed approximately 60 MW of energized critical IT HPC capacity at Lake Mariner for a tenant as of March 31, 2026, evidencing ramping deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~60 MW of energized critical IT HPC capacity</span>
+<span class="span">for a tenant at Lake Mariner</span>
+<span class="span">transition underway from self-mining to contracted HPC lease revenues.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Acquisition of Hawesville, KY site with ~480 MW grid power</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TeraWulf acquired a large‑scale Hawesville, Kentucky site with approximately 480 MW of grid‑connected power availability, positioning for future AI/HPC capacity.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Hawesville, KY</span>
+<span class="span">~480 MW</span>
+<span class="span">grid-connected power availability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">New $250M senior secured revolving credit facility signed May 7, 2026</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$250M · loan</span> <span class="badge">positive_demand</span></div>
+<p class="narr">The company secured a $250 million senior secured revolver on May 7, 2026 to support development and liquidity needs.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$250M senior secured revolving credit facility</span>
+<span class="span">signed May 7, 2026.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Q1’26 capex purchases/deposits on PP&amp;E totaled $522.95M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$523M · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">Quarterly purchases and deposits on property, plant &amp; equipment were $522.95 million, reflecting accelerated AI/HPC buildout.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Purchases/deposits on PP&amp;E: $522.95M;</span>
+<span class="span">PP&amp;E</span>
+<span class="span">$522.95M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Q1’26 free cash flow was -$540.55M</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$541M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Free cash flow (operating cash flow minus capex) was negative $540.55 million in Q1’26, highlighting the capital intensity of the AI/HPC expansion.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Free cash flow (OCF - capex): -$540.55M.</span>
+<span class="span">-$540.55M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Q1’26 ATM usage netted approximately $9M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$9M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Management disclosed use of the at‑the‑market equity program in Q1, netting approximately $9 million; no buybacks were executed.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ATM program in Q1 (net ~$9M)</span>
+<span class="span">no Q1 buybacks</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Longer‑term strategy targets 250–500 MW of new contracted capacity annually</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TeraWulf reiterated plans to deliver 250–500 MW of new contracted IT load per year across its development pipeline.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">targets 250–500 MW</span>
+<span class="span">new contracted capacity annually.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Abernathy JV: 168 MW under 25‑year lease; Q4’26 delivery target</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The Abernathy, TX joint venture is designed for 168 critical IT MW under a 25‑year lease with delivery targeted for Q4 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Abernathy JV designed for 168 critical IT MW</span>
+<span class="span">under a 25‑year lease</span>
+<span class="span">targeting delivery in Q4 2026.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Kentucky: signing of investment‑grade customer targeted for Q2’26</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects to sign an investment‑grade rated customer for Kentucky in Q2 2026, indicating demand for the new campus.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Timing subject to execution.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">IG‑rated customer</span>
+<span class="span">Q2 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Kentucky project execution: NTP with Fluor; utility arrangements with Big Rivers</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Limited notice to proceed has been issued to Fluor, and utility arrangements are in place with Big Rivers, advancing Kentucky project execution.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">limited notice to proceed</span>
+<span class="span">Fluor</span>
+<span class="span">Big Rivers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Lake Mariner 250 MW interconnect: ISO feedback expected mid‑year</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The company expects mid‑year ISO feedback on an incremental 250 MW interconnect at Lake Mariner and plans to market capacity promptly upon availability.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ISO feedback</span>
+<span class="span">incremental 250 MW interconnect</span>
+<span class="span">around mid‑year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Maryland: awaiting mid‑summer FERC decision before major spend</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">TeraWulf is awaiting a mid‑summer FERC ruling regarding its Maryland initiatives and will not commit major spend prior to approvals.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">await a mid‑summer FERC decision</span>
+<span class="span">will not commit major spend pre‑approval</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Maryland operations: ~210 MW peaker remains; adding storage/gas/load</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management emphasized the existing ~210 MW peaker capacity will remain in PJM while they add battery storage, efficient gas generation, and load.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~210 MW peaker</span>
+<span class="span">remain in PJM</span>
+<span class="span">battery storage</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Typical lease term extended to 15 years from earlier 10‑year deals</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lease tenors have lengthened, with typical terms now 15 years versus earlier 10‑year structures, increasing duration and cash‑flow visibility.</p>
+<div class="ev-ch">channels: <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Typical lease term now 15 years</span>
+<span class="span">earlier 10‑year deals</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">HPC leasing margins align with ~85% long‑term target</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated that HPC leasing segment margins are aligned with the ~85% long‑term target, underscoring attractive unit economics.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">HPC leasing segment margin</span>
+<span class="span">~85% long‑term target</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">AI/HPC demand ‘real’; customers contracting longer</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described demand for prompt, power‑advantaged capacity as “real,” and noted customers are willing to contract for longer durations.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">demand for prompt, power‑advantaged capacity is &quot;real&quot;</span>
+<span class="span">customers willing to contract longer</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Plan to deliver 250–500 MW per year across diversified regions</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The company reiterated plans to deliver 250–500 MW per year of contracted capacity across diversified regions, reflecting a scalable development model.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">deliver 250–500 MW</span>
+<span class="span">across diversified regions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Kentucky build targeting 480 MW online in 2H 2027</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TeraWulf is targeting 480 MW online at the Kentucky campus in the second half of 2027, funded in part by YTD equity raises and internal liquidity.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Targeting 480 MW online in 2H 2027</span>
+<span class="span">funded in part by YTD equity raises</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Regulatory/community strategy to mitigate NIMBY risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management emphasized proactive community engagement, site selection on brownfields, and bring‑your‑own‑generation strategies, noting supportive posture from Maryland officials.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">proactive community education</span>
+<span class="span">bring‑your‑own‑generation</span>
+<span class="span">supportive posture from Maryland officials</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Long‑term plan to refinance to IG‑style bullet debt</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">As assets mature, the company intends to migrate its capital structure toward investment‑grade‑style bullet debt.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Long‑term capital plan</span>
+<span class="span">IG‑style bullet debt</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Execution risk: buildout timing and tenant hardware coordination</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that revenue timing depends on delivering Lake Mariner phases (CB‑3/CB‑4/CB‑5) and aligning with tenants’ hardware schedules; delays could push out lease commencements and cash inflows.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">CB‑3/CB‑4/CB‑5</span>
+<span class="span">delays could defer lease commencement</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Capital intensity and leverage elevate refinancing risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$523M · capex</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Large capex and substantial debt/convertible balances increased interest expense in Q1 and elevate refinancing risk should markets tighten.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Large capex (-$523M Q1 purchases/deposits on PP&amp;E)</span>
+<span class="span">~$5.29B</span>
+<span class="span">$67.1M in Q1</span>
+<span class="span">refinancing risk</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Chesapeake Data acquisition subject to FERC and other approvals</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The Chesapeake Data acquisition remains subject to approvals, including FERC; permitting or regulatory delays could impact timing and returns.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Chesapeake Data acquisition</span>
+<span class="span">subject to approvals, including FERC</span>
+<span class="span">permitting or regulatory delays</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Strategy shift: likely full exit from BTC mining by next halving</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management indicated a likely full exit from bitcoin mining by the next halving as the company transitions to AI/HPC leasing.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">likely full exit from mining</span>
+<span class="span">by next halving</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-27</span>
+<span class="eh">10‑K details Core42 (60 MW), Fluidstack (378 MW) and Google credit support</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">The 10‑K confirms Core42’s 60 MW ten‑year leases, the Akela Fluidstack leases for 378 MW at Lake Mariner with substantial Google credit support, and a 168 MW Abernathy lease similarly supported by Google, enhancing bankability of contracted revenues.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">60 MW of critical IT load</span>
+<span class="span">initial ten-year term</span>
+<span class="span">378 MW of critical IT load</span>
+<span class="span">credit support provided by Google</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">FY25: 522 MW contracted, $12.8B+ revenue; full funding secured</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$12.8B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">TeraWulf reported 522 contracted critical IT MW totaling over $12.8 billion in revenue and said full funding for contracted capacity was secured, with a multi‑year pipeline targeting 250–500 MW per year.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Contracted 522 critical IT MW</span>
+<span class="span">totaling over $12.8 billion</span>
+<span class="span">Secured full funding</span>
+<span class="span">250 - 500 critical IT MW</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Fluidstack leases, Google credit backstops, and Texas JV</h2>
+<div class='range'>2025-08-14 → 2025-12-18</div>
+<div class='psum'>In August 2025, TeraWulf signed landmark AI hosting agreements with Fluidstack at Lake Mariner, initially exceeding 200 MW over ten years. Google agreed to backstop Fluidstack’s obligations, and received warrants equating to ~8% pro forma equity, reinforcing tenant credit quality and enabling project financing. Days later, Fluidstack exercised expansion rights for an additional 160 MW (CB‑5), lifting Google’s aggregate backstop to ~$3.2 billion and pro forma stake in TeraWulf to ~14%.
+CBRE cited an initial transaction value of ~$6.7 billion over ten years (with potential to ~$16 billion). In October 2025, TeraWulf and Fluidstack formed a Texas joint venture at Abernathy for 168 MW under a 25‑year lease (~$9.5 billion contracted revenue) with ~$1.3 billion in Google credit support; project‑level financing was successfully priced in December 2025.</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-18</span>
+<span class="eh">Project financing priced for 168 MW Abernathy HPC JV</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TeraWulf announced successful pricing of project‑level financing for the Abernathy 168 MW HPC JV, with proceeds to fund construction and required reserves; commissioning remains on track for 2H26.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">successful pricing of project-level financing</span>
+<span class="span">168 MW high‑performance computing (HPC) joint venture</span>
+<span class="span">on track for commissioning in the second half of 2026</span>
+<span class="span">project-level financing</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0038" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-11-12</span>
+<span class="eh">Anthropic announces $50B US AI infrastructure plan with Fluidstack in TX and NY</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$50.0B · other</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic disclosed a $50 billion plan to build American AI computing infrastructure with Fluidstack in Texas and New York. While not a direct TeraWulf contract, the statement reinforces demand signals for Fluidstack‑hosted sites where TeraWulf is a key infrastructure partner.</p>
+<p class="cav">⚠ Anthropic’s investment scope is broad and not a WULF-specific contract figure.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">$50 billion</span>
+<span class="span">data centers with Fluidstack in Texas and New York</span>
+<span class="span">custom built for Anthropic</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-10-28</span>
+<span class="eh">Abernathy, TX JV with Fluidstack: 168 MW, 25‑year lease (~$9.5B); Google backs ~$1.3B</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$9.5B · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">TeraWulf and Fluidstack formed a joint venture to deliver 168 MW of critical IT load at Abernathy, Texas under a 25‑year lease representing approximately $9.5 billion in contracted revenue. Google is providing about $1.3 billion of credit support to enhance project debt financing.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7], web_search_findings[12]</div>
+<span class="span">168 MW of critical IT load</span>
+<span class="span">25-year lease</span>
+<span class="span">approximately $9.5 billion</span>
+<span class="span">Google backstops $1.3 billion</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-20</span>
+<span class="eh">CBRE: Fluidstack–TeraWulf AI hosting agreements valued at ~$6.7B initial, up to ~$16B</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6.7B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CBRE, advisor to Fluidstack, reported the three 10‑year HPC colocation agreements at Lake Mariner have an initial value of about $6.7 billion with options potentially increasing total value to an estimated $16 billion; the rollout totals approximately 360 MW by end‑2026.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">three 10-year high-performance computing (HPC) colocation agreements</span>
+<span class="span">initial value of approximately $6.7 billion over ten years</span>
+<span class="span">potentially increasing the total value to an estimated $16 billion</span>
+<span class="span">totaling approximately 360 MW</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-08-18</span>
+<span class="eh">Fluidstack adds 160 MW CB‑5; Google backstop lifts to ~$3.2B and stake to ~14%</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.2B · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Fluidstack exercised its option for a 160 MW CB‑5 expansion at Lake Mariner, with operations expected in 2H26. In connection, Google increased its credit backstop to about $3.2 billion and received additional warrants for 32.5 million shares, taking the pro forma equity stake to approximately 14%.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[5]</div>
+<span class="span">160 MW CB-5</span>
+<span class="span">Google Increases Backstop to $3.2 Billion</span>
+<span class="span">14%</span>
+<span class="span">32.5 million shares</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-08-14</span>
+<span class="eh">Fluidstack 200+ MW, 10‑year AI hosting at Lake Mariner; Google backstop and ~8% stake</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.7B · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">TeraWulf announced more than 200 MW of 10‑year AI hosting agreements with Fluidstack at Lake Mariner, anchoring approximately $3.7 billion in contracted revenues (with potential to $8.7 billion via extensions). Google agreed to backstop $1.8 billion of Fluidstack obligations supporting project debt and received warrants equating to roughly an 8% pro forma equity stake in TeraWulf.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2], web_search_findings[3], web_search_findings[6]</div>
+<span class="span">200+ MW, 10-Year AI Hosting Agreements</span>
+<span class="span">~$3.7 Billion in Contracted Revenues</span>
+<span class="span">Google Backstops $1.8 Billion</span>
+<span class="span">approximately 8% pro forma equity ownership stake</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Groundwork for AI/HPC pivot and first AI tenant</h2>
+<div class='range'>2024-10-10 → 2025-01-06</div>
+<div class='psum'>TeraWulf began repositioning its Lake Mariner campus for high‑performance computing and AI by extending its ground lease to a potential 80‑year term, expanding the land area to 157 acres, and securing exclusive access to up to 750 MW of infrastructure capacity. This created long‑dated site control and scalability for future AI data center developments.
+In early 2025, the company signed a ten‑year agreement with Core42 for more than 70 MW at Lake Mariner. The deployment is tailored for AI workloads, including direct liquid‑cooled Dell GPU servers, marking one of WULF’s first material AI/HPC customer wins and validating the site’s shift toward AI infrastructure.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-06</span>
+<span class="eh">Core42 signs 10‑year AI data center lease at Lake Mariner (&gt;70 MW)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Core42, a G42 subsidiary, agreed to a ten‑year data center lease at Lake Mariner for more than 70 MW, with phased delivery through 2025. TeraWulf will customize data halls for GPU clusters, including Dell IR5000 racks and direct liquid‑cooled PowerEdge XE9680L GPU servers.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">ten-year data center lease agreement with Core42</span>
+<span class="span">more than 70MW</span>
+<span class="span">IR5000</span>
+<span class="span">PowerEdge XE9680L GPU servers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-10-10</span>
+<span class="eh">Lake Mariner ground lease extended and expanded to support AI/HPC growth</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TeraWulf executed a new long‑term ground lease at Lake Mariner, extending the term to 35 years with an option for 45 additional years, expanding to 157 acres, and securing exclusive access to up to 750 MW of infrastructure capacity. This materially increases long‑term optionality for AI/HPC buildout at the site.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">term of 35 years</span>
+<span class="span">option to extend for an additional 45 years</span>
+<span class="span">157 acres</span>
+<span class="span">exclusive access to infrastructure capacity of up to 750 MW</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0037'>E0037</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Who is the investment‑grade Kentucky customer targeted for Q2 2026 signing, and what are the definitive MW, term, and economics?</li>
+<li>What is the precise commercial scope and delivery schedule of the $290M Schneider Electric engagement (phase allocations, performance guarantees)?</li>
+<li>To what extent are Google TPUs and Anthropic workloads actually deployed at Lake Mariner versus ‘likely’ third‑party reporting?</li>
+<li>What are the detailed financing terms (tenor, covenants, pricing) for the Abernathy project‑level financing priced in Dec 2025?</li>
+<li>What is the timeline and likelihood of required FERC and related approvals for Chesapeake Data and Maryland initiatives?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some third‑party sources (e.g., workload identity and chip type) use ‘likely’ language and are not company‑confirmed.</li>
+<li>News snippets may omit commercial specifics; filings remain the authoritative source where available.</li>
+<li>Anthropic’s $50B investment announcement is sectoral and not a TeraWulf‑specific contract amount.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

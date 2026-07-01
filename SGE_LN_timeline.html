@@ -1,0 +1,516 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>SGE LN — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Sage Group PLC/The <span class='sub'>(SGE LN)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.411</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>19 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 8</span>
+<span class='chip'>web-only (verified): 6</span>
+<span class='chip'>web-only (unverified): 4</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Execution at scale: FY26 H1 results, MCP/AIGateway rollout, and Doyen AI acquisition</h2>
+<div class='range'>2026-05-21 → 2026-05-28</div>
+<div class='psum'>In H1 FY26, management said AI underpinned broad-based growth, highlighting Sage Copilot and intelligent agents embedded in finance, HR and payroll workflows. They clarified monetization levers (embedded feature uplifts, usage tiers, and select stand-alone charges) while maintaining an adoption-first stance and not quantifying direct AI revenue. Execution risks were noted around deployment, adoption, and trust.
+Sage acquired Doyen AI (£11m) to accelerate migrations (including Sage 50 conversions) and support Intacct growth. The company rolled out AI Gateway with MCP to securely connect Intacct data to external AI tools, and published developer guidance showing Claude Desktop connectivity. X3 MCP documentation emphasized LLM orchestration with models such as Anthropic Claude Sonnet 4.x and OpenAI ChatGPT 5.x. Sage also expanded its AWS relationship for cloud-native migration and introduced agentic capabilities and pricing models enabling partner-developed agents to operate on the platform.</div>
+<div class="event t-web_only_unverified" id="E0019" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Sage Intacct AI Gateway with MCP connects financial data to AI tools; Claude Desktop setup published</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Sage announced expanded automation and AI in Intacct, introducing AI Gateway and MCP to securely connect financial data to AI tools. Developer guidance shows Claude Desktop integration with the Sage Intacct MCP Server, indicating Anthropic model connectivity.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 2 source(s), 6 span(s)</summary>
+<div class="ev-src">web_search_findings[8], web_search_findings[3]</div>
+<span class="span">Sage Intacct AI Gateway</span>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">connect financial data to AI tools</span>
+<span class="span">Generally available in the US, UK, Canada, Australia and South Africa.</span>
+<span class="span">Claude Desktop</span>
+<span class="span">Sage Intacct MCP Server</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Sage acquires Doyen AI for £11m to bolster platform and migrations</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$11M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Sage completed the acquisition of Doyen AI on 17 April 2026 for £11m, securing 100% of the company to enhance AI capabilities, particularly in accelerating migrations and implementations.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Acquisition of Doyen AI, Corp</span>
+<span class="span">17 April 2026</span>
+<span class="span">£11m</span>
+<span class="span">acquired 100% equity capital and voting rights</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Agentic capabilities and pricing models introduced for partner-developed agents</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Sage introduced new agentic capabilities and pricing models to enable partner-developed agents to operate on the platform, broadening monetization and ecosystem scale.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">introduced new agentic capabilities and pricing models</span>
+<span class="span">partner-developed agents</span>
+<span class="span">operate on the platform</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Expanded AWS relationship to accelerate Sage 50 migration to cloud-native</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Sage expanded its relationship with AWS to accelerate migrating connected products, including Sage 50, to a cloud-native environment, supporting scalability for AI-powered services.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">expanded our relationship with AWS</span>
+<span class="span">Sage 50</span>
+<span class="span">cloud native environment</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">H1 FY26: AI strategy (Copilot, agents) embedded and underpinning results</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized that broad-based growth and cash generation were underpinned by Sage’s AI strategy, with Copilot and intelligent agents embedded into core finance, HR, and payroll workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">double-digit revenue growth</span>
+<span class="span">AI strategy (Sage Copilot and new intelligent agents)</span>
+<span class="span">embedded in core finance, HR and payroll workflows.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">AI monetization levers: embedded features, usage tiers, and stand-alone charges</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Sage detailed AI monetization via embedded feature uplifts, consumption/overage-based usage tiers (notably in Intacct), and some stand-alone charges such as AP automation.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI is being monetized through a combination of</span>
+<span class="span">embedding features into existing suites</span>
+<span class="span">usage/consumption tiers (with overage)</span>
+<span class="span">stand‑alone charges (e.g., AP automation).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Adoption-first AI monetization stance reiterated</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management stressed an adoption-first approach to AI, with monetization expected to build over time.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">adoption-first approach</span>
+<span class="span">monetization building over time.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">No direct AI revenue quantified in H1 FY26 commentary</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Sage did not quantify AI’s direct revenue contribution, though some uplift was linked to higher renewal rate by value.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">They did not quantify AI’s direct revenue contribution</span>
+<span class="span">linked some uplift to higher renewal rate by value.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">CEO positions Sage as &quot;native AI&quot; with trusted, compliant workflows</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The CEO framed Sage as &quot;native AI,&quot; emphasizing trust, accuracy, compliance, and embedded workflows on a proprietary platform as competitive differentiators.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">CEO framed Sage as “native AI”</span>
+<span class="span">trust, accuracy, compliance</span>
+<span class="span">proprietary platform as differentiators.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Doyen AI to accelerate migrations and implementations for Intacct growth</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said Doyen AI will be used to speed migrations and implementations, including Sage 50 conversions, supporting Intacct growth.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Doyen AI to be used to speed migrations/implementations</span>
+<span class="span">(including Sage 50 conversions)</span>
+<span class="span">supporting Intacct growth.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">H1 FY26 renewal uplift included pricing and AI-driven cross/upsell</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Sage reported that H1 renewal rate by value included an estimated ~5.5% pricing contribution and incremental cross/upsell including AI-driven features with slightly improved churn.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">H1 renewal rate by value</span>
+<span class="span">estimated ~5.5% contribution from pricing</span>
+<span class="span">including AI-driven features</span>
+<span class="span">slightly improved churn.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">AI execution risk flagged: deployment, adoption, and trust could temper ARR</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that delays in deployment, low adoption, or customer trust concerns could temper ARR growth and renewal rates.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Delays in deployment, low adoption</span>
+<span class="span">customer trust concerns</span>
+<span class="span">temper ARR growth and renewal rates</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0015" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Investing in agentic capabilities across Intacct and X3; X3 MCP supports Claude and ChatGPT</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Sage continued investing in agentic capabilities across Intacct and X3. The X3 MCP Server provides a governed AI access layer for LLM orchestration, with documentation citing models such as Anthropic Claude Sonnet 4.x and OpenAI ChatGPT 5.x.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[4]</div>
+<span class="span">agentic capabilities across Intacct and X3</span>
+<span class="span">Sage X3 MCP Server</span>
+<span class="span">governed AI access layer</span>
+<span class="span">Anthropic Claude Sonnet 4.x</span>
+<span class="span">OpenAI ChatGPT 5.x</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Agentic AI vision and ecosystem build-out</h2>
+<div class='range'>2025-06-04 → 2025-11-04</div>
+<div class='psum'>At Sage Future 2025, management outlined its vision for the agentic AI era, noting growing adoption of Sage Copilot and the delivery of billions of AI-powered predictions annually. Sage entered a first-of-its-kind collaboration with CPA.com to align Copilot with AICPA standards via licensed professional content, reinforcing trust and accuracy. Later in 2025, Sage launched AI Developer Solutions leveraging Amazon Bedrock and AgentCore to help partners build Sage-certified AI agents on the Sage Platform—extending optionality and multi-model potential for customers and partners.</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-04</span>
+<span class="eh">Sage launches AI Developer Solutions using Amazon Bedrock and AgentCore</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Sage introduced AI Developer Solutions that combine Sage AI Gateways with Amazon Bedrock and Bedrock AgentCore, enabling partners to build Sage Certified AI Agents deployable across customers via Sage Copilot—expanding multi-model and agentic options.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">AI Developer Solutions</span>
+<span class="span">Amazon Bedrock and Amazon Bedrock AgentCore</span>
+<span class="span">Sage Certified AI Agents</span>
+<span class="span">4 November 2025</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-04</span>
+<span class="eh">Sage outlines agentic AI era; Copilot adoption surpasses 40,000 customers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Sage highlighted growing Copilot adoption and set out an agentic AI roadmap, noting it is already delivering billions of AI-powered predictions annually as demand for intelligent automation rises.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">more than 40,000 customers worldwide</span>
+<span class="span">agentic AI</span>
+<span class="span">Sage Copilot</span>
+<span class="span">billions of AI-powered predictions a year</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-04</span>
+<span class="eh">Sage and CPA.com collaborate to align GenAI with AICPA standards</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Sage and CPA.com announced a first-of-its-kind collaboration licensing select AICPA resources to train Sage Copilot, aiming to strengthen accuracy, context, and trust for accountants and finance teams.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">first-of-its-kind collaboration</span>
+<span class="span">align GenAI with AICPA standards</span>
+<span class="span">licenses select AICPA resources</span>
+<span class="span">train Sage Copilot</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Generative AI launch and Microsoft Azure OpenAI integration</h2>
+<div class='range'>2024-02-27 → 2024-07-29</div>
+<div class='psum'>Sage formally introduced Sage Copilot, a generative AI assistant embedded in SMB finance and people-management workflows, with initial market availability plans in 2024. Shortly thereafter, Sage deepened its Microsoft relationship by integrating Azure OpenAI Service into Sage Instant Analysis (within Sage Active), bringing LLM-powered analytics to customers and reinforcing a trust-and-security posture via Microsoft’s Responsible AI framework.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-07-29</span>
+<span class="eh">Sage integrates Azure OpenAI into Instant Analysis within Sage Active</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Sage strengthened its Microsoft partnership by integrating Microsoft Azure OpenAI Service into Sage Instant Analysis, an analytics feature embedded in Sage Active, adding LLM-driven financial analysis capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Sage strengthens partnership with Microsoft</span>
+<span class="span">29 July 2024</span>
+<span class="span">Microsoft Azure OpenAI Service</span>
+<span class="span">Embedded within Sage Active</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-02-27</span>
+<span class="eh">Sage announces Sage Copilot generative AI assistant</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Sage introduced its generative AI–powered Copilot to automate workflows and provide real-time insights for SMB finance, accounting, and HR, with UK availability slated later in 2024.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">ATLANTA (February 27, 2024)</span>
+<span class="span">generative AI-powered productivity assistant</span>
+<span class="span">Sage Copilot will be available in the UK later in 2024</span>
+<span class="span">handling administrative and repetitive tasks</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations of Sage AI strategy</h2>
+<div class='range'>2017-01-25 → 2023-12-31</div>
+<div class='psum'>Sage publicly signaled its long-term AI ambition as early as 2017, positioning toward &quot;invisible accounting&quot; and conversational interfaces. The company launched early bot capabilities (Pegg) and highlighted a partner-friendly posture across major ecosystems.
+This foundational phase established Sage’s orientation to embed AI into accounting workflows and cultivate an ecosystem of integrations, setting the stage for later generative AI and agentic capabilities.</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2017-01-25</span>
+<span class="eh">Sage advances early AI with Pegg and cloud ecosystem partnerships</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Sage announced AI and bot initiatives, citing tens of thousands of users for its Pegg chatbot and expanding cloud partnerships, laying groundwork for AI-driven workflows years before its generative AI offerings.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">small business appetite for cloud and AI</span>
+<span class="span">25 January 2017</span>
+<span class="span">20,000 Sage AI users can&#x27;t be wrong</span>
+<span class="span">accounting chat bot Pegg</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What share of Sage’s ARR or bookings is directly attributable to AI features (Copilot, intelligent agents, AI Gateway) as of FY26?</li>
+<li>Beyond Azure OpenAI and Anthropic via MCP, which specific foundation models are used in Sage Copilot or partner agents in production, and in which geographies?</li>
+<li>What commercial and data-governance terms apply to Sage’s use of Azure OpenAI Service and any other LLM providers (e.g., data retention, model fine-tuning rights, SLAs)?</li>
+<li>How quickly will Doyen AI capabilities be integrated across Sage products, and what migration throughput improvements (e.g., Sage 50 conversions per week) are targeted?</li>
+<li>Are there planned timelines to quantify AI-driven pricing uplift and cross/upsell contribution separately from baseline pricing in future periods?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items rely on Sage press releases and developer documentation; independent third-party validation may be limited.</li>
+<li>Developer portal materials for MCP/X3/Intacct are undated online docs; alignment to specific release timing is inferred from nearby dated announcements.</li>
+<li>No curated frontier events in the evidence directly reference Sage; provider connectivity is inferred from Sage’s own docs (Azure OpenAI, Anthropic Claude).</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

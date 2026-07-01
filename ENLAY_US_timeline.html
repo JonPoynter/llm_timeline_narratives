@@ -1,0 +1,319 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>ENLAY US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Enel SpA <span class='sub'>(ENLAY US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.363</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>8 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>web-only (verified): 5</span>
+<span class='chip'>web-only (unverified): 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Internal GenAI integration via AWS Bedrock and Anthropic</h2>
+<div class='range'>2024-02-23 → 2024-02-23</div>
+<div class='psum'>Enel deployed a generative AI solution for IT service desk ticketing using Amazon Bedrock with Amazon Titan embeddings and Anthropic Claude for generation within a retrieval‑augmented architecture. The rollout materially improved operations, cutting average resolution time from about a day to under two minutes and automatically resolving roughly 15% of tickets.
+This marks concrete enterprise adoption and model integration with a leading frontier provider (Anthropic) mediated by AWS, and suggests flexibility for a multi‑model approach via Bedrock’s FM catalog.</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-02-23</span>
+<span class="eh">Enel’s IT ticketing uses Amazon Bedrock with Anthropic Claude; sub‑2 minute resolves</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">An AWS case study details Enel’s RAG‑based ticketing solution using Amazon Titan embeddings and Anthropic Claude for response generation via Bedrock. The deployment reduced resolution times from about a day to under two minutes and auto‑resolved ~15% of tickets.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ Vendor-authored case study; operational KPIs not independently audited.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Amazon Bedrock</span>
+<span class="span">Amazon Titan Text Embeddings</span>
+<span class="span">Anthropic Claude</span>
+<span class="span">less than 2 minutes</span>
+<span class="span">15 percent</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ramping data center offtakes with Meta</h2>
+<div class='range'>2023-06-21 → 2025-02-04</div>
+<div class='psum'>Enel’s North American portfolio increasingly served hyperscale data center load from Meta. In June 2023, Enel began operations at the 200 MW Alta Farms project in Illinois, supporting Meta’s DeKalb Data Center under a 125 MW long‑term PPA and representing an investment of over $345 million.
+In February 2025, Enel and Meta announced a new 115 MW offtake at the Rockhaven wind farm in Oklahoma. Enel explicitly linked growing power demand to electrification, data centers, and AI, and noted this was the third PPA with Meta, reinforcing multi‑year, contracted exposure to AI‑driven data center growth.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2025-02-04</span>
+<span class="eh">Enel–Meta PPA for 115 MW at Rockhaven; cites data centers and AI demand</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Enel and Meta agreed a 115 MW PPA at the Rockhaven wind farm in Oklahoma. Enel tied rising demand to electrification, data centers, and AI, and highlighted this as the third PPA with Meta, extending contracted exposure to hyperscale workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">115-megawatt (MW)</span>
+<span class="span">Rockhaven wind farm</span>
+<span class="span">data centers and AI</span>
+<span class="span">third PPA</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2023-06-21</span>
+<span class="eh">Alta Farms 200 MW begins operations; 125 MW PPA supports Meta data center</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$345M · capex</span> <span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Enel North America commenced operations of the 200 MW Alta Farms wind farm, with a 125 MW long‑term PPA supporting Meta’s DeKalb Data Center. The project represented over $345 million of investment, strengthening Enel’s data center power exposure with Meta.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">200-megawatt (MW) Alta Farms</span>
+<span class="span">supports Meta’s DeKalb Data Center</span>
+<span class="span">125 MW long-term power purchase agreement</span>
+<span class="span">over $345 million</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Android Auto access dispute and regulatory remedy</h2>
+<div class='range'>2019-05-17 → 2021-05-13</div>
+<div class='psum'>Enel’s mobility app ambitions encountered platform‑access friction with Google’s Android Auto. In May 2019, the Italian Competition Authority (AGCM) opened an investigation into Google following allegations it refused interoperability for Enel X’s charging app on Android Auto, highlighting dependency on a gatekeeper platform for distribution to drivers.
+In May 2021, AGCM fined Google over €100 million and ordered inclusion of Enel X’s app in Android Auto and the provision of tools to ensure interoperability. The case underscored both the risks of platform control to Enel’s customer reach and the potential for regulatory remedies to restore access.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-05-13</span>
+<span class="eh">AGCM fines Google €102.08M; orders Android Auto access for Enel X</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$102M · other</span> <span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">AGCM imposed a fine of over €100 million on Google and ordered inclusion of the Enel X app in Android Auto, requiring tools for interoperable app development. The decision partially mitigated distribution risks while underscoring Enel’s reliance on dominant platforms.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Google fined over 100 million</span>
+<span class="span">include in Android Auto the Enel X app</span>
+<span class="span">102.084.433,91</span>
+<span class="span">Enel X Italia</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2019-05-17</span>
+<span class="eh">AGCM opens probe: Google allegedly blocked Enel X app on Android Auto</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Italy’s AGCM launched an investigation into Alphabet/Google for allegedly refusing to integrate Enel’s ‘Enel X Recharge’ app into Android Auto, reducing usability and restricting features like booking charging points. The case emphasized Enel’s exposure to platform gatekeeping.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">investigation launched against Google</span>
+<span class="span">refused to integrate the app ‘Enel X Recharge’</span>
+<span class="span">Android Auto</span>
+<span class="span">shall be concluded by 30 May 2020</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early hyperscaler offtakes and project financing</h2>
+<div class='range'>2016-04-08 → 2018-03-19</div>
+<div class='psum'>Enel began building large-scale wind capacity in the United States supported by long‑term corporate PPAs with leading technology firms. In April 2016, Enel started constructing the 400 MW Cimarron Bend wind farm, backed by two 200 MW long‑term PPAs, including one with Google. This established a direct commercial relationship with a frontier AI provider’s parent company and tied Enel’s growth to data‑center demand.
+In September 2016, Enel secured approximately $500 million in tax equity financing for Cimarron Bend, further de‑risking project execution. By March 2018, Enel expanded corporate offtake exposure by signing agreements with Facebook (Meta) and Adobe for the 320 MW Rattlesnake Creek wind farm, enabling 100% renewable power for Facebook’s Papillion data center over time. Collectively these deals seeded Enel’s data center power exposure with long‑duration, contracted demand from hyperscale tech customers.</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2018-03-19</span>
+<span class="eh">Rattlesnake Creek 320 MW PPAs with Facebook and Adobe</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Enel signed new PPAs for the 320 MW Rattlesnake Creek wind farm, expanding a prior deal to cover Facebook’s full output by 2029 and enabling a 100% renewable supply for its Papillion data center. This broadened Enel’s exposure to data center power demand from Meta (Facebook).</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Rattlesnake Creek</span>
+<span class="span">320 MW</span>
+<span class="span">Facebook and Adobe</span>
+<span class="span">100% renewable-powered</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2016-09-16</span>
+<span class="eh">Approx. $500M tax equity financing for Cimarron Bend</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$500M · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Enel Green Power North America signed a tax equity agreement of about $500 million for the 400 MW Cimarron Bend project. The project is supported by two 200 MW long‑term PPAs, including one with Google, underscoring both financial close progress and contracted demand from a hyperscaler.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">tax equity agreement worth approximately 500 million U.S. dollars</span>
+<span class="span">Cimarron Bend</span>
+<span class="span">two, 200 MW bundled, long-term power purchase agreements</span>
+<span class="span">one with Google</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2016-04-08</span>
+<span class="eh">Enel starts 400 MW Cimarron Bend; PPAs include Google</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Enel commenced construction of the 400 MW Cimarron Bend wind farm in Kansas, with output sold under two 200 MW long‑term PPAs, one with Google and one with Kansas City BPU. This marked an early corporate offtake link between Enel and Google, relevant to long‑run data center power demand.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[7]</div>
+<span class="span">400 MW</span>
+<span class="span">Cimarron Bend</span>
+<span class="span">power purchase agreements to Google</span>
+<span class="span">two 200 MW bundled, long-term power purchase agreements</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the contractual tenor and pricing structure of the Rockhaven (115 MW) Meta PPA, and are there AI/data center-specific curtailment or flexibility clauses?</li>
+<li>What are Enel’s annualized spend and model/provider mix for its Bedrock-based GenAI deployments beyond IT ticketing (e.g., additional Anthropic/GPT/Gemini/Llama use cases)?</li>
+<li>Are there new or expanded PPAs with AI data center operators (or colocation providers) announced in 2026 that materially change Enel’s data center power exposure?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items are based on corporate and vendor press materials; independent third-party verification may be limited.</li>
+<li>Regulatory actions cited concern Google’s conduct; Enel was not the fined party.</li>
+<li>Monetary amounts include EUR figures; no currency conversion to USD has been applied.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

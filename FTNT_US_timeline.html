@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Fortinet Inc <span class='sub'>(FTNT US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.459</div>
@@ -72,96 +82,370 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (unverified): 10</span>
 <span class='chip'>web-only (verified): 3</span>
 </div>
-<div class='phase'>
-<h2>Foundational GenAI offerings and governance</h2>
-<div class='range'>2023-12-11 → 2024-10-30</div>
-<div class='psum'>Fortinet initiated its GenAI product push with the launch of Fortinet Advisor, embedding a generative AI assistant into core SecOps products to speed investigation and remediation. This marked the company&#x27;s first explicit GenAI assistant positioned alongside its longstanding AI/ML-based FortiGuard capabilities.
-By late 2024, Fortinet extended AI controls to data protection and insider risk, shipping FortiDLP with &quot;Shadow AI&quot; protections that explicitly govern employee use of public GenAI tools like ChatGPT and Google Gemini, signaling a strategy to secure enterprise adoption of third‑party LLMs rather than provide a single in‑house model.</div>
-<div class="event t-web_only_verified" id="E0001">
-<div class="ev-top">
-<span class="date">2023-12-11</span>
-<span class="eh">Fortinet launches Fortinet Advisor GenAI assistant in FortiSIEM and FortiSOAR</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Fortinet introduced Fortinet Advisor, a generative AI assistant embedded in FortiSIEM and FortiSOAR to accelerate threat investigation and remediation, expanding its AI-powered portfolio.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">Fortinet Advisor, a generative AI (GenAI) assistant</span>
-<span class="span">Dec 11, 2023</span>
-<span class="span">available within FortiSIEM</span>
-<span class="span">FortiSOAR</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0002">
-<div class="ev-top">
-<span class="date">2024-10-30</span>
-<span class="eh">Fortinet makes FortiDLP generally available with Shadow AI protections (ChatGPT, Gemini)</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Fortinet announced GA of FortiDLP for data loss prevention and insider risk, featuring &#x27;Shadow AI Data Protection&#x27; that governs employee use of public GenAI tools including OpenAI ChatGPT and Google Gemini.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">AI-Enhanced Data Protection</span>
-<span class="span">Shadow AI Data Protection</span>
-<span class="span">OpenAI ChatGPT, Google Gemini</span>
-<span class="span">Oct. 30, 2024</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Operational OpenAI integration in SIEM</h2>
-<div class='range'>2025-11-06 → 2025-11-06</div>
-<div class='psum'>Fortinet operationalized GenAI inside FortiSIEM by enabling Fortinet Advisor to call OpenAI models via the customer&#x27;s API key, explicitly naming GPT‑3.5‑Turbo and GPT‑4. The documentation highlights data flow to OpenAI and Fortinet&#x27;s disclaimer, underscoring both functional integration and data‑handling risks.</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2025-11-06</span>
-<span class="eh">FortiSIEM 7.1 adds Fortinet Advisor using OpenAI GPT-3.5/4 via customer API key</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Fortinet detailed that Fortinet Advisor in FortiSIEM uses GPT‑3.5‑Turbo and GPT‑4 through the customer&#x27;s OpenAI API key, with explicit disclosure that data is sent to OpenAI and responses are not verified by Fortinet.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[8]</div>
-<span class="span">Fortinet Advisor uses GPT3.5-Turbo and GPT4</span>
-<span class="span">Your OpenAI API key</span>
-<span class="span">send data from your FortiSIEM to OpenAI</span>
-<span class="span">Fortinet does not verify or correct these responses</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>AI security platformization and 2026 operating momentum</h2>
 <div class='range'>2026-04-15 → 2026-06-17</div>
 <div class='psum'>In 2026 Fortinet broadened its AI security platform. FortiAIGate 8.0 was introduced as a central gateway between AI applications and major LLM providers (OpenAI, Anthropic, AWS Bedrock) with AI Flow/AI Guard protections. Fortinet also highlighted product lines and partnerships tied to enterprise AI, including a unified SOC platform powered by agentic AI, Google Cloud partner recognition, NVIDIA integrations, and SASE controls for GenAI applications.
 Concurrently, the firm disclosed strong Q1&#x27;26 operating metrics with billings up 31% y/y and product revenue up 41% y/y, explicitly attributing demand to AI-related deployments and AI-driven SecOps. However, risks surfaced: documentation noted FortiAI feature dependency on Azure OpenAI connectivity, a major &#x27;FortiBleed&#x27; credential cache affecting FortiGate devices was reported by researchers, and management flagged potential supply-chain constraints that could impact high-end appliances for AI-related projects.</div>
-<div class="event t-web_only_unverified" id="E0004">
+<div class="event t-single_source" id="E0025" data-providers="">
 <div class="ev-top">
-<span class="date">2026-04-15</span>
-<span class="eh">FortiAIGate 8.0 positions as central gateway to LLM providers (OpenAI, Anthropic)</span>
+<span class="date">2026-06-17</span>
+<span class="eh">Researchers report &#x27;FortiBleed&#x27; cache of valid Fortinet firewall credentials</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Security researchers disclosed a cache of working credentials affecting tens of thousands of Fortinet FortiGate devices worldwide; reports cite 73,932 firewall URLs across 194 countries, with attackers cracking intercepted hashes using a 45‑GPU cluster and verified credentials for 30,000+ devices.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Incident scope and attribution are based on multiple researcher reports; remediation status not provided in the excerpt.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">FortiBleed</span>
+<span class="span">73,932 firewall URLs</span>
+<span class="span">194 countries</span>
+<span class="span">45‑GPU cluster</span>
+<span class="span">verified credentials for 30,000+ devices</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">Fortinet launches FortiSOC, a unified SOC platform powered by agentic AI</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Release notes for FortiAIGate 8.0 describe it as a central gateway connecting enterprise AI apps to LLM providers such as OpenAI and Anthropic, with AI Flow and AI Guard protections; initial 8.0.0 release dated March 23, 2026.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Fortinet announced FortiSOC, positioning a unified SOC platform &#x27;Powered by Agentic AI&#x27;, advancing agentic orchestration across its SOC stack.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<p class="cav">⚠ Newsroom listing; product details not included in excerpt.</p>
 <details>
-<summary>evidence — 1 source(s), 5 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">FortiAIGate 8.0.0 Release Notes</span>
-<span class="span">Initial release of FortiAIGate 8.0.0</span>
-<span class="span">central gateway</span>
-<span class="span">OpenAI, Anthropic</span>
-<span class="span">AI Guard</span>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Fortinet Launches FortiSOC, a Unified SOC Platform Powered by Agentic AI</span>
+<span class="span">Jun 16, 2026</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0005">
+<div class="event t-web_only_unverified" id="E0013" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">FortiGuard App Control updates add Google Gemini signature</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">FortiGuard Labs updated Application Control with signatures for Google Gemini, enabling policy enforcement over GenAI traffic categories.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>1</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>1</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Application Control — Google.Gemini</span>
+<span class="span">Date: 2026-06-16</span>
+<span class="span">Sig Added</span>
+<span class="span">GenAI</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0011" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">FortiAI on FortiAnalyzer selects Azure OpenAI GPT‑4.1/mini; AI Proxy logs all LLM traffic</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Transparency notes for FortiAI on FortiAnalyzer specify selection between Azure OpenAI GPT‑4.1 and GPT‑4.1‑mini, with all LLM traffic proxied and logged via the Fortinet AI Proxy.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>3</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>2</b></span> <span class="chchip">strategic_option_value · OAI <b>3</b></span> <span class="chchip">provider_specificity · OAI <b>4</b></span> <span class="chchip">switching_flexibility · OAI <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">selects between Azure OpenAI GPT-4.1</span>
+<span class="span">GPT-4.1-mini</span>
+<span class="span">AI Proxy Logging — All LLM traffic</span>
+<span class="span">passes through the Fortinet AI Proxy</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0012" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Dependency risk: FortiAI features require connectivity to Fortinet AI Proxy and Azure OpenAI</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Fortinet documented that FortiAI features on FortiAnalyzer depend on connectivity to the Fortinet AI Proxy and Azure OpenAI; if unavailable, features will not function.</p>
+<div class="ev-ch">channels: <span class="chchip">ecosystem_control_loss · OAI <b>3</b></span> <span class="chchip">provider_specificity · OAI <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">depend on connectivity to the Fortinet AI Proxy</span>
+<span class="span">Azure OpenAI</span>
+<span class="span">will not function</span>
+<span class="span">Change Log — Date: 2026-05-28</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Anthropic lists Fortinet among new Claude security and compliance integrations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic announced 28 new integrations for Claude’s Compliance API, listing Fortinet among security and compliance providers to help enterprises govern Claude usage.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>2</b></span> <span class="chchip">strategic_option_value · ANT <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Claude now works with more security and compliance tools</span>
+<span class="span">28 integrations</span>
+<span class="span">New integrations include:</span>
+<span class="span">Fortinet</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="openai_chatgpt anthropic_claude xai_grok">
+<div class="ev-top">
+<span class="date">2026-05-16</span>
+<span class="eh">FortiSASE solution brief adds real-time protections for GenAI apps (ChatGPT, Copilot, Claude, Grok)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">xai_grok</span></div>
+<p class="narr">A FortiSASE solution brief emphasized DLP, visibility, and governance for employee use of public GenAI tools including ChatGPT, Copilot, Claude, and Grok, enabling safe adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>3</b> ANT <b>2</b> XAI <b>1</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>2</b> ANT <b>1</b> XAI <b>1</b></span> <span class="chchip">strategic_option_value · OAI <b>3</b> ANT <b>2</b> XAI <b>1</b></span> <span class="chchip">data_rights_or_content_commoditization_risk · OAI <b>3</b> ANT <b>1</b> XAI <b>1</b></span> <span class="chchip">multi_model_hedge · OAI <b>3</b> ANT <b>3</b> XAI <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">GenAI applications</span>
+<span class="span">ChatGPT, Copilot, Claude, Grok</span>
+<span class="span">real-time protection</span>
+<span class="span">May 16, 2026</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-12</span>
+<span class="eh">Fortinet deepens integration to secure enterprise AI at scale with NVIDIA</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Fortinet highlighted a deepened integration with NVIDIA to secure enterprise AI at scale, indicating alignment with NVIDIA’s AI ecosystem.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<p class="cav">⚠ Newsroom listing; detailed integration scope not shown in excerpt.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Fortinet Deepens Integration to Uniquely Secure Enterprise AI at Scale with NVIDIA</span>
+<span class="span">May 12, 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Shares surge after Q1 beat; AI displacement fears eased</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Post-earnings coverage cited billings +31% and product +41% as easing AI displacement fears; shares jumped ~18% after-hours as Fortinet raised its outlook.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">strong beat and raised outlook</span>
+<span class="span">Billings +31% and product +41% assuaged AI displacement fears</span>
+<span class="span">FTNT +18% AH; EPS 0.82 vs 0.62</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Fortinet expands FortiGate G Series to secure AI from data center to edges</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Fortinet&#x27;s newsroom listed an expansion of the FortiGate G Series aimed at securing AI from the data center to enterprise edges, aligning appliance portfolio with AI infrastructure needs.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<p class="cav">⚠ Newsroom listing; full technical specifics not included in excerpt.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Fortinet Expands FortiGate G Series to Secure AI from the Data Center to Modern Enterprise Edges</span>
+<span class="span">May 6, 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Q1&#x27;26 product revenue $645.1m (+41% y/y) aided by AI-related deployments</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$645M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Fortinet reported Q1&#x27;26 product revenue of $645.1m, up 41% y/y, citing AI-related deployments among the key drivers alongside FortiGate demand and OT security use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Product revenue: $645.1m (+41% y/y)</span>
+<span class="span">AI‑related deployments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">AI-related network performance cited; Secure Networking +32%, OT +70%+</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted AI-related network performance needs contributing to demand, with Secure Networking billings up 32% and OT billings up over 70% y/y.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑related network performance</span>
+<span class="span">Secure Networking billings grew 32%</span>
+<span class="span">OT billings grew over 70%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">AI-driven SecOps billings grew 23% y/y</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AI-driven Security Operations billings increased 23% y/y in Q1&#x27;26, signaling adoption of AI-enabled SecOps offerings.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑driven Security Operations billings grew 23% y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Operational highlights include collaborations with leading AI companies</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Fortinet cited collaborations with leading AI companies alongside FortiOS 8.0 and new high-end FortiGate appliances as part of Q1&#x27;26 operational highlights.</p>
+<p class="cav">⚠ Counterparty AI partners were not named in the filing excerpt.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">collaborations with leading AI companies</span>
+<span class="span">FortiOS 8.0</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Service billings reaccelerated +27% y/y; deferred revenue +15% as leading indicators</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Fortinet pointed to 27% y/y reacceleration in service billings and a 15% increase in deferred revenue as leading indicators for future services revenue, supported by SecOps ARR growth.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Service billings reaccelerated 27%</span>
+<span class="span">deferred revenue increased 15%</span>
+<span class="span">leading indicators</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">SecOps ARR growth cited as contributor (absolute ARR not disclosed)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited Security Operations ARR growth as a contributor to services momentum, though absolute ARR was not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">SecOps ARR growth cited as a contributor</span>
+<span class="span">absolute ARR not disclosed</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Q1&#x27;26 total billings $2,085.3m (+31% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.1B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Fortinet reported non‑GAAP billings of $2.0853B in Q1&#x27;26, up 31% y/y, reflecting broad demand including AI-related use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Billings (non‑GAAP): $2,085.3m (+31% y/y).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Deferred revenue reached $7.35B; up $235.7M sequentially</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$7.4B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Deferred revenue totaled $7.3515B as of March 31, 2026, up $235.7M sequentially, underpinning future services growth.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Deferred revenue: $7,351.5m</span>
+<span class="span">up $235.7m sequentially</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Q1&#x27;26 deferred revenue increased by $235.7M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$236M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Fortinet reported a $235.7M sequential increase in deferred revenue during Q1&#x27;26.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Change in deferred revenue during Q1 2026: +$235.7m.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Management flags supply chain risks that could impact AI-related and OT projects</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Fortinet cautioned that a resurgence of component or logistics constraints could affect availability and delivery timelines for high-end FortiGate units amid elevated demand, particularly for AI-related and OT deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">resurgence of component constraints</span>
+<span class="span">impact high‑end FortiGate availability</span>
+<span class="span">AI‑related and OT projects</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-04-21</span>
 <span class="eh">Fortinet wins 2026 Google Cloud Partner of the Year Award (Workload Security)</span>
@@ -179,370 +463,136 @@ Concurrently, the firm disclosed strong Q1&#x27;26 operating metrics with billin
 <span class="span">Apr 21, 2026</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0006">
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt anthropic_claude">
 <div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">Fortinet expands FortiGate G Series to secure AI from data center to edges</span>
+<span class="date">2026-04-15</span>
+<span class="eh">FortiAIGate 8.0 positions as central gateway to LLM providers (OpenAI, Anthropic)</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Fortinet&#x27;s newsroom listed an expansion of the FortiGate G Series aimed at securing AI from the data center to enterprise edges, aligning appliance portfolio with AI infrastructure needs.</p>
-<p class="cav">⚠ Newsroom listing; full technical specifics not included in excerpt.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Release notes for FortiAIGate 8.0 describe it as a central gateway connecting enterprise AI apps to LLM providers such as OpenAI and Anthropic, with AI Flow and AI Guard protections; initial 8.0.0 release dated March 23, 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>3</b> ANT <b>2</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>2</b> ANT <b>1</b></span> <span class="chchip">strategic_option_value · OAI <b>3</b> ANT <b>2</b></span> <span class="chchip">multi_model_hedge · OAI <b>3</b> ANT <b>3</b></span> <span class="chchip">switching_flexibility · OAI <b>2</b> ANT <b>2</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[7]</div>
-<span class="span">Fortinet Expands FortiGate G Series to Secure AI from the Data Center to Modern Enterprise Edges</span>
-<span class="span">May 6, 2026</span>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">FortiAIGate 8.0.0 Release Notes</span>
+<span class="span">Initial release of FortiAIGate 8.0.0</span>
+<span class="span">central gateway</span>
+<span class="span">OpenAI, Anthropic</span>
+<span class="span">AI Guard</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0007">
+</div>
+<div class='phase'>
+<h2>Operational OpenAI integration in SIEM</h2>
+<div class='range'>2025-11-06 → 2025-11-06</div>
+<div class='psum'>Fortinet operationalized GenAI inside FortiSIEM by enabling Fortinet Advisor to call OpenAI models via the customer&#x27;s API key, explicitly naming GPT‑3.5‑Turbo and GPT‑4. The documentation highlights data flow to OpenAI and Fortinet&#x27;s disclaimer, underscoring both functional integration and data‑handling risks.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt">
 <div class="ev-top">
-<span class="date">2026-05-12</span>
-<span class="eh">Fortinet deepens integration to secure enterprise AI at scale with NVIDIA</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Fortinet highlighted a deepened integration with NVIDIA to secure enterprise AI at scale, indicating alignment with NVIDIA’s AI ecosystem.</p>
-<p class="cav">⚠ Newsroom listing; detailed integration scope not shown in excerpt.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[7]</div>
-<span class="span">Fortinet Deepens Integration to Uniquely Secure Enterprise AI at Scale with NVIDIA</span>
-<span class="span">May 12, 2026</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0008">
-<div class="ev-top">
-<span class="date">2026-06-16</span>
-<span class="eh">Fortinet launches FortiSOC, a unified SOC platform powered by agentic AI</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Fortinet announced FortiSOC, positioning a unified SOC platform &#x27;Powered by Agentic AI&#x27;, advancing agentic orchestration across its SOC stack.</p>
-<p class="cav">⚠ Newsroom listing; product details not included in excerpt.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[7]</div>
-<span class="span">Fortinet Launches FortiSOC, a Unified SOC Platform Powered by Agentic AI</span>
-<span class="span">Jun 16, 2026</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0009">
-<div class="ev-top">
-<span class="date">2026-05-16</span>
-<span class="eh">FortiSASE solution brief adds real-time protections for GenAI apps (ChatGPT, Copilot, Claude, Grok)</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">xai_grok</span></div>
-<p class="narr">A FortiSASE solution brief emphasized DLP, visibility, and governance for employee use of public GenAI tools including ChatGPT, Copilot, Claude, and Grok, enabling safe adoption.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span">GenAI applications</span>
-<span class="span">ChatGPT, Copilot, Claude, Grok</span>
-<span class="span">real-time protection</span>
-<span class="span">May 16, 2026</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0010">
-<div class="ev-top">
-<span class="date">2026-05-21</span>
-<span class="eh">Anthropic lists Fortinet among new Claude security and compliance integrations</span>
+<span class="date">2025-11-06</span>
+<span class="eh">FortiSIEM 7.1 adds Fortinet Advisor using OpenAI GPT-3.5/4 via customer API key</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Anthropic announced 28 new integrations for Claude’s Compliance API, listing Fortinet among security and compliance providers to help enterprises govern Claude usage.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Fortinet detailed that Fortinet Advisor in FortiSIEM uses GPT‑3.5‑Turbo and GPT‑4 through the customer&#x27;s OpenAI API key, with explicit disclosure that data is sent to OpenAI and responses are not verified by Fortinet.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>3</b></span> <span class="chchip">data_rights_or_content_commoditization_risk · OAI <b>3</b></span> <span class="chchip">provider_specificity · OAI <b>4</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">Claude now works with more security and compliance tools</span>
-<span class="span">28 integrations</span>
-<span class="span">New integrations include:</span>
-<span class="span">Fortinet</span>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Fortinet Advisor uses GPT3.5-Turbo and GPT4</span>
+<span class="span">Your OpenAI API key</span>
+<span class="span">send data from your FortiSIEM to OpenAI</span>
+<span class="span">Fortinet does not verify or correct these responses</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0011">
+</div>
+<div class='phase'>
+<h2>Foundational GenAI offerings and governance</h2>
+<div class='range'>2023-12-11 → 2024-10-30</div>
+<div class='psum'>Fortinet initiated its GenAI product push with the launch of Fortinet Advisor, embedding a generative AI assistant into core SecOps products to speed investigation and remediation. This marked the company&#x27;s first explicit GenAI assistant positioned alongside its longstanding AI/ML-based FortiGuard capabilities.
+By late 2024, Fortinet extended AI controls to data protection and insider risk, shipping FortiDLP with &quot;Shadow AI&quot; protections that explicitly govern employee use of public GenAI tools like ChatGPT and Google Gemini, signaling a strategy to secure enterprise adoption of third‑party LLMs rather than provide a single in‑house model.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="openai_chatgpt google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">FortiAI on FortiAnalyzer selects Azure OpenAI GPT‑4.1/mini; AI Proxy logs all LLM traffic</span>
+<span class="date">2024-10-30</span>
+<span class="eh">Fortinet makes FortiDLP generally available with Shadow AI protections (ChatGPT, Gemini)</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Transparency notes for FortiAI on FortiAnalyzer specify selection between Azure OpenAI GPT‑4.1 and GPT‑4.1‑mini, with all LLM traffic proxied and logged via the Fortinet AI Proxy.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Fortinet announced GA of FortiDLP for data loss prevention and insider risk, featuring &#x27;Shadow AI Data Protection&#x27; that governs employee use of public GenAI tools including OpenAI ChatGPT and Google Gemini.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>3</b> GEM <b>1</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>2</b> GEM <b>1</b></span> <span class="chchip">data_rights_or_content_commoditization_risk · OAI <b>3</b> GEM <b>1</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">selects between Azure OpenAI GPT-4.1</span>
-<span class="span">GPT-4.1-mini</span>
-<span class="span">AI Proxy Logging — All LLM traffic</span>
-<span class="span">passes through the Fortinet AI Proxy</span>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">AI-Enhanced Data Protection</span>
+<span class="span">Shadow AI Data Protection</span>
+<span class="span">OpenAI ChatGPT, Google Gemini</span>
+<span class="span">Oct. 30, 2024</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0012">
+<div class="event t-web_only_verified" id="E0001" data-providers="">
 <div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">Dependency risk: FortiAI features require connectivity to Fortinet AI Proxy and Azure OpenAI</span>
-<span class="badge">risk</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Fortinet documented that FortiAI features on FortiAnalyzer depend on connectivity to the Fortinet AI Proxy and Azure OpenAI; if unavailable, features will not function.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">depend on connectivity to the Fortinet AI Proxy</span>
-<span class="span">Azure OpenAI</span>
-<span class="span">will not function</span>
-<span class="span">Change Log — Date: 2026-05-28</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0013">
-<div class="ev-top">
-<span class="date">2026-06-16</span>
-<span class="eh">FortiGuard App Control updates add Google Gemini signature</span>
+<span class="date">2023-12-11</span>
+<span class="eh">Fortinet launches Fortinet Advisor GenAI assistant in FortiSIEM and FortiSOAR</span>
 <span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">FortiGuard Labs updated Application Control with signatures for Google Gemini, enabling policy enforcement over GenAI traffic categories.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Fortinet introduced Fortinet Advisor, a generative AI assistant embedded in FortiSIEM and FortiSOAR to accelerate threat investigation and remediation, expanding its AI-powered portfolio.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">Application Control — Google.Gemini</span>
-<span class="span">Date: 2026-06-16</span>
-<span class="span">Sig Added</span>
-<span class="span">GenAI</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0014">
-<div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">Q1&#x27;26 product revenue $645.1m (+41% y/y) aided by AI-related deployments</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$645M · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Fortinet reported Q1&#x27;26 product revenue of $645.1m, up 41% y/y, citing AI-related deployments among the key drivers alongside FortiGate demand and OT security use cases.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Product revenue: $645.1m (+41% y/y)</span>
-<span class="span">AI‑related deployments</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0015">
-<div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">AI-related network performance cited; Secure Networking +32%, OT +70%+</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management highlighted AI-related network performance needs contributing to demand, with Secure Networking billings up 32% and OT billings up over 70% y/y.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">AI‑related network performance</span>
-<span class="span">Secure Networking billings grew 32%</span>
-<span class="span">OT billings grew over 70%</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0016">
-<div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">AI-driven SecOps billings grew 23% y/y</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">AI-driven Security Operations billings increased 23% y/y in Q1&#x27;26, signaling adoption of AI-enabled SecOps offerings.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">AI‑driven Security Operations billings grew 23% y/y</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0017">
-<div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">Operational highlights include collaborations with leading AI companies</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Fortinet cited collaborations with leading AI companies alongside FortiOS 8.0 and new high-end FortiGate appliances as part of Q1&#x27;26 operational highlights.</p>
-<p class="cav">⚠ Counterparty AI partners were not named in the filing excerpt.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">collaborations with leading AI companies</span>
-<span class="span">FortiOS 8.0</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0018">
-<div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">Service billings reaccelerated +27% y/y; deferred revenue +15% as leading indicators</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Fortinet pointed to 27% y/y reacceleration in service billings and a 15% increase in deferred revenue as leading indicators for future services revenue, supported by SecOps ARR growth.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Service billings reaccelerated 27%</span>
-<span class="span">deferred revenue increased 15%</span>
-<span class="span">leading indicators</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0019">
-<div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">SecOps ARR growth cited as contributor (absolute ARR not disclosed)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management cited Security Operations ARR growth as a contributor to services momentum, though absolute ARR was not disclosed.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">SecOps ARR growth cited as a contributor</span>
-<span class="span">absolute ARR not disclosed</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0020">
-<div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">Q1&#x27;26 total billings $2,085.3m (+31% y/y)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$2.1B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Fortinet reported non‑GAAP billings of $2.0853B in Q1&#x27;26, up 31% y/y, reflecting broad demand including AI-related use cases.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Billings (non‑GAAP): $2,085.3m (+31% y/y).</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0021">
-<div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">Deferred revenue reached $7.35B; up $235.7M sequentially</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$7.4B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Deferred revenue totaled $7.3515B as of March 31, 2026, up $235.7M sequentially, underpinning future services growth.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Deferred revenue: $7,351.5m</span>
-<span class="span">up $235.7m sequentially</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0022">
-<div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">Q1&#x27;26 deferred revenue increased by $235.7M</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$236M · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Fortinet reported a $235.7M sequential increase in deferred revenue during Q1&#x27;26.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Change in deferred revenue during Q1 2026: +$235.7m.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0023">
-<div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">Management flags supply chain risks that could impact AI-related and OT projects</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Fortinet cautioned that a resurgence of component or logistics constraints could affect availability and delivery timelines for high-end FortiGate units amid elevated demand, particularly for AI-related and OT deployments.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">resurgence of component constraints</span>
-<span class="span">impact high‑end FortiGate availability</span>
-<span class="span">AI‑related and OT projects</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0024">
-<div class="ev-top">
-<span class="date">2026-05-07</span>
-<span class="eh">Shares surge after Q1 beat; AI displacement fears eased</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Post-earnings coverage cited billings +31% and product +41% as easing AI displacement fears; shares jumped ~18% after-hours as Fortinet raised its outlook.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[1]</div>
-<span class="span">strong beat and raised outlook</span>
-<span class="span">Billings +31% and product +41% assuaged AI displacement fears</span>
-<span class="span">FTNT +18% AH; EPS 0.82 vs 0.62</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0025">
-<div class="ev-top">
-<span class="date">2026-06-17</span>
-<span class="eh">Researchers report &#x27;FortiBleed&#x27; cache of valid Fortinet firewall credentials</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Security researchers disclosed a cache of working credentials affecting tens of thousands of Fortinet FortiGate devices worldwide; reports cite 73,932 firewall URLs across 194 countries, with attackers cracking intercepted hashes using a 45‑GPU cluster and verified credentials for 30,000+ devices.</p>
-<p class="cav">⚠ Incident scope and attribution are based on multiple researcher reports; remediation status not provided in the excerpt.</p>
-<details>
-<summary>evidence — 1 source(s), 5 span(s)</summary>
-<div class="ev-src">news_rows[0]</div>
-<span class="span">FortiBleed</span>
-<span class="span">73,932 firewall URLs</span>
-<span class="span">194 countries</span>
-<span class="span">45‑GPU cluster</span>
-<span class="span">verified credentials for 30,000+ devices</span>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Fortinet Advisor, a generative AI (GenAI) assistant</span>
+<span class="span">Dec 11, 2023</span>
+<span class="span">available within FortiSIEM</span>
+<span class="span">FortiSOAR</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0.15</td><td>0.1</td><td>0</td><td>0</td><td>0.05</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.55</td><td>0.35</td><td>0.2</td><td>0</td><td>0.2</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>-0.3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>-0.3</td><td>-0.1</td><td>-0.1</td><td>0</td><td>-0.1</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.96</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.745</td><td>0.745</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.0486</td><td>0.0974</td><td>0.0237</td><td>0</td><td>0.0316</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>Which specific counterparties are included in Fortinet&#x27;s &quot;collaborations with leading AI companies&quot; cited in Q1&#x27;26, and what is the scope/term of those agreements?</li>
@@ -557,4 +607,19 @@ Concurrently, the firm disclosed strong Q1&#x27;26 operating metrics with billin
 <li>The FortiBleed incident reporting is based on third-party research and may evolve as investigations proceed.</li>
 <li>Provider mappings infer relationships where explicitly named (e.g., Azure OpenAI, Anthropic Claude, Google Gemini); where partners are unnamed, providers_touched is left empty.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

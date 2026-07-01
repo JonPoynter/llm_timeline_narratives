@@ -1,0 +1,697 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>WEC US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>WEC Energy Group Inc <span class='sub'>(WEC US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.5</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>28 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 17</span>
+<span class='chip'>web-only (verified): 10</span>
+<span class='chip'>single source: 8</span>
+<span class='chip'>web-only (unverified): 5</span>
+<span class='chip'>corroborated: 5</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Execution, filings detail, petitions and first facility online</h2>
+<div class='range'>2026-05-01 → 2026-06-30</div>
+<div class='psum'>WEC’s May Q1 release detailed capital plans ($5.4B gas, $12.6B renewables) and codified exposure to multi‑GW data center load under newly approved VLC tariffs. Management emphasized no schedule slippage at Vantage and targeted fall 2026 transmission approvals.
+Regulatory friction rose as We Energies, Vantage and Cloverleaf petitioned to loosen financial protections; Oracle separately sued the PSC over credit requirements tied to the Lighthouse campus. Meanwhile, Microsoft’s first Mount Pleasant facility became fully operational, and Vantage reported construction progress at the Lighthouse site.</div>
+<div class="event t-web_only_verified" id="E0028" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-26</span>
+<span class="eh">Vantage tops out second building at OpenAI’s Lighthouse campus (Port Washington)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$902 · other</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Vantage advanced construction at the Lighthouse campus for OpenAI/Oracle, topping out the second building. The four‑building site will total 902 MW and is slated to go live in 2028 using closed‑loop liquid cooling.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">Lighthouse campus in Port Washington</span>
+<span class="span">will total 902MW</span>
+<span class="span">go live in 2028</span>
+<span class="span">closed-loop liquid cooling</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-23</span>
+<span class="eh">Microsoft’s first Mount Pleasant datacenter becomes fully operational</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4.7B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Microsoft completed construction and commenced operations at its first Mount Pleasant facility; it estimates $4.7B in local hyperscale construction spend between 2024 and 2028.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">completed construction on first datacenter facility</span>
+<span class="span">fully operational</span>
+<span class="span">Announced in May 2024</span>
+<span class="span">spent $4.7 billion between 2024 and 2028</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-23</span>
+<span class="eh">Oracle sues Wisconsin PSC over data center credit requirements tied to We Energies service</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Oracle filed suit challenging PSC credit standards that apply to We Energies’ very large customer service. With a BBB rating below A‑, Oracle said it could face letters of credit or deposits exceeding $100M per year to qualify.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">suing Wisconsin’s Public Service Commission</span>
+<span class="span">credit ratings below A-</span>
+<span class="span">BBB credit rating</span>
+<span class="span">exceeding $100 million per year</span>
+<span class="span">cash deposits or letters of credit</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-12</span>
+<span class="eh">We Energies, Vantage and Cloverleaf seek changes to PSC financial protections; Oracle cites $7B LOC need</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">We Energies and developers petitioned the PSC to amend financial backing requirements for data centers. Oracle warned current rules could require letters of credit exceeding $7B with annual costs over $100M.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">loosen financial protections</span>
+<span class="span">amend part of its recent data center rate decision</span>
+<span class="span">exceeding $7 billion</span>
+<span class="span">annual cost that could exceed $100 million</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">PSC approves Alliant–Meta deal; contrasts with We Energies’ standardized model</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Regulators approved Alliant/Meta’s one-off contract while noting it bears little resemblance to We Energies’ standardized model, which was approved with modifications the prior month; the Meta facility is smaller at ~220 MW.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[16]</div>
+<span class="span">bears little resemblance to the model We Energies proposed</span>
+<span class="span">approved last month</span>
+<span class="span">Meta</span>
+<span class="span">220 megawatts</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: PSCW verbal approval of VLC/Bespoke tariffs; costs borne by data centers</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">WEC reported PSCW verbal approval of VLC and Bespoke tariffs designed for very large data center loads, with costs borne by those customers and protections for existing customers; a written order was expected by end‑May.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">PSCW provided verbal approval</span>
+<span class="span">VLC and Bespoke Resources tariffs</span>
+<span class="span">very large new loads (e.g., data centers)</span>
+<span class="span">costs borne by those customers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: $5.4B gas-fired generation plan (2026–2030) for projected load growth</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.4B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">WEC’s capital plan includes ~$5.4B for efficient gas‑fired generation through 2030, comprising 3,300 MW of CTs and 180 MW of RICE to serve rapidly rising load.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Capital plan to meet projected load growth</span>
+<span class="span">~$5.4B (2026–2030)</span>
+<span class="span">3,300 MW CTs</span>
+<span class="span">180 MW RICE</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: $12.6B regulated renewables plan to support growth</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$12.6B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">WEC earmarked ~$12.6B for regulated renewables, including 3,850 MW of solar, 2,130 MW of storage and 555 MW of wind, aligned to hyperscale load growth.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Capital plan to meet projected load growth</span>
+<span class="span">~$12.6B in regulated renewables</span>
+<span class="span">3,850 MW solar</span>
+<span class="span">2,130 MW storage</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: VLC/Bespoke terms — &gt;100 MW customers; ROE 10.48%–10.98%, 57% equity</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management detailed VLC/Bespoke tariff economics to serve new &gt;100 MW customers, with allowed ROEs between ~10.48% and ~10.98% and a fixed 57% equity ratio over contract terms.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">PSCW verbal approval (Apr 24, 2026)</span>
+<span class="span">Very Large Customer (VLC)</span>
+<span class="span">serve new &gt;100 MW customers</span>
+<span class="span">ROE between ~10.48%–10.98%</span>
+<span class="span">57% equity ratio</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: Hyperscale pipeline outlined — ~2.6 GW I‑94 corridor, ~3.5 GW Port Washington</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2,600 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">WEC cited announced hyperscale/data center investments (Microsoft and Vantage) with potential load additions up to ~2.6 GW in the Milwaukee‑to‑Chicago corridor and up to ~3.5 GW at Port Washington over time.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">hyperscale/data center investments</span>
+<span class="span">Microsoft and Vantage</span>
+<span class="span">up to ~2.6 GW</span>
+<span class="span">up to ~3.5 GW at Port Washington</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: Five‑year plan includes ~3.9 GW tied to data center pipeline</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3,900 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management said approximately 3.9 GW of demand growth is embedded in the five‑year plan, reflecting contracted and forecast data center load.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">about 3.9 gigawatts</span>
+<span class="span">in our 5-year plan</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: 100 MW VLC threshold positioned to protect existing customers</span>
+<span class="badge">regulatory</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">WEC stated the 100 MW VLC threshold does not affect current customers, aligning with PSC language emphasizing protections for existing ratepayers.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[6]</div>
+<span class="span">does not affect any of our current customers</span>
+<span class="span">protects existing customers</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: Management unconcerned about 100 MW VLC threshold</span>
+<span class="badge">regulatory</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Leadership expressed confidence in the 100 MW VLC eligibility threshold under the approved tariff construct.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[6]</div>
+<span class="span">not concerned at all about going to 100 megawatt.</span>
+<span class="span">100 MW</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0020" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: Vantage execution on track; no schedule slippage cited</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Management reported no slippage at the Vantage Lighthouse campus, reinforced by subsequent construction progress updates.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[12]</div>
+<span class="span">We don&#x27;t see any slippage,</span>
+<span class="span">topped out the second data center</span>
+<span class="span">Lighthouse campus</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: Transmission approval for Vantage expected in fall 2026</span>
+<span class="badge">regulatory</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">WEC expects transmission line approval in fall 2026 to serve the Vantage Lighthouse site in Port Washington.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[3]</div>
+<span class="span">expects the transmission line approval in the fall of 2026;</span>
+<span class="span">Port Washington</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: Port Washington TIF referendum seen as no impact to builds</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management indicated that the Port Washington TIF referendum should not affect the 1.3 GW in the plan or the 3.5 GW potential at the Vantage site.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">TIF referendum should not affect</span>
+<span class="span">1.3 GW now</span>
+<span class="span">3.5 GW potential</span>
+<span class="span">Vantage site.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1: Risk flagged — investment plan depends on multi‑GW hyperscale load</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">WEC highlighted that significant projected hyperscale/data center load additions underpin its investment plans, indicating dependency risk if projects slip.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Projected multi‑GW load additions</span>
+<span class="span">hyperscale/data‑center customers</span>
+<span class="span">underpin investment plans.</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Plan crystallization and PSC order</h2>
+<div class='range'>2026-01-05 → 2026-04-30</div>
+<div class='psum'>WEC’s January investor materials and February earnings call quantified the hyperscale pipeline: 2.6 GW in the I‑94 corridor (Microsoft) and 1.3 GW initially in Port Washington (Vantage for Oracle/OpenAI), with total five‑year growth of ~3.9 GW and incremental capital of ~$1B for newly identified 500 MW of demand.
+On April 24, the PSC overhauled and approved We Energies’ Very Large Customer tariffs with 15‑year terms, a 100 MW eligibility threshold, and full cost responsibility for data centers. WEC’s April annual report reiterated Microsoft’s $20B+ Wisconsin investment and the two‑site growth outlook.</div>
+<div class="event t-corroborated" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">PSC approves and overhauls We Energies’ VLC tariff: 15-year term, 100 MW threshold, full-cost recovery</span>
+<span class="badge">regulatory</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The PSC finalized We Energies’ Very Large Customer tariffs with major modifications: 15‑year minimum terms, eligibility reduced to 100 MW, removal of a capacity‑only option, and requirements that data centers pay 100% of their costs — protecting existing customers. WEC had noted verbal approval on Apr 24 in its Q1 materials.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 3 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[6], web_search_findings[7], filings[0]</div>
+<span class="span">extended the VLC tariff minimum initial term length to 15 years</span>
+<span class="span">lowered the energy demand threshold for tariff eligibility from 500 MW to 100 MW</span>
+<span class="span">removed a capacity-only option</span>
+<span class="span">pay 100% of their costs</span>
+<span class="span">approved a special rate plan for data center-scale customers</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-15</span>
+<span class="eh">Annual report reiterates Microsoft $20B+ and 2.6 GW/3.5 GW growth outlook</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">WEC’s 2025 annual report (issued April 2026) cites Microsoft’s plan to invest over $20B in southern Wisconsin and details up to 2.6 GW of corridor growth plus 1.3 GW at Port Washington (with potential up to 3.5 GW).</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">over $20 billion in data centers</span>
+<span class="span">up to 2.6 GWs</span>
+<span class="span">1.3 GWs of demand through 2030</span>
+<span class="span">potential to add an incremental 2.2 GWs</span>
+<span class="span">total of up to 3.5 GWs over time</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Earnings: +500 MW demand, +$1B capital; 3.9 GW five‑year growth view</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management added 500 MW to demand forecasts, driving an estimated $1B capital increase, reaffirming 2.6 GW growth in the I‑94 corridor and 1.3 GW at Vantage over five years for a total of ~3.9 GW.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">adding 500 megawatts of customer demand</span>
+<span class="span">$1 billion of additional incremental capital</span>
+<span class="span">2.6 gigawatts through 2030</span>
+<span class="span">1.3 gigawatts of demand</span>
+<span class="span">3.9 gigawatts of electric demand growth</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-01-05</span>
+<span class="eh">Investor update: Vantage Lighthouse scope (Port Washington) and 3.5 GW site potential</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$15.0B · capex</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">WEC’s investor deck highlighted Vantage’s Port Washington campus tied to OpenAI/Oracle: four data center buildings on 670 acres, $15B+ investment, 1,900 acres total, and site potential up to 3.5 GW over time.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">expected investment of $15+ billion</span>
+<span class="span">Port Washington</span>
+<span class="span">Four data center buildings</span>
+<span class="span">Site potential up to 3.5 GW over time</span>
+<span class="span">approximately 1,900 acres</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Tariff proposal and hyperscale program acceleration</h2>
+<div class='range'>2025-04-04 → 2025-10-30</div>
+<div class='psum'>In 2025, WEC formalized its economic framework for very large data center loads by proposing special tariffs designed to shift infrastructure costs to those customers. In parallel, Wisconsin regulators approved We Energies’ plan to add gas-fired capacity largely to support Microsoft’s AI data center, drawing public scrutiny over resource mix.
+Hyperscale commitments ramped materially: Microsoft detailed a multi-billion-dollar Wisconsin build, while Vantage announced a Port Washington campus tied to OpenAI and Oracle’s Stargate program. WEC subsequently lifted its capital plan by $8.5B, citing accelerating data center-driven demand.</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-30</span>
+<span class="eh">WEC lifts capital plan by $8.5B; forecasts 3.4 GW demand growth by 2030</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$8.5B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Citing accelerating data center-driven load, WEC increased its capital spending plan by $8.5B. The company now expects electric demand to grow 3.4 GW (2026–2030), with an arrangement to develop ~2 GW of renewables for Vantage’s Lighthouse site (70% to the site; 30% to utility customers).</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">increased its capital spending plan by $8.5 billion</span>
+<span class="span">electric demand is expected to grow 3.4 GW</span>
+<span class="span">OpenAI LLC, Vantage Data Centers and Oracle Corp.</span>
+<span class="span">2 GW of renewable resources</span>
+<span class="span">70% of the output</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-10-22</span>
+<span class="eh">OpenAI, Oracle, and Vantage announce Stargate campus in Port Washington; WEC cited as partner</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$15.0B · capex</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI, Oracle and Vantage announced a Port Washington ‘Lighthouse’ campus — part of the Stargate expansion — with close to a gigawatt of AI capacity and a $15B+ investment. WEC’s CEO said the partnership adds nearly 2 GW of new energy to the grid, with 30% for existing customers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">OpenAI, Oracle and Vantage Data Centers</span>
+<span class="span">Stargate Data Center Site in Wisconsin</span>
+<span class="span">close to a gigawatt of AI capacity</span>
+<span class="span">We’re grateful to our partners at Oracle, Vantage and We Energies</span>
+<span class="span">nearly two gigawatts</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-09-18</span>
+<span class="eh">Microsoft: Fairwater AI datacenter on track for early 2026; $3.3B commitment</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.3B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Microsoft said its Fairwater facility in Mount Pleasant, billed as the world’s most powerful AI datacenter, is on schedule for early 2026 and part of a $3.3B pledge, noting pre-payment for energy and infrastructure under transparent WE Energies tariffs.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">world’s most powerful AI datacenter</span>
+<span class="span">on track to complete construction</span>
+<span class="span">$3.3 billion</span>
+<span class="span">pre-paying for the energy</span>
+<span class="span">partnership with WE Energies</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-05-22</span>
+<span class="eh">PSC approves nearly $1.5B in new gas plants to power AI data center demand</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.5B · capex</span> <span class="badge">mixed</span></div>
+<p class="narr">Wisconsin regulators approved We Energies’ proposal to spend nearly $1.5B on two new gas plants (1,200 MW) serving demand largely driven by Microsoft’s Mount Pleasant AI data center, with a 30-year operating outlook, drawing environmental criticism.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[15]</div>
+<span class="span">approved We Energies’ proposal</span>
+<span class="span">nearly $1.5 billion</span>
+<span class="span">two new gas plants</span>
+<span class="span">1,200 MW</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-04-04</span>
+<span class="eh">We Energies files special data center tariffs to allocate infrastructure costs</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">We Energies asked the PSC to approve special rates requiring large data centers to fully cover infrastructure costs, crafted with Microsoft and Cloverleaf, reflecting unprecedented scale requirements.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">special rates for data centers</span>
+<span class="span">pay for infrastructure</span>
+<span class="span">crafted in partnership with Microsoft and Cloverleaf</span>
+<span class="span">hundreds of thousands of homes</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Groundwork for hyperscale demand in Wisconsin</h2>
+<div class='range'>2023-09-20 → 2024-03-05</div>
+<div class='psum'>WEC Energy Group’s Wisconsin utility (We Energies) began early infrastructure moves to serve Microsoft’s new Mount Pleasant data center campus. Initial distribution projects were positioned under special Foxconn-area exemptions, enabling accelerated timelines without standard PSC approvals.
+These pre-tariff investments established the physical foothold for substantial future load, with multi-hundred-megawatt substation and distribution plans tied specifically to Microsoft’s first facilities in the region.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-03-05</span>
+<span class="eh">We Energies plans $335M distribution build for Microsoft Mount Pleasant</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$335M · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">We Energies filed plans to spend $335 million on distribution facilities and a substation to serve Microsoft’s Mount Pleasant development, leveraging Foxconn-area exemptions that remove the need for PSC approval.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">spend $335 million</span>
+<span class="span">distribution facilities, including transformers</span>
+<span class="span">substation on the property</span>
+<span class="span">exempt from needing PSC approval</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2023-09-20</span>
+<span class="eh">We Energies lines up $100M distribution project for Microsoft Mount Pleasant</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">We Energies outlined a $100 million distribution build — including a 26-acre substation and power lines — to support Microsoft’s proposed Mount Pleasant data center, with plans to provide at least 752 MW of power under Foxconn-area exemptions.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">plans to spend $100 million</span>
+<span class="span">new Microsoft data center</span>
+<span class="span">Mount Pleasant</span>
+<span class="span">provide at least 752 megawatts of power</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Will the PSC grant We Energies/Vantage/Cloverleaf’s petition to amend financial protection requirements for data center customers, and on what terms?</li>
+<li>Will Oracle’s lawsuit materially alter the PSC’s credit/security framework or timing for the Lighthouse campus interconnection and service?</li>
+<li>Can WEC secure transmission approvals for the Port Washington (Vantage) site by fall 2026 as expected, and are there contingencies if delayed?</li>
+<li>What is the phasing and funding cadence for the ~$5.4B gas and ~$12.6B renewables programs (2026–2030), and how will resource mix evolve under rising AI load?</li>
+<li>Are there additional environmental or community challenges to the approved gas plants that could affect cost recovery or in-service timing?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several sources are company or advocacy press releases and may emphasize favorable positions or critiques; certain figures are forward-looking and subject to regulatory approval and execution risk.</li>
+<li>Some magnitudes reflect counterparties’ investments (e.g., Microsoft, Vantage) rather than WEC’s own capex but are included as demand indicators.</li>
+<li>Tariff specifics and financial protection requirements remain subject to ongoing PSC proceedings and potential judicial review; outcomes could alter economics and timelines.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

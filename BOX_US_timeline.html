@@ -1,0 +1,663 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>BOX US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Box Inc <span class='sub'>(BOX US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.461</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>27 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 5</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 17</span>
+<span class='chip'>web-only (verified): 8</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Productization, multi‑model breadth, and early monetization signals</h2>
+<div class='range'>2026-01-15 → 2026-06-30</div>
+<div class='psum'>Box moved key AI offerings to general availability and highlighted monetization signals in FY27. In January 2026, Box Extract became generally available, powered by models from Google, Anthropic, and OpenAI with advanced agentic capabilities. In 26Q4 (reported March 3, 2026), Box announced GA of Box Extract and Shield Pro, while RPO reached $1.711B, positioning AI features as growth drivers but flagging adoption risk.
+In 27Q1 (reported May 26, 2026), management cited accelerating adoption of Enterprise Advanced and Box AI, partnerships with Google Cloud, Anthropic, and OpenAI, and GA of Box Agent and Box Automate. They noted AI units and APIs were already contributing revenue, often trued up at renewal. Box reiterated a model‑neutral, API‑first strategy amid rising CIO token‑budget scrutiny. RPO stood at $1.6B, and management planned additional AI‑focused customer events. Box’s docs listed current Gemini models supported, and a Claude plugin enabled direct access to Box content from Claude Code. Broader ecosystem news during the quarter included local AI dev hardware from Microsoft, a startup advancing model‑agnostic routing, shifts in Google’s search UX due to AI, and a data‑center backlash impacting U.S. build‑outs.</div>
+<div class="event t-web_only_verified" id="E0026" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Claude plugin enables direct work with Box content from Claude Code</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic’s Claude listed a Box plugin allowing users to work with Box content directly in Claude Code to search, organize, collaborate, and use Box AI for summarization and extraction, potentially expanding Box’s reach within developer workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Work with your Box content directly from Claude Code</span>
+<span class="span">use Box AI to answer questions</span>
+<span class="span">Anthropic verified</span>
+<span class="span">984520 installs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-23</span>
+<span class="eh">Google reshapes Search with AI Mode; alternative ‘No‑AI’ options draw traffic</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Industry coverage noted Google placing an AI Mode control in a redesigned search box, described as the biggest upgrade in over 25 years, while DuckDuckGo’s No‑AI option (noai.duckduckgo.com) saw traffic surge. Shifts in AI‑first UIs by platforms are relevant to Box’s integration‑first, non‑UI stance.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<p class="cav">⚠ Ecosystem signal; not Box-specific.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">AI Mode</span>
+<span class="span">biggest upgrade in over 25 years</span>
+<span class="span">No‑AI</span>
+<span class="span">noai.duckduckgo.com</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0024" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-19</span>
+<span class="eh">Box dev docs enumerate supported Google Gemini models and certifications</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Box developer documentation listed supported Google Gemini models (e.g., 3.5 Flash, 2.5 Pro/Flash) and certifications (FedRAMP/DoD levels), reinforcing breadth of Gemini options inside Box AI and Box Agent flows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">google__gemini_3_5_flash</span>
+<span class="span">google__gemini_2_5_pro</span>
+<span class="span">1 million token context window</span>
+<span class="span">Last modified on June 19, 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-14</span>
+<span class="eh">U.S. data‑center backlash intensifies; ~$130B in projects blocked or delayed</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$130.0B · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Coverage highlighted growing protests and political scrutiny of large data‑center projects, noting projects worth nearly $130 billion blocked or delayed in 2026, with Utah a flashpoint. This environment could indirectly affect cloud capacity and costs across providers that Box integrates with.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Macro infrastructure environment; not specific to Box.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">data-center campus</span>
+<span class="span">projects worth nearly $130 billion</span>
+<span class="span">blocked or delayed in 2026</span>
+<span class="span">growing protests</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">Niteshift raises $7M for model‑agnostic AI coding agents</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$7M · other</span> <span class="badge">neutral</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Startup Niteshift announced a $7M seed and a platform that routes between coding agents like Claude Code and Codex to mitigate vendor lock‑in, echoing the broader market’s model‑agnostic trend.</p>
+<p class="cav">⚠ Third‑party startup; not a Box transaction.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">Niteshift</span>
+<span class="span">$7 million seed</span>
+<span class="span">model‑agnostic</span>
+<span class="span">Claude Code and Codex</span>
+<span class="span">priced per‑minute</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">Microsoft debuts Surface RTX Spark Dev Box for local AI development</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Microsoft introduced a compact developer PC with Grace CPU + Blackwell RTX GPU delivering up to 1 petaflop of AI compute, preconfigured with developer tools including GitHub Copilot. While ecosystem‑oriented, local AI workflows could affect cloud‑only patterns that many SaaS platforms rely on.</p>
+<p class="cav">⚠ Ecosystem development; not specific to Box.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">Surface RTX Spark Dev Box</span>
+<span class="span">Grace CPU + Blackwell RTX GPU</span>
+<span class="span">up to 1 petaflop of AI compute</span>
+<span class="span">GitHub Copilot</span>
+<span class="span">U.S. availability “later this year”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Adoption accelerating for Enterprise Advanced and Box AI</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited accelerating adoption of Enterprise Advanced and Box AI, tying it to Box’s first double‑digit revenue growth in over three years, margin expansion, and improved net retention.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">accelerating adoption of Enterprise Advanced and Box AI</span>
+<span class="span">first double-digit revenue growth in over three years</span>
+<span class="span">improved net retention</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">AI units and APIs already contributing revenue; some recognized at renewal</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Box indicated AI unit consumption and API monetization are contributing to top‑line revenue, with some monetization trued up at renewal rather than in‑period usage.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI unit consumption and API monetization are already driving top-line revenue</span>
+<span class="span">monetization sometimes trued up at renewal</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Strategic stance versus AI UIs: lean into API/model neutrality, not UI layer</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CEO Aaron Levie emphasized an API‑ and integration‑first posture, stating Box does not want to compete for the UI layer, underscoring a neutral model layer amid ChatGPT/Copilot/Gemini competition and growing CIO focus on token budgeting.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">we do not wanna fight for the UI layer</span>
+<span class="span">neutral model layer</span>
+<span class="span">ChatGPT/Copilot/Gemini</span>
+<span class="span">token budgeting</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="google_gemini_deepmind anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">GA: Box Agent and Box Automate; partnerships with Google, Anthropic, OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Box announced general availability of Box Agent and Box Automate alongside ecosystem partnerships with Google Cloud, Anthropic, and OpenAI, reinforcing its multi‑provider approach.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">general availability of Box Agent and Box Automate</span>
+<span class="span">partnerships with Google Cloud, Anthropic, OpenAI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Risk noted: AI monetization and usage execution could pressure KPIs</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management warned that a slowdown in seat expansion or lower AI unit usage would pressure billings, net retention, and margin expansion objectives, despite Q1 outperformance.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">slowdown in seat expansion or lower usage of AI units would pressure billings</span>
+<span class="span">NRR and margin expansion goals</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">RPO $1.6B (+12% y/y; +16% cc), ~55% due within 12 months</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.6B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Box reported RPO of $1.6B, up 12% y/y (+16% cc), with approximately 55% expected to be recognized within 12 months, serving as a gauge of demand that includes AI‑driven upgrades.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Remaining performance obligations (RPO) were $1.6B (+12% y/y; +16% cc)</span>
+<span class="span">~55% expected to be recognized within 12 months</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">API‑first, model‑neutral strategy to benefit from token budgeting</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Box reiterated its API‑first, model‑neutral strategy positioned to benefit as enterprises optimize token budgets across multiple AI providers.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">API-first, model‑neutral strategy</span>
+<span class="span">optimize token budgets across multiple AI providers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Planned customer-facing AI events to support demand pipeline</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited strong pipeline build and announced plans for additional customer‑facing AI events, such as a Content AI Summit in the fall, following frequent CIO engagement.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">plans additional customer-facing AI events</span>
+<span class="span">Content AI Summit in the fall</span>
+<span class="span">frequent CIO engagement</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Monetization momentum: management says firing on all cylinders</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management commented on monetization momentum tied to Enterprise Advanced and early AI consumption, noting they are firing on all cylinders from a monetization standpoint.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">firing on all cylinders from a monetization standpoint right now</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-17</span>
+<span class="eh">Market backdrop: AI chips and mega‑cap earnings in focus</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Yahoo Finance noted upcoming Nvidia and Walmart earnings with S&amp;P and Nasdaq near records and a tape sensitive to AI guidance—contextual market dynamics during Box’s 27Q1.</p>
+<p class="cav">⚠ Macro market context; not a Box event.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[4]</div>
+<span class="span">Nvidia and Walmart</span>
+<span class="span">futures near highs</span>
+<span class="span">S&amp;P and Nasdaq near records</span>
+<span class="span">Top‑heavy tape</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">GA: Box Extract and Box Shield Pro announced in 26Q4</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">In the 26Q4 release, Box highlighted the general availability of Box Extract and Box Shield Pro, expanding GenAI‑powered metadata extraction and agentic security capabilities.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">general availability of Box Extract</span>
+<span class="span">Box Shield Pro</span>
+<span class="span">GenAI-powered content metadata extraction</span>
+<span class="span">agentic AI-enhanced security</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">Risk flagged: adoption of Enterprise Advanced and AI features could moderate growth</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that growth from Enterprise Advanced and new AI capabilities could be moderated by slower‑than‑expected adoption or competitive responses.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">expects growth from Enterprise Advanced and new AI capabilities</span>
+<span class="span">Slower-than-expected customer adoption</span>
+<span class="span">competitive responses could moderate</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">RPO reached $1.711B (+17% y/y) at FY26 year‑end</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.7B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Box reported remaining performance obligations of $1.711B at 2026‑01‑31, up 17% y/y, with $913.7M short‑term and $797.0M long‑term, serving as an AI‑demand gauge.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Remaining performance obligations (RPO) at 2026-01-31 were $1.711B (+17% y/y; +16% cc)</span>
+<span class="span">short-term RPO $913.7M</span>
+<span class="span">long-term RPO $797.0M</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="google_gemini_deepmind anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-01-15</span>
+<span class="eh">Box Extract GA powered by Google, Anthropic, and OpenAI models</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Box announced the general availability of Box Extract to transform enterprise content into actionable data, powered by leading generative AI models from companies like Google, Anthropic, and OpenAI, combined with advanced agentic capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">general availability of Box Extract</span>
+<span class="span">Powered by leading generative AI models from companies like Google, Anthropic, and OpenAI</span>
+<span class="span">advanced agentic capabilities</span>
+<span class="span">By integrating Google’s Gemini into Box Extract</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Enterprise AI agents and governance partnerships</h2>
+<div class='range'>2025-02-19 → 2025-04-29</div>
+<div class='psum'>Box expanded its agentic AI capabilities and multi‑model posture. In February 2025, Box introduced Box AI extract agents across tiers, highlighting a Choose Your Own Model (CYOM) approach to leverage OpenAI, Google, and Anthropic. In April 2025, Box and IBM partnered to bring IBM watsonx models—including IBM Granite and Meta’s Llama—into Box AI and to strengthen AI governance with watsonx.governance for compliance.
+These moves deepened Box’s multi‑provider hedge and emphasized governance and flexibility for regulated enterprise use cases.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2025-04-29</span>
+<span class="eh">Box and IBM partner to bring watsonx models; adds Meta Llama and IBM Granite</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Box and IBM announced a partnership to accelerate enterprise‑level AI for content workflows using IBM watsonx. The collaboration enables Box AI to leverage IBM Granite and the latest Meta Llama models, and strengthens governance with watsonx.governance.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Box and IBM Partner</span>
+<span class="span">IBM watsonx</span>
+<span class="span">IBM Granite</span>
+<span class="span">latest from Meta’s Llama</span>
+<span class="span">watsonx.governance</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-02-19</span>
+<span class="eh">Box AI extract agents launch with CYOM across OpenAI, Google, Anthropic</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Box announced new Box AI extract agents available in Enterprise Plus tiers and above, enabling customers to Choose Your Own Model from supported providers including OpenAI, Google, and Anthropic.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Box AI extract agents</span>
+<span class="span">Enterprise Plus tiers</span>
+<span class="span">Choose Your Own Model</span>
+<span class="span">OpenAI, Google, and Anthropic</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Box AI launch and multi‑cloud model integrations</h2>
+<div class='range'>2023-05-02 → 2024-10-24</div>
+<div class='psum'>Box formally launched Box AI in May 2023, integrating OpenAI’s ChatGPT API into the Content Cloud to deliver native generative AI capabilities under enterprise‑grade security and compliance. In November 2023, Box expanded its partnership with Google Cloud: Box became available on Google Cloud Marketplace and committed to integrate Vertex AI to process and analyze Box‑stored data.
+In March 2024 Box announced general availability of Box AI for Enterprise Plus plans while integrating Microsoft’s Azure OpenAI Service. By October 2024, Box deepened its multi‑model stance with an AWS partnership to access Amazon Bedrock models, starting with Anthropic’s Claude and Amazon Titan, and introduced a connector for Amazon Q.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-10-24</span>
+<span class="eh">Box integrates Amazon Bedrock; Box AI adds Anthropic Claude and Amazon Titan</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Box and AWS announced Box AI access to foundation models via Amazon Bedrock, starting with Anthropic’s Claude and Amazon Titan, and introduced a connector for Amazon Q. Availability targeted Box Enterprise Plus customers through Box AI APIs.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Amazon Bedrock</span>
+<span class="span">Anthropic’s Claude and Amazon Titan</span>
+<span class="span">Generally Available Today, Box AI Now Integrates with Amazon Bedrock and Amazon Q</span>
+<span class="span">Box Enterprise Plus customers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-03-05</span>
+<span class="eh">Box AI GA for Enterprise Plus; integrates Microsoft Azure OpenAI Service</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Box announced a new integration with Microsoft Azure OpenAI Service and declared Box AI generally available for Enterprise Plus customers, with per‑user and pooled query allotments.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Azure OpenAI Service</span>
+<span class="span">Box AI is generally available</span>
+<span class="span">Enterprise Plus plans</span>
+<span class="span">20 queries per month</span>
+<span class="span">2,000 additional queries</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-11-01</span>
+<span class="eh">Box and Google Cloud expand partnership; Box on Google Cloud Marketplace and Vertex AI integration</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Box and Google Cloud announced an expanded partnership. Box is available on Google Cloud Marketplace, and Box will integrate with Vertex AI to help customers process and analyze data stored in Box.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Expand Strategic Partnership Across Generative AI</span>
+<span class="span">integrate with Vertex AI</span>
+<span class="span">available on Google Cloud Marketplace</span>
+<span class="span">process and analyze data</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-05-02</span>
+<span class="eh">Box AI introduced with integration to OpenAI’s ChatGPT API</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Box announced Box AI to bring intelligence to enterprise content and stated it would integrate OpenAI’s most advanced models via the ChatGPT API. The launch emphasized Box’s enterprise‑grade security, compliance, and privacy.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Box Introduces Box AI</span>
+<span class="span">Integrates OpenAI’s ChatGPT API</span>
+<span class="span">enterprise-grade standards for security, compliance, and privacy</span>
+<span class="span">OpenAI COO Brad Lightcap</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Pre‑GenAI groundwork and skills framework</h2>
+<div class='range'>2017-10-11 → 2023-04-30</div>
+<div class='psum'>Box laid early foundations for AI in content management with the introduction of Box Skills in 2017, a framework to apply third‑party machine learning to Box‑stored content. Demonstrations at BoxWorks 2017 showed integrations with major AI ecosystems including IBM Watson, Microsoft Azure Cognitive Services, and Google Cloud.
+This period established Box’s long‑running pattern of partnering with multiple AI providers rather than building proprietary foundation models, foreshadowing the later multi‑model strategy that underpins Box AI.</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2017-10-11</span>
+<span class="eh">Box unveils Box Skills AI framework with IBM, Microsoft, and Google</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Box introduced Box Skills, a framework to apply state‑of‑the‑art machine learning tools to content in Box, showcasing skills powered by IBM Watson, Microsoft Cognitive Services, and Google Cloud. This event set the precedent for Box’s partner‑first approach to AI.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Box Unveils Box Skills</span>
+<span class="span">framework for applying state-of-the-art machine learning</span>
+<span class="span">IBM Watson, Microsoft Azure, and Google Cloud</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0026'>E0026</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What proportion of Box AI unit/API revenue is attributable to each underlying model provider (OpenAI, Google, Anthropic, AWS Bedrock, IBM/Meta)?</li>
+<li>How many customers have deployed Box Agent, Box Automate, and Box Extract in production, and what are attach rates within Enterprise Advanced/Plus tiers?</li>
+<li>What are the realized COGS impacts from multi‑provider model routing (e.g., token budgeting optimization) versus FY26 levels?</li>
+<li>Has Box executed any minimum‑commit or co‑sell agreements tied to Google Cloud Marketplace, Azure, or AWS Bedrock relevant to AI usage?</li>
+<li>What fraction of RPO uplift is explicitly tied to Enterprise Advanced and Box AI SKUs?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several ecosystem news items (e.g., data‑center backlash, search UI shifts, hardware) are industry context rather than Box‑specific transactions.</li>
+<li>Provider integrations sometimes announced via partners; underlying commercial terms and minimums are not disclosed in cited sources.</li>
+<li>IBM/Meta and AWS Titan participation are noted but only Meta Llama and Anthropic are mapped to canonical provider IDs per schema.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,812 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>NTSK US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Netskope Inc <span class='sub'>(NTSK US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.43</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>38 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 19</span>
+<span class='chip'>single source: 20</span>
+<span class='chip'>web-only (verified): 17</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Productization and multi-provider control plane ramps</h2>
+<div class='range'>2026-03-11 → 2026-06-30</div>
+<div class='psum'>In March 2026, Netskope introduced the Netskope One AI Security suite, NewEdge AI Fast Path, and an AI Index, alongside transaction-based pricing for AI modules and positioning as the optimal path for agentic traffic. Management highlighted enterprise AI immaturity and pervasive shadow AI, while citing high win rates and record net new ARR, with strong visibility from future committed billings.
+From April through June, Netskope expanded deep integrations across the AI stack: Google Cloud TPUs and Vertex AI for hardware-accelerated guardrails, early integration with Google’s Agent Gateway, Anthropic’s Claude Compliance API (plus AICC preview support), OpenAI ChatGPT Enterprise Next Gen API Data Protection, and an upcoming integration with Amazon Bedrock AgentCore. Netskope also joined Anthropic’s Project Glasswing for AI-speed code vulnerability discovery, and consolidated multi-model governance via AI Gateway support for OpenAI, Gemini, and Claude with a unified entry point and an “Other” schema.</div>
+<div class="event t-web_only_verified" id="E0038" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Docs: Add/Register Custom AI Provider; note on unsupported schemas</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Netskope provided steps to add custom AI providers under supported schemas (OpenAI, Google Gemini, Claude) or &#x27;Others&#x27;, noting that DLP inspection and AI Security Guardrails are unavailable for unsupported schemas.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">AI Schema: Choose one of the following AI providers</span>
+<span class="span">OpenAI • Google Gemini • Claude</span>
+<span class="span">DLP inspection and AI Security Guardrails—are unavailable</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0037" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-29</span>
+<span class="eh">Docs: AI Provider List supports OpenAI, Google Gemini, Anthropic Claude and an &#x27;Other&#x27; schema</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Documentation enumerated AI Gateway provider schemas (OpenAI, Google Gemini, Anthropic Claude) and added a generic &#x27;Other&#x27; schema with access logs, token auth, and rate limiting.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">AI Gateway supports following three AI provider schemas</span>
+<span class="span">OpenAI • Google Gemini • Anthropic Claude</span>
+<span class="span">generic “Other” schema option</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0036" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-27</span>
+<span class="eh">AI Gateway: unified multi-model governance across OpenAI, Gemini, and Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Netskope’s AI Gateway centralizes control and guardrails with a unified API entry point, managing interactions across OpenAI, Google Gemini, Anthropic Claude, and custom providers.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[15]</div>
+<span class="span">Centralized AI control</span>
+<span class="span">OpenAI, Google Gemini, and Anthropic Claude</span>
+<span class="span">unified API entry point</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0035" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">Docs: Anthropic Claude support for AI Command Center (preview)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Netskope enabled preview support for Anthropic Claude in AI Command Center via Claude Compliance API and Admin API, adding unified posture and DLP for Claude Enterprise conversations.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Claude support for AICC is currently available as a preview feature.</span>
+<span class="span">Claude Compliance API</span>
+<span class="span">Admin API</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0034" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-23</span>
+<span class="eh">Docs: Next Gen API Data Protection for Anthropic Claude Enterprise</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Netskope documented Next Generation API Data Protection for Anthropic Claude Enterprise, requiring connection via Claude Compliance APIs for monitored activities and protection.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Next Generation API Data Protection for Anthropic Claude Enterprise</span>
+<span class="span">Claude Compliance APIs</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-17</span>
+<span class="eh">Upcoming integration with Amazon Bedrock AgentCore</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Netskope announced an upcoming integration with Amazon Bedrock AgentCore to feed AI Guardrails detections (e.g., prompt injection) into AgentCore’s deterministic policy engine for agent traffic.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[18]</div>
+<span class="span">upcoming integration with Amazon Bedrock AgentCore</span>
+<span class="span">AgentCore enforces real-time, deterministic controls</span>
+<span class="span">prompt injection detection</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0032" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">Next Gen API Data Protection for ChatGPT Enterprise (docs)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Netskope published configuration guidance for Next Generation API Data Protection for ChatGPT Enterprise, connecting Netskope to ChatGPT Enterprise via APIs for monitored activities and policies.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Next Generation API Data Protection for ChatGPT Enterprise</span>
+<span class="span">connect Netskope to your ChatGPT Enterprise account</span>
+<span class="span">ChatGPT APIs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="anthropic_claude openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Launch of AgentSkope and AI Command Center; collaborations with Anthropic, OpenAI, and Google Cloud</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">On the 27Q1 release, management highlighted launches of AgentSkope and AI Command Center, and collaborations with Anthropic, OpenAI, and Google Cloud, reinforcing Netskope’s multi-provider posture.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Netskope One AgentSkope and AI Command Center</span>
+<span class="span">collaborations with Anthropic, OpenAI, and Google Cloud.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">AI pricing details: per-transaction, outcome-based agents, agent-count alignment</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Netskope specified AI pricing frameworks: per-transaction for AI security products, outcome-based pricing for agents, and Command Center aligned to number of agents.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">priced per transaction</span>
+<span class="span">priced on outcomes</span>
+<span class="span">aligned to number of agents.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">AI security pipeline growing fastest in company history</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited the AI security pipeline as the fastest the company has seen, noting early wins, indicating strong demand uptick for the new AI modules.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">pipeline growth is the fastest the company has seen</span>
+<span class="span">early wins.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">AI buyer set expands to include emerging ‘head of AI’ roles</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Netskope observed buyer expansion to CISOs, CIOs, infra/ops, and emerging ‘head of AI’ roles, with budgets spanning net-new AI and existing security/app funds.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">emerging ‘head of AI’ roles</span>
+<span class="span">mix of net‑new AI and existing security/app funds.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Win rate over 80% at POC/POV</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reiterated an over 80% win rate in POC/POV stages, supporting competitive positioning amid rising interest in AI security.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">over 80% win rate when we get to POC/POV,</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">RPO surpasses $1.2B; future billings +71% y/y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.2B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Netskope reported RPO over $1.2B, with contracted future billings up 71% year-over-year, indicating robust backlog and visibility.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">over $1.2B</span>
+<span class="span">+71% y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">ARR reaches $845M (+29% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$845M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">ARR reached $845M, up 29% year-over-year, reflecting ongoing monetization including from newly launched AI products.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ARR reached $845M (+29% y/y).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">H2 acceleration expected as AI modules monetize; ARR≈revenue growth</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects net new ARR acceleration in 2H FY27 as AI modules monetize and productivity improves, and reiterated ARR growth should track ~1pt within revenue growth.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">net new ARR acceleration in 2H FY27</span>
+<span class="span">~50% ramping reps gain productivity</span>
+<span class="span">ARR growth should track within ~1 percentage point of revenue growth.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Risk flagged: intensified SASE/AI security competition</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management warned that aggressive investment by large platforms and specialists in SASE and AI security could pressure pricing, lengthen sales cycles, or narrow product differentiation.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Large platform peers and specialized vendors are investing aggressively</span>
+<span class="span">Pricing pressure, longer sales cycles, or product parity</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0022" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">Netskope joins Anthropic’s Project Glasswing (Mythos Preview)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Netskope joined Project Glasswing, gaining access to Anthropic’s Claude Mythos Preview to help find code vulnerabilities at AI speed, signaling deeper collaboration with frontier models.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Project Glasswing</span>
+<span class="span">Claude Mythos Preview</span>
+<span class="span">GLOBE NEWSWIRE</span>
+<span class="span">find vulnerabilities in code</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0021" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Integration with Anthropic’s Claude Compliance API (Claude Enterprise)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Netskope announced integration with the Claude Compliance API, enabling full visibility and data protection for Claude Enterprise and supporting rapid growth in Claude adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3], web_search_findings[7]</div>
+<span class="span">integration with the Claude Compliance API</span>
+<span class="span">Claude Enterprise</span>
+<span class="span">grew from 56.2% to 94.9% adoption</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0020" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-26</span>
+<span class="eh">Early integration: Google Cloud Agent Gateway with Netskope DLP</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Following Google Cloud Next, Netskope integrated with Agent Gateway within the Gemini Enterprise Agent Platform, enabling inline DLP inspection and policy enforcement for agentic traffic.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Agent Gateway</span>
+<span class="span">Gemini Enterprise Agent Platform</span>
+<span class="span">Netskope One DLP On Demand</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0019" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">AI Guardrails on Google Cloud: TPUs and Vertex AI moderation</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Netskope announced an expanded Google Cloud partnership using TPUs and Vertex AI for hardware-accelerated moderation and guardrails to secure high-performance AI workflows at scale.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">AI Guardrails Solution Powered by Google Cloud TPUs</span>
+<span class="span">Vertex AI</span>
+<span class="span">Hardware-Accelerated Responsible AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Launch of Netskope One AI Security suite and NewEdge AI Fast Path</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Netskope introduced the Netskope One AI Security suite, NewEdge AI Fast Path, and Data Lineage, expanding platform capabilities focused on securing and routing AI workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">launch of Netskope One AI Security suite</span>
+<span class="span">NewEdge AI Fast Path</span>
+<span class="span">and Data Lineage;</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">AI modules priced per transaction (prompt + response)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management detailed AI pricing as transaction-based, defining a transaction as a prompt and a response, aligning monetization with AI usage volume.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">charged by transaction</span>
+<span class="span">A transaction is a prompt and a response.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Fast Path positioning for agentic and non-agentic traffic</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Netskope emphasized optimized routing for agentic and non-agentic traffic, reflecting growing AI microservice and agent traffic patterns.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">We are the best path for Agentic and non-Agentic traffic,</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Direct, resilient AI routing — not over public Internet</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AI Fast Path promises direct connectivity to AI services rather than routing over the public Internet, targeting performance and reliability for AI workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">we will not throw it on the public Internet—we will get you there directly,</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Enterprises early in AI; shadow AI constitutes 90% of usage</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated most enterprises are in early stages of AI adoption, with shadow AI comprising the majority of current usage, underscoring a governance and control opportunity.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">infancy</span>
+<span class="span">90% of their usage of AI is shadow AI,</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">POC win rate above 80%</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Netskope reported a POC win rate over 80%, citing breadth across 25 products, reflecting competitive positioning in AI and SASE security evaluations.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">over 80% when we get to a POC,</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Launch of Netskope AI Index (usage by vertical/geo)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Netskope released an AI Index to quantify enterprise AI usage patterns by vertical and geography, supporting data-driven governance and security insights.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">release of an AI Index to quantify usage by vertical/geo.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">ARR ends Q4 at $811M (+31% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$811M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Netskope reported ARR of $811M, up 31% year-over-year, signaling strong demand momentum, including from AI-driven offerings.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">ARR ended Q4 at $811M (+31% y/y).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Record Q4 net new ARR of $57M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$57M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted a record $57M net new ARR in Q4, reflecting accelerating sales performance into AI security use cases.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">record Q4 net new ARR $57M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">ARR growth modeling cue tied to revenue growth</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">CFO guidance suggested modeling ARR growth within about one percentage point of revenue growth, providing a benchmark for forward expectations.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">within a point above or below revenue growth,</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">Visibility: future committed billings up 78%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CFO cited strong visibility via future committed billings growing 78% year-over-year, supporting confidence in near-term pipeline conversion.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">78% growth in future committed billings</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem coverage and enterprise adoption signals</h2>
+<div class='range'>2025-01-31 → 2025-12-16</div>
+<div class='psum'>Through 2025, Netskope broadened its AI security lens beyond OpenAI, publishing analyses on DeepSeek models’ vulnerabilities and documenting rapid but uneven enterprise adoption, including high initial interest followed by significant blocking at many organizations. Netskope also discussed policy and governance stances around xAI’s Grok usage.
+Concurrently, the company deepened product integration into major enterprise ecosystems, announcing general availability of controls for Microsoft 365 Copilot. Internally, Netskope ran a &quot;Promptathon&quot; to drive AI fluency and usage, observing a sharp increase in internal weekly users across platforms like ChatGPT and Gemini.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-12-16</span>
+<span class="eh">Internal Promptathon doubles weekly AI users at Netskope</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Netskope’s Promptathon increased internal AI fluency and usage, with weekly users of managed AI platforms such as ChatGPT and Gemini more than doubling during the event.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[16]</div>
+<span class="span">Promptathon</span>
+<span class="span">from 700 weekly users to 1,500 weekly users</span>
+<span class="span">Gemini AI usage at Netskope</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-18</span>
+<span class="eh">General availability: Netskope CASB API for Microsoft 365 Copilot</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Netskope announced GA of CASB API integration for Microsoft 365 Copilot to deliver advanced data-at-rest security and compliance controls, enabling visibility and policy enforcement for Copilot interactions.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[17]</div>
+<span class="span">Netskope CASB API for Microsoft 365 Copilot is now generally available</span>
+<span class="span">connect their managed Microsoft 365 Copilot instance</span>
+<span class="span">data-at-rest policies</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="xai_grok openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-06-10</span>
+<span class="eh">Netskope on xAI Grok enterprise usage vs. ChatGPT</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">xai_grok</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Netskope assessed Grok’s enterprise trajectory, noting a plateau following Grok‑3 and contrasting this with significantly higher ChatGPT usage across organizations, while advising DLP and policy controls.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">Grok-3</span>
+<span class="span">82% of organizations are currently using ChatGPT</span>
+<span class="span">Elon Musk’s xAI</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="deepseek meta_llama">
+<div class="ev-top">
+<span class="date">2025-04-15</span>
+<span class="eh">Cloud and Threat Report: explosive DeepSeek interest; surge in local genAI adoption</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Netskope reported massive attempted access to DeepSeek shortly after launch and a rapid rise in organizations running local genAI infrastructure, reflecting diversified model usage including open-source ecosystems like Meta’s Llama.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">At its peak, 91% of organizations worldwide had users trying to access DeepSeek</span>
+<span class="span">75% blocking all access</span>
+<span class="span">from less than 1% to 54%</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2025-01-31</span>
+<span class="eh">Netskope AI Labs: DeepSeek-R1 security analysis and prompt-injection susceptibility</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">deepseek</span></div>
+<p class="narr">Netskope AI Labs found DeepSeek-R1-Distill-Qwen-7B vulnerable to a significant fraction of prompt-injection attempts and benchmarked this against OpenAI o1’s lower failure rate, underscoring risks in open-source model deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">DeepSeek-V3 and DeepSeek-R1</span>
+<span class="span">vulnerable to 27.3% of prompt injection attempts</span>
+<span class="span">OpenAI o1 fared better</span>
+<span class="span">approximately 8% failure rate</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Baseline genAI risk research and first OpenAI integration</h2>
+<div class='range'>2023-07-25 → 2024-07-18</div>
+<div class='psum'>Netskope’s AI-related narrative begins with empirical research on the risks posed by enterprise genAI usage, highlighting frequent sensitive data exposure to ChatGPT and other AI apps. This established a clear problem statement and demand driver for data protection and governance capabilities across AI tools.
+By mid-2024, Netskope moved from research to productized integration, announcing support for OpenAI’s ChatGPT Enterprise Compliance API. This integration extended the Netskope One platform’s visibility, policy enforcement, and data security into ChatGPT Enterprise environments, positioning Netskope as a control plane for enterprise genAI adoption.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-07-18</span>
+<span class="eh">Integration with OpenAI’s ChatGPT Enterprise Compliance API</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Netskope announced integration with OpenAI’s ChatGPT Enterprise Compliance API to extend visibility, policy enforcement, and data protection into ChatGPT Enterprise, enhancing governance for enterprise genAI usage.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">integration with OpenAI’s ChatGPT Enterprise</span>
+<span class="span">Compliance API</span>
+<span class="span">advanced API controls</span>
+<span class="span">Netskope One platform</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-07-25</span>
+<span class="eh">Threat Labs report: sensitive data frequently shared to ChatGPT and genAI apps</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Netskope Threat Labs reported that large enterprises regularly expose sensitive data to genAI applications, with ChatGPT the most used app. This research framed the need for AI data governance and security controls.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">sensitive data is being shared to generative AI apps</span>
+<span class="span">Source code accounts for the largest share</span>
+<span class="span">183 incidents of sensitive data</span>
+<span class="span">ChatGPT seeing more than 8 times</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0038'>E0038</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0038'>E0038</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0038'>E0038</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0024'>E0024</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What proportion of ARR and net new ARR in FY27 is attributable to the AI Security suite, AI Fast Path, AgentSkope, and AI Command Center monetization?</li>
+<li>How much usage and attach are Netskope seeing across specific provider integrations (OpenAI, Anthropic, Google) versus Microsoft Copilot and upcoming Amazon Bedrock AgentCore?</li>
+<li>What are the gross margin impacts of AI Guardrails leveraging Google Cloud TPUs and Vertex AI moderation at scale?</li>
+<li>What is the conversion and expansion rate of early AI security pipeline wins cited in 27Q1, and how does it track to the H2 FY27 acceleration outlook?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Most sources are vendor-authored press releases, product pages, docs, or blogs; third-party corroboration is limited.</li>
+<li>Some integrations are described as upcoming or preview; timelines and breadth of GA availability may change.</li>
+<li>Win-rate and pipeline characterizations are management claims from earnings commentary; independent verification is limited.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

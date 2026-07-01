@@ -1,0 +1,610 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>SLB US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>SLB Ltd <span class='sub'>(SLB US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.422</div>
+</header>
+<div class='stats'>
+<span class='chip'>5 phases</span>
+<span class='chip'>24 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 2</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 13</span>
+<span class='chip'>web-only (verified): 9</span>
+<span class='chip'>single source: 8</span>
+<span class='chip'>web-only (unverified): 4</span>
+<span class='chip'>corroborated: 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Commercial scale-up: DCS revenues, DSX partnership, marketplace launch</h2>
+<div class='range'>2026-01-23 → 2026-06-15</div>
+<div class='psum'>Entering 2026, SLB reported ~$1.0B Digital ARR at 12/31/25 and $460M 2025 Data Center Solutions (DCS) revenue (+121% y/y), with plans to internationalize DCS manufacturing in Asia and leverage Middle East ties. SLB’s XD products supported multi-cloud deployments on Azure, AWS, and GCP, and SLB codified GenAI terms distinguishing Connected vs. Embedded AI.
+In Q1’26, SLB expanded its NVIDIA DSX collaboration and reiterated an ambition to reach or exceed a ~$1B annualized DCS run-rate exiting 2026; DCS delivered $141M in Q1, and Digital ARR reached $1.02B. Management also announced acquisition of S&amp;P’s upstream software and a strategic AI partnership on S&amp;P datasets. In June, SLB launched a Digital Marketplace with about 200 products, including agents, domain models, and foundation models; sector media and a CNBC study highlighted SLB’s AI momentum.</div>
+<div class="event t-web_only_unverified" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">SLB launches Digital Marketplace with ~200 products incl. agents and models</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SLB introduced a Digital Marketplace to accelerate discovery and deployment of specialized AI agents, domain models, tools, and applications across existing environments, spanning Delfi and Lumi offerings and partner solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">SLB Digital Marketplace</span>
+<span class="span">approximately 200 digital products</span>
+<span class="span">agents, domain models, skills</span>
+<span class="span">Delfi™ and Lumi™ SaaS applications</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">ETF Central: sector rally highlights SLB AI metrics and Q1 print</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Sector commentary noted SLB’s Q1 2026 revenue print and reiterated AI-related metrics—$141M DCS revenue and &gt;$1B digital ARR—amid strong oilfield services performance.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">SLB Q1 2026 revenue was $8.72B</span>
+<span class="span">citing $141M Data Center Solutions revenue</span>
+<span class="span">and &gt;$1B digital ARR</span>
+<span class="span">OIH was about $430 on June 2</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-01</span>
+<span class="eh">CNBC study lists SLB among top AI adopters</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">A CNBC report ranked SLB among leading AI adopters alongside Nvidia and Meta, validating cross-sector AI adoption trends beyond megacaps.</p>
+<p class="cav">⚠ Third-party study; methodology not detailed in the snippet.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">Study ranks Nvidia, Meta, SLB among top AI adopters</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Expanded NVIDIA DSX collaboration; designing an &#x27;AI Factory for Energy&#x27;</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported expanding collaboration with NVIDIA to design and deploy DSX AI infrastructure and to develop an &#x27;AI Factory for Energy&#x27; concept aligned with sector-scale workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expanded its technology collaboration with NVIDIA</span>
+<span class="span">DSX AI infrastructure</span>
+<span class="span">‘AI Factory for Energy’</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Target ≥$1B annualized DCS run-rate exiting 2026; NVIDIA DSX modular design partner</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">SLB reiterated an ambition to reach or exceed a ~$1B annualized DCS revenue run-rate exiting 2026 and noted selection as a modular design partner for NVIDIA’s DSX AI factory.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<p class="cav">⚠ Ambition/target; not yet realized revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">reach or exceed a ~$1B annualized revenue run‑rate exiting 2026</span>
+<span class="span">modular design partner for NVIDIA’s DSX AI factory</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Q1’26 Data Center Solutions revenue $141M (+45% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$141M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">SLB reported Q1 2026 DCS revenue of $141M, up 45% year over year, reflecting continued commercialization of AI-related infrastructure solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0], news_rows[0]</div>
+<span class="span">Data Center Solutions revenue $141M (+45% y/y)</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Digital ARR $1.02B (+15% y/y) as of 2026-03-31</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Digital ARR reached $1.02B as of March 31, 2026, up 15% year over year, underscoring the scale of SLB’s digital and AI-enabled software businesses.</p>
+<details>
+<summary>evidence — 2 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0], news_rows[0]</div>
+<span class="span">Digital ARR $1.02B as of 2026-03-31 (+15% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">SLB to acquire S&amp;P upstream software; strategic AI partnership on datasets</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SLB agreed to acquire S&amp;P’s upstream petrotechnical software suite and pursue a strategic AI partnership leveraging S&amp;P datasets alongside SLB’s Delfi and domain models.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Consideration and closing timeline not disclosed in the excerpt.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">agreed to acquire S&amp;P’s upstream petrotechnical software suite</span>
+<span class="span">strategic AI partnership</span>
+<span class="span">leveraging S&amp;P datasets</span>
+<span class="span">Delfi</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Execution risk: integrating S&amp;P software and scaling NVIDIA DSX initiatives</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management highlighted execution complexity around manufacturing, supply chain, and integration of the newly announced S&amp;P Global Energy software assets and NVIDIA DSX initiatives.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">present execution complexity</span>
+<span class="span">integration of the newly announced S&amp;P Global Energy software assets</span>
+<span class="span">NVIDIA DSX initiatives</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-01</span>
+<span class="eh">SLB codifies GenAI terms: Connected vs Embedded; direct provider agreements required</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">SLB’s Online Services terms differentiate Connected Gen AI from Embedded Gen AI and require customers to have a direct agreement with any Connected GenAI provider, clarifying responsibilities and potential data-rights boundaries.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Generative AI Services</span>
+<span class="span">Connected Gen AI</span>
+<span class="span">Embedded Gen AI</span>
+<span class="span">direct agreement in place with the Connected Gen AI provider</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0014" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-01-30</span>
+<span class="eh">XD products validated for customer-managed Azure, AWS, and GCP deployments</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">SLB stated XD products can run in customer-managed environments on validated configurations across Microsoft Azure, AWS, and Google Cloud Platform, enhancing multi-cloud deployment flexibility.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ Validation pertains to infrastructure compatibility; not an LLM-provider selection.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">XD products</span>
+<span class="span">customer‑managed environments</span>
+<span class="span">Google Cloud Platform (GCP)</span>
+<span class="span">Microsoft Azure</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-23</span>
+<span class="eh">Digital ARR ~$1.0B at 12/31/25 (+15% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">SLB reported Digital ARR of approximately $1.0B at year-end 2025, up 15% year over year, evidencing continued scaling of its digital and AI-enabled offerings.</p>
+<details>
+<summary>evidence — 2 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1], news_rows[0]</div>
+<span class="span">Digital ARR reached ~$1.0B at 12/31/25 (+15% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-23</span>
+<span class="eh">Data Center Solutions revenue $460M in 2025 (+121% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$460M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">SLB disclosed 2025 DCS revenue of $460M, more than doubling year over year, reflecting strong demand for data center solutions supporting AI workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Data Center Solutions revenue $460M in 2025 (+121% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-23</span>
+<span class="eh">Internationalizing DCS: manufacturing in Asia; leverage Middle East</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SLB outlined plans to establish manufacturing and partnerships in Asia in 2026 and to leverage Middle East relationships thereafter, expanding DCS delivery footprint.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">establish manufacturing and partnerships in Asia</span>
+<span class="span">leverage relationships in the Middle East</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Generative AI deployments and ecosystem expansion</h2>
+<div class='range'>2025-06-11 → 2025-10-18</div>
+<div class='psum'>SLB extended Lumi to European compute with Mistral Compute, positioning Mistral’s LLMs as the primary generative models for Lumi—signaling a multi-model, region-sensitive stance. In the Middle East, SLB partnered with AIQ on deploying agentic AI at ADNOC following a $340 million contract award, with SLB joining Microsoft and G42 as implementation partners.
+SLB also reported a generative AI award in Norway with Petoro via its Innovation Factori workspace, combining FDPlan and domain AI models on Lumi for drilling optimization and field development planning.</div>
+<div class="event t-web_only_unverified" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-18</span>
+<span class="eh">SLB wins Petoro generative AI award via Innovation Factori on Lumi</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SLB highlighted a Norway contract from Petoro using generative AI to optimize drilling, delivered through Innovation Factori and domain AI models on the Lumi platform.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">Petoro</span>
+<span class="span">generative AI</span>
+<span class="span">Innovation Factori™ AI collaboration workspace</span>
+<span class="span">Lumi data and AI platform</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-07</span>
+<span class="eh">AIQ and SLB to deploy agentic AI across ADNOC; $340M contract; SLB joins Microsoft and G42</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$340M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">SLB and AIQ agreed to advance ENERGY^ai agentic AI across ADNOC subsurface operations after a $340 million contract award, with SLB named alongside Microsoft and G42 as implementation partners.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Revenue attribution among partners is not specified.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">agentic AI solution</span>
+<span class="span">$340 million contract</span>
+<span class="span">SLB joins Microsoft and G42</span>
+<span class="span">ADNOC’s upstream operations</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-11</span>
+<span class="eh">SLB to support Lumi on Mistral Compute; Mistral LLMs set as primary for Lumi</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SLB announced its flagship digital platform alignment with Mistral Compute and confirmed Mistral AI’s LLMs as the primary generative AI models for the Lumi platform, reflecting a European compute option and model diversity.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<p class="cav">⚠ Mistral is not one of the six frontier providers tracked; exposure is noted in narrative only.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Mistral Compute</span>
+<span class="span">collaboration with Mistral AI</span>
+<span class="span">began in early 2024</span>
+<span class="span">primary generative AI models for the Lumi™ data and AI platform</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Platformization of generative AI: Lumi launch and NVIDIA partnership</h2>
+<div class='range'>2024-03-05 → 2024-09-19</div>
+<div class='psum'>SLB broadened its generative AI posture in 2024. Microsoft highlighted SLB’s Enterprise Data Solution for Azure Data Manager for Energy and opportunities to leverage Azure OpenAI Service across downstream Microsoft 365 workflows. SLB then launched its Lumi data and AI platform embedding the latest LLMs and domain foundation models, deployable across major clouds and on-premises.
+SLB deepened its NVIDIA collaboration to develop and deploy industry-specific generative AI foundation models across Delfi and Lumi using NVIDIA NeMo, emphasizing flexibility to run in the data center, any cloud, or at the edge.</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2024-09-19</span>
+<span class="eh">SLB and NVIDIA expand collaboration to develop energy-focused generative AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SLB and NVIDIA announced collaboration to accelerate development and deployment of industry-specific generative AI models across Delfi and Lumi, leveraging NVIDIA NeMo, with flexibility to run in data centers, any cloud, or at the edge.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">collaboration with NVIDIA</span>
+<span class="span">generative AI solutions</span>
+<span class="span">NVIDIA NeMo™</span>
+<span class="span">in the data center, in any cloud or at the edge</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-09-17</span>
+<span class="eh">SLB launches Lumi data and AI platform embedding latest LLMs and domain models</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SLB introduced the Lumi platform integrating advanced AI, including generative AI, with workflows across the energy value chain. It embeds the latest LLMs and SLB’s domain foundation models and is available on all major cloud providers and on-premises.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">launched the Lumi™ data and AI platform</span>
+<span class="span">latest large language models (LLMs)</span>
+<span class="span">available on all major cloud service providers</span>
+<span class="span">domain foundation models from SLB</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-03-05</span>
+<span class="eh">Microsoft spotlights SLB solution with opportunities to use Azure OpenAI Service</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Microsoft positioned SLB as a strategic partner on Azure Data Manager for Energy, noting opportunities to leverage Microsoft Azure OpenAI Service for insights and workflow automation in Microsoft 365 contexts.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<p class="cav">⚠ The blog describes opportunities and examples rather than a specific contracted deployment of Azure OpenAI.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">SLB—one of Microsoft’s strategic partners</span>
+<span class="span">Azure Data Manager for Energy</span>
+<span class="span">Microsoft Azure OpenAI Service</span>
+<span class="span">generate Open XML documents</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Policy headwinds and enterprise modernization</h2>
+<div class='range'>2020-05-19 → 2021-04-29</div>
+<div class='psum'>In 2020, Google pledged not to build custom AI/ML algorithms for upstream oil and gas extraction—introducing policy uncertainty for bespoke AI in energy. For SLB, this created a potential constraint on custom co-developed AI paths with Google.
+Concurrently, SLB progressed enterprise modernization on Google Cloud for SAP and related IT services, migrating over 200 applications—broadening its operational cloud footprint independent of upstream AI policy constraints.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-04-29</span>
+<span class="eh">SLB selects Google Cloud for enterprise-wide SAP migration</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">SLB named Google Cloud as its provider for critical IT services and SAP workloads, migrating more than 200 applications. While primarily enterprise IT, it strengthens SLB’s multi-year cloud alignment with Google.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Schlumberger and Google Cloud today announced a new partnership</span>
+<span class="span">cloud provider for critical IT services</span>
+<span class="span">more than two hundred applications</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2020-05-19</span>
+<span class="eh">Google pledges not to build custom AI/ML for oil &amp; gas upstream extraction</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google announced it would not build custom AI/ML algorithms for upstream oil and gas extraction. This policy injects uncertainty into bespoke co-development for energy use cases on Google platforms.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Policy is provider-declared and may evolve; indirect impact on SLB depends on project scope and interpretation.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">not “build custom AI/ML algorithms</span>
+<span class="span">upstream extraction in the oil and gas industry</span>
+<span class="span">announced on Tuesday</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations on Google Cloud and AI groundwork</h2>
+<div class='range'>2017-09-13 → 2019-05-13</div>
+<div class='psum'>SLB began its modern AI journey by unveiling the DELFI cognitive E&amp;P environment in 2017, underpinned by a large E&amp;P data lake deployed on Google Cloud Platform. This established early-cloud scale and machine learning capabilities for subsurface data at industrial scale.
+In 2019, SLB renewed and significantly expanded its Google Cloud agreement, explicitly tying DELFI and other petrotechnical suites to Google’s cloud and AI capabilities, further anchoring SLB’s digital platforms in hyperscale infrastructure.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2019-05-13</span>
+<span class="eh">SLB renews and expands Google Cloud agreement, deepening AI-enabled DELFI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">SLB renewed and significantly expanded its Google Cloud partnership to develop cloud-native E&amp;P apps and harness Google’s AI capabilities, deploying DELFI and other suites on GCP for seismic processing and subsurface modeling.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">renewed and significantly expanded</span>
+<span class="span">Google Cloud</span>
+<span class="span">artificial intelligence (AI) capabilities</span>
+<span class="span">Google Cloud Platform (GCP)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2017-09-13</span>
+<span class="eh">SLB unveils DELFI on Google Cloud with large-scale E&amp;P data lake</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">SLB launched the DELFI cognitive E&amp;P environment and deployed an E&amp;P Data Lake on Google Cloud Platform, signaling foundational use of cloud, analytics, and machine learning at scale for E&amp;P workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">DELFI* cognitive E&amp;P environment</span>
+<span class="span">E&amp;P Data Lake on the Google Cloud Platform</span>
+<span class="span">more than 1,000 3D seismic surveys</span>
+<span class="span">5 million wells</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which third-party LLMs (by provider and version) are actively embedded in Lumi deployments as of mid-2026 beyond Mistral AI?</li>
+<li>How much SLB revenue attribution is expected from the $340M ADNOC agentic AI contract where SLB is an implementation partner?</li>
+<li>What is the closing timeline and financial consideration for the S&amp;P upstream software acquisition, and how will ARR be impacted?</li>
+<li>What portion of Data Center Solutions revenue is directly tied to AI accelerator infrastructure vs. general-purpose data center builds?</li>
+<li>What is the pipeline and committed backlog supporting the targeted ~$1B DCS run-rate exiting 2026?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some events derive from press releases or partner blog posts and may emphasize forward-looking statements or opportunities rather than executed deployments.</li>
+<li>Provider-specific relationships (e.g., Azure OpenAI, Mistral) are sometimes described as options or primary models without disclosed contract sizes; actual usage may vary by customer and geography.</li>
+<li>Google’s 2020 policy statement introduces contextual risk but does not specify direct contract modifications with SLB.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

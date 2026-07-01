@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Okta Inc <span class='sub'>(OKTA US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.404</div>
@@ -72,355 +82,31 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (verified): 6</span>
 <span class='chip'>web-only (unverified): 4</span>
 </div>
-<div class='phase'>
-<h2>Foundation of AI-augmented identity and open-agent rails</h2>
-<div class='range'>2023-10-04 → 2025-12-19</div>
-<div class='psum'>Okta began embedding AI into its identity products with Google Vertex AI powering features like Universal Logout. By mid-2025, Okta published an official OpenAI integration for authentication/provisioning and unveiled Cross App Access (XAA), an open protocol to standardize secure agent-to-app access. Concurrently, Okta documented internal GenAI usage via model cards, disclosing Anthropic Claude models (via AWS Bedrock escrow) and Cohere embeddings supporting Auth0 Guide and Governance workflows.</div>
-<div class="event t-web_only_verified" id="E0001">
-<div class="ev-top">
-<span class="date">2023-10-04</span>
-<span class="eh">Okta AI features launch leveraging Google Vertex AI, including Universal Logout</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">SDxCentral reported Okta introduced AI-bolstered security features built on Google Vertex AI, including Universal Logout that can automatically log users out of apps in real time during a security incident.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">Okta AI Universal Logout</span>
-<span class="span">built on Google Vertex AI</span>
-<span class="span">in real time</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0002">
-<div class="ev-top">
-<span class="date">2025-06-18</span>
-<span class="eh">Okta publishes OpenAI integration for SAML/OIDC/SCIM and workflows</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Okta listed an official OpenAI application integration enabling authentication/provisioning with standards (SAML, OIDC, SCIM) and workflow actions such as Create Chat Completion.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">Last updated: Jun. 18 2025.</span>
-<span class="span">Add this integration to enable authentication and provisioning capabilities.</span>
-<span class="span">Create Chat Completion.</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2025-09-25</span>
-<span class="eh">Okta introduces Cross App Access (XAA) to secure AI agents</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Okta announced Cross App Access (XAA), a new open protocol and enforcement via Okta Privileged Access to standardize how AI agents securely request access tokens to downstream apps under enterprise policy.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[11]</div>
-<span class="span">Cross App Access (XAA), a new open protocol</span>
-<span class="span">request access to the internal communication app from Okta</span>
-<span class="span">Okta Privileged Access (OPA)</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0004">
-<div class="ev-top">
-<span class="date">2025-10-23</span>
-<span class="eh">Model card: Auth0 Guide uses Anthropic Claude via AWS Bedrock; Cohere embeddings</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Okta disclosed in its Auth0 Guide model card that LLMs are provided by Anthropic (Claude Sonnet 4.0) with embeddings from Cohere, hosted on AWS Bedrock under an escrow arrangement.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[8]</div>
-<span class="span">The LLMs are provided by Anthropic</span>
-<span class="span">hosted by AWS through Amazon Bedrock</span>
-<span class="span">Anthropic Claude Sonnet 4.0</span>
-<span class="span">Cohere Embed V3 English</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0005">
-<div class="ev-top">
-<span class="date">2025-12-19</span>
-<span class="eh">Model card: Identity Governance Security Access Review uses Anthropic via Bedrock</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Okta’s GA model card for Security Access Review states the LLM provider is Anthropic (Claude Sonnet 3.7) accessed as a managed service on Amazon Bedrock under an escrow arrangement.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[9]</div>
-<span class="span">Model Provider: Anthropic, hosted on AWS Bedrock.</span>
-<span class="span">Claude Sonnet 3.7</span>
-<span class="span">Managed Service, specifically Amazon Bedrock.</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Agentic strategy declared; early traction and guardrails</h2>
-<div class='range'>2026-03-04 → 2026-05-28</div>
-<div class='psum'>Okta reported broad enterprise demand and early traction for AI agent offerings. It codified its approach with a public blueprint for the secure agentic enterprise and announced &#x27;Okta for AI Agents&#x27; alongside extending the Okta Integration Network to agent platforms (e.g., Google Vertex AI). Okta also disclosed participation in Anthropic&#x27;s Glasswing program to evaluate Claude Mythos for security hardening.
-During Q1 FY27 (reported May 28, 2026), management emphasized a vendor‑neutral blueprint, broad partnerships across Google, Amazon Bedrock, OpenAI, and Anthropic, and noted pipeline expansion and larger AI deal sizes, while clarifying AI was not yet material to revenue and that pricing is currently a user‑uplift transitioning toward per‑agent models. Okta highlighted risk controls such as time‑bounded limits on any &#x27;unlimited&#x27; agent usage and integrations like ServiceNow&#x27;s AI Control Tower with an Okta kill switch.</div>
-<div class="event t-single_source" id="E0006">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">Okta cites early traction from AI agent offerings</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">On its Q4 FY26 report, Okta pointed to broad enterprise demand and early traction from new AI agent–related offerings as contributors to performance.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">broad enterprise demand</span>
-<span class="span">early traction</span>
-<span class="span">AI agent–related offerings</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0007">
-<div class="ev-top">
-<span class="date">2026-03-16</span>
-<span class="eh">Okta publishes blueprint; announces &#x27;Okta for AI Agents&#x27; and OIN agent integrations</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Okta announced a secure agentic enterprise blueprint with &#x27;Okta for AI Agents&#x27; (available April 30, 2026) and extended the 8,200+ Okta Integration Network to support AI agent platforms including Google Vertex AI.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">new blueprint for the secure agentic enterprise</span>
-<span class="span">Available on April 30th, 2026, Okta for AI Agents</span>
-<span class="span">8,200+ integrations</span>
-<span class="span">Google Vertex AI</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0008">
-<div class="ev-top">
-<span class="date">2026-05-27</span>
-<span class="eh">Okta joins Anthropic Project Glasswing; evaluating Claude Mythos Preview</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Okta disclosed it joined Anthropic’s Project Glasswing, gaining access to Claude Mythos Preview to evaluate enhanced vulnerability discovery and security hardening.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[10]</div>
-<span class="span">Editor’s note (May 27, 2026)</span>
-<span class="span">Okta has joined Project Glasswing</span>
-<span class="span">Claude Mythos Preview</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0009">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">Vendor‑neutral blueprint and broad model partnerships (Google, OpenAI, Anthropic, Bedrock)</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Okta highlighted a vendor‑neutral blueprint and partnerships across ServiceNow, Google, Amazon Bedrock, OpenAI and Anthropic as part of its multi‑vendor strategy.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">vendor‑neutral &quot;blueprint&quot;</span>
-<span class="span">partnerships across ServiceNow, Google, Amazon Bedrock, OpenAI and Anthropic.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0010">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">AI agent pipeline reportedly at record scale</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management stated the pipeline for AI agent products is larger than ever, focusing on conversion to revenue rather than deal size expansion.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">pipeline&#x27;s bigger than anything we have ever seen</span>
-<span class="span">AI agent products</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0011">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">AI impact not yet material; only modestly in guidance</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Okta noted AI did not materially contribute in Q1 and is only modestly reflected in guidance, implying limited near-term financial contribution.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">did not &quot;materially contribute&quot; in Q1</span>
-<span class="span">modestly reflected in guidance</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0012">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">AI-specific deals carry significantly larger average sizes</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Okta said the average deal size for AI-specific deals is significantly larger than for the rest of the company.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">The average deal size for these AI specific deals is significantly larger</span>
-<span class="span">average deal size for the rest of the company.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0013">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">Current AI pricing is user‑based uplift; migration to per‑agent ahead</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Management said AI pricing today is an uplift on named/active users and expects evolution toward agent‑count models as use cases mature.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">pricing today is an uplift to named or active users</span>
-<span class="span">evolve to agent‑count models</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0014">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">Risk control: no unlimited‑agent exposure; any unlimited is time‑bound</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Okta emphasized contractual guardrails, stating there is no unlimited agent exposure and any such cases are time‑bound.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">There is no unlimited… If there is unlimited, it is time bound</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0015">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">ServiceNow AI Control Tower leverages Okta &#x27;kill switch&#x27; via token severance</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Okta cited its neutrality and integration footprint, pointing to ServiceNow’s AI Control Tower integration that can sever authorization tokens as a &#x27;kill switch.&#x27;</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">ServiceNow’s AI Control Tower</span>
-<span class="span">Okta’s ‘kill switch’</span>
-<span class="span">severing authorization tokens</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0016">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">Agentic security blueprint and 20k‑enterprise reach cited as differentiators</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Okta argued its published agentic security blueprint and distribution across 20k enterprises provide differentiation as AI security needs rise.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">published agentic security blueprint</span>
-<span class="span">20k‑enterprise distribution</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0017">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">Model‑provider partnerships not yet moving win rates; multi‑vendor ecosystem expected</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Okta said model‑provider partnerships have not yet moved the needle in wins and anticipates a multi‑vendor, &#x27;it takes a village&#x27; security ecosystem.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">have not yet &quot;moved the needle&quot; in wins</span>
-<span class="span">multi‑vendor, &quot;it takes a village&quot; security ecosystem.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0018">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">Partners, incl. hyperscalers and model providers, expected to scale deployments</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Okta reported early signs of increased partner‑sourced ARR and pipeline and expects GSIs, platform partners, hyperscalers, and model providers to help scale deployments.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Early signs of increased partner‑sourced ARR and pipeline</span>
-<span class="span">ServiceNow, hyperscalers, model providers</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0019">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">Agentic identity still early; no visible cycle acceleration</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Okta stated that while identity security importance is rising, the impact from agentic identity remains early and not yet visible in cycle acceleration.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Identity security’s importance is rising</span>
-<span class="span">agentic identity impact remains early</span>
-<span class="span">not yet visible in cycle acceleration.</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>AI agent ecosystem expansions and competitive emergence</h2>
 <div class='range'>2026-06-15 → 2026-06-27</div>
 <div class='psum'>Okta expanded ties with Google Cloud, integrating with Gemini Enterprise Agent Platform and Chrome Enterprise, and previewed Okta for AI Agents enforcement via the Google Agent Gateway. Okta became a featured identity provider for Anthropic’s Claude Enterprise beta, operationalizing Cross App Access (XAA) within MCP as &#x27;Enterprise Managed Auth&#x27; and offering centralized risk visibility via Claude Compliance API.
 OpenAI’s SSO documentation highlighted Okta as a commonly connected IdP and included Okta setup examples, reinforcing Okta’s role as identity broker for AI tools. Meanwhile, startup NewCore emerged from stealth with a $66M seed, positioning directly against Microsoft Entra and Okta with an AI-first identity platform for agents and humans.</div>
-<div class="event t-web_only_verified" id="E0020">
+<div class="event t-web_only_unverified" id="E0022" data-providers="openai_chatgpt">
 <div class="ev-top">
-<span class="date">2026-06-16</span>
-<span class="eh">Okta expands collaboration with Google Cloud for AI-powered workforce</span>
+<span class="date">2026-06-25</span>
+<span class="eh">OpenAI SSO docs highlight Okta as a common IdP and provide Okta setup examples</span>
 <span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Okta announced deeper integration with Google Cloud including Gemini Enterprise Agent Platform and Chrome Enterprise, with Auth0 for AI Agents integrating with Agent Runtime and planned Okta Policy Enforcement via Google Agent Gateway.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI’s updated SSO documentation confirms SAML-based SSO across IdPs and cites Okta among the most common connections, with configuration examples showing setup in Okta.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>1</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">Okta is expanding its collaboration with Google Cloud</span>
-<span class="span">Gemini Enterprise Agent Platform</span>
-<span class="span">Auth0 for AI Agents integrates with Agent Runtime</span>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2], web_search_findings[12]</div>
+<span class="span">SSO is currently supported through SAML</span>
+<span class="span">Some of the most common IdPs we&#x27;ve connected with include: Okta</span>
+<span class="span">examples below will showcase the setup in Okta</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0021">
+<div class="event t-web_only_unverified" id="E0021" data-providers="anthropic_claude">
 <div class="ev-top">
 <span class="date">2026-06-18</span>
 <span class="eh">Okta named featured IdP for Anthropic Claude Enterprise beta; XAA as MCP &#x27;Enterprise Managed Auth&#x27;</span>
@@ -429,6 +115,7 @@ OpenAI’s SSO documentation highlighted Okta as a commonly connected IdP and in
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
 <p class="narr">Anthropic announced Okta as a featured identity provider for the Claude Enterprise beta, enabling Cross App Access (XAA) for secure agent/app authorization within MCP, with added risk visibility via Claude Compliance API.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · ANT <b>2</b></span> <span class="chchip">product_integration_exposure · ANT <b>3</b></span> <span class="chchip">strategic_option_value · ANT <b>3</b></span> <span class="chchip">provider_specificity · ANT <b>2</b></span></div>
 <details>
 <summary>evidence — 3 source(s), 4 span(s)</summary>
 <div class="ev-src">web_search_findings[5], web_search_findings[6], web_search_findings[7]</div>
@@ -438,24 +125,25 @@ OpenAI’s SSO documentation highlighted Okta as a commonly connected IdP and in
 <span class="span">Enterprise Managed Auth</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0022">
+<div class="event t-web_only_verified" id="E0020" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-06-25</span>
-<span class="eh">OpenAI SSO docs highlight Okta as a common IdP and provide Okta setup examples</span>
+<span class="date">2026-06-16</span>
+<span class="eh">Okta expands collaboration with Google Cloud for AI-powered workforce</span>
 <span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">OpenAI’s updated SSO documentation confirms SAML-based SSO across IdPs and cites Okta among the most common connections, with configuration examples showing setup in Okta.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Okta announced deeper integration with Google Cloud including Gemini Enterprise Agent Platform and Chrome Enterprise, with Auth0 for AI Agents integrating with Agent Runtime and planned Okta Policy Enforcement via Google Agent Gateway.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · GEM <b>2</b></span> <span class="chchip">product_integration_exposure · GEM <b>3</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>2</b></span> <span class="chchip">provider_specificity · GEM <b>2</b></span></div>
 <details>
-<summary>evidence — 2 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[2], web_search_findings[12]</div>
-<span class="span">SSO is currently supported through SAML</span>
-<span class="span">Some of the most common IdPs we&#x27;ve connected with include: Okta</span>
-<span class="span">examples below will showcase the setup in Okta</span>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Okta is expanding its collaboration with Google Cloud</span>
+<span class="span">Gemini Enterprise Agent Platform</span>
+<span class="span">Auth0 for AI Agents integrates with Agent Runtime</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0023">
+<div class="event t-single_source" id="E0023" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-15</span>
 <span class="eh">NewCore raises $66M to build AI-first identity, positioning against Okta</span>
@@ -473,30 +161,388 @@ OpenAI’s SSO documentation highlighted Okta as a commonly connected IdP and in
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class='phase'>
+<h2>Agentic strategy declared; early traction and guardrails</h2>
+<div class='range'>2026-03-04 → 2026-05-28</div>
+<div class='psum'>Okta reported broad enterprise demand and early traction for AI agent offerings. It codified its approach with a public blueprint for the secure agentic enterprise and announced &#x27;Okta for AI Agents&#x27; alongside extending the Okta Integration Network to agent platforms (e.g., Google Vertex AI). Okta also disclosed participation in Anthropic&#x27;s Glasswing program to evaluate Claude Mythos for security hardening.
+During Q1 FY27 (reported May 28, 2026), management emphasized a vendor‑neutral blueprint, broad partnerships across Google, Amazon Bedrock, OpenAI, and Anthropic, and noted pipeline expansion and larger AI deal sizes, while clarifying AI was not yet material to revenue and that pricing is currently a user‑uplift transitioning toward per‑agent models. Okta highlighted risk controls such as time‑bounded limits on any &#x27;unlimited&#x27; agent usage and integrations like ServiceNow&#x27;s AI Control Tower with an Okta kill switch.</div>
+<div class="event t-single_source" id="E0009" data-providers="google_gemini_deepmind openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Vendor‑neutral blueprint and broad model partnerships (Google, OpenAI, Anthropic, Bedrock)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Okta highlighted a vendor‑neutral blueprint and partnerships across ServiceNow, Google, Amazon Bedrock, OpenAI and Anthropic as part of its multi‑vendor strategy.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>3</b> OAI <b>2</b> ANT <b>3</b></span> <span class="chchip">strategic_option_value · GEM <b>3</b> OAI <b>2</b> ANT <b>3</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b> OAI <b>4</b> ANT <b>4</b></span> <span class="chchip">switching_flexibility · GEM <b>3</b> OAI <b>3</b> ANT <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">vendor‑neutral &quot;blueprint&quot;</span>
+<span class="span">partnerships across ServiceNow, Google, Amazon Bedrock, OpenAI and Anthropic.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">AI agent pipeline reportedly at record scale</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated the pipeline for AI agent products is larger than ever, focusing on conversion to revenue rather than deal size expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">pipeline&#x27;s bigger than anything we have ever seen</span>
+<span class="span">AI agent products</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">AI impact not yet material; only modestly in guidance</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Okta noted AI did not materially contribute in Q1 and is only modestly reflected in guidance, implying limited near-term financial contribution.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">did not &quot;materially contribute&quot; in Q1</span>
+<span class="span">modestly reflected in guidance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">AI-specific deals carry significantly larger average sizes</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Okta said the average deal size for AI-specific deals is significantly larger than for the rest of the company.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">The average deal size for these AI specific deals is significantly larger</span>
+<span class="span">average deal size for the rest of the company.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Current AI pricing is user‑based uplift; migration to per‑agent ahead</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management said AI pricing today is an uplift on named/active users and expects evolution toward agent‑count models as use cases mature.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">pricing today is an uplift to named or active users</span>
+<span class="span">evolve to agent‑count models</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Risk control: no unlimited‑agent exposure; any unlimited is time‑bound</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Okta emphasized contractual guardrails, stating there is no unlimited agent exposure and any such cases are time‑bound.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">There is no unlimited… If there is unlimited, it is time bound</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">ServiceNow AI Control Tower leverages Okta &#x27;kill switch&#x27; via token severance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Okta cited its neutrality and integration footprint, pointing to ServiceNow’s AI Control Tower integration that can sever authorization tokens as a &#x27;kill switch.&#x27;</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ServiceNow’s AI Control Tower</span>
+<span class="span">Okta’s ‘kill switch’</span>
+<span class="span">severing authorization tokens</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Agentic security blueprint and 20k‑enterprise reach cited as differentiators</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Okta argued its published agentic security blueprint and distribution across 20k enterprises provide differentiation as AI security needs rise.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">published agentic security blueprint</span>
+<span class="span">20k‑enterprise distribution</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Model‑provider partnerships not yet moving win rates; multi‑vendor ecosystem expected</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Okta said model‑provider partnerships have not yet moved the needle in wins and anticipates a multi‑vendor, &#x27;it takes a village&#x27; security ecosystem.</p>
+<div class="ev-ch">channels: <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">have not yet &quot;moved the needle&quot; in wins</span>
+<span class="span">multi‑vendor, &quot;it takes a village&quot; security ecosystem.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Partners, incl. hyperscalers and model providers, expected to scale deployments</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Okta reported early signs of increased partner‑sourced ARR and pipeline and expects GSIs, platform partners, hyperscalers, and model providers to help scale deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Early signs of increased partner‑sourced ARR and pipeline</span>
+<span class="span">ServiceNow, hyperscalers, model providers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Agentic identity still early; no visible cycle acceleration</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Okta stated that while identity security importance is rising, the impact from agentic identity remains early and not yet visible in cycle acceleration.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Identity security’s importance is rising</span>
+<span class="span">agentic identity impact remains early</span>
+<span class="span">not yet visible in cycle acceleration.</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Okta joins Anthropic Project Glasswing; evaluating Claude Mythos Preview</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Okta disclosed it joined Anthropic’s Project Glasswing, gaining access to Claude Mythos Preview to evaluate enhanced vulnerability discovery and security hardening.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Editor’s note (May 27, 2026)</span>
+<span class="span">Okta has joined Project Glasswing</span>
+<span class="span">Claude Mythos Preview</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">Okta publishes blueprint; announces &#x27;Okta for AI Agents&#x27; and OIN agent integrations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Okta announced a secure agentic enterprise blueprint with &#x27;Okta for AI Agents&#x27; (available April 30, 2026) and extended the 8,200+ Okta Integration Network to support AI agent platforms including Google Vertex AI.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · GEM <b>2</b></span> <span class="chchip">product_integration_exposure · GEM <b>3</b></span> <span class="chchip">strategic_option_value · GEM <b>3</b></span> <span class="chchip">user_lock_in_relevance · GEM <b>1</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">new blueprint for the secure agentic enterprise</span>
+<span class="span">Available on April 30th, 2026, Okta for AI Agents</span>
+<span class="span">8,200+ integrations</span>
+<span class="span">Google Vertex AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">Okta cites early traction from AI agent offerings</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On its Q4 FY26 report, Okta pointed to broad enterprise demand and early traction from new AI agent–related offerings as contributors to performance.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">broad enterprise demand</span>
+<span class="span">early traction</span>
+<span class="span">AI agent–related offerings</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundation of AI-augmented identity and open-agent rails</h2>
+<div class='range'>2023-10-04 → 2025-12-19</div>
+<div class='psum'>Okta began embedding AI into its identity products with Google Vertex AI powering features like Universal Logout. By mid-2025, Okta published an official OpenAI integration for authentication/provisioning and unveiled Cross App Access (XAA), an open protocol to standardize secure agent-to-app access. Concurrently, Okta documented internal GenAI usage via model cards, disclosing Anthropic Claude models (via AWS Bedrock escrow) and Cohere embeddings supporting Auth0 Guide and Governance workflows.</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-12-19</span>
+<span class="eh">Model card: Identity Governance Security Access Review uses Anthropic via Bedrock</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Okta’s GA model card for Security Access Review states the LLM provider is Anthropic (Claude Sonnet 3.7) accessed as a managed service on Amazon Bedrock under an escrow arrangement.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>3</b></span> <span class="chchip">customer_experience_enhancement · ANT <b>2</b></span> <span class="chchip">provider_specificity · ANT <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Model Provider: Anthropic, hosted on AWS Bedrock.</span>
+<span class="span">Claude Sonnet 3.7</span>
+<span class="span">Managed Service, specifically Amazon Bedrock.</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-10-23</span>
+<span class="eh">Model card: Auth0 Guide uses Anthropic Claude via AWS Bedrock; Cohere embeddings</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Okta disclosed in its Auth0 Guide model card that LLMs are provided by Anthropic (Claude Sonnet 4.0) with embeddings from Cohere, hosted on AWS Bedrock under an escrow arrangement.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>3</b></span> <span class="chchip">customer_experience_enhancement · ANT <b>2</b></span> <span class="chchip">provider_specificity · ANT <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">The LLMs are provided by Anthropic</span>
+<span class="span">hosted by AWS through Amazon Bedrock</span>
+<span class="span">Anthropic Claude Sonnet 4.0</span>
+<span class="span">Cohere Embed V3 English</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-09-25</span>
+<span class="eh">Okta introduces Cross App Access (XAA) to secure AI agents</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Okta announced Cross App Access (XAA), a new open protocol and enforcement via Okta Privileged Access to standardize how AI agents securely request access tokens to downstream apps under enterprise policy.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Cross App Access (XAA), a new open protocol</span>
+<span class="span">request access to the internal communication app from Okta</span>
+<span class="span">Okta Privileged Access (OPA)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-06-18</span>
+<span class="eh">Okta publishes OpenAI integration for SAML/OIDC/SCIM and workflows</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Okta listed an official OpenAI application integration enabling authentication/provisioning with standards (SAML, OIDC, SCIM) and workflow actions such as Create Chat Completion.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>1</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Last updated: Jun. 18 2025.</span>
+<span class="span">Add this integration to enable authentication and provisioning capabilities.</span>
+<span class="span">Create Chat Completion.</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-10-04</span>
+<span class="eh">Okta AI features launch leveraging Google Vertex AI, including Universal Logout</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">SDxCentral reported Okta introduced AI-bolstered security features built on Google Vertex AI, including Universal Logout that can automatically log users out of apps in real time during a security incident.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>3</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>2</b></span> <span class="chchip">provider_specificity · GEM <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Okta AI Universal Logout</span>
+<span class="span">built on Google Vertex AI</span>
+<span class="span">in real time</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0007'>E0007</a></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0.15</td><td>0.25</td><td>0.25</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.3</td><td>0.85</td><td>0.85</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.1563</td><td>0.4168</td><td>0.4226</td><td>0</td><td>0</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What portion of Okta’s ARR or bookings in FY27/FY28 is attributable to AI agent products and XAA-enabled use cases?</li>
@@ -510,4 +556,19 @@ OpenAI’s SSO documentation highlighted Okta as a commonly connected IdP and in
 <li>OpenAI SSO documentation lists Okta among common IdPs but does not quantify adoption or revenue contribution.</li>
 <li>Competitive implications from NewCore are early-stage; seed financing does not guarantee product-market fit or enterprise displacement.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

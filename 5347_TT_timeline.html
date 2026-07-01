@@ -1,0 +1,518 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>5347 TT — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Vanguard International Semiconductor Corp <span class='sub'>(5347 TT)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.365</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>20 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>single source: 12</span>
+<span class='chip'>web-only (verified): 6</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>AI-driven demand surge; pricing actions; interposer pivot and execution milestones</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>Industry trackers reported tightening mature-node capacity and potential price hikes into early 2026 as AI applications boosted demand for power management and related components. VIS indicated it could not fully satisfy surging AI server/data center demand and planned NT$60–70B (US$1.9–2.22B) 2026 capex, with 85% allocated to the Singapore JV, while separately announcing across-the-board foundry price increases of 10–15% starting in April.
+In 26Q1 disclosures, VIS pivoted part of the Singapore 12&quot; fab to include interposers for advanced AI packaging (30–40nm). Phase-one investment was reduced from $7.8B to $6.7B and nameplate capacity from 55k to 44k wpm by 2029. Management said first-phase capacity was fully committed via LTAs, with samples targeted for Jun–Jul 2026 and mass production in 1Q27. Execution and near-term margin pressure risks were flagged, with ECB financing supporting the heavy capex profile.</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Singapore 12&quot; fab to include interposers for advanced AI packaging (30–40nm); initial 44k wpm sold out via LTA</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">VIS is adjusting the product portfolio at the new 12-inch Singapore fab to add interposers for advanced AI packaging (30–40nm), with first-phase 44k wpm indicated as sold out via long-term arrangements.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">interposers for advanced AI packaging (30–40nm)</span>
+<span class="span">first-phase 44k wpm is sold out via LTA</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">VSMC phase-one investment reduced to $6.7B; 2029 nameplate lowered to 44k wpm</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6.7B · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">VIS disclosed that VSMC’s phase-one investment plan is reduced from $7.8B to $6.7B, with 2029 full-load nameplate capacity lowered from 55k to 44k wpm as interposer capability is added.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">reduced from USD 7.8bn to USD 6.7bn</span>
+<span class="span">by 2029 is lowered from 55k wpm to 44k wpm</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Phase-one fully committed; samples Jun–Jul 2026; mass production 1Q27</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">VIS indicated phase-one capacity is fully committed under long-term arrangements, with initial samples expected around June–July 2026 and mass production targeted in 1Q27.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">fully committed under long-term arrangements</span>
+<span class="span">samples targeted around June–July 2026</span>
+<span class="span">mass production targeted in 1Q27</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Management flags near-term margin pressure from interposer mix</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">VIS warned that interposer addition increases process complexity and may pressure margins early, while mix and learning effects and secured demand should improve profitability over time.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">may pressure margins early</span>
+<span class="span">expected to be accretive to earnings quality</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">AI server ecosystem demand cited as near-term driver; ~4 months visibility</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">VIS highlighted demand tied to AI server ecosystems, alongside approximately four months of order visibility, as near-term demand drivers supporting shipments and ASPs.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">demand tied to AI server ecosystems as near-term drivers</span>
+<span class="span">roughly four months of order visibility</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">AI demand and interposer production at Singapore JV targeted to support growth</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">VIS stated that AI-related demand and interposer production at the Singapore JV are targeted to support growth.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-related demand</span>
+<span class="span">targeted to support growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Execution risk flagged for Singapore 300mm interposer ramp</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">VIS cautioned that delays in technology transfer, customer tool readiness, or qualification could defer revenue and returns on substantial committed capex for the Singapore 300mm interposer program.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Risk: Singapore 300mm interposer ramp/execution</span>
+<span class="span">any delays in technology transfer</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">ECB financing supports heavy capex; investing cash outflows elevated</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">VIS reported operating cash inflow, significant capex within investing outflows, and financing inflows driven by ECB issuance, reflecting funding for ongoing expansion.</p>
+<p class="cav">⚠ Amounts presented in NT$; USD conversion not provided in source.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">cash flow from operations NT$11,432m</span>
+<span class="span">CAPEX of NT$25,280m</span>
+<span class="span">ECB issuance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Phase-one 300mm capacity sold out under LTA; ~4 months visibility</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management indicated first-phase 300mm capacity at VSMC is sold out under long-term agreement, with order visibility of roughly four months per post-earnings coverage.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">sold out under a long-term agreement</span>
+<span class="span">order visibility extends to roughly four months</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Interposer participation viewed as strategic entry to advanced-packaging supply chains</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">VIS characterized interposer participation as a strategic entry point into advanced-packaging supply chains, aligning with AI-driven assembly requirements.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">interposer participation as a strategic entry point</span>
+<span class="span">advanced‑packaging supply chains</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">VIS evaluating potential phase-two expansion at VSMC</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management said a phase-two expansion at the Singapore JV remains under evaluation, contingent on demand and execution milestones.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">phase-two expansion</span>
+<span class="span">under evaluation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Secured long-term demand underpins ramp; utilization aiming upper-80%; ~4 months visibility</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">VIS noted secured long-term demand supporting the VSMC phase-one ramp, a multiquarter recovery with AI-adjacent content, improving utilization toward the upper-80% range, and approximately four months of order visibility.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">secured long‑term demand underpinning</span>
+<span class="span">upper‑80% range</span>
+<span class="span">approximately four months of order visibility</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-09</span>
+<span class="eh">VIS to raise foundry prices 10–15% from April; mix may weigh on ASPs</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">VIS notified customers of across-the-board 10–15% price increases starting in April, following selective single-digit hikes in Q1. The company guided shipments up 1–3% but noted average selling prices could fall 3–5% on mix and expiring long-term contracts.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">raise foundry prices by 10% to 15% across the board starting in April</span>
+<span class="span">single-digit percentage earlier this year</span>
+<span class="span">shipments to rise 1% to 3%</span>
+<span class="span">average selling prices could fall 3% to 5%</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">VIS: AI server/data-center demand exceeds supply; 2026 capex US$1.9–2.22B (85% to VSMC)</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.9B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">VIS said it is unable to fully satisfy surging demand for chips used in AI servers and data centers. The company planned NT$60–70B capex in 2026 (US$1.9–2.22B), with 85% earmarked for the VSMC Singapore fab.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ Capex presented as a range (US$1.9–2.22B); value recorded at lower bound.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">unable to fully satisfy surging demand</span>
+<span class="span">artificial intelligence (AI) servers and data centers</span>
+<span class="span">spend NT$60 billion to NT$70 billion (US$1.9 billion to US$2.22 billion) this year</span>
+<span class="span">85 percent of the amount earmarked for VSMC</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">TrendForce: AI demand to lift mature-node prices; VIS estimated +4–8% from Q1</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TrendForce cited industry sources indicating mature-node pricing could rebound on AI demand, with VIS estimated to implement 4–8% increases, near-full utilization, and tightening capacity.</p>
+<p class="cav">⚠ Trade press synthesis; pricing estimates attributed to industry sources.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">price hikes at Vanguard</span>
+<span class="span">estimated at around 4% to 8%</span>
+<span class="span">utilization has remained near full</span>
+<span class="span">surging demand for AI servers</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Singapore 300mm JV launched; technology licensed; governance and disclosure controls</h2>
+<div class='range'>2024-06-05 → 2025-12-31</div>
+<div class='psum'>VIS and NXP announced the VSMC joint venture to build a 300mm fab in Singapore focused on 130nm–40nm mixed-signal, power management and analog products, with an expected 55k wpm output by 2029 and a total initial build cost of $7.8B. The JV includes assured proportional capacity to both partners and will be operated by VIS. Later in June 2024, VSMC’s board approved a TSMC technology license, with a $150M fee, and reiterated plans for mass production in 2027.
+In January 2025, VIS’s annual report emphasized NDA requirements and structured information governance, underscoring compliance and disclosure practices—relevant to customer confidentiality as the company expands into higher-value supply chains.</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-29</span>
+<span class="eh">Annual report highlights NDA requirements and disclosure controls</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">VIS’s 2024 annual report (printed Jan 29, 2025) emphasized NDA execution with customers, confidential information security levels, bilingual disclosure, and centralized PR/IR management, underscoring data governance as customer programs scale.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">sign a Non-Disclosure Agreement</span>
+<span class="span">determine the security level of confidential information</span>
+<span class="span">bilingual Chinese and English websites</span>
+<span class="span">Public Relations and Investor Relations Department</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2024-06-26</span>
+<span class="eh">VSMC board approves TSMC technology license; $150M fee; MP in 2027</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$150M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">VIS disclosed that VSMC approved obtaining a technology license from TSMC for 130nm to 40nm processes with a $150M license fee. Construction was planned to begin in 2H24 with volume production in 2027.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>技術授權費1.5億美元</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>VSMC（VisionPower Semiconductor Manufacturing Company）</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>2027年量產</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>130奈米至40奈米</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-06-05</span>
+<span class="eh">VIS and NXP form VSMC JV to build 300mm Singapore fab; initial build ~$7.8B</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$7.8B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">VIS and NXP established VisionPower Semiconductor Manufacturing Company (VSMC) to construct a 300mm fab in Singapore. The JV targets 130–40nm nodes with expected output of 55k wpm by 2029. The total initial build cost is anticipated at $7.8B, with VIS injecting $2.4B (60%) and NXP $1.6B (40%), alongside additional long-term capacity support.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">VisionPower Semiconductor Manufacturing Company Pte Ltd (VSMC)</span>
+<span class="span">55,000 300mm wafers per month in 2029</span>
+<span class="span">The total cost of the initial build out is anticipated to be $7.8 billion</span>
+<span class="span">VIS will inject $2.4 billion</span>
+<span class="span">NXP will inject $1.6 billion</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Pre-JV groundwork and server/AI-adjacent demand signals</h2>
+<div class='range'>2022-12-12 → 2024-06-04</div>
+<div class='psum'>Vanguard International Semiconductor (VIS) entered into a foundry agreement with Monolithic Power Systems in late 2022 to supply power semiconductors on 8-inch lines, explicitly citing datacenter demand among target end-markets. Through early 2024, VIS signaled a return to growth with a majority of new orders centered on power management chips used in servers and other electronics, and indicated active evaluation of a 12-inch fab investment to address long-term capacity scarcity.
+These steps prefigured a broader move to secure next-generation capacity and align product mix with rising AI-related demand in servers and infrastructure.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-03-23</span>
+<span class="eh">VIS sees 2024 recovery; new orders for power management chips incl. servers; evaluating 12&quot; fab</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">VIS reaffirmed expectations for a mild 2024 recovery, with most new orders in power management chips used in consumer electronics, notebooks, and servers. Management also said it is diligently looking at potential investment in a new 12-inch fab to address long-term capacity scarcity.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">revenue would return to growth this year</span>
+<span class="span">power management chips used in consumer electronics, notebook computers and servers</span>
+<span class="span">a mild recovery for the full year of 2024</span>
+<span class="span">potential investment in a new 12-inch fab</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2022-12-12</span>
+<span class="eh">MPS and VIS sign long-term foundry agreement for power semiconductors</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Monolithic Power Systems and VIS entered a foundry agreement under which MPS will utilize VIS’s 8-inch wafer fabrication in Singapore and Taiwan. The agreement targets growing end-markets including datacenters, supporting VIS’s positioning in AI-adjacent power components.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">entered into a foundry agreement</span>
+<span class="span">8-inch (200mm) wafer fabrication</span>
+<span class="span">datacenters</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which specific customers and end-applications are driving the interposer LTAs at VSMC, and what is the duration/volume profile of those contracts?</li>
+<li>How much of VIS’s 2026–2027 AI-related revenue uplift is tied to data center/AI server power management ICs versus interposer wafers?</li>
+<li>What are the expected margin trajectories for interposer products from pilot to mass production, and what utilization thresholds drive accretion?</li>
+<li>What are the detailed terms of the ECB issuance (maturity, coupon, conversion price) used to support capex?</li>
+<li>Has the reduction from $7.8B to $6.7B capex altered partner allocations, government incentives, or the timeline for additional phases at VSMC?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some pricing and demand signals (e.g., TrendForce estimates) are based on industry sources and may differ from VIS’s internal or disclosed pricing actions.</li>
+<li>Several cash flow and capex figures are reported in NT$ without USD conversion in filings; magnitudes are therefore not standardized across all events.</li>
+<li>2026 capex plan is presented as a range (US$1.9–2.22B); we record the lower bound for magnitude and note uncertainty.</li>
+<li>Chinese-language sources are used for the TSMC license event; translations are inferred from the cited original text.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

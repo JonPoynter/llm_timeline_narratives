@@ -1,0 +1,443 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>HPQ US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>HP Inc <span class='sub'>(HPQ US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.421</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>15 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 3</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 7</span>
+<span class='chip'>single source: 9</span>
+<span class='chip'>web-only (verified): 4</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Acceleration of AI PC mix; print Copilot; next‑gen silicon</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>HP began 2026 by integrating Microsoft Copilot into Office Print devices, extending AI workflows to document tasks. Q1 and Q2 filings showed rapid AI PC adoption, with AI PCs surpassing 35% of Q1 shipments and reaching 44% in Q2; management guided for 60–70% AI PC mix next fiscal year and over 70% by FY2028, while flagging demand timing and channel inventory risks.
+Broadly, better AI PC demand contributed to HP topping revenue and profit estimates per Reuters. On the silicon front, Nvidia announced the Arm‑based RTX Spark PC SoC at Computex, with HP listed among OEMs expected to ship systems in fall 2026, underscoring ongoing performance and on‑device AI trajectory.</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">Nvidia unveils RTX Spark PC SoC; HP among OEMs expected to ship in fall 2026</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">At Computex, Nvidia announced the RTX Spark Windows PC SoC co‑developed with MediaTek. Coverage noted systems from OEMs including HP are expected in fall 2026, signaling another pathway for on‑device AI performance.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<p class="cav">⚠ Third-party reporting; HP SKU/volume specifics not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">RTX Spark</span>
+<span class="span">HP</span>
+<span class="span">expected in fall 2026</span>
+<span class="span">Computex</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">HP tops estimates; AI PC and Windows 11 refresh cited</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters reported HP beat revenue and profit estimates, with AI PCs and Windows 11 refresh driving performance and steadier after‑hours trading.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">tops revenue and profit estimates</span>
+<span class="span">AI PC and Windows 11 refresh</span>
+<span class="span">HPQ steady to higher after hours</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Q2: AI PCs 44% of shipments; guidance to 60–70% next FY and &gt;70% by FY2028</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">HP reported AI PCs at 44% of Q2 PC shipments, and management targeted 60–70% AI PC mix next fiscal year and over 70% by FY2028.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI PCs were 44% of PC shipments in Q2</span>
+<span class="span">60–70% next fiscal year</span>
+<span class="span">&gt;70% by FY2028.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">CEO underscores intelligent devices, edge AI, AI‑powered print, and HP IQ</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Interim CEO Bruce Broussard highlighted continued execution across intelligent devices and edge AI, with innovation spanning AI PCs, Z workstations, AI‑powered print, and the HP IQ experience layer.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">intelligent devices, edge AI</span>
+<span class="span">AI PCs, Z workstations</span>
+<span class="span">AI-powered print</span>
+<span class="span">HP IQ.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Management flags AI PC adoption timing and channel inventory risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">HP cautioned that while AI PC mix rose, demand timing, enterprise qualification cycles, and channel inventory could create volatility in ASPs, unit mix, and margins.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">demand timing</span>
+<span class="span">enterprise qualification cycles</span>
+<span class="span">channel inventory</span>
+<span class="span">volatility to ASPs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Q1: AI PCs over 35% of shipments; Win11/AI cited as tailwinds</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported AI PCs at over 35% of Q1 PC shipments, with expectations for Windows 11 refresh and AI PC penetration to support above‑seasonal Q2 revenue growth.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Q1 PC shipments</span>
+<span class="span">Win11 refresh</span>
+<span class="span">AI PC penetration</span>
+<span class="span">above-seasonal Q2 revenue growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">AI PC momentum drove PS share gains; pricing/supply levers cited</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">HP cited Windows 11 refresh and AI PC momentum driving Personal Systems share gains, and pointed to pricing, product configuration, supply agreements, and cost actions to mitigate commodity inflation.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">AI PC momentum drove PS share gains</span>
+<span class="span">pricing, product configuration</span>
+<span class="span">supply agreements</span>
+<span class="span">commodity inflation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Transformation plan targets ~$1B run‑rate savings by FY2028 focused on AI enablement</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">neutral</span></div>
+<p class="narr">HP reiterated its FY26 transformation plan focused on AI enablement and productivity, targeting approximately $1B gross run‑rate savings by FY2028, including about $300M by end of FY26.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">~$1B</span>
+<span class="span">by FY2028</span>
+<span class="span">~$300M by end of FY26</span>
+<span class="span">AI enablement</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-01-06</span>
+<span class="eh">HP brings Microsoft Copilot to Office Print devices</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">At CES 2026, HP introduced the first integration of Microsoft Copilot into HP Office Print via HP for Microsoft 365 Copilot, enabling summarization, translation, and organization. Microsoft has highlighted Copilot’s access to GPT‑4o, indicating OpenAI model usage behind these experiences.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5], web_search_findings[1]</div>
+<span class="span">first integration of Microsoft Copilot</span>
+<span class="span">HP for Microsoft 365 Copilot</span>
+<span class="span">document summarization, translation, and smart organization</span>
+<span class="span">GPT-4o</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>HP AI tools and platform build-out amid cost restructuring</h2>
+<div class='range'>2025-01-01 → 2025-12-31</div>
+<div class='psum'>HP expanded its AI developer and user tooling in 2025. The HP AI Studio community promoted one‑click containerization to work with model families like DeepSeek, Llama, and Mistral, while an HP Tech Takes explainer emphasized local AI on HP laptops with high‑TOPS NPUs capable of running ChatGPT‑style tools offline.
+HP also showcased an emerging first‑party assistant, HP AI Companion, described in Japan-language materials as GPT‑4o–based with a local/cloud toggle. In parallel, HP progressed a restructuring program (first outlined in late 2025) targeting up to $1B in savings through 2028, including up to 6,000 job cuts, to reposition the cost base for the AI PC transition.</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-24</span>
+<span class="eh">HP details local AI on 48–55 TOPS NPUs enabling offline LLM use</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">An HP Tech Takes article explained how HP laptops with 48–55 TOPS NPUs can run ChatGPT‑style tools offline via open‑source models like Llama and Mistral, and contrasted local versus cloud AI options.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ Marketing/educational content; not a formal product announcement.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">48-55 TOPS</span>
+<span class="span">ChatGPT-style AI tools offline</span>
+<span class="span">Llama 3.1</span>
+<span class="span">Google Gemini</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-25</span>
+<span class="eh">HP announces up to 6,000 job cuts; restructuring to save ~$1B through 2028</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">mixed</span></div>
+<p class="narr">HP disclosed a restructuring plan including up to 6,000 job cuts and targeted savings through 2028, framed amid the AI PC transition and efficiency push.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">job cuts up to 6000</span>
+<span class="span">restructuring through 2028</span>
+<span class="span">restructuring to save 1b</span>
+<span class="span">Q4 rev 14.6b</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-08-05</span>
+<span class="eh">HP AI Companion (beta) described as GPT‑4o–based with local/cloud toggle</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">HP Tech&amp;Device TV (Japan) profiled the HP AI Companion as an assistant based on OpenAI’s GPT‑4o with a switch to run processing locally or in the cloud, indicating HP’s own assistant direction spanning on‑device and cloud AI.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ Japan-language review; product status noted as beta at time of writing.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">HP AI Companion</span>
+<span class="span">GPT-4o</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>ローカルにするか、クラウドにするかを切り替えられる</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-03-07</span>
+<span class="eh">HP AI Studio promotes 1‑click containerization; examples include DeepSeek, Llama, Mistral</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">An HP AI Creator Community webinar highlighted HP AI Studio’s workflow, enabling secure, reproducible environments with one‑click containerization and example model families such as DeepSeek, Llama, and Mistral for experimentation.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">1-Click Containerization</span>
+<span class="span">DeepSeek, Llama and Mistral</span>
+<span class="span">secure, reproducible environments</span>
+<span class="span">March 7, 2025</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Copilot+ and Gemini PCs emerge</h2>
+<div class='range'>2024-05-20 → 2024-12-31</div>
+<div class='psum'>HP entered the AI PC cycle in tandem with Microsoft’s Copilot+ PC launch, unveiling its first next‑generation ARM-based AI laptops with on-device NPUs capable of running local models. Microsoft positioned Copilot+ as bringing advanced AI, including GPT‑4o, to Windows devices from OEMs including HP, with availability beginning June 18, 2024.
+Shortly after, Google announced Gemini-powered features for Chromebook Plus and highlighted new HP Chromebooks as part of the refreshed portfolio. These moves signaled HP’s multi-platform AI device strategy across both Windows and ChromeOS ecosystems.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-05-28</span>
+<span class="eh">Google brings Gemini to Chromebook Plus; HP Chromebooks featured</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google announced new AI experiences on Chromebook Plus, integrating Gemini and offering Google One AI Premium for new Chromebook Plus users. The post explicitly highlighted new Chromebooks from HP among launch devices.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Chromebook Plus</span>
+<span class="span">Gemini</span>
+<span class="span">Google One AI Premium</span>
+<span class="span">from HP</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-05-20</span>
+<span class="eh">HP unveils first Copilot+ AI PCs with Snapdragon X Elite; part of Microsoft’s launch</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">At Microsoft’s AI event, HP introduced the HP OmniBook X AI PC and HP EliteBook Ultra AI PC built on Snapdragon X Elite NPUs and aligned to Copilot+ PC. Microsoft’s blog indicated Copilot+ would provide access to GPT‑4o from OpenAI, with availability starting June 18, 2024.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[1]</div>
+<span class="span">HP OmniBook X AI PC</span>
+<span class="span">Snapdragon® X Elite</span>
+<span class="span">Copilot+ PC</span>
+<span class="span">GPT-4o</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of HP’s PC and Print revenue is directly attributable to AI features (Copilot/HP AI Companion/HP IQ) versus traditional usage?</li>
+<li>What licensing or revenue-sharing terms, if any, govern HP’s integrations with Microsoft Copilot (including print) and how durable are those terms?</li>
+<li>Which specific HP SKUs will ship with Nvidia RTX Spark in fall 2026, and what is the expected volume/mix impact on AI PC penetration and margins?</li>
+<li>Will HP AI Companion graduate from beta to a globally supported product, and how will data residency and privacy controls be handled for local vs. cloud modes?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items are based on vendor blog posts or marketing pages (HP AI Studio, HP Tech Takes) rather than SEC filings; quantitative impact is not disclosed.</li>
+<li>HP AI Companion evidence is from a Japan-language promotional article; product scope, global availability, and model sourcing may evolve.</li>
+<li>Nvidia RTX Spark reporting cites HP as an expected OEM without specific HP model or shipment commitments.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,660 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>SMTC US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Semtech Corp <span class='sub'>(SMTC US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.406</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>28 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 9</span>
+<span class='chip'>single source: 19</span>
+<span class='chip'>web-only (verified): 8</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>AI video compression partnership and hyperscaler interconnect ramps</h2>
+<div class='range'>2026-03-10 → 2026-06-05</div>
+<div class='psum'>In March 2026, Semtech partnered with Digital Barriers to integrate EdgeVis AI video compression into its AirLink XR60 5G router and Smart Connectivity services, offering up to 90% bandwidth reduction for surveillance and analytics. Days later, fiscal Q4 FY2026 filings reiterated hyperscaler-driven adoption vectors across ACC, 800G, and 1.6T, plus an active ACC MSA and Section 48 ITC support for laser capacity.
+By late May 2026 (Q1 FY2027), management highlighted imminent 1.6T FiberEdge/CopperEdge shipments, broad qualification across module makers, growing ACC evaluations at hyperscalers/enterprises, and visibility into 1H FY2028. Risks include potential pauses in AI interconnect spending and competitive dynamics. In June 2026, S&amp;P index rebalancing moved Semtech into the S&amp;P MidCap 400, reflecting broader market shifts toward AI and data-center beneficiaries.</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">S&amp;P rebalancing moves Semtech into S&amp;P MidCap 400</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">S&amp;P Dow Jones Indices announced quarterly changes effective June 22, 2026, including Semtech moving into the S&amp;P MidCap 400, reflecting shifts favoring AI and data-center beneficiaries.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<p class="cav">⚠ Index change noted within broader S&amp;P rebalance communication.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">S&amp;P 500</span>
+<span class="span">June 22, 2026</span>
+<span class="span">Semtech moving into the 400</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">1.6T CopperEdge/FiberEdge begin shipping in Q2; 2H momentum</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Semtech stated 1.6T CopperEdge and FiberEdge would begin shipping in Q2 with momentum building in the second half, signaling the start of 1.6T production ramps.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">1.6T CopperEdge and FiberEdge begin shipping in Q2</span>
+<span class="span">momentum in 2H</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Broad module-maker qualifications; ACC evaluations at multiple hyperscalers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited broad qualification with almost all module manufacturers, ACC samples in evaluation at multiple hyperscalers/enterprises, and interest in onboard linear equalizers.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">almost all module manufacturers</span>
+<span class="span">ACC samples in evaluation at multiple hyperscalers/enterprises</span>
+<span class="span">onboard linear equalizers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">ACC MSA spec not final; standardization seen as adoption catalyst</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Semtech said the MSA is still finalizing its specification and agreed that common standards across cable makers would be a catalyst for more accelerated ACC adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">still working on finalizing the specification</span>
+<span class="span">a catalyst for more accelerated adoption of ACC</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">GaN demand ~3x capacity; plan multiple capacity additions through next year</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management said GaN chip demand would probably outpace capacity by about 3x, with plans to lift capacity by about 3x–4x by year-end and another 3x–4x by the end of next year.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">will probably outpace the capacity by about 3x</span>
+<span class="span">by about 3x–4x</span>
+<span class="span">by the end of next year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">LoRa edge AI cited as new adoption vector</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Semtech flagged edge AI applications as a potential wildcard for accelerating adoption, reflecting AI workloads moving closer to devices and gateways.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">One wild card is the edge AI application</span>
+<span class="span">enablement efforts to accelerate adoption</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Visibility into back half FY2027 and 1H FY2028 for interconnects and lasers</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited visibility extending into the back half of this year and the first half of fiscal 2028, with broad-based acceleration across FiberEdge, CopperEdge, 800G/1.6T, and lasers.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">back half of this year into the first half of fiscal 2028</span>
+<span class="span">broad-based acceleration across FiberEdge, CopperEdge, 800G/1.6T, and lasers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Risk: exposure to pauses in AI interconnect spending and project timing</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Semtech warned that concentration in hyperscale/cloud and networking OEM cycles could create volatility if AI interconnect spending pauses or project timings change, impacting orders and revenues.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">any pause in AI interconnect spending</span>
+<span class="span">drive volatility in orders and revenues</span>
+<span class="span">hyperscale/cloud and networking OEM cycles concentrates risk</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Targeting ~35% q/q data center revenue growth in Q2 FY2027</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$35 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Citing strong bookings and backlog, management targeted approximately 35% sequential data center revenue growth in Q2 FY2027, implying accelerating demand into 2H FY2027.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~35% sequential revenue growth in data center</span>
+<span class="span">Q2 FY2027</span>
+<span class="span">accelerating demand into 2H FY2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">CEO highlights accelerating data center growth and robust bookings/backlog</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO emphasized accelerating data center growth through FY2027 alongside robust bookings and backlog, reinforcing confidence in Semtech’s AI-related interconnect trajectory.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">accelerating data center growth</span>
+<span class="span">robust bookings/backlog</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Single‑chip BiDi linear equalizer architecture outlined</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Semtech described a preliminary architecture to enable bidirectional (BiDi) capability on one chip, potentially reducing component count and cost for next-gen modules.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">BiDi on one chip</span>
+<span class="span">preliminary architecture</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Management: copper remains very strong; optimistic on CopperEdge</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Countering end-of-life narratives for copper, Semtech stated copper remains very strong at higher data rates and expressed optimism about CopperEdge’s outlook.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">copper remains “very strong”</span>
+<span class="span">very optimistic about [the] CopperEdge</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">ACC shipments to cable makers to support midyear hyperscaler ramp</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management guided that CopperEdge shipments would begin toward the end of the fiscal quarter (April time frame) to support a midyear rack-level ramp at a hyperscaler, with additional hyperscalers evaluating ACC.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">shipments of CopperEdge to cable makers would begin</span>
+<span class="span">April time frame</span>
+<span class="span">midyear rack-level ramp at a hyperscaler</span>
+<span class="span">more hyperscalers are evaluating ACC</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">800G remains foundation through FY2027; 1.6T ramps as XPUs move to 200G I/O</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Semtech reiterated 800G as the prevailing foundation throughout FY2027 while planning for 1.6T ramps aligned to 200G I/O XPUs, reinforcing interconnect demand visibility.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">800G remains the current “foundation”</span>
+<span class="span">at least throughout fiscal 2027</span>
+<span class="span">1.6T ramps as XPUs move to 200G I/O</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">FY2027 data center growth reiterated at ~50% y/y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$50 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated ~50% y/y data center revenue growth for FY2027, citing ACC to a hyperscaler, H2 1.6T ramps, and linear equalizer on-board as drivers.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">FY2027 data center revenue growth of ~50% y/y</span>
+<span class="span">ACC to a hyperscaler</span>
+<span class="span">linear equalizer on-board</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">HIFU lasers in volume production but capacity-limited; FY2027 contribution</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">HIFU gain chips for tunable lasers were reported in volume production yet capacity limited, with management expecting a high-teen revenue contribution in FY2027.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">capacity limited</span>
+<span class="span">volume production</span>
+<span class="span">high-teen level of revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">Laser-fab CapEx described as moderate; eligible for 35% Section 48 ITC</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$35 · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Management said laser-related CapEx could be supported by one quarter of free cash flow and is eligible for a 35% Section 48 investment tax credit, with potential grants also noted.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">CapEx intensity is “moderate”</span>
+<span class="span">easily supported with…one quarter of the free cash flow</span>
+<span class="span">35% Section 48 investment tax credit</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">ACC MSA drafting underway with 12 founding members</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Semtech noted 12 founding members actively drafting an ACC MSA to unify specifications and reduce deployment risk, a potential accelerator for cross-vendor adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">12 founding members</span>
+<span class="span">actively drafting an ACC MSA</span>
+<span class="span">unify specs and reduce deployment risk</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">Risk: slower optical upgrades or competitor gains could weigh on margins</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management flagged risk that a slower cadence of optical module upgrades or competitor share gains could pressure SIP growth and total semiconductor products margins.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">slower cadence of optical module upgrades</span>
+<span class="span">competitor share gains could weigh</span>
+<span class="span">‘total semiconductor products’ margins</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-10</span>
+<span class="eh">Semtech integrates Digital Barriers’ EdgeVis AI compression into XR60 5G router</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$90 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Semtech and Digital Barriers launched a turnkey cellular video solution embedding EdgeVis AI-powered compression into the AirLink XR60 with Smart Connectivity, enabling up to 90% bandwidth reduction for critical surveillance and analytics.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">EdgeVis AI-powered video compression</span>
+<span class="span">AirLink® XR60 5G router</span>
+<span class="span">up to 90% bandwidth reduction</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>1.6T optical interconnect ramp for AI data centers</h2>
+<div class='range'>2025-09-07 → 2025-09-29</div>
+<div class='psum'>In September 2025, Semtech announced and sampled multiple 1.6T building blocks across FiberEdge and multimode optical domains, targeting AI data center interconnects. New TIAs and VCSEL drivers emphasized power efficiency and short-reach performance inside AI training clusters.
+These launches, and collaboration with ecosystem partners like Broadcom, positioned Semtech to participate in the 1.6T transition and to help alleviate data center power constraints while extending the life of 800G deployments.</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2025-09-29</span>
+<span class="eh">Semtech samples 1.6T multimode PMD building blocks; collaboration with Broadcom</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Semtech began sampling GN1878 VCSEL driver and GN1836 TIA for 1.6T multimode optical links in AI data centers, with Broadcom noting seamless operation with its 200G VCSEL and photodetector technology.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">sampling of critical physical medium dependent (PMD) building blocks</span>
+<span class="span">1.6T multimode optical</span>
+<span class="span">GN1878</span>
+<span class="span">Broadcom’s 200G VCSEL</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-09-07</span>
+<span class="eh">Semtech unveils FiberEdge TIAs targeting 1.6T AI data centers; power efficiency gains</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Semtech announced GN1834D for 1.6T modules and GN1818 for 800G with up to 20% power reduction, addressing AI data center interconnect power constraints and enabling 8x200G architectures.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">GN1834D</span>
+<span class="span">1.6T optical interconnect</span>
+<span class="span">up to 20% power reduction</span>
+<span class="span">GN1818</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>LoRa ecosystem foundation and cloud hooks</h2>
+<div class='range'>2016-09-29 → 2024-03-28</div>
+<div class='psum'>Semtech’s AI-adjacent positioning originated in its LoRa/IoT ecosystem leadership, participating in the LoRa Alliance and showcasing LoRaWAN solutions as early as 2016. The ecosystem subsequently attracted major cloud participation, with Google Cloud joining the LoRa Alliance in 2018 and featuring LoRa in its Next ’18 IoT sessions. Competitive tension from cellular IoT carriers was already visible in 2018, as industry coverage framed LoRa as contending with licensed-spectrum alternatives.
+In 2022, Semtech expanded cloud touchpoints by integrating LoRa Cloud geolocation services into AWS IoT Core Device Location across seven regions, creating a device-to-cloud pathway for low-power asset tracking. The 2024 10-K reiterates Semtech’s core markets across data centers and connectivity hardware, setting up the company’s later AI data center interconnect push.</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-03-28</span>
+<span class="eh">10-K outlines Semtech’s infrastructure and IoT markets including data centers</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Semtech’s 2024 10-K reiterates its role as a high-performance semiconductor and IoT systems provider with end markets spanning data centers, carrier networks, and enterprise IoT connectivity hardware.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">high-performance semiconductor, Internet of Things (&quot;IoT&quot;) systems and cloud connectivity service provider</span>
+<span class="span">Infrastructure: data centers, passive optical networks (&quot;PON&quot;)</span>
+<span class="span">IoT module, router, gateways and managed connectivity</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2022-11-29</span>
+<span class="eh">Semtech licenses LoRa Cloud GNSS geolocation to AWS IoT Core Device Location</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Semtech entered a strategic agreement with AWS to integrate LoRa Cloud GNSS geolocation into AWS IoT Core Device Location, making services globally available across seven regions for low-power track-and-trace solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">entered a strategic agreement with Amazon Web Services, Inc. (AWS)</span>
+<span class="span">license its LoRa Cloud™ global navigation satellite system (GNSS) geolocation services</span>
+<span class="span">AWS IoT Core Device Location</span>
+<span class="span">available across seven regions</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2018-12-11</span>
+<span class="eh">Industry: Semtech advances LoRa silicon while facing cellular IoT competition</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">RCR Wireless reported Semtech’s next-gen LoRa silicon and community momentum while noting competitive pressure from cellular IoT carriers, framing market share risks for LoRa-based deployments.</p>
+<p class="cav">⚠ Third-party industry analysis; not a company filing.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">next-gen silicon</span>
+<span class="span">stares down cellular IoT carriers</span>
+<span class="span">founding members of the LoRa Alliance</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2018-07-11</span>
+<span class="eh">Google Cloud Next ’18 features LoRa in IoT track-and-trace solutions</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google Cloud highlighted how WAN technologies such as LoRa and cellular integrate with Google Cloud IoT and Google Maps Platform for asset tracking, underscoring LoRa’s cloud integration patterns relevant to Semtech.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Next ‘18</span>
+<span class="span">WAN technologies such as LoRa and cellular</span>
+<span class="span">Google Maps Platform</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2018-05-31</span>
+<span class="eh">Google Cloud joins LoRa Alliance, bolstering cloud alignment for LoRaWAN</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">The LoRa Alliance announced Google Cloud as a Sponsor Member ahead of the 10th LoRa Alliance Open House. This further validated LoRaWAN in cloud-centric IoT strategies that include Semtech’s technology.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Google Cloud has joined as a Sponsor Member</span>
+<span class="span">10th LoRa Alliance Open House</span>
+<span class="span">June 7, 2018</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2016-09-29</span>
+<span class="eh">Semtech to showcase LoRaWAN at LoRa Alliance All Members Meeting (Seoul)</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Semtech announced participation at the LoRa Alliance All Members Meeting hosted by SK Telecom in Seoul on Oct. 11–13, highlighting its LoRa Wireless RF Technology and continued alliance leadership.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">LoRa Alliance™ All Members Meeting</span>
+<span class="span">Sheraton Seoul Palace Gangnam Hotel</span>
+<span class="span">SK Telecom</span>
+<span class="span">Oct. 11-13</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0022'>E0022</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which specific hyperscaler is the initial ACC rack-level ramp tied to, and what is the anticipated volume and timing of that ramp?</li>
+<li>When will the ACC MSA specification be finalized, and what deployment milestones or pilots are planned immediately after ratification?</li>
+<li>What percentage of Semtech’s FY2027 revenue is expected to come from AI data center interconnect versus other infrastructure and IoT segments?</li>
+<li>What is the planned capital outlay and timeline for the GaN capacity additions (3x–4x this year and again next year), and what portion is supported by ITC/grants?</li>
+<li>What are the commercial terms and expected revenue impact of the AWS LoRa Cloud GNSS geolocation integration within AWS IoT Core Device Location?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some ecosystem and competitive dynamics (e.g., cellular IoT carrier competition) are derived from third-party industry reporting rather than company filings.</li>
+<li>Google Cloud references relate to IoT and connectivity, not to direct Gemini/LLM integrations; provider mapping reflects corporate affiliation rather than LLM usage.</li>
+<li>Index inclusion in the S&amp;P MidCap 400 indicates potential passive flow dynamics but does not directly evidence AI product traction.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

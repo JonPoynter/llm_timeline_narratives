@@ -1,0 +1,623 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>CMS US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>CMS Energy Corp <span class='sub'>(CMS US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.445</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>26 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 2</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 13</span>
+<span class='chip'>single source: 16</span>
+<span class='chip'>web-only (unverified): 5</span>
+<span class='chip'>web-only (verified): 4</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Q2 2026 – Execution roadmap, capital needs, and Michigan competitive landscape</h2>
+<div class='range'>2026-03-17 → 2026-06-01</div>
+<div class='psum'>CMS updated investors on a roughly 9 GW large-load pipeline with 110 MW signed YTD, reiterated that 1 GW of new load could imply $2–$5B of incremental capex and lower customer rates by ~2%/yr, and flagged an execution timeline beginning in 2028 with early electrons before a 2029–2030 ramp. The June IRP preview included ~1.5 GW gas and ~13 GW renewables to meet long-term needs if large loads materialize, while financing signals included ATM settlements and acknowledgement of capital pressure from potential conversions.
+Concurrently, Michigan’s competitive environment intensified: Google announced a major data center with DTE Energy (2.7 GW of resources enabled), and OpenAI and partners broke ground on a 1 GW campus in Saline (also in DTE territory). Local opposition dynamics emerged in Lyon Township around a proposed hyperscale development, underscoring permitting/community risks that could affect timelines.</div>
+<div class="event t-web_only_verified" id="E0026" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-01</span>
+<span class="eh">OpenAI and partners break ground on 1 GW Saline, MI data center (DTE territory)</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI, with Oracle, Related Digital, and Walbridge, broke ground on &quot;The Barn,&quot; a 1 GW data center campus in Saline Township. Reporting indicated DTE would power the project, with an estimated value topping $7B. This highlights strong hyperscale momentum in Michigan but not in CMS service territory.</p>
+<p class="cav">⚠ Project is in DTE territory, not CMS.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8], web_search_findings[5]</div>
+<span class="span">we broke ground on The Barn, a 1GW data center campus in Saline, Michigan</span>
+<span class="span">costs will not be passed on to local ratepayers</span>
+<span class="span">OpenAI, Oracle and Related Digital</span>
+<span class="span">value will top $7 billion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Large-load pipeline ~9 GW; 110 MW signed YTD; per-GW capex and rate benefits outlined</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CMS cited a roughly 9 GW pipeline of primarily data center/industrial loads with 110 MW signed year-to-date and reiterated that each 1 GW could imply $2–$5B incremental capex while lowering average customer rates by ~2% annually over five years.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">pipeline of roughly 9 GW</span>
+<span class="span">110 MW signed YTD</span>
+<span class="span">each 1 GW of new large load could imply $2–$5B</span>
+<span class="span">reducing average customer rates by ~2% annually</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">At least two hyperscalers in advanced negotiations; one near finalization</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported that at least two hyperscalers are in advanced negotiations and one is nearing contract finalization.</p>
+<p class="cav">⚠ Counterparties not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">at least two hyperscalers are in advanced negotiations</span>
+<span class="span">nearing contract finalization</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Execution timeline: 2028 start with early electrons ahead of 2029–2030 ramp</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CMS indicated that 2028 is the timeline within the contemplated contracts, with early electrons sooner and a 2029–2030 ramp.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“2028 is the timeline within the contracts,”</span>
+<span class="span">“early electrons”</span>
+<span class="span">ahead of a 2029–2030 ramp</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Affordability: incremental large loads would not be borne by existing customers</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated that incremental large loads would not be borne by existing customers and could lower average customer rates by about 2% annually for every GW added.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">would not be borne by existing customers</span>
+<span class="span">lower average customer rates by about 2% annually for every GW added</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Rule-of-thumb: Each 1 GW drives $2–$5B incremental CapEx</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · capex</span> <span class="badge">mixed</span></div>
+<p class="narr">CMS reiterated a capital intensity rule-of-thumb that every gigawatt gets between $2–$5 billion of incremental CapEx.</p>
+<p class="cav">⚠ Lower bound shown for a stated range.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">every gigawatt gets you somewhere between $2–$5 billion of incremental CapEx</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Conversion of large-load pipeline would pressure financing needs</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management flagged potential upward pressure on CapEx and financing needs—equity, debt, and intermediates—if significant portions of the large-load pipeline convert.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">upward pressure on CapEx and thus on financing needs—equity, debt, and all things in between.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">June IRP preview: propose ~1.5 GW gas and ~13 GW renewables to meet potential large loads</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CMS previewed its June IRP proposal including ~1.5 GW of new gas capacity and ~13 GW of renewables, acknowledging significant large-load opportunities where each GW could drive $2–$5B in incremental capital and lower rates.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Resource additions are prospective and contingent on load realization and regulatory approvals.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~1.5 GW new gas capacity</span>
+<span class="span">~13 GW of renewables</span>
+<span class="span">each 1 GW of such load could drive $2–$5B incremental capital</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">ATM equity-forward settlement: 1.9M shares for ~$142M net proceeds (Q1)</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$142M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">CMS settled a portion of its ATM equity-forward entered earlier, totaling approximately 1.9 million shares for about $142 million in net proceeds during Q1.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">1.9M shares</span>
+<span class="span">for ~$142M net proceeds</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Risk flagged: delays in large-load realization/permitting could defer earnings trajectory</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">CMS highlighted risks that slower-than-expected large-load realization, permitting/zoning delays, or supply-chain constraints could defer capex, rate base growth, and earnings.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Slower-than-expected large-load realization, permitting/zoning delays, or supply-chain constraints</span>
+<span class="span">defer capex, rate base growth, and earnings trajectory.</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0027" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Local opposition: Recall petition over Lyon Township hyperscale &quot;Project Flex&quot; (Anthropic-linked)</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">A local radio report noted recall petition language approval following conditional approval of a hyperscale data center known as Project Flex by Walbridge and Verrus on behalf of Anthropic. The proposal included six buildings and a utility substation, signaling potential permitting/community risks that can affect Michigan data center timelines.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Site appears outside CMS territory; included as state-level permitting risk context.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">approve recall petition language</span>
+<span class="span">Project Flex</span>
+<span class="span">on behalf of Anthropic</span>
+<span class="span">a utility substation</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0024" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">Google announces new Michigan data center with DTE; 2.7 GW of new resources enabled</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google announced plans for a new data center served by DTE Energy with an agreement enabling 2.7 GW of new clean resources. DTE subsequently noted it secured an agreement to power a planned 1 GW Google data center in Michigan. While outside CMS territory, this underscores competitive load capture within the state.</p>
+<p class="cav">⚠ Competitive development in DTE’s territory; included as state-level context.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7], web_search_findings[6]</div>
+<span class="span">partnering with DTE Energy to develop a new data center</span>
+<span class="span">2.7 gigawatts (GW) of new resources</span>
+<span class="span">planned 1 gigawatt (GW) data center in Van Buren Township</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early 2026 – Tariff in place, funnel expands, financing posture</h2>
+<div class='range'>2026-01-16 → 2026-03-06</div>
+<div class='psum'>With the large-load tariff in effect, Consumers Energy emphasized strong customer protections: large users fund 100% of incremental infrastructure, pay significant minimum demand charges, and commit to long-dated terms. CMS’ Q4 2025 earnings outlined a growing data center funnel, potential first online date as soon as 2028, and a funding plan including ~US$700m of ATM equity in 2026 and &gt;US$1.5b junior subs in 2027–2028.
+Management reiterated affordability benefits (lower bill growth if large loads materialize) and highlighted that none of the potential large-load additions were embedded in the 5-year plan at that time.</div>
+<div class="event t-web_only_unverified" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-06</span>
+<span class="eh">Consumers Energy reiterates data center protections: 100% cost responsibility, 80% minimum demand, 15-year terms</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Consumers Energy emphasized that large new users will pay 100% of associated infrastructure and energy costs, face at least an 80% minimum demand charge, and sign minimum 15-year contracts—consistent with MPSC-approved tariff protections.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3], web_search_findings[2]</div>
+<span class="span">do not pay for data centers</span>
+<span class="span">must pay 100% of the energy infrastructure</span>
+<span class="span">minimum demand charge, at least 80%</span>
+<span class="span">15-year minimum contracts</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Data center funnel grew; +2 projects; first could be online as soon as 2028</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On the Q4 2025 release, management noted two additional data centers in the funnel and reiterated earliest online timing as soon as 2028.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">another 2 data centers joined</span>
+<span class="span">as soon as 2028</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Large Load Tariff cited as approved and supportive of economic development</span>
+<span class="badge">regulatory</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CMS reiterated that the Large Load Tariff was approved in November, aligning with the MPSC order that set strong protections and terms for serving data centers and similar very large users.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1], web_search_findings[2]</div>
+<span class="span">Large Load Tariff approved in November</span>
+<span class="span">approved Consumers Energy’s application</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Load outlook: ~3% in 2026; 2–3% thereafter</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management guided to ~3% weather-normalized load growth in 2026 with a 2–3% trajectory thereafter, aided by large multi-year industrial and data center projects.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">3% weather-normalized load growth in 2026</span>
+<span class="span">2–3% thereafter</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Affordability sensitivity: ~1 GW large-load could cut bill CAGR by ~2 pts</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CFO quantified that converting ~1 GW of large-load opportunities could reduce the bill CAGR by ~2 percentage points.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">reduce the bill CAGR by about 2 points</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Each +1 GW may require ~$2.5–$5+ billion of investment</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.5B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management estimated that each incremental 1 GW of load would require roughly $2.5–$5+ billion of distribution and supply investments.</p>
+<p class="cav">⚠ Lower bound shown for a stated range.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">each incremental 1 GW of load</span>
+<span class="span">roughly $2.5–$5+ billion</span>
+<span class="span">distribution and supply investments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Large-load upside excluded from 5-year plan</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management clarified that none of the potential large-loads (e.g., data centers) were included in the 5-year plan at that time.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">none of these loads are included in the 5‑year plan</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Plan to raise ~$700m via ATM equity in 2026</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$700M · equity_stake</span> <span class="badge">neutral</span></div>
+<p class="narr">The CFO reiterated plans to utilize approximately $700 million of ATM equity in 2026, with an updated prospectus supplement to be filed.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">CFO reiterated ~$700m of ATM equity in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Debt plan: &gt;$1.5B junior subs largely in 2027–2028</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.5B · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">Management outlined plans for a little over $1.5 billion of junior subordinated debt, largely in the 2027–2028 period.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">“a little over $1.5 billion” of junior subs</span>
+<span class="span">largely in 2027–2028</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-16</span>
+<span class="eh">Consumers Energy publishes data center FAQ: customers protected, one DC currently served</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">A Consumers Energy one-pager stated residential customers will not pay to bring data centers online, that CE currently serves one data center, and that new projects will pay more than their fair share of all associated energy system costs.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Will new data centers in Michigan raise my rates? No.</span>
+<span class="span">will not pay a single penny</span>
+<span class="span">currently serves just one data center</span>
+<span class="span">they will pay more than their fair share</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>2025 – First hyperscale agreement and regulatory framework</h2>
+<div class='range'>2025-07-31 → 2025-12-11</div>
+<div class='psum'>CMS signaled a step-change in potential AI/data center exposure in mid-2025, announcing an agreement expected to add up to 1 GW of new load. Michigan’s regulator (MPSC) subsequently approved Consumers Energy’s tariff terms for very large customers (≥100 MW), specifying long-duration contracts, minimum demand charges, and exit-fee protections to shield other ratepayers.
+By year-end, the Michigan Attorney General sought reconsideration of aspects of the order, highlighting policy scrutiny and process concerns even as the tariff framework remained in place.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-11</span>
+<span class="eh">Michigan Attorney General challenges aspects of Consumers Energy data center service approach</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Following the MPSC approval, the Michigan Attorney General’s office advocated for reconsideration on process and scope (e.g., threshold definition and ex parte handling), signaling ongoing policy scrutiny of large-load/data center service terms.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Article references proceedings and projects across Michigan; not all are in Consumers Energy territory.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">approved Consumers Energy’s application</span>
+<span class="span">users of 50 megawatts or larger</span>
+<span class="span">ex parte consideration</span>
+<span class="span">Saline Township Oracle data center contracts</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-06</span>
+<span class="eh">MPSC approves Consumers Energy large-load terms for data centers (≥100 MW)</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Michigan’s PSC approved Consumers Energy’s application setting minimum 100 MW threshold, 15-year minimum term, 80% minimum billing demand, ramp-up up to 5 years, and exit fees with collateral—designed to prevent cost shifts to other customers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">approved Consumers Energy’s application</span>
+<span class="span">minimum service threshold of 100 megawatts (MW)</span>
+<span class="span">minimum contract term of 15 years</span>
+<span class="span">minimum billing demand of 80%</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-31</span>
+<span class="eh">CMS reaches agreement for up to 1 GW new data center load</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On the Q2 2025 call, management disclosed an agreement with a new data center expected to add up to 1 GW of load, corroborated by industry reporting that Consumers Energy would provide 1 GW of new power load to a hyperscale project in its Lower Peninsula territory.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ Counterparty and site details not disclosed.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1], web_search_findings[0]</div>
+<span class="span">reached an agreement with a new data center</span>
+<span class="span">up to 1 GW of load</span>
+<span class="span">provide 1GW of new power load</span>
+<span class="span">increase into the 2030s</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Historical precedent serving large data centers</h2>
+<div class='range'>2017-05-01 → 2024-12-31</div>
+<div class='psum'>Consumers Energy (CMS Energy’s utility) previously supported a major data center deployment in Michigan, establishing precedent for large-load service and renewable-backed supply. While outside the current 2–3 year focus window, this history demonstrates technical and commercial capability to serve hyperscale-caliber customers.
+This phase provides historical context for later AI/data center-related developments by confirming Consumers Energy’s ability to deliver significant power and renewable options to data center operators.</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2017-05-01</span>
+<span class="eh">Consumers Energy enabled Switch’s 200 MW Grand Rapids data center campus</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">A Consumers Energy case study detailed its work to secure the Switch Pyramid site in Grand Rapids, including a 100% renewable energy option for a planned 200 MW campus. This establishes prior execution experience on large data center loads in Michigan.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ Legacy project predates the current AI cycle; included for precedent.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">Switch will use wind to power the 200‑megawatt campus</span>
+<span class="span">We could not have done this without Consumers Energy</span>
+<span class="span">100‑percent‑renewable‑energy option</span>
+<span class="span">provide enough power to this data center</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Who are the unnamed hyperscaler counterparties in advanced negotiations and the 1 GW agreement disclosed in 2025?</li>
+<li>What are the specific sites, timing, and phasing for the up-to-1 GW agreement ramp referenced in 2025, and has it received final regulatory approvals and interconnection milestones?</li>
+<li>How much of the ~9 GW large-load pipeline will convert, and on what timeline relative to the 2028–2030 ramp indicated by management?</li>
+<li>What is the definitive financing plan and timing (equity, junior subs, other) if multiple gigawatts of load convert within the same multi-year window?</li>
+<li>Are any proposed hyperscale projects within or adjacent to CMS territory facing organized local opposition similar to Lyon Township’s situation, and how might that alter permitting timelines?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several regulatory and customer-protection references are based on Consumers Energy and MPSC communications; independent third-party corroboration is limited to the cited state release.</li>
+<li>Some competitive developments (Google-DTE, OpenAI Saline) occur outside CMS territory; included to contextualize Michigan’s hyperscale momentum and competitive dynamics.</li>
+<li>The acronym ‘CMS’ in unrelated national health policy news can be confused with CMS Energy; the inventory includes such items but they do not pertain to CMS Energy.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

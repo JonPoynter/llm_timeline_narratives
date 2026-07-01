@@ -1,0 +1,871 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>BTBT US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Bit Digital Inc <span class='sub'>(BTBT US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.534</div>
+</header>
+<div class='stats'>
+<span class='chip'>5 phases</span>
+<span class='chip'>38 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 16</span>
+<span class='chip'>single source: 18</span>
+<span class='chip'>web-only (verified): 16</span>
+<span class='chip'>web-only (unverified): 3</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Q1’26 operating metrics, balance sheet posture, and AI/HPC focus</h2>
+<div class='range'>2026-05-15 → 2026-05-15</div>
+<div class='psum'>Q1 2026 results showed meaningful contracted demand and working-capital dynamics: deferred revenue (current and non-current) reached $144.5M, including ~$65.7M in customer prepayments, while accounts receivable rose to $91.7M tied partly to a new customer and non-recurring charges. Cloud services revenue was $16.77M and colocation was $4.77M for the quarter; management reiterated a strategic pivot toward Ethereum staking and AI/HPC, with cloud and colocation forming the majority of revenue.
+Operationally, BTBT sold 126 H200 GPUs for a ~$1.8M gain and continued building out capacity across sites (MTL‑3, NC‑1). Financing-wise, convertible notes increased to ~$334.2M. Management flagged build‑out execution and balance‑sheet risks (including the debt load), as well as cash‑flow concentration with higher A/R and deferred revenue. They also reiterated M&amp;A intent (including agentic‑AI targets), a preference for cash over equity at current valuation, and a leverage guardrail of ~20%.</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Deferred revenue $144.5M including ~$65.7M in customer prepayments</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$66M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BTBT reported total deferred revenue of $144.5M at 3/31/26, reflecting approximately $65.7M of customer prepayments tied to cloud and data center services.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Deferred revenue (proxy for contracted services not yet recognized)</span>
+<span class="span">reflecting ~$65.7M of customer prepayments</span>
+<span class="span">cloud and data center services</span>
+<span class="span">3/31/26</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Accounts receivable increased to $91.7M with new customer activity</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$92M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Accounts receivable rose to $91.7M due to invoicing/collections timing and included activity with a new customer and certain non‑recurring charges.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Accounts receivable increased to $91.7M</span>
+<span class="span">includes activity with a new customer</span>
+<span class="span">certain non‑recurring charges</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Q1’26 Cloud services revenue $16.77M (y/y +$1.92M)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$17M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cloud services generated $16.77M in Q1 2026, up $1.92M year over year, reflecting continued ramp of AI/HPC workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Cloud services $16.77M (y/y +$1.92M)</span>
+<span class="span">Reported revenue by line for Q1 2026</span>
+<span class="span">total $27.92M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Q1’26 Colocation revenue $4.77M (y/y +$3.13M)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Colocation revenue totaled $4.77M in Q1 2026, up $3.13M year over year amid expansion of hosted AI/HPC customers.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Colocation $4.77M (y/y +$3.13M)</span>
+<span class="span">Reported revenue by line for Q1 2026</span>
+<span class="span">total $27.92M</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Strategic pivot reinforced: Ethereum treasury/staking and AI/HPC infrastructure</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized an ongoing pivot to Ethereum‑centric treasury/staking and AI/HPC infrastructure, consolidating via WhiteFiber; external coverage framed the shift away from BTC mining toward AI and staking.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], news_rows[0]</div>
+<span class="span">pivot to Ethereum‑centric treasury/staking and AI/HPC infrastructure</span>
+<span class="span">consolidated via a majority stake in WhiteFiber</span>
+<span class="span">pivots further from BTC mining to AI and staking</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Sold 126 H200 GPUs, realizing approximately $1.8M gain</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">BTBT reported the sale of 126 H200 GPUs, generating an approximate $1.8M gain as part of operations updates.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">sale of 126 H200 GPUs</span>
+<span class="span">generating a ~$1.8M gain</span>
+<span class="span">Operations updates included</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Continued build‑out of data center capacity (MTL‑3 and NC‑1)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted ongoing build‑out of capacity including MTL‑3 contributions and NC‑1 development spend, aligning infrastructure to anticipated demand.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">build‑out of data center capacity</span>
+<span class="span">MTL‑3</span>
+<span class="span">NC‑1 development spend</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Convertible notes increased to approximately $334.2M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$334M · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">BTBT issued additional convertible notes, lifting the total to about $334.2M, providing funding flexibility amid the AI/HPC expansion.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">issuance of additional convertible notes</span>
+<span class="span">lifting total to ~$334.2M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Outlook: further pivot to AI/HPC; NC‑1 development aligned to demand</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated a qualitative outlook focused on AI/HPC, continued NC‑1 development aligned to demand, and disciplined balance‑sheet management.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">further rebalancing toward Ethereum treasury/staking and AI/HPC infrastructure</span>
+<span class="span">ongoing development of data center capacity (including NC‑1) aligned to customer demand</span>
+<span class="span">disciplined balance‑sheet management</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Cloud and colocation now comprise the majority of revenue</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Q1 revenue mix reflected the pivot, with cloud and colocation forming the majority as legacy Bitcoin mining exposure declined.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">cloud and colocation now comprise the majority of revenue</span>
+<span class="span">exposure to legacy Bitcoin mining continues to be reduced</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Risk flagged: build‑out execution/funding and increased debt ($334.2M)</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$334M · loan</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that significant NC‑1/MTL‑3 capex and higher convertible debt ($334.2M carrying amount) raise execution and balance‑sheet risks if customer ramps or pricing do not materialize.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Significant NC‑1/MTL‑3 capex</span>
+<span class="span">($334.2M carrying amount)</span>
+<span class="span">raise execution and balance‑sheet risk</span>
+<span class="span">if customer ramps or pricing do not materialize</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Risk: working‑capital concentration with A/R $91.7M and deferred revenue $144.5M</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$144M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">BTBT highlighted cash‑flow concentration risk driven by timing of collections and customer prepayments as A/R rose to $91.7M and deferred revenue to $144.5M at quarter‑end.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Accounts receivable rose to $91.7M</span>
+<span class="span">deferred revenue to $144.5M</span>
+<span class="span">timing of collections and customer prepayments concentrate cash‑flow risk</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">M&amp;A pipeline includes agentic‑AI businesses on Ethereum</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">BTBT indicated M&amp;A targets could include trading/market‑making, Ethereum‑adjacent infrastructure, and agentic‑AI businesses intersecting with Ethereum.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">trading/market‑making firm</span>
+<span class="span">Ethereum‑adjacent infrastructure</span>
+<span class="span">agentic‑AI businesses intersecting with Ethereum</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Funding mix preference: cash over equity at current valuation</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management expressed a preference to use cash over equity for M&amp;A at current valuation, affirming an analyst’s summary and indicating continued pursuit of opportunities.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">preference to use cash over equity</span>
+<span class="span">That is a fair summary.</span>
+<span class="span">We continue being on the hunt.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Leverage guardrail: continue to use ~20% metric; converts/debt remain options</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The CFO stated they continue to use 20% as the leverage metric and that convertibles or other debt remain options; equity is also a tool though shares trade at a discount to NAV.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">20% as the metrics</span>
+<span class="span">convertibles or other debt remain options</span>
+<span class="span">equity is also a tool</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0038" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Strategy reiterated: AI–Ethereum intersection and agentic AI workflows</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO emphasized the durable intersection of AI and Ethereum, highlighting agentic AI workflows as having a natural home for counterparties on Ethereum, and intent to keep building around that theme over the next two years.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">intersection of AI and Ethereum will persist</span>
+<span class="span">agentic AI workflows</span>
+<span class="span">natural home</span>
+<span class="span">over the next two years</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Optionality crystallizes; hyperscaler-tied NC contract and efficiency risk emerges</h2>
+<div class='range'>2025-11-14 → 2026-04-01</div>
+<div class='psum'>Late 2025 filings disclosed a Boosteroid MSA with options to expand up to 50,000 servers, representing a potential ~$700M contract value over five years. In March 2026, the 10‑K highlighted a structural risk: algorithmic and hardware efficiency gains (e.g., DeepSeek) could reduce compute intensity and thus HPC data center demand.
+In April 2026 results commentary, management referenced an ~$865M contract associated with WhiteFiber’s North Carolina site and a related hyperscaler relationship, while stating no intent to monetize WhiteFiber in 2026. This underscored a substantial pipeline tied to NC build‑out, complementing prior capacity moves.</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-01</span>
+<span class="eh">WhiteFiber referenced ~$865M contract tied to NC site with a hyperscaler relationship</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$865M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management referenced WhiteFiber’s “$865 million contract” tied to its North Carolina site alongside a hyperscaler relationship and reiterated no intent to monetize WhiteFiber in 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Reference provided in earnings commentary; detailed terms not disclosed in the excerpt.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">“$865 million contract”</span>
+<span class="span">North Carolina site</span>
+<span class="span">hyperscaler relationship</span>
+<span class="span">does not intend to monetize WhiteFiber in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-01</span>
+<span class="eh">M&amp;A targets: cash‑generative businesses intersecting with agentic AI</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The CEO emphasized pursuit of cash‑generative M&amp;A targets that can fund ETH accumulation and could intersect with agentic AI, not other DATs.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">cash‑generating targets</span>
+<span class="span">intersecting with agentic AI</span>
+<span class="span">No. It would not be other DATs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-01</span>
+<span class="eh">Active M&amp;A process since January 2026; aiming to close in 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reported being actively in the market since early January 2026, expressing hope but no firm timetable to close a deal within 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">actively in the market</span>
+<span class="span">since early January 2026</span>
+<span class="span">hope to complete a deal in 2026</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0019" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2026-03-27</span>
+<span class="eh">10‑K risk: AI efficiency advances (e.g., DeepSeek) may reduce HPC demand</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">deepseek</span></div>
+<p class="narr">BTBT warned that rapid AI efficiency improvements could allow complex operations with less compute, decreasing demand for specialized HPC and AI‑specific data center services. The filing cites DeepSeek as an example of such technological shifts.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">adverse effect on WhiteFiber’s business</span>
+<span class="span">such as demonstrated by DeepSeek</span>
+<span class="span">significantly less computing power</span>
+<span class="span">decrease the demand for specialized computing</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-14</span>
+<span class="eh">10‑Q: Boosteroid MSA option potential valued at approximately $700M over five years</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$700M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BTBT’s 10‑Q outlined that the Boosteroid MSA provides options to expand in 100‑server increments up to 50,000 servers, representing a potential contract value of approximately $700M over the five‑year term.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Optional; realization depends on customer drawdowns.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[15]</div>
+<span class="span">50,000 servers</span>
+<span class="span">potential contract value of approximately $700 million</span>
+<span class="span">over the five-year term</span>
+<span class="span">Initial Customer</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Rebrand to WhiteFiber; B200 pivot; partnerships and data center expansion</h2>
+<div class='range'>2025-01-24 → 2025-06-02</div>
+<div class='psum'>In early 2025, Bit Digital signed a new 18‑month agreement with its key customer for 464 NVIDIA B200 GPUs, replacing a prior planned H100 expansion and featuring a two‑month prepayment. The company rebranded its HPC unit as WhiteFiber, reporting a customer count of 20+ versus one at the start of 2024, and added a five‑year, 5MW colocation agreement with Cerebras Systems expected to begin mid‑2025.
+WhiteFiber partnered with Shadeform to offer on‑demand NVIDIA B200 GPUs globally beginning in April 2025, while expanding physical capacity with the acquisition of a ~1 million sq ft property in North Carolina. The site has a 99MW capacity agreement with Duke Energy (24MW by September 1, 2025) and up to 200MW potential, with active tenant negotiations underway.</div>
+<div class="event t-web_only_verified" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-02</span>
+<span class="eh">WhiteFiber acquires ~1M sq ft NC property; 99MW capacity agreement, up to 200MW</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">WhiteFiber acquired a 96‑acre, ~1M sq ft industrial property in Madison, NC to build a flagship AI data center campus. It has a 99MW capacity agreement with Duke Energy (24MW by ~Sept 1, 2025) and up to 200MW potential subject to agreements.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Capital outlay and tenant conversion timing not disclosed; one non-binding LOI signed.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">96-acre, ~1 million square foot</span>
+<span class="span">Madison, North Carolina</span>
+<span class="span">capacity agreement with the utility, Duke Energy, for 99 MW</span>
+<span class="span">24 MW are expected to be delivered on or about September 1, 2025</span>
+<span class="span">capacity up to 200 MW</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2025-03-20</span>
+<span class="eh">WhiteFiber–Shadeform partnership to offer on‑demand NVIDIA B200 GPUs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">WhiteFiber and Shadeform announced a strategic partnership to bring on‑demand NVIDIA B200 GPUs to customers beginning in April, expanding multi‑cloud marketplace distribution across more than 100 regions worldwide.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">strategic partnership</span>
+<span class="span">on-demand NVIDIA B200 GPUs</span>
+<span class="span">beginning in April</span>
+<span class="span">more than 100 regions worldwide</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2025-03-14</span>
+<span class="eh">Cerebras Systems: five‑year 5MW colocation agreement via WhiteFiber</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">WhiteFiber secured a five‑year colocation agreement for 5MW (IT load) with Cerebras Systems to be fulfilled at an Enovum‑developed site, with operations expected to commence mid‑2025.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">five-year colocation agreement to provide 5MW (IT load)</span>
+<span class="span">with Cerebras Systems</span>
+<span class="span">fulfilled at an Enovum-developed site</span>
+<span class="span">Operations are expected to commence in mid-2025</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2025-02-11</span>
+<span class="eh">Media corroboration: WhiteFiber rebrand and 5MW five‑year colocation deal</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Coverage confirmed the WhiteFiber rebrand and a five‑year, 5MW built‑to‑suit colocation agreement for an unnamed client, plus reiterated the January B200 GPU agreement (~$15M annualized).</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ Media report; financial terms for the 5MW deal not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">5MW of built-to-suit data center infrastructure</span>
+<span class="span">period of five years</span>
+<span class="span">WhiteFiber is currently servicing more than 20 customers</span>
+<span class="span">464 Nvidia B200 GPUs</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2025-02-06</span>
+<span class="eh">Rebranding of HPC business to WhiteFiber; customer base grows to 20+</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BTBT rebranded its HPC unit as WhiteFiber, integrating GPU Cloud and Enovum Data Centers, and reported servicing more than 20 customers compared to just one at the start of 2024.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">rebranded its HPC business as WhiteFiber</span>
+<span class="span">GPU Cloud business and its HPC data center business, Enovum Data Centers</span>
+<span class="span">more than 20 customers compared to just 1 at the start of 2024</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-24</span>
+<span class="eh">New 464 B200 GPU agreement (18 months); ~$15M annualized; two‑month prepayment</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$15M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BTBT agreed to provide 464 NVIDIA B200 GPUs for 18 months to its key customer, replacing a prior incremental 2,048 H100 plan. The contract is ~$15M annualized with a two‑month prepayment and is scheduled to commence June 30, 2025 in Iceland.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">464 Nvidia B200 GPUs</span>
+<span class="span">period of eighteen months</span>
+<span class="span">approximately $15 million of annualized revenue</span>
+<span class="span">features a two-month prepayment</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>MSA execution, early diversification and monthly run-rate build</h2>
+<div class='range'>2024-08-19 → 2024-12-31</div>
+<div class='psum'>Into 2H24, Bit Digital combined financing maneuvers with expanding commercial reach. It conducted a sale-leaseback of 128 AI servers (1,024 GPUs) and disclosed a Master Service and Lease Agreement with Boosteroid that includes expansion options up to 50,000 GPU servers over five years, alongside an initial AMD/ASUS-based deployment footprint. The MSA was executed in November with an initial order of 300 GPUs worth ~$4.6M over five years.
+Monthly disclosures detailed rising utilization and new customer activity: by November, 2,128 GPUs were active generating ~$4.3M that month. The company signed additional AI contracts and term sheets, including a 576 H200 GPU, 12‑month deal (~$10.1M), a 64 H200 month‑to‑month MSA, and a two‑year, 576 H200 GPU contract with DNA AI Compute Fund (~$20.2M), commencing in early 2025.</div>
+<div class="event t-web_only_verified" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-31</span>
+<span class="eh">DNA AI Compute Fund MSA: 576 H200 GPUs over two years (~$20.2M)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BTBT executed an MSA with an AI Compute Fund managed by DNA Holdings for 576 NVIDIA H200 GPUs over two years, representing an aggregate revenue opportunity of about $20.2M, with service commencement expected in February 2025.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">576 Nvidia H200 GPUs over a two-year term</span>
+<span class="span">approximately $20.2 million</span>
+<span class="span">expected to commence in February 2025</span>
+<span class="span">72 H200 servers (576 GPUs)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-05</span>
+<span class="eh">November 2024 operations: 2,128 GPUs active; ~$4.3M GPU Cloud revenue in the month</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">By November 30, 2024, BTBT had 266 servers (2,128 GPUs) actively generating revenue from Bit Digital AI contracts and recorded about $4.3M of GPU Cloud revenue for the month.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">266 servers (2,128 GPUs) actively generating revenue</span>
+<span class="span">approximately $4.3 million</span>
+<span class="span">GPU Cloud revenue during the month of November 2024</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-05</span>
+<span class="eh">Term sheet: 576 H200 GPUs for 12 months (~$10.1M total value)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BTBT executed a new term sheet on November 14, 2024 to supply 576 H200 GPUs for twelve months, representing approximately $10.1M in total contract value.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span></div>
+<p class="cav">⚠ Transaction at term-sheet stage as of the disclosure date.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">576 H200 GPUs for a twelve-month period</span>
+<span class="span">total contract value of approximately $10.1 million</span>
+<span class="span">executed a new term sheet</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-05</span>
+<span class="eh">New customer MSA for 64 H200 GPUs on a month-to-month basis</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On November 14, 2024, BTBT executed an MSA with a new customer for 64 H200 GPUs on a month-to-month basis and later placed an order for an additional 128 H200 GPUs.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">64 H200 GPUs on a month-to-month basis</span>
+<span class="span">executed an MSA with a new customer</span>
+<span class="span">purchase order was executed for an additional 128 H200 GPUs</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2024-11-18</span>
+<span class="eh">Executed MSA with Boosteroid; initial 300 GPUs for ~$4.6M over five years</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BTBT executed the MSA with Boosteroid (Nov 4, 2024) and finalized an initial purchase order for 300 GPUs, expected to generate approximately $4.6M of revenue over a five-year term.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">executed the MSA with Boosteroid on November 4, 2024</span>
+<span class="span">initial purchase order</span>
+<span class="span">300 GPUs</span>
+<span class="span">approximately $4.6 million of revenue over the five-year term</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2024-08-19</span>
+<span class="eh">Sale‑leaseback of 128 AI servers (1,024 GPUs) to support AI operations financing</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">To help finance operations, BTBT entered a sale-leaseback for 128 AI servers (equivalent to 1,024 GPUs) with a three-year leaseback term. This bolstered liquidity while preserving access to compute.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">entered into a sale-leaseback agreement</span>
+<span class="span">sell 128 AI servers (equivalent to 1,024 GPUs)</span>
+<span class="span">lease them back for three years</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-08-19</span>
+<span class="eh">Boosteroid MSA options up to 50,000 GPU servers over five years; initial AMD/ASUS-based deployment</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BTBT disclosed an MSA structure providing Boosteroid options to draw down in multiples of 100 up to 50,000 GPU servers within five years, with an initial AMD EPYC/RX7900XT ASUS-based purchase and planned deployment across &gt;10 data centers.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<p class="cav">⚠ Option value depends on Boosteroid’s future drawdowns and market conditions.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">up to a total of 50,000 GPU servers within five years</span>
+<span class="span">AMD EPYC 4th Gen CPUs and RX7900XT GPUs</span>
+<span class="span">ASUSTeK Computer Inc. (&quot;ASUS&quot;) and AMD</span>
+<span class="span">network of more than 10 data centers</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI business launch and initial GPU customer scale-up</h2>
+<div class='range'>2023-10-23 → 2024-06-25</div>
+<div class='psum'>Bit Digital launched its AI/HPC services in late 2023, signing its first GPU-rental customer and committing to significant NVIDIA H100 infrastructure. In January 2024 the firm upsized the initial agreement to 2,048 GPUs over three years, indicating more than $50 million of annualized revenue potential and confirming three-year service durations.
+Through March–June 2024, the existing customer proposed a further 2,048 GPUs (to 4,096 total) and by June the parties finalized that expansion to approximately $275 million in total revenue (about $92 million annualized) over the three-year terms. The fulfillment included a large Dell server order and targeted August 2024 revenue commencement at the company’s Iceland site.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2024-06-25</span>
+<span class="eh">Finalized expansion to 4,096 GPUs; ~$275M total revenue (~$92M annualized)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$275M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">The company finalized terms with the existing customer to supply an additional 2,048 GPUs, reaching 4,096 total over respective three-year periods for approximately $275M total revenue (~$92M annualized). It placed a purchase order for 256 Dell servers with 2,048 NVIDIA HGX H100 GPUs; deployment in Iceland was expected to begin generating revenue in August 2024.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">approximately $275 million</span>
+<span class="span">4,096 GPUs</span>
+<span class="span">256 servers manufactured by Dell Technologies</span>
+<span class="span">expected to begin generating revenue in August 2024</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-03-26</span>
+<span class="eh">Customer proposes further expansion by 2,048 GPUs (to 4,096 total); $100M run-rate goal cited</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BTBT received a proposal from its existing AI customer to add 2,048 GPUs, taking the aggregate to 4,096 pending final terms. Management stated this would help toward a $100M annualized run-rate target for the AI business.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<p class="cav">⚠ Proposal subject to agreeing on final terms and conditions.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">expand the scope of its existing agreement</span>
+<span class="span">additional 2,048 GPUs</span>
+<span class="span">total of 4,096 GPUs</span>
+<span class="span">reach a $100 million run-rate</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-01-10</span>
+<span class="eh">Upsized initial AI customer contract to 2,048 GPUs; &gt;$50M annualized revenue</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$50M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BTBT increased its first AI customer agreement by 512 GPUs for three years, totaling 2,048 GPUs and more than $50M in annualized revenue. To fulfill, it ordered 64 Super Micro servers equipped with 512 NVIDIA HGX H100 GPUs.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">additional 512 GPUs</span>
+<span class="span">three years</span>
+<span class="span">2,048 GPUs</span>
+<span class="span">more than $50 million of annualized revenue</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2023-10-23</span>
+<span class="eh">Bit Digital launches AI business; signs customer contract up to $257M and procures H100 GPUs</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$257M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">The company commenced Bit Digital AI with a binding term sheet to provide 1,024–4,096 GPUs and concurrently agreed to purchase 1,056 NVIDIA HGX H100 GPUs and 132 xFusion FusionOne HPC servers (~$35M). The customer contract is worth up to $257M, marking BTBT’s entry into GPU-accelerated AI infrastructure services.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span></div>
+<p class="cav">⚠ Initial agreement announced via company press release; revenue and deployment timing not detailed beyond procurement commitments.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">launches new AI business</span>
+<span class="span">contract worth up to $257 million</span>
+<span class="span">1,056 NVIDIA HGX H100 GPUs</span>
+<span class="span">132 FusionOne HPC</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0032'>E0032</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Who is the hyperscaler counterparty associated with the referenced ~$865M NC contract and what are the definitive terms and milestones?</li>
+<li>Of the 50,000‑server Boosteroid option (~$700M potential), what tranches (if any) have been exercised since Q4 2025 and on what price/service terms?</li>
+<li>What is the current status of the November 2024 term sheet for 576 H200 GPUs (~$10.1M) — has it converted to a definitive agreement and commenced revenue?</li>
+<li>What capex and financing plan (including third‑party capital) underpins the NC campus build to 99MW/200MW and what is the expected phased energization schedule?</li>
+<li>How did the sale of 126 H200 GPUs affect available capacity for contracted workloads, and what were the realized proceeds versus book?</li>
+<li>What are realized unit economics (utilization, $/GPU/month, power cost) across Iceland vs. North America deployments, and how are terms indexed for 2025–2026 contracts?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Numerous items rely on company press releases and filings; independent third‑party corroboration for certain contract economics and customer identities is limited in excerpts.</li>
+<li>Some disclosures reflect proposals, options, or term sheets (e.g., additional 2,048 GPUs in March 2024; 576 H200 term sheet in November 2024; Boosteroid 50,000‑server option) that may not be realized.</li>
+<li>The referenced ~$865M NC contract is described at a high level in earnings commentary without detailed terms in the excerpt.</li>
+<li>Risk related to AI efficiency (DeepSeek) is directional and macro in nature; the magnitude and timing of any demand impact are uncertain.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

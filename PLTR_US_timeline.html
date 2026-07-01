@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Palantir Technologies Inc <span class='sub'>(PLTR US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.451</div>
@@ -72,555 +82,49 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (verified): 7</span>
 <span class='chip'>web-only (unverified): 3</span>
 </div>
-<div class='phase'>
-<h2>AIP launch and early activation</h2>
-<div class='range'>2023-04-07 → 2023-12-31</div>
-<div class='psum'>Palantir publicly introduced its Artificial Intelligence Platform (AIP) as a fourth platform alongside Gotham, Foundry, and Apollo, committing to an initial release to strategic partners by late May 2023. This marked the company&#x27;s formal entry into enabling large language model (LLM) use within governed, operational workflows across commercial and government sectors.
-By June 2023, Palantir began enabling AIP features inside Foundry enrollments, including AIP Assist, an LLM-powered support tool trained on Palantir documentation. This established a pattern of integrating third-party LLMs under Palantir&#x27;s security model while making AI capabilities accessible inside existing customer environments.</div>
-<div class="event t-web_only_verified" id="E0001">
-<div class="ev-top">
-<span class="date">2023-04-07</span>
-<span class="eh">Palantir announces the Artificial Intelligence Platform (AIP)</span>
-<span class="badge">model_release</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Palantir unveiled AIP as its fourth platform, combining its ML technologies with the latest large language models and committed to initial availability for strategic partners by the end of May 2023.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">Artificial Intelligence Platform (AIP)</span>
-<span class="span">no later than the end of May</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0002">
-<div class="ev-top">
-<span class="date">2023-06-01</span>
-<span class="eh">Foundry enrollments gain AIP activation and AIP Assist</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Select Foundry enrollments could activate AIP from Control Panel, providing early access to AIP Assist—an LLM-powered support tool trained on Palantir documentation—bringing governed LLM interactions into existing workflows.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">activate AIP</span>
-<span class="span">AIP Assist</span>
-<span class="span">LLM-powered</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Multi‑model expansion across cloud environments</h2>
-<div class='range'>2024-02-15 → 2024-12-31</div>
-<div class='psum'>In 2024 Palantir expanded default AIP support for multiple LLM families (Claude, Llama2) and introduced model governance controls via Control Panel. Subsequent updates added general availability of Meta’s Llama 3 models and OpenAI’s GPT‑4o via Azure OpenAI, requiring contract addenda as needed for model usage.
-Palantir deepened ties with hyperscalers: a first-of-its-kind Microsoft partnership enabled Azure OpenAI within AIP for classified environments, while an Anthropic–Palantir–AWS collaboration brought Claude 3/3.5 to U.S. intelligence and defense agencies on AWS with IL6 accreditation. These moves broadened model choice and deployment venues under stringent security postures.</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2024-02-15</span>
-<span class="eh">AIP adds default support for Claude and Llama2; new Control Panel model governance</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Palantir enabled AIP defaults for Anthropic Claude and Meta Llama2 models, with a forthcoming Control Panel feature to approve terms and enable new models, reinforcing multi-model governance inside AIP.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span">supports Claude, Llama2</span>
-<span class="span">Control Panel</span>
-<span class="span">by default</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0004">
-<div class="ev-top">
-<span class="date">2024-06-17</span>
-<span class="eh">Llama 3 and GPT‑4o via Azure OpenAI generally available in AIP</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Palantir announced GA support for Meta’s Llama 3 70B/8B Instruct models and OpenAI’s GPT‑4o via Azure OpenAI in AIP, with certain enrollments requiring acceptance of an additional contract addendum before enabling.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[7]</div>
-<span class="span">Support for Llama 3&#x27;s 70B Instruct and 8B Instruct LLMs</span>
-<span class="span">accept an additional contract addendum</span>
-<span class="span">GPT-4o through Azure OpenAI</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0005">
-<div class="ev-top">
-<span class="date">2024-08-08</span>
-<span class="eh">Palantir–Microsoft enable Azure OpenAI within AIP for classified networks</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Palantir and Microsoft launched an integrated suite to operationalize Azure OpenAI Service within AIP across government and classified cloud environments, a first-of-its-kind capability for national security operations.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">first-of-its-kind</span>
-<span class="span">Azure OpenAI (AOAI) Service</span>
-<span class="span">classified environments</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0006">
-<div class="ev-top">
-<span class="date">2024-11-07</span>
-<span class="eh">Anthropic–Palantir–AWS bring Claude 3/3.5 to U.S. intel and defense on AIP</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Anthropic and Palantir partnered with AWS to provide Claude 3 and 3.5 models on AIP for U.S. intelligence and defense agencies, leveraging Palantir’s IL6-accredited environment and Amazon SageMaker.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">Claude 3 and 3.5</span>
-<span class="span">Palantir’s AI Platform (AIP)</span>
-<span class="span">IL6 accreditation</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Model breadth and federal wins alongside improving financial prints</h2>
-<div class='range'>2025-05-13 → 2025-12-31</div>
-<div class='psum'>Palantir extended its OpenAI coverage by enabling GPT‑4.1 family models via Direct OpenAI API throughout AIP features. Financial momentum continued into late 2025 with a Reuters-cited beat and raised outlook, underscoring AI-driven monetization.
-The company secured a notable U.S. Navy ShipOS award worth up to $448 million, signaling durable federal AI modernization across the submarine industrial base and reinforcing Palantir’s defense franchise.</div>
-<div class="event t-web_only_verified" id="E0007">
-<div class="ev-top">
-<span class="date">2025-05-13</span>
-<span class="eh">OpenAI GPT‑4.1 family available in AIP via Direct OpenAI API</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Palantir made GPT‑4.1, GPT‑4.1 mini, and GPT‑4.1 nano generally available in AIP through the Direct OpenAI API, enabling the models across AIP features like Logic, Pipeline Builder, and transforms.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">GPT-4.1</span>
-<span class="span">Direct OpenAI API</span>
-<span class="span">AIP</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0008">
-<div class="ev-top">
-<span class="date">2025-11-03</span>
-<span class="eh">Reuters: Palantir beats and raises outlook on solid AI demand</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Reuters reported Palantir raised Q4 revenue guidance above estimates amid solid AI demand, with post-earnings trading showing modest gains and continued volatility.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[6]</div>
-<span class="span">Raised Q4 revenue guide above estimates</span>
-<span class="span">PLTR +1 percent after hours</span>
-<span class="span">AI demand</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0009">
-<div class="ev-top">
-<span class="date">2025-12-10</span>
-<span class="eh">Palantir wins U.S. Navy ShipOS contract worth up to $448 million</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$448M · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Palantir secured a U.S. Department of the Navy ShipOS award valued up to $448 million to scale AI across the submarine industrial base, expanding its federal defense footprint.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[5]</div>
-<span class="span">up to 448 million</span>
-<span class="span">U.S. Navy ShipOS</span>
-<span class="span">scales AI across submarine industrial base</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>Acceleration in 2026: record growth, guidance lift, and deeper hyperscaler ties</h2>
 <div class='range'>2026-02-03 → 2026-06-16</div>
 <div class='psum'>Into 2026, Palantir reported its fastest growth since listing, lifted its full‑year outlook, and highlighted U.S. commercial and government strength. The company also disclosed significant backlog and deal metrics, robust free cash flow, and a large cash balance, while acknowledging risks around U.S. budget dynamics, contract cancellability, and deployment timing.
 Product and go‑to‑market momentum continued with the Google Cloud partnership (Marketplace listing, BigQuery–Foundry federation, Gemini–AIP connectivity), new model additions (Gemini 3.5 Flash; xAI Grok Build 0.1), and a sector‑specific AIP build with Kirkland &amp; Ellis. Management also sharpened competitive commentary on frontier labs’ enterprise fit and token consumption focus.</div>
-<div class="event t-single_source" id="E0010">
+<div class="event t-web_only_verified" id="E0035" data-providers="xai_grok">
 <div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">U.S. commercial RDV reaches $4.92B (+112% y/y; +12% q/q)</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$4.9B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Palantir reported U.S. commercial remaining deal value of $4.92B, growing 112% year over year and 12% quarter over quarter, underscoring strong enterprise AI demand.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">remaining deal value (RDV) $4.92B</span>
-<span class="span">+112% y/y</span>
-<span class="span">+12% q/q</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0011">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">RPO $4.5B; ~39% expected to be recognized in 12 months</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$4.5B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Remaining performance obligations totaled $4.5B at quarter‑end, with approximately 39% expected to be recognized over the next twelve months.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Remaining performance obligations (RPO) $4.5B</span>
-<span class="span">~39% expected to be recognized</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0012">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">Closed TCV $2.41B (+61% y/y)</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$2.4B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Total contract value closed reached $2.41B, up 61% year over year, indicating accelerating booking momentum.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Total contract value (TCV) closed $2.41B</span>
-<span class="span">+61% y/y</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0013">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">Adjusted free cash flow $925M (57% margin) in Q1</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$925M · other</span> <span class="badge">neutral</span></div>
-<p class="narr">Palantir generated $925M of adjusted free cash flow in Q1, a 57% margin, supporting balance sheet strength for continued AI investment and scaling.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Adjusted free cash flow $925M</span>
-<span class="span">57% margin</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0014">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">Cash and Treasuries totaled approximately $8.0B</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$8.0B · other</span> <span class="badge">neutral</span></div>
-<p class="narr">Cash, cash equivalents, and short‑term U.S. Treasuries stood at roughly $8.0B at March 31, 2026, providing substantial liquidity.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">short‑term U.S. Treasuries</span>
-<span class="span">~$8.0B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0015">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">FY26 revenue guidance raised to $7.650–$7.662B</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$7.7B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Management raised full‑year 2026 revenue guidance to a range of $7.650–$7.662B, reflecting confidence in sustained AI demand.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">FY 2026: revenue $7.650–$7.662B</span>
-<span class="span">raised</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0016">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">FY26 U.S. commercial revenue guidance ≥$3.224B (≥+120% y/y)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$3.2B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Palantir guided U.S. commercial revenue to at least $3.224B for FY26, implying growth of at least 120% year over year.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">U.S. commercial revenue guidance ≥$3.224B</span>
-<span class="span">≥+120% y/y</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0017">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">FY26 adjusted FCF guidance raised to $4.2–$4.4B</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$4.3B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Adjusted free cash flow guidance for FY26 increased to $4.2–$4.4B, signaling strong cash generation expectations.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">adjusted free cash flow $4.2–$4.4B</span>
-<span class="span">raised</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0018">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">Q2 2026 revenue guidance set at $1.797–$1.801B</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$1.8B · other</span> <span class="badge">neutral</span></div>
-<p class="narr">For Q2 2026, Palantir guided revenue to $1.797–$1.801B, alongside adjusted income from operations of $1.063–$1.067B.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Q2 2026: revenue $1.797–$1.801B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0019">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">Management prioritizes U.S. warfighter amid capacity constraints</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">The CEO reaffirmed prioritization of U.S. national security customers, noting the company &quot;100%&quot; prioritizes the warfighter and that current U.S. demand exceeds capacity.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">100%</span>
-<span class="span">prioritizes the warfighter</span>
-<span class="span">exceeds capacity</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0020">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">AIP positioned as governance layer as model costs fall</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">CTO argued that model commoditization and falling token costs increase the need for AIP’s governed, auditable workflows, countering narratives focused solely on model providers.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">model commoditization</span>
-<span class="span">falling token costs</span>
-<span class="span">governed, auditable workflows</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0021">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">CEO contrasts AIP governance with &#x27;AI slop&#x27;; skepticism of lab-built approaches</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Management criticized lab-built, model-only approaches and emphasized AIP’s governed implementation, with the CEO using the phrase &quot;AI slop&quot; and highlighting sales leverage.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">AI slop</span>
-<span class="span">only seven of our salespeople actually even really sell</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0022">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">CEO personally leads recruiting for elite AI talent</span>
-<span class="badge">personnel</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">The CEO said he is personally overseeing recruiting, underscoring Palantir’s appeal to highly technical, mission‑driven, often neurodivergent talent.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">personally overseeing recruiting</span>
-<span class="span">neurodivergent</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0023">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">CR risk acknowledged; role framed as &#x27;existential&#x27; to missions</span>
-<span class="badge">regulatory</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Management acknowledged the likelihood of a continuing resolution (CR) but characterized Palantir’s role as existential to mission outcomes, implying resilience to budget scenarios.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">likelihood of a CR</span>
-<span class="span">existential</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0024">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">DoD seeks to pull more work into 2026</span>
-<span class="badge">regulatory</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">CTO described a very active period with the Department seeking to accelerate work into 2026, reflecting strong federal AI demand.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">a very active period</span>
-<span class="span">pull as much work into 2026 as possible</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0025">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">Management aspires to sustain ~100% U.S. growth next year (non-guidance)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">The CEO expressed an ambition—framed as non‑guidance—to maintain approximately 100% U.S. growth next year.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">~100% U.S. growth again next year</span>
-<span class="span">ambition rather than formal guidance</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0026">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">Contract cancellability and conversion risk highlighted</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Palantir noted many agreements include termination for convenience and that not all RDV or closed TCV will convert to revenue, adding forecasting risk.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">termination for convenience</span>
-<span class="span">not all remaining deal value</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0027">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">U.S. concentration and public‑sector budget exposure risk</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Management warned that U.S. revenue concentration and dependence on government budgets could impact growth and revenue timing.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">U.S. revenue comprised 79% of Q1 sales</span>
-<span class="span">budget constraints</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0028">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">Long, complex deployments create timing volatility</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Palantir cited long, outcome‑driven deployments and complex implementations, noting timing variability in bookings and implementations that can cause quarterly volatility.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">long, outcome‑driven deployments</span>
-<span class="span">timing variability</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0029">
-<div class="ev-top">
-<span class="date">2026-05-04</span>
-<span class="eh">Management highlights accelerating U.S. demand across segments</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Palantir emphasized accelerating U.S. demand across government and commercial customers and raised full‑year guidance.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">accelerating U.S. demand</span>
-<span class="span">government and commercial</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0030">
-<div class="ev-top">
-<span class="date">2026-05-21</span>
-<span class="eh">Gemini 3.5 Flash available in AIP via Vertex AI (incl. IL2/IL4)</span>
+<span class="date">2026-06-16</span>
+<span class="eh">xAI’s Grok Build 0.1 available in AIP for agentic coding tasks</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Palantir added Google’s Gemini 3.5 Flash for commercial and IL2/IL4 enrollments where VertexAI is enabled, positioned as a strong agentic and coding model.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Palantir enabled Grok Build 0.1 for enrollments with xAI models, targeting agentic coding and tool‑calling use cases, including MCP support.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · XAI <b>2</b></span> <span class="chchip">strategic_option_value · XAI <b>2</b></span> <span class="chchip">provider_specificity · XAI <b>1</b></span> <span class="chchip">multi_model_hedge · XAI <b>4</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[8]</div>
-<span class="span">Gemini 3.5 Flash</span>
-<span class="span">VertexAI</span>
-<span class="span">IL2 and IL4 enrollments</span>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Grok Build 0.1</span>
+<span class="span">xAI</span>
+<span class="span">agentic coding</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0031">
+<div class="event t-single_source" id="E0034" data-providers="">
 <div class="ev-top">
-<span class="date">2026-06-04</span>
-<span class="eh">Palantir listed on Google Cloud Marketplace; BigQuery–Foundry federation; Gemini–AIP connectivity</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Palantir announced availability on Google Cloud Marketplace with two‑way data federation between BigQuery and Foundry and deeper connectivity between Gemini and AIP.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[9]</div>
-<span class="span">Google Cloud Marketplace</span>
-<span class="span">two-way data federation between BigQuery and Foundry</span>
-<span class="span">connectivity between Gemini and Palantir AIP</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0032">
-<div class="ev-top">
-<span class="date">2026-06-04</span>
-<span class="eh">Kirkland &amp; Ellis and Palantir launch multiyear AIP platform for PE fundraising</span>
-<span class="badge">customer_adoption</span>
+<span class="date">2026-06-10</span>
+<span class="eh">CEO criticizes frontier labs’ &#x27;tokenmaxxing&#x27; and enterprise fit on CNBC</span>
+<span class="badge">competitive_threat</span>
 <span class="badge b-single_source">single source</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Kirkland &amp; Ellis expanded its partnership with Palantir to build a proprietary enterprise platform on AIP that streamlines private equity fund formation workflows across documentation, side‑letters, obligations, and compliance.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Alex Karp said privately &quot;every&quot; enterprise Palantir engages is unhappy with frontier labs’ approach, arguing they focus on token consumption rather than enterprise value delivery.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[2]</div>
-<span class="span">multiyear partnership</span>
-<span class="span">built on Palantir’s AIP</span>
-<span class="span">fund formation engine</span>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">tokenmaxxing</span>
+<span class="span">&quot;every&quot; enterprise</span>
+<span class="span">don&#x27;t understand enterprise needs</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0033">
+<div class="event t-single_source" id="E0033" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-05</span>
 <span class="eh">Shares fall despite beat-and-raise; U.S. commercial revenue miss cited</span>
@@ -637,41 +141,61 @@ Product and go‑to‑market momentum continued with the Google Cloud partnershi
 <span class="span">consensus of $605M</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0034">
+<div class="event t-web_only_unverified" id="E0031" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-06-10</span>
-<span class="eh">CEO criticizes frontier labs’ &#x27;tokenmaxxing&#x27; and enterprise fit on CNBC</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-single_source">single source</span>
+<span class="date">2026-06-04</span>
+<span class="eh">Palantir listed on Google Cloud Marketplace; BigQuery–Foundry federation; Gemini–AIP connectivity</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Alex Karp said privately &quot;every&quot; enterprise Palantir engages is unhappy with frontier labs’ approach, arguing they focus on token consumption rather than enterprise value delivery.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Palantir announced availability on Google Cloud Marketplace with two‑way data federation between BigQuery and Foundry and deeper connectivity between Gemini and AIP.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · GEM <b>2</b></span> <span class="chchip">distribution_channel_exposure · GEM <b>3</b></span> <span class="chchip">product_integration_exposure · GEM <b>3</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>1</b></span> <span class="chchip">strategic_option_value · GEM <b>3</b></span> <span class="chchip">switching_flexibility · GEM <b>3</b></span> <span class="chchip">user_lock_in_relevance · GEM <b>2</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[0]</div>
-<span class="span">tokenmaxxing</span>
-<span class="span">&quot;every&quot; enterprise</span>
-<span class="span">don&#x27;t understand enterprise needs</span>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Google Cloud Marketplace</span>
+<span class="span">two-way data federation between BigQuery and Foundry</span>
+<span class="span">connectivity between Gemini and Palantir AIP</span>
 </details>
 </div>
-<div class="event t-web_only_verified" id="E0035">
+<div class="event t-single_source" id="E0032" data-providers="">
 <div class="ev-top">
-<span class="date">2026-06-16</span>
-<span class="eh">xAI’s Grok Build 0.1 available in AIP for agentic coding tasks</span>
+<span class="date">2026-06-04</span>
+<span class="eh">Kirkland &amp; Ellis and Palantir launch multiyear AIP platform for PE fundraising</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Kirkland &amp; Ellis expanded its partnership with Palantir to build a proprietary enterprise platform on AIP that streamlines private equity fund formation workflows across documentation, side‑letters, obligations, and compliance.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">multiyear partnership</span>
+<span class="span">built on Palantir’s AIP</span>
+<span class="span">fund formation engine</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0030" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Gemini 3.5 Flash available in AIP via Vertex AI (incl. IL2/IL4)</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
-<p class="narr">Palantir enabled Grok Build 0.1 for enrollments with xAI models, targeting agentic coding and tool‑calling use cases, including MCP support.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Palantir added Google’s Gemini 3.5 Flash for commercial and IL2/IL4 enrollments where VertexAI is enabled, positioned as a strong agentic and coding model.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>3</b></span> <span class="chchip">strategic_option_value · GEM <b>3</b></span> <span class="chchip">provider_specificity · GEM <b>2</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">Grok Build 0.1</span>
-<span class="span">xAI</span>
-<span class="span">agentic coding</span>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Gemini 3.5 Flash</span>
+<span class="span">VertexAI</span>
+<span class="span">IL2 and IL4 enrollments</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0036">
+<div class="event t-single_source" id="E0036" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Reuters: fastest growth since listing; FY guide raised; +85% YoY revenue</span>
@@ -689,7 +213,337 @@ Product and go‑to‑market momentum continued with the Google Cloud partnershi
 <span class="span">US business &gt;100% YoY</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0037">
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">U.S. commercial RDV reaches $4.92B (+112% y/y; +12% q/q)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4.9B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Palantir reported U.S. commercial remaining deal value of $4.92B, growing 112% year over year and 12% quarter over quarter, underscoring strong enterprise AI demand.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">remaining deal value (RDV) $4.92B</span>
+<span class="span">+112% y/y</span>
+<span class="span">+12% q/q</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">RPO $4.5B; ~39% expected to be recognized in 12 months</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4.5B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Remaining performance obligations totaled $4.5B at quarter‑end, with approximately 39% expected to be recognized over the next twelve months.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Remaining performance obligations (RPO) $4.5B</span>
+<span class="span">~39% expected to be recognized</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">Closed TCV $2.41B (+61% y/y)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.4B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Total contract value closed reached $2.41B, up 61% year over year, indicating accelerating booking momentum.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Total contract value (TCV) closed $2.41B</span>
+<span class="span">+61% y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">Adjusted free cash flow $925M (57% margin) in Q1</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$925M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Palantir generated $925M of adjusted free cash flow in Q1, a 57% margin, supporting balance sheet strength for continued AI investment and scaling.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Adjusted free cash flow $925M</span>
+<span class="span">57% margin</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">Cash and Treasuries totaled approximately $8.0B</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$8.0B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Cash, cash equivalents, and short‑term U.S. Treasuries stood at roughly $8.0B at March 31, 2026, providing substantial liquidity.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">short‑term U.S. Treasuries</span>
+<span class="span">~$8.0B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">FY26 revenue guidance raised to $7.650–$7.662B</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$7.7B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management raised full‑year 2026 revenue guidance to a range of $7.650–$7.662B, reflecting confidence in sustained AI demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">FY 2026: revenue $7.650–$7.662B</span>
+<span class="span">raised</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">FY26 U.S. commercial revenue guidance ≥$3.224B (≥+120% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.2B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Palantir guided U.S. commercial revenue to at least $3.224B for FY26, implying growth of at least 120% year over year.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">U.S. commercial revenue guidance ≥$3.224B</span>
+<span class="span">≥+120% y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">FY26 adjusted FCF guidance raised to $4.2–$4.4B</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4.3B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Adjusted free cash flow guidance for FY26 increased to $4.2–$4.4B, signaling strong cash generation expectations.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">adjusted free cash flow $4.2–$4.4B</span>
+<span class="span">raised</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">Q2 2026 revenue guidance set at $1.797–$1.801B</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.8B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">For Q2 2026, Palantir guided revenue to $1.797–$1.801B, alongside adjusted income from operations of $1.063–$1.067B.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q2 2026: revenue $1.797–$1.801B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">Management prioritizes U.S. warfighter amid capacity constraints</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The CEO reaffirmed prioritization of U.S. national security customers, noting the company &quot;100%&quot; prioritizes the warfighter and that current U.S. demand exceeds capacity.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">100%</span>
+<span class="span">prioritizes the warfighter</span>
+<span class="span">exceeds capacity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">AIP positioned as governance layer as model costs fall</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">CTO argued that model commoditization and falling token costs increase the need for AIP’s governed, auditable workflows, countering narratives focused solely on model providers.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">model commoditization</span>
+<span class="span">falling token costs</span>
+<span class="span">governed, auditable workflows</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">CEO contrasts AIP governance with &#x27;AI slop&#x27;; skepticism of lab-built approaches</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management criticized lab-built, model-only approaches and emphasized AIP’s governed implementation, with the CEO using the phrase &quot;AI slop&quot; and highlighting sales leverage.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI slop</span>
+<span class="span">only seven of our salespeople actually even really sell</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">CEO personally leads recruiting for elite AI talent</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The CEO said he is personally overseeing recruiting, underscoring Palantir’s appeal to highly technical, mission‑driven, often neurodivergent talent.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">personally overseeing recruiting</span>
+<span class="span">neurodivergent</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">CR risk acknowledged; role framed as &#x27;existential&#x27; to missions</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management acknowledged the likelihood of a continuing resolution (CR) but characterized Palantir’s role as existential to mission outcomes, implying resilience to budget scenarios.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">likelihood of a CR</span>
+<span class="span">existential</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">DoD seeks to pull more work into 2026</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CTO described a very active period with the Department seeking to accelerate work into 2026, reflecting strong federal AI demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">a very active period</span>
+<span class="span">pull as much work into 2026 as possible</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">Management aspires to sustain ~100% U.S. growth next year (non-guidance)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO expressed an ambition—framed as non‑guidance—to maintain approximately 100% U.S. growth next year.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~100% U.S. growth again next year</span>
+<span class="span">ambition rather than formal guidance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">Contract cancellability and conversion risk highlighted</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Palantir noted many agreements include termination for convenience and that not all RDV or closed TCV will convert to revenue, adding forecasting risk.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">termination for convenience</span>
+<span class="span">not all remaining deal value</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">U.S. concentration and public‑sector budget exposure risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management warned that U.S. revenue concentration and dependence on government budgets could impact growth and revenue timing.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">U.S. revenue comprised 79% of Q1 sales</span>
+<span class="span">budget constraints</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">Long, complex deployments create timing volatility</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Palantir cited long, outcome‑driven deployments and complex implementations, noting timing variability in bookings and implementations that can cause quarterly volatility.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">long, outcome‑driven deployments</span>
+<span class="span">timing variability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">Management highlights accelerating U.S. demand across segments</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Palantir emphasized accelerating U.S. demand across government and commercial customers and raised full‑year guidance.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">accelerating U.S. demand</span>
+<span class="span">government and commercial</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037" data-providers="">
 <div class="ev-top">
 <span class="date">2026-02-03</span>
 <span class="eh">Reuters: Palantir jumps on blowout growth and bullish outlook</span>
@@ -707,30 +561,224 @@ Product and go‑to‑market momentum continued with the Google Cloud partnershi
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class='phase'>
+<h2>Model breadth and federal wins alongside improving financial prints</h2>
+<div class='range'>2025-05-13 → 2025-12-31</div>
+<div class='psum'>Palantir extended its OpenAI coverage by enabling GPT‑4.1 family models via Direct OpenAI API throughout AIP features. Financial momentum continued into late 2025 with a Reuters-cited beat and raised outlook, underscoring AI-driven monetization.
+The company secured a notable U.S. Navy ShipOS award worth up to $448 million, signaling durable federal AI modernization across the submarine industrial base and reinforcing Palantir’s defense franchise.</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-10</span>
+<span class="eh">Palantir wins U.S. Navy ShipOS contract worth up to $448 million</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$448M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Palantir secured a U.S. Department of the Navy ShipOS award valued up to $448 million to scale AI across the submarine industrial base, expanding its federal defense footprint.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">up to 448 million</span>
+<span class="span">U.S. Navy ShipOS</span>
+<span class="span">scales AI across submarine industrial base</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-03</span>
+<span class="eh">Reuters: Palantir beats and raises outlook on solid AI demand</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters reported Palantir raised Q4 revenue guidance above estimates amid solid AI demand, with post-earnings trading showing modest gains and continued volatility.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[6]</div>
+<span class="span">Raised Q4 revenue guide above estimates</span>
+<span class="span">PLTR +1 percent after hours</span>
+<span class="span">AI demand</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-05-13</span>
+<span class="eh">OpenAI GPT‑4.1 family available in AIP via Direct OpenAI API</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Palantir made GPT‑4.1, GPT‑4.1 mini, and GPT‑4.1 nano generally available in AIP through the Direct OpenAI API, enabling the models across AIP features like Logic, Pipeline Builder, and transforms.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>4</b></span> <span class="chchip">strategic_option_value · OAI <b>3</b></span> <span class="chchip">provider_specificity · OAI <b>2</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b></span> <span class="chchip">switching_flexibility · OAI <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">GPT-4.1</span>
+<span class="span">Direct OpenAI API</span>
+<span class="span">AIP</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Multi‑model expansion across cloud environments</h2>
+<div class='range'>2024-02-15 → 2024-12-31</div>
+<div class='psum'>In 2024 Palantir expanded default AIP support for multiple LLM families (Claude, Llama2) and introduced model governance controls via Control Panel. Subsequent updates added general availability of Meta’s Llama 3 models and OpenAI’s GPT‑4o via Azure OpenAI, requiring contract addenda as needed for model usage.
+Palantir deepened ties with hyperscalers: a first-of-its-kind Microsoft partnership enabled Azure OpenAI within AIP for classified environments, while an Anthropic–Palantir–AWS collaboration brought Claude 3/3.5 to U.S. intelligence and defense agencies on AWS with IL6 accreditation. These moves broadened model choice and deployment venues under stringent security postures.</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-11-07</span>
+<span class="eh">Anthropic–Palantir–AWS bring Claude 3/3.5 to U.S. intel and defense on AIP</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic and Palantir partnered with AWS to provide Claude 3 and 3.5 models on AIP for U.S. intelligence and defense agencies, leveraging Palantir’s IL6-accredited environment and Amazon SageMaker.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · ANT <b>2</b></span> <span class="chchip">product_integration_exposure · ANT <b>3</b></span> <span class="chchip">strategic_option_value · ANT <b>3</b></span> <span class="chchip">provider_specificity · ANT <b>2</b></span> <span class="chchip">multi_model_hedge · ANT <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Claude 3 and 3.5</span>
+<span class="span">Palantir’s AI Platform (AIP)</span>
+<span class="span">IL6 accreditation</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-08-08</span>
+<span class="eh">Palantir–Microsoft enable Azure OpenAI within AIP for classified networks</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Palantir and Microsoft launched an integrated suite to operationalize Azure OpenAI Service within AIP across government and classified cloud environments, a first-of-its-kind capability for national security operations.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · OAI <b>2</b></span> <span class="chchip">product_integration_exposure · OAI <b>4</b></span> <span class="chchip">strategic_option_value · OAI <b>3</b></span> <span class="chchip">provider_specificity · OAI <b>2</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">first-of-its-kind</span>
+<span class="span">Azure OpenAI (AOAI) Service</span>
+<span class="span">classified environments</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="meta_llama openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-06-17</span>
+<span class="eh">Llama 3 and GPT‑4o via Azure OpenAI generally available in AIP</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Palantir announced GA support for Meta’s Llama 3 70B/8B Instruct models and OpenAI’s GPT‑4o via Azure OpenAI in AIP, with certain enrollments requiring acceptance of an additional contract addendum before enabling.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>3</b> OAI <b>4</b></span> <span class="chchip">strategic_option_value · LLA <b>2</b> OAI <b>3</b></span> <span class="chchip">provider_specificity · LLA <b>1</b> OAI <b>2</b></span> <span class="chchip">multi_model_hedge · LLA <b>4</b> OAI <b>4</b></span> <span class="chchip">switching_flexibility · LLA <b>3</b> OAI <b>4</b></span> <span class="chchip">contractual_commitment_strength · LLA <b>2</b> OAI <b>1</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Support for Llama 3&#x27;s 70B Instruct and 8B Instruct LLMs</span>
+<span class="span">accept an additional contract addendum</span>
+<span class="span">GPT-4o through Azure OpenAI</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="anthropic_claude meta_llama">
+<div class="ev-top">
+<span class="date">2024-02-15</span>
+<span class="eh">AIP adds default support for Claude and Llama2; new Control Panel model governance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Palantir enabled AIP defaults for Anthropic Claude and Meta Llama2 models, with a forthcoming Control Panel feature to approve terms and enable new models, reinforcing multi-model governance inside AIP.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>3</b> LLA <b>3</b></span> <span class="chchip">strategic_option_value · ANT <b>3</b> LLA <b>2</b></span> <span class="chchip">provider_specificity · ANT <b>2</b> LLA <b>1</b></span> <span class="chchip">multi_model_hedge · ANT <b>4</b> LLA <b>4</b></span> <span class="chchip">switching_flexibility · ANT <b>3</b> LLA <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">supports Claude, Llama2</span>
+<span class="span">Control Panel</span>
+<span class="span">by default</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AIP launch and early activation</h2>
+<div class='range'>2023-04-07 → 2023-12-31</div>
+<div class='psum'>Palantir publicly introduced its Artificial Intelligence Platform (AIP) as a fourth platform alongside Gotham, Foundry, and Apollo, committing to an initial release to strategic partners by late May 2023. This marked the company&#x27;s formal entry into enabling large language model (LLM) use within governed, operational workflows across commercial and government sectors.
+By June 2023, Palantir began enabling AIP features inside Foundry enrollments, including AIP Assist, an LLM-powered support tool trained on Palantir documentation. This established a pattern of integrating third-party LLMs under Palantir&#x27;s security model while making AI capabilities accessible inside existing customer environments.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2023-06-01</span>
+<span class="eh">Foundry enrollments gain AIP activation and AIP Assist</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Select Foundry enrollments could activate AIP from Control Panel, providing early access to AIP Assist—an LLM-powered support tool trained on Palantir documentation—bringing governed LLM interactions into existing workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">activate AIP</span>
+<span class="span">AIP Assist</span>
+<span class="span">LLM-powered</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2023-04-07</span>
+<span class="eh">Palantir announces the Artificial Intelligence Platform (AIP)</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Palantir unveiled AIP as its fourth platform, combining its ML technologies with the latest large language models and committed to initial availability for strategic partners by the end of May 2023.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Artificial Intelligence Platform (AIP)</span>
+<span class="span">no later than the end of May</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0031'>E0031</a></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0031'>E0031</a></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0.25</td><td>0.25</td><td>0.6</td><td>0.15</td><td>0.15</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.9</td><td>0.75</td><td>0.95</td><td>0.45</td><td>0.3</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>-0.5</td><td>-0.5</td><td>-0.5</td><td>-0.25</td><td>-0.25</td><td>-0.25</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.73</td><td>0.73</td><td>0.76</td><td>0.76</td><td>0.745</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.2191</td><td>0.1437</td><td>0.3576</td><td>0.0993</td><td>0.0577</td><td>-0.0263</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What portion of AIP usage by model family (OpenAI, Anthropic, Meta, Google, xAI) do enterprise and government customers account for in FY26?</li>
@@ -744,4 +792,19 @@ Product and go‑to‑market momentum continued with the Google Cloud partnershi
 <li>Contract values (RDV, RPO, TCV, and ceiling values like ShipOS) do not equal revenue and may be cancellable or unexercised; conversion timing is uncertain.</li>
 <li>Market reaction coverage reflects a point-in-time view and may not capture subsequent price or estimate revisions.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

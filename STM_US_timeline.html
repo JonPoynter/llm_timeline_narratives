@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>STMicroelectronics NV <span class='sub'>(STM US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.381</div>
@@ -73,29 +83,302 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (verified): 1</span>
 <span class='chip'>corroborated: 1</span>
 </div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Hyperscaler AI datacenter pivot and AI transparency</h2>
+<div class='range'>2026-02-09 → 2026-06-27</div>
+<div class='psum'>In early 2026, ST disclosed a multi‑year, multi‑billion USD semiconductor engagement with AWS for cloud/AI data centers and issued volume‑vesting warrants to AWS. Management subsequently guided 2026 data‑center revenue to be nicely above $500M and well above $1B in 2027, citing unconstrained demand above targets and capacity ramps planned for 2H26, with AI revenue mix skewed ~40% to analog &amp; power and ~60% to MCUs plus RF/optical. AI optical contributions began in Q1 with larger photonics/BiCMOS impact expected in H2, and commercial engagements were emphasized as extending far beyond AWS.
+Market reaction was strong, with shares rallying on raised targets tied to AI data‑center demand. ST also published AI transparency for STM32 Sidekick, confirming use of Azure OpenAI GPT variants and embeddings via a RAG approach, while continuing to expand developer guidance on TensorFlow Lite performance on STM32MPUs.</div>
+<div class="event t-web_only_unverified" id="E0013" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-27</span>
+<span class="eh">AI transparency: STM32 Sidekick uses Azure OpenAI GPT variants via RAG</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">ST’s AI transparency page confirms STM32 Sidekick employs Azure OpenAI text‑embedding and Azure OpenAI GPT variants using a retrieval‑augmented generation (RAG) pattern over ST content.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>2</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b></span> <span class="chchip">user_lock_in_relevance · OAI <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">STM32 Sidekick</span>
+<span class="span">Azure OpenAI text-embedding</span>
+<span class="span">Azure OpenAI GPT variants.</span>
+<span class="span">A retrieval-augmented generation (RAG)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0016" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">STM32MPU guidance: measuring NN performance with TensorFlow Lite runtime</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">ST published approved guidance on benchmarking TensorFlow Lite neural‑network models on STM32MPU platforms, including required X‑LINUX‑AI components and benchmark tools.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>2</b></span> <span class="chchip">strategic_option_value · GEM <b>2</b></span> <span class="chchip">provider_specificity · GEM <b>2</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">measure the performance of a TensorFlow Lite neural network model</span>
+<span class="span">STM32MPUs platforms.</span>
+<span class="span">tensorflow-lite-tools</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">Shares rally on raised AI data‑centre targets; STM +15.1% to €68.26</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters‑reprinted reports highlighted a tech‑led European equity rally as STMicroelectronics surged on raised revenue targets tied to AI data‑centre demand.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">raised revenue targets tied to data-centre demand from the AI boom</span>
+<span class="span">STMicroelectronics jumped 15.1% to €68.26</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Guides 2026 data‑center revenue nicely above $500M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$500M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management guided 2026 data‑center revenue to be nicely above $500M, reflecting AI/datacenter demand momentum.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">2026 data center revenue</span>
+<span class="span">nicely above $500M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Guides 2027 data‑center revenue well above $1B</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">ST expects 2027 data‑center revenue well above $1B, supported by ongoing AI infrastructure spending.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">well above $1B in 2027.</span>
+<span class="span">data center revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Unconstrained demand above targets; capacity ramps planned in 2H26</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management indicated unconstrained AI/datacenter demand exceeds target levels for 2026–2027, with capacity ramps planned for the second half of 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">unconstrained demand for both years is above those levels</span>
+<span class="span">capacity ramps planned in 2H26.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">2026 AI revenue mix ~40% analog &amp; power / ~60% MCUs+RF/optical</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">ST disclosed expected 2026 AI revenue mix of about 40% analog &amp; power and 60% microcontrollers plus RF/optical, underscoring broad participation across power and compute subsystems.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~40% analog &amp; power</span>
+<span class="span">~60% microcontrollers plus RF/optical.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">AI optical contributions began in Q1; larger photonics/BiCMOS impact in H2</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Optical contributions to AI programs started in Q1 via high‑performance MCUs, with a larger photonics/BiCMOS impact expected in the second half.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Optical contributions started in Q1</span>
+<span class="span">larger photonics/BiCMOS impact skewing to H2.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Engagements extend beyond AWS across hyperscalers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">While AWS is a near‑term driver, management emphasized that ST’s hyperscaler engagements extend far beyond AWS, indicating broader customer diversification.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AWS is a near‑term driver</span>
+<span class="span">far beyond AWS.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Optical/photonics ramps in H2; broader capacity adds in 2H26</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ST plans meaningful optical/photonics ramps in H2 2026 with broader capacity additions targeted in 2H26 to support AI and datacenter demand.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">optical/photonics ramps meaningfully in H2</span>
+<span class="span">broader capacity adds targeted in 2H26.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Ex‑personal electronics, AI/optical/SiC/satellite programs to grow q/q through 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects programs including SiC, optical/AI, and satellites to grow sequentially through 2026 excluding personal electronics.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Ex‑personal electronics</span>
+<span class="span">grow q/q through 2026.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Risk: AI/datacenter growth assumes sustained AI capex; slowdown would pressure targets</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">ST cautioned that its 2026–2027 data‑center revenue targets assume sustained AI capex, and that any slowdown in AI infrastructure spend could pressure growth assumptions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">assume sustained AI capex</span>
+<span class="span">Any slowdown in AI infrastructure spend could pressure growth assumptions.</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-09</span>
+<span class="eh">ST inks multi‑year, multi‑billion AWS AI/datacenter chip engagement; issues up to 24.8M-share warrants</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ST announced a strategic, multi‑year, multi‑billion USD engagement with AWS to supply semiconductors for cloud/AI data centers and issued warrants to AWS for up to 24.8M ordinary shares vesting with purchase volumes. The company reiterated this agreement in its 26Q1 release.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[1], filings[0]</div>
+<span class="span">multi‑year, multi‑billion AWS deal including warrants</span>
+<span class="span">AWS warrants up to 24.8M shares</span>
+<span class="span">multi‑year, multi‑billion USD engagement with AWS</span>
+<span class="span">issued warrants to AWS for up to 24.8M ordinary shares</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Edge AI ecosystem expansion and STM32 AI introductions</h2>
+<div class='range'>2025-07-08 → 2025-11-21</div>
+<div class='psum'>In 2025 ST accelerated its edge AI ecosystem. Mid‑year, ST documented how to use GPU/NPU acceleration on STM32MP2 with TensorFlow Lite and ONNX Runtime, helping developers deploy optimized neural‑network inference on embedded Linux platforms.
+In November, ST expanded the STM32 AI Model Zoo to over 140 ready‑made models and positioned it as the largest MCU‑optimized library of its kind. ST also introduced STM32 Sidekick, an AI‑powered assistant integrated into the ST Community platform that helps engineers navigate ST’s technical content more efficiently.</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-21</span>
+<span class="eh">ST introduces STM32 Sidekick AI assistant on ST Community</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ST launched STM32 Sidekick, an AI‑powered tool integrated into the ST Community platform, trained exclusively on official STM32 documentation, datasheets, wikis, and notes to speed developer information discovery.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">STM32 Sidekick, an AI-powered tool</span>
+<span class="span">integrated into the ST Community platform</span>
+<span class="span">trained exclusively on official STM32 documentation</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-18</span>
+<span class="eh">STM32 AI Model Zoo expanded to 140+ models; largest MCU-optimized library</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ST announced a major expansion of the STM32 AI Model Zoo, surpassing 140 ready‑made models and positioning it as the largest MCU‑optimized model zoo library. This broadened options for edge AI developers across vision, audio, and sensing.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2], web_search_findings[1]</div>
+<span class="span">over 140 ready-made models</span>
+<span class="span">the largest MCU-optimized model zoo library of its kind</span>
+<span class="span">STM32 AI Model Zoo</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0015" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-07-08</span>
+<span class="eh">Guidance on STM32MP2 AI hardware acceleration with TensorFlow Lite and ONNX Runtime</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">ST published an approved wiki on enabling AI hardware acceleration for STM32MP2 using TensorFlow Lite and ONNX Runtime, detailing GPU/NPU pathways to run TFLite models directly on the platform.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>2</b></span> <span class="chchip">strategic_option_value · GEM <b>2</b></span> <span class="chchip">provider_specificity · GEM <b>2</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b></span> <span class="chchip">switching_flexibility · GEM <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">TensorFlow Lite™ and ONNX Runtime frameworks</span>
+<span class="span">GPU/NPU hardware acceleration</span>
+<span class="span">STM32MP2 series</span>
+</details>
+</div>
+</div>
 <div class='phase'>
 <h2>Foundation: Cloud connectivity and AI toolchain groundwork</h2>
 <div class='range'>2020-08-01 → 2022-07-21</div>
 <div class='psum'>STMicroelectronics laid early foundations linking its embedded platforms to cloud and AI workflows. In 2020, ST released an STM32Cube expansion package to connect STM32 devices securely to Google Cloud IoT Core on GCP, signaling early alignment with hyperscale cloud ecosystems for device onboarding and telemetry.
 By mid-2022, ST advanced its AI enablement on microcontrollers with STM32Cube.AI v7.2.0, adding support for ultra‑efficient deeply quantized neural networks and TensorFlow 2.9 models. This set the stage for later expansions in edge AI enablement, model portability, and toolchain performance.</div>
-<div class="event t-web_only_unverified" id="E0018">
-<div class="ev-top">
-<span class="date">2020-08-01</span>
-<span class="eh">STM32Cube Expansion Package enables secure connection to Google Cloud IoT Core</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">ST released the X-CUBE-GCP STM32Cube Expansion Package to connect STM32 boards to Google Cloud IoT Core on GCP. This formalized early cloud integration patterns for STM’s embedded portfolio.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span">Google Cloud Platform™ (GCP)</span>
-<span class="span">Google Cloud™ IoT Core service</span>
-<span class="span">X-CUBE-GCP</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0017">
+<div class="event t-web_only_unverified" id="E0017" data-providers="">
 <div class="ev-top">
 <span class="date">2022-07-21</span>
 <span class="eh">STM32Cube.AI v7.2.0 adds deeply quantized NN support and TensorFlow 2.9</span>
@@ -112,307 +395,66 @@ By mid-2022, ST advanced its AI enablement on microcontrollers with STM32Cube.AI
 <span class="span">support for TensorFlow 2.9 models</span>
 </details>
 </div>
-</div>
-<div class='phase'>
-<h2>Edge AI ecosystem expansion and STM32 AI introductions</h2>
-<div class='range'>2025-07-08 → 2025-11-21</div>
-<div class='psum'>In 2025 ST accelerated its edge AI ecosystem. Mid‑year, ST documented how to use GPU/NPU acceleration on STM32MP2 with TensorFlow Lite and ONNX Runtime, helping developers deploy optimized neural‑network inference on embedded Linux platforms.
-In November, ST expanded the STM32 AI Model Zoo to over 140 ready‑made models and positioned it as the largest MCU‑optimized library of its kind. ST also introduced STM32 Sidekick, an AI‑powered assistant integrated into the ST Community platform that helps engineers navigate ST’s technical content more efficiently.</div>
-<div class="event t-web_only_unverified" id="E0015">
+<div class="event t-web_only_unverified" id="E0018" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2025-07-08</span>
-<span class="eh">Guidance on STM32MP2 AI hardware acceleration with TensorFlow Lite and ONNX Runtime</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">ST published an approved wiki on enabling AI hardware acceleration for STM32MP2 using TensorFlow Lite and ONNX Runtime, detailing GPU/NPU pathways to run TFLite models directly on the platform.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">TensorFlow Lite™ and ONNX Runtime frameworks</span>
-<span class="span">GPU/NPU hardware acceleration</span>
-<span class="span">STM32MP2 series</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0014">
-<div class="ev-top">
-<span class="date">2025-11-18</span>
-<span class="eh">STM32 AI Model Zoo expanded to 140+ models; largest MCU-optimized library</span>
-<span class="badge">model_release</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">ST announced a major expansion of the STM32 AI Model Zoo, surpassing 140 ready‑made models and positioning it as the largest MCU‑optimized model zoo library. This broadened options for edge AI developers across vision, audio, and sensing.</p>
-<details>
-<summary>evidence — 2 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[2], web_search_findings[1]</div>
-<span class="span">over 140 ready-made models</span>
-<span class="span">the largest MCU-optimized model zoo library of its kind</span>
-<span class="span">STM32 AI Model Zoo</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0012">
-<div class="ev-top">
-<span class="date">2025-11-21</span>
-<span class="eh">ST introduces STM32 Sidekick AI assistant on ST Community</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">ST launched STM32 Sidekick, an AI‑powered tool integrated into the ST Community platform, trained exclusively on official STM32 documentation, datasheets, wikis, and notes to speed developer information discovery.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">STM32 Sidekick, an AI-powered tool</span>
-<span class="span">integrated into the ST Community platform</span>
-<span class="span">trained exclusively on official STM32 documentation</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Hyperscaler AI datacenter pivot and AI transparency</h2>
-<div class='range'>2026-02-09 → 2026-06-27</div>
-<div class='psum'>In early 2026, ST disclosed a multi‑year, multi‑billion USD semiconductor engagement with AWS for cloud/AI data centers and issued volume‑vesting warrants to AWS. Management subsequently guided 2026 data‑center revenue to be nicely above $500M and well above $1B in 2027, citing unconstrained demand above targets and capacity ramps planned for 2H26, with AI revenue mix skewed ~40% to analog &amp; power and ~60% to MCUs plus RF/optical. AI optical contributions began in Q1 with larger photonics/BiCMOS impact expected in H2, and commercial engagements were emphasized as extending far beyond AWS.
-Market reaction was strong, with shares rallying on raised targets tied to AI data‑center demand. ST also published AI transparency for STM32 Sidekick, confirming use of Azure OpenAI GPT variants and embeddings via a RAG approach, while continuing to expand developer guidance on TensorFlow Lite performance on STM32MPUs.</div>
-<div class="event t-corroborated" id="E0001">
-<div class="ev-top">
-<span class="date">2026-02-09</span>
-<span class="eh">ST inks multi‑year, multi‑billion AWS AI/datacenter chip engagement; issues up to 24.8M-share warrants</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">ST announced a strategic, multi‑year, multi‑billion USD engagement with AWS to supply semiconductors for cloud/AI data centers and issued warrants to AWS for up to 24.8M ordinary shares vesting with purchase volumes. The company reiterated this agreement in its 26Q1 release.</p>
-<details>
-<summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">news_rows[1], filings[0]</div>
-<span class="span">multi‑year, multi‑billion AWS deal including warrants</span>
-<span class="span">AWS warrants up to 24.8M shares</span>
-<span class="span">multi‑year, multi‑billion USD engagement with AWS</span>
-<span class="span">issued warrants to AWS for up to 24.8M ordinary shares</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0002">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Guides 2026 data‑center revenue nicely above $500M</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$500M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Management guided 2026 data‑center revenue to be nicely above $500M, reflecting AI/datacenter demand momentum.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">2026 data center revenue</span>
-<span class="span">nicely above $500M</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0003">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Guides 2027 data‑center revenue well above $1B</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">ST expects 2027 data‑center revenue well above $1B, supported by ongoing AI infrastructure spending.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">well above $1B in 2027.</span>
-<span class="span">data center revenue</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0004">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Unconstrained demand above targets; capacity ramps planned in 2H26</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management indicated unconstrained AI/datacenter demand exceeds target levels for 2026–2027, with capacity ramps planned for the second half of 2026.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">unconstrained demand for both years is above those levels</span>
-<span class="span">capacity ramps planned in 2H26.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0005">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">2026 AI revenue mix ~40% analog &amp; power / ~60% MCUs+RF/optical</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">ST disclosed expected 2026 AI revenue mix of about 40% analog &amp; power and 60% microcontrollers plus RF/optical, underscoring broad participation across power and compute subsystems.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">~40% analog &amp; power</span>
-<span class="span">~60% microcontrollers plus RF/optical.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0006">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">AI optical contributions began in Q1; larger photonics/BiCMOS impact in H2</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Optical contributions to AI programs started in Q1 via high‑performance MCUs, with a larger photonics/BiCMOS impact expected in the second half.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Optical contributions started in Q1</span>
-<span class="span">larger photonics/BiCMOS impact skewing to H2.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0007">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Engagements extend beyond AWS across hyperscalers</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">While AWS is a near‑term driver, management emphasized that ST’s hyperscaler engagements extend far beyond AWS, indicating broader customer diversification.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">AWS is a near‑term driver</span>
-<span class="span">far beyond AWS.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0008">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Optical/photonics ramps in H2; broader capacity adds in 2H26</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">ST plans meaningful optical/photonics ramps in H2 2026 with broader capacity additions targeted in 2H26 to support AI and datacenter demand.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">optical/photonics ramps meaningfully in H2</span>
-<span class="span">broader capacity adds targeted in 2H26.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0009">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Ex‑personal electronics, AI/optical/SiC/satellite programs to grow q/q through 2026</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management expects programs including SiC, optical/AI, and satellites to grow sequentially through 2026 excluding personal electronics.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Ex‑personal electronics</span>
-<span class="span">grow q/q through 2026.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0010">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Risk: AI/datacenter growth assumes sustained AI capex; slowdown would pressure targets</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">ST cautioned that its 2026–2027 data‑center revenue targets assume sustained AI capex, and that any slowdown in AI infrastructure spend could pressure growth assumptions.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">assume sustained AI capex</span>
-<span class="span">Any slowdown in AI infrastructure spend could pressure growth assumptions.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0011">
-<div class="ev-top">
-<span class="date">2026-06-02</span>
-<span class="eh">Shares rally on raised AI data‑centre targets; STM +15.1% to €68.26</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Reuters‑reprinted reports highlighted a tech‑led European equity rally as STMicroelectronics surged on raised revenue targets tied to AI data‑centre demand.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[0]</div>
-<span class="span">raised revenue targets tied to data-centre demand from the AI boom</span>
-<span class="span">STMicroelectronics jumped 15.1% to €68.26</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0016">
-<div class="ev-top">
-<span class="date">2026-06-24</span>
-<span class="eh">STM32MPU guidance: measuring NN performance with TensorFlow Lite runtime</span>
+<span class="date">2020-08-01</span>
+<span class="eh">STM32Cube Expansion Package enables secure connection to Google Cloud IoT Core</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">ST published approved guidance on benchmarking TensorFlow Lite neural‑network models on STM32MPU platforms, including required X‑LINUX‑AI components and benchmark tools.</p>
+<p class="narr">ST released the X-CUBE-GCP STM32Cube Expansion Package to connect STM32 boards to Google Cloud IoT Core on GCP. This formalized early cloud integration patterns for STM’s embedded portfolio.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>2</b></span> <span class="chchip">strategic_option_value · GEM <b>2</b></span> <span class="chchip">provider_specificity · GEM <b>2</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">measure the performance of a TensorFlow Lite neural network model</span>
-<span class="span">STM32MPUs platforms.</span>
-<span class="span">tensorflow-lite-tools</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0013">
-<div class="ev-top">
-<span class="date">2026-06-27</span>
-<span class="eh">AI transparency: STM32 Sidekick uses Azure OpenAI GPT variants via RAG</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">ST’s AI transparency page confirms STM32 Sidekick employs Azure OpenAI text‑embedding and Azure OpenAI GPT variants using a retrieval‑augmented generation (RAG) pattern over ST content.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">STM32 Sidekick</span>
-<span class="span">Azure OpenAI text-embedding</span>
-<span class="span">Azure OpenAI GPT variants.</span>
-<span class="span">A retrieval-augmented generation (RAG)</span>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Google Cloud Platform™ (GCP)</span>
+<span class="span">Google Cloud™ IoT Core service</span>
+<span class="span">X-CUBE-GCP</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0</td><td>0</td><td>0.1</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.4</td><td>0</td><td>0.3</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.805</td><td>0.775</td><td>0.73</td><td>0.775</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.1312</td><td>0</td><td>0.1229</td><td>0</td><td>0</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What is the precise dollar value, volume commitments, and term of the multi‑year AWS engagement beyond &quot;multi‑billion USD&quot;?</li>
@@ -428,4 +470,19 @@ Market reaction was strong, with shares rallying on raised targets tied to AI da
 <li>Azure OpenAI usage is delivered via Microsoft Azure; providers_touched maps to OpenAI even though the commercial relationship may be primarily with Microsoft.</li>
 <li>No frontier_events were provided for this firm in the current evidence set.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

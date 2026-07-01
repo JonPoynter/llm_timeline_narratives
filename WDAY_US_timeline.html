@@ -1,0 +1,821 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>WDAY US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Workday Inc <span class='sub'>(WDAY US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.44</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>38 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 2</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 26</span>
+<span class='chip'>web-only (verified): 9</span>
+<span class='chip'>corroborated: 2</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Broad deployment; Google Gemini default; productivity and guidance lift</h2>
+<div class='range'>2026-05-12 → 2026-06-30</div>
+<div class='psum'>In May 2026, Workday emphasized monetization and deployment at scale. New ACV from agentic AI grew over 200% y/y with AI ARR approaching $500M, Sana and the Self‑Service Agent were provisioned to all AI‑terms customers, and new agents (Sana Travel Agent; Sana for ITSM) were introduced. Deployment Agent showed measurable implementation efficiency. Management lifted FY27 non‑GAAP operating margin guidance to 30.5% citing AI productivity, while aiming to keep headcount roughly flat.
+Workday expanded distribution by integrating its Self‑Service Agent into Microsoft 365 Copilot and deepened its Google alliance: the Sana Self‑Service Agent became available in Gemini Enterprise and Gemini became the default AI model in Sana (while retaining multi‑model optionality). Workday also partnered with Anthropic and LISC on an AI-focused solopreneur accelerator.</div>
+<div class="event t-web_only_verified" id="E0036" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Google partnership: Sana Agent in Gemini Enterprise; Gemini default model</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Workday expanded its Google Cloud partnership: the Sana Self‑Service Agent is available in Gemini Enterprise and Gemini is now the default AI model inside Sana, while retaining multi‑model flexibility.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Sana Self-Service Agent from Workday is Now Available in Gemini Enterprise</span>
+<span class="span">Gemini Becomes Default AI Model for Sana for Workday</span>
+<span class="span">built to support multiple AI models</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Agentic AI ACV &gt;200% y/y; AI ARR approaching $500M</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$500M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reported Q1 agentic AI new ACV growth above 200% year over year and AI ARR nearing $500M, with larger expansion deals when AI is included.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">&gt;200% y/y</span>
+<span class="span">approaching $500 million</span>
+<span class="span">expansion deals including AI were &gt;50% larger</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Default provisioning of Sana and Self‑Service Agent to all AI‑terms customers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Workday said all HCM and finance customers on AI terms would receive Sana for Workday and the Self‑Service Agent by the end of May as part of existing contracts.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">all HCM and finance customers on our AI terms of service</span>
+<span class="span">Sana for Workday and the Self‑Service Agent</span>
+<span class="span">by the end of May</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Workday debuts Sana Travel Agent and Sana for ITSM; highlights open APIs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management announced two agents—Sana Travel Agent and Sana for ITSM—and emphasized openness via AI APIs/Extend Pro aligned to a “world model of work.”</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Sana Travel Agent</span>
+<span class="span">Sana for ITSM</span>
+<span class="span">“world model of work,” openness via AI APIs/Extend Pro</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Positioning: “lawful” agents on Workday’s secure rails</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Workday framed differentiation around lawful agents operating on its business process rails and data security posture.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“lawful” agents</span>
+<span class="span">business process rails</span>
+<span class="span">data security</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Sana as default front end; monetize via APIs and Flex Credits</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Workday emphasized Sana as the default front end and reiterated monetization through first‑party agents and third‑party usage via APIs/Flex Credits.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Sana as the default front end</span>
+<span class="span">APIs/Flex Credits</span>
+<span class="span">first‑party agents</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Deployment Agent cuts implementation hours/cost ~30% now; up to 50% target</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported Deployment Agent is reducing implementation hours/cost by about 30% currently, with a target of up to 50% in the next wave.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">30% reduction in implementation hours/cost</span>
+<span class="span">target of up to 50% in the next wave</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Deployment Agent mission: $0 deployment in a month</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Workday set an explicit mission for Deployment Agent as the AI-automated successor to Launch: achieve ‘the $0 deployment of Workday in a month’ over time.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">the $0 deployment of Workday in a month.</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">AI productivity cited as FY27 OM guide raised to 30.5%</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Workday raised its FY27 non‑GAAP operating margin guidance by 50 bps to 30.5%, citing broad AI‑driven productivity improvements.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], news_rows[0]</div>
+<span class="span">raised FY27 non‑GAAP operating margin guidance by 50 bps to 30.5%</span>
+<span class="span">margin outlook raised to 30.5% adj FY27</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Personnel: headcount to remain as close to flat as possible</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The CEO stated an aspiration to keep headcount as close to flat for the year while expanding margins via AI‑driven productivity.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">as close to flat for the year as possible</span>
+<span class="span">AI‑driven productivity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Total subscription RPO $27.294B (+10.9% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$27.3B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Workday reported total subscription RPO of $27.294B, up 10.9% y/y, reinforcing multi‑year revenue visibility.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Remaining performance obligations (subscription): total $27.294B</span>
+<span class="span">(+10.9% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Current RPO (12‑month) $8.806B (+15.5% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$8.8B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Workday reported current subscription RPO of $8.806B, up 15.5% y/y, reflecting strong near‑term backlog.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">current RPO (12‑month subscription backlog) $8.806B</span>
+<span class="span">(+15.5% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Q2 FY27 guide: CRPO growth 13.5%–14.5%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Workday guided Q2 FY27 CRPO growth to 13.5%–14.5%, alongside subscription revenue and margin targets.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">CRPO growth 13.5%–14.5%</span>
+<span class="span">subscription revenue ~$2.455B (+13% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Developer conference flagged for AI platform announcements</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Workday signaled additional AI platform announcements at an early‑June developer conference as it continues first‑party agent rollouts.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">developer conference in early June</span>
+<span class="span">AI platform announcements</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Best Q1 new ACV in five years; accelerating agentic AI uptake</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited the strongest first‑quarter new ACV growth in five years and accelerating adoption of agentic AI products across customers.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">best first‑quarter new ACV growth in five years</span>
+<span class="span">accelerating uptake of ‘agentic’ AI products</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Over 4,000 customers using Workday AI agents</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Workday reported over 4,000 customers using its organically developed AI agents, with strong retention and global expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">over 4,000 customers using Workday’s organically developed AI agents</span>
+<span class="span">gross revenue retention ~97%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Flex Credits gaining traction; bookings ramp 2H; revenue more in FY2028</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Workday said Flex Credits are gaining traction with bookings expected to ramp in 2H and more revenue impact flowing into FY2028.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Flex Credits are gaining traction</span>
+<span class="span">bookings expected to ramp in 2H</span>
+<span class="span">flow more into FY2028 revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">FY27 capex reiterated at ~$270M; FCF ~$3.18B</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$270M · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">Workday reiterated FY2027 operating cash flow and free cash flow guidance with capex of approximately $270M.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">capex ~$270M</span>
+<span class="span">FCF ~$3.18B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Risk: execution on agentic AI roadmap</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management highlighted reliance on new AI agents for ACV and margin gains, warning that delays or competitive responses could pressure bookings and retention.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">leaning on new AI agents to drive ACV and margin gains</span>
+<span class="span">competitive responses from large platforms</span>
+<span class="span">pressure bookings and retention</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Sana Self‑Service Agent now available in Microsoft 365 Copilot</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Workday integrated the Self‑Service Agent into Microsoft 365 Copilot, enabling HR and finance actions directly within Microsoft 365 while honoring Workday policies and approvals.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span></div>
+<p class="cav">⚠ Microsoft is not among the six scored LLM providers; underlying model provider not specified in the source.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">now available in Microsoft 365 Copilot</span>
+<span class="span">Microsoft 365 Copilot securely connects to the Self-Service Agent</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0038" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-12</span>
+<span class="eh">Workday, Anthropic, and LISC launch AI-focused solopreneur accelerator</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$150,000 · other</span> <span class="badge">neutral</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">The Workday Foundation, with Anthropic and LISC, launched a program providing $150,000 total seed funding, AI skills training, and complimentary Claude AI credits to an initial cohort of solopreneurs.</p>
+<p class="cav">⚠ Philanthropic initiative; not indicative of commercial contract economics.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Workday, Anthropic, and Local Initiatives Support Corporation (LISC)</span>
+<span class="span">$150,000</span>
+<span class="span">Claude AI credits free of charge</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Agents reach GA; commercialization and market reaction</h2>
+<div class='range'>2026-02-24 → 2026-03-31</div>
+<div class='psum'>In February 2026, Workday emphasized a shift to organically built, role‑based agents moving into GA with the March R1 release, supported by a consumption model via Flex Credits. Management also committed to monetizing third‑party programmatic access and agent APIs.
+Against this push, the company reported scale metrics (1.7B AI actions in FY26) and reinforced backlog strength. The Street initially focused on a softer FY27 subscription outlook, driving a selloff. Workday simultaneously broadcasted credibility through marquee AI firms—Anthropic, Google, and OpenAI—running on Workday, and on March 17 announced global availability of Sana from Workday, with customer testimonials describing replacement of ChatGPT licenses.</div>
+<div class="event t-web_only_verified" id="E0017" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">Sana from Workday GA; customer cites retiring 400 ChatGPT licenses</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Workday announced global availability of Sana from Workday. A customer testimonial highlighted rapid adoption and replacement of 400 ChatGPT licenses, suggesting consolidation into Workday’s AI interface.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Customer testimonial; not a quantified Workday contract value.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Sana from Workday – superintelligence for work – is now available</span>
+<span class="span">retired 400 ChatGPT licenses</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Market reaction: shares slump on softer FY27 subscription outlook</span>
+<span class="badge">risk</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Following guidance, Reuters reported Workday shares fell on concerns around a softer FY27 subscription outlook and AI disruption worries; guidance implied ~$9.925B–$9.950B in subscription revenue.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1], filings[1]</div>
+<span class="span">slumps on softer FY27 subscription outlook</span>
+<span class="span">FY27 subs 9.93–9.95b</span>
+<span class="span">subscription revenue $9.925B–$9.950B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Role-based agents to GA in March R1; &gt;400 early access; Flex Credits</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Workday said role‑based agents were moving into GA with the March R1 release, citing more than 400 early‑access customers and reiterating Flex Credits as the consumption-based monetization model.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">moving into GA</span>
+<span class="span">March R1</span>
+<span class="span">&gt;400 customers in early access</span>
+<span class="span">Flex Credits</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Monetizing third‑party access; ending “parasites on Workday”</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management stated it will charge for programmatic access and agent APIs via Flex Credits, aiming to curtail third‑party vendors characterized as &quot;parasites on Workday.&quot;</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">programmatic access</span>
+<span class="span">agent APIs</span>
+<span class="span">“parasites on Workday”</span>
+<span class="span">Flex Credits</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Scale: 1.7B AI actions delivered in FY26</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Workday reported it delivered 1.7 billion AI actions in FY26, highlighting broad usage of AI features in production.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">1.7B AI actions delivered in FY26</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">cRPO reaches $8.833B (+15.8% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$8.8B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">At January 31, 2026, Workday’s current subscription backlog was $8.833B, up 15.8% year over year.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">12‑month subscription revenue backlog (cRPO) $8.833B</span>
+<span class="span">(+15.8% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Total subscription RPO $28.101B (+12.2% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$28.1B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Total subscription remaining performance obligations reached $28.101B, up 12.2% year over year, indicating long-term contracted revenue visibility.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">total subscription revenue backlog $28.101B</span>
+<span class="span">(+12.2% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">FY27 outlook: capex ~$270M; FCF ~$3.18B</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$270M · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">For FY27, Workday guided to operating cash flow of ~$3.45B, free cash flow of ~$3.18B, and capex of ~$270M alongside a ~30% non‑GAAP operating margin.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">capex ~$270M</span>
+<span class="span">free cash flow ~$3.18B (+15%)</span>
+<span class="span">non‑GAAP operating margin ~30%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Risk: AI spend may slow near‑term margin expansion</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management noted FY27 non‑GAAP margin of ~30% reflects prioritization of incremental AI investment, potentially weighing on near‑term operating leverage versus prior expectations.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">non‑GAAP operating margin guide of ~30%</span>
+<span class="span">incremental AI investment</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Back‑half FY27 contribution from agents GA and Flex Credits</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Workday expects GA of organically built agents and Flex Credits consumption to contribute to revenue in the back half of FY27, evolving toward a broader consumption platform over time.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Back‑half FY27 revenue contribution</span>
+<span class="span">enter GA</span>
+<span class="span">consumption recognition via Flex Credits</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Risk: execution on Sana/Paradox and agentic AI commercialization</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management flagged the need for successful integration of Sana and Paradox and effective commercialization of agentic AI features to sustain growth momentum.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Successful integration of Sana and Paradox</span>
+<span class="span">commercialization of agentic AI features</span>
+<span class="span">impact subscription momentum</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0016" data-providers="anthropic_claude google_gemini_deepmind openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Workday CEO: Anthropic, Google and OpenAI all run Workday</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">On an analyst call, the CEO stated that Anthropic, Google, and OpenAI are Workday customers, underscoring penetration among leading AI firms.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Anthropic, Google and OpenAI</span>
+<span class="span">all run Workday</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem and agent platform build-out</h2>
+<div class='range'>2025-06-03 → 2025-11-19</div>
+<div class='psum'>In 2025 Workday pivoted from point features toward an agent-centric platform. The Agent Partner Network and Agent Gateway signaled a strategy to orchestrate Workday and third-party agents through a unified Agent System of Record, with major partners such as Google Cloud and Microsoft participating.
+Concurrently, Workday deepened its Google alignment. Workday agents appeared in Google’s Gemini Enterprise partner ecosystem, and BigQuery became a Workday Data Cloud partner with secure, zero-copy access—bridging Workday HR/finance data with Google analytics and AI tooling.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-11-19</span>
+<span class="eh">Workday Data Cloud adds Google BigQuery with zero-copy access</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Workday announced Google BigQuery as a new Workday Data Cloud partner, enabling secure, zero‑copy access to HR and finance data in Google Cloud for AI‑powered insights.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Google BigQuery</span>
+<span class="span">zero-copy</span>
+<span class="span">Workday Data Cloud</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-10-09</span>
+<span class="eh">Workday agents listed in Google’s Gemini Enterprise ecosystem</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google announced Gemini Enterprise with partner-compatible agents, highlighting Workday’s Self‑Service Agent as integrated into employees’ flow of work within the Gemini Enterprise platform.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Gemini Enterprise</span>
+<span class="span">Workday: Workday agents</span>
+<span class="span">Self-Service Agent</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-06-03</span>
+<span class="eh">Workday unveils Agent Partner Network and Agent Gateway</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">At DevCon 2025, Workday launched the Agent Partner Network and Agent Gateway to connect, manage, and orchestrate Workday and partner-built AI agents within the Agent System of Record.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Workday Agent Partner Network</span>
+<span class="span">Agent Gateway</span>
+<span class="span">connect and manage AI agents</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations and early ecosystem setup</h2>
+<div class='range'>2021-01-11 → 2024-12-31</div>
+<div class='psum'>Workday began incorporating external AI capabilities into core workflows, notably leveraging Google Cloud’s Procurement DocAI to power receipt scanning at scale with multi-language support. This established an early pattern of pairing Workday’s domain models with hyperscaler AI tools to improve accuracy and throughput for finance and HR processes.
+By late 2023, Workday formalized a partner-centered approach via the Workday AI Marketplace to curate third-party AI/ML apps alongside Workday’s own features, setting up distribution and governance mechanisms ahead of its agentic AI push.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2023-09-27</span>
+<span class="eh">Workday launches AI Marketplace for certified partner AI/ML apps</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Workday announced the AI Marketplace to help customers discover and deploy certified AI and ML partner solutions alongside Workday’s own AI, centralizing governance and access.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">AI Marketplace</span>
+<span class="span">certified AI and ML partner solutions</span>
+<span class="span">bringing the best of Workday AI</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-01-11</span>
+<span class="eh">Workday uses Google Cloud Procurement DocAI for receipt scanning</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Workday integrated Google Cloud’s Procurement DocAI to enhance expense receipt scanning with multi-language support, improving data extraction accuracy and scale for customers.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Google Cloud’s Procurement DocAI</span>
+<span class="span">expense receipt scanning capability</span>
+<span class="span">F1 score (measure of model’s accuracy) of &gt; 85% for receipts</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0032'>E0032</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0037'>E0037</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the commercial terms, scope, and duration (if any) associated with Gemini becoming the default AI model inside Sana for Workday?</li>
+<li>How will revenue share or consumption economics work for actions initiated via Microsoft 365 Copilot when it connects to Workday’s Self‑Service Agent?</li>
+<li>What proportion of AI ARR (~$500M) is attributable to first‑party agents versus third‑party agent/API consumption via Flex Credits?</li>
+<li>What is the realized impact of Deployment Agent on time-to-value and services mix as the target moves from ~30% to up to 50% implementation reduction?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several events are based on company press releases and earnings highlights; independent third-party validation of internal metrics (e.g., AI actions, ARR composition) is limited.</li>
+<li>Microsoft is not one of the six scored LLM providers; while Copilot may employ OpenAI models, the cited sources do not specify model providers for that integration.</li>
+<li>The Anthropic collaboration via the solopreneur accelerator reflects philanthropic support (Claude credits, grants) rather than commercial commitments.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

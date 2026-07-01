@@ -1,0 +1,536 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>KVYO US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Klaviyo Inc <span class='sub'>(KVYO US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.4</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>21 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 10</span>
+<span class='chip'>web-only (unverified): 8</span>
+<span class='chip'>web-only (verified): 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Q1’26 results and accelerated Anthropic/OpenAI/Google integrations</h2>
+<div class='range'>2026-05-05 → 2026-05-07</div>
+<div class='psum'>Klaviyo’s May 2026 disclosures emphasized momentum from autonomous and agentic initiatives. The company reported new and expanded integrations across ChatGPT, Claude, Canva, and Google, alongside growing large‑customer cohorts. Management highlighted early traction for its new Composer product (private preview beginning in March), token‑based monetization for ‘intelligence,’ and expanded Customer Agent capabilities, while acknowledging limited visibility on Composer GA timing and near‑term revenue impact.
+Shortly after the quarter’s release, Klaviyo and Anthropic announced an expanded integration that connects Klaviyo’s MCP server broadly across Claude products (Claude.ai and Claude Cowork), enabling agentic marketing workflows and natural‑language access to Klaviyo customer and performance data.</div>
+<div class="event t-web_only_unverified" id="E0021" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Expanded Anthropic integration: agentic marketing workflows across Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Klaviyo and Anthropic expanded their integration by connecting Klaviyo’s MCP server across Claude.ai and Claude Cowork, enabling natural‑language workflows that turn Klaviyo data into actionable reports, briefs, and insights.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">expanded integration with Anthropic</span>
+<span class="span">agentic marketing workflows to Claude</span>
+<span class="span">Claude.ai and Claude Cowork</span>
+<span class="span">Connector directory</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0010" data-providers="openai_chatgpt anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1’26: Expanded integrations across ChatGPT, Claude, and Google</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">In its Q1’26 Business Wire release, Klaviyo cited an expanded platform with new and expanded integrations across ChatGPT, Claude, Canva, and Google, alongside 28% revenue growth and customer wins.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Expanded platform with new and expanded integrations across ChatGPT, Claude, Canva, Google and more.</span>
+<span class="span">28% revenue growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="openai_chatgpt anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Management: Expanded integrations; AI product initiatives incl. Composer, Customer Agent</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">On the earnings call, management highlighted expansions with ChatGPT, Claude, Canva, and Google; positioned Composer and Customer Agent enhancements as key AI product initiatives.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expanded integrations with ChatGPT/Claude/Canva/Google</span>
+<span class="span">Composer private preview</span>
+<span class="span">enhancements to Customer Agent</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Composer entered private preview in March; early value signals</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Klaviyo stated that Composer entered private preview in March and is showing strong value signals, marking early traction for its agentic workflow product.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Composer entered private preview in March</span>
+<span class="span">showing strong value signals</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Monetization framing: token‑priced “intelligence” from Composer</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management characterized Composer monetization as selling token‑priced ‘intelligence,’ citing single‑session audits that uncovered issues and drove incremental revenue for customers.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">selling “intelligence,” priced via tokens</span>
+<span class="span">meaningful incremental revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Composer seen as net‑new revenue stream; Customer Agent expanding</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Klaviyo framed Composer as a net‑new revenue stream and noted Customer Agent is expanding channels and capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">net‑new revenue stream</span>
+<span class="span">Customer Agent expanding channels and capabilities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Agencies embracing Klaviyo AI tools to increase client capacity</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported agency partners are embracing Klaviyo’s AI tools, enabling them to take on more clients due to higher leverage.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">partners are embracing the tools</span>
+<span class="span">take on more clients</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Applied intelligence atop unified B2C CRM cited as key demand driver</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Klaviyo emphasized demand for applied intelligence layered on its unified B2C CRM (e.g., Composer), enabling customers to do more with less and improve personalization and outcomes.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">applied intelligence</span>
+<span class="span">do more with less</span>
+<span class="span">Composer</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Composer positioned as new monetization vector via tokenized intelligence</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated Composer as a new monetization vector via tokenized ‘intelligence,’ noting early sessions could unlock incremental spend and usage.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">new monetization vector</span>
+<span class="span">tokenized “intelligence”</span>
+<span class="span">unlock incremental spend/usage</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Agencies expected to lean in on agentic products</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Klaviyo expects agency partners to lean in further, expanding reach and adoption of its agentic products.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Agencies expected to lean in</span>
+<span class="span">agentic products</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Composer token‑based intelligence; net‑new revenue stream reiterated</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Klaviyo again framed Composer monetization as token‑based intelligence with examples of sessions generating substantial incremental revenue, reinforcing the view of Composer as a net‑new revenue stream.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">token‑based “intelligence,”</span>
+<span class="span">net‑new revenue stream</span>
+<span class="span">substantial incremental revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk: Limited detail on Composer GA timing and near‑term revenue impact</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management noted uncertainty around Composer’s general availability timing, pricing tiers, and near‑term revenue contribution, underscoring execution and forecasting risk for the new product.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Limited detail on Composer’s general‑availability timing</span>
+<span class="span">near‑term revenue contribution targets</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>External LLM ecosystem integrations and Google partnership</h2>
+<div class='range'>2026-01-23 → 2026-02-24</div>
+<div class='psum'>In early 2026, Klaviyo deepened ties with frontier LLM ecosystems. The company enabled streamlined setup of Anthropic’s Claude via listing in the Claude Connector directory and launched a Klaviyo app in ChatGPT, bringing Klaviyo data and workflows into widely used LLM interfaces. Help-center documentation emphasized OAuth authentication and OpenAI’s respect for training settings.
+Concurrently, Klaviyo announced a strategic partnership with Google spanning search, advertising, AI and messaging, and made Rich Communication Services (RCS) generally available in Klaviyo. The partnership included being among the first to offer the Google Search to RCS experience, aligning Klaviyo’s Customer Agent entry points with Google channels.</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Strategic partnership with Google to power autonomous experiences</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Klaviyo and Google announced a strategic partnership spanning search, advertising, AI, and messaging, including early access to the Google Search to RCS experience as an entry point to Klaviyo’s AI-powered Customer Agent.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[11]</div>
+<span class="span">strategic partnership with Google</span>
+<span class="span">AI-driven customer experiences</span>
+<span class="span">Google Search to RCS</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">RCS messaging generally available in Klaviyo</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Aligned with the Google partnership, Klaviyo announced general availability of RCS messaging as part of its broader integration, expanding channels for AI-driven customer engagement.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">RCS is now generally available in Klaviyo</span>
+<span class="span">February 24, 2026</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Help Center: ChatGPT app uses OAuth; OpenAI respects training settings</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Klaviyo published Spanish-language guidance for the ChatGPT app noting OAuth-based authentication and that OpenAI respects customer data training settings, addressing security and data-rights considerations.</p>
+<div class="ev-ch">channels: <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">La aplicación Klaviyo para ChatGPT</span>
+<span class="span">OpenAI determina</span>
+<span class="span">OAuth</span>
+<span class="span">OpenAI respeta la configuración de entrenamiento de datos</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">Klaviyo app launches in ChatGPT to access Klaviyo data</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Klaviyo launched its app in ChatGPT, enabling marketers to access and act on Klaviyo data directly within ChatGPT, reflecting a strategy to meet users in third‑party AI interfaces.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Klaviyo app in ChatGPT</span>
+<span class="span">January 27, 2026</span>
+<span class="span">OpenAI introduced apps</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-01-23</span>
+<span class="eh">Klaviyo listed in Claude’s Connector directory; easy Claude setup</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Klaviyo announced that, via its remote MCP server, brands can connect Anthropic’s Claude to Klaviyo data, and that Klaviyo is officially listed in Claude’s Connector directory to simplify setup.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">remote MCP server</span>
+<span class="span">nearly 200,000 brands</span>
+<span class="span">officially listed in the Claude’s Connector directory</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations of Klaviyo AI and MCP server</h2>
+<div class='range'>2024-02-27 → 2025-11-12</div>
+<div class='psum'>Klaviyo formally launched its consolidated AI offering (“Klaviyo AI”) in February 2024, packaging predictive and generative capabilities such as Segments AI, Email AI, and Forms AI into a coherent product push aimed at revenue lift and better customer experiences. This marked the company&#x27;s thematic commitment to embedding AI across its B2C CRM suite rather than treating AI as a standalone add‑on.
+In 2025, Klaviyo advanced its AI platform strategy with general availability of its enhanced Model Context Protocol (MCP) server to connect external AI tools directly to Klaviyo data, and it released help‑center guidance for its AI‑powered SMS assistant. By November 2025, Klaviyo’s public subprocessor list explicitly named Anthropic and OpenAI as AI subprocessors, signaling reliance on leading LLM providers for AI features and support.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-11-12</span>
+<span class="eh">Subprocessor list names Anthropic and OpenAI for AI features</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Klaviyo’s legal subprocessor disclosure was updated to include Anthropic and OpenAI for AI features/capabilities and support, indicating formal reliance on these LLM providers within Klaviyo’s platform.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">ecosystem_control_loss</span></div>
+<p class="cav">⚠ Listing does not quantify usage intensity or contract terms.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Mise à jour : 12 novembre 2025</span>
+<span class="span">Anthropic, PBC — Fonctionnalités et capacités de l’IA</span>
+<span class="span">OpenAI, LLC — Fonctionnalités et capacités de l’IA</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-28</span>
+<span class="eh">Help Center: AI-powered SMS assistant guidance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Klaviyo published guidance for its AI-powered SMS assistant, outlining workflow steps and UI interactions for generating brand-customized SMS content.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Updated Oct 28, 2025, 12:00 AM EST</span>
+<span class="span">AI-powered SMS assistant</span>
+<span class="span">Click the 4-pointed star icon</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-08-20</span>
+<span class="eh">MCP Server GA to connect external AI tools (incl. Claude Desktop) to Klaviyo</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Klaviyo made its enhanced MCP server generally available, enabling marketers to connect tools like Claude Desktop and other local or web-based AI tools directly to Klaviyo data with improved reporting context and a new remote server.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">general availability of its enhanced model context protocol (MCP) server</span>
+<span class="span">Claude Desktop</span>
+<span class="span">new remote server</span>
+<span class="span">bring AI into their workflows</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-02-27</span>
+<span class="eh">Klaviyo launches Klaviyo AI suite (Segments AI, Email AI, Forms AI)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Klaviyo announced Klaviyo AI, consolidating predictive and generative features into a suite including Segments AI, Email AI, and Forms AI to drive revenue and better experiences. This set the baseline for subsequent agentic and autonomous initiatives.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">February 27, 2024</span>
+<span class="span">launch of Klaviyo AI</span>
+<span class="span">Segments AI</span>
+<span class="span">Email AI</span>
+<span class="span">Forms AI</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the timeline and pricing tiers for Composer’s general availability, and what revenue contribution is expected in FY2026–FY2027?</li>
+<li>What proportion of Klaviyo AI workloads (inference calls) route to Anthropic vs OpenAI vs Google, and how is provider mix managed?</li>
+<li>Are there any minimum‑spend, term, or exclusivity clauses in Klaviyo’s agreements with Anthropic, OpenAI, or Google?</li>
+<li>How are data residency and privacy controls enforced when using the ChatGPT app and Claude connectors via the MCP server?</li>
+<li>Will Google partnership scope include Gemini model integrations or commercial co‑selling motions beyond RCS and existing Ads/BigQuery links?</li>
+<li>How will token‑priced ‘intelligence’ be packaged (bundles vs metered) and what guardrails mitigate customer bill‑shock?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Most sources are Klaviyo-authored press, blog, or help-center content; third-party corroboration and financial quantification of AI features are limited.</li>
+<li>Subprocessor disclosures confirm provider usage but do not specify spend levels, SLAs, or term lengths.</li>
+<li>Some filings highlights are overlapping; separate events preserve each extracted point as required.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,434 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>BTGOF US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>BT Group PLC <span class='sub'>(BTGOF US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.482</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>14 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 2</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 11</span>
+<span class='chip'>web-only (verified): 10</span>
+<span class='chip'>web-only (unverified): 3</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Operational AI deployments and structural JV reshaping</h2>
+<div class='range'>2026-03-25 → 2026-06-29</div>
+<div class='psum'>In 2026 BT expanded applied AI across operations and products. Openreach adopted Google Cloud’s Vertex AI, BigQuery and Gemini Enterprise to optimize fleet and accelerate fiber rollout, including building a digital twin of UK transport corridors. BT Business promoted Cloud Work AI with RingCentral powered by Microsoft OpenAI and Google Gemini, asserting customer data protections.
+BT also joined Anthropic’s Project Glasswing, gaining access to Claude Mythos Preview to strengthen cyber defenses amid a backdrop of pervasive attacks. Separately, BT and Verizon agreed to combine international enterprise units into a 50:50 JV (~$4B annual revenue), a structural move that could influence the go‑to‑market for AI‑enabled services pending 2027 regulatory approvals.</div>
+<div class="event t-corroborated" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-29</span>
+<span class="eh">BT and Verizon announce 50:50 JV for international enterprise units (~$4B annual revenue)</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4.0B · run_rate_annual</span> <span class="badge">neutral</span></div>
+<p class="narr">BT and Verizon agreed to combine international enterprise operations into a 50:50 joint venture serving 3,000+ customers in 180+ countries. The JV targets ~$4B in annual revenue; Verizon will pay BT a $625M equalisation payment. Completion is expected in 2027 subject to regulatory clearances. BT plans to classify BT International as a discontinued operation and trimmed FY27 ex‑International revenue and EBITDA guidance.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ JV completion and economics subject to regulatory approvals and final closing; financial impacts ex‑International guided separately.</p>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[0], news_rows[1]</div>
+<span class="span">50:50 joint venture</span>
+<span class="span">about $4 billion in combined annual revenue</span>
+<span class="span">$625 million equalisation payment</span>
+<span class="span">over 3,000 customers</span>
+<span class="span">expected to complete in 2027</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">BT joins Anthropic’s Project Glasswing; gains access to Claude Mythos Preview for cyber defense</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">BT became the first UK company to confirm membership in Anthropic’s Project Glasswing, obtaining access to Claude Mythos Preview to bolster cyber defenses across networks and customers.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Project Glasswing</span>
+<span class="span">Claude Mythos Preview</span>
+<span class="span">first UK company to confirm</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">BT highlights cyber threat scale while announcing Glasswing membership</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Alongside the Glasswing announcement, BT underscored the ongoing cyber risk environment, noting it prevents roughly four million cyber‑attacks daily across its networks, as shared at the UK Government’s AI Adoption Summit.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">prevents four million cyber-attacks</span>
+<span class="span">every day</span>
+<span class="span">AI Adoption Summit</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-01</span>
+<span class="eh">BT Business Cloud Work AI: RingCentral solution uses Microsoft OpenAI and Google Gemini</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">BT Business promoted Cloud Work AI with RingCentral, stating AI is built on proprietary and trusted third‑party technologies including Microsoft OpenAI and Google Gemini, and that customer data is not used to train AI models.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<p class="cav">⚠ Marketing datasheet language; customer count may refer to broader RingCentral deployments in the UK.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Microsoft OpenAI</span>
+<span class="span">Google Gemini</span>
+<span class="span">Trusted by over 40,000 customers in the UK</span>
+<span class="span">RingCentral</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-25</span>
+<span class="eh">Openreach deploys Google Cloud AI (Vertex, BigQuery, Gemini Enterprise) for fleet and fiber rollout</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Openreach expanded collaboration with Google Cloud to use Vertex AI, BigQuery, and Gemini Enterprise, creating a transportation corridor digital twin and improving efficiency in fleet operations and fiber deployment.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Openreach</span>
+<span class="span">Google Cloud&#x27;s Vertex AI and BigQuery</span>
+<span class="span">Gemini Enterprise</span>
+<span class="span">digital replica (twin) of the UK&#x27;s transportation corridors</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scaling AI networking and reporting progress</h2>
+<div class='range'>2025-04-10 → 2025-05-22</div>
+<div class='psum'>BT deepened its partnership with Google Cloud at the network edge, combining BT’s Global Fabric with Cloud WAN to optimize AI workload performance and costs, and offering Google Cloud Partner Interconnect in 50 locations, rising to 70 by 2026.
+BT’s 2025 Annual Report reiterated AI progress in customer support, noting the Gen‑AI enabled EE assistant Aimee now handles circa 60,000 weekly customer conversations.</div>
+<div class="event t-web_only_unverified" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2025-05-22</span>
+<span class="eh">Annual Report 2025: EE’s Gen‑AI assistant ‘Aimee’ at 60k weekly conversations</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BT’s Annual Report 2025 highlighted that its Gen‑AI enabled EE virtual assistant Aimee handles up to 60,000 customer conversations per week, reinforcing AI‑driven customer service scale.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Gen-AI enabled EE virtual assistant Aimee</span>
+<span class="span">60,000 customer conversations per week</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-04-10</span>
+<span class="eh">BT deepens Google Cloud networking for AI workloads via Global Fabric + Cloud WAN</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">BT announced deeper Google Cloud collaboration at the network layer, combining Global Fabric with Cloud WAN and offering Google Cloud Partner Interconnect across major cloud locations to improve AI workload performance and economics.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">deepening our partnership with Google Cloud</span>
+<span class="span">Global Fabric</span>
+<span class="span">Cloud WAN</span>
+<span class="span">Google Cloud Partner Interconnect</span>
+<span class="span">50 of the world’s top cloud locations</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Multi‑model GenAI architecture and internal adoption</h2>
+<div class='range'>2024-02-20 → 2024-12-12</div>
+<div class='psum'>In early 2024 BT’s Digital Unit scaled internal GenAI usage: Amazon CodeWhisperer automated a notable share of repetitive coding work across 1,200 engineers. In September 2024 BT launched its AWS‑powered GenAI Gateway to access multiple LLMs and explicitly to mitigate lock‑in risk.
+Light Reading reported BT’s strategy to avoid GenAI lock‑in and highlighted integrations through Sprinklr with Google Vertex and OpenAI GPT, and internal use of Amazon Q for code generation. By December, BT advanced AI‑enabled customer service via Sprinklr, with the EE virtual assistant Aimee handling around 60,000 weekly conversations and automation rates approaching 50%.</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-12</span>
+<span class="eh">BT enhances customer service with Sprinklr; EE ‘Aimee’ virtual assistant scales to 60k weekly conversations</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BT deployed Sprinklr’s platform to boost AI‑enabled customer support. EE’s virtual assistant Aimee now handles up to 60,000 customer conversations per week with automation success rates on several journeys approaching 50%, freeing human agents for complex needs.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5], web_search_findings[6]</div>
+<span class="span">Sprinklr’s unified customer experience</span>
+<span class="span">Aimee now handles up to 60,000 customer conversations per week</span>
+<span class="span">approaching 50%</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="google_gemini_deepmind openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-09-25</span>
+<span class="eh">BT details multi‑model strategy; Sprinklr integrations with Vertex and GPT; Amazon Q used for code</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Reporting outlined BT’s approach to avoid GenAI lock‑in by switching between LLMs as needed. Sprinklr integrations include Google Cloud’s Vertex and OpenAI’s GPT models, and Amazon Q has been used to produce roughly a quarter‑million lines of code.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">avoid GenAI lock-in</span>
+<span class="span">switch easily between LLMs</span>
+<span class="span">Google Cloud&#x27;s Vertex</span>
+<span class="span">OpenAI&#x27;s GPT models</span>
+<span class="span">about a quarter of a million lines</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="anthropic_claude meta_llama">
+<div class="ev-top">
+<span class="date">2024-09-24</span>
+<span class="eh">BT launches AWS‑powered GenAI Gateway to access multiple LLMs and avoid lock‑in</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">meta_llama</span></div>
+<p class="narr">BT introduced its internal GenAI Gateway built with AWS services to provide secure access to multiple foundation models (e.g., Anthropic, Meta) via a single API, explicitly designed to reduce the risk of LLM lock‑in while enabling scale adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">GenAI Gateway</span>
+<span class="span">Amazon Bedrock</span>
+<span class="span">Amazon SageMaker</span>
+<span class="span">protection against ‘lock-in’</span>
+<span class="span">through a single API</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2024-09-24</span>
+<span class="eh">BT explicitly flags LLM lock‑in risk; GenAI Gateway positioned as mitigation</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">BT emphasized that its GenAI Gateway provides protection against lock‑in by enabling access to multiple foundation models through a single API, indicating the company’s explicit management of vendor concentration risk in GenAI.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">protection against ‘lock-in’</span>
+<span class="span">choice of high-performing foundation models</span>
+<span class="span">through a single API</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-02-20</span>
+<span class="eh">BT deploys Amazon CodeWhisperer; scales to 1,200 engineers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BT’s Digital Unit rolled out Amazon CodeWhisperer, generating over 100k lines of code in four months and automating around 12% of repetitive coding tasks, with a 37% suggestion acceptance rate across 1,200 engineers.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">100,000+ lines of code generated</span>
+<span class="span">automating around 12%</span>
+<span class="span">acceptance rate of 37%</span>
+<span class="span">1,200 of its engineers</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational Google Cloud AI partnership</h2>
+<div class='range'>2022-03-10 → 2023-10-11</div>
+<div class='psum'>BT Group initiated a company‑wide data and AI transformation with Google Cloud in March 2022 through a strategic five‑year partnership spanning secure cloud infrastructure, analytics, and machine learning/AI. The collaboration aimed to personalize customer experiences, reduce cost and risk, and complete core data migration by 2023.
+In October 2023, BT deepened its security collaboration by becoming an official reseller of Google Chronicle and began trials of Google’s Vertex AI and Duet AI, signaling increasing integration of Google’s AI stack across BT’s cyber operations.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-10-11</span>
+<span class="eh">BT expands cybersecurity partnership with Google Cloud; becomes Chronicle reseller and trials Vertex AI / Duet AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">BT announced a strategic security partnership with Google Cloud, becoming an official reseller of Google Chronicle and leveraging Google Cloud’s analytics stack. BT also began trials of Google’s Vertex AI and Duet AI to enhance security operations.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">official reseller of Google Chronicle</span>
+<span class="span">Autonomic Security Operations</span>
+<span class="span">Vertex AI and Duet AI</span>
+<span class="span">BigQuery</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2022-03-10</span>
+<span class="eh">BT selects Google Cloud for group‑wide data and AI transformation (five‑year partnership)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">BT and Google Cloud announced a five‑year strategic partnership to modernize BT’s data, analytics and AI capabilities enterprise‑wide, including a planned core data migration by 2023. The partnership spans infrastructure, ML/AI, analytics, security and APIs to improve customer experience and efficiency.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">five-year partnership</span>
+<span class="span">Google Cloud products and services</span>
+<span class="span">machine learning (ML) and artificial intelligence (AI)</span>
+<span class="span">complete the core migration of data by 2023</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the commercial terms and annual spend levels associated with BT’s Google Cloud, AWS/Bedrock, and Anthropic relationships (minimums, commitments, or unit pricing)?</li>
+<li>How is model usage within BT’s GenAI Gateway distributed across Anthropic, Meta, OpenAI, and others, and what are the comparative performance/cost metrics?</li>
+<li>What revenue contribution and attach rates are attributable to Cloud Work AI (RingCentral) features powered by Microsoft OpenAI and Google Gemini?</li>
+<li>What are the membership and usage terms for Anthropic’s Project Glasswing (e.g., cost, seat limits, data safeguards)?</li>
+<li>Post‑JV with Verizon, how will international AI‑enabled networking/security services be packaged, sold, and supported, and will there be unified provider relationships?</li>
+<li>To what extent is BT using Google Vertex AI and Duet AI in production security workflows versus pilots, and what outcomes are quantified (MTTD/MTTR improvements)?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items come from BT and partner press releases or marketing materials (including a product datasheet); underlying commercial terms and performance metrics may not be independently verified.</li>
+<li>Some claims (e.g., customer counts in Cloud Work AI) may reference broader partner ecosystems rather than BT‑specific deployments.</li>
+<li>No explicit dollar magnitudes are disclosed for most AI integrations; dependency assessment relies on qualitative integration scope and platform architecture disclosures.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

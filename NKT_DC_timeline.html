@@ -1,0 +1,413 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>NKT DC — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>NKT A/S <span class='sub'>(NKT DC)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.376</div>
+</header>
+<div class='stats'>
+<span class='chip'>2 phases</span>
+<span class='chip'>14 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>web-only (unverified): 5</span>
+<span class='chip'>single source: 4</span>
+<span class='chip'>web-only (verified): 3</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Commercial traction in data centers and capacity ramp</h2>
+<div class='range'>2026-03-15 → 2026-06-29</div>
+<div class='psum'>From March to June 2026, NKT’s data center positioning became more explicit through customer references, event participation, a dedicated solutions page, and a Denmark project cluster with AKEA for three new data center sites. These moves align with management’s Q1 commentary that NKT’s role is in power grid connections to data centers rather than communications.
+Operationally, NKT progressed its capacity programs: medium-voltage capacity in Denmark ramping through H1 2026 and the Karlskrona high-voltage factory on track for 2027. Commercial momentum was reflected in Q1 with EUR 4.2bn order intake and a Transmission backlog of EUR 13.5bn, excluding &gt;EUR 2.5bn of framework-awarded TenneT projects. The MV production expansion in Asnaes, Denmark, was completed and is now operational.</div>
+<div class="event t-web_only_unverified" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-29</span>
+<span class="eh">MV production expansion in Asnaes, Denmark completed and operational</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">NKT completed the investment to expand MV power cable production at Asnaes, Denmark. The upgraded facility is now operational, enhancing capacity to meet growing demand from electrification, renewables, and data centers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">completed its investment to expand medium-voltage (MV) power cable production</span>
+<span class="span">site in Asnaes, Denmark</span>
+<span class="span">now operational</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">NKT highlights dedicated data centre solutions and references</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">NKT’s data centres solutions page emphasized power distribution capabilities, showcased the AKEA connections in Denmark, and referenced prior sustainable data center projects.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">distribution_channel_exposure</span></div>
+<p class="cav">⚠ Marketing content; revenue or contract magnitudes not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Power distribution built for data centres</span>
+<span class="span">NKT supports AKEA with new reliable power connections</span>
+<span class="span">Sustainable data center NKT cable powers sustainable data center</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Q1 2026: EUR 4.2bn order intake; Transmission backlog reaches EUR 13.5bn</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$13.5B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">NKT reported Q1 2026 order intake exceeding EUR 4.2bn, lifting the Transmission order backlog to EUR 13.5bn as of March 31, 2026. This reflects continued strength in grid infrastructure demand, which includes data center-related connections.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Order intake exceeded EUR 4.2bn in Q1 2026</span>
+<span class="span">Transmission order backlog to EUR 13.5bn</span>
+<span class="span">as of 31 Mar 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Backlog excludes &gt;EUR 2.5bn TenneT framework-awarded projects</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.5B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management noted that five TenneT framework-awarded projects, estimated at more than EUR 2.5bn, were not included in the reported backlog, indicating additional awarded pipeline outside the backlog figure.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">backlog excludes five TenneT</span>
+<span class="span">framework-awarded</span>
+<span class="span">estimated at &gt;EUR 2.5bn</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Q&amp;A: Data-center demand; focus on power-grid connections (not communications)</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">In Q1 discussion, management highlighted data-center demand and clarified NKT’s role as a power cable solutions provider focused on grid connections to data centers, not communications, with attention on North American opportunities.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[3]</div>
+<span class="span">data‑center demand</span>
+<span class="span">we are a power cable solution provider</span>
+<span class="span">not in the communications part of it</span>
+<span class="span">power grid connection to data centers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">IEEE accessories qualification cited as key step for U.S. market entry</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described IEEE qualification for accessories as a stepping stone for U.S. entry and noted small existing U.S. distribution activity.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">IEEE qualification for accessories</span>
+<span class="span">stepping stone</span>
+<span class="span">small U.S. Distribution activity</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Open to North America expansion/M&amp;A; reaffirms power-cable focus</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">NKT signaled openness to opportunities beyond Europe, including potential North America expansion/M&amp;A, and reiterated that it is a power-cable solutions provider, not in communications. More detail was deferred to the September Investor Day.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[3]</div>
+<span class="span">open to “good opportunities” beyond Europe</span>
+<span class="span">September Investor Day</span>
+<span class="span">we are a power cable solution provider</span>
+<span class="span">not in the communications part of it</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Capacity programs on track: MV Denmark ramping; HV Karlskrona targets 2027</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">NKT reported MV capacity in Denmark ramping through H1 2026 and confirmed the new HV factory in Karlskrona remains on track for 2027, supporting rising grid and data center-related demand.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">added medium-voltage capacity in Denmark is ramping through H1 2026</span>
+<span class="span">new high-voltage factory in Karlskrona remains on track for 2027</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">NKT partners with AKEA for three new data center power connections in Copenhagen</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">NKT teamed with AKEA to establish reliable power connections for three new data center sites in Greater Copenhagen, delivering cables, accessories, installation, commissioning, and project management across 50/132 kV routes.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">NKT has partnered with Swedish infrastructure specialist AKEA</span>
+<span class="span">three new data centre sites</span>
+<span class="span">Greater Copenhagen, Denmark</span>
+<span class="span">50 kV or 132 kV</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">NKT engages Nordic AI/data center ecosystem at Data Centers Denmark 2026</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">NKT promoted its power distribution solutions at the Data Centers Denmark conference focused on AI and cloud infrastructure, highlighting energy efficiency and next‑gen technologies for modern data centers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">distribution_channel_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Data Centers Denmark – April 29–30</span>
+<span class="span">AI and cloud infrastructure</span>
+<span class="span">Visit us to connect with the NKT team</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-15</span>
+<span class="eh">NKT reference: sustainable data center cabling for EcoDataCenter (Falun, Sweden)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">NKT published a case reference for a sustainable data center in Falun, Sweden, with Bravida and EcoDataCenter, demonstrating NKT’s role in powering modern data center infrastructure.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Sustainable data center NKT cable powers sustainable data center</span>
+<span class="span">Bravida and EcoDataCenter</span>
+<span class="span">Falun, Sweden</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI-driven data center signals and supply security groundwork</h2>
+<div class='range'>2025-06-14 → 2026-02-28</div>
+<div class='psum'>NKT&#x27;s relevance to the AI wave emerged through data center infrastructure references and ecosystem signals, notably around EcoDataCenter&#x27;s Falun site where AI compute deployments scaled. These signals pointed to rising electricity and grid connection demand driven by AI and cloud workloads, squarely within NKT&#x27;s power cable solutions remit.
+In early 2026, NKT secured long-term raw material supply via a renewed copper agreement with KGHM valued at around EUR 6 billion for 2028–2036. The 2025 Annual Report further framed AI as both a structural demand driver for electricity (and thus power cables) and a source of elevated security and compliance requirements under the EU AI Act.</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Annual Report: AI drives electricity demand; AI Act compliance efforts continue</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">NKT’s 2025 Annual Report cites AI and data centers as structural drivers of electricity demand growth and notes that rapid AI advancements contribute to higher security threats. NKT plans to continue embedding AI Act requirements into its processes.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">data centres and the use of artificial intelligence (AI)</span>
+<span class="span">higher level of security threat</span>
+<span class="span">AI Act</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-17</span>
+<span class="eh">NKT renews long-term copper supply with KGHM (~EUR 6bn, 2028–2036)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">NKT renewed its long-term copper supply agreement with KGHM, securing European-produced copper for 2028–2036. The estimated contract value is around EUR 6 billion, enhancing supply security to support scale delivery amid electrification and digital infrastructure growth.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">EUR 6 billion</span>
+<span class="span">through to 2036</span>
+<span class="span">for 2028-2036</span>
+<span class="span">KGHM</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-14</span>
+<span class="eh">AI compute scale-up at EcoDataCenter Falun underscores power-infrastructure demand</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">DataCenterDynamics reported that DeepL deployed an Nvidia DGX SuperPOD with GB200 NVL72 systems at EcoDataCenter&#x27;s Falun, Sweden facility, highlighting intensifying AI/HPC power needs. NKT separately lists a reference case with EcoDataCenter in Falun, situating its cables within the site&#x27;s broader ecosystem context.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ NKT&#x27;s role at the Falun site is evidenced via its reference case; the DeepL DGX deployment is an ecosystem signal rather than a direct NKT contract disclosure.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7], web_search_findings[6]</div>
+<span class="span">Nvidia DGX SuperPOD</span>
+<span class="span">GB200 NVL72</span>
+<span class="span">EcoDataCenter</span>
+<span class="span">Falun, Sweden</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What share of NKT’s current and forward backlog is tied specifically to data center grid connections versus other transmission and distribution projects?</li>
+<li>What is the expected timeline and scope for IEEE accessories qualification and broader U.S. market entry, including any concrete milestones or pilot projects?</li>
+<li>How much capex has been allocated to the Karlskrona HV factory and Denmark MV expansions, and what incremental annual capacity (km or system count) do these investments add?</li>
+<li>Are there any formal partnerships or solution integrations with hyperscalers, colocation operators, or AI infrastructure providers beyond project‑level cabling?</li>
+<li>What portion of North America expansion/M&amp;A, if pursued, would target data center power connections versus other grid segments?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Most web findings are company-authored pages or press releases; independent third-party corroboration of specific project values and margins is limited.</li>
+<li>Currency figures are reported in EUR; magnitude_usd fields reflect nominal EUR figures from sources without FX conversion.</li>
+<li>EcoSystem linkage between NKT’s Falun reference and DeepL’s DGX SuperPOD deployment is contextual; it does not imply a direct contractual relationship for that AI deployment.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

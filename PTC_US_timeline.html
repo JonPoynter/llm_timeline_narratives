@@ -1,0 +1,499 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>PTC US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>PTC Inc <span class='sub'>(PTC US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.403</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>18 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>single source: 10</span>
+<span class='chip'>web-only (unverified): 6</span>
+<span class='chip'>web-only (verified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Scaling AI assistants across ALM/PLM and execution guardrails</h2>
+<div class='range'>2026-01-15 → 2026-05-06</div>
+<div class='psum'>PTC expanded AI across ALM and PLM in early 2026. It released Codebeamer 3.2, Codebeamer AI 1.0, and Pure Variants 7.2, adding Requirements and Test Case Assistants. Windchill AI Parts Rationalization and Windchill AI Assistant further embedded generative AI into product data workflows, with natural-language access and sourced responses honoring access control.
+On the Q2’26 call, management highlighted broad AI interest, a seven-figure ServiceMax AI SKU in North America, and accelerated release cadence (14 targeted for 2026, with a first AI-native product planned for PTC Next). Management set expectations for modest monetization beginning in 2027, and flagged risks around delivery timing, adoption pace, and competitive responses that could limit upsell.</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Mgmt: broad AI interest across product data systems and Intelligent Product Lifecycle</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management characterized Q2’26 execution as solid, noting customer interest in AI across PTC’s product data systems aligned to its Intelligent Product Lifecycle strategy.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q2’26 execution</span>
+<span class="span">customer interest in AI</span>
+<span class="span">product data systems</span>
+<span class="span">Intelligent Product Lifecycle</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">ServiceMax AI cited with a seven-figure SKU in North America</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited a ServiceMax deployment that moved from POC to a seven-figure AI SKU in North America, with discussions underway for global expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ No specific dollar figure provided beyond &#x27;7-figure&#x27;.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ServiceMax</span>
+<span class="span">POC</span>
+<span class="span">7-figure just AI SKU</span>
+<span class="span">North America</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">CFO: AI monetization expected in 2027, initially not overly material</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">PTC’s CFO guided that AI monetization should begin in 2027 and initially be modest, adding that customers still prefer seat-based buying while seeking flexibility for hybrid/agent models.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">we&#x27;ll see some monetization in &#x27;27, but not overly material</span>
+<span class="span">seat-based buying</span>
+<span class="span">hybrid/agent models</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Roadmap: 8 AI releases last year; 14 targeted for 2026; first AI-native product at PTC Next</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported eight AI releases the prior year and targeted fourteen additional in 2026, including unveiling the first AI-native product at PTC Next in June (Chicago).</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">8 AI releases</span>
+<span class="span">14 more targeted for 2026</span>
+<span class="span">first AI-native product</span>
+<span class="span">PTC Next in June (Chicago)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">PTC to build domain agents and interoperate with third-party/customer agents</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PTC plans to build domain-specific agents within its systems and create interfaces for those agents to interoperate with others, remaining open to customer or third-party agents outside engineering domains.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">build the best domain agents</span>
+<span class="span">interact with others</span>
+<span class="span">outside engineering domains</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">AI features to be delivered across on‑prem and SaaS footprints</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated that AI features will be delivered for both on-prem and SaaS, signaling deployment flexibility across existing customer environments.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI features will be delivered for both on-prem and SaaS</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Data center buildouts accelerating modernization demand in electronics/high-tech</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PTC cited urgent data center buildouts in electronics/high-tech as a driver accelerating modernization projects aimed at removing engineering bottlenecks.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">urgent data center buildouts</span>
+<span class="span">accelerating modernization</span>
+<span class="span">remove engineering bottlenecks</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Risk flagged: AI delivery/adoption timing and competitive responses could limit upsell</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management highlighted AI as a growth catalyst but warned that delays in delivery, slower customer adoption, or competitive responses could limit upsell and cross-sell in CAD/PLM portfolios.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI as a growth catalyst</span>
+<span class="span">Delays in delivering AI capabilities</span>
+<span class="span">limit upsell and cross-sell</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">CEO asserts moat from embedding agents across Creo/Onshape, Windchill/Codebeamer/ServiceMax</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">PTC’s CEO emphasized proprietary advantage from embedding agents across its CAD/PLM/ALM/field service stack due to domain context and access to model geometry and parameters.</p>
+<div class="ev-ch">channels: <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">embedding agents in Creo/Onshape</span>
+<span class="span">Windchill/Codebeamer/ServiceMax</span>
+<span class="span">underlying model geometry and parameters</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">2026–2027 outlook: 14 additional 2026 releases; first AI-native product; modest 2027 monetization</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reiterated an accelerated 2026 AI roadmap with fourteen releases and a first AI-native product debuting at PTC Next, and guided to broader but initially modest monetization beginning in 2027.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">14 additional releases planned for 2026</span>
+<span class="span">first AI-native product at PTC Next</span>
+<span class="span">monetization beginning in 2027</span>
+<span class="span">not overly material</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">PTC releases Windchill AI Assistant with natural language access to PLM data</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Windchill AI Assistant introduced generative AI via a chat interface for faster discovery and summarization of product data. Responses reference source information and respect access controls to build transparency and trust.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Windchill AI Assistant</span>
+<span class="span">natural language chat interface</span>
+<span class="span">All responses seamlessly reference the source of information</span>
+<span class="span">access control rules are enforced</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">PTC launches Windchill AI Parts Rationalization</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PTC added an AI-driven parts rationalization capability in Windchill to address duplicate parts, inconsistent data, and slow or inaccurate search, aligning with its Intelligent Product Lifecycle vision for manufacturers.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<p class="cav">⚠ Non-English (Korean) source excerpt.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Windchill AI Parts Rationalization</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>부품 관리 워크플로우</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>중복 부품</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>PTC의 Intelligent Product Lifecycle</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-15</span>
+<span class="eh">PTC ships Codebeamer 3.2 and Codebeamer AI 1.0 with new AI assistants</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PTC advanced its ALM portfolio with Codebeamer 3.2, Codebeamer AI 1.0, and Pure Variants 7.2, introducing Requirements Assistant and Test Case Assistant to improve quality, traceability, and validation speed in software-driven product development.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Codebeamer® 3.2</span>
+<span class="span">Codebeamer AI 1.0</span>
+<span class="span">Requirements Assistant</span>
+<span class="span">Test Case Assistant</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early GenAI assistant launches and enterprise validation</h2>
+<div class='range'>2025-02-12 → 2025-07-29</div>
+<div class='psum'>PTC moved from partnerships to shipping products. In February 2025, it launched ServiceMax AI, a generative AI assistant leveraging ServiceMax’s asset and service history to speed field service work. In April, PTC released Onshape AI Advisor (developed on Amazon Bedrock) and introduced Onshape Government on AWS GovCloud to address U.S. defense compliance needs.
+By July 2025, Microsoft reported Volkswagen’s adoption of Microsoft Copilot and Microsoft Cloud for Manufacturing in Codebeamer, with capabilities powered by Azure OpenAI—further validating enterprise use of PTC’s ALM stack with frontier-model tooling via Microsoft’s platform.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-07-29</span>
+<span class="eh">Microsoft: Volkswagen adopts Copilot and Cloud for Manufacturing in Codebeamer; powered by Azure OpenAI</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Microsoft reported Volkswagen’s adoption of Microsoft Copilot and Microsoft Cloud for Manufacturing within PTC’s Codebeamer, citing capabilities powered by Azure OpenAI. This underscores enterprise-scale AI usage in PTC’s ALM workflows through Microsoft’s AI stack.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<p class="cav">⚠ Spanish-language source; provider attribution relies on &#x27;Azure OpenAI&#x27; phrasing.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Microsoft Copilot</span>
+<span class="span">Microsoft Cloud for Manufacturing</span>
+<span class="span">impulsadas por Azure OpenAI</span>
+<span class="span">Codebeamer</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-04-15</span>
+<span class="eh">PTC releases Onshape AI Advisor and Onshape Government</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PTC introduced Onshape AI Advisor, a generative AI assistant developed on Amazon Bedrock, alongside Onshape Government hosted on AWS GovCloud (U.S.). The releases aim to accelerate design productivity and meet U.S. government compliance requirements.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Onshape AI Advisor</span>
+<span class="span">Onshape Government</span>
+<span class="span">Developed on Amazon Bedrock</span>
+<span class="span">AWS GovCloud (U.S.)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-02-12</span>
+<span class="eh">PTC launches ServiceMax AI, a GenAI-powered field service assistant</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PTC released ServiceMax AI to help technicians leverage equipment data, service history, and known resolutions, including a chat experience and automation for documentation and scheduling. The assistant targets faster issue resolution and predictive maintenance workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">ServiceMax AI</span>
+<span class="span">field service management assistant</span>
+<span class="span">powered by generative artificial intelligence (GenAI)</span>
+<span class="span">ServiceMax® platform</span>
+<span class="span">ServiceMax AI Chat</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational cloud AI partnerships and first co-development</h2>
+<div class='range'>2024-09-25 → 2024-12-03</div>
+<div class='psum'>PTC began formalizing cloud AI alignments to accelerate AI features in its portfolio. In September 2024, it entered a Strategic Collaboration Agreement with AWS focused on Onshape enhancements and AI initiatives, including an Onshape AI Advisor planned to run on Amazon Bedrock. 
+By December 2024, PTC announced a three-way collaboration with Microsoft and Volkswagen Group to co-develop a generative AI copilot for Codebeamer, embedding Microsoft Azure AI capabilities. These moves positioned PTC’s CAD/PLM/ALM stack to incorporate generative AI assistants powered by major cloud platforms and to seed customer co-innovation programs.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-03</span>
+<span class="eh">PTC partners with Microsoft and Volkswagen Group to develop Codebeamer GenAI Copilot</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PTC announced a partnership with Microsoft and Volkswagen Group to develop a generative AI copilot based on Codebeamer, embedding Microsoft Azure AI capabilities. The collaboration aims to improve requirements and test workflows in software-driven product development at scale.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">partnered with Microsoft and Volkswagen Group</span>
+<span class="span">generative artificial intelligence (AI) copilot</span>
+<span class="span">Codebeamer®</span>
+<span class="span">Microsoft Azure AI capabilities</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-09-25</span>
+<span class="eh">PTC signs AWS Strategic Collaboration Agreement; Onshape AI Advisor to run on Amazon Bedrock</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PTC announced a Strategic Collaboration Agreement with AWS to advance Onshape enhancements, adoption programs, and AI initiatives, including the Onshape AI Advisor expected by year-end 2024 running on Amazon Bedrock. This anchored PTC’s cloud-native CAD roadmap with a hyperscaler partnership and a planned generative assistant.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Strategic Collaboration Agreement (SCA)</span>
+<span class="span">Onshape</span>
+<span class="span">Onshape AI Advisor</span>
+<span class="span">Amazon Bedrock</span>
+<span class="span">expected to be released by the end of 2024</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which specific foundation models power ServiceMax AI, Windchill AI Assistant, and Codebeamer AI 1.0 (OpenAI via Azure, Anthropic via Bedrock, or others)?</li>
+<li>What are the pricing/packaging mechanics and expected ARPU uplift for the AI assistants across ServiceMax, Windchill, Codebeamer, and Onshape?</li>
+<li>What terms and duration underpin the AWS Strategic Collaboration Agreement and any Microsoft co-sell or co-development agreements?</li>
+<li>How many customers are live in production with each AI assistant, and what are early usage/retention metrics?</li>
+<li>What is the timeline and feature scope for the &quot;first AI-native product&quot; planned for PTC Next, and how will it be monetized?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many sources are company press releases; limited third-party corroboration or financial magnitudes are disclosed.</li>
+<li>Provider attribution is explicit only where noted (e.g., &#x27;Azure OpenAI&#x27; in Microsoft’s July 2025 post); other features may use different or multiple models/platforms.</li>
+<li>Filings cite a &#x27;7-figure&#x27; SKU without a precise dollar amount, and broader monetization is guided as modest starting in 2027.</li>
+<li>Non-English source excerpts (Korean, Spanish) are used where English equivalents were not provided in the inventory.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

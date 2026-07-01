@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>KLA Corp <span class='sub'>(KLAC US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.416</div>
@@ -73,57 +83,350 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>corroborated: 2</span>
 <span class='chip'>web-only (unverified): 1</span>
 </div>
-<div class='phase'>
-<h2>Cloud groundwork and internal AI adoption</h2>
-<div class='range'>2022-04-07 → 2025-09-08</div>
-<div class='psum'>KLA began laying a cloud and AI foundation ahead of the 2026 AI infrastructure cycle. In April 2022, the company moved its Frontline PCB design-for-manufacturability analysis to a cloud-based SaaS model, citing materially faster turnarounds on compute‑intensive workloads. This represented a shift of key engineering software to hyperscale compute and positioned KLA’s software customers to benefit from elastic cloud capacity.
-By 2025, KLA disclosed operational use of AI in recruiting, including chatbots and algorithmic candidate matching supported by third-party service providers. While framed as efficiency-enhancing and subject to human decision-making, the notice acknowledged data sharing for training and refinement of AI algorithms, introducing governance considerations tied to privacy and model training data.
-Together these elements show KLA both productizing cloud-native workflows for customers and adopting AI internally, though without naming any one frontier LLM provider as a core dependency during this period.</div>
-<div class="event t-web_only_verified" id="E0001">
-<div class="ev-top">
-<span class="date">2022-04-07</span>
-<span class="eh">Frontline Cloud Services: PCB DFM analysis moved to the cloud</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">KLA launched Frontline Cloud Services, transitioning PCB DFM analysis to a cloud-based SaaS offering with significantly faster analysis times versus on‑premises runs, signaling early cloud productization of compute‑intensive workflows.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">Frontline Cloud Services</span>
-<span class="span">DFM analysis</span>
-<span class="span">to the cloud</span>
-<span class="span">up to 90% faster DFM analysis speeds</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0002">
-<div class="ev-top">
-<span class="date">2025-09-08</span>
-<span class="eh">AI used in recruiting; third-party providers may train algorithms</span>
-<span class="badge">risk</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">KLA’s Candidate Privacy Notice states the company uses AI in recruiting (e.g., chatbots, matching) and shares applicant data with third-party providers who may use scrubbed data to train and refine algorithms, introducing privacy and governance risk considerations.</p>
-<p class="cav">⚠ Disclosure pertains to recruiting workflows; specific vendors and data minimization controls are not detailed.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">KLA uses AI in one or more applications</span>
-<span class="span">helping recruiters find candidates</span>
-<span class="span">share your personal information with third party service providers</span>
-<span class="span">training and refining the algorithms</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>2026 AI infrastructure ramp: demand, constraints, and capital returns</h2>
 <div class='range'>2026-01-29 → 2026-06-27</div>
 <div class='psum'>Through the first half of 2026, KLA linked record performance and strong outlook to the global AI infrastructure buildout across foundry/logic, memory, advanced packaging, and services. Management sized 2026 WFE in the mid‑$130Bs framework (including AP), with China trending up for KLA and DRAM outgrowing foundry/logic. Services scaled with double‑digit growth drivers, and guidance called for stronger 2H26 versus 1H26.
 At the same time, long lead times, supply bottlenecks (e.g., complex optics), and component cost/tariff headwinds tempered near‑term upside. Management emphasized value‑based pricing rather than scarcity pricing, and noted urgency around 2027 capacity as new greenfield ramps approach. KLA authorized an additional $7B buyback and raised its quarterly dividend, citing confidence tied to AI‑related momentum and process control share gains.
 Internally, KLA continued to build AI capabilities, seeking engineers to develop LLM-powered applications leveraging multi‑provider platforms (e.g., Claude, OpenAI) on Azure and Bedrock. Regulatory themes persisted, including evolving U.S. export controls and a government letter regarding China with immaterial near‑term impact but a slower growth trajectory than overall WFE.</div>
-<div class="event t-single_source" id="E0003">
+<div class="event t-corroborated" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">AI infrastructure buildout cited as key demand driver; share momentum in process control</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized demand tied to the global AI infrastructure buildout across F/L, memory, and AP, reinforced by third-party reports of process control share gains; the 8‑K echoed KLA as a key enabler of the AI ecosystem.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[1]</div>
+<span class="span">global AI infrastructure buildout across foundry/logic, memory and advanced packaging</span>
+<span class="span">continued market share momentum in process control</span>
+<span class="span">key enabler of the AI ecosystem</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Capital returns: +$7B buyback authorization; dividend to $2.30</span>
+<span class="badge">financing</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$7.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">KLA approved an additional $7B share repurchase authorization and raised the quarterly dividend to $2.30 per share; the 8‑K characterized this as an additional $7 billion stock repurchase authorization and the 17th consecutive annual dividend increase.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[1]</div>
+<span class="span">additional $7B share repurchase authorization</span>
+<span class="span">raised the quarterly dividend to $2.30 per share</span>
+<span class="span">additional $7 billion stock repurchase authorization</span>
+<span class="span">17th consecutive annual dividend increase</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Q4 FY2026 guidance: revenue $3.575B +/- $200M; EPS ranges provided</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.6B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">For the June quarter, KLA guided revenue to $3.575B ± $200M with GAAP and non‑GAAP EPS ranges, reflecting strong demand and mix.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">revenue $3.575B +/- $200M</span>
+<span class="span">non-GAAP diluted EPS $9.87 +/- $1.00</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Export-control risk: evolving BIS rules may pressure China sales and service</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">KLA flagged evolving U.S. BIS rules that can impact sales and service to certain China customers; any tightening could pressure shipments, mix, and service growth.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">evolving U.S. Department of Commerce BIS rules</span>
+<span class="span">impact sales and service to certain China customers</span>
+<span class="span">tightening could pressure shipments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Supply constraints and long product lead times could cap near-term upside</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">KLA and brokers cited supply constraints and long lead times that may cap near‑term shipment upside despite strong AI-driven demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">supply constraints and long product lead times</span>
+<span class="span">cap near-term shipment upside</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Deferred system revenue at $620.8M, down vs 6/30/25</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$621M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Current deferred system revenue stood at $620.8M, down from $816.8M at June 30, 2025.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">current deferred system revenue $620.8M</span>
+<span class="span">down from $816.8M at 6/30/2025</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Deferred service revenue (current) at $576.5M, up q/q</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$576M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Current deferred service revenue was $576.5M, up from $548.0M, indicating continued services momentum.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">current deferred service revenue $576.5M</span>
+<span class="span">up from $548.0M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Deferred service revenue (non-current) at $251.6M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$252M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Non-current deferred service revenue was $251.6M, down from $348.8M, reflecting timing across multi‑period contracts.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">non-current deferred service revenue $251.6M</span>
+<span class="span">down from $348.8M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">2027 urgency highlighted; 2026 capped by build capacity</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described a higher level of urgency to secure capacity, expecting a massive 2027 buildup while 2026 is capped by the ability to build enough systems.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">higher level of urgency around securing capacity</span>
+<span class="span">’27 is going to be a massive buildup</span>
+<span class="span">they can’t build enough fast enough</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Market view: 2026 WFE &gt;$140B; KLA process control &gt;20% growth</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$140.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">KLA framed 2026 WFE at greater than $140B with process control systems growth exceeding 20%, implying outperformance versus broader WFE growth.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">2026 WFE &gt;$140B</span>
+<span class="span">process control systems to grow &gt;20% in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">AP process-control revenue seen at roughly $1B in 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management projected 2026 process‑control packaging revenue of roughly $1B, up from about $635M in 2025, citing upper‑50% growth and rising value from front‑end‑like steps.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">process‑control packaging revenue</span>
+<span class="span">roughly $1B</span>
+<span class="span">upper‑50% growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Near-term GM headwinds: DRAM components and tariffs</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">KLA reiterated GM headwinds from DRAM component costs (~100 bps) and tariffs (50–100 bps), though both are expected to lessen through 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">DRAM component costs remain a ~100 bps GM headwind</span>
+<span class="span">tariff headwind running 50–100 bps</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Pricing approach reaffirmed: value-based, not scarcity pricing</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">KLA emphasized value-based pricing and stated it does not price based on scarcity, even amid strong demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">we don’t price based on scarcity at KLA</span>
+<span class="span">value‑based pricing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">2027 spend to tilt more toward memory; 2026 legacy weak</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management expects 2027 spending to skew a few points more toward memory than 2026, with legacy demand described as pretty weak in 2026 and potential upside in 2027.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">2027 spending to tilt a few points more toward memory</span>
+<span class="span">legacy demand is “pretty weak” in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Scaling install and service capacity; KLA is ‘hiring a lot’</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">To support greenfield ramps, KLA said it is hiring a lot and building install/service capacity after a tighter first half and faster-than-planned slope.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“hiring a lot”</span>
+<span class="span">build install/service capacity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">China: government letter impact ‘fairly immaterial’; growth slower than WFE</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">KLA acknowledged receiving a government letter and called the impact fairly immaterial, while expecting China to grow slower than overall WFE in forward models.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">receipt of a government letter</span>
+<span class="span">impact “fairly immaterial”</span>
+<span class="span">expects China to grow slower than overall WFE</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">X-ray inspection TAM ~$75–100M with path to ~$150M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">KLA sized today’s x‑ray market at approximately $75–100M with ~60% share and a path to ~$150M over the next few years as productivity improves.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">x‑ray market at ~$75–100M</span>
+<span class="span">potential to reach ~$150M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Component tightness: ‘not enough silicon’ to meet plans</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management noted there’s not enough silicon to support industry plans, underscoring near‑term supply constraints.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">there’s not enough silicon to be able to support the plans</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Sequential growth through 2026; stronger WFE in 2027</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">KLA expects sequential revenue growth throughout 2026 and stronger WFE growth in 2027 than in 2026, aligning with customer capacity build plans.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">sequential revenue growth through 2026</span>
+<span class="span">stronger WFE growth in 2027 than 2026</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0036" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-04-27</span>
+<span class="eh">Hiring for LLM-powered apps: multi-platform GenAI (Claude, OpenAI, Azure/Bedrock)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">A KLA job posting sought a Lead AI Engineer to build LLM-powered applications and agentic workflows on cloud platforms, naming Microsoft Foundry (preferred), AWS Bedrock, Claude, and OpenAI, and to develop custom copilots with Copilot Studio—indicating multi-model, cloud-native integration intent.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>1</b> OAI <b>1</b></span> <span class="chchip">enterprise_adoption_exposure · ANT <b>1</b> OAI <b>1</b></span> <span class="chchip">provider_specificity · ANT <b>1</b> OAI <b>1</b></span> <span class="chchip">multi_model_hedge · ANT <b>3</b> OAI <b>3</b></span> <span class="chchip">switching_flexibility · ANT <b>3</b> OAI <b>3</b></span></div>
+<p class="cav">⚠ Job posting evidences capability build and platform preferences; it does not confirm paid enterprise contracts or production scale.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Lead, AI Engineer</span>
+<span class="span">LLM‑powered applications</span>
+<span class="span">Microsoft Foundry (preferred), AWS Bedrock, Claude, OpenAI.</span>
+<span class="span">Develop custom copilots using Microsoft Copilot Studio.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0003" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">Record results; AI-related demand across F/L, memory, AP, services</span>
@@ -139,7 +442,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">AI‑related demand across foundry/logic, memory, advanced packaging, and services.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0004">
+<div class="event t-single_source" id="E0004" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">Deferred system revenue at $858.1M</span>
@@ -155,7 +458,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">(vs. $816.8M at June 30, 2025)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0005">
+<div class="event t-single_source" id="E0005" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">Deferred service revenue at $599.3M</span>
@@ -171,7 +474,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">(vs. $548.0M).</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0006">
+<div class="event t-single_source" id="E0006" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">WFE/AP framework: core low-$120Bs, AP &gt;$12B; total mid-$130Bs</span>
@@ -190,7 +493,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">implying total mid-$130Bs</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0007">
+<div class="event t-single_source" id="E0007" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">Gross margin headwinds: DRAM costs and tariffs; emphasis on value-based pricing</span>
@@ -207,7 +510,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">Pricing remains value-based rather than cost-plus.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0008">
+<div class="event t-single_source" id="E0008" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">2026 outlook: DRAM to grow ~15–20% vs F/L 10–15%</span>
@@ -223,7 +526,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">foundry/logic (10–15%) in 2026</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0009">
+<div class="event t-single_source" id="E0009" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">Supply tightness: ‘virtually sold out’ 1H; incremental demand slips to 2027</span>
@@ -240,7 +543,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">complex optics</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0010">
+<div class="event t-single_source" id="E0010" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">China trending up for KLA; 2026 China WFE mid-to-high $30B; KLA mix mid-to-high 20s%</span>
@@ -258,7 +561,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">KLA China revenue mix mid-to-high 20s%</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0011">
+<div class="event t-single_source" id="E0011" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">Services growth model 12–14% with drivers to the high end</span>
@@ -274,7 +577,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">drivers ... skewing toward the high end</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0012">
+<div class="event t-single_source" id="E0012" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">Cadence: 2H26 stronger than 1H26</span>
@@ -290,7 +593,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">high-single to low-double-digit</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0013">
+<div class="event t-single_source" id="E0013" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">Strong cash generation: OCF $1.37B; FCF $1.26B (~38% margin)</span>
@@ -307,7 +610,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">FCF margin ~38%</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0014">
+<div class="event t-single_source" id="E0014" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">Services revenue $786M, up 18% YoY</span>
@@ -323,7 +626,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">(+18% YoY)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0015">
+<div class="event t-single_source" id="E0015" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">SPC mix: ~60% Foundry/Logic, ~40% Memory (DRAM ~85% / NAND ~15%)</span>
@@ -340,7 +643,7 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">~40% Memory (DRAM ~85% / NAND ~15%)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0016">
+<div class="event t-single_source" id="E0016" data-providers="">
 <div class="ev-top">
 <span class="date">2026-01-29</span>
 <span class="eh">Regional revenue mix led by China 30%, Taiwan 26%, Korea 14%</span>
@@ -355,360 +658,94 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <span class="span">regional revenue mix: China 30%, Taiwan 26%, Korea 14%</span>
 </details>
 </div>
-<div class="event t-corroborated" id="E0017">
+</div>
+<div class='phase'>
+<h2>Cloud groundwork and internal AI adoption</h2>
+<div class='range'>2022-04-07 → 2025-09-08</div>
+<div class='psum'>KLA began laying a cloud and AI foundation ahead of the 2026 AI infrastructure cycle. In April 2022, the company moved its Frontline PCB design-for-manufacturability analysis to a cloud-based SaaS model, citing materially faster turnarounds on compute‑intensive workloads. This represented a shift of key engineering software to hyperscale compute and positioned KLA’s software customers to benefit from elastic cloud capacity.
+By 2025, KLA disclosed operational use of AI in recruiting, including chatbots and algorithmic candidate matching supported by third-party service providers. While framed as efficiency-enhancing and subject to human decision-making, the notice acknowledged data sharing for training and refinement of AI algorithms, introducing governance considerations tied to privacy and model training data.
+Together these elements show KLA both productizing cloud-native workflows for customers and adopting AI internally, though without naming any one frontier LLM provider as a core dependency during this period.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
 <div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">AI infrastructure buildout cited as key demand driver; share momentum in process control</span>
-<span class="badge">other</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management emphasized demand tied to the global AI infrastructure buildout across F/L, memory, and AP, reinforced by third-party reports of process control share gains; the 8‑K echoed KLA as a key enabler of the AI ecosystem.</p>
-<details>
-<summary>evidence — 2 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0], web_search_findings[1]</div>
-<span class="span">global AI infrastructure buildout across foundry/logic, memory and advanced packaging</span>
-<span class="span">continued market share momentum in process control</span>
-<span class="span">key enabler of the AI ecosystem</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0018">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Capital returns: +$7B buyback authorization; dividend to $2.30</span>
-<span class="badge">financing</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$7.0B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">KLA approved an additional $7B share repurchase authorization and raised the quarterly dividend to $2.30 per share; the 8‑K characterized this as an additional $7 billion stock repurchase authorization and the 17th consecutive annual dividend increase.</p>
-<details>
-<summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">filings[0], web_search_findings[1]</div>
-<span class="span">additional $7B share repurchase authorization</span>
-<span class="span">raised the quarterly dividend to $2.30 per share</span>
-<span class="span">additional $7 billion stock repurchase authorization</span>
-<span class="span">17th consecutive annual dividend increase</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0019">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Q4 FY2026 guidance: revenue $3.575B +/- $200M; EPS ranges provided</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$3.6B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">For the June quarter, KLA guided revenue to $3.575B ± $200M with GAAP and non‑GAAP EPS ranges, reflecting strong demand and mix.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">revenue $3.575B +/- $200M</span>
-<span class="span">non-GAAP diluted EPS $9.87 +/- $1.00</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0020">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Export-control risk: evolving BIS rules may pressure China sales and service</span>
-<span class="badge">regulatory</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">KLA flagged evolving U.S. BIS rules that can impact sales and service to certain China customers; any tightening could pressure shipments, mix, and service growth.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">evolving U.S. Department of Commerce BIS rules</span>
-<span class="span">impact sales and service to certain China customers</span>
-<span class="span">tightening could pressure shipments</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0021">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Supply constraints and long product lead times could cap near-term upside</span>
+<span class="date">2025-09-08</span>
+<span class="eh">AI used in recruiting; third-party providers may train algorithms</span>
 <span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">KLA and brokers cited supply constraints and long lead times that may cap near‑term shipment upside despite strong AI-driven demand.</p>
+<p class="narr">KLA’s Candidate Privacy Notice states the company uses AI in recruiting (e.g., chatbots, matching) and shares applicant data with third-party providers who may use scrubbed data to train and refine algorithms, introducing privacy and governance risk considerations.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Disclosure pertains to recruiting workflows; specific vendors and data minimization controls are not detailed.</p>
 <details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">supply constraints and long product lead times</span>
-<span class="span">cap near-term shipment upside</span>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">KLA uses AI in one or more applications</span>
+<span class="span">helping recruiters find candidates</span>
+<span class="span">share your personal information with third party service providers</span>
+<span class="span">training and refining the algorithms</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0022">
+<div class="event t-web_only_verified" id="E0001" data-providers="">
 <div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Deferred system revenue at $620.8M, down vs 6/30/25</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$621M · other</span> <span class="badge">neutral</span></div>
-<p class="narr">Current deferred system revenue stood at $620.8M, down from $816.8M at June 30, 2025.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">current deferred system revenue $620.8M</span>
-<span class="span">down from $816.8M at 6/30/2025</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0023">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Deferred service revenue (current) at $576.5M, up q/q</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$576M · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Current deferred service revenue was $576.5M, up from $548.0M, indicating continued services momentum.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">current deferred service revenue $576.5M</span>
-<span class="span">up from $548.0M</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0024">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Deferred service revenue (non-current) at $251.6M</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$252M · other</span> <span class="badge">neutral</span></div>
-<p class="narr">Non-current deferred service revenue was $251.6M, down from $348.8M, reflecting timing across multi‑period contracts.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">non-current deferred service revenue $251.6M</span>
-<span class="span">down from $348.8M</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0025">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">2027 urgency highlighted; 2026 capped by build capacity</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management described a higher level of urgency to secure capacity, expecting a massive 2027 buildup while 2026 is capped by the ability to build enough systems.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">higher level of urgency around securing capacity</span>
-<span class="span">’27 is going to be a massive buildup</span>
-<span class="span">they can’t build enough fast enough</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0026">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Market view: 2026 WFE &gt;$140B; KLA process control &gt;20% growth</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$140.0B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">KLA framed 2026 WFE at greater than $140B with process control systems growth exceeding 20%, implying outperformance versus broader WFE growth.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">2026 WFE &gt;$140B</span>
-<span class="span">process control systems to grow &gt;20% in 2026</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0027">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">AP process-control revenue seen at roughly $1B in 2026</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Management projected 2026 process‑control packaging revenue of roughly $1B, up from about $635M in 2025, citing upper‑50% growth and rising value from front‑end‑like steps.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">process‑control packaging revenue</span>
-<span class="span">roughly $1B</span>
-<span class="span">upper‑50% growth</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0028">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Near-term GM headwinds: DRAM components and tariffs</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">KLA reiterated GM headwinds from DRAM component costs (~100 bps) and tariffs (50–100 bps), though both are expected to lessen through 2026.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">DRAM component costs remain a ~100 bps GM headwind</span>
-<span class="span">tariff headwind running 50–100 bps</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0029">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Pricing approach reaffirmed: value-based, not scarcity pricing</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">KLA emphasized value-based pricing and stated it does not price based on scarcity, even amid strong demand.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">we don’t price based on scarcity at KLA</span>
-<span class="span">value‑based pricing</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0030">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">2027 spend to tilt more toward memory; 2026 legacy weak</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Management expects 2027 spending to skew a few points more toward memory than 2026, with legacy demand described as pretty weak in 2026 and potential upside in 2027.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">2027 spending to tilt a few points more toward memory</span>
-<span class="span">legacy demand is “pretty weak” in 2026</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0031">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Scaling install and service capacity; KLA is ‘hiring a lot’</span>
-<span class="badge">personnel</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">To support greenfield ramps, KLA said it is hiring a lot and building install/service capacity after a tighter first half and faster-than-planned slope.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">“hiring a lot”</span>
-<span class="span">build install/service capacity</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0032">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">China: government letter impact ‘fairly immaterial’; growth slower than WFE</span>
-<span class="badge">regulatory</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">KLA acknowledged receiving a government letter and called the impact fairly immaterial, while expecting China to grow slower than overall WFE in forward models.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">receipt of a government letter</span>
-<span class="span">impact “fairly immaterial”</span>
-<span class="span">expects China to grow slower than overall WFE</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0033">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">X-ray inspection TAM ~$75–100M with path to ~$150M</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">KLA sized today’s x‑ray market at approximately $75–100M with ~60% share and a path to ~$150M over the next few years as productivity improves.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">x‑ray market at ~$75–100M</span>
-<span class="span">potential to reach ~$150M</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0034">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Component tightness: ‘not enough silicon’ to meet plans</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Management noted there’s not enough silicon to support industry plans, underscoring near‑term supply constraints.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">there’s not enough silicon to be able to support the plans</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0035">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Sequential growth through 2026; stronger WFE in 2027</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">KLA expects sequential revenue growth throughout 2026 and stronger WFE growth in 2027 than in 2026, aligning with customer capacity build plans.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">sequential revenue growth through 2026</span>
-<span class="span">stronger WFE growth in 2027 than 2026</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0036">
-<div class="ev-top">
-<span class="date">2026-04-27</span>
-<span class="eh">Hiring for LLM-powered apps: multi-platform GenAI (Claude, OpenAI, Azure/Bedrock)</span>
+<span class="date">2022-04-07</span>
+<span class="eh">Frontline Cloud Services: PCB DFM analysis moved to the cloud</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">A KLA job posting sought a Lead AI Engineer to build LLM-powered applications and agentic workflows on cloud platforms, naming Microsoft Foundry (preferred), AWS Bedrock, Claude, and OpenAI, and to develop custom copilots with Copilot Studio—indicating multi-model, cloud-native integration intent.</p>
-<p class="cav">⚠ Job posting evidences capability build and platform preferences; it does not confirm paid enterprise contracts or production scale.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">KLA launched Frontline Cloud Services, transitioning PCB DFM analysis to a cloud-based SaaS offering with significantly faster analysis times versus on‑premises runs, signaling early cloud productization of compute‑intensive workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">Lead, AI Engineer</span>
-<span class="span">LLM‑powered applications</span>
-<span class="span">Microsoft Foundry (preferred), AWS Bedrock, Claude, OpenAI.</span>
-<span class="span">Develop custom copilots using Microsoft Copilot Studio.</span>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Frontline Cloud Services</span>
+<span class="span">DFM analysis</span>
+<span class="span">to the cloud</span>
+<span class="span">up to 90% faster DFM analysis speeds</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0036'>E0036</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0036'>E0036</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0036'>E0036</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0036'>E0036</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0.05</td><td>0.05</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.15</td><td>0.15</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.73</td><td>0.73</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.0466</td><td>0.0466</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>Which LLM providers (Claude, OpenAI, others) are in production use at KLA versus pilot/PoC, and for which internal or customer-facing workflows?</li>
@@ -722,4 +759,19 @@ Internally, KLA continued to build AI capabilities, seeking engineers to develop
 <li>Deferred revenue and services mix are accounting disclosures and do not isolate AI-specific contributions.</li>
 <li>Regulatory disclosures summarize risks; ultimate impacts depend on future rule interpretations and enforcement.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

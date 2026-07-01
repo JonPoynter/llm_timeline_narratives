@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Comet Holding AG <span class='sub'>(COTN SW)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.363</div>
@@ -72,71 +82,13 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (unverified): 2</span>
 <span class='chip'>web-only (verified): 1</span>
 </div>
-<div class='phase'>
-<h2>H2 2025: AI-driven wafer-fab demand and Dragonfly AI features</h2>
-<div class='range'>2025-07-31 → 2025-12-31</div>
-<div class='psum'>Comet reported strong H1 2025 momentum tied to AI and high-bandwidth memory (HBM) demand in advanced logic, with PCT outgrowing the group. Management materials explicitly connected AI, cloud, and HPC cycles to order intake and sales performance.
-In parallel, the company advanced AI-assisted capabilities in its Dragonfly 3D World software: a Version 2025.1 release migrated deep-learning workflows toward PyTorch and incorporated Meta AI’s Segment Anything Model (SAM) and Cellpose-SAM to accelerate segmentation and labeling tasks. These integrations indicate growing reliance on foundation-model tooling within Comet’s imaging software stack, potentially enhancing analyst productivity and time-to-insight.</div>
-<div class="event t-web_only_unverified" id="E0001">
-<div class="ev-top">
-<span class="date">2025-07-31</span>
-<span class="eh">H1 2025: AI/HBM cycles drive PCT outperformance</span>
-<span class="badge">other</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Comet’s H1 2025 presentation tied group growth and especially PCT’s strength to AI, cloud, HPC, and HBM demand, citing 20% YoY net sales growth and 42.4% growth in PCT. The materials highlight AI-related investments as a primary driver.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">H1 2025 Financial Results</span>
-<span class="span">20% year-on-year increase in net sales</span>
-<span class="span">42.4% growth in PCT</span>
-<span class="span">AI-related investments driving PCT</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0002">
-<div class="ev-top">
-<span class="date">2025-09-17</span>
-<span class="eh">Dragonfly 3D World v2025.1 adds Meta SAM and shifts toward PyTorch</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Comet released Dragonfly 3D World Version 2025.1, initiating a migration to PyTorch and integrating Meta’s Segment Anything Model (SAM) along with Cellpose-SAM to speed segmentation and labeling. This product integration expands AI-assisted workflows for CT analysis.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">version 2025.1</span>
-<span class="span">initial migration to PyTorch from TensorFlow</span>
-<span class="span">Meta AI’s Segment Anything Model (SAM)</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>Early 2026: AI-assisted segmentation comms; strong Q1 orders; mix of opportunities and risks</h2>
 <div class='range'>2026-01-01 → 2026-03-31</div>
 <div class='psum'>Comet reiterated Dragonfly’s embedded AI segmentation features with Meta’s SAM and Cellpose-SAM, framing them as tools to reduce manual effort and improve consistency in CT analysis. This underscores continued investment in AI-enabled software workflows.
 On the hardware and market side, the 25Q4 (released March 6, 2026) communication linked PCT demand to AI-led semiconductor cycles and flagged a Q1 2026 book-to-bill notably above 1. Management outlined a focused ‘all-in semi’ R&amp;D strategy, plasma-related opportunity in the next phase, and ongoing progress toward ‘high-volume’ qualification for Synertia. Risks remained: China competition (albeit outside Comet’s focal niches and under export controls) and potential slippage if AI/logic/memory ramps occur later than anticipated.</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2026-02-12</span>
-<span class="eh">Dragonfly highlights SAM-based AI segmentation for CT analysis</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">A Comet Dragonfly blog detailed ready-to-use AI segmentation, including Meta’s SAM and Cellpose-SAM, to speed region isolation and reduce repetitive work. The post positions AI tools as augmenting expert workflows rather than replacing them.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">Dragonfly 3D World integrates ready-to-use AI segmentation models</span>
-<span class="span">Meta’s Segment Anything Model (SAM)</span>
-<span class="span">Cellpose-SAM</span>
-<span class="span">reducing repetitive work and improving consistency</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0004">
+<div class="event t-single_source" id="E0004" data-providers="">
 <div class="ev-top">
 <span class="date">2026-03-06</span>
 <span class="eh">AI-led semiconductor demand supported PCT in 25Q4</span>
@@ -145,6 +97,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management linked PCT performance to AI-led semiconductor demand in the 25Q4 release, despite FX and mix headwinds on margins.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -153,7 +106,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 <span class="span">adverse product/region mix</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0005">
+<div class="event t-single_source" id="E0005" data-providers="">
 <div class="ev-top">
 <span class="date">2026-03-06</span>
 <span class="eh">CFO: Q1 2026 book-to-bill expected clearly above 1 (Q&amp;A)</span>
@@ -162,6 +115,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">In Q&amp;A, the CFO noted FY25 book-to-bill below 1 and Q4 approximately 1, while Q1 2026 was already trending clearly above 1 in the first two months.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -170,7 +124,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 <span class="span">Q1 is expected to be “clearly above one,”</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0006">
+<div class="event t-single_source" id="E0006" data-providers="">
 <div class="ev-top">
 <span class="date">2026-03-06</span>
 <span class="eh">Guidance: Q1 2026 book-to-bill notably &gt;1 with strong order intake</span>
@@ -179,6 +133,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management guided to a strong order intake and a book-to-bill notably above 1 in Q1 2026, while sales were expected to be moderate.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -186,7 +141,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 <span class="span">book-to-bill notably &gt;1.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0007">
+<div class="event t-single_source" id="E0007" data-providers="">
 <div class="ev-top">
 <span class="date">2026-03-06</span>
 <span class="eh">CA20 revenue conversion underway from late-2025 orders</span>
@@ -195,6 +150,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management stated that revenue for CA20 is currently being booked as late‑2025 order intake converts to sales.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -202,7 +158,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 <span class="span">late‑2025 order intake converts to sales</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0008">
+<div class="event t-single_source" id="E0008" data-providers="">
 <div class="ev-top">
 <span class="date">2026-03-06</span>
 <span class="eh">Advanced packaging drives in-line 2.5D/3D X-ray; Dragonfly as embedded or standalone</span>
@@ -211,6 +167,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">For CA20/Dragonfly, management emphasized that advanced packaging complexity requires in-line 2.5D/3D X-ray inspection and noted Dragonfly operates as both embedded and standalone software with scalability beyond X-ray.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -218,7 +175,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 <span class="span">Dragonfly exists as both embedded and standalone</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0009">
+<div class="event t-single_source" id="E0009" data-providers="">
 <div class="ev-top">
 <span class="date">2026-03-06</span>
 <span class="eh">‘All‑in semi’: R&amp;D focused on semiconductor platforms; exit non‑semi</span>
@@ -227,6 +184,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
 <p class="narr">The CEO described an ‘all‑in’ strategy concentrating R&amp;D on semiconductor products/platforms and discontinuing non‑semi products, potentially including divestments.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -234,7 +192,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 <span class="span">discontinuing products that are non‑semi‑related</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0010">
+<div class="event t-single_source" id="E0010" data-providers="">
 <div class="ev-top">
 <span class="date">2026-03-06</span>
 <span class="eh">China competition ‘mushrooming’; Comet operating within export controls</span>
@@ -243,6 +201,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
 <p class="narr">Management noted ‘mushrooming’ state-backed activity in China but said it is outside Comet’s focus areas and does not imply share loss; the company operates within export-control rules.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -250,7 +209,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 <span class="span">operates within export‑control rules</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0011">
+<div class="event t-single_source" id="E0011" data-providers="">
 <div class="ev-top">
 <span class="date">2026-03-06</span>
 <span class="eh">Risk: Timing of AI/logic/memory ramp could slip, impacting orders</span>
@@ -266,7 +225,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 <span class="span">order intake and revenue conversion could slip</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0012">
+<div class="event t-single_source" id="E0012" data-providers="">
 <div class="ev-top">
 <span class="date">2026-03-06</span>
 <span class="eh">WFE demand seen improving into early 2026</span>
@@ -275,13 +234,14 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">The CEO pointed to improving wafer fab equipment demand into early 2026, consistent with AI-related semi cycle strength.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 1 span(s)</summary>
 <div class="ev-src">filings[0]</div>
 <span class="span">WFE demand was improving into early 2026</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0013">
+<div class="event t-single_source" id="E0013" data-providers="">
 <div class="ev-top">
 <span class="date">2026-03-06</span>
 <span class="eh">Customers signal next phase will pull plasma-related spend</span>
@@ -290,13 +250,14 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Comet said customers indicate the next phase will draw in plasma-related spend, and the company is preparing to capture that demand.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 1 span(s)</summary>
 <div class="ev-src">filings[0]</div>
 <span class="span">next phase will pull plasma‑related spend</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0014">
+<div class="event t-single_source" id="E0014" data-providers="">
 <div class="ev-top">
 <span class="date">2026-03-06</span>
 <span class="eh">Synertia ‘high‑volume’ tied to end-customer qualification and POs</span>
@@ -305,6 +266,7 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management defined Synertia ‘high‑volume’ as qualification by end customers with forecasts and purchase orders for the next year, subject to supply chain and customer schedules.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -312,31 +274,110 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 <span class="span">timing depends on supply chain and customer schedules</span>
 </details>
 </div>
+<div class="event t-web_only_verified" id="E0003" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">Dragonfly highlights SAM-based AI segmentation for CT analysis</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">A Comet Dragonfly blog detailed ready-to-use AI segmentation, including Meta’s SAM and Cellpose-SAM, to speed region isolation and reduce repetitive work. The post positions AI tools as augmenting expert workflows rather than replacing them.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>2</b></span> <span class="chchip">customer_experience_enhancement · LLA <b>2</b></span> <span class="chchip">strategic_option_value · LLA <b>1</b></span> <span class="chchip">provider_specificity · LLA <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Dragonfly 3D World integrates ready-to-use AI segmentation models</span>
+<span class="span">Meta’s Segment Anything Model (SAM)</span>
+<span class="span">Cellpose-SAM</span>
+<span class="span">reducing repetitive work and improving consistency</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>H2 2025: AI-driven wafer-fab demand and Dragonfly AI features</h2>
+<div class='range'>2025-07-31 → 2025-12-31</div>
+<div class='psum'>Comet reported strong H1 2025 momentum tied to AI and high-bandwidth memory (HBM) demand in advanced logic, with PCT outgrowing the group. Management materials explicitly connected AI, cloud, and HPC cycles to order intake and sales performance.
+In parallel, the company advanced AI-assisted capabilities in its Dragonfly 3D World software: a Version 2025.1 release migrated deep-learning workflows toward PyTorch and incorporated Meta AI’s Segment Anything Model (SAM) and Cellpose-SAM to accelerate segmentation and labeling tasks. These integrations indicate growing reliance on foundation-model tooling within Comet’s imaging software stack, potentially enhancing analyst productivity and time-to-insight.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2025-09-17</span>
+<span class="eh">Dragonfly 3D World v2025.1 adds Meta SAM and shifts toward PyTorch</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Comet released Dragonfly 3D World Version 2025.1, initiating a migration to PyTorch and integrating Meta’s Segment Anything Model (SAM) along with Cellpose-SAM to speed segmentation and labeling. This product integration expands AI-assisted workflows for CT analysis.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>2</b></span> <span class="chchip">customer_experience_enhancement · LLA <b>2</b></span> <span class="chchip">strategic_option_value · LLA <b>1</b></span> <span class="chchip">provider_specificity · LLA <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">version 2025.1</span>
+<span class="span">initial migration to PyTorch from TensorFlow</span>
+<span class="span">Meta AI’s Segment Anything Model (SAM)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-31</span>
+<span class="eh">H1 2025: AI/HBM cycles drive PCT outperformance</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Comet’s H1 2025 presentation tied group growth and especially PCT’s strength to AI, cloud, HPC, and HBM demand, citing 20% YoY net sales growth and 42.4% growth in PCT. The materials highlight AI-related investments as a primary driver.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">H1 2025 Financial Results</span>
+<span class="span">20% year-on-year increase in net sales</span>
+<span class="span">42.4% growth in PCT</span>
+<span class="span">AI-related investments driving PCT</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0</td><td>0</td><td>0</td><td>0.05</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0</td><td>0</td><td>0</td><td>0.4</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>1.74</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0</td><td>0</td><td>0</td><td>0.2849</td><td>0</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What licensing terms, if any, govern Comet’s use of Meta’s SAM within Dragonfly (e.g., on-prem rights, attribution, update cadence)?</li>
@@ -350,4 +391,19 @@ On the hardware and market side, the 25Q4 (released March 6, 2026) communication
 <li>Order momentum (book-to-bill) and demand color are from the March 6, 2026 release/Q&amp;A; no independent news coverage was provided.</li>
 <li>No filings or web sources in the inventory disclosed dollar-valued contracts, capex, or quantified backlog tied specifically to AI in this period.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

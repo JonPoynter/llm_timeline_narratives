@@ -1,0 +1,929 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>GTLB US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Gitlab Inc <span class='sub'>(GTLB US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.517</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>44 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 20</span>
+<span class='chip'>single source: 24</span>
+<span class='chip'>web-only (verified): 15</span>
+<span class='chip'>web-only (unverified): 5</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Agentic integrations expand (Google Vertex AI, Gemini/Gemma) and Anthropic deepening; FY27 Q1 metrics and restructuring</h2>
+<div class='range'>2026-04-14 → 2026-06-30</div>
+<div class='psum'>GitLab expanded its collaboration with Google Cloud to let customers power Duo Agent Platform with Vertex AI and count usage toward existing Google Cloud commitments. The company deepened its Anthropic integration (including Claude Opus 4.7) and joined the Claude Marketplace, enabling customers to route spend through hyperscaler and provider ecosystems. In June, GitLab announced a managed GitLab offering on Google Cloud with the latest Gemini 3.5 and Gemma models, and marketplace purchase options drawing down Google Cloud commitments. FY27 Q1 filings reiterated agentic workflow scaling, broadened Anthropic access (including free-tier), Bedrock/Vertex AI options, a ~$20M DAP paid consumption run-rate, and unchanged pricing while planning a FY27 transition of Duo Pro/Enterprise into DAP. GitLab also disclosed a ~14% workforce reduction and country exits with $30–35M in restructuring charges to rebalance for agentic AI scaling. Documentation updates described AI Gateway multi-region routing and clarified that model providers determine LLM regions, implying data residency considerations. Additional docs reinforced broad model compatibility (OpenAI, Anthropic, Meta, DeepSeek) and standardized model identifiers across providers.</div>
+<div class="event t-web_only_verified" id="E0041" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">AI Gateway docs: multi-region routing; LLM regions determined by providers</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">GitLab documented AI Gateway automatic routing via Cloudflare and GCP load balancers across multiple regions, and noted that LLM model locations are determined by third-party providers, with possible cross-region data flow.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Operational and compliance implications depend on customer configurations and provider regions.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">GitLab uses Cloudflare and Google Cloud Platform (GCP) load balancers</span>
+<span class="span">The models are not guaranteed to reside in the same geographical regions</span>
+<span class="span">Data might flow to other regions</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0042" data-providers="meta_llama anthropic_claude openai_chatgpt deepseek">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Self-hosted Duo supports Mistral, Meta, Anthropic, OpenAI; adds DeepSeek compatibility</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span> <span class="prov">deepseek</span></div>
+<p class="narr">Docs confirmed integration options for industry-leading models including Mistral, Meta, Anthropic, OpenAI, and compatibility with DeepSeek Coder models via OpenAI-compatible APIs.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">Mistral, Meta, Anthropic, and OpenAI</span>
+<span class="span">DeepSeek Coder – DeepSeek Coder 33b Instruct</span>
+<span class="span">Compatible models and platforms must adhere to the OpenAI API specification</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0043" data-providers="google_gemini_deepmind anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Model identifier formats for Vertex AI, Anthropic, OpenAI, Azure and Bedrock</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">GitLab published configuration examples for self-hosted model selection across providers including Vertex AI, Anthropic, OpenAI, Azure OpenAI, and Amazon Bedrock, with specific identifier formats.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">vertex_ai/&lt;model ID of the model&gt;</span>
+<span class="span">anthropic/claude-opus-4-6</span>
+<span class="span">openai/&lt;model ID of the model&gt;</span>
+<span class="span">bedrock/apac.anthropic.claude-sonnet-4-20250514-v1:0</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0044" data-providers="google_gemini_deepmind anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">AI Gateway validates Anthropic, OpenAI, Azure OpenAI, Gemini Enterprise Agent Platform, AWS Bedrock</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Configuration docs listed validated cloud-hosted LLM platforms including Anthropic, OpenAI, Azure OpenAI, Gemini Enterprise Agent Platform, and AWS Bedrock, with AI Gateway compatibility via LiteLLM.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[15]</div>
+<span class="span">AWS Bedrock</span>
+<span class="span">Gemini Enterprise Agent Platform</span>
+<span class="span">Azure OpenAI</span>
+<span class="span">Anthropic</span>
+<span class="span">OpenAI</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0040" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-29</span>
+<span class="eh">Duo CLI supports selecting OpenAI GPT-5-Codex model</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">GitLab Duo CLI documentation showed explicit model selection examples using GPT-5-Codex for OpenAI, enabling headless workflow integration.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[17]</div>
+<span class="span">For example, to use GPT-5-Codex - OpenAI</span>
+<span class="span">GITLAB_DUO_MODEL=gpt_5_codex</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0038" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">Managed GitLab on Google Cloud with latest Gemini 3.5 and Gemma 4</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">GitLab announced a managed offering on Google Cloud delivered by certified MSPs, making the latest Gemini 3.5 available in Duo Agent Platform and Gemma 4 available for Duo Self-Hosted customers.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">traffic_or_distribution_bypass_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Gemini 3.5</span>
+<span class="span">now available in GitLab Duo Agent Platform</span>
+<span class="span">managed GitLab offering on Google Cloud</span>
+<span class="span">Gemma 4</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0039" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">GitLab on GCP: buy through Google Cloud Marketplace; draw down commitments</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">GitLab introduced a fully managed, compliant, AI-ready option on Google Cloud and stated customers can buy GitLab and Duo Agent Platform through Google Cloud Marketplace to draw down existing Google Cloud commitments.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">fully managed platform on Google Cloud</span>
+<span class="span">Google Cloud Marketplace</span>
+<span class="span">draw down your existing Google Cloud commitment</span>
+<span class="span">Gemini 3.5 Flash</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">GitLab to cut ~14% staff and exit 22 countries; cites AI-era restructuring</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$30M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">GitLab announced a ~14% workforce reduction (~350 roles) and exit from 22 countries with $30–35M in pre-tax restructuring charges (about $19M in Q2 FY27), framed as reinvestment to scale for agentic AI workloads alongside a Q1 beat (revenue $264.2M, +23% y/y).</p>
+<p class="cav">⚠ Magnitude shown at low end of disclosed range; timing of charge recognition spans FY2027.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">reduce its full‑time workforce by ~14% (about 350 people)</span>
+<span class="span">exit 22 countries</span>
+<span class="span">$30–35 million in pre‑tax restructuring charges</span>
+<span class="span">revenue of $264.2 million (+23% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: DAP scaled with agentic workflows across lifecycle</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported they introduced and scaled Duo Agent Platform with agentic workflows across the software lifecycle.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">introduced and scaled GitLab Duo Agent Platform (DAP) with agentic workflows across the lifecycle</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: Anthropic Claude access broadened and integrations deepened</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">GitLab broadened access, including free-tier, and deepened integrations with Anthropic Claude during the quarter.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">broadened access (including free-tier) and deepened integrations with Anthropic Claude</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: AWS Bedrock and Google Vertex AI enabled for DAP</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Collaborations with AWS and Google Cloud now enable customers to power Duo Agent Platform with Amazon Bedrock or Vertex AI, aligning with customers’ existing AI stacks.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">enable customers to power DAP with Amazon Bedrock or Vertex AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: FY27 outlook assumes no material DAP revenue contribution</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management expects no material FY2027 revenue from Duo Agent Platform while focusing on converting pilots and establishing consumption patterns.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expects no material FY2027 revenue contribution from DAP</span>
+<span class="span">converting pilots and establishing consumption patterns</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: DAP paid consumption run-rate about $20M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20M · run_rate_annual</span> <span class="badge">neutral</span></div>
+<p class="narr">The CFO cited an approximately $20 million DAP paid consumption run-rate figure for the quarter but cautioned it is too early to model.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Early run-rate estimate; management advised not to model it.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">the ~$20M DAP paid consumption run-rate figure</span>
+<span class="span">not something that anyone should be looking at in their models</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: Seat growth and pricing approach for non-technical users</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported seat growth and that non-technical contributors will use the same seat-based pricing as engineers.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">seats grew in the quarter</span>
+<span class="span">non-technical contributors would use the same seat-based pricing as engineers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: GitLab Credits support on-demand and monthly commitments</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">GitLab Credits were positioned to support on-demand and monthly commitments, aligning with existing AI budgets.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Credits enable on-demand and monthly commitments</span>
+<span class="span">aligning with existing AI budgets</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: Plan to transition Duo Pro/Enterprise into DAP in FY27</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">GitLab plans to transition Duo Pro/Enterprise offerings into Duo Agent Platform in FY27 with no current pricing change.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">no pricing change for Duo Pro/Enterprise today</span>
+<span class="span">plan to transition them into DAP</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: CEO cites AI agents straining competitors’ infrastructure</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO said agent workloads increase infrastructure load and are taking some competitors to the brink, reinforcing GitLab’s enterprise focus and the complexity of migrations.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">agents are increasing infrastructure load</span>
+<span class="span">taking some of our competitors to the brink</span>
+<span class="span">noted migrations take time at enterprise scale</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: AI lab architecture targets ~100x human-scale</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">GitLab shared that design targets require around 100x current human-scale needs for AI lab architecture.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">design targets require ~100x current human-scale needs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: Total RPO about $1.1B (+18% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.1B · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">GitLab reported total remaining performance obligations of approximately $1.1 billion, up 18% year-over-year.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Total RPO ~$1.1B (+18% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: cRPO $724.1M (+24% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$724M · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Current RPO reached $724.1 million, up 24% year-over-year.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">current RPO $724.1M (+24% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">27Q1: Risk on AI monetization timing and model transition</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">GitLab assumed no material FY2027 DAP revenue while piloting consumption-based monetization, highlighting risk around timing and model transition.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">assumes no material FY2027 revenue from Duo Agent Platform</span>
+<span class="span">piloting consumption-based monetization</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0023" data-providers="anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">GitLab deepens Anthropic Claude integration; joins Claude Marketplace</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">GitLab expanded access to Anthropic’s latest Claude models (including Claude Opus 4.7) within Duo Agent Platform via Google Cloud and Amazon Bedrock, and joined the Claude Marketplace to align GitLab Credits with existing Anthropic commitments.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Claude Opus 4.7</span>
+<span class="span">via Google Cloud and Amazon Bedrock</span>
+<span class="span">joined the Claude Marketplace</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0021" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-14</span>
+<span class="eh">Expanded Google collab: Duo Agent Platform powered by Vertex AI; spend counts to GCP commitments</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">GitLab and Google Cloud expanded their collaboration so customers can power Duo Agent Platform with Vertex AI models and count that usage toward existing Google Cloud commitments, integrating governance and model choice including Gemini.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Vertex AI models</span>
+<span class="span">count that usage toward their existing Google Cloud commitments</span>
+<span class="span">including Gemini</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0022" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-14</span>
+<span class="eh">Blog: Vertex AI powers Duo Agent Platform’s model tier for agent calls</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">GitLab detailed that Vertex AI on Google Cloud powers the model tier for agent calls within Duo Agent Platform, highlighting Gemini and third-party model access via Model Garden.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[18]</div>
+<span class="span">powers the model tier for agent calls</span>
+<span class="span">Vertex AI</span>
+<span class="span">Gemini</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Duo Agent Platform GA, usage-based pricing, and early FY2026 metrics</h2>
+<div class='range'>2026-01-15 → 2026-03-20</div>
+<div class='psum'>GitLab announced the general availability of GitLab Duo Agent Platform with embedded access to tools such as Anthropic&#x27;s Claude Code and OpenAI&#x27;s Codex CLI, alongside a virtual currency (GitLab Credits) for usage-based AI pricing. In its 26Q4 release, GitLab formalized Credits pricing inclusions per seat and on-demand rates, detailed adoption gating for self-managed customers, and reported RPO and cRPO levels. The company also appeared as an Anthropic customer success, while GitLab Support documented that default model assignments were heavily weighted to Anthropic, highlighting provider-specific risk without explicit pinning.</div>
+<div class="event t-web_only_verified" id="E0020" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-03-20</span>
+<span class="eh">Support advisory: Duo defaults heavily weighted to Anthropic unless pinned</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">GitLab Support warned that default model assignments are heavily weighted toward Anthropic Claude and may reappear after upgrades unless administrators explicitly pin alternatives for each feature.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[16]</div>
+<span class="span">heavily weighted toward Anthropic (Claude) models</span>
+<span class="span">most Duo features will use Claude by default</span>
+<span class="span">GitLab may also update default models during upgrades</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0019" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Anthropic customer story: GitLab powers Duo features with Claude 3</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic profiled GitLab as a customer using Claude 3 models to deliver AI-powered Duo features across the DevSecOps lifecycle.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[19]</div>
+<span class="span">GitLab ... uses Claude</span>
+<span class="span">Claude 3 models</span>
+<span class="span">AI-powered Duo features</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">26Q4: Launch and GA of GitLab Duo Agent Platform reiterated</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On its 26Q4 release, management highlighted the GA of GitLab Duo Agent Platform focused on intelligent orchestration and AI-driven automation across the software lifecycle.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">launch and general availability of GitLab Duo Agent Platform</span>
+<span class="span">intelligent orchestration</span>
+<span class="span">AI-driven automation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">26Q4: Introduced GitLab Credits usage-based pricing for DAP</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">GitLab introduced GitLab Credits to support usage-based pricing for the Duo Agent Platform.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">introduced GitLab Credits</span>
+<span class="span">usage-based pricing model</span>
+<span class="span">Duo Agent Platform</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">26Q4: Premium seats include $12 of Credits</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$12 · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Management specified Premium seats include $12 in GitLab Credits as part of the new usage-based AI pricing model.</p>
+<div class="ev-ch">channels: <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Premium seats include $12 of credits</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">26Q4: Ultimate seats include $24 of Credits</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$24 · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Management specified Ultimate seats include $24 in GitLab Credits.</p>
+<div class="ev-ch">channels: <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Ultimate seats include $24</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">26Q4: On-demand usage billed at roughly $1 per Credit</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1 · other</span> <span class="badge">neutral</span></div>
+<p class="narr">On-demand usage for GitLab Credits bills monthly at about $1 per credit.</p>
+<div class="ev-ch">channels: <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">on‑demand usage bills monthly at roughly $1 per credit</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">26Q4: Committed monthly minimums recognized ratably</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Committed monthly minimums convert usage into ratable subscriptions for accounting recognition.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">committed monthly minimums convert usage into ratable subscriptions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">26Q4: DAP adoption gating for self-managed upgrades (18.8+)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Self-managed customers need to upgrade to release 18.8+ with an expected two-quarter ramp for about half of the base, gating near-term Duo Agent Platform adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">self‑managed customers needing to upgrade to release 18.8+</span>
+<span class="span">about two quarters for ~50% to adopt</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">26Q4: RPO $1.1b (+20% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.1B · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">GitLab reported remaining performance obligations of $1.1 billion, up 20% year-over-year.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Remaining performance obligations (RPO) $1.1b (+20% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">26Q4: cRPO $719.4m (+24% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$719M · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Current RPO was $719.4 million, up 24% year-over-year.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">current RPO (cRPO) $719.4m (+24% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">26Q4: Risk from hybrid usage-based model transition</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management warned that the introduction of GitLab Credits and hybrid pricing may introduce variability in consumption and revenue visibility during adoption, potentially affecting near-term billings.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">may introduce variability in consumption and revenue visibility</span>
+<span class="span">could affect near-term billings dynamics</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-01-15</span>
+<span class="eh">GitLab announces GA of Duo Agent Platform; embeds Anthropic and OpenAI tools; Credits included</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$12 · other</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">GitLab announced GA of the Duo Agent Platform with integrated external agents including Claude Code (Anthropic) and Codex CLI (OpenAI), and introduced included GitLab Credits per Premium/Ultimate seat.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<p class="cav">⚠ Included credits amounts vary by tier; $12 Premium, $24 Ultimate.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">general availability of GitLab Duo Agent Platform</span>
+<span class="span">Claude Code from Anthropic</span>
+<span class="span">Codex CLI from OpenAI</span>
+<span class="span">$12 and $24 dollars in included credits per user</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="openai_chatgpt meta_llama anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-01-15</span>
+<span class="eh">DAP GA blog: multi-model selection supports OpenAI, Anthropic, Meta Llama, Mistral</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">GitLab’s GA blog emphasized a flexible model selection framework for Duo Agent Platform with defaults and admin overrides, listing OpenAI GPT-5 variants, Mistral, Meta Llama, and Anthropic Claude.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Published on: January 15, 2026</span>
+<span class="span">OpenAI GPT-5 variants</span>
+<span class="span">Meta Llama</span>
+<span class="span">Anthropic Claude</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Multi-model stance and AI delivery infrastructure build-out</h2>
+<div class='range'>2024-05-09 → 2025-04-17</div>
+<div class='psum'>GitLab publicly committed to a multi-model approach, explicitly stating it was not tied to a single provider and was using Google and Anthropic models while continuously evaluating others. The company built multi-region AI delivery services on Google Cloud Platform (e.g., Cloud Run) to meet latency and performance needs. It also expanded agentic offerings by announcing GitLab Duo with Amazon Q for self-managed Ultimate customers on AWS, embedding Amazon’s software development agents into the GitLab platform.</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-04-17</span>
+<span class="eh">GitLab Duo with Amazon Q reaches GA for AWS self-managed Ultimate</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">GitLab announced general availability of GitLab Duo with Amazon Q as a bundle for Ultimate self-managed customers on AWS, embedding Amazon’s software development agents directly into GitLab.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">April 17, 2025</span>
+<span class="span">GitLab Duo with Amazon Q</span>
+<span class="span">available today as a bundle</span>
+<span class="span">Amazon Web Services (AWS)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-09-12</span>
+<span class="eh">GitLab launches multi-region AI service on GCP to deliver Duo features</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">To meet low-latency AI needs, GitLab launched a multi-region service on Google Cloud Platform (Cloud Run) for AI features like its AI Gateway and satellite services.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">multi-region service</span>
+<span class="span">Cloud Run</span>
+<span class="span">Google Cloud Platform (GCP)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-05-09</span>
+<span class="eh">GitLab details multi-model strategy: Google + Anthropic, not tied to one provider</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">GitLab disclosed that Duo features are powered by a diverse set of models from Google and Anthropic and emphasized it is not tied to a single model provider by design.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Published on: May 9, 2024</span>
+<span class="span">not tied to a single model provider</span>
+<span class="span">foundation models from Google and Anthropic</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational AI partnerships and early Duo features</h2>
+<div class='range'>2023-05-02 → 2024-01-16</div>
+<div class='psum'>GitLab began formalizing its AI roadmap with Google Cloud, integrating Vertex AI foundation models into its DevSecOps platform. By late 2023, GitLab publicly aligned its Duo capabilities with Google&#x27;s PaLM 2/Codey models, indicating a Google-first path for coding and generative features. In January 2024, GitLab brought GitLab Duo Code Suggestions to general availability using Anthropic Claude for code generation, establishing a second strategic model provider. This phase set a clear multi-provider direction spanning Google Gemini/Vertex AI and Anthropic Claude, embedded directly in the GitLab platform.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-01-16</span>
+<span class="eh">GitLab GA: Duo Code Suggestions powered by Anthropic Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">GitLab brought Duo Code Suggestions to GA, using Anthropic’s Claude for safe, high-integrity code generation integrated into GitLab’s AI portfolio.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Published on: January 16, 2024</span>
+<span class="span">GitLab Duo Code Suggestions</span>
+<span class="span">Anthropic&#x27;s generative AI model, Claude</span>
+<span class="span">general availability</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-08-29</span>
+<span class="eh">GitLab leverages PaLM 2/Codey via Vertex AI for Duo</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">At Google Cloud Next, GitLab highlighted its use of Google&#x27;s PaLM 2 and Codey model family through Vertex AI to power GitLab Duo AI workflows across the SDLC.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Google Cloud Next</span>
+<span class="span">Vertex AI</span>
+<span class="span">PaLM 2</span>
+<span class="span">Codey model family</span>
+<span class="span">GitLab Duo</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-05-02</span>
+<span class="eh">GitLab and Google Cloud expand AI partnership leveraging Vertex AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">GitLab announced an expanded partnership with Google Cloud to deliver AI-assisted capabilities using Vertex AI within its DevSecOps platform, emphasizing privacy-first AI and customizable foundation models.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">May 2, 2023</span>
+<span class="span">Google Cloud</span>
+<span class="span">Vertex AI</span>
+<span class="span">customizable foundation models</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0044'>E0044</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0040'>E0040</a>, <a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0044'>E0044</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0040'>E0040</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0038'>E0038</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0039'>E0039</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0041'>E0041</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0041'>E0041</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0041'>E0041</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0044'>E0044</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0044'>E0044</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What proportion of Duo Agent Platform usage (and resulting spend) is routed to Anthropic vs. Google Gemini/Vertex AI vs. OpenAI vs. other models on a rolling-quarter basis?</li>
+<li>What is the revenue share and take-rate impact for GitLab when customers buy through Google Cloud Marketplace or Claude Marketplace versus direct?</li>
+<li>How quickly will GitLab convert DAP pilots to material FY27+ revenue, and what are early cohort consumption patterns?</li>
+<li>To what extent do customers override Anthropic defaults, and how does the default weighting evolve across releases?</li>
+<li>What safeguards are in place for data residency/compliance when model providers process data in regions different from the AI Gateway deployments?</li>
+<li>How does the 14% workforce reduction affect near-term AI feature velocity and infrastructure scaling for agentic workflows?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>A significant portion of evidence is sourced from GitLab press releases, blogs, and documentation and may emphasize product availability and strategic positioning without independent financial corroboration.</li>
+<li>Where marketplace and collaboration details are disclosed (e.g., Google Cloud commitments, Claude Marketplace), term lengths, commercial terms, and take-rates are not specified.</li>
+<li>Run-rate figures and adoption timelines are early-stage and management-qualified; they may be volatile during the model/pricing transition.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

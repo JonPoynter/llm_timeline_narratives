@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Baidu Inc <span class='sub'>(BIDU US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.5</div>
@@ -72,505 +82,376 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (unverified): 8</span>
 <span class='chip'>web-only (verified): 3</span>
 </div>
-<div class='phase'>
-<h2>2024 ecosystem setup and early multi-model integrations</h2>
-<div class='range'>2024-01-26 → 2024-06-30</div>
-<div class='psum'>Baidu advanced its AI ecosystem in 2024 by landing high-visibility device-side integration wins in China and broadening model access on its Qianfan platform. Samsung selected Baidu’s ERNIE to power Galaxy AI features in China, underscoring ERNIE’s competitiveness in the domestic market where Google Gemini was not used. Baidu AI Cloud quickly moved to support Meta’s Llama 3 across training and inference in China and published technical work with Intel to accelerate CPU-based LLM inference on Qianfan.
-At the same time, international access constraints for U.S. foundation models intensified. OpenAI tightened enforcement to block API access from mainland China and Hong Kong, reinforcing the strategic importance of Baidu’s domestic full‑stack and multi‑model approach. Collectively, these moves positioned Baidu as a key provider of AI capabilities to Chinese developers and OEMs while building a hedge via broad model compatibility.</div>
-<div class="event t-web_only_verified" id="E0001">
-<div class="ev-top">
-<span class="date">2024-01-26</span>
-<span class="eh">Samsung selects Baidu ERNIE for Galaxy AI in China (not Google Gemini)</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Samsung’s Galaxy AI features in China are powered by Baidu’s ERNIE rather than Google’s Gemini, with Baidu stating ERNIE now drives Note Assist capabilities like translation and summarization. This elevates ERNIE’s distribution on leading Android flagships in China.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[11]</div>
-<span class="span">Samsung’s Galaxy AI features won’t use Google Gemini in China</span>
-<span class="span">turned to Baidu</span>
-<span class="span">Ernie’s understanding and generation capabilities</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0002">
-<div class="ev-top">
-<span class="date">2024-04-22</span>
-<span class="eh">Qianfan first in China to support Llama 3 full series for train/infer</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Baidu AI Cloud’s Qianfan platform became the first in China to offer full training and inference support for Meta’s Llama 3 (8B/70B), enabling developers to fine-tune and deploy with ModelBuilder and access invite-only testing immediately after Llama 3’s launch.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span nonlatin"><span class="tag">non-Latin</span>国内首家支持Llama3全系列训练推理</span>
-<span class="span nonlatin"><span class="tag">non-Latin</span>Llama 3，包括8B和70B参数的大模型</span>
-<span class="span nonlatin"><span class="tag">non-Latin</span>千帆ModelBuilder已上架最新Llama 3系列模型</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0003">
-<div class="ev-top">
-<span class="date">2024-06-01</span>
-<span class="eh">Qianfan adds Intel-optimized CPU LLM inference (xFT on Xeon)</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu AI Cloud documented CPU-based LLM inference acceleration on Qianfan using Intel-optimized xFT on Xeon Scalable processors, supporting models like Llama 2 and ChatGLM2 for long-context/long-output deployments.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span nonlatin"><span class="tag">non-Latin</span>在千帆大模型平台上实现 CPU 推理加速</span>
-<span class="span nonlatin"><span class="tag">non-Latin</span>英特尔® 至强® 可扩展</span>
-<span class="span nonlatin"><span class="tag">non-Latin</span>Llama2-7b-chat xFT 支持</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0004">
-<div class="ev-top">
-<span class="date">2024-06-25</span>
-<span class="eh">OpenAI moves to block China/HK developer access to APIs</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">OpenAI tightened enforcement to block access from unsupported regions, including mainland China and Hong Kong, with measures taking effect July 9. OpenAI’s support page reiterated accounts outside supported countries can be blocked, indirectly advantaging domestic providers like Baidu.</p>
-<details>
-<summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[7], web_search_findings[8]</div>
-<span class="span">block attempts from “unsupported countries and territories”, including mainland China and Hong Kong</span>
-<span class="span">application programming interfaces (APIs)</span>
-<span class="span">set to go into effect on July 9</span>
-<span class="span">Accessing or offering access to our services outside of the countries and territories listed below may result in your account being blocked</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>2025 multi-model expansion and platform/product traction</h2>
-<div class='range'>2025-02-05 → 2025-11-18</div>
-<div class='psum'>In 2025 Baidu deepened its multi-model strategy. Qianfan onboarded DeepSeek R1/V3 at ultra-low prices and TechNode reported Baidu Search’s integration of DeepSeek alongside ERNIE to enhance results. Baidu research introduced Qianfan‑VL leveraging Llama 3.1/Qwen backbones, and Baidu launched a DeepSeek appliance powered by Kunlunxin P800 for on‑prem deployments.
-The period also included mixed fundamentals: while platform capabilities broadened, Reuters reported revenue pressure and a swing to loss in November 2025, reflecting broader ad softness and restructuring impacts despite AI cloud momentum.</div>
-<div class="event t-web_only_unverified" id="E0005">
-<div class="ev-top">
-<span class="date">2025-02-05</span>
-<span class="eh">Qianfan lists DeepSeek R1/V3 with ultra-low pricing and free trials</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
-<p class="narr">Baidu AI Cloud added DeepSeek-R1 and DeepSeek-V3 to Qianfan with ultra-low pricing and limited-time free access, integrated with Baidu’s safety operators and enterprise observability to support secure, stable app building.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span nonlatin"><span class="tag">non-Latin</span>全面上架 DeepSeek-R1和 DeepSeek-V3模型</span>
-<span class="span nonlatin"><span class="tag">non-Latin</span>价格超低</span>
-<span class="span nonlatin"><span class="tag">non-Latin</span>限时免费服务</span>
-<span class="span nonlatin"><span class="tag">non-Latin</span>千帆ModelBuilder即可快速体验</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0006">
-<div class="ev-top">
-<span class="date">2025-02-17</span>
-<span class="eh">Baidu Search integrates DeepSeek with ERNIE for advanced search</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
-<p class="narr">Baidu announced its Search product fully integrates DeepSeek and ERNIE to enhance results, and developers using AgentBuilder can call DeepSeek to build and optimize agents. Features are available free to users.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">integrates DeepSeek and Large Model ERNIE</span>
-<span class="span">will be available for free to users</span>
-<span class="span">developers using AgentBuilder</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0007">
-<div class="ev-top">
-<span class="date">2025-09-19</span>
-<span class="eh">Qianfan-VL multimodal models introduced (Llama 3.1/Qwen backbones)</span>
-<span class="badge">model_release</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Baidu researchers presented Qianfan‑VL, a family of vision‑language models using Llama 3.1 (8B/70B) and Qwen2.5‑3B backbones with domain enhancement techniques to achieve strong performance.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">Qianfan-VL</span>
-<span class="span">Llama 3.1 (8B/70B)</span>
-<span class="span">Qwen2.5-3B (3B)</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0008">
-<div class="ev-top">
-<span class="date">2025-10-15</span>
-<span class="eh">Qianfan supports DeepSeek V4 and launches DeepSeek appliance on Kunlunxin</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
-<p class="narr">Baidu rolled out full DeepSeek V4 API support on Qianfan and introduced a DeepSeek all‑in‑one appliance with Kunlunxin P800 chips enabling fast on‑prem deployment and high throughput.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span nonlatin"><span class="tag">non-Latin</span>DeepSeek-V4-Pro、DeepSeek-V4-Flash</span>
-<span class="span nonlatin"><span class="tag">non-Latin</span>千帆DeepSeek一体机</span>
-<span class="span nonlatin"><span class="tag">non-Latin</span>昆仑芯P800</span>
-<span class="span nonlatin"><span class="tag">non-Latin</span>2437 tokens/s吞吐</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0009">
-<div class="ev-top">
-<span class="date">2025-11-18</span>
-<span class="eh">Reuters: revenue down 7% and swing to loss despite AI cloud</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Reuters reported Baidu’s quarterly revenue fell 7% and the firm swung to a loss amid ad weakness and restructuring charges, even as AI cloud grew. ADRs slipped on the news.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[3]</div>
-<span class="span">revenue drops 7 percent and swings to loss</span>
-<span class="span">ADRs slip</span>
-<span class="span">31.17 CNY bn</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Spin-off momentum and 25Q4 disclosures (AI scale, buyback)</h2>
-<div class='range'>2026-01-02 → 2026-02-26</div>
-<div class='psum'>Baidu kicked off 2026 with a planned spin‑off of its AI chip unit Kunlunxin, followed by 25Q4 disclosures that emphasized scale in AI Cloud infrastructure, rising AI‑powered revenue mix, and a new US$5B buyback and dividend policy. Management reiterated confidence that AI Cloud growth would outpace the industry in 2026, highlighted accelerator‑based infrastructure and full‑stack differentiation, and reaffirmed optionality to use non‑ERNIE models where appropriate.
-User traction continued: ERNIE Assistant reached 202M MAU by Dec‑2025 and Apollo Go delivered 3.4M rides in Q4 with over 20M cumulative, while Apollo Go targets broader UE breakeven in 2026.</div>
-<div class="event t-single_source" id="E0010">
-<div class="ev-top">
-<span class="date">2026-01-02</span>
-<span class="eh">Kunlunxin files for Hong Kong IPO; BIDU rallies on spin-off value</span>
-<span class="badge">equity</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Media reported Baidu’s AI chip arm Kunlunxin filed for a Hong Kong IPO, sparking a BIDU ADR rally on perceived value unlock tied to China’s AI chip self‑reliance push.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[2]</div>
-<span class="span">Kunlunxin files for Hong Kong IPO</span>
-<span class="span">BIDU +10–12% intraday</span>
-<span class="span">Spin-off/IPO filing</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0011">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">AI Cloud Infra RMB5.8B; subscription accelerator +143% YoY (Q4)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu reported AI Cloud Infra of RMB5.8B in Q4 with subscription AI accelerator revenue up 143% year over year, alongside AI Applications and AI-native Marketing Services of RMB2.7B each.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">AI Cloud Infra RMB5.8B</span>
-<span class="span">subscription AI accelerator revenue +143% y/y</span>
-<span class="span">AI Applications RMB2.7B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0012">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">ERNIE Assistant reaches 202M MAU (Dec-2025)</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu disclosed ERNIE Assistant monthly active users reached 202 million as of December 2025, indicating broad consumer adoption.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">ERNIE Assistant MAU 202M (Dec-2025)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0013">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">Apollo Go delivered 3.4M Q4 rides; &gt;20M cumulative</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu’s Apollo Go robotaxi service delivered 3.4 million fully driverless rides in Q4, with cumulative public rides surpassing 20 million by February 2026.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">3.4M fully driverless rides in Q4</span>
-<span class="span">cumulative public rides &gt;20M as of Feb-2026</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0014">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">Baidu authorizes US$5B buyback; adopts dividend policy</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · other</span> <span class="badge">neutral</span></div>
-<p class="narr">The board approved a new US$5B share repurchase program through Dec 31, 2028 and adopted a dividend policy, with potential first payment by year‑end 2026.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">US$5B share repurchase program</span>
-<span class="span">adopted a dividend policy</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0015">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">Planned spin-off and separate listing of Kunlunxin</span>
-<span class="badge">equity</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu reiterated its proposed spin-off and separate listing of its AI chip unit Kunlunxin, announced in January 2026, reinforcing a strategy to unlock chip asset value.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Proposed spin-off and separate listing of Kunlunxin</span>
-<span class="span">announced Jan 2026</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0016">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">ERNIE 5.0 released; PSI Business Group formed</span>
-<span class="badge">model_release</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu released ERNIE 5.0 and formed the Personal Super Intelligence Business Group, integrating Baidu Wenku and Baidu Drive to accelerate consumer application experiences.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Released updated ERNIE 5.0</span>
-<span class="span">Personal Super Intelligence Business Group</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0017">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">PSI Business Group integrates Wenku and Drive</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu created the Personal Super Intelligence Business Group by integrating Baidu Wenku and Baidu Drive to streamline AI application delivery.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Personal Super Intelligence Business Group</span>
-<span class="span">integrating Baidu Wenku and Baidu Drive</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0018">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">AI Cloud ~RMB30B in 2025; Infra up 34% YoY</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management said AI Cloud revenue reached approximately RMB 30B in 2025, with infrastructure up 34% year over year and subscription-based accelerator infrastructure highlighted as a key driver.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">AI Cloud revenue reached ~RMB 30B in 2025</span>
-<span class="span">AI Cloud Infra up 34% YoY</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0019">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">CEO: applications matter more than models; dual-track org</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Baidu emphasized an application‑first approach with a dual‑track organization—advancing the foundation model while tailoring models for business needs, latency, and cost.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">applications matter more than models</span>
-<span class="span">dual-track org</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0020">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">Open to non-ERNIE models for specific use cases</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Baidu said it will use ERNIE where strongest but is open to other models for particular use cases, reflecting a pragmatic multi‑model approach.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">use ERNIE where strongest</span>
-<span class="span">open to other models for specific use cases</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0021">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">Management confident AI Cloud will outpace industry in 2026</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu reiterated confidence that AI Cloud growth will outpace the industry in 2026, citing full‑stack differentiation including heterogeneous compute and unified scheduling.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">remain highly confident</span>
-<span class="span">outpace the industry in 2026</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0022">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">AI-powered revenue mix set to become majority</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Q4 AI-powered revenue was about RMB 11B (43% of General Business), and management said it will become the majority of Baidu General Business in the foreseeable future.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">RMB 11B (43% of General Business)</span>
-<span class="span">will become “the majority of Baidu General Business</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0023">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">Cumulative AI investment &gt;RMB100B; maintain investment density</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Baidu stated cumulative AI investment exceeded RMB 100B since March 2023 and plans to maintain similar investment density while keeping operating cash flow positive.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">cumulative AI investment exceeded RMB 100 billion</span>
-<span class="span">maintain this level of “investment density.”</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0024">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">Baidu expects operating cash flow to remain positive</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Despite elevated AI spending, management expects operating cash flow to remain positive going forward.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">expects operating cash flow to remain positive going forward</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0025">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">Funding mix: leases and sub-2% bank borrowings to fund AI</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Baidu outlined its AI funding mix including operating/finance leases and low-cost bank borrowings, with some facilities carrying interest rates below 2%.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">operating/finance leases and low-cost bank borrowings</span>
-<span class="span">interest rates below 2%</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0026">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">Simplified agent deployment; accelerator infra key growth driver</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management highlighted simplified agent deployment tooling on Baidu AI Cloud and reiterated subscription-based AI accelerator infrastructure as the primary growth driver.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">simplified agent deployment tooling for enterprises</span>
-<span class="span">subscription-based AI accelerator infra as primary growth driver</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0027">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">AI Cloud expected to grow faster than industry in 2026</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu reiterated that AI Cloud is expected to grow faster than the industry in 2026, led by accelerator infrastructure and full‑stack differentiation.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">grow faster than the industry in 2026</span>
-<span class="span">full‑stack differentiation</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0028">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">US$5B buyback to be executed regularly and transparently</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · other</span> <span class="badge">neutral</span></div>
-<p class="narr">Baidu said the new US$5B share repurchase program will be executed regularly in a disciplined and transparent manner; first‑ever dividend policy aims to broaden the investor base.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">a new US$5B share repurchase program</span>
-<span class="span">“in a very disciplined and transparent manner”</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0029">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">Apollo Go targets UE breakeven in more cities in 2026</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management said Apollo Go aims to achieve unit‑economics breakeven in more cities in 2026 and remains flexible on potential value‑unlock options.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Apollo Go aims to achieve UE breakeven in more cities in 2026</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>26Q1 scale-up, regulatory scrutiny, and competitive landscape</h2>
 <div class='range'>2026-03-05 → 2026-06-27</div>
 <div class='psum'>Baidu entered mid‑2026 with strong momentum in AI cloud and applications yet faced heightened U.S. regulatory scrutiny. 26Q1 results showed AI‑powered revenue of RMB13.6B with AI Cloud Infra RMB8.8B growing 79% YoY and GPU Cloud +184% YoY, while free cash flow was negative due to continued capex. Management emphasized ongoing capacity expansion, better GPU cloud margins, agent monetization shifting to outcomes, and Apollo Go breakeven in its largest city.
 Externally, the U.S. DoD added Baidu to its Section 1260H list, increasing geopolitical risk. Regionally, Google launched Gemini in Hong Kong (a competitive threat there), while Anthropic/ OpenAI access restrictions reinforced Baidu’s domestic positioning. Third‑party indices placed Apollo Go at or near the top of global robotaxi rankings.</div>
-<div class="event t-web_only_unverified" id="E0030">
+<div class="event t-web_only_unverified" id="E0053" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">Qianfan emphasizes OpenAI-compatible APIs and multi-model access</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
+<p class="narr">Baidu’s Qianfan overview highlights one‑stop agent development with OpenAI‑compatible RESTful APIs and access to leading models including ERNIE and top open‑source models such as DeepSeek.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · DSK <b>2</b></span> <span class="chchip">product_integration_exposure · DSK <b>4</b></span> <span class="chchip">enterprise_adoption_exposure · DSK <b>2</b></span> <span class="chchip">provider_specificity · DSK <b>2</b></span> <span class="chchip">multi_model_hedge · DSK <b>4</b></span> <span class="chchip">switching_flexibility · DSK <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">OpenAI-compatible RESTful APIs</span>
+<span class="span">including ERNIE and top open-source models (such as DeepSeek, Minimax, Kimi, GLM)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0051" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-21</span>
+<span class="eh">TechCrunch: Apollo Go edges Waymo in real-time robotaxi ranking</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TechCrunch highlighted AUTNMY AI’s Road to Autonomy Index, noting Baidu’s Apollo Go narrowly led the robotaxi ranking ahead of Waymo as of that update, signaling strong competitive position in AV.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
+<p class="cav">⚠ Index updates frequently; ranking may vary over time.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Road to Autonomy Index</span>
+<span class="span">Baidu’s Apollo Go narrowly led the robotaxi ranking ahead of Waymo</span>
+<span class="span">AUTNMY AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0052" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">U.S. DoD adds Baidu to Section 1260H Chinese Military Companies list</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">The Pentagon expanded its Section 1260H list to include Baidu, restricting eligibility for U.S. defense contracts and signaling heightened national‑security scrutiny.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">adding Alibaba, Baidu and BYD</span>
+<span class="span">Chinese Military Companies list</span>
+<span class="span">Section 1260H</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">26Q1: AI-powered revenue RMB13.6B; Infra RMB8.8B; Marketing RMB2.3B</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu reported 26Q1 AI‑powered Business revenue of RMB13.6B (+49% YoY), including AI Cloud Infra RMB8.8B (+79% YoY) and AI‑native Marketing Services RMB2.3B (+36% YoY).</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-powered Business revenue 13.6B (+49% YoY)</span>
+<span class="span">AI Cloud Infra revenue 8.8B (+79% YoY)</span>
+<span class="span">AI-native Marketing Services 2.3B (+36% YoY)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">26Q1: GPU Cloud revenue up 184% YoY</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Within AI Cloud Infra momentum, Baidu reported GPU Cloud revenue increased 184% YoY in 26Q1, supporting a mix shift to higher-margin GPU workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">GPU Cloud revenue up 184% YoY</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">AI surpasses half of General Business for the first time</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said AI‑powered Business exceeded 50% of Baidu General Business revenue for the first time in 26Q1, highlighting AI as the core growth driver.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-powered Business surpassed half of Baidu General Business revenue for the first time</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">26Q1: &#x27;Others&#x27; (AI/cloud/new biz) RMB13.4B, +42% YoY</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu’s &#x27;Others&#x27; category, primarily AI/cloud and newer businesses, reached RMB13.4B, up 42% YoY in 26Q1.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“Others” (primarily AI/cloud and newer businesses) 13.4B (+42% YoY)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">26Q1: FCF negative on elevated capex (RMB5.9B capex; −RMB3.25B FCF)</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Despite RMB2.7B operating cash flow, Baidu’s 26Q1 free cash flow was negative due to RMB5.9B capex tied to AI/cloud infrastructure build‑out.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">free cash flow was negative due to elevated capex</span>
+<span class="span">capex of RMB5.9B</span>
+<span class="span">FCF of −RMB3.25B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">Baidu repurchases US$172M of shares in 26Q1</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$172M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Baidu returned US$172M via share repurchases in Q1, continuing capital returns alongside AI infrastructure investment.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">US$172M</span>
+<span class="span">share repurchases in Q1</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0038" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">No quantitative guidance; AI remains primary growth driver</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu provided no quantitative revenue or EPS guidance for 2Q26 or FY26, emphasizing AI as the primary growth driver with ongoing ramp in AI Cloud and applications.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">No quantitative revenue or EPS guidance was provided</span>
+<span class="span">AI as the primary growth driver</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0039" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">Risk: AI/cloud build-out may depress near-term FCF and ROIC</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that sustained AI/cloud infrastructure investment led to negative FCF in Q1 and could depress near‑term FCF and ROIC.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">FCF of −RMB3.25B</span>
+<span class="span">may depress near-term FCF and ROIC</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0040" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">Risk: AI growth execution/monetization and pricing pressure</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Baidu noted AI-powered growth requires ongoing scale-up and commercialization; delays in enterprise adoption or pricing pressure could affect growth and margins.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">requires ongoing scale-up and commercialization</span>
+<span class="span">pricing pressure could affect growth and margins</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0041" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">Supply remains tight; Baidu expanding capacity and efficiency</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management said supply remains relatively tight but Baidu is expanding capacity and improving resource efficiency; Qianfan MaaS traction and inference mix support scalability.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">supply remains relatively tight</span>
+<span class="span">expanding capacity and improving resource efficiency</span>
+<span class="span">Qianfan MaaS traction</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0042" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">GPU cloud margins exceed CPU cloud; mix tailwind</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu reiterated that GPU cloud typically carries better margins than CPU cloud, implying margin expansion as the usage mix shifts.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">GPU cloud typically carries better margins than CPU cloud</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0043" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">Operating cash flow positive for third consecutive quarter</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu’s CFO said operating cash flow was positive for the third straight quarter since turning positive in Q3 last year, reinforcing investment capacity.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">operating cash flow was positive for the third consecutive quarter</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0044" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">Agent monetization to evolve from usage to outcome-based</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said value capture will increasingly shift to the application layer; near‑term monetization is usage/token‑based, evolving toward results/outcome‑based models as agents execute real tasks.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">value capture increasingly shifts to the application layer</span>
+<span class="span">usage/token‑based</span>
+<span class="span">results/outcome‑based</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0045" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">Apollo Go breakeven in largest city; overseas pricing favorable</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu said Apollo Go has achieved unit‑economics breakeven in its largest operational city and that overseas pricing may yield stronger profitability as scale builds.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">breakeven in its largest operational city</span>
+<span class="span">overseas pricing is more favorable</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0047" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">Kunlunxin positioned to cut inference cost and improve stability</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu said Kunlunxin is part of its full‑stack AI, enabling cross‑stack optimization to reduce inference cost and improve stability, with broad customer demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">reduce inference cost and improve stability</span>
+<span class="span">customer demand is broad‑based</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0048" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">26Q1 Apollo Go: 3.2M rides; &gt;22M cumulative as of April 2026</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Apollo Go delivered 3.2M fully driverless operational rides in Q1; weekly rides peaked over 350k in March and cumulative public rides exceeded 22M as of April 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">3.2M fully driverless operational rides in Q1</span>
+<span class="span">cumulative public rides &gt;22M as of April 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0049" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">AI Applications revenue flat YoY in 26Q1</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Baidu reported AI Applications revenue was flat year over year in 26Q1, indicating uneven monetization across segments.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI Applications revenue was flat YoY</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0050" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">AI Cloud to benefit from shift from training to inference</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects AI Cloud to benefit as workloads shift from training to inference, planning continued capacity additions and efficiency gains.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">shift from training to inference</span>
+<span class="span">capacity additions and efficiency gains</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0031" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-27</span>
+<span class="eh">Google launches Gemini AI app in Hong Kong</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google introduced its Gemini AI chatbot app to Hong Kong users, quickly topping Apple’s App Store, representing a nearer‑term competitive presence in the region adjacent to Baidu’s core mainland market.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider · GEM <b>2</b></span> <span class="chchip">traffic_or_distribution_bypass_risk · GEM <b>1</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Google’s Gemini AI app debuts in Hong Kong</span>
+<span class="span">bring its generative AI services to Hong Kong</span>
+<span class="span">Gemini</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0030" data-providers="anthropic_claude">
 <div class="ev-top">
 <span class="date">2026-03-05</span>
 <span class="eh">Anthropic Claude availability excludes mainland China (geo list)</span>
@@ -588,385 +469,556 @@ Externally, the U.S. DoD added Baidu to its Section 1260H list, increasing geopo
 <span class="span nonlatin"><span class="tag">non-Latin</span>美国</span>
 </details>
 </div>
-<div class="event t-web_only_verified" id="E0031">
-<div class="ev-top">
-<span class="date">2026-03-27</span>
-<span class="eh">Google launches Gemini AI app in Hong Kong</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Google introduced its Gemini AI chatbot app to Hong Kong users, quickly topping Apple’s App Store, representing a nearer‑term competitive presence in the region adjacent to Baidu’s core mainland market.</p>
+<div class='phase'>
+<h2>Spin-off momentum and 25Q4 disclosures (AI scale, buyback)</h2>
+<div class='range'>2026-01-02 → 2026-02-26</div>
+<div class='psum'>Baidu kicked off 2026 with a planned spin‑off of its AI chip unit Kunlunxin, followed by 25Q4 disclosures that emphasized scale in AI Cloud infrastructure, rising AI‑powered revenue mix, and a new US$5B buyback and dividend policy. Management reiterated confidence that AI Cloud growth would outpace the industry in 2026, highlighted accelerator‑based infrastructure and full‑stack differentiation, and reaffirmed optionality to use non‑ERNIE models where appropriate.
+User traction continued: ERNIE Assistant reached 202M MAU by Dec‑2025 and Apollo Go delivered 3.4M rides in Q4 with over 20M cumulative, while Apollo Go targets broader UE breakeven in 2026.</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">AI Cloud Infra RMB5.8B; subscription accelerator +143% YoY (Q4)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu reported AI Cloud Infra of RMB5.8B in Q4 with subscription AI accelerator revenue up 143% year over year, alongside AI Applications and AI-native Marketing Services of RMB2.7B each.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[10]</div>
-<span class="span">Google’s Gemini AI app debuts in Hong Kong</span>
-<span class="span">bring its generative AI services to Hong Kong</span>
-<span class="span">Gemini</span>
+<div class="ev-src">filings[1]</div>
+<span class="span">AI Cloud Infra RMB5.8B</span>
+<span class="span">subscription AI accelerator revenue +143% y/y</span>
+<span class="span">AI Applications RMB2.7B</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0032">
+<div class="event t-single_source" id="E0012" data-providers="">
 <div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">26Q1: AI-powered revenue RMB13.6B; Infra RMB8.8B; Marketing RMB2.3B</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu reported 26Q1 AI‑powered Business revenue of RMB13.6B (+49% YoY), including AI Cloud Infra RMB8.8B (+79% YoY) and AI‑native Marketing Services RMB2.3B (+36% YoY).</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">AI-powered Business revenue 13.6B (+49% YoY)</span>
-<span class="span">AI Cloud Infra revenue 8.8B (+79% YoY)</span>
-<span class="span">AI-native Marketing Services 2.3B (+36% YoY)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0033">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">26Q1: GPU Cloud revenue up 184% YoY</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Within AI Cloud Infra momentum, Baidu reported GPU Cloud revenue increased 184% YoY in 26Q1, supporting a mix shift to higher-margin GPU workloads.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">GPU Cloud revenue up 184% YoY</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0034">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">AI surpasses half of General Business for the first time</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management said AI‑powered Business exceeded 50% of Baidu General Business revenue for the first time in 26Q1, highlighting AI as the core growth driver.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">AI-powered Business surpassed half of Baidu General Business revenue for the first time</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0035">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">26Q1: &#x27;Others&#x27; (AI/cloud/new biz) RMB13.4B, +42% YoY</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu’s &#x27;Others&#x27; category, primarily AI/cloud and newer businesses, reached RMB13.4B, up 42% YoY in 26Q1.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">“Others” (primarily AI/cloud and newer businesses) 13.4B (+42% YoY)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0036">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">26Q1: FCF negative on elevated capex (RMB5.9B capex; −RMB3.25B FCF)</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Despite RMB2.7B operating cash flow, Baidu’s 26Q1 free cash flow was negative due to RMB5.9B capex tied to AI/cloud infrastructure build‑out.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">free cash flow was negative due to elevated capex</span>
-<span class="span">capex of RMB5.9B</span>
-<span class="span">FCF of −RMB3.25B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0037">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">Baidu repurchases US$172M of shares in 26Q1</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$172M · other</span> <span class="badge">neutral</span></div>
-<p class="narr">Baidu returned US$172M via share repurchases in Q1, continuing capital returns alongside AI infrastructure investment.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">US$172M</span>
-<span class="span">share repurchases in Q1</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0038">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">No quantitative guidance; AI remains primary growth driver</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu provided no quantitative revenue or EPS guidance for 2Q26 or FY26, emphasizing AI as the primary growth driver with ongoing ramp in AI Cloud and applications.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">No quantitative revenue or EPS guidance was provided</span>
-<span class="span">AI as the primary growth driver</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0039">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">Risk: AI/cloud build-out may depress near-term FCF and ROIC</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Management cautioned that sustained AI/cloud infrastructure investment led to negative FCF in Q1 and could depress near‑term FCF and ROIC.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">FCF of −RMB3.25B</span>
-<span class="span">may depress near-term FCF and ROIC</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0040">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">Risk: AI growth execution/monetization and pricing pressure</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Baidu noted AI-powered growth requires ongoing scale-up and commercialization; delays in enterprise adoption or pricing pressure could affect growth and margins.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">requires ongoing scale-up and commercialization</span>
-<span class="span">pricing pressure could affect growth and margins</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0041">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">Supply remains tight; Baidu expanding capacity and efficiency</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Management said supply remains relatively tight but Baidu is expanding capacity and improving resource efficiency; Qianfan MaaS traction and inference mix support scalability.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">supply remains relatively tight</span>
-<span class="span">expanding capacity and improving resource efficiency</span>
-<span class="span">Qianfan MaaS traction</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0042">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">GPU cloud margins exceed CPU cloud; mix tailwind</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu reiterated that GPU cloud typically carries better margins than CPU cloud, implying margin expansion as the usage mix shifts.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">GPU cloud typically carries better margins than CPU cloud</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0043">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">Operating cash flow positive for third consecutive quarter</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu’s CFO said operating cash flow was positive for the third straight quarter since turning positive in Q3 last year, reinforcing investment capacity.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">operating cash flow was positive for the third consecutive quarter</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0044">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">Agent monetization to evolve from usage to outcome-based</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management said value capture will increasingly shift to the application layer; near‑term monetization is usage/token‑based, evolving toward results/outcome‑based models as agents execute real tasks.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">value capture increasingly shifts to the application layer</span>
-<span class="span">usage/token‑based</span>
-<span class="span">results/outcome‑based</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0045">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">Apollo Go breakeven in largest city; overseas pricing favorable</span>
+<span class="date">2026-02-26</span>
+<span class="eh">ERNIE Assistant reaches 202M MAU (Dec-2025)</span>
 <span class="badge">customer_adoption</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu said Apollo Go has achieved unit‑economics breakeven in its largest operational city and that overseas pricing may yield stronger profitability as scale builds.</p>
+<p class="narr">Baidu disclosed ERNIE Assistant monthly active users reached 202 million as of December 2025, indicating broad consumer adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
 <details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">breakeven in its largest operational city</span>
-<span class="span">overseas pricing is more favorable</span>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">ERNIE Assistant MAU 202M (Dec-2025)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0047">
+<div class="event t-single_source" id="E0013" data-providers="">
 <div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">Kunlunxin positioned to cut inference cost and improve stability</span>
+<span class="date">2026-02-26</span>
+<span class="eh">Apollo Go delivered 3.4M Q4 rides; &gt;20M cumulative</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu’s Apollo Go robotaxi service delivered 3.4 million fully driverless rides in Q4, with cumulative public rides surpassing 20 million by February 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">3.4M fully driverless rides in Q4</span>
+<span class="span">cumulative public rides &gt;20M as of Feb-2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Baidu authorizes US$5B buyback; adopts dividend policy</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">The board approved a new US$5B share repurchase program through Dec 31, 2028 and adopted a dividend policy, with potential first payment by year‑end 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">US$5B share repurchase program</span>
+<span class="span">adopted a dividend policy</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Planned spin-off and separate listing of Kunlunxin</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu reiterated its proposed spin-off and separate listing of its AI chip unit Kunlunxin, announced in January 2026, reinforcing a strategy to unlock chip asset value.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Proposed spin-off and separate listing of Kunlunxin</span>
+<span class="span">announced Jan 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">ERNIE 5.0 released; PSI Business Group formed</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu released ERNIE 5.0 and formed the Personal Super Intelligence Business Group, integrating Baidu Wenku and Baidu Drive to accelerate consumer application experiences.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Released updated ERNIE 5.0</span>
+<span class="span">Personal Super Intelligence Business Group</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">PSI Business Group integrates Wenku and Drive</span>
 <span class="badge">product_integration</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Baidu said Kunlunxin is part of its full‑stack AI, enabling cross‑stack optimization to reduce inference cost and improve stability, with broad customer demand.</p>
+<p class="narr">Baidu created the Personal Super Intelligence Business Group by integrating Baidu Wenku and Baidu Drive to streamline AI application delivery.</p>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">reduce inference cost and improve stability</span>
-<span class="span">customer demand is broad‑based</span>
+<div class="ev-src">filings[1]</div>
+<span class="span">Personal Super Intelligence Business Group</span>
+<span class="span">integrating Baidu Wenku and Baidu Drive</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0048">
+<div class="event t-single_source" id="E0018" data-providers="">
 <div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">26Q1 Apollo Go: 3.2M rides; &gt;22M cumulative as of April 2026</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Apollo Go delivered 3.2M fully driverless operational rides in Q1; weekly rides peaked over 350k in March and cumulative public rides exceeded 22M as of April 2026.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">3.2M fully driverless operational rides in Q1</span>
-<span class="span">cumulative public rides &gt;22M as of April 2026</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0049">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">AI Applications revenue flat YoY in 26Q1</span>
+<span class="date">2026-02-26</span>
+<span class="eh">AI Cloud ~RMB30B in 2025; Infra up 34% YoY</span>
 <span class="badge">other</span>
 <span class="badge b-single_source">single source</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Baidu reported AI Applications revenue was flat year over year in 26Q1, indicating uneven monetization across segments.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said AI Cloud revenue reached approximately RMB 30B in 2025, with infrastructure up 34% year over year and subscription-based accelerator infrastructure highlighted as a key driver.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">AI Cloud revenue reached ~RMB 30B in 2025</span>
+<span class="span">AI Cloud Infra up 34% YoY</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">CEO: applications matter more than models; dual-track org</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Baidu emphasized an application‑first approach with a dual‑track organization—advancing the foundation model while tailoring models for business needs, latency, and cost.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">applications matter more than models</span>
+<span class="span">dual-track org</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Open to non-ERNIE models for specific use cases</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Baidu said it will use ERNIE where strongest but is open to other models for particular use cases, reflecting a pragmatic multi‑model approach.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">use ERNIE where strongest</span>
+<span class="span">open to other models for specific use cases</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Management confident AI Cloud will outpace industry in 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu reiterated confidence that AI Cloud growth will outpace the industry in 2026, citing full‑stack differentiation including heterogeneous compute and unified scheduling.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">remain highly confident</span>
+<span class="span">outpace the industry in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">AI-powered revenue mix set to become majority</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Q4 AI-powered revenue was about RMB 11B (43% of General Business), and management said it will become the majority of Baidu General Business in the foreseeable future.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">RMB 11B (43% of General Business)</span>
+<span class="span">will become “the majority of Baidu General Business</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Cumulative AI investment &gt;RMB100B; maintain investment density</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Baidu stated cumulative AI investment exceeded RMB 100B since March 2023 and plans to maintain similar investment density while keeping operating cash flow positive.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">cumulative AI investment exceeded RMB 100 billion</span>
+<span class="span">maintain this level of “investment density.”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Baidu expects operating cash flow to remain positive</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Despite elevated AI spending, management expects operating cash flow to remain positive going forward.</p>
 <details>
 <summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">AI Applications revenue was flat YoY</span>
+<div class="ev-src">filings[1]</div>
+<span class="span">expects operating cash flow to remain positive going forward</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0050">
+<div class="event t-single_source" id="E0025" data-providers="">
 <div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">AI Cloud to benefit from shift from training to inference</span>
+<span class="date">2026-02-26</span>
+<span class="eh">Funding mix: leases and sub-2% bank borrowings to fund AI</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Baidu outlined its AI funding mix including operating/finance leases and low-cost bank borrowings, with some facilities carrying interest rates below 2%.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">operating/finance leases and low-cost bank borrowings</span>
+<span class="span">interest rates below 2%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Simplified agent deployment; accelerator infra key growth driver</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted simplified agent deployment tooling on Baidu AI Cloud and reiterated subscription-based AI accelerator infrastructure as the primary growth driver.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">simplified agent deployment tooling for enterprises</span>
+<span class="span">subscription-based AI accelerator infra as primary growth driver</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">AI Cloud expected to grow faster than industry in 2026</span>
 <span class="badge">other</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management expects AI Cloud to benefit as workloads shift from training to inference, planning continued capacity additions and efficiency gains.</p>
+<p class="narr">Baidu reiterated that AI Cloud is expected to grow faster than the industry in 2026, led by accelerator infrastructure and full‑stack differentiation.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">shift from training to inference</span>
-<span class="span">capacity additions and efficiency gains</span>
+<div class="ev-src">filings[1]</div>
+<span class="span">grow faster than the industry in 2026</span>
+<span class="span">full‑stack differentiation</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0051">
+<div class="event t-single_source" id="E0028" data-providers="">
 <div class="ev-top">
-<span class="date">2026-06-21</span>
-<span class="eh">TechCrunch: Apollo Go edges Waymo in real-time robotaxi ranking</span>
-<span class="badge">customer_adoption</span>
+<span class="date">2026-02-26</span>
+<span class="eh">US$5B buyback to be executed regularly and transparently</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Baidu said the new US$5B share repurchase program will be executed regularly in a disciplined and transparent manner; first‑ever dividend policy aims to broaden the investor base.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">a new US$5B share repurchase program</span>
+<span class="span">“in a very disciplined and transparent manner”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Apollo Go targets UE breakeven in more cities in 2026</span>
+<span class="badge">other</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">TechCrunch highlighted AUTNMY AI’s Road to Autonomy Index, noting Baidu’s Apollo Go narrowly led the robotaxi ranking ahead of Waymo as of that update, signaling strong competitive position in AV.</p>
-<p class="cav">⚠ Index updates frequently; ranking may vary over time.</p>
+<p class="narr">Management said Apollo Go aims to achieve unit‑economics breakeven in more cities in 2026 and remains flexible on potential value‑unlock options.</p>
 <details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[0]</div>
-<span class="span">Road to Autonomy Index</span>
-<span class="span">Baidu’s Apollo Go narrowly led the robotaxi ranking ahead of Waymo</span>
-<span class="span">AUTNMY AI</span>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Apollo Go aims to achieve UE breakeven in more cities in 2026</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0052">
+<div class="event t-single_source" id="E0010" data-providers="">
 <div class="ev-top">
-<span class="date">2026-06-09</span>
-<span class="eh">U.S. DoD adds Baidu to Section 1260H Chinese Military Companies list</span>
-<span class="badge">regulatory</span>
+<span class="date">2026-01-02</span>
+<span class="eh">Kunlunxin files for Hong Kong IPO; BIDU rallies on spin-off value</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Media reported Baidu’s AI chip arm Kunlunxin filed for a Hong Kong IPO, sparking a BIDU ADR rally on perceived value unlock tied to China’s AI chip self‑reliance push.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">Kunlunxin files for Hong Kong IPO</span>
+<span class="span">BIDU +10–12% intraday</span>
+<span class="span">Spin-off/IPO filing</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>2025 multi-model expansion and platform/product traction</h2>
+<div class='range'>2025-02-05 → 2025-11-18</div>
+<div class='psum'>In 2025 Baidu deepened its multi-model strategy. Qianfan onboarded DeepSeek R1/V3 at ultra-low prices and TechNode reported Baidu Search’s integration of DeepSeek alongside ERNIE to enhance results. Baidu research introduced Qianfan‑VL leveraging Llama 3.1/Qwen backbones, and Baidu launched a DeepSeek appliance powered by Kunlunxin P800 for on‑prem deployments.
+The period also included mixed fundamentals: while platform capabilities broadened, Reuters reported revenue pressure and a swing to loss in November 2025, reflecting broader ad softness and restructuring impacts despite AI cloud momentum.</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-18</span>
+<span class="eh">Reuters: revenue down 7% and swing to loss despite AI cloud</span>
+<span class="badge">risk</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">The Pentagon expanded its Section 1260H list to include Baidu, restricting eligibility for U.S. defense contracts and signaling heightened national‑security scrutiny.</p>
+<p class="narr">Reuters reported Baidu’s quarterly revenue fell 7% and the firm swung to a loss amid ad weakness and restructuring charges, even as AI cloud grew. ADRs slipped on the news.</p>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[1]</div>
-<span class="span">adding Alibaba, Baidu and BYD</span>
-<span class="span">Chinese Military Companies list</span>
-<span class="span">Section 1260H</span>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">revenue drops 7 percent and swings to loss</span>
+<span class="span">ADRs slip</span>
+<span class="span">31.17 CNY bn</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0053">
+<div class="event t-web_only_unverified" id="E0008" data-providers="deepseek">
 <div class="ev-top">
-<span class="date">2026-06-24</span>
-<span class="eh">Qianfan emphasizes OpenAI-compatible APIs and multi-model access</span>
+<span class="date">2025-10-15</span>
+<span class="eh">Qianfan supports DeepSeek V4 and launches DeepSeek appliance on Kunlunxin</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
-<p class="narr">Baidu’s Qianfan overview highlights one‑stop agent development with OpenAI‑compatible RESTful APIs and access to leading models including ERNIE and top open‑source models such as DeepSeek.</p>
+<p class="narr">Baidu rolled out full DeepSeek V4 API support on Qianfan and introduced a DeepSeek all‑in‑one appliance with Kunlunxin P800 chips enabling fast on‑prem deployment and high throughput.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · DSK <b>3</b></span> <span class="chchip">product_integration_exposure · DSK <b>4</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">OpenAI-compatible RESTful APIs</span>
-<span class="span">including ERNIE and top open-source models (such as DeepSeek, Minimax, Kimi, GLM)</span>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>DeepSeek-V4-Pro、DeepSeek-V4-Flash</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>千帆DeepSeek一体机</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>昆仑芯P800</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>2437 tokens/s吞吐</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2025-09-19</span>
+<span class="eh">Qianfan-VL multimodal models introduced (Llama 3.1/Qwen backbones)</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Baidu researchers presented Qianfan‑VL, a family of vision‑language models using Llama 3.1 (8B/70B) and Qwen2.5‑3B backbones with domain enhancement techniques to achieve strong performance.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Qianfan-VL</span>
+<span class="span">Llama 3.1 (8B/70B)</span>
+<span class="span">Qwen2.5-3B (3B)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2025-02-17</span>
+<span class="eh">Baidu Search integrates DeepSeek with ERNIE for advanced search</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
+<p class="narr">Baidu announced its Search product fully integrates DeepSeek and ERNIE to enhance results, and developers using AgentBuilder can call DeepSeek to build and optimize agents. Features are available free to users.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · DSK <b>2</b></span> <span class="chchip">product_integration_exposure · DSK <b>4</b></span> <span class="chchip">customer_experience_enhancement · DSK <b>2</b></span> <span class="chchip">provider_specificity · DSK <b>2</b></span> <span class="chchip">multi_model_hedge · DSK <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">integrates DeepSeek and Large Model ERNIE</span>
+<span class="span">will be available for free to users</span>
+<span class="span">developers using AgentBuilder</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2025-02-05</span>
+<span class="eh">Qianfan lists DeepSeek R1/V3 with ultra-low pricing and free trials</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
+<p class="narr">Baidu AI Cloud added DeepSeek-R1 and DeepSeek-V3 to Qianfan with ultra-low pricing and limited-time free access, integrated with Baidu’s safety operators and enterprise observability to support secure, stable app building.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · DSK <b>4</b></span> <span class="chchip">strategic_option_value · DSK <b>3</b></span> <span class="chchip">pricing_pressure_from_provider · DSK <b>3</b></span> <span class="chchip">provider_specificity · DSK <b>2</b></span> <span class="chchip">multi_model_hedge · DSK <b>4</b></span> <span class="chchip">switching_flexibility · DSK <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>全面上架 DeepSeek-R1和 DeepSeek-V3模型</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>价格超低</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>限时免费服务</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>千帆ModelBuilder即可快速体验</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class='phase'>
+<h2>2024 ecosystem setup and early multi-model integrations</h2>
+<div class='range'>2024-01-26 → 2024-06-30</div>
+<div class='psum'>Baidu advanced its AI ecosystem in 2024 by landing high-visibility device-side integration wins in China and broadening model access on its Qianfan platform. Samsung selected Baidu’s ERNIE to power Galaxy AI features in China, underscoring ERNIE’s competitiveness in the domestic market where Google Gemini was not used. Baidu AI Cloud quickly moved to support Meta’s Llama 3 across training and inference in China and published technical work with Intel to accelerate CPU-based LLM inference on Qianfan.
+At the same time, international access constraints for U.S. foundation models intensified. OpenAI tightened enforcement to block API access from mainland China and Hong Kong, reinforcing the strategic importance of Baidu’s domestic full‑stack and multi‑model approach. Collectively, these moves positioned Baidu as a key provider of AI capabilities to Chinese developers and OEMs while building a hedge via broad model compatibility.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-06-25</span>
+<span class="eh">OpenAI moves to block China/HK developer access to APIs</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI tightened enforcement to block access from unsupported regions, including mainland China and Hong Kong, with measures taking effect July 9. OpenAI’s support page reiterated accounts outside supported countries can be blocked, indirectly advantaging domestic providers like Baidu.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7], web_search_findings[8]</div>
+<span class="span">block attempts from “unsupported countries and territories”, including mainland China and Hong Kong</span>
+<span class="span">application programming interfaces (APIs)</span>
+<span class="span">set to go into effect on July 9</span>
+<span class="span">Accessing or offering access to our services outside of the countries and territories listed below may result in your account being blocked</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-06-01</span>
+<span class="eh">Qianfan adds Intel-optimized CPU LLM inference (xFT on Xeon)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Baidu AI Cloud documented CPU-based LLM inference acceleration on Qianfan using Intel-optimized xFT on Xeon Scalable processors, supporting models like Llama 2 and ChatGLM2 for long-context/long-output deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>在千帆大模型平台上实现 CPU 推理加速</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>英特尔® 至强® 可扩展</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>Llama2-7b-chat xFT 支持</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-04-22</span>
+<span class="eh">Qianfan first in China to support Llama 3 full series for train/infer</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Baidu AI Cloud’s Qianfan platform became the first in China to offer full training and inference support for Meta’s Llama 3 (8B/70B), enabling developers to fine-tune and deploy with ModelBuilder and access invite-only testing immediately after Llama 3’s launch.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>3</b></span> <span class="chchip">strategic_option_value · LLA <b>2</b></span> <span class="chchip">provider_specificity · LLA <b>1</b></span> <span class="chchip">multi_model_hedge · LLA <b>3</b></span> <span class="chchip">switching_flexibility · LLA <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>国内首家支持Llama3全系列训练推理</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>Llama 3，包括8B和70B参数的大模型</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>千帆ModelBuilder已上架最新Llama 3系列模型</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-01-26</span>
+<span class="eh">Samsung selects Baidu ERNIE for Galaxy AI in China (not Google Gemini)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Samsung’s Galaxy AI features in China are powered by Baidu’s ERNIE rather than Google’s Gemini, with Baidu stating ERNIE now drives Note Assist capabilities like translation and summarization. This elevates ERNIE’s distribution on leading Android flagships in China.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · GEM <b>0</b></span> <span class="chchip">user_lock_in_relevance · GEM <b>0</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Samsung’s Galaxy AI features won’t use Google Gemini in China</span>
+<span class="span">turned to Baidu</span>
+<span class="span">Ernie’s understanding and generation capabilities</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0050'>E0050</a></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0053'>E0053</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0053'>E0053</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0053'>E0053</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0051'>E0051</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0048'>E0048</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0053'>E0053</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0051'>E0051</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0048'>E0048</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0053'>E0053</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0031'>E0031</a></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0031'>E0031</a></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0052'>E0052</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0053'>E0053</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0053'>E0053</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0053'>E0053</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0</td><td>0</td><td>0</td><td>0.55</td><td>0</td><td>0.95</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0</td><td>0</td><td>-0.15</td><td>0.6</td><td>0</td><td>1</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>-0.5</td><td>-0.1</td><td>0</td><td>-0.4</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.73</td><td>0.775</td><td>0.73</td></tr>
+<tr><td class='k'>NET effective</td><td>0</td><td>0</td><td>-0.171</td><td>0.2602</td><td>0</td><td>0.4763</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What is the timeline and structure (valuation, proceeds use) for the Kunlunxin spin-off and separate listing, and how will Baidu retain control or economic participation?</li>
@@ -979,4 +1031,19 @@ Externally, the U.S. DoD added Baidu to its Section 1260H list, increasing geopo
 <li>Select sources are in Chinese; verbatim spans reflect original language text where applicable.</li>
 <li>Third-party indices (e.g., robotaxi rankings) are dynamic and may change frequently.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Viavi Solutions Inc <span class='sub'>(VIAV US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.441</div>
@@ -72,103 +82,66 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (verified): 4</span>
 <span class='chip'>web-only (unverified): 4</span>
 </div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
-<h2>AI networking context and early content</h2>
-<div class='range'>2025-09-20 → 2026-02-29</div>
-<div class='psum'>VIAVI began publicly framing the AI-driven step-up in data center networking demands, highlighting rapid transitions from 400G to 800G and the nascent move to 1.6T. Company thought-leadership emphasized that network performance has become a dominant bottleneck for large-scale AI training, setting the context for VIAVI’s product focus.
-Concurrently, VIAVI’s security testing portfolio reflected AI-related workloads by including popular AI applications and traffic in its TestCloud content, indicating early product content alignment with generative AI usage and traffic profiles.</div>
-<div class="event t-web_only_verified" id="E0001">
+<h2>Post-earnings solution packaging and recognition</h2>
+<div class='range'>2026-05-26 → 2026-06-24</div>
+<div class='psum'>After the quarter, VIAVI consolidated messaging around AI data center validation. The AI Data Center Test Solution datasheet detailed LLM model emulation, RoCEv2 configurations, and high connection density parameters aligned with modern AI fabrics. The broader AI Data Center Networking Test solution emphasized wire-rate AI fabric emulation across A1/B3/D2 platforms and OpenAI-compatible API coverage.
+VIAVI also received external recognition at Interop Tokyo 2026, winning Best of Show awards alongside partner TOYO Corporation. The MCP Server Framework for Custom AI Workflows exposes test capabilities as standardized tools for AI agents, enabling natural-language-driven test execution and automation across VIAVI platforms.</div>
+<div class="event t-web_only_verified" id="E0024" data-providers="openai_chatgpt meta_llama deepseek">
 <div class="ev-top">
-<span class="date">2025-09-20</span>
-<span class="eh">Blog: AI model scale pushes networks from 800G toward 1.6T</span>
-<span class="badge">other</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">VIAVI’s Perspectives blog underscored how LLM scale and architectures like MoE are stressing data center networks, accelerating the move from 400G to 800G and 1.6T. This frames the company’s focus on high-speed Ethernet validation for AI training fabrics.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span">LLMs like GPT-5, LLAMA-4 or Gemini 2.5</span>
-<span class="span">Mixture-of-Experts (MoE) architecture</span>
-<span class="span">racing from 400G speeds to 800G, and now to 1.6T</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0002">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">CyberFlood Security Testing includes ChatGPT app traffic in TestCloud</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">VIAVI’s CyberFlood Security Testing datasheet listed ChatGPT among covered applications and highlighted ready-to-run mixes via TestCloud, reflecting AI-era application coverage in security/performance testing.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[7]</div>
-<span class="span">Pre-defined mixes: Pre-configured</span>
-<span class="span">tens of thousands of ready-to-run</span>
-<span class="span">Examples of apps include ChatGPT</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Pre-earnings AI product ramp and validation narratives</h2>
-<div class='range'>2026-03-01 → 2026-04-28</div>
-<div class='psum'>Ahead of the April quarter print, VIAVI sharpened its AI data center testing portfolio. The TestCenter D2 1.6T appliance targeted validation of AI fabrics by emulating GPU behavior and realistic LLM communication patterns while scaling to hyperscale deployments, directly addressing the cost and time drag of GPU-based validation.
-Technical collateral reinforced this thrust. A white paper argued the network is a dominant AI training bottleneck and called out the industry shift to 800G/1.6T Ethernet, while a new CyberFlood AI Inference Testing datasheet introduced OpenAI-compatible client emulation and multi-model endpoints, signaling engagement with the LLM ecosystem via compatibility and workload emulation.</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2026-03-12</span>
-<span class="eh">VIAVI TestCenter D2 1.6T targets AI fabric validation and GPU emulation</span>
+<span class="date">2026-06-24</span>
+<span class="eh">AI Data Center Networking Test: wire‑rate AI fabric and LLM traffic emulation</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span> <span class="prov">deepseek</span></div>
-<p class="narr">VIAVI introduced the D2 1.6T appliance to emulate large-scale AI training traffic, claiming up to 6.4 Tbps, emulation of up to 128 GPUs/NICs per port, and realistic LLM models including ChatGPT, Llama, and DeepSeek. This positions VIAVI as a key validation tool provider for hyperscale AI networks.</p>
+<p class="narr">VIAVI outlined an AI networking test portfolio spanning A1 400G, B3 800G and D2 1.6T, including AI fabric emulation, a CCL algorithm library, LLM traffic emulation (ChatGPT, Llama, DeepSeek), and OpenAI-compatible API support.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b> LLA <b>2</b> DSK <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>1</b> LLA <b>1</b> DSK <b>1</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b> LLA <b>4</b> DSK <b>4</b></span> <span class="chchip">switching_flexibility · OAI <b>4</b> LLA <b>3</b> DSK <b>3</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">validates AI infrastructure without the cost of GPU server farms</span>
-<span class="span">up to 6.4Tbps of realistic AI traffic</span>
-<span class="span">emulates up to 128 GPUs and NICs per port</span>
-<span class="span">ChatGPT, Llama, DeepSeek</span>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">A1 400G, B3 800G and D2 1.6T</span>
+<span class="span">LLM traffic emulation for ChatGPT, Llama, DeepSeek</span>
+<span class="span">OpenAI-compatible API support</span>
+<span class="span">AI fabric emulation</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0004">
+<div class="event t-web_only_verified" id="E0023" data-providers="">
 <div class="ev-top">
-<span class="date">2026-03-26</span>
-<span class="eh">White paper: network is the dominant AI training bottleneck; 800G/1.6T push</span>
+<span class="date">2026-06-11</span>
+<span class="eh">Interop Tokyo 2026 awards: MCP AI workflows and D2 1.6T recognized</span>
 <span class="badge">other</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">VIAVI’s white paper asserted the network has become the dominant bottleneck in modern AI infrastructures, with data centers rapidly moving to 800G and 1.6T Ethernet interconnects. This supports the company’s emphasis on high-speed Ethernet test solutions for AI workloads.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">VIAVI won two Best of Show awards with partner TOYO Corporation. The MCP Server Framework for Custom AI Workflows enables natural-language-driven test execution and AI-agent-based automation across TestCenter, CyberFlood, and TeraVM.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">50% of total training time</span>
-<span class="span">the dominant bottleneck in modern AI infrastructures</span>
-<span class="span">800G and 1.6T Ethernet interconnects</span>
-<span class="span">OpenAI GPT-4 (1.8T)</span>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Best of Show Awards</span>
+<span class="span">in collaboration with partner TOYO Corporation</span>
+<span class="span">MCP Server Framework for Custom AI Workflows</span>
+<span class="span">natural-language-driven test execution</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0005">
+<div class="event t-web_only_unverified" id="E0022" data-providers="openai_chatgpt meta_llama deepseek">
 <div class="ev-top">
-<span class="date">2026-04-26</span>
-<span class="eh">CyberFlood AI Inference Testing adds OpenAI-compatible LLM client emulation</span>
+<span class="date">2026-05-26</span>
+<span class="eh">AI Data Center Test Solution datasheet: LLM emulation and RoCEv2 scale</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">VIAVI published a CyberFlood AI Inference Testing datasheet describing scalable client emulation for LLM APIs with OpenAI and OpenAI-compatible mode, plus support for Ollama, enabling multi-endpoint and multi-model test scenarios.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span> <span class="prov">deepseek</span></div>
+<p class="narr">VIAVI documented AI data center testing capabilities including LLM model emulation for ChatGPT, Llama, and DeepSeek, and RoCEv2 features with up to 16K Queue Pairs per port.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b> LLA <b>2</b> DSK <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>1</b> LLA <b>1</b> DSK <b>1</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b> LLA <b>4</b> DSK <b>4</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">support for OpenAI</span>
-<span class="span">OpenAI compatible mode</span>
-<span class="span">Ollama</span>
-<span class="span">stateful session modeling</span>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">LLM Model Emulation • Chat GPT, llama, DeepSeek</span>
+<span class="span">RoCEv2 profile applied per port</span>
+<span class="span">Up to 16K Queue Pairs per port</span>
 </details>
 </div>
 </div>
@@ -177,7 +150,7 @@ Technical collateral reinforced this thrust. A white paper argued the network is
 <div class='range'>2026-04-29 → 2026-05-25</div>
 <div class='psum'>On the FY26 Q3 call, management emphasized AI data center momentum: hyperscalers led the customer mix, 800G remained the high-volume driver with 1.6T ramping in labs, and data center revenue mix in NSE was trending toward the high-40s with potential to approach 50% near term. This supports an adoption wave benefiting VIAVI’s high-speed Ethernet and AI-centric test portfolio.
 At the same time, leadership set clear guardrails. Visibility was confined to roughly three quarters and they refrained from guiding beyond year-end. They did not disclose backlog/RPO and reiterated in-quarter book-and-ship dynamics, while noting demand concentration to data center and aerospace &amp; defense. Spirent revenue was framed with a June-quarter guide near $48M and a calendar-year run-rate around $200M, contextualizing the contribution.</div>
-<div class="event t-single_source" id="E0006">
+<div class="event t-single_source" id="E0006" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Data center and A&amp;D called out as key demand drivers</span>
@@ -186,6 +159,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management highlighted stronger-than-expected demand from the data center ecosystem and aerospace &amp; defense as the primary growth engines in the quarter.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -195,7 +169,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">key drivers</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0007">
+<div class="event t-single_source" id="E0007" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">NSE data center mix inching to high-40s; could approach 50%</span>
@@ -212,7 +186,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">never seen so much demand</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0008">
+<div class="event t-single_source" id="E0008" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Hyperscalers lead customer mix for data center and test</span>
@@ -221,6 +195,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Customer mix was led by hyperscalers, followed by module/system makers and silicon vendors, underscoring VIAVI’s alignment with top AI data center operators.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -229,7 +204,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">mix varies by quarter</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0009">
+<div class="event t-single_source" id="E0009" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">800G remains high-volume; 1.6T ramping in labs and early production</span>
@@ -238,6 +213,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management reiterated that 800G is the current high-volume driver while 1.6T is progressing from labs into early production at module vendors.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -246,7 +222,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">early production at module vendors</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0010">
+<div class="event t-single_source" id="E0010" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Spirent June-quarter guide around $48M</span>
@@ -264,7 +240,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">45%/55% 1H/2H split</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0011">
+<div class="event t-single_source" id="E0011" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Spirent revenue framework: ~$200M calendar-year run-rate</span>
@@ -282,7 +258,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">~45%/55% 1H/2H split</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0012">
+<div class="event t-single_source" id="E0012" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Test seen as bottleneck in co-packaged optics; field demand surging</span>
@@ -299,7 +275,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">co‑packaged optics</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0013">
+<div class="event t-single_source" id="E0013" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Visibility confined to roughly three quarters despite CY26 strength</span>
@@ -315,7 +291,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">visibility to roughly three quarters</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0014">
+<div class="event t-single_source" id="E0014" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Guardrail: no guidance beyond end of calendar year</span>
@@ -332,7 +308,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">foreseeable future</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0015">
+<div class="event t-single_source" id="E0015" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Data center share of NSE expected to approach ~50% near term</span>
@@ -341,6 +317,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management expects NSE data center mix to approach ~50% in the near term, reinforcing the magnitude of AI data center testing demand.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -349,7 +326,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">roughly the next three quarters</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0016">
+<div class="event t-single_source" id="E0016" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Supply chain stance: early silicon access; modest inventory build (memory)</span>
@@ -367,7 +344,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">notably memory</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0017">
+<div class="event t-single_source" id="E0017" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Backlog/RPO not disclosed; visibility constrained</span>
@@ -376,6 +353,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
 <p class="narr">VIAVI did not disclose quantitative backlog, bookings, or RPO, citing variability, which limits clarity on forward commitments.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -384,7 +362,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">Q3 FY26</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0018">
+<div class="event t-single_source" id="E0018" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Near-term visibility limited; in-quarter book-and-ship dynamics</span>
@@ -393,6 +371,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
 <p class="narr">Management reiterated near-term demand visibility is limited, with product-mix variability and in-quarter book-and-ship dynamics; no formal backlog figure was provided.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -401,7 +380,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">no formal backlog figure</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0019">
+<div class="event t-single_source" id="E0019" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Risk: growth concentrated in data center and A&amp;D</span>
@@ -418,7 +397,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">aerospace &amp; defense end markets</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0020">
+<div class="event t-single_source" id="E0020" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Building first integrated 3.2 Tbps Ethernet test platform; cross-sell at hyperscalers</span>
@@ -427,6 +406,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">VIAVI reported progress toward an integrated 3.2 Tbps Ethernet test platform and active cross-selling into installed bases on both sides of its portfolio.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -435,7 +415,7 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 <span class="span">installed bases</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0021">
+<div class="event t-single_source" id="E0021" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-29</span>
 <span class="eh">Wireless weakness persists; recovery tied to AI RAN and NTN</span>
@@ -454,88 +434,150 @@ At the same time, leadership set clear guardrails. Visibility was confined to ro
 </div>
 </div>
 <div class='phase'>
-<h2>Post-earnings solution packaging and recognition</h2>
-<div class='range'>2026-05-26 → 2026-06-24</div>
-<div class='psum'>After the quarter, VIAVI consolidated messaging around AI data center validation. The AI Data Center Test Solution datasheet detailed LLM model emulation, RoCEv2 configurations, and high connection density parameters aligned with modern AI fabrics. The broader AI Data Center Networking Test solution emphasized wire-rate AI fabric emulation across A1/B3/D2 platforms and OpenAI-compatible API coverage.
-VIAVI also received external recognition at Interop Tokyo 2026, winning Best of Show awards alongside partner TOYO Corporation. The MCP Server Framework for Custom AI Workflows exposes test capabilities as standardized tools for AI agents, enabling natural-language-driven test execution and automation across VIAVI platforms.</div>
-<div class="event t-web_only_unverified" id="E0022">
+<h2>Pre-earnings AI product ramp and validation narratives</h2>
+<div class='range'>2026-03-01 → 2026-04-28</div>
+<div class='psum'>Ahead of the April quarter print, VIAVI sharpened its AI data center testing portfolio. The TestCenter D2 1.6T appliance targeted validation of AI fabrics by emulating GPU behavior and realistic LLM communication patterns while scaling to hyperscale deployments, directly addressing the cost and time drag of GPU-based validation.
+Technical collateral reinforced this thrust. A white paper argued the network is a dominant AI training bottleneck and called out the industry shift to 800G/1.6T Ethernet, while a new CyberFlood AI Inference Testing datasheet introduced OpenAI-compatible client emulation and multi-model endpoints, signaling engagement with the LLM ecosystem via compatibility and workload emulation.</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="openai_chatgpt">
 <div class="ev-top">
-<span class="date">2026-05-26</span>
-<span class="eh">AI Data Center Test Solution datasheet: LLM emulation and RoCEv2 scale</span>
+<span class="date">2026-04-26</span>
+<span class="eh">CyberFlood AI Inference Testing adds OpenAI-compatible LLM client emulation</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span> <span class="prov">deepseek</span></div>
-<p class="narr">VIAVI documented AI data center testing capabilities including LLM model emulation for ChatGPT, Llama, and DeepSeek, and RoCEv2 features with up to 16K Queue Pairs per port.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">LLM Model Emulation • Chat GPT, llama, DeepSeek</span>
-<span class="span">RoCEv2 profile applied per port</span>
-<span class="span">Up to 16K Queue Pairs per port</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0023">
-<div class="ev-top">
-<span class="date">2026-06-11</span>
-<span class="eh">Interop Tokyo 2026 awards: MCP AI workflows and D2 1.6T recognized</span>
-<span class="badge">other</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">VIAVI won two Best of Show awards with partner TOYO Corporation. The MCP Server Framework for Custom AI Workflows enables natural-language-driven test execution and AI-agent-based automation across TestCenter, CyberFlood, and TeraVM.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">VIAVI published a CyberFlood AI Inference Testing datasheet describing scalable client emulation for LLM APIs with OpenAI and OpenAI-compatible mode, plus support for Ollama, enabling multi-endpoint and multi-model test scenarios.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>1</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b></span> <span class="chchip">switching_flexibility · OAI <b>4</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">Best of Show Awards</span>
-<span class="span">in collaboration with partner TOYO Corporation</span>
-<span class="span">MCP Server Framework for Custom AI Workflows</span>
-<span class="span">natural-language-driven test execution</span>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">support for OpenAI</span>
+<span class="span">OpenAI compatible mode</span>
+<span class="span">Ollama</span>
+<span class="span">stateful session modeling</span>
 </details>
 </div>
-<div class="event t-web_only_verified" id="E0024">
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
 <div class="ev-top">
-<span class="date">2026-06-24</span>
-<span class="eh">AI Data Center Networking Test: wire‑rate AI fabric and LLM traffic emulation</span>
+<span class="date">2026-03-26</span>
+<span class="eh">White paper: network is the dominant AI training bottleneck; 800G/1.6T push</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">VIAVI’s white paper asserted the network has become the dominant bottleneck in modern AI infrastructures, with data centers rapidly moving to 800G and 1.6T Ethernet interconnects. This supports the company’s emphasis on high-speed Ethernet test solutions for AI workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">50% of total training time</span>
+<span class="span">the dominant bottleneck in modern AI infrastructures</span>
+<span class="span">800G and 1.6T Ethernet interconnects</span>
+<span class="span">OpenAI GPT-4 (1.8T)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt meta_llama deepseek">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">VIAVI TestCenter D2 1.6T targets AI fabric validation and GPU emulation</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span> <span class="prov">deepseek</span></div>
-<p class="narr">VIAVI outlined an AI networking test portfolio spanning A1 400G, B3 800G and D2 1.6T, including AI fabric emulation, a CCL algorithm library, LLM traffic emulation (ChatGPT, Llama, DeepSeek), and OpenAI-compatible API support.</p>
+<p class="narr">VIAVI introduced the D2 1.6T appliance to emulate large-scale AI training traffic, claiming up to 6.4 Tbps, emulation of up to 128 GPUs/NICs per port, and realistic LLM models including ChatGPT, Llama, and DeepSeek. This positions VIAVI as a key validation tool provider for hyperscale AI networks.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · OAI <b>0</b> LLA <b>0</b> DSK <b>0</b></span> <span class="chchip">product_integration_exposure · OAI <b>2</b> LLA <b>2</b> DSK <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>1</b> LLA <b>1</b> DSK <b>1</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b> LLA <b>4</b> DSK <b>4</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">A1 400G, B3 800G and D2 1.6T</span>
-<span class="span">LLM traffic emulation for ChatGPT, Llama, DeepSeek</span>
-<span class="span">OpenAI-compatible API support</span>
-<span class="span">AI fabric emulation</span>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">validates AI infrastructure without the cost of GPU server farms</span>
+<span class="span">up to 6.4Tbps of realistic AI traffic</span>
+<span class="span">emulates up to 128 GPUs and NICs per port</span>
+<span class="span">ChatGPT, Llama, DeepSeek</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class='phase'>
+<h2>AI networking context and early content</h2>
+<div class='range'>2025-09-20 → 2026-02-29</div>
+<div class='psum'>VIAVI began publicly framing the AI-driven step-up in data center networking demands, highlighting rapid transitions from 400G to 800G and the nascent move to 1.6T. Company thought-leadership emphasized that network performance has become a dominant bottleneck for large-scale AI training, setting the context for VIAVI’s product focus.
+Concurrently, VIAVI’s security testing portfolio reflected AI-related workloads by including popular AI applications and traffic in its TestCloud content, indicating early product content alignment with generative AI usage and traffic profiles.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">CyberFlood Security Testing includes ChatGPT app traffic in TestCloud</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">VIAVI’s CyberFlood Security Testing datasheet listed ChatGPT among covered applications and highlighted ready-to-run mixes via TestCloud, reflecting AI-era application coverage in security/performance testing.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>1</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Pre-defined mixes: Pre-configured</span>
+<span class="span">tens of thousands of ready-to-run</span>
+<span class="span">Examples of apps include ChatGPT</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2025-09-20</span>
+<span class="eh">Blog: AI model scale pushes networks from 800G toward 1.6T</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">VIAVI’s Perspectives blog underscored how LLM scale and architectures like MoE are stressing data center networks, accelerating the move from 400G to 800G and 1.6T. This frames the company’s focus on high-speed Ethernet validation for AI training fabrics.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">LLMs like GPT-5, LLAMA-4 or Gemini 2.5</span>
+<span class="span">Mixture-of-Experts (MoE) architecture</span>
+<span class="span">racing from 400G speeds to 800G, and now to 1.6T</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0023'>E0023</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0023'>E0023</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.3</td><td>0</td><td>0</td><td>0.3</td><td>0</td><td>0.3</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.745</td><td>0.775</td><td>0.775</td><td>0.76</td><td>0.775</td><td>0.76</td></tr>
+<tr><td class='k'>NET effective</td><td>0.088</td><td>0</td><td>0</td><td>0.0836</td><td>0</td><td>0.0836</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>Are VIAVI’s LLM-related capabilities (e.g., OpenAI-compatible APIs, ChatGPT/Llama/DeepSeek emulation) tied to any formal commercial partnerships with OpenAI, Meta, or DeepSeek, or are they purely compatibility/emulation features?</li>
@@ -549,4 +591,19 @@ VIAVI also received external recognition at Interop Tokyo 2026, winning Best of 
 <li>The earnings materials did not disclose backlog/book-to-bill/RPO, constraining forward-visibility assessment.</li>
 <li>Provider references (ChatGPT, Llama, DeepSeek) largely denote emulation/compatibility in test workloads rather than formal commercial relationships with those LLM providers.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

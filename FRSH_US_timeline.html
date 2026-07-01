@@ -1,0 +1,489 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>FRSH US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Freshworks Inc <span class='sub'>(FRSH US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.402</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>17 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 11</span>
+<span class='chip'>web-only (verified): 10</span>
+<span class='chip'>single source: 5</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Platformization: BYO agents via MCP and AI monetization focus</h2>
+<div class='range'>2026-05-05 → 2026-05-14</div>
+<div class='psum'>In Q1’26, management previewed an AI Agent Studio with preconfigured workflows and an MCP gateway to allow customers to bring their own agents (e.g., Claude, ChatGPT) to interact with Freshworks data—intended for future monetization. They emphasized intensified AI investment, Copilot monetization, and continued CX replatforming to enable AI capabilities, while noting enterprise customers’ demand for AI flexibility.
+Freshworks’ 2026 materials also highlighted an internal pluggable, multi-model architecture (OpenAI, Claude, Mistral) and shipped early-access MCP integrations in Freshdesk that support tools such as Claude Code, Cursor, and Microsoft Copilot Studio.</div>
+<div class="event t-web_only_verified" id="E0017" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Freshdesk EAP: MCP integration supports Claude Code, Cursor, and Copilot Studio</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Freshworks published EAP documentation for MCP integration in Freshdesk, enabling AI tools to securely connect and perform tasks via public APIs, with supported integrations including Claude Code, Claude Desktop, Cursor, and Microsoft Copilot Studio.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">Freshdesk</span>
+<span class="span">Claude Code</span>
+<span class="span">Cursor</span>
+<span class="span">Microsoft Copilot Studio</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0016" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Freshworks details pluggable multi-model AI architecture (OpenAI, Claude, Mistral)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">A company blog described engineers’ daily use of tools like Cursor and an internal pluggable, multi-model architecture to swap between OpenAI, Claude, Mistral, and others based on task, performance, and cost.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Claude and tools like Cursor</span>
+<span class="span">pluggable, multi-model architecture</span>
+<span class="span">swap between OpenAI, Claude, Mistral</span>
+<span class="span">Not a single model bet</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1’26: Intensified AI investment; Copilot monetization; Device42 native in Freshservice</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Freshworks signaled increased AI investment and Copilot monetization focus within EX, and noted Device42 discovery/mapping integrated natively into Freshservice.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">intensifying investment behind EX (Freshservice-led) and AI</span>
+<span class="span">AI Copilot monetization</span>
+<span class="span">Device42 discovery/mapping</span>
+<span class="span">integrated natively into Freshservice</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1’26: Preview of AI Agent Studio and MCP gateway (BYO Claude/ChatGPT)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Management previewed AI Agent Studio with 20 preconfigured workflows and an MCP gateway enabling customers to bring their own agents (e.g., Claude, ChatGPT) to interact with Freshworks data via MCP calls, with monetization planned.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI Agent Studio</span>
+<span class="span">MCP gateway</span>
+<span class="span">Claude, ChatGPT</span>
+<span class="span">MCP calls</span>
+<span class="span">monetize over time</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1’26: Plan to monetize third-party AI usage via MCP</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Freshworks plans to monetize third‑party AI usage via its MCP gateway over time, allowing BYO agents to read/write Freshworks data through MCP calls.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">monetize third‑party AI usage</span>
+<span class="span">MCP gateway</span>
+<span class="span">read/write Freshworks data</span>
+<span class="span">MCP calls</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1’26: Enterprise customers demand AI flexibility and scale</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management observed customers seeking enterprise-grade scale with AI flexibility, supported by vectors like Advanced ITAM and FireHydrant integrations to move upmarket.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">enterprise-grade scale</span>
+<span class="span">AI flexibility</span>
+<span class="span">Advanced ITAM</span>
+<span class="span">FireHydrant</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1’26: CX replatforming to enable future AI capabilities</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Freshworks is maintaining conservative low single-digit CX growth while replatforming to enable efficiency and future AI capabilities, prioritizing profitability and unit economics.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">conservative low single-digit CX growth</span>
+<span class="span">replatforming to enable future efficiency and AI capabilities</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scale-out via AWS distribution and multi-model guardrails</h2>
+<div class='range'>2024-01-29 → 2025-12-17</div>
+<div class='psum'>Freshworks signed a multi-year Strategic Collaboration Agreement with AWS to expand availability of its AI-powered SaaS in AWS Marketplace, citing 500+ shared customers and deeper integrations with AWS services. Through 2025, the company emphasized a multi-model architecture, using Microsoft’s OpenAI and Anthropic’s Claude and exploring Mistral, alongside responsible AI guardrails.
+Support and legal materials clarified model choices and data protections: Freddy AI Insights is powered by enterprise-grade Azure OpenAI models, while Supplemental Terms prohibit third-party model training on customer data and limit retention to 30 days, with AI services toggleable by customers.</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-12-17</span>
+<span class="eh">Supplemental Terms: no third-party model training on customer data; 30-day cap</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Freshworks’ Supplemental Terms prohibit third-party AI model providers from retaining customer data beyond 30 days, and bar using customer data to train models (including Microsoft Azure OpenAI). Customers can disable AI services at any time.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">contractually prohibited from logging or storing Customer Data for more than 30 days</span>
+<span class="span">will not use or permit Customer Data to train third party hosted generative AI models</span>
+<span class="span">including Microsoft Azure Open AI</span>
+<span class="span">turn off AI Services</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-06-11</span>
+<span class="eh">Freddy AI Insights powered by enterprise-grade Azure OpenAI models</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Freshworks’ FAQ states that Freddy AI’s generative capabilities for Insights are powered by enterprise-grade Azure OpenAI models alongside discriminative models and orchestration tools for tailored outputs.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">enterprise-grade Azure OpenAI models</span>
+<span class="span">Freddy AI Insights</span>
+<span class="span">agentic architecture combines large language models (LLMs)</span>
+<span class="span">orchestration tools</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-06-11</span>
+<span class="eh">Model choice constraints for Freddy AI Insights raise flexibility tradeoffs</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">The Freddy AI Insights FAQ explains that it does not integrate with arbitrary NLUs/GPTs and instead deploys only evaluated models meeting strict standards, implying reduced choice for customers preferring other models.</p>
+<div class="ev-ch">channels: <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Why can&#x27;t Freddy AI Insights integrate with NLUs / GPT models of my choice?</span>
+<span class="span">prioritizes AI model performance, security, and enterprise readiness</span>
+<span class="span">deploy only those that meet strict standards</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-04-04</span>
+<span class="eh">Freshworks highlights multi-model architecture using OpenAI and Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Freshworks described an architecture to swap multiple models, citing use of Microsoft’s OpenAI and Anthropic’s Claude and exploration of Mistral, with guardrails for data residency, security, and responsible AI.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">swap in and swap out multiple models</span>
+<span class="span">Microsoft’s OpenAI and Anthropic’s Claude</span>
+<span class="span">Mistral</span>
+<span class="span">guardrails</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-01-29</span>
+<span class="eh">Freshworks signs multi-year AWS SCA; products to AWS Marketplace</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Freshworks executed a multi-year Strategic Collaboration Agreement with AWS to broaden reach via AWS Marketplace and co-develop AI-powered SaaS solutions, noting 500+ shared customers using AWS services.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Strategic Collaboration Agreement (SCA)</span>
+<span class="span">multi-year</span>
+<span class="span">AWS Marketplace</span>
+<span class="span">over 500 shared customers</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Shift to generative AI with OpenAI and Azure OpenAI</h2>
+<div class='range'>2023-02-06 → 2023-06-21</div>
+<div class='psum'>Freshworks accelerated into generative AI in 2023. In February, it highlighted conversational AI across Meta’s messaging platforms. In March, it announced GPT-based enhancements to its Freddy assistant using OpenAI’s ChatGPT and underlying LLMs. On the May 2023 earnings call, management emphasized generative AI investments across CX, IT, sales, and marketing.
+By June 2023, Freshworks selected Microsoft Azure OpenAI Service to power multiple Freddy AI Copilot and Agent use cases, citing enterprise security and compliance and leveraging GPT3.5‑turbo, GPT‑4, and text‑davinci‑003.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-06-21</span>
+<span class="eh">Freshworks standardizes on Azure OpenAI Service for key Freddy use cases</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Freshworks chose Microsoft Azure OpenAI Service to power Freddy AI Copilot and Agent scenarios with enterprise-grade security, using GPT3.5‑turbo, GPT‑4, and text‑davinci‑003 for features like summarization and tone adjustments.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Microsoft Azure OpenAI Service</span>
+<span class="span">GPT3.5-turbo and GPT4 models</span>
+<span class="span">text-davinci-003</span>
+<span class="span">Freddy AI Copilot</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-05-02</span>
+<span class="eh">Management prioritizes generative AI across CX, IT, sales, and marketing</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">On the Q1’23 earnings call, Freshworks reiterated investment in generative AI, noting existing OpenAI-based ChatGPT features and previewing June product launch announcements spanning customer and employee experience.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">OpenAI-based ChatGPT</span>
+<span class="span">generative AI</span>
+<span class="span">better customer experiences and better employee experiences</span>
+<span class="span">June product launch event</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-03-22</span>
+<span class="eh">GPT-based Freddy enhancements using OpenAI’s ChatGPT</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Freshworks embedded new GPT-based conversational enhancements into Freddy, leveraging OpenAI’s ChatGPT and LLMs to improve productivity for support, sales, and marketing teams.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">GPT-based conversational enhancements</span>
+<span class="span">OpenAI’s ChatGPT</span>
+<span class="span">large language models</span>
+<span class="span">Freddy</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2023-02-06</span>
+<span class="eh">Freshworks expands conversational AI across Meta messaging channels</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Freshworks announced integrations that let teams use conversational AI bots on WhatsApp, Instagram Messaging, and Facebook Messenger, improving personalized engagement at scale.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Freshworks and meta partner</span>
+<span class="span">WhatsApp, Instagram Messaging, and Facebook Messenger</span>
+<span class="span">conversational AI bots</span>
+<span class="span">make customer and prospect engagement easy</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational AI and early bot integrations</h2>
+<div class='range'>2018-10-12 → 2022-12-31</div>
+<div class='psum'>Freshworks’ AI journey began with the launch of its in-house AI engine, Freddy, positioned as an “Omnibot” to enhance customer engagement across sales, support, and marketing. Early capabilities incorporated Google AI technology via Google Assistant to enable conversational and voice interactions.
+This period established Freshworks’ AI brand (Freddy) and signaled a platform approach to embedding AI across its product suite, setting the stage for subsequent generative AI integrations.</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2018-10-12</span>
+<span class="eh">Freshworks launches Freddy AI with Google Assistant integration</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Freshworks introduced “Freddy,” an AI engine to enhance customer engagement across its CX/CRM products, integrating Google AI technology including Google Assistant for conversational and voice interactions.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Freshworks Launches “Freddy”</span>
+<span class="span">Integration with Google AI technology</span>
+<span class="span">Google Assistant</span>
+<span class="span">Freddy the Omnibot</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the monetization model and expected ARPU uplift for MCP-mediated third-party AI usage and AI Agent Studio workflows?</li>
+<li>What share of Freddy AI usage currently runs on OpenAI (Azure OpenAI) versus Anthropic Claude and others, and how has that mix trended?</li>
+<li>Are there any minimum spend or committed-use obligations in Freshworks’ agreements with Azure OpenAI or Anthropic?</li>
+<li>When will AI Agent Studio and the MCP gateway move from preview/EAP to GA across Freshdesk, Freshservice, and other products?</li>
+<li>How is AWS SCA performance measured (Marketplace GMV, co-sell pipeline) and what portion of deals include AI SKUs?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Most sources are Freshworks corporate materials (press, IR, support, blog) with limited third-party corroboration; financial magnitudes for AI features were not disclosed.</li>
+<li>Provider references to Microsoft Azure OpenAI imply OpenAI LLM usage via Azure; specific commercial terms, volumes, and costs are not provided.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

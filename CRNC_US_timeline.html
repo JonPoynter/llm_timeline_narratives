@@ -1,0 +1,686 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>CRNC US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Cerence Inc <span class='sub'>(CRNC US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.416</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>28 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 17</span>
+<span class='chip'>web-only (unverified): 6</span>
+<span class='chip'>web-only (verified): 5</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>FY26 Q2: LLM-driven connected growth, xUI traction, backlog and legal actions</h2>
+<div class='range'>2026-05-07 → 2026-05-07</div>
+<div class='psum'>In its Q2 FY26 release, Cerence cited momentum from xUI-powered vehicles entering production and broader adoption of Audio AI and generative AI across OEMs. BYD became the first OEM shipping xUI-equipped vehicles, with additional OEM SOPs anticipated in June–July 2026. Management reported five wins out of six xUI bids to date and targeted potentially six out of seven by quarter-end; xUI PPUs run above current rates with revenue mix shifting more into FY27.
+Connected services remained the near-term growth engine, aided by LLM-based features such as Chat Pro. The company reported TTM Adjusted Total Billings of $238.8M, RPO of $235.6M, a five-year backlog update of $971.3M, and deferred revenue of $198.6M. It guided to ~$10M in Q3 fixed-license signings and ~$23M fixed-license revenue for FY26, with a five-year backlog target around ~$1B and connected services revenue of $15.31M (+21% y/y). Cerence also highlighted ongoing IP matters (Apple, Sony, TCL, Amazon) and filed an ITC complaint against Amazon, while generating $13.63M in free cash flow for the quarter.</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Management cites Audio AI and generative AI momentum; Q2 beat and positive FCF</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cerence reported Q2 revenue and adjusted EBITDA above the high end of guidance with positive FCF, noting xUI vehicles entering production and broader Audio AI and generative AI adoption across OEMs.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">exceeded the high end of guidance</span>
+<span class="span">positive free cash flow</span>
+<span class="span">xUI-powered vehicles</span>
+<span class="span">Audio AI and generative AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">BYD becomes first OEM shipping xUI-equipped vehicles; more SOPs expected in June–July 2026</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated BYD is currently shipping xUI-equipped vehicles, with additional OEM shipments expected to begin in the June–July 2026 timeframe.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">BYD is the first OEM</span>
+<span class="span">shipping xUI-equipped vehicles</span>
+<span class="span">June–July 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">xUI pipeline: five wins out of six bids; target six out of seven by Q3 quarter-end</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CRO and CEO highlighted confidence in closing at least one more xUI win in Q3, noting six bids with five wins to date and potentially &quot;six out of seven&quot; by quarter-end.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">one more xUI win in Q3</span>
+<span class="span">six bids with five wins</span>
+<span class="span">“six out of seven”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">xUI PPUs above run-rate; revenue impact pushed more into FY27</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management reiterated xUI programs carry PPUs above current run-rate, with more revenue impact expected in FY27 as billings convert to revenue over time.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">PPUs above the current run-rate</span>
+<span class="span">more revenue impact in FY27</span>
+<span class="span">billings convert to revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Connected growth led by LLM features like Chat Pro; xUI not yet material</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Management said connected remains the leading growth engine, aided by LLM-based features such as Chat Pro, while xUI is not yet a meaningful revenue contributor.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">leading growth engine</span>
+<span class="span">LLM-based features</span>
+<span class="span">Chat Pro</span>
+<span class="span">not yet a meaningful revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Non-auto expansion in FY26 to be small (~$2M), focused on complex AI verticals</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Cerence guided that FY26 non-auto activity will be small at most ~$2M, largely NRE for POCs, with focus on complex, domain-intensive verticals like industrial robotics, aerospace, and dealership AI.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">at most ~$2M</span>
+<span class="span">NRE for POCs</span>
+<span class="span">industrial robotics</span>
+<span class="span">dealership AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Active IP matters with Apple, Sony, TCL, Amazon; no IP revenue modeled</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cited active IP matters with Apple, Sony, TCL, and Amazon, switching to paying legal fees as they go and projecting no revenue from these cases, with several court dates toward late 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Apple, Sony, TCL, and Amazon</span>
+<span class="span">paying legal fees as they go</span>
+<span class="span">“we’ve projected no revenue</span>
+<span class="span">late calendar 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Cerence filed ITC complaint against Amazon on May 5, 2026</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Ahead of the report, Cerence filed an ITC complaint against Amazon regarding alleged IP infringement, part of its ongoing IP enforcement strategy.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">May 5, 2026</span>
+<span class="span">filed an ITC complaint</span>
+<span class="span">against Amazon</span>
+<span class="span">IP infringement</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">TTM KPI update: Adjusted Total Billings $238.8M; attach 34.3%; PPU $5.09</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$239M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Cerence reported TTM Adjusted Total Billings of $238.8M (+6.6% y/y), connected attach rate of 34.3%, and average PPU of $5.09, alongside broader TTM operating metrics.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Adjusted Total Billings $238.8M</span>
+<span class="span">+6.6% y/y TTM</span>
+<span class="span">connected attach rate 34.3%</span>
+<span class="span">average PPU (TTM) $5.09</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">RPO at 3/31/2026 reported at $235.6M with disclosed duration mix</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$236M · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Remaining performance obligations totaled $235.6M as of 3/31/2026, including $85.1M within 1 year, $116.9M in years 2–5, and $33.6M beyond 5 years.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">RPO</span>
+<span class="span">3/31/2026</span>
+<span class="span">$235.6M</span>
+<span class="span">years 2–5 $116.9M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Five‑year backlog update reported at $971.3M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$971M · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Cerence provided a five‑year backlog update totaling $971.3M.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">5‑year backlog</span>
+<span class="span">$971.3M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Deferred revenue totaled $198.6M; current $57.2M; long-term $141.3M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$199M · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Deferred revenue stood at $198.6M, with current of $57.2M and long-term of $141.3M.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Deferred revenue</span>
+<span class="span">$198.6M</span>
+<span class="span">current $57.2M</span>
+<span class="span">long-term $141.3M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Q3 FY26 outlook includes approximately $10M of fixed-license contracts</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cerence guided Q3 FY2026 revenue of $68–$72M, including about $10M of fixed-license contracts expected to be signed.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q3 FY2026</span>
+<span class="span">$68–$72M</span>
+<span class="span">$10M</span>
+<span class="span">fixed-license contracts</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">FY26 fixed-license revenue targeted around ~$23M; Chat Pro/LLM aiding connected</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$23M · other</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Management targeted approximately $23M in FY26 fixed-license revenue, with connected growth aided by Chat Pro and LLM features.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">FY26 fixed-license revenue</span>
+<span class="span">~$23M</span>
+<span class="span">Chat Pro/LLM</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Core growth outlook with five-year backlog around ~$1B; connected to drive near term</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">The CEO stated the five-year backlog should exit around ~$1B, with core tech growth at high single to low double-digits y/y near term driven by connected services, and xUI contributing more materially later.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">five-year backlog</span>
+<span class="span">~$1B</span>
+<span class="span">“high single to low double-digit”</span>
+<span class="span">connected services</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Connected services revenue grew 21% y/y to $15.31M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$15M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Connected services revenue reached $15.31M, up 21% year over year.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Connected services $15.31M</span>
+<span class="span">+21% y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Quarter generated $13.63M in free cash flow to support AI build-out</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$14M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cerence reported operating cash flow of $14.11M and free cash flow of $13.63M for the quarter, indicating internal funding capacity for ongoing AI initiatives.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow $14.11M</span>
+<span class="span">Free cash flow $13.63M</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>2025: Hybrid agentic platform xUI and multi-model architecture</h2>
+<div class='range'>2025-03-13 → 2025-04-22</div>
+<div class='psum'>Cerence debuted xUI, an agentic AI assistant platform spanning edge and cloud and leveraging its CaLLM family of LLMs/SLMs, open-source foundations, and third-party models. The platform includes embedded options and integrations with partners such as NVIDIA and Microsoft, and supports Meta’s Llama and Microsoft’s Phi model families.
+At Auto Shanghai 2025, Cerence showcased xUI in English and Mandarin with partners GWM and TCL, and highlighted simple access to DeepSeek, underscoring a multi-model hedge and regionalization strategy.</div>
+<div class="event t-web_only_unverified" id="E0011" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2025-04-22</span>
+<span class="eh">Auto Shanghai 2025: xUI demos with GWM and TCL; simple access to DeepSeek</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
+<p class="narr">At Auto Shanghai, Cerence demonstrated xUI with partners GWM and TCL, outlining an integrated model architecture that leverages CaLLM, third-party LLMs, and providing simple access to DeepSeek.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Auto Shanghai 2025</span>
+<span class="span">Cerence xUI™</span>
+<span class="span">Great Wall Motor (GWM)</span>
+<span class="span">TCL</span>
+<span class="span">DeepSeek</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2025-03-13</span>
+<span class="eh">Cerence debuts xUI: hybrid, agentic platform using CaLLM; includes Llama and Phi options</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Cerence launched xUI, combining its CaLLM family with third-party LLMs and real-time data, and highlighted CaLLM Edge offerings including Meta’s Llama and Microsoft’s Phi, developed and optimized with NVIDIA and Microsoft.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Cerence xUI</span>
+<span class="span">CaLLM</span>
+<span class="span">in partnership with NVIDIA and Microsoft</span>
+<span class="span">Meta’s Llama family</span>
+<span class="span">Microsoft’s Phi family</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>2024: Microsoft/OpenAI collaboration and VW Group deployments of Chat Pro</h2>
+<div class='range'>2024-01-03 → 2024-10-30</div>
+<div class='psum'>Cerence and Microsoft announced a collaboration to bring OpenAI’s ChatGPT to vehicles via Azure OpenAI Service, and Volkswagen Group became the first OEM to adopt Cerence Chat Pro, an automotive-grade ChatGPT integration. Deployments broadened through 2024 across VW, Škoda, and Audi, including a cloud-update rollout in Europe and expansion to the U.S., with Audi adoption corroborated by both Cerence and Audi MediaCenter releases. Renault later partnered to integrate generative AI into its Reno assistant.
+These milestones demonstrate rapid OEM adoption of LLM-powered features for enhanced in-car conversational experiences, often leveraging Cerence’s platform as a mediated, automotive-grade layer over OpenAI models.</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-10-30</span>
+<span class="eh">Renault partners with Cerence to bring generative AI to Reno using Chat Pro</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Renault expanded its partnership with Cerence to integrate generative AI into the Reno in-car companion using Cerence Chat Pro, leveraging multiple sources including ChatGPT and neural TTS for expressive responses.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Renault</span>
+<span class="span">Reno</span>
+<span class="span">Cerence Chat Pro</span>
+<span class="span">ChatGPT</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-09-09</span>
+<span class="eh">Cerence Chat Pro officially deployed in the U.S. by Volkswagen</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Cerence announced U.S. availability of Chat Pro in Volkswagen models, starting with 2025 Jetta/Jetta GLI and MY24 ID.4 (82-kWh battery), with broader model expansion planned into 2025–2026.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">officially deployed in the U.S.</span>
+<span class="span">Cerence Chat Pro</span>
+<span class="span">2025 Jetta and Jetta GLI</span>
+<span class="span">ID.4</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-06-27</span>
+<span class="eh">Audi to expand in-car assistant with Cerence Chat Pro and ChatGPT, activating across MIB 3 and future models</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Audi selected Cerence’s generative AI, deploying Chat Pro (ChatGPT via Azure OpenAI) for vehicles with MIB 3 via backend activation and upcoming models, with Audi citing availability across around two million vehicles.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6], web_search_findings[10]</div>
+<span class="span">Cerence Chat Pro</span>
+<span class="span">MIB 3 infotainment</span>
+<span class="span">ChatGPT</span>
+<span class="span">two million Audi models</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-06-24</span>
+<span class="eh">Volkswagen Group rolls out Cerence Chat Pro via cloud update across Europe</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">VW Group deployed Chat Pro across European models and languages, enabling conversational chit-chat leveraging sources including ChatGPT, with plans to expand globally including the U.S. later in 2024 and early 2025.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">deployed Cerence Chat Pro</span>
+<span class="span">across Volkswagen’s European lineup</span>
+<span class="span">five languages – English (US), English (UK), German, Spanish, and Czech</span>
+<span class="span">will continue globally</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-01-16</span>
+<span class="eh">Škoda to deploy Cerence Chat Pro as a standard feature for many customers in mid-2024</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Škoda, a VW Group brand, announced it would launch Chat Pro-powered generative AI features, integrating ChatGPT capabilities into its voice assistant Laura, hands-free for drive safety.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Škoda to deploy</span>
+<span class="span">Cerence Chat Pro</span>
+<span class="span">standard feature</span>
+<span class="span">mid-2024</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-01-08</span>
+<span class="eh">Volkswagen first automaker to deploy Cerence Chat Pro (ChatGPT integration)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Volkswagen became the first automaker to deploy Cerence Chat Pro, enabling fun, conversational chit-chat in vehicles via multiple sources including ChatGPT, with flexibility and customization for OEMs.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">first automaker to deploy</span>
+<span class="span">Cerence Chat Pro</span>
+<span class="span">integrate ChatGPT</span>
+<span class="span">automotive-grade</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-01-03</span>
+<span class="eh">Cerence collaborates with Microsoft to integrate ChatGPT via Azure OpenAI Service</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Cerence and Microsoft agreed to deliver an evolved in-vehicle UX by enabling access to OpenAI’s ChatGPT model through Azure OpenAI Service, combining Cerence’s automotive expertise with Microsoft’s cloud AI services.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">collaborating to deliver</span>
+<span class="span">OpenAI’s ChatGPT</span>
+<span class="span">Azure OpenAI Service</span>
+<span class="span">in-vehicle user experience</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational automotive AI platforming and early GenAI moves</h2>
+<div class='range'>2021-03-30 → 2023-04-24</div>
+<div class='psum'>Cerence established foundational positioning around in-vehicle assistants by extending its conversational AI to Android Automotive OS and emphasizing coexistence with general-purpose assistants. This positioned OEMs to retain brand and data control while interoperating with Google’s ecosystem.
+In 2023, Cerence began adding generative AI capabilities to its product suite via enhancements to Cerence Car Knowledge, signaling intent to leverage LLMs (including technologies like ChatGPT) to improve in-car understanding and response quality.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2023-04-24</span>
+<span class="eh">Cerence adds generative AI to Car Knowledge to enhance in-car intelligence</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cerence announced enhancements to Cerence Car Knowledge using generative AI and LLMs to provide contextual and personalized answers, and indicated it would explore integration of technologies like ChatGPT across its solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Cerence Car Knowledge</span>
+<span class="span">generative AI</span>
+<span class="span">similar to ChatGPT</span>
+<span class="span">LLMs</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-03-30</span>
+<span class="eh">Cerence Drive conversational AI becomes available on Android Automotive OS with Google Assistant coexistence</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Cerence announced its platform availability on Android Automotive OS, enabling OEM-branded assistants to coexist alongside Google Automotive Services and Google Assistant while preserving OEM brand and data control.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Android Automotive OS</span>
+<span class="span">Google Automotive Services</span>
+<span class="span">Google Assistant</span>
+<span class="span">coexistence</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which third-party LLMs beyond OpenAI (and beyond the Llama/Phi families) are in production within xUI deployments at OEM customers versus only in demo environments?</li>
+<li>What portion of connected services revenue growth is directly attributable to Chat Pro usage by end drivers versus other connected features?</li>
+<li>How will the timing of xUI revenue recognition (more in FY27) align with OEM SOP schedules disclosed for June–July 2026 and beyond?</li>
+<li>What are the potential financial impacts (costs and timelines) of the active IP matters and the ITC complaint against Amazon on FY26–FY27 cash flows?</li>
+<li>To what extent does Cerence’s multi-model approach (CaLLM, Llama, DeepSeek access, etc.) reduce provider concentration risk relative to reliance on ChatGPT via Azure?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several 2024–2025 adoption announcements are company press releases without independent third-party revenue verification; scope, take-rates, and monetization per vehicle may vary by OEM and region.</li>
+<li>Forward-looking statements in FY26 guidance (e.g., fixed-license signings, backlog exit around ~$1B, xUI revenue timing) are subject to change based on OEM launch schedules and macro conditions.</li>
+<li>Legal and regulatory items (ITC complaint, IP cases) are evolving; outcomes and potential settlements are uncertain and could impact timing and cost structure.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

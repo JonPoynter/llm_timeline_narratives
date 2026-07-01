@@ -1,0 +1,442 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>ZETA US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Zeta Global Holdings Corp <span class='sub'>(ZETA US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.42</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>15 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>web-only (verified): 7</span>
+<span class='chip'>single source: 4</span>
+<span class='chip'>web-only (unverified): 2</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>OpenAI collaboration, Athena GA, adoption, and 26Q1 earnings/risks</h2>
+<div class='range'>2026-01-05 → 2026-06-23</div>
+<div class='psum'>Zeta announced a strategic collaboration with OpenAI in January 2026 to power conversational intelligence and agentic applications in Athena, including potential early access to new OpenAI models and features. Athena reached general availability on March 24, 2026, with the company highlighting OpenAI‑powered capabilities and time‑to‑insight improvements.
+In its Q1 2026 results, Zeta reported revenue of $396 million (50% Y/Y) and raised full‑year guidance by $30 million to $1.785 billion, attributing strong engagement to Athena (greater than 7x more agent interactions and over 60% of AI platform usage in its first week). Management commentary flagged market consolidation around AI‑native platforms, noted execution risks including ~$47 million of acquisitions/investments, and reiterated regulatory risks tied to privacy changes. A late‑June market note also mentioned PLTR tied to a Zeta partnership, though details were not provided.</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-23</span>
+<span class="eh">Market note mentions PLTR tied to a Zeta partnership (details not provided)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">A late‑June market recap cited Palantir (PLTR) tied to a Zeta partnership among notable movers; no additional details or confirmation were provided in the note.</p>
+<p class="cav">⚠ Single-source market note; partnership specifics unconfirmed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">PLTR tied to a Zeta partnership</span>
+<span class="span">9:22 p.m. ET on Jun 23</span>
+<span class="span">Nasdaq 100 futures +0.7%</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1 2026: revenue $396M (+50% Y/Y); FY26 guidance raised by $30M</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$396M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Zeta reported Q1 2026 revenue of $396 million (50% Y/Y) and raised FY26 revenue guidance by $30 million to $1.785 billion, citing momentum following Athena’s launch.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Revenue Growth Accelerates to 50%</span>
+<span class="span">$396 million</span>
+<span class="span">$30 million to $1,785 million</span>
+<span class="span">Athena drove greater than 7X more agent interactions</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0011" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Athena early GA engagement: 7x interactions; &gt;60% of AI usage</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Management highlighted strong early Athena adoption—greater than 7x more agent interactions and over 60% of AI platform usage in the first week of GA, reinforcing the product’s traction.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[9]</div>
+<span class="span">7x more agent interactions</span>
+<span class="span">&gt;60% of AI platform usage</span>
+<span class="span">greater than 7X more agent interactions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">CFO: market consolidating around AI‑native platforms; guidance raised again</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Zeta framed the competitive landscape as consolidating around AI‑native platforms while supporting a second consecutive raise to full‑year guidance, indicating both competitive intensity and business momentum.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">consolidating around AI‑native platforms</span>
+<span class="span">second consecutive raise to full‑year guidance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Regulatory risk flagged: privacy changes could impact AI‑driven data use</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Zeta cautioned that as an AI‑driven marketing platform leveraging large consumer‑signal datasets, changes in privacy regulation or enforcement could require product or data‑practice adjustments affecting growth or costs.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑driven marketing platform</span>
+<span class="span">changes in privacy regulations or enforcement</span>
+<span class="span">affect growth or costs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Execution risk with ~$47M in Q1 acquisitions/investments; integration focus</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$47M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Zeta disclosed approximately $47 million of Q1 acquisitions and other investments tied to scaling Athena and integrating Marigold’s Enterprise Business, noting execution risks to growth and margin realization in 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~$47 million of acquisitions and other investments in Q1</span>
+<span class="span">Marigold’s Enterprise Business</span>
+<span class="span">pose risks to growth and margin realization in 2026</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0009" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Athena by Zeta reaches GA, powered by advanced OpenAI models</span>
+<span class="badge">model_release</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Zeta made Athena generally available on March 24, 2026, emphasizing a fully conversational interface powered by advanced OpenAI models and reporting dramatic time savings for tasks like segmentation. The 26Q1 filing later referenced this GA date.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8], filings[0]</div>
+<span class="span">general availability of Athena by Zeta™</span>
+<span class="span">powered by advanced OpenAI models</span>
+<span class="span">completed in minutes</span>
+<span class="span">GA launched March 24, 2026</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-01-05</span>
+<span class="eh">Zeta and OpenAI team up to power Athena’s conversational and agentic apps</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">At CES 2026, Zeta announced a strategic collaboration with OpenAI to enhance Athena’s conversational intelligence and agentic applications, including opportunities for early access to upcoming OpenAI models and features.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">OpenAI Team Up</span>
+<span class="span">Athena by Zeta™</span>
+<span class="span">agentic applications</span>
+<span class="span">early access to new OpenAI models and features</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Readiness, leadership build‑out, and pre‑GA productization</h2>
+<div class='range'>2025-05-22 → 2025-10-09</div>
+<div class='psum'>In 2025 Zeta published practitioner content acknowledging common LLMs (ChatGPT, Gemini, Claude) while noting their limitations when not integrated into activation workflows. The company appointed Nate Yohannes, a veteran of Meta and Microsoft, to lead its Data &amp; AI Lab.
+Zeta introduced Generative Engine Optimization (GEO) to help brands monitor and optimize how they appear across leading AI systems including ChatGPT, Gemini, and Claude, and unveiled Athena by Zeta—its superintelligent agent—for limited beta with client early access slated for Q4 2025.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-09</span>
+<span class="eh">Zeta unveils Athena by Zeta superintelligent agent (limited beta)</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">At Zeta Live 2025, the company introduced Athena by Zeta, a superintelligent, conversational agent for enterprise marketers, entering limited internal beta with early client access planned for Q4 2025.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Athena by Zeta™</span>
+<span class="span">superintelligent agent</span>
+<span class="span">limited internal beta</span>
+<span class="span">early access for clients in Q4 2025</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-09-17</span>
+<span class="eh">Zeta debuts Generative Engine Optimization to monitor ChatGPT/Gemini/Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Zeta launched its GEO solution inside the ZMP to help brands remain visible and accurate as AI‑generated answers rise, monitoring leading systems including ChatGPT, Gemini, and Claude.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Generative Engine Optimization (GEO)</span>
+<span class="span">post-search era</span>
+<span class="span">including ChatGPT, Gemini, and Claude</span>
+<span class="span">available in the Zeta Marketing Platform</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-29</span>
+<span class="eh">Zeta appoints Nate Yohannes to lead Zeta Data &amp; AI Lab</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Zeta named Nate Yohannes as President of Zeta Data &amp; AI Lab and Global Head of R&amp;D, bringing experience from Meta’s GenAI in Ads Ranking (built on Llama) and Microsoft’s Office of the CTO.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Nate Yohannes</span>
+<span class="span">President of Zeta Data &amp; AI Lab</span>
+<span class="span">Meta’s Llama</span>
+<span class="span">Office of the CTO at Microsoft</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-05-22</span>
+<span class="eh">Zeta publishes AI guide referencing ChatGPT, Gemini, Claude tradeoffs</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Zeta’s practical guide positioned out‑of‑the‑box LLMs (ChatGPT, Gemini, Claude) as useful but limited when not integrated with activation tools, reinforcing Zeta’s platform‑embedded AI approach.</p>
+<div class="ev-ch">channels: <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">ChatGPT, Gemini, or Claude</span>
+<span class="span">Out-of-the-box large language models (LLMs) like ChatGPT, Claude, and Gemini</span>
+<span class="span">cannot send emails.</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Embedding Claude via Bedrock; early enterprise usage of ZOE</h2>
+<div class='range'>2024-06-19 → 2024-06-19</div>
+<div class='psum'>Zeta expanded generative capabilities in the Zeta Marketing Platform by utilizing Amazon Bedrock and embedding Anthropic’s Claude across the platform. The company introduced a Multi‑Model Agent Building Framework and noted that nearly 500 marketers were using ZOE daily one year after launch.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-06-19</span>
+<span class="eh">ZOE expands on Amazon Bedrock with Anthropic Claude, multi‑model agents</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">At Cannes Lions, Zeta announced expanded ZOE functionality leveraging Amazon Bedrock and embedding Anthropic’s Claude, including Claude 3 integration. It highlighted a Multi‑Model Agent Building Framework and reported nearly 500 daily ZOE users.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">utilizing Amazon Bedrock</span>
+<span class="span">Anthropic’s Claude</span>
+<span class="span">nearly 500 marketers</span>
+<span class="span">Anthropic Claude 3 integration</span>
+<span class="span">Multi-Model Agent Building Framework</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early generative experiments and model trials</h2>
+<div class='range'>2023-02-09 → 2023-07-05</div>
+<div class='psum'>Zeta initiated its generative AI journey by launching the beta of ChatBotZeta in February 2023, combining its proprietary Data Cloud with generative AI and ChatGPT to create conversational consumer attributes for marketers.
+By July 2023, leadership publicly described an active, multi-model experimentation program using OpenAI’s ChatGPT 3.5/4, testing open-source models like LLaMA and MPT, and tracking tools such as LangChain and Amazon’s Bedrock—explicitly aiming to leverage advances from Google, Meta, and OpenAI on Zeta’s platform.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="openai_chatgpt meta_llama google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-07-05</span>
+<span class="eh">Zeta details multi‑model AI experimentation (OpenAI, LLaMA, Google)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Zeta’s CTO outlined active use of OpenAI’s ChatGPT 3.5/4 and experiments with other LLMs (e.g., LLaMA, MPT, Alpaca), alongside ecosystem tools like LangChain and Amazon’s Bedrock, emphasizing a strategy to leverage giants like Google, Meta, and OpenAI within Zeta’s platform.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">ChatGPT 3.5, 4</span>
+<span class="span">MPT7, LLaMA, Alpaca</span>
+<span class="span">Amazon&#x27;s Bedrock</span>
+<span class="span">Google, Meta, OpenAI</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-02-09</span>
+<span class="eh">Zeta launches ChatBotZeta beta, combining Data Cloud with ChatGPT</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Zeta introduced the beta of ChatBotZeta, a generative AI application that reads and synthesizes signals from its Data Cloud using ChatGPT to produce conversational attributes. This marked one of the firm’s first public generative AI product steps.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">beta launch of ChatBotZeta</span>
+<span class="span">generative AI and ChatGPT</span>
+<span class="span">Zeta’s proprietary Data Cloud</span>
+<span class="span">ChatBotZeta</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the commercial terms, spend commitments, and duration of Zeta’s OpenAI collaboration for Athena?</li>
+<li>Does Athena in production use additional frontier models (e.g., Anthropic Claude, Google Gemini) beyond OpenAI, and if so, for which tasks?</li>
+<li>How does the ‘nearly 500 marketers using ZOE daily’ metric translate into paying accounts, seat expansion, or revenue contribution?</li>
+<li>What specific privacy or data‑transfer regulatory regimes most affect Zeta’s AI data practices and associated compliance costs?</li>
+<li>What are the specifics of the referenced ‘PLTR tied to a Zeta partnership’ and does it have material revenue impact?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Timeline relies heavily on company press releases and site content; third‑party corroboration is limited in places.</li>
+<li>The PLTR partnership mention originates from a market note with no supporting detail; treat as unconfirmed.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

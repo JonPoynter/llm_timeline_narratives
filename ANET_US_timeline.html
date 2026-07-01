@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Arista Networks Inc <span class='sub'>(ANET US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.384</div>
@@ -73,158 +83,13 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (unverified): 2</span>
 <span class='chip'>corroborated: 2</span>
 </div>
-<div class='phase'>
-<h2>Open networking groundwork and hyperscaler alignments</h2>
-<div class='range'>2019-03-14 → 2021-10-27</div>
-<div class='psum'>Arista’s AI-relevant groundwork traces to open networking and hyperscaler co-development. In March 2019, Facebook (now Meta) publicly highlighted multi-sourcing flexibility across internally developed systems and Arista platforms, signaling hyperscaler willingness to run their own network operating systems (FBOSS) as well as Arista EOS across tiers. This set an early precedent for large-scale, open Ethernet fabrics used in data center and AI contexts.
-By October 2021, Arista formalized a distribution/adjacency with Google Cloud as a Network Connectivity Center partner via CloudEOS. This strengthened multi-cloud positioning and provided an integration channel into Google Cloud networking environments relevant to data movement for AI workloads.</div>
-<div class="event t-web_only_unverified" id="E0001">
-<div class="ev-top">
-<span class="date">2019-03-14</span>
-<span class="eh">Facebook cites Arista solution and multi-sourcing flexibility (EOS/FBOSS)</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Facebook highlighted power/space efficiency from Arista and the ability to multi-source with internally developed Minipack while running either Arista EOS or FBOSS across tiers. This underscored hyperscaler control of the stack and Arista’s role in open, large-scale fabrics.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">The Arista solution has helped Facebook</span>
-<span class="span">power and space efficiency</span>
-<span class="span">multi-sourced</span>
-<span class="span">run Arista EOS or FBOSS</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0002">
-<div class="ev-top">
-<span class="date">2021-10-27</span>
-<span class="eh">Arista CloudEOS named Google Cloud networking partner</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Google Cloud announced Arista as a Network Connectivity Center partner, positioning CloudEOS for multi-cloud and cloud-native networking to extend enterprise networks into Google Cloud—relevant for AI data pipelines and hybrid architectures.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[7]</div>
-<span class="span">Google Cloud network</span>
-<span class="span">partnerships with Alkira, Arista, Aruba</span>
-<span class="span">Arista CloudEOS is a multi-cloud</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Meta AI cluster deployments and Ethernet competition emerges</h2>
-<div class='range'>2024-10-15 → 2025-10-13</div>
-<div class='psum'>Meta disclosed adoption of Arista’s 7700R4 series in DSF-based fabrics for high-bandwidth AI clusters. Arista’s own blog corroborated Meta’s deployment of the 7700R4 Distributed Etherlink Switch (DES) for an Ethernet-based AI cluster, reflecting deep hyperscaler co-design and 800G roadmaps.
-Concurrently, competitive dynamics intensified. NVIDIA announced its Spectrum-X Ethernet platform powering xAI’s 100,000-GPU Colossus supercomputer, illustrating vertically integrated Ethernet competition in AI networking.
-Arista also joined the OCP ESUN workstream alongside AMD, Meta, Microsoft, NVIDIA, OpenAI and others to advance Ethernet for scale-up AI infrastructure—both validating Ethernet’s trajectory in AI and signaling open-ecosystem influence on future standards.</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2024-10-15</span>
-<span class="eh">Meta deploys Arista 7700R4 for Ethernet AI clusters</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta described DSF-based fabrics using Arista 7700R4 to build non-blocking fabrics for high-bandwidth AI clusters. Arista confirmed Meta deployed the 7700R4 Distributed Etherlink Switch (DES) for an Ethernet-based AI cluster and highlighted a path to 800G.</p>
-<p class="cav">⚠ Deployment scale and spend not disclosed.</p>
-<details>
-<summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[0], web_search_findings[1]</div>
-<span class="span">Arista 7700R4 series</span>
-<span class="span">DSF-based fabrics</span>
-<span class="span">AI clusters</span>
-<span class="span">has deployed the Arista 7700R4 Distributed Etherlink Switch (DES)</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0004">
-<div class="ev-top">
-<span class="date">2024-10-28</span>
-<span class="eh">NVIDIA Spectrum‑X powers xAI Colossus — Ethernet competition risk</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">xai_grok</span></div>
-<p class="narr">NVIDIA announced its Spectrum-X Ethernet networking platform underpins xAI’s 100,000-GPU Colossus supercomputer. This showcases vertically integrated Ethernet competition for AI fabrics, posing a potential competitive threat to third-party Ethernet vendors like Arista.</p>
-<p class="cav">⚠ No direct reference to Arista; inference of competitive risk.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span">xAI’s Colossus supercomputer</span>
-<span class="span">100,000 NVIDIA Hopper</span>
-<span class="span">NVIDIA Spectrum-X™ Ethernet networking platform</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0005">
-<div class="ev-top">
-<span class="date">2025-10-13</span>
-<span class="eh">Arista joins OCP ESUN to advance Ethernet for scale‑up AI</span>
-<span class="badge">other</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">The OCP community launched ESUN with Arista, Meta, Microsoft, NVIDIA, OpenAI and others to tackle scale-up connectivity across accelerated AI infrastructure, reinforcing Ethernet’s role in AI clusters and Arista’s ecosystem influence.</p>
-<p class="cav">⚠ Standards workstream; no commercial terms disclosed.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">initiation of this workstream</span>
-<span class="span">by AMD, Arista, ARM, Broadcom</span>
-<span class="span">Meta, Microsoft, NVIDIA, OpenAI and Oracle</span>
-<span class="span">scale-up connectivity across accelerated AI infrastructure</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>AI spine portfolio push and demand inflection</h2>
-<div class='range'>2026-02-12 → 2026-02-13</div>
-<div class='psum'>Arista broadened its AI networking portfolio, introducing the 7800 AI Spine and over 20 Etherlink switches spanning 400G/800G/1.6T speeds, and emphasized interoperability with AI ecosystem leaders including Anthropic and OpenAI.
-Investor sentiment improved as AI-driven networking demand lifted guidance and shares, with media noting robust AI infrastructure spending and exposure to hyperscale and enterprise customers.</div>
-<div class="event t-web_only_verified" id="E0006">
-<div class="ev-top">
-<span class="date">2026-02-12</span>
-<span class="eh">Arista details 7800 AI Spine and 20+ Etherlink switches; interop with Anthropic and OpenAI</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Arista highlighted the 7800 AI Spine as the core of distributed AI topologies and a portfolio of 20+ Etherlink switches up to 1.6T. The company underscored interoperability with leading AI ecosystem players, including Anthropic and OpenAI.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[8]</div>
-<span class="span">The 7800 AI Spine</span>
-<span class="span">20+ Etherlink switches</span>
-<span class="span">400G/800G/1.6Tbps</span>
-<span class="span">interoperable with leading companies such as AMD, Anthropic</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0007">
-<div class="ev-top">
-<span class="date">2026-02-12</span>
-<span class="eh">AI infrastructure demand lifts outlook; shares rise</span>
-<span class="badge">other</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Coverage from Reuters and Barron’s cited AI infrastructure investment as a driver of Arista’s demand and improved guidance, noting exposure to hyperscale and enterprise customers and a positive share reaction.</p>
-<details>
-<summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[9], news_rows[0]</div>
-<span class="span">companies increase their investment in AI infrastructure</span>
-<span class="span">serving cloud ‌and AI titans such as Microsoft and Meta</span>
-<span class="span">Arista Networks rises on strong results and guidance</span>
-<span class="span">AI traffic growth</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>Q1’26 AI program scale-up, OpenAI networking credit, and risk posture</h2>
 <div class='range'>2026-05-05 → 2026-05-05</div>
 <div class='psum'>Arista raised its 2026 AI fabrics revenue goal to ~$3.5B and introduced liquid-cooled optics and a 7800-based universal AI spine, while noting broad AI demand and high customer satisfaction. OpenAI publicly acknowledged Arista’s role in deploying supercomputer networking at scale.
 Financially, deferred revenue surged to $4.91B current, operating cash flow benefited from an $826M increase in deferred revenue, and purchase commitments grew to ~$8.9B reflecting multi-year sourcing. Management reiterated supply constraints across components and hyperscaler concentration risk (Microsoft and Meta), and warned that extended acceptance cycles for new AI products increase revenue timing variability.</div>
-<div class="event t-web_only_verified" id="E0008">
+<div class="event t-web_only_verified" id="E0008" data-providers="openai_chatgpt">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">OpenAI credits Arista for supercomputer networking deployment</span>
@@ -233,6 +98,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
 <p class="narr">OpenAI thanked Arista alongside Microsoft Azure, OCI, and NVIDIA for working with it to deploy supercomputer networking at scale, indicating Arista’s role in cutting-edge AI training infrastructure.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · OAI <b>2</b></span> <span class="chchip">product_integration_exposure · OAI <b>3</b></span> <span class="chchip">strategic_option_value · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>2</b></span></div>
 <p class="cav">⚠ No scope or contract value disclosed.</p>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
@@ -241,7 +107,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 <span class="span">deploy it at scale</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0009">
+<div class="event t-single_source" id="E0009" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">2026 AI fabrics revenue goal raised to ~$3.5B</span>
@@ -257,7 +123,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 <span class="span">campus revenue goal of ~$1.25B</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0010">
+<div class="event t-single_source" id="E0010" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Introduces XPO liquid‑cooled optics and 7800‑based universal AI spine</span>
@@ -266,6 +132,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Arista unveiled XPO high-density liquid-cooled pluggable optics and a 7800-based universal AI spine aimed at large AI fabrics, expanding its AI hardware portfolio.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -273,7 +140,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 <span class="span">7800-based universal AI spine</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0011">
+<div class="event t-single_source" id="E0011" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Broad AI demand; customer satisfaction remains high (NPS 89)</span>
@@ -282,6 +149,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management cited a strong start to 2026 with broad demand across cloud, AI and enterprise networking, and highlighted industry-leading customer satisfaction.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -289,7 +157,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 <span class="span">industry-leading customer satisfaction (NPS 89)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0012">
+<div class="event t-single_source" id="E0012" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Supply constraints across key components may pressure margins</span>
@@ -306,7 +174,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 <span class="span">pressure gross margins</span>
 </details>
 </div>
-<div class="event t-corroborated" id="E0013">
+<div class="event t-corroborated" id="E0013" data-providers="meta_llama">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Hyperscaler concentration risk: Microsoft and Meta remain 10%+ customers</span>
@@ -315,6 +183,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">meta_llama</span></div>
 <p class="narr">Management emphasized exposure to hyperscaler spending cycles as Microsoft and Meta remain 10%+ customers. The 2024 10-K corroborated concentration, with those two customers representing 39% and 42% of revenue in 2023 and 2022.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity · LLA <b>3</b></span></div>
 <p class="cav">⚠ Microsoft is not among the six frontier LLM providers tracked here but is a material hyperscaler customer.</p>
 <details>
 <summary>evidence — 2 source(s), 2 span(s)</summary>
@@ -323,7 +192,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 <span class="span">collectively represented 39% and 42% of our total revenue,</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0014">
+<div class="event t-single_source" id="E0014" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">AI product acceptance timing adds revenue recognition variability</span>
@@ -339,7 +208,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 <span class="span">increase quarter-to-quarter variability in revenue recognition and cash flow.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0015">
+<div class="event t-single_source" id="E0015" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Deferred revenue surges; current at $4.91B (+$0.907B q/q)</span>
@@ -356,7 +225,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 <span class="span">non-current $1.289B</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0016">
+<div class="event t-single_source" id="E0016" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Operating cash flow aided by $826M increase in deferred revenue</span>
@@ -371,7 +240,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 <span class="span">Operating cash flow benefited from a $826M increase in deferred revenue;</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0017">
+<div class="event t-single_source" id="E0017" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Purchase commitments rise to ~$8.9B on multi‑year sourcing</span>
@@ -380,6 +249,7 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="mag">$8.9B · other</span> <span class="badge">mixed</span></div>
 <p class="narr">Purchase commitments climbed to about $8.9B tied to multi-year component sourcing, securing supply for AI demand but potentially pressuring margins.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -388,30 +258,200 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class='phase'>
+<h2>AI spine portfolio push and demand inflection</h2>
+<div class='range'>2026-02-12 → 2026-02-13</div>
+<div class='psum'>Arista broadened its AI networking portfolio, introducing the 7800 AI Spine and over 20 Etherlink switches spanning 400G/800G/1.6T speeds, and emphasized interoperability with AI ecosystem leaders including Anthropic and OpenAI.
+Investor sentiment improved as AI-driven networking demand lifted guidance and shares, with media noting robust AI infrastructure spending and exposure to hyperscale and enterprise customers.</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">Arista details 7800 AI Spine and 20+ Etherlink switches; interop with Anthropic and OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Arista highlighted the 7800 AI Spine as the core of distributed AI topologies and a portfolio of 20+ Etherlink switches up to 1.6T. The company underscored interoperability with leading AI ecosystem players, including Anthropic and OpenAI.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>1</b> OAI <b>3</b></span> <span class="chchip">strategic_option_value · ANT <b>1</b> OAI <b>2</b></span> <span class="chchip">provider_specificity · ANT <b>1</b> OAI <b>2</b></span> <span class="chchip">multi_model_hedge · ANT <b>3</b> OAI <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">The 7800 AI Spine</span>
+<span class="span">20+ Etherlink switches</span>
+<span class="span">400G/800G/1.6Tbps</span>
+<span class="span">interoperable with leading companies such as AMD, Anthropic</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">AI infrastructure demand lifts outlook; shares rise</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Coverage from Reuters and Barron’s cited AI infrastructure investment as a driver of Arista’s demand and improved guidance, noting exposure to hyperscale and enterprise customers and a positive share reaction.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9], news_rows[0]</div>
+<span class="span">companies increase their investment in AI infrastructure</span>
+<span class="span">serving cloud ‌and AI titans such as Microsoft and Meta</span>
+<span class="span">Arista Networks rises on strong results and guidance</span>
+<span class="span">AI traffic growth</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Meta AI cluster deployments and Ethernet competition emerges</h2>
+<div class='range'>2024-10-15 → 2025-10-13</div>
+<div class='psum'>Meta disclosed adoption of Arista’s 7700R4 series in DSF-based fabrics for high-bandwidth AI clusters. Arista’s own blog corroborated Meta’s deployment of the 7700R4 Distributed Etherlink Switch (DES) for an Ethernet-based AI cluster, reflecting deep hyperscaler co-design and 800G roadmaps.
+Concurrently, competitive dynamics intensified. NVIDIA announced its Spectrum-X Ethernet platform powering xAI’s 100,000-GPU Colossus supercomputer, illustrating vertically integrated Ethernet competition in AI networking.
+Arista also joined the OCP ESUN workstream alongside AMD, Meta, Microsoft, NVIDIA, OpenAI and others to advance Ethernet for scale-up AI infrastructure—both validating Ethernet’s trajectory in AI and signaling open-ecosystem influence on future standards.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="meta_llama openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-10-13</span>
+<span class="eh">Arista joins OCP ESUN to advance Ethernet for scale‑up AI</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">The OCP community launched ESUN with Arista, Meta, Microsoft, NVIDIA, OpenAI and others to tackle scale-up connectivity across accelerated AI infrastructure, reinforcing Ethernet’s role in AI clusters and Arista’s ecosystem influence.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>4</b> OAI <b>3</b></span> <span class="chchip">strategic_option_value · LLA <b>3</b> OAI <b>2</b></span> <span class="chchip">ecosystem_control_loss · LLA <b>2</b> OAI <b>1</b></span> <span class="chchip">multi_model_hedge · LLA <b>4</b> OAI <b>4</b></span> <span class="chchip">switching_flexibility · LLA <b>3</b> OAI <b>2</b></span></div>
+<p class="cav">⚠ Standards workstream; no commercial terms disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">initiation of this workstream</span>
+<span class="span">by AMD, Arista, ARM, Broadcom</span>
+<span class="span">Meta, Microsoft, NVIDIA, OpenAI and Oracle</span>
+<span class="span">scale-up connectivity across accelerated AI infrastructure</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2024-10-28</span>
+<span class="eh">NVIDIA Spectrum‑X powers xAI Colossus — Ethernet competition risk</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">xai_grok</span></div>
+<p class="narr">NVIDIA announced its Spectrum-X Ethernet networking platform underpins xAI’s 100,000-GPU Colossus supercomputer. This showcases vertically integrated Ethernet competition for AI fabrics, posing a potential competitive threat to third-party Ethernet vendors like Arista.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider · XAI <b>2</b></span></div>
+<p class="cav">⚠ No direct reference to Arista; inference of competitive risk.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">xAI’s Colossus supercomputer</span>
+<span class="span">100,000 NVIDIA Hopper</span>
+<span class="span">NVIDIA Spectrum-X™ Ethernet networking platform</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-10-15</span>
+<span class="eh">Meta deploys Arista 7700R4 for Ethernet AI clusters</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta described DSF-based fabrics using Arista 7700R4 to build non-blocking fabrics for high-bandwidth AI clusters. Arista confirmed Meta deployed the 7700R4 Distributed Etherlink Switch (DES) for an Ethernet-based AI cluster and highlighted a path to 800G.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · LLA <b>3</b></span> <span class="chchip">product_integration_exposure · LLA <b>4</b></span> <span class="chchip">strategic_option_value · LLA <b>3</b></span> <span class="chchip">provider_specificity · LLA <b>3</b></span></div>
+<p class="cav">⚠ Deployment scale and spend not disclosed.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[1]</div>
+<span class="span">Arista 7700R4 series</span>
+<span class="span">DSF-based fabrics</span>
+<span class="span">AI clusters</span>
+<span class="span">has deployed the Arista 7700R4 Distributed Etherlink Switch (DES)</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Open networking groundwork and hyperscaler alignments</h2>
+<div class='range'>2019-03-14 → 2021-10-27</div>
+<div class='psum'>Arista’s AI-relevant groundwork traces to open networking and hyperscaler co-development. In March 2019, Facebook (now Meta) publicly highlighted multi-sourcing flexibility across internally developed systems and Arista platforms, signaling hyperscaler willingness to run their own network operating systems (FBOSS) as well as Arista EOS across tiers. This set an early precedent for large-scale, open Ethernet fabrics used in data center and AI contexts.
+By October 2021, Arista formalized a distribution/adjacency with Google Cloud as a Network Connectivity Center partner via CloudEOS. This strengthened multi-cloud positioning and provided an integration channel into Google Cloud networking environments relevant to data movement for AI workloads.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-10-27</span>
+<span class="eh">Arista CloudEOS named Google Cloud networking partner</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google Cloud announced Arista as a Network Connectivity Center partner, positioning CloudEOS for multi-cloud and cloud-native networking to extend enterprise networks into Google Cloud—relevant for AI data pipelines and hybrid architectures.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · GEM <b>2</b></span> <span class="chchip">product_integration_exposure · GEM <b>2</b></span> <span class="chchip">strategic_option_value · GEM <b>1</b></span> <span class="chchip">provider_specificity · GEM <b>1</b></span> <span class="chchip">multi_model_hedge · GEM <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Google Cloud network</span>
+<span class="span">partnerships with Alkira, Arista, Aruba</span>
+<span class="span">Arista CloudEOS is a multi-cloud</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2019-03-14</span>
+<span class="eh">Facebook cites Arista solution and multi-sourcing flexibility (EOS/FBOSS)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Facebook highlighted power/space efficiency from Arista and the ability to multi-source with internally developed Minipack while running either Arista EOS or FBOSS across tiers. This underscored hyperscaler control of the stack and Arista’s role in open, large-scale fabrics.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>4</b></span> <span class="chchip">strategic_option_value · LLA <b>3</b></span> <span class="chchip">provider_as_platform_absorber · LLA <b>2</b></span> <span class="chchip">customer_relationship_disintermediation · LLA <b>2</b></span> <span class="chchip">ecosystem_control_loss · LLA <b>2</b></span> <span class="chchip">switching_flexibility · LLA <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">The Arista solution has helped Facebook</span>
+<span class="span">power and space efficiency</span>
+<span class="span">multi-sourced</span>
+<span class="span">run Arista EOS or FBOSS</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0011'>E0011</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0017'>E0017</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0017'>E0017</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0.5</td><td>0.05</td><td>0.05</td><td>0.75</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.45</td><td>0.15</td><td>0.6</td><td>0.6</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>-0.1</td><td>0</td><td>0</td><td>-0.7</td><td>-0.5</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.745</td><td>0.775</td><td>0.775</td><td>0.73</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.2829</td><td>0.0544</td><td>0.1929</td><td>0.2271</td><td>-0.0989</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What portion of the ~$3.5B 2026 AI fabrics goal is tied to Meta, OpenAI, Microsoft, and other hyperscalers respectively?</li>
@@ -424,4 +464,19 @@ Financially, deferred revenue surged to $4.91B current, operating cash flow bene
 <li>Competitive threat inference from NVIDIA Spectrum‑X is indirect; the source does not reference Arista by name.</li>
 <li>Customer concentration corroboration uses fiscal 2023/2022 figures to contextualize the 2026 risk disclosure; recent mix may differ.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

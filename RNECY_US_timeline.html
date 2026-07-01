@@ -1,0 +1,566 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>RNECY US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Renesas Electronics Corp <span class='sub'>(RNECY US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.404</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>23 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 9</span>
+<span class='chip'>single source: 14</span>
+<span class='chip'>web-only (verified): 5</span>
+<span class='chip'>web-only (unverified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>2026 supply constraints amid rising AI demand; capacity build-out</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>In 26Q1, Renesas reported strong AI-related demand in non-automotive segments (data center and client AI) but flagged that shipments were rate-limited by tester and wafer availability, with incremental relief expected from Q2 and clearer ramp from Q3. Management planned to build channel inventory and even advance-ship to data center and mobile customers ahead of certification and seasonality.
+The company reiterated step-function growth starting in Q3 into 2027, while noting intense near-term competition in AI power where it aims to maintain or increase share. It authorized approximately JPY94B of Q1 investments, roughly 80% for capacity expansion across multiple fabs, and reaffirmed that the 300mm Kofu fab start of production is expected in FY2028.</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Non-Auto benefited from data center and client AI; supply catch-up expected from Q2</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said non-automotive segments benefited from strong data center and client AI demand, but Q1 supply was rate-limited. They expect supply catch-up starting in Q2.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Non-Auto benefited from strong data center and client AI demand</span>
+<span class="span">Q1 supply was rate-limited</span>
+<span class="span">expects catch-up from Q2</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Plans to further build channel inventory</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Renesas noted channel inventory increased less than planned in Q1 and stated an intention to build it further to support demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Channel inventory increased less than planned</span>
+<span class="span">Renesas intends to build it further.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Risk: supply constraints limiting AI-related non-Auto; need to build inventory</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management cited supply as a rate-limiting factor versus strong AI-related non-automotive demand and emphasized the need to build channel inventory.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">supply as a rate-limiting factor</span>
+<span class="span">especially in AI-related non-Auto</span>
+<span class="span">need to build channel inventory</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Tester and wafer bottlenecks; earliest supply relief Q2, more visible Q3</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management highlighted tester availability and wafer supply as current bottlenecks. Efforts are underway to pull in equipment and materials, with earliest incremental supply in Q2 and more visible increase by Q3 as suppliers ramp.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">tester availability and wafer supply are current bottlenecks</span>
+<span class="span">earliest incremental supply could appear in Q2</span>
+<span class="span">more visible increase from Q3</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">AI/data center outlook slightly better; step-function growth from Q3</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Renesas said the outlook through year-end is unchanged to slightly better with momentum strengthening next year, and expects a step-function growth from Q3.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">outlook through year‑end is unchanged to slightly better</span>
+<span class="span">step‑function growth expected from Q3</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Non-AI data center steady and profitable; memory interface cited</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described steady, profitable non-AI data center trends, highlighting memory interface as a driver.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Non‑AI data center is growing steadily and profitable</span>
+<span class="span">memory interface</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">AI power: maintain/increase share amid intense near-term competition</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Renesas aims to maintain or increase share in AI power while anticipating intense near-term competition.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">aim to maintain or increase share</span>
+<span class="span">intense near‑term competition</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Digital power solutions from grid to core, extendable toward 800V</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Renesas highlighted its digital power approach and complete solutions spanning from grid to core, including 48V today and extendable toward 800V, positioning for data center power needs.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“digital power”</span>
+<span class="span">from grid to core</span>
+<span class="span">including 48V</span>
+<span class="span">extendable toward 800V</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Advance shipments to data center and mobile ahead of certification/seasonality</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Renesas expects continued channel inventory build, including advance shipments for data center and mobile ahead of certification and seasonality, reflecting confident near-term sales outlook.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">advance shipments for data center and mobile</span>
+<span class="span">ahead of certification/seasonality</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Step-function shipment growth from Q3 into 2027; earliest relief in Q2</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects step-function shipment growth from Q3 into 2027 as supply constraints ease, with earliest incremental relief beginning in Q2.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Step‑function shipment growth expected from Q3 and into 2027</span>
+<span class="span">earliest incremental relief could appear in Q2</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Backlog indicators: strong AI demand; plan to increase channel inventory</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Renesas cited strong demand in automotive and non-automotive (data center AI and client-side AI), intent to increase channel inventory, and supply catch-up from Q2.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">strong demand in Automotive and in non-Auto (data center AI and client-side AI)</span>
+<span class="span">plan to increase channel inventory</span>
+<span class="span">supply catch-up expected from Q2</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Supply relief reiterated: earliest upside from Q2, more visible from Q3</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Renesas reiterated the supply relief timeline with earliest incremental upside from Q2 and a more visible supply increase from Q3 as suppliers ramp.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Supply relief timing</span>
+<span class="span">earliest incremental upside from Q2</span>
+<span class="span">more visible supply increase from Q3</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Q1 decision-based investments ~JPY94B; ~80% to capacity expansion</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$94.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Renesas reported approximately JPY94B of Q1 decision-based investments, with around 80% allocated to capacity expansion across Kofu, Naka, and Saijo, plus back-end processes.</p>
+<p class="cav">⚠ Amount is reported in JPY; USD equivalent not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">roughly JPY94B</span>
+<span class="span">about 80% (≈JPY77B) is for capacity expansion</span>
+<span class="span">Kofu</span>
+<span class="span">Naka</span>
+<span class="span">Saijo</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Kofu 300mm fab start of production expected in FY2028</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Renesas reaffirmed the 300mm Kofu fab timeline, with start of production expected in fiscal 2028 and depreciation beginning at that time.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">300mm Kofu start of production expected in fiscal 2028</span>
+<span class="span">depreciation commencing at that time</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem expansion: Edge AI tooling, LLM-era enablement</h2>
+<div class='range'>2023-10-01 → 2025-12-31</div>
+<div class='psum'>From 2023 onward, Renesas broadened AI enablement across tools and ecosystems. It entered a strategic partnership and invested in EdgeCortix to streamline a unified AI/ML developer experience across its MCU/MPU portfolio. Renesas launched AI Workbench with Microsoft Azure services for automotive AI software design and performance testing in the cloud.
+The company continued to center embedded AI workflows on Google&#x27;s TensorFlow Lite, adding a Vision AI reference design for the RA8D1 MCU series. In 2025, Renesas integrated NVIDIA TAO into its AI Model Deployer to lower barriers for vision AI on RZ/V MPUs and RA8 MCUs. Developer-facing content referenced ChatGPT (OpenAI) for coding examples and highlighted multiple cloud AI platforms. Community forum discourse also showed RZ/V2H running DeepSeek models via Ollama, indicating experimentation with local LLM inference at the edge.</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-12-18</span>
+<span class="eh">Blog highlights major cloud AI platforms incl. ChatGPT and Gemini</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Renesas published a blog summarizing prominent cloud AI platforms such as ChatGPT by OpenAI and Google Gemini alongside Azure AI and SageMaker, positioning them in contrast to edge AI use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">ChatGPT by OpenAI</span>
+<span class="span">Google Gemini</span>
+<span class="span">Microsoft Azure AI</span>
+<span class="span">Amazon SageMaker</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2025-09-15</span>
+<span class="eh">Community forum: RZ/V2H running DeepSeek LLM via Ollama</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">deepseek</span></div>
+<p class="narr">A Renesas community forum thread discussed deploying and running DeepSeek models on RZ/V2H with Ollama, citing around 10+ tokens per second in the referenced scenario. This indicates experimentation with local LLM inference at the edge.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ Community forum content reflects user reports; performance may vary by scenario and is not an official Renesas performance guarantee.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>RZV2H部署及運行 ollama + deepseek-r1:1.5</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>10+个token/秒的输出速度</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-17</span>
+<span class="eh">Renesas AI Model Deployer integrates NVIDIA TAO for vision AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Renesas integrated NVIDIA TAO into its GUI-based AI Model Deployer to simplify computer vision development on RZ/V MPUs and RA8 MCUs, reducing barriers to deploy custom edge AI models.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Renesas AI Model Deployer Powered by NVIDIA TAO</span>
+<span class="span">RZ/V MPUs and RA8 MCUs</span>
+<span class="span">Deepu Talla, Vice President of Robotics and Edge Computing at NVIDIA</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-08-07</span>
+<span class="eh">Vision AI reference on RA8D1 using TensorFlow Lite</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Renesas released a reference system design demonstrating porting a TensorFlow Lite face detection model to RA8 MCUs for on-device inference, highlighting Helium support and AI performance tuning.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Renesas RA8 Series MCUs integrate Helium</span>
+<span class="span">TensorFlow Lite (TFL) face detection model</span>
+<span class="span">Tensor Flow Lite for Microcontrollers (TFLM)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2023-12-14</span>
+<span class="eh">AI Workbench: cloud-based environment for automotive AI on Azure</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Renesas launched AI Workbench, a cloud-based virtual development and AI model performance testing environment for automotive software engineers, leveraging Microsoft Azure services for compute, identity, and security.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">cloud-based development environment</span>
+<span class="span">AI Workbench</span>
+<span class="span">Microsoft Azure services including Azure Compute</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-10-31</span>
+<span class="eh">Developer blog: using ChatGPT (OpenAI) to code for RL78/Arduino</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Renesas published a blog explaining how to use ChatGPT to assist coding for RL78 microcontrollers. The post featured examples using GPT-3.5 and GPT-4, aimed at developer productivity rather than productized integration.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">AI Coding with ChatGPT</span>
+<span class="span">ChatGPT is an AI tool developed by OpenAI</span>
+<span class="span">gpt-3.5 and gpt-4</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2023-10-04</span>
+<span class="eh">Strategic partnership and investment in EdgeCortix for edge AI</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Renesas announced a strategic partnership and invested in EdgeCortix to unify AI/ML developer experience across its MCU/MPU lineup. The tie-up targets energy-efficient edge AI and common toolchains across heterogeneous architectures.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">strategic partnership with EdgeCortix</span>
+<span class="span">invested into EdgeCortix’s most recent funding round</span>
+<span class="span">energy efficient, Artificial Intelligence (AI) processing solutions at the edge</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Embedded AI foundations and Google integrations</h2>
+<div class='range'>2019-11-01 → 2021-12-31</div>
+<div class='psum'>Renesas began laying foundational blocks for embedded and cloud-connected AI well before the current LLM cycle. In 2019, the company published a Google Cloud IoT Core connectivity project for its Synergy platform, signaling developer enablement for cloud telemetry and device management. In 2020, Renesas documented an AI inference example on its RA6T1 MCU using TensorFlow Lite for Microcontrollers, evidencing early alignment with Google&#x27;s embedded AI stack.
+These activities established baseline product integrations and documentation for customers building AI and IoT solutions on Renesas MCUs, with Google Cloud and TensorFlow Lite appearing as the primary third-party ecosystems.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2020-10-26</span>
+<span class="eh">TensorFlow Lite for Microcontrollers AI example on RA6T1 MCU</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Renesas released an application note demonstrating AI-based motor failure detection on RA6T1 using TensorFlow Lite for Microcontrollers. This showed practical on-device inference on Renesas MCUs leveraging Google&#x27;s TFLM stack.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">TensorFlow Lite for Microcontrollers (TFLu) by Google</span>
+<span class="span">small AI running on RA6T1</span>
+<span class="span">compatibility with TensorFlow</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2019-11-01</span>
+<span class="eh">Google Cloud IoT Core connectivity project for Renesas Synergy</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Renesas published an application project guiding developers to connect devices to Google Cloud IoT Core using MQTT/TLS on Synergy. This documented workflow positioned Renesas hardware for cloud IoT adoption within Google&#x27;s ecosystem.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Google Cloud offers a free account (12 months)</span>
+<span class="span">Google Cloud IoT Core</span>
+<span class="span">https://console.cloud.google.com/</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What was the size and any strategic rights associated with Renesas’s investment in EdgeCortix (valuation, board/observer rights, exclusivity)?</li>
+<li>Are there formal commercial agreements or revenue-sharing arrangements tied to AI Workbench’s use of Microsoft Azure services?</li>
+<li>To what extent are Renesas AI enablement toolchains dependent on Google’s TensorFlow Lite roadmap versus alternative frameworks?</li>
+<li>Is Renesas pursuing formalized partnerships with frontier LLM providers (OpenAI, Anthropic, Google, Meta, xAI, DeepSeek) for edge inference reference designs?</li>
+<li>How quickly will tester/wafer bottlenecks ease relative to Renesas’s step-function shipment growth guidance into 2027?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several web sources are corporate blogs or community forum posts and may not reflect formal commercial commitments or performance guarantees.</li>
+<li>Monetary amounts in filings are reported in JPY; USD equivalents are not provided.</li>
+<li>No news or frontier-event corroboration was available in the inventory for 2026 items; timeline reflects filing disclosures as the primary source.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

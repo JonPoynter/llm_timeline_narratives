@@ -1,0 +1,790 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>AIXA GR — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>AIXTRON SE <span class='sub'>(AIXA GR)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.465</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>38 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 25</span>
+<span class='chip'>web-only (verified): 6</span>
+<span class='chip'>web-only (unverified): 4</span>
+<span class='chip'>corroborated: 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Market volatility impacts AI-linked semiconductor names</h2>
+<div class='range'>2026-06-05 → 2026-06-05</div>
+<div class='psum'>Following a sharp rotation in global markets after Broadcom’s update, European tech stocks declined, with chip names including AIXTRON falling over 4% at the open. This reflects macro sentiment and AI expectations recalibration rather than AIXTRON-specific fundamentals.</div>
+<div class="event t-single_source" id="E0038" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">AIXTRON shares fall &gt;4% amid global tech sell-off</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">European chipmakers, including AIXTRON, fell more than 4% at the open amid a global tech sell-off after Broadcom’s outlook underwhelmed lofty AI expectations.</p>
+<p class="cav">⚠ Market movement reflects sector sentiment; no company-specific disclosure change cited.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Infineon and Aixtron fell more than 4%</span>
+<span class="span">Global tech sell-off reaches Europe</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI datacom-driven optoelectronics inflection and capital actions</h2>
+<div class='range'>2026-04-30 → 2026-05-19</div>
+<div class='psum'>In Q1 2026, AIXTRON marked a clear inflection in optoelectronics demand tied to AI data center optical interconnect upgrades. Management highlighted multi-tool orders, visibility beyond 2026, and a mix skewed toward G10 systems. Order intake and backlog expanded materially, supported by advance payments. The results speech detailed a fundamental architectural shift from copper to 800G/1600G optics in AI data centers, with customers ramping EML and PIC-based lasers. Management framed the potential market need at 80–100 G10 tools per year and €300–400m annual G10 sales in certain scenarios.
+To reinforce flexibility, AIXTRON issued a zero-coupon €450m convertible due 2031 and announced a new Malaysia production site as a strategic footprint move. R&amp;D investment increased, with a 2026 plan of ~€90m. Risks included H2-weighted shipments, InP wafer supply bottlenecks, Malaysia ramp execution, and FX headwinds. Customer momentum was corroborated by Lumentum placing multiple G10-AsP orders to expand high-speed optical solutions for AI networks.</div>
+<div class="event t-web_only_verified" id="E0036" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-19</span>
+<span class="eh">Lumentum places multiple orders for G10-AsP to expand AI optical solutions</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lumentum ordered multiple G10-AsP systems to expand capacity for high-speed InP lasers and detectors serving AI and cloud data center networks, reflecting growing demand for optical interconnects.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">multiple orders for the G10-AsP platform</span>
+<span class="span">indium phosphide (InP)-based lasers and detectors</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1 2026 optoelectronics inflection with multi-tool orders</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described Q1 2026 as an inflection point in optoelectronics driven by laser-related Datacom demand, with multi-tool orders and extended visibility.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[6]</div>
+<span class="span">inflection point driven by very strong optoelectronics demand</span>
+<span class="span">Optoelectronics – clear inflection point</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Opto strength expected to persist beyond 2026</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects optoelectronics momentum to continue well beyond 2026, supported by AI-driven Datacom investments that extend into 2027 and beyond.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[6]</div>
+<span class="span">continue well beyond 2026</span>
+<span class="span">well into 2027 and beyond</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Order intake €171.4m; ~70% optoelectronics</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$171M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Q1 2026 order intake reached €171.4m with roughly 70% from optoelectronics, indicating robust multi-tool demand ahead of major shipments.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Order intake €171.4m</span>
+<span class="span">~70% optoelectronics</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Equipment order backlog at €359.1m (+17% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$359M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Backlog expanded to €359.1m as of March 31, 2026, up 17% year over year and 39% quarter-over-quarter, supporting delivery visibility.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Equipment order backlog €359.1m</span>
+<span class="span">+17% y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Advance payments of €79.2m bolster near-term deliveries</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$79M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Contract liabilities (advance payments) rose to €79.2m, providing added confidence in near-term shipment schedules.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Contract liabilities for advance payments €79.2m</span>
+<span class="span">supporting visibility on near-term deliveries</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Visibility materially improved; momentum into 2027</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited materially improved visibility over the prior 6–8 weeks due to ecosystem investments, with momentum expected well into 2027.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[6]</div>
+<span class="span">visibility had improved materially</span>
+<span class="span">momentum should extend “well into 2027,”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Laser-comm market framing: 80–100 G10 tools p.a.; €300–400m sales</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$300M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management framed a first-order view of 80–100 G10 tools per year and noted €300–400m per year from G10 sales is not too far off, while emphasizing uncertainty.</p>
+<p class="cav">⚠ Management emphasized wide error bars and multiple variables.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">80–100 G10 tools per year</span>
+<span class="span">EUR 300–400 million per year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Bottlenecks: customer clean-room space and InP wafer supply</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">AIXTRON flagged two main bottlenecks—clean-room space at certain customers and InP wafer supply—which the industry is addressing.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">clean‑room space at certain customers</span>
+<span class="span">indium‑phosphide wafer supply</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Capacity not a limit with shift expansion</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management said the current footprint can support higher run-rates through shift expansion, indicating manufacturing headroom.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Capacity is not a limit</span>
+<span class="span">with shift expansion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Historical shipment headroom ~€220–230m per quarter</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$230M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AIXTRON has demonstrated ~€220–230m quarterly shipments historically and can support materially higher run-rates with more shifts.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">EUR 220–230m quarterly shipments</span>
+<span class="span">materially higher run‑rates</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Announces Malaysia site; issues €450m 0% convertible due 2031</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$450M · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">AIXTRON announced a new Malaysia production site to bolster resilience and issued a zero-coupon €450m convertible due April 2031 to enhance balance sheet flexibility.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">new production site in Malaysia</span>
+<span class="span">zero‑coupon €450m convertible bond</span>
+<span class="span">due April 2031</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Malaysia strategy targets long-term power and selected opto</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management positioned Malaysia as a strategic cost/footprint move to serve power and selected opto systems longer term, not a reaction to the current opto spike.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Malaysia is a strategic cost/footprint move</span>
+<span class="span">serve power and selected opto systems longer term</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">R&amp;D spend up 40% y/y to €24.8m in Q1 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$25M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">AIXTRON increased R&amp;D spending by 40% year-over-year to €24.8m, continuing to invest through the cycle.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">R&amp;D spend increased 40% y/y to €24.8m</span>
+<span class="span">invests through the cycle</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">2026 OpEx plan includes ~€90m R&amp;D; no extra SG&amp;A/CapEx for opto surge</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$90M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">The 2026 plan includes ~€90m of R&amp;D, with no incremental SG&amp;A or CapEx needed specifically for the opto surge.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Planned OpEx (notably ~EUR 90m R&amp;D for 2026)</span>
+<span class="span">no incremental SG&amp;A or CapEx is required</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Opto mix ~70% G10 / 30% G4; margins at high end</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management indicated a roughly 70%/30% G10/G4 mix in opto for 2026, with opto tools carrying margins toward the high end of the profile.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">70%/30% G10/G4 mix</span>
+<span class="span">margins toward the high end</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1 2026 equipment revenue mix shifts: Opto &gt;52%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">In Q1 2026, equipment revenue mix shifted toward optoelectronics (&gt;52%), with LED at 31% and Power electronics (GaN + SiC) at 17%.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Optoelectronics &gt;52%</span>
+<span class="span">Power electronics (GaN + SiC) 17%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q2 2026 revenue guidance €110m ± €10m</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$110M · run_rate_annual</span> <span class="badge">neutral</span></div>
+<p class="narr">AIXTRON guided Q2 2026 revenue to €110m ± €10m, broadly in line to modestly below an external consensus snapshot of ~€115m.</p>
+<p class="cav">⚠ Quarterly guidance presented; mapped to run_rate_annual unit for consistency.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q2 2026: revenue expected at €110m ± €10m</span>
+<span class="span">consensus snapshot of ~€115m</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">FY 2026 guidance: €560m revenue; ~42% GM; 17–20% EBIT margin</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$560M · run_rate_annual</span> <span class="badge">neutral</span></div>
+<p class="narr">The company reaffirmed FY 2026 guidance of €560m ± €30m revenue, ~42% gross margin, and 17–20% EBIT margin.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">revenue €560m ± €30m</span>
+<span class="span">gross margin ~42%; EBIT margin 17–20%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Risk: H2-weighted shipments could slip and jeopardize FY targets</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that H2-weighted performance and any slippage in acceptances or logistics could push revenue/EBIT and jeopardize full-year targets.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">H2‑weighted</span>
+<span class="span">jeopardizing full‑year targets</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Risk: Prolonged softness in SiC/GaN tools could weigh on mix and margins</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">A slower-than-expected recovery in SiC and stable but low GaN tool demand could weigh on mix, margins, and utilization despite opto strength.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">continued softness in SiC</span>
+<span class="span">low but stable GaN</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Risk: Malaysia expansion and restructuring execution</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Standing up a new Malaysia site and executing personnel reductions bring operational ramp and integration risks and potential additional one-offs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Malaysia production site</span>
+<span class="span">operational ramp and integration risks</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Risk: USD/EUR depreciation (~14% y/y) pressured USD-denominated revenues</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">FX headwinds reduced USD-denominated revenues in Q1; further adverse moves could pressure sales and margins versus guidance assumptions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">USD/EUR depreciation (~14% y/y</span>
+<span class="span">reduced USD‑denominated revenues</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Competitive view: very limited rival tool orders so far</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AIXTRON reported very limited competitive tool orders at the start of the boom and aims to maintain high share through performance and support.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">very limited competitive tool orders</span>
+<span class="span">maintaining high share</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Order phasing implies most 2026 orders secured by early Q3</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management acknowledged the logic that remaining 2026 orders would largely need to be secured by early Q3, supporting a strong Q2 intake scenario.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">remaining orders for the year would largely need to be secured by early Q3</span>
+<span class="span">high Q2 intake scenario</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Convertible seen as opportunistic; no buybacks at current price</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management characterized the bond as opportunistic, low-cost financing with no specific M&amp;A plans; share repurchases could be considered but probably not at the current share price level.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">opportunistic, low‑cost financing</span>
+<span class="span">probably not at the share price level right now.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1 2026 cash flows: OCF €53.6m; FCF €48.5m</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$48M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Operating cash flow reached €53.6m and free cash flow €48.5m, supported by working-capital reduction.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow €53.6m</span>
+<span class="span">free cash flow €48.5m</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Personnel reduction in operations (one-off mid-single-digit €m)</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">AIXTRON implemented a personnel reduction in operations to enhance flexibility, incurring a one-off mid-single-digit €m impact.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Personnel reduction in operations</span>
+<span class="span">one‑off mid‑single‑digit €m</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Results speech: AI data centers shifting to 800G/1600G optics</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described a fundamental architectural shift in AI data centers from copper to high-speed optical connections (800G and eventually 1600G), driving customers to ramp EML and PIC-based lasers.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">fundamental shift in the data communication architecture of AI data centers</span>
+<span class="span">800G and, eventually, 1600G</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1/2026 results conference call and materials posted</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">AIXTRON hosted the Q1/2026 Results analyst call with speech, recording, and materials posted on its investor relations site.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Q1/2026 Results</span>
+<span class="span">April 30, 2026</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AR/microLED ecosystem alignments and innovation investment</h2>
+<div class='range'>2020-03-31 → 2026-02-25</div>
+<div class='psum'>The broader AR and microLED ecosystem consolidated around major platforms. In 2020, Plessey dedicated all microLED operations to support Facebook’s AR projects, with subsequent joint progress by Plessey and Meta in 2025 on record-bright red microLED displays. This reinforced demand for high-performance epitaxy tools previously supplied by AIXTRON to ecosystem participants.
+AIXTRON also invested in innovation capacity, with industry coverage in 2025 noting a $200 million innovation center in Aachen focused on microLED capabilities. The company’s 2025 Annual Report (published February 2026) underscored the importance of lasers produced on AIXTRON systems across AI data centers and high-speed optical communications, setting the stage for the 2026 optoelectronics inflection.</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Annual Report 2025: lasers on AIXTRON systems key for AI data centers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AIXTRON’s Annual Report emphasized rising demand for lasers produced on its systems across high-speed optical data transmission in AI data centers, cloud computing, and 3D sensing.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">AI data centers</span>
+<span class="span">lasers produced on AIXTRON systems</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-26</span>
+<span class="eh">Industry coverage highlights $200M Aachen innovation center</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$200M · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">MicroLED-Info cited AIXTRON’s $200 million investment in a new innovation centre in Aachen, underscoring commitment to advance microLED capabilities.</p>
+<p class="cav">⚠ Amount referenced via industry coverage; not cross-verified in filings here.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">200 million USD investment</span>
+<span class="span">innovation centre in Aachen</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-09</span>
+<span class="eh">Plessey and Meta unveil world’s brightest red microLED for AR</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Plessey and Meta announced the world’s brightest red microLED display for AR glasses, with up to 6,000,000 nits and &lt;5um resolution, indicating continued ecosystem progress and potential downstream tool demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">World’s Brightest Red microLED Display for AR Glasses</span>
+<span class="span">Plessey Semiconductors and Meta</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2020-03-31</span>
+<span class="eh">Plessey dedicates microLED operations to support Facebook AR</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Plessey announced it would dedicate all microLED manufacturing operations to support Facebook’s AR product development, signaling a consolidation of demand under major platform programs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">dedicated all of its manufacturing operations</span>
+<span class="span">support Facebook</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>MicroLED and GaN-on-Si groundwork</h2>
+<div class='range'>2016-03-02 → 2022-02-23</div>
+<div class='psum'>AIXTRON&#x27;s role in advanced display and LED epitaxy was established years before the current AI data center cycle. In 2016 and 2018, Plessey selected AIXTRON&#x27;s AIX G5+ C MOCVD systems to expand GaN-on-Si LED and microLED capacity, with installations supporting monolithic microLED development. By 2022, additional customers such as HC Semitek were using AIXTRON&#x27;s AIX 2800G4-TM and AIX G5+ C systems for microLED production. These customer decisions cemented AIXTRON&#x27;s position across next-generation display supply chains.
+While not directly tied to LLM providers, these wins expanded AIXTRON&#x27;s installed base and process leadership in III-V and GaN epitaxy platforms that later benefited from AI-driven optical interconnect demand. The groundwork in microLED and GaN-on-Si also supported diversification across photonics and display verticals.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2022-02-23</span>
+<span class="eh">HC Semitek uses AIXTRON systems for microLED production</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">HC Semitek adopted AIXTRON’s AIX 2800G4-TM and AIX G5+ C MOCVD systems, expanding microLED production capacity with 8x6 inch configurations shipped in Q4 2021.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">HC Semitek is using Aixtron&#x27;s</span>
+<span class="span">AIX G5+ C MOCVD systems</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2018-09-19</span>
+<span class="eh">Plessey chooses AIX G5+ C for monolithic microLEDs</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Plessey selected AIXTRON’s AIX G5+ C MOCVD reactor to boost GaN-on-Si wafer manufacturing for monolithic microLED displays, highlighting tool performance and cost-of-ownership advantages.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Plessey chooses AIX G5+ C MOCVD tool</span>
+<span class="span">monolithic microLEDs</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2016-03-02</span>
+<span class="eh">Plessey orders AIX G5+ C cluster to expand GaN-on-Si LED capacity</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Plessey Semiconductors ordered an AIX G5+ C cluster system to expand GaN-on-Si LED production, reinforcing AIXTRON&#x27;s positioning in high-volume epitaxy tools for advanced display applications.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Plessey expands production capacity</span>
+<span class="span">AIX G5+ C cluster</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the expected capex, timeline, and output capacity for the new Malaysia production site, and when will initial shipments commence?</li>
+<li>What proportion of the current backlog and incoming orders is tied specifically to InP-based lasers for AI datacenter applications versus other photonics or power electronics?</li>
+<li>How quickly can InP wafer supply constraints be alleviated, and what contingency plans exist to protect shipment schedules in H2 2026?</li>
+<li>What is the concentration of multi-tool orders among top optoelectronics customers (e.g., including Lumentum and others), and how does this affect shipment phasing risk?</li>
+<li>Are there further details on the €200m Aachen innovation centre (scope, timeline, expected returns) beyond third-party coverage?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Currency figures are presented as quoted (primarily EUR); magnitude_usd fields follow reported amounts without FX conversion.</li>
+<li>Some web sources (e.g., MicroLED-Info) provide industry coverage rather than company filings; where used, such items are noted and may warrant further corroboration.</li>
+<li>Older microLED ecosystem events (2016–2022) are included for completeness though not directly AI-related; they indicate long-term platform adoption influencing later demand.</li>
+<li>Market movement reported on 2026-06-05 reflects sector sentiment and does not constitute a change in company fundamentals.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,619 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>INTU US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Intuit Inc <span class='sub'>(INTU US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.379</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>25 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 2</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 11</span>
+<span class='chip'>single source: 15</span>
+<span class='chip'>web-only (verified): 6</span>
+<span class='chip'>web-only (unverified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Restructuring, pricing model shifts, and data-guardrails</h2>
+<div class='range'>2026-05-20 → 2026-05-27</div>
+<div class='psum'>Intuit clarified that recent tax shortfalls and workforce changes were not driven by AI displacement, while continuing to emphasize assisted experiences where confidence and liability transfer matter. The company previewed a shift toward consumption‑based pricing for AI/HI services and highlighted ongoing progress of its AI-driven expert platform.
+A contemporaneous 8‑K disclosed a 17% workforce reduction to refocus and invest behind AI, while a corporate blog post reiterated data protection principles in partnerships with OpenAI and Anthropic, including explicit prohibitions on partner training of customer data and agreements tied to LLM consumption.</div>
+<div class="event t-web_only_verified" id="E0026" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Data guardrails: no customer data shared for model training; LLM use on consumption terms</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Intuit reaffirmed customer-first principles, stating integrations with platforms like ChatGPT and Claude do not permit partner training on customer data and that agreements are tied to LLM consumption rather than revenue-sharing economics.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">platforms like ChatGPT and Claude</span>
+<span class="span">explicitly prohibit the use of customer data for model training</span>
+<span class="span">do not share in the economics</span>
+<span class="span">agreement with our partners tied to LLM consumption</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">8‑K: Intuit to cut 17% of workforce; restructuring to fund AI pivot</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">An 8‑K disclosed a 17% headcount reduction as Intuit restructures to fund AI priorities and simplify the organization; shares fell on the announcement.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Intuit to cut 17% of workforce</span>
+<span class="span">stock slides</span>
+<span class="span">Restructuring to fund AI pivot</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-20</span>
+<span class="eh">Management: recent tax shortfall not related to AI disruption</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">On the FY26 Q3 release, management pushed back on narratives that AI drove tax softness, emphasizing structural and pricing/model factors instead.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">none of this has anything to do with AI</span>
+<span class="span">pushed back on AI-disruption framing for tax</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-20</span>
+<span class="eh">Intuit plans consumption-based pricing for AI/HI services</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The company discussed moving to consumption-based pricing for AI and human-intelligence services, including monetizing accountant and business usage via AI agents and builder capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">introducing consumption-based pricing for AI and human-intelligence services</span>
+<span class="span">monetizing accountant and business usage via AI agents</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-20</span>
+<span class="eh">Assisted experiences positioned as moat vs. pure-AI</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management argued that assisted demand centers on confidence and liability transfer, reiterating structural advantage from AI‑powered human expertise rather than pure software capability.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">assisted demand is about confidence/liability transfer</span>
+<span class="span">“structurally advantaged” via AI-powered human expertise</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-20</span>
+<span class="eh">Workforce actions framed as not AI-driven; org simplification</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management said workforce actions were not about AI, citing post‑integration role reductions and right‑sizing, while reiterating focus on removing layers and coordination-heavy roles.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">actions were not about AI</span>
+<span class="span">removing management layers</span>
+<span class="span">right-sizing Mailchimp</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-20</span>
+<span class="eh">AI-driven expert platform progress; FY26 guide raised</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Intuit highlighted progress on its AI-driven expert platform across growth engines, including mid‑market, and raised FY2026 guidance.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑driven expert platform progress</span>
+<span class="span">strength across growth engines</span>
+<span class="span">raised FY2026 guidance</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Frontier lab partnerships and scaling AI agents</h2>
+<div class='range'>2025-11-18 → 2026-02-26</div>
+<div class='psum'>Intuit deepened its relationship with OpenAI via a multi‑year, $100M+ agreement that both embeds Intuit app experiences inside ChatGPT and expands internal use of OpenAI frontier models and ChatGPT Enterprise—marking a notable distribution and infrastructure commitment. Shortly thereafter, the company announced a multi‑year, ‘game‑changing’ Anthropic partnership to bring custom AI agents to mid‑market customers and to surface Intuit’s financial intelligence inside Anthropic environments.
+Concurrently, earnings commentary emphasized an AI‑native platform strategy, early at‑scale adoption (3M+ clients engaging AI agents), and a reinforced moat tied to domain-specific AI, proprietary data, and human expertise, even as analysts probed data protection and partner concentration risks.</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Earnings: AI‑native platform targets autonomous, done‑for‑you experiences</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated an AI‑native platform strategy to deliver autonomous, done‑for‑you experiences spanning TurboTax, QuickBooks, and Intuit Enterprise Suite.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">AI-native platform</span>
+<span class="span">“autonomous, done-for-you” experiences</span>
+<span class="span">Intuit Enterprise Suite</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">AI agent adoption surpasses 3M clients</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Intuit disclosed that over 3 million clients are engaging with its AI agents, offered as an operating metric signaling early at‑scale adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">more than 3M clients</span>
+<span class="span">engage with Intuit’s AI agents</span>
+<span class="span">operational indicator</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Analysts flag OpenAI/Anthropic partnership risk and data protection</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">On the call, analysts questioned whether partnerships with OpenAI and Anthropic could create competitive risks or erode data moats—described as letting the “fox into the henhouse”—and pressed on protections for proprietary data/models.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">OpenAI/Anthropic</span>
+<span class="span">“fox into the henhouse”</span>
+<span class="span">proprietary data/models remain protected</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Moat assertion: Intuit is a &#x27;category of one&#x27;</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management emphasized differentiation, stating the company is a &#x27;category of one&#x27; amid growing AI partnerships.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">“we are a category of one”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Core strategy: domain-specific AI, proprietary data, and HI remain central</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The CEO framed partnerships as context versus core, reiterating that Intuit’s core advantage remains domain‑specific AI, proprietary data, and human intelligence within regulated, high-stakes decisions.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">domain‑specific AI, proprietary data, and HI</span>
+<span class="span">high‑stakes financial decisions</span>
+<span class="span">partnering as “context vs core”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Moat assertion: &#x27;our moat … remains with us.&#x27;</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Leadership underscored that, despite leveraging external models, Intuit’s moat would remain with the company.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">“our moat … remains with us.”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Monetization math: AI+HI value supports pricing (e.g., ~$900/month)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$900 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CFO outlined monetization levers starting with pricing for value, quantifying benefits such as an accounting agent saving 12–14 hours/month—at ~$75/hour implying $900+ of value.</p>
+<p class="cav">⚠ Illustrative value example; not a realized price point.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">pricing for value</span>
+<span class="span">12–14 hours/month</span>
+<span class="span">$900+ of value</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Pricing outlook: increases expected as AI/HI value proven</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management signaled subscription price increases over time as customers recognize value from combined AI and human‑intelligence offerings, supported by positive willingness‑to‑pay tests.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Expect subscription price increases over time</span>
+<span class="span">combined AI+HI offerings</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0011" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Intuit and Anthropic announce multi‑year partnership for custom AI agents</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Intuit and Anthropic formed a multi‑year partnership to bring custom AI agents to mid‑market businesses, integrate Intuit’s financial intelligence into Anthropic products via MCP, and deploy Claude Code internally, with rollouts starting spring 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">multi-year, game-changing partnership</span>
+<span class="span">Claude Agent SDK</span>
+<span class="span">MCP integrations</span>
+<span class="span">Claude Code</span>
+<span class="span">spring 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-21</span>
+<span class="eh">Q1 FY26 beat; management credits AI momentum</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Following the OpenAI partnership news, Intuit reported a Q1 FY26 beat with raised outlook, citing AI tools driving adoption across products.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">Intuit jumps on Q1 FY26 beat and AI momentum</span>
+<span class="span">Raised outlook for growth</span>
+<span class="span">AI tools driving adoption</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-11-18</span>
+<span class="eh">Intuit–OpenAI multi‑year partnership; $100M+ agreement and ChatGPT distribution</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Intuit and OpenAI entered a multi‑year strategic partnership to make Intuit app experiences available within ChatGPT and deepen use of OpenAI frontier models and ChatGPT Enterprise. The agreement exceeds $100M and supports Intuit’s AI-driven expert platform.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Value disclosed as $100M+; exact ceiling and consumption minimums not specified.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6], web_search_findings[7]</div>
+<span class="span">Multi-year strategic partnership</span>
+<span class="span">available directly within ChatGPT</span>
+<span class="span">$100M+ agreement</span>
+<span class="span">ChatGPT Enterprise</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Multi‑LLM expansion and Google Cloud collaboration</h2>
+<div class='range'>2024-09-04 → 2025-06-30</div>
+<div class='psum'>Intuit broadened GenOS to streamline model evaluation and orchestration, explicitly adding a catalog that includes OpenAI GPT, Anthropic Claude (via Bedrock), Google Gemini, Meta Llama, and other open-source models. This strengthened Intuit’s multi-model hedge and accelerated developer workflows.
+The firm also announced a Google Cloud collaboration for tax-season 2025, integrating Document AI and Gemini to expand done‑for‑you autofill coverage for complex U.S. tax forms, alongside new GenOS agent tooling (e.g., an Agent Starter Kit) and rapid model-onboarding capabilities.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-03</span>
+<span class="eh">GenOS ‘Agent Starter Kit’ and rapid model onboarding (Amazon Nova via Bedrock)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Intuit shipped GenOS enhancements including an Agent Starter Kit, expanded GenStudio sandbox, and the addition of Amazon Nova via AWS Bedrock, highlighting the ability to add new and updated LLMs in days.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Agent Starter Kit</span>
+<span class="span">GenStudio - A sandbox for developers</span>
+<span class="span">Amazon Nova via AWS Bedrock</span>
+<span class="span">add new and updated LLMs to GenStudio in just days</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-04-09</span>
+<span class="eh">Intuit collaborates with Google Cloud to expand TurboTax autofill</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">At Google Cloud Next ’25, Intuit announced integration of Google Cloud Document AI and Gemini models in GenOS to expand done‑for‑you autofill across ten common U.S. tax forms, including 1099 variants and Form 1040 schedules.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Google Cloud</span>
+<span class="span">Gemini models</span>
+<span class="span">Document AI</span>
+<span class="span">ten most common U.S. tax forms (1099, 1040)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="anthropic_claude google_gemini_deepmind meta_llama openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-09-04</span>
+<span class="eh">GenOS adds AI Workbench, LLM Leaderboard, and broad model catalog</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">meta_llama</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Intuit unveiled major GenOS enhancements, including an LLM Leaderboard and GenStudio access to commercial and open-source LLMs such as Anthropic Claude via AWS Bedrock, Google Gemini, Meta Llama, and OpenAI GPT, to speed evaluation and deployment.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">GenOS AI Workbench</span>
+<span class="span">LLM Leaderboard</span>
+<span class="span">Anthropic Claude via AWS Bedrock</span>
+<span class="span">Gemini from Google Cloud</span>
+<span class="span">LLaMa from Meta AI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>GenOS foundation and early GenAI integrations</h2>
+<div class='range'>2023-04-10 → 2024-08-31</div>
+<div class='psum'>Intuit began operationalizing generative AI across its product suite by integrating GPT-based capabilities into Mailchimp and by formalizing its in‑house AI platform, GenOS, with OpenAI models. The company publicly framed GenOS as a developer platform to accelerate secure, personalized GenAI experiences using both Intuit-specific LLMs and commercial models.
+Through 2024 tax season preparations, Intuit expanded production use of third‑party models, most notably integrating Anthropic’s Claude via Amazon Bedrock into TurboTax experiences to provide simple, contextual explanations at scale. This period established the firm’s multi-provider pathway while concentrating on consumer trust and speed-to-market.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-07-30</span>
+<span class="eh">TurboTax deploys Anthropic Claude via Amazon Bedrock for explanations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">For the 2024 tax season, Intuit used Anthropic’s Claude through Amazon Bedrock in TurboTax to provide clear, contextual explanations of tax calculations, scaled to millions with real-time accuracy checks.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Anthropic’s Claude</span>
+<span class="span">Amazon Bedrock</span>
+<span class="span">millions of customers</span>
+<span class="span">beginning in January 2024</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-09-06</span>
+<span class="eh">Intuit introduces GenAI assistant across products, powered by GenOS</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Intuit introduced a generative AI assistant running on GenOS, leveraging OpenAI GPT‑3.5/4 via Azure and AWS Bedrock for multi‑model support within TurboTax, Credit Karma, QuickBooks, and Mailchimp.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Intuit Assist</span>
+<span class="span">GenOS is built on four elements</span>
+<span class="span">GPT-3.5 and GPT-4</span>
+<span class="span">AWS Bedrock</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-06-29</span>
+<span class="eh">Intuit announces work with OpenAI to supercharge GenOS</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Intuit disclosed it is working with OpenAI to accelerate GenAI application development on GenOS, combining Intuit’s financial LLMs with GPT‑3.5/4.0 to build secure, personalized experiences across its fintech products.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">working with OpenAI</span>
+<span class="span">Intuit GenOS</span>
+<span class="span">GPT 3.5 and 4.0</span>
+<span class="span">proprietary Intuit generative AI operating system (GenOS)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-04-10</span>
+<span class="eh">Mailchimp launches GPT-powered Email Content Generator (beta)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Intuit’s Mailchimp business introduced a beta Email Content Generator using GPT AI to help marketers rapidly create campaign copy, reflecting the firm’s earliest customer-facing GenAI integration.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Email Content Generator (beta)</span>
+<span class="span">provides GPT AI technology</span>
+<span class="span">text generation tools like ChatGPT</span>
+<span class="span">generate entire emails in only a few clicks</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of the $100M+ OpenAI agreement reflects minimum model inference commitments versus distribution/experimentation value inside ChatGPT?</li>
+<li>How will consumption-based pricing for AI/HI services (announced FY26 Q3) be rolled out by product, and what is the expected ARPU and gross-margin impact?</li>
+<li>What share of Intuit Assist and agentic workloads run on OpenAI vs. Anthropic vs. Google/Meta/other LLMs within GenOS today?</li>
+<li>What are the concrete SLAs, data residency terms, and audit rights in the OpenAI and Anthropic multi-year agreements?</li>
+<li>How much incremental conversion or time-saved lift did Google Document AI + Gemini deliver in the 2025 tax season versus prior-year baselines?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>The OpenAI agreement is disclosed as $100M+ without detailed unit economics or minimums; magnitude recorded at the stated threshold.</li>
+<li>Provider mix within GenOS is evolving; some sources reference model families without specific workload shares.</li>
+<li>News summaries may compress context; precise restructuring cost sizing was not provided in the cited item.</li>
+<li>Some quoted spans include smart quotes or en dashes from source materials; exact substrings retained.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

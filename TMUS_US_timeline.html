@@ -1,0 +1,505 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>TMUS US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>T-Mobile US Inc <span class='sub'>(TMUS US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.421</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>19 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 19</span>
+<span class='chip'>web-only (unverified): 10</span>
+<span class='chip'>single source: 8</span>
+<span class='chip'>web-only (verified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Operationalization and scaling of AI in care and network</h2>
+<div class='range'>2026-04-17 → 2026-06-04</div>
+<div class='psum'>TMUS addressed public speculation about AI in its social care team (T-Force), stating it does not use AI in social care amid questions about a “virtual agent” survey item. In Q1’26 disclosures, management highlighted chatbot containment of roughly 60% of customer questions, early steps to embed compute into the network leveraging “fallow compute,” and a collaboration to connect Figure AI’s F03 robots to T-Mobile’s 5G Advanced network.
+On June 4, TMUS introduced Dynamic CX, an AI-powered network optimization capability that anticipates and adapts to shifting demand at large live events by analyzing public event signals and online activity to prepare and tune the network in near real time.</div>
+<div class="event t-web_only_unverified" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">TMUS debuts Dynamic CX: AI-powered live-event network optimization</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">T-Mobile introduced Dynamic CX, an AI-powered network optimization capability that anticipates mass gatherings from public signals and adapts network resources in near real time to keep customers connected during high-demand events.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Dynamic CX</span>
+<span class="span">AI-powered network optimization capability</span>
+<span class="span">adapt automatically in near real time</span>
+<span class="span">identify potential mass gatherings</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Chatbot containment reaches ~60% of customer questions</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TMUS reported that its AI/digital chatbot contains approximately 60% of customer questions, contributing to a multi-year efficiency program.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">chatbot containment at ~60% of customer questions</span>
+<span class="span">multi‑year efficiency program.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Figure AI F03 robots to connect over T-Mobile’s 5G Advanced network</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TMUS noted a partnership step with Figure AI to connect F03 robots to T-Mobile’s 5G Advanced network, highlighting the carrier’s role in enabling physical AI use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Figure AI</span>
+<span class="span">F03 robots</span>
+<span class="span">T‑Mobile’s 5G Advanced network</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">TMUS building compute into the network; leveraging “fallow compute”</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described embedding compute into the network and exploiting ‘fallow compute’ combined with low-latency advantages, indicating a strategic push toward distributed edge computing.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">building compute into the network</span>
+<span class="span">fallow compute</span>
+<span class="span">low‑latency advantage</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-17</span>
+<span class="eh">TMUS denies AI use in T-Force social care amid customer speculation</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Following customer speculation that T-Force responses were AI-generated, TMUS stated it does not use AI in social care. The episode underscores reputational sensitivity around AI deployment in customer support.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">T-Mobile denial</span>
+<span class="span">We don’t use AI in our social care</span>
+<span class="span">virtual agent</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Network-integrated AI and formal AI investment posture</h2>
+<div class='range'>2026-02-11 → 2026-03-31</div>
+<div class='psum'>On February 11, 2026, TMUS launched what it called the first real-time agentic AI platform built directly into a wireless network, starting with Live Translation for 50+ languages without apps. Coverage indicated T-Mobile uses several companies to power translation and follows a multi-model approach. The same day, management outlined AI economics and timelines in its Q4’25 release: ~$3B incremental Core Adjusted EBITDA from digitalization/AI by 2027 vs 2025, AI-RAN field trials toward late 2026 following NVIDIA lab progress, and no edge or AI-RAN revenue assumed in the 2026–2027 plan amid evolving privacy/AI regulatory risks.
+By mid-March, NVIDIA and TMUS showcased physical AI applications on AI-RAN-ready infrastructure using Blackwell-based servers and the NVIDIA Metropolis Blueprint, with early municipal assessment in San Jose. Separately, TMUS indicated Google One subscriptions would migrate off T-Mobile billing and support on March 31, 2026, signaling a shift in distribution for a Google service.</div>
+<div class="event t-web_only_unverified" id="E0014" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-31</span>
+<span class="eh">Google One subscriptions migrate off T-Mobile billing/support</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">TMUS announced that, effective March 31, 2026, billing and support for Google One would move to Google, ending T-Mobile’s role in billing for the service. This reduces TMUS’s distribution involvement for a Google subscription offering.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">new Google One enrollment through T-Mobile</span>
+<span class="span">Starting March 31, 2026</span>
+<span class="span">will move to Google</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">NVIDIA and TMUS pilot physical AI on AI-RAN-ready edge infrastructure</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TMUS and NVIDIA, with Nokia and an ecosystem of developers, demonstrated physical AI applications using Blackwell-based RTX PRO 6000 Server Edition and the NVIDIA Metropolis Blueprint for video search and summarization at the edge, with the City of San Jose among early assessors.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">RTX PRO 6000 Blackwell Server Edition</span>
+<span class="span">physical AI applications at the edge</span>
+<span class="span">NVIDIA Metropolis Blueprint</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">TMUS targets incremental ~$3B Core Adj. EBITDA from AI/digitalization by 2027</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management guided to approximately $3 billion incremental Core Adjusted EBITDA from digitalization and AI by end of 2027 vs 2025, framing AI as a material efficiency and margin lever.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">incremental ~$3B Core Adjusted EBITDA</span>
+<span class="span">by end of 2027 vs. 2025</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">AI RAN: lab progress (NVIDIA/Nokia/Ericsson); field trials targeted end-2026</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Following lab progress that included voice calls over NVIDIA platforms with Nokia and Ericsson, TMUS expects AI RAN field trials toward the end of 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">voice calls over NVIDIA platforms with Nokia/Ericsson</span>
+<span class="span">field trials are expected toward the end of 2026.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">No edge/AI RAN revenue assumed through 2027 in company plan</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">TMUS stated that its outlook is largely core and includes nothing in the plan regarding edge or AI RAN revenue through 2027, signaling prudence on near-term monetization.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">majority... core</span>
+<span class="span">nothing in the plan with respect to edge or AI RAN</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">AI RAN field trials late-2026 not assumed in 2026–2027 plan</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">TMUS reiterated AI RAN field trials are targeted toward late 2026 but noted such activity is not assumed in the 2026–2027 plan.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">targeted toward late 2026</span>
+<span class="span">not assumed in 2026–2027 plan.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">Regulatory risk flagged: evolving privacy/AI rules may alter investments</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">TMUS cautioned that evolving privacy and AI regulations could impact investment cadence and returns, underscoring compliance and policy uncertainty.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">evolving privacy/AI rules</span>
+<span class="span">may alter investment cadence and returns.</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-11</span>
+<span class="eh">T-Mobile unveils network-integrated real-time agentic AI; Live Translation</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TMUS launched what it calls the world’s first real-time agentic AI platform integrated directly into its wireless network, debuting with Live Translation across 50+ languages. Reporting also noted TMUS is using several companies for translation, reflecting a multi-model approach.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5], web_search_findings[6], web_search_findings[7]</div>
+<span class="span">real-time agentic AI platform built directly into a wireless network</span>
+<span class="span">Live Translation</span>
+<span class="span">50+ languages</span>
+<span class="span">using several companies for live translation</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Consumer AI and OpenAI collaboration; AI-RAN initiative</h2>
+<div class='range'>2024-08-22 → 2024-11-10</div>
+<div class='psum'>TMUS brought flagship consumer AI to its device portfolio as Pixel 9 with Gemini and Google One AI Premium trials launched on T-Mobile. Concurrently, the company unveiled a multi-year collaboration with OpenAI to build IntentCX, an intent-driven AI decisioning platform slated for a 2025 launch, aiming to transform customer support beyond traditional chatbots. Reporting later suggested the OpenAI deal could total around $100 million over three years, though this figure was not officially disclosed by TMUS.
+In parallel, T-Mobile announced an AI-RAN Innovation Center with NVIDIA, Ericsson, and Nokia, placing AI at the core of future radio access networks and framing a path for edge-hosted AI workloads on telecom infrastructure.</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-11-10</span>
+<span class="eh">Report: TMUS to pay about $100M to OpenAI over three years for IntentCX</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">A third-party report indicated TMUS would pay OpenAI around $100 million over three years as part of the IntentCX partnership. TMUS did not disclose commercial terms; the report suggested it could be among OpenAI’s larger enterprise contracts.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Single-source report citing a paywalled article; terms not confirmed by TMUS or OpenAI.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">around $100 million over the next three years</span>
+<span class="span">potentially one of the largest contracts OpenAI has struck with a business customer.</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-09-18</span>
+<span class="eh">TMUS and OpenAI announce IntentCX multi-year AI decisioning platform</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">T-Mobile and OpenAI disclosed a multi-year agreement to co-build IntentCX, an intent-driven AI-decisioning platform with secure access to TMUS data, with launch targeted for 2025. The initiative goes beyond chatbots toward proactive, real-time customer actioning.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 4 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[1], web_search_findings[3], web_search_findings[4]</div>
+<span class="span">multi-year agreement</span>
+<span class="span">intent-driven AI-decisioning platform</span>
+<span class="span">IntentCX</span>
+<span class="span">Set to launch in 2025</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-09-18</span>
+<span class="eh">TMUS forms AI-RAN Innovation Center with NVIDIA, Ericsson and Nokia</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">T-Mobile announced a collaboration with NVIDIA, Ericsson and Nokia to create an AI-RAN Innovation Center in Bellevue, focusing on integrating AI into RAN performance and enabling third-party AI workloads at the edge.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">AI-RAN Innovation Center</span>
+<span class="span">NVIDIA, Ericsson and Nokia</span>
+<span class="span">AI will not only power RAN performance</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-08-22</span>
+<span class="eh">T-Mobile retails Google Pixel 9 with Gemini and AI services</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">T-Mobile promoted Pixel 9 and Pixel 9 Pro devices emphasizing built-in Gemini AI and bundled Google One AI Premium trials. This expands distribution of Google’s consumer AI assistant across TMUS’s device lineup.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[15], web_search_findings[16]</div>
+<span class="span">Pixel 9 with Gemini</span>
+<span class="span">Gemini – your AI assistant built in.</span>
+<span class="span">Google One AI Premium</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundation: Edge partnerships and enterprise AI extensions</h2>
+<div class='range'>2023-06-14 → 2024-03-14</div>
+<div class='psum'>T-Mobile began laying its AI and edge foundation by partnering with Google Cloud to pair its 5G Advanced Network Solutions (ANS) with Google Distributed Cloud Edge. This positioned TMUS to support low-latency, edge-hosted applications for enterprise use cases across retail, manufacturing, logistics, and smart cities.
+In early 2024, TMUS deepened its enterprise AI posture through Dialpad, extending an exclusive partnership and bringing Dialpad’s LLM-driven Ai Recaps to T-Mobile business customers, signaling practical AI deployment in communications workflows.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-03-14</span>
+<span class="eh">Dialpad and T-Mobile extend exclusive partnership; launch Ai Recaps</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Dialpad and T-Mobile extended their exclusive U.S. partnership for three years and introduced Ai Recaps to business customers. The feature is powered by Dialpad’s proprietary DialpadGPT LLM, adding AI-generated call summaries within TMUS’s business communications offering.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[18]</div>
+<span class="span">Ai Recaps</span>
+<span class="span">three-year extension of the exclusive partnership</span>
+<span class="span">DialpadGPT</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-06-14</span>
+<span class="eh">T-Mobile and Google Cloud integrate 5G ANS with Google Distributed Cloud Edge</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">T-Mobile and Google Cloud announced a collaboration to pair T-Mobile’s 5G Advanced Network Solutions with Google Distributed Cloud Edge, enabling enterprises to explore next-gen connected experiences at the edge. This expands TMUS’s enterprise solutions with Google’s edge infrastructure.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[12], web_search_findings[13]</div>
+<span class="span">T-Mobile and Google Cloud</span>
+<span class="span">Google Distributed Cloud Edge</span>
+<span class="span">5G Advanced Network Solutions (ANS)</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What exact vendors and models power TMUS’s Live Translation service, given it is “using several companies for live translation,” and how are models selected per call?</li>
+<li>Will IntentCX launch on time in 2025, and what operational KPIs (containment, CSAT, cost-to-serve) will TMUS disclose?</li>
+<li>Are the reported ~$100M/3-year commercial terms with OpenAI accurate, and how are costs allocated across Care vs. other CX initiatives?</li>
+<li>What concrete outcomes and timelines will emerge from AI-RAN field trials slated for late 2026, and what is the monetization path for AI at the network edge?</li>
+<li>How will TMUS govern data access and privacy for IntentCX and network-integrated AI (e.g., retention, training use, and cross-border processing)?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>The reported ~$100M OpenAI contract value stems from a single third-party report and has not been publicly confirmed by TMUS or OpenAI.</li>
+<li>Claims of “world’s first” or similar superlatives in marketing materials may not be independently verifiable and could reflect positioning rather than industry consensus.</li>
+<li>Edge compute and AI-RAN initiatives are early-stage; management explicitly noted no edge/AI-RAN revenue in the 2026–2027 plan.</li>
+<li>Support documentation (e.g., Google One billing changes) may evolve; customers’ migration experiences could vary.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

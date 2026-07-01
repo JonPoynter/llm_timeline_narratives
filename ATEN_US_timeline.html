@@ -1,0 +1,484 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>ATEN US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>A10 Networks Inc <span class='sub'>(ATEN US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.37</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>18 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 1</span>
+<span class='chip'>web 6</span>
+<span class='chip'>single source: 12</span>
+<span class='chip'>web-only (verified): 6</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>AI security acceleration, customer concentration risk, and OpenAI TAC</h2>
+<div class='range'>2026-04-28 → 2026-06-17</div>
+<div class='psum'>In Q1 2026, management cited strong AI‑related demand across performance and security use cases with enterprise growth outpacing service providers as AI workloads blur historical segments. A large enterprise AI application deal highlighted non‑DDoS use cases, while commentary noted Americas AI‑oriented customers leaning in. However, risks surfaced: a single AI‑infrastructure customer represented a high percentage of revenue, and DDR memory supply was not expected to improve for at least four quarters, implying potential volatility.
+Strategically, A10 acquired TrojAI to deepen AI application and agent security across build‑time red teaming and runtime protections. Shortly after, A10 joined OpenAI’s Trusted Access for Cyber pilot, using GPT‑5.5 to advance defensive research and committing to share findings and safety insights with OpenAI, further aligning A10 with frontier‑AI security initiatives.</div>
+<div class="event t-web_only_verified" id="E0018" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-17</span>
+<span class="eh">A10 joins OpenAI Trusted Access for Cyber; to use GPT‑5.5</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">A10 was granted access to OpenAI’s Trusted Access for Cyber pilot and will use GPT‑5.5 for AI red teaming, malware analysis, DDoS and threat investigations, and AI security hardening, sharing findings and safety insights with OpenAI.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Pilot access; scope and duration may evolve.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Trusted Access for Cyber</span>
+<span class="span">granted access</span>
+<span class="span">GPT-5.5</span>
+<span class="span">pilot initiative</span>
+<span class="span">share findings</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">A10 acquires TrojAI to expand AI security roadmap</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">A10 acquired TrojAI to strengthen AI application and agent security via build‑time red teaming and runtime protections, advancing sovereign AI security capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Purchase price and terms not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">acquired TrojAI</span>
+<span class="span">secure, test and govern AI applications and agentic workflows</span>
+<span class="span">sovereign AI security</span>
+<span class="span">red teaming</span>
+<span class="span">at runtime</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: Strong AI‑related demand across performance and security</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported strong AI‑related demand driving both performance and security use cases, with security‑led revenue exceeding long‑term targets.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">strong AI‑related demand</span>
+<span class="span">performance and security</span>
+<span class="span">security‑led revenue continues to exceed long‑term targets</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: Enterprise growth (56% of revenue) outpaced service providers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Enterprise growth reached 56% of revenue and outpaced service providers as AI workloads increasingly blur historical segment lines.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Enterprise growth (56% of revenue)</span>
+<span class="span">outpaced Service Provider</span>
+<span class="span">AI workloads blur</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: Large AI‑infrastructure customer concentration risk disclosed</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management stated that a single AI‑infrastructure customer represented a high percentage of Q1 revenue, requiring prioritized inventory and engineering allocation, creating potential quarter‑to‑quarter volatility if deployment pace changes.</p>
+<div class="ev-ch">channels: <span class="chchip">ecosystem_control_loss</span></div>
+<p class="cav">⚠ Customer not named; magnitude not quantified.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">a single AI‑infrastructure customer represented a high percentage</span>
+<span class="span">prioritized inventory and engineering allocation</span>
+<span class="span">quarter‑to‑quarter volatility</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: DDR supply constraints expected for at least four quarters</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management noted DDR memory supply would not improve for at least four quarters, signaling ongoing supply‑chain pressure for key components.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">not expected to get better for at least four quarters</span>
+<span class="span">(DDR supply)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: Willing to trade margin for faster growth with EPS expansion</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">A10 indicated it would pursue faster growth opportunities if EPS continues to expand, implying potential reinvestment trade‑offs to capture AI‑driven demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">significantly faster growth</span>
+<span class="span">delivering EPS expansion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: No pull‑ins; customers rapidly building out capacity</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management clarified that results were not driven by pull‑ins, and customers are building out capacity quickly, indicating robust underlying demand.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">It was not pull‑ins to overbook capacity</span>
+<span class="span">building out things fast.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: Large enterprise AI application deal (not DDoS)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">A10 closed a large enterprise AI application deal not related to DDoS, underscoring convergence between enterprise and service‑provider architectures in AI workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Deal value not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">The large deal was an enterprise AI application (not DDoS)</span>
+<span class="span">convergence of enterprise and service‑provider architectures.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: Regional AI demand mixed; Americas strong, Japan cautious</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Americas AI‑oriented customers are leaning in; EMEA mixed with Middle East harder due to conflicts; Japan cautious with spend push‑outs tied to macro/ROI; focus on customer retention.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Americas AI‑oriented customers are leaning in</span>
+<span class="span">Japan cautious with spend push‑outs</span>
+<span class="span">focus on customer retention</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: Deferred revenue approximately $147.2M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$147M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Deferred revenue totaled about $147.2 million as of March 31, 2026, reflecting the services and support backlog trailing product sales.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Deferred revenue totaled approximately $147.2M</span>
+<span class="span">at March 31, 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: Ongoing supply chain pressure on DDR components</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management noted supply chain cost/availability pressure for specific components, notably DDR memory, which the company is actively managing.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Supply chain cost/availability pressure</span>
+<span class="span">notably DDR memory</span>
+<span class="span">actively managing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: Services revenue trails product by roughly four quarters</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">A10 reiterated that services revenue typically trails product by around four quarters due to renewal cycles, with renewals remaining stable.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Services revenue typically trails product by roughly four quarters</span>
+<span class="span">renewals stable.</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem risk commentary and hyperscaler engagement</h2>
+<div class='range'>2025-02-13 → 2025-06-25</div>
+<div class='psum'>In early 2025 A10 published a cautionary analysis emphasizing AI adoption risks, citing security vulnerabilities associated with certain models and contrasting them with better-guardrailed systems. This reflected A10’s security-first stance amid rapid AI uptake by enterprises.
+By mid‑2025 A10 disclosed it had been selected by Microsoft to help protect mission‑critical generative AI workloads, indicating traction with hyperscale AI infrastructure deployments and reinforcing A10’s role in safeguarding large-scale AI systems.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-25</span>
+<span class="eh">A10 selected by Microsoft to protect mission‑critical AI infrastructure</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">A10 announced its selection by Microsoft to help secure mission‑critical generative AI workloads, providing advanced detection and mitigation tailored for hyperscale AI deployments. This underscores demand for A10’s capabilities in large AI environments.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ No financial terms or duration disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">selection by Microsoft</span>
+<span class="span">mission-critical generative AI workloads</span>
+<span class="span">hyperscale AI deployments</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-02-13</span>
+<span class="eh">A10 highlights AI adoption risks; cites DeepSeek vulnerabilities</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">A10 warned against rushing AI adoption, pointing to identified security risks in DeepSeek and contrasting them with stronger guardrails in models from OpenAI and Google. The post underlined the need for robust security practices in AI deployments.</p>
+<p class="cav">⚠ Blog commentary; not a customer contract or product GA disclosure.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">DeepSeek</span>
+<span class="span">security risks and vulnerabilities</span>
+<span class="span">OpenAI’s latest models</span>
+<span class="span">Gemini’s architecture</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Cloud platform integration and early AI posture</h2>
+<div class='range'>2023-11-07 → 2024-11-26</div>
+<div class='psum'>A10 Networks began formalizing its cloud distribution and integration posture by expanding Thunder ADC availability to Google Cloud Platform via the Google Cloud Marketplace in late 2023. Around the same time, broader AI ecosystem volatility at OpenAI underscored potential provider risk signals.
+By late 2024, A10 advanced its AI security strategy, announcing expansion of its infrastructure and security portfolio to include an AI firewall and LLM safety tooling targeting production AI application risks. This positioned A10’s offerings to address emerging LLM safety and operational concerns across customer environments.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-11-26</span>
+<span class="eh">A10 unveils AI firewall and LLM safety tooling</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">A10 announced expansion of its high‑performance infrastructure and security portfolio to include an AI firewall and LLM safety tooling aimed at securing AI applications in production and addressing LLM safety concerns.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">AI firewall</span>
+<span class="span">LLM safety tooling</span>
+<span class="span">AI applications in production</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-11-21</span>
+<span class="eh">OpenAI employee revolt highlights ecosystem risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Approximately 770 OpenAI employees threatened to resign amid leadership turmoil. While not directly tied to A10, the event signaled potential instability at a major AI provider relevant to A10’s future AI security integrations and customer concerns.</p>
+<p class="cav">⚠ Ecosystem signal; no direct contractual linkage to A10 disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[0]</div>
+<span class="span">~770 OpenAI employees</span>
+<span class="span">threatening to quit</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-11-07</span>
+<span class="eh">A10 Thunder ADC made available on Google Cloud Marketplace</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A10 expanded Thunder ADC availability to Google Cloud Platform, enabling customers to deploy via the Google Cloud Marketplace with unified APIs across hybrid environments. This strengthens distribution and integration with Google’s cloud ecosystem.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Google Cloud Platform (GCP)</span>
+<span class="span">Google Cloud Marketplace</span>
+<span class="span">A10 Thunder® ADC</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the magnitude, scope, and duration of the Microsoft engagement to protect mission-critical AI workloads (contract value, term, and deployment footprint)?</li>
+<li>Who is the single AI-infrastructure customer representing a high percentage of Q1 2026 revenue, and how concentrated is this exposure by percentage?</li>
+<li>What were the financial terms and integration milestones of the TrojAI acquisition (purchase price, earnouts, expected revenue contribution)?</li>
+<li>What is the precise scope, data-sharing terms, and duration of A10’s participation in OpenAI’s Trusted Access for Cyber pilot, and are there commercialization paths tied to GPT-5.5 usage?</li>
+<li>How material is Google Cloud Marketplace distribution to A10’s AI-related product revenue mix and growth trajectory?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several disclosures are company-authored press releases or blog posts without independent third-party corroboration.</li>
+<li>OpenAI TAC participation is described as a pilot; access scope and continuity may depend on ongoing program evaluation.</li>
+<li>No financial terms were disclosed for the Microsoft selection or the TrojAI acquisition, limiting magnitude assessment.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,612 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>PCG US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>PG&amp;E Corp <span class='sub'>(PCG US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.395</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>25 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 9</span>
+<span class='chip'>single source: 16</span>
+<span class='chip'>web-only (verified): 7</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Acceleration: Cluster 26 load, CAISO awards, and customer program pilots</h2>
+<div class='range'>2026-04-23 → 2026-06-10</div>
+<div class='psum'>PG&amp;E’s 26Q1 update detailed stronger large-load signals: Cluster 26 interest exceeding 10 GW with 4.6 GW in final engineering, and expectations for ~1.8 GW online by 2030 contributing 1–2% bill reductions. PG&amp;E won 25 of 26 CAISO TPP 2025/2026 projects (~$4.16B), folded into the ~$73B 2026–2030 plan, and reaffirmed no new common equity and a ~$12.4B 2026 capex plan. Management acknowledged schedule, cost, and permitting risks from connecting large data-center loads but pursued parallel engineering to compress timelines.
+Customer-facing innovation continued. A PolyAI case study highlighted a generative voice agent (“Peggy”) handling outage calls and authentication, citing 35,000 labor hours saved. Separately, GM Energy announced vehicle-to-grid functionality at scale, naming PG&amp;E as a partner and targeting 52,000 GM EVs providing grid services in PG&amp;E territory by 2030.</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">GM Energy activates V2G; targets 52,000 GM EVs for grid services in PG&amp;E territory by 2030</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">GM announced vehicle-to-grid capability and named PG&amp;E as a utility partner, aiming for 52,000 GM EVs to provide grid services in PG&amp;E territory by 2030, complementing data-center-driven load with flexible customer-side resources.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">vehicle‑to‑grid (V2G) capability</span>
+<span class="span">PG&amp;E and DTE as utility partners</span>
+<span class="span">52,000 GM EVs</span>
+<span class="span">in PG&amp;E territory by 2030</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">PolyAI voice agent “Peggy” handles outages and routing; 35,000 labor hours saved</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">A PolyAI case study reported PG&amp;E’s generative voice agent authenticates customers, scales during outages, and routes accurately. The deployment saved 35,000 labor hours and is positioned as the first generative deployment in a regulated industry.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<p class="cav">⚠ Vendor case study; limited financial detail and independent corroboration.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">35,000 labor hours saved</span>
+<span class="span">PolyAI’s agent, Peggy</span>
+<span class="span">first generative deployment in a regulated industry</span>
+<span class="span">authenticates customers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: Cluster 26 shows 10+ GW interest; 4.6 GW in FE; ~1.8 GW online by 2030</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PG&amp;E reported Cluster 26 interest of 10+ GW with 4.6 GW in final engineering and reiterated expectations that roughly 1.8 GW will be online by 2030, supporting 1–2% customer bill reductions tied to that load.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Cluster 26 interest of 10+ GW</span>
+<span class="span">final engineering at 4.6 GW</span>
+<span class="span">~1.8 GW online by 2030</span>
+<span class="span">1%–2% customer bill reduction</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: PG&amp;E wins 25 of 26 CAISO TPP projects totaling ~$4.16B</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4.2B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CAISO awarded PG&amp;E 25 of 26 transmission projects in the 2025/2026 planning cycle, totaling approximately $4.16B, all included in the company’s ~$73B plan.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">25 of 26 projects for the 2025/2026 cycle</span>
+<span class="span">totaling approximately $4.16B</span>
+<span class="span">already included in the $73B plan</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: ~$73B five-year plan with ≥$5B additional opportunities</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$73.0B · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">PG&amp;E reiterated a ~$73B five-year plan for 2026–2030, noting at least ~$5B of additional customer-beneficial opportunities within the framework.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">five‑year (2026–2030) rate base ~$73B</span>
+<span class="span">at least ~$5B of additional customer‑beneficial opportunities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: No new common equity planned across 2026–2030</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">PG&amp;E maintained its financing plan to support capital investment without issuing new common equity from 2026 to 2030 while targeting mid-teens FFO/Total Debt and ratings progression.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">without issuing new common equity (2026–2030)</span>
+<span class="span">mid‑teens FFO/Total Debt</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: 2026 capex plan of ~$12.4B</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$12.4B · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">PG&amp;E disclosed a 2026 capex plan of approximately $12.4B within its multi-year framework and emphasized ongoing O&amp;M reduction targets.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">2026 capex plan of ~$12.4B</span>
+<span class="span">continued O&amp;M cost‑reduction program</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: Risk flagged on connecting large data-center loads</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management warned that delivering upgrades while connecting large data-center loads introduces schedule, cost, permitting, and supply-chain risks that could pressure affordability and earnings trajectory.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">connecting large data‑center loads—poses schedule, cost, permitting, and supply‑chain risks</span>
+<span class="span">could affect affordability targets and earnings trajectory</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: Cluster 26 engineering parallel-processing to accelerate timelines</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PG&amp;E plans parallel-processing of Cluster 26 engineering for the next 6–8 months to speed shared-infrastructure solutions and diversify siting beyond Silicon Valley.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">engineering parallel-processing over the next 6–8 months</span>
+<span class="span">diversified siting beyond Silicon Valley</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Financial plan and regulatory context amid accelerating large-load interconnections</h2>
+<div class='range'>2026-02-12 → 2026-02-13</div>
+<div class='psum'>PG&amp;E’s 25Q4 update detailed a ~$73B five-year capital plan, no new common equity through 2030, and a ~3.6 GW data-center pipeline in final engineering—about half expected online by 2030. Management also added a Chief Commercial Officer to accelerate large-load engagement and flagged execution risks across the multi-year plan and interconnections.
+In parallel, a CPUC proceeding filing by an intervenor disclosed limited use of OpenAI ChatGPT 5.0 for supporting analyses (with manual validation), underscoring AI’s presence in the regulatory process though not as a PG&amp;E system.</div>
+<div class="event t-web_only_unverified" id="E0016" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-02-13</span>
+<span class="eh">CPUC GRC intervenor discloses use of OpenAI ChatGPT 5.0 for support analysis</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">In PG&amp;E’s 2027 GRC proceeding, the Mussey Grade Road Alliance disclosed using OpenAI ChatGPT 5.0 for supporting tasks (e.g., equations and searches), with manual validation and no AI-written testimony. This underscores AI’s presence in the regulatory process, though not as a PG&amp;E internal system.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Third-party intervenor disclosure; not a PG&amp;E deployment.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">OpenAI ChatGPT 5.0</span>
+<span class="span">No testimony was written using AI.</span>
+<span class="span">validated manually to ensure accuracy</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">25Q4: ~3.6 GW of data-center projects in final engineering</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported ~3.6 GW of data-center projects in final engineering as of the call and reiterated expectations for rate-reducing load growth from these large-load interconnections over time.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">~3.6 GW of data-center projects in final engineering</span>
+<span class="span">management expects rate‑reducing load growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">25Q4: ~1.8 GW expected online by 2030 (about half the FE pipeline)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PG&amp;E quantified that roughly half of the ~3.6 GW data-center load in final engineering is expected online by 2030—about 1.8 GW—refining prior expectations about timing.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">about half of the ~3.6 GW</span>
+<span class="span">expected online by 2030 (~1.8 GW)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">25Q4: Financing plan with no new common equity through 2030</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">PG&amp;E reaffirmed investment-grade targets and a financing plan with no new common equity through 2030, supporting sustained capital deployment for growth and reliability.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">no new common equity through 2030;</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">25Q4: ~$73B five-year capital plan disclosed</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$73.0B · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">Management highlighted a five-year capital plan of approximately $73 billion, with potential incremental FERC-jurisdictional capital, to meet reliability, safety, and large-load interconnection needs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">five‑year capital plan of ~$73B</span>
+<span class="span">potential incremental FERC‑jurisdictional capital</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">25Q4: Chief Commercial Officer hired for large-load engagement</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PG&amp;E added a Chief Commercial Officer to accelerate engagement with large-load and commercial customers, aligning organization and execution to the data-center pipeline.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Hired a Chief Commercial Officer</span>
+<span class="span">accelerate large-load/commercial engagement</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">25Q4: Execution risk flagged on ~$73B plan and 3.6 GW interconnections</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">PG&amp;E cautioned that executing the ~$73B multi-year plan and large-load interconnections presents schedule and permitting risks that could defer returns and affect the affordability thesis.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">A ~$73B multi‑year capital plan</span>
+<span class="span">a 3.6 GW large‑load pipeline</span>
+<span class="span">schedule or permitting slippage could defer returns</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">25Q4: Incremental ~$5B prioritized for affordability and new load</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management stated a preference to apply any incremental ~$5B within the plan to affordability-accelerating projects tied to new load, rather than expanding the plan size.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">incremental ~$5B capital</span>
+<span class="span">affordability-accelerating projects tied to new load</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">25Q4: Load growth embedded in 0–3% bill trajectory</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PG&amp;E indicated load growth is a key lever, with the 0–3% customer bill trajectory reflecting contributions from data centers expected to come online between 2026 and 2030.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">0–3% bill trajectory</span>
+<span class="span">projected to begin operations between 2026 and 2030</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Operational AI adoption and localized interconnection delivery</h2>
+<div class='range'>2025-09-24 → 2026-01-22</div>
+<div class='psum'>PG&amp;E broadened enterprise AI usage and demonstrated tangible delivery against San Jose interconnection commitments. In September 2025, the Service Planning AI Companion began daily use across the Service Planning and Design team, saving over 1,400 hours in its first month and targeting up to $30 million in savings over two years. In November 2025, executives reiterated machine learning and AI tools across grid operations and preparedness.
+By January 2026, PG&amp;E energized Equinix’s SV12 data center in South San Jose—six months after a historic Implementation Agreement with the city—providing 40 MW through scalable substation upgrades that support additional large-load customers.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-22</span>
+<span class="eh">Equinix SV12 energized; first San Jose data center under historic agreement</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Six months after a historic Implementation Agreement with the City of San Jose, PG&amp;E energized Equinix SV12 in South San Jose. Upgrades at Santa Teresa Substation deliver 40 MW and are designed to be scalable for the next customers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">six months after signing a historic Implementation Agreement</span>
+<span class="span">powered a data center in South San Jose</span>
+<span class="span">Equinix’s new SV12 facility</span>
+<span class="span">SV12 now has access to 40 megawatts of power</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-07</span>
+<span class="eh">AI/ML scaled for grid resilience; planning for 10 GW data-center demand</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PG&amp;E emphasized AI-enabled cameras for smoke detection and ML weather models to predict outages and fire risk. It also outlined plans to serve 10 GW of new data center demand over the next decade, reflecting intensifying AI-related load.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Over 630 high-definition cameras</span>
+<span class="span">AI detects smoke and automates wildfire alerts</span>
+<span class="span">Machine learning weather models predict outages and fire risks</span>
+<span class="span">plans to serve 10 gigawatts of new data center demand</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-09-24</span>
+<span class="eh">Service Planning AI Companion launched, targeting up to $30M in two-year savings</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$30M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">PG&amp;E’s Service Planning and Design team deployed the Service Planning AI Companion for daily use, speeding retrieval of rules and internal standards. It saved over 1,400 hours in its first month, with an estimated savings potential of up to $30 million over two years.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Service Planning AI Companion</span>
+<span class="span">first time an entire PG&amp;E team is routinely using AI every day</span>
+<span class="span">saved the team more than 1,400 hours of search time</span>
+<span class="span">could save the team up to $30 million over the next two years</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational AI deployments and early data-center momentum</h2>
+<div class='range'>2024-11-13 → 2025-06-06</div>
+<div class='psum'>PG&amp;E initiated visible, operational AI deployments and positioned its grid for growing AI-driven electricity demand. In November 2024, the company announced the first on-site generative AI deployment at a U.S. nuclear power plant at Diablo Canyon, implemented with Atomic Canyon and NVIDIA’s AI platform. In parallel, PG&amp;E highlighted its use of AI/ML for wildfire monitoring and situational awareness, expanding an extensive network of AI-enabled cameras and weather stations.
+By late May 2025, PG&amp;E quantified accelerating data-center load growth tied to AI and cloud demand, citing 8.7 GW over the next decade and linking every 1 GW of new demand to potential 1–2% customer bill reductions. The company also advanced grid capacity in San Jose through a Smart Wires project expected to unlock more than 100 MW at Los Esteros substation, with CAISO projecting up to 500 MW of incremental area load.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-06</span>
+<span class="eh">AI-enabled wildfire readiness scaled across cameras and weather stations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Ahead of the 2025 wildfire season, PG&amp;E detailed its AI/ML-enabled situational awareness: nearly 1,600 weather stations (1,400 AI/ML-enabled) and 650+ high-definition wildfire cameras where AI detects smoke and automates alerts, enabling faster response.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">state-wide network of nearly 1,600 weather stations</span>
+<span class="span">1,400 are artificial intelligence (AI) and machine learning enabled</span>
+<span class="span">more than 650 high-definition wildfire cameras</span>
+<span class="span">AI enabled cameras process data and provide automated wildfire notifications</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-05-28</span>
+<span class="eh">Smart Wires project boosts San Jose capacity for data centers</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PG&amp;E and Smart Wires announced deployment of advanced power flow control to mitigate thermal overloads and add more than 100 MW of capacity at Los Esteros substation near new data centers in San Jose. CAISO projected up to 500 MW load increase in the area.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">more than 100 megawatts (MW)</span>
+<span class="span">Los Esteros electric substation</span>
+<span class="span">CAISO projects a load increase of up to 500 MW</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-05-27</span>
+<span class="eh">PG&amp;E cites 8.7 GW decade-long data-center demand, links 1–2% bill reductions per GW</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PG&amp;E projected about 8.7 GW of new data-center demand over 10 years and noted that each additional 1 GW could lower monthly electric bills by 1–2%. The company also referenced 18 new projects totaling ~1.4 GW in final engineering with operations beginning between 2026 and 2030.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">8.7 gigawatts (GW)</span>
+<span class="span">Every 1,000 MW (or 1 GW)</span>
+<span class="span">decrease monthly electric bills by 1-2%</span>
+<span class="span">18 new data center projects totaling approximately 1.4 GW</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-11-13</span>
+<span class="eh">Diablo Canyon launches on-site generative AI with Atomic Canyon and NVIDIA</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PG&amp;E deployed Atomic Canyon’s Neutron Enterprise at Diablo Canyon, marking the first on-site generative AI at a U.S. nuclear plant. The solution runs on NVIDIA’s full-stack AI platform (including Triton and Hopper GPUs) to transform document search and retrieval and improve operational efficiency.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">first on-site generative AI deployment at a U.S. nuclear power plant</span>
+<span class="span">Atomic Canyon&#x27;s Neutron Enterprise</span>
+<span class="span">NVIDIA&#x27;s full-stack AI platform</span>
+<span class="span">NVIDIA Triton Inference Server</span>
+<span class="span">NVIDIA Hopper architecture GPUs</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which LLM/provider stack underpins PG&amp;E’s Service Planning AI Companion (e.g., OpenAI, Anthropic, Google, Meta, xAI, DeepSeek, or an internal model)?</li>
+<li>What is the go-live date and transaction volume for PG&amp;E’s PolyAI deployment, and how is success measured beyond labor hours saved (e.g., CSAT, containment rate)?</li>
+<li>How much of the Cluster 26 pipeline translates into executed interconnection agreements by year, and what are the milestone schedules?</li>
+<li>What proportion of the ~$73B 2026–2030 capital plan is directly attributable to AI/data-center interconnection needs versus other reliability/safety programs?</li>
+<li>Are there any signed long-term agreements with specific hyperscalers or AI labs that would indicate provider specificity or contractual lock-in risk?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many items rely on PG&amp;E press releases and corporate webpages; independent third-party corroboration is limited for operational metrics and savings claims.</li>
+<li>The PolyAI case study is vendor-supplied and does not include audited financial impacts.</li>
+<li>The CPUC filing references use of OpenAI ChatGPT by an intervenor, not PG&amp;E; relevance is contextual to regulatory processes rather than an internal PG&amp;E deployment.</li>
+<li>Dates for vendor case studies may not reflect initial deployment timing; the exact production rollout dates for PG&amp;E’s AI systems were not disclosed.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

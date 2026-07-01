@@ -1,0 +1,449 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>DASTY US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Dassault Systemes SE <span class='sub'>(DASTY US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.381</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>16 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 6</span>
+<span class='chip'>single source: 10</span>
+<span class='chip'>web-only (verified): 6</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>26Q1: Industrial AI execution, packaging, adoption, and risk</h2>
+<div class='range'>2026-04-23 → 2026-04-23</div>
+<div class='psum'>Dassault’s 26Q1 disclosures emphasized an increased focus on industrial AI, including collaboration with NVIDIA and monetization efforts. Management highlighted its Industrial AI architecture with industry world models and virtual companions integrated into 3DEXPERIENCE, and a roadmap to expand and embed AI deeper into core workflows.
+Operationally, the company noted disciplined opex growth with reinvestment prioritized for cloud, AI, and OUTSCALE. AI packaging remains complementary rather than forced bundles. Management described customer interest shifting from pilots to production and cited a WCT platform win influenced by Clinical Data Studio and AI. The company also flagged AI-related risks, including pricing pressure, build-vs-buy dynamics with generic LLMs, and potential cannibalization of core tools.</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: Focus on industrial AI including NVIDIA collaboration and monetization</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported an increased focus on industrial AI, including collaboration with NVIDIA, and discussed monetization approaches.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">increased focus on industrial AI (including NVIDIA collaboration)</span>
+<span class="span">monetization.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: Medidata AI partnership referenced; leadership transition noted</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Corporate updates included Medidata AI partnership discussions alongside the CEO assuming the Chairman role in February 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">MEDIDATA AI partnership</span>
+<span class="span">Feb 21, 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: Industrial AI architecture with world models and companions in 3DEXPERIENCE</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized its Industrial AI architecture—industry world models and virtual companions—integrated at the core of 3DEXPERIENCE.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Industrial AI architecture with industry world models</span>
+<span class="span">virtual companions integrated at the core of 3DEXPERIENCE.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: AI packaging kept complementary; no forced bundling</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Dassault stated it is not forcing AI into bundles; AI is complementary to core roles like CATIA and SIMULIA to broaden usage without disrupting value.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">not forcing AI into bundles</span>
+<span class="span">complementary to core roles (e.g., CATIA, SIMULIA)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: AI interest shifting from pilots to production</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported customer interest moving from pilots to production, supporting platform adoption rather than undermining it.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">shifting from pilots to production</span>
+<span class="span">supports platform adoption</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: Opex reinvested into cloud, AI, and OUTSCALE</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CFO cited sub-3% opex growth with reinvestment prioritized toward cloud, AI, and OUTSCALE infrastructure.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">sub‑3% opex growth</span>
+<span class="span">reinvestment prioritizing cloud, AI, and OUTSCALE infrastructure.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: Leadership focused on accelerating AI roadmap with early customers</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Dassault highlighted leadership focus—specifically Bernard Charlès—on accelerating the AI roadmap with early customers.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">accelerating the AI roadmap</span>
+<span class="span">early customers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: WCT enterprise platform win citing Clinical Data Studio and AI</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Dassault provided additional color on the Worldwide Clinical Trials platform win, noting competitive dynamics and the role of Clinical Data Studio and AI in the selection.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Worldwide Clinical Trials (WCT) enterprise platform win</span>
+<span class="span">role of Clinical Data Studio and AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: Roadmap to expand Industrial AI and embed AI in workflows</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management previewed expanding Industrial AI and virtual companions and a continued push to embed AI at the core of workflows to support platform adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expansion of Industrial AI and virtual companions</span>
+<span class="span">embed AI at the core of workflows</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1: AI monetization and build-vs-buy risks, potential cannibalization</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management flagged AI monetization risks including pricing pressure, build-vs-buy with generic LLMs, and potential cannibalization of core tools.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">pricing_pressure_from_provider</span> <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI monetization risks (pricing pressure, build‑vs‑buy with generic LLMs)</span>
+<span class="span">potential cannibalization of core tools.</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem connectors and industrial AI positioning</h2>
+<div class='range'>2026-01-12 → 2026-03-01</div>
+<div class='psum'>Anthropic introduced Claude for Healthcare and enhanced Claude for Life Sciences with connectors, including to Dassault’s Medidata platform, signaling third-party agent and connector pathways into Dassault’s life sciences data and workflows. Anthropic’s tutorial detailed how Medidata customers could leverage connector capabilities such as Site Ranking and Platform Help.
+Concurrently, Dassault’s leadership sharpened its industrial AI narrative, emphasizing the need for models that understand the physical world and manufacturing, rather than generic chatbots, reinforcing the company’s focus on domain-specific world models and process integration.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-03-01</span>
+<span class="eh">Anthropic details Medidata connector setup and use cases</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic published a tutorial on configuring the Medidata integration for Claude, outlining use cases like Site Ranking for Intelligent Trials and Platform Help via the Knowledge Hub for Medidata customers.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Medidata integration</span>
+<span class="span">Site Ranking</span>
+<span class="span">Intelligent Trials</span>
+<span class="span">Knowledge Hub</span>
+<span class="span">Platform Help</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-03</span>
+<span class="eh">Dassault leadership underscores need for industrial AI beyond chatbots</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">In public commentary, Dassault emphasized that industrial AI must go beyond generic chatbots, advocating models specialized for manufacturing and integration into core industrial processes.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">chatbots</span>
+<span class="span">ChatGPT and Gemini</span>
+<span class="span">industrial field</span>
+<span class="span">integrated into core industrial processes</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-01-12</span>
+<span class="eh">Anthropic launches Claude for Healthcare with connectors including Medidata</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic announced Claude for Healthcare, describing it as HIPAA-ready and built on Claude Opus 4.5, and added connectors to Claude for Life Sciences including Medidata. This exposes Medidata-related data and workflows to Claude users under enterprise controls.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Claude for Healthcare</span>
+<span class="span">HIPAA-ready</span>
+<span class="span">Claude Opus 4.5</span>
+<span class="span">connectors to Medidata</span>
+<span class="span">Claude for Life Sciences</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Deepened sovereign AI services for regulated sectors</h2>
+<div class='range'>2025-11-26 → 2025-12-31</div>
+<div class='psum'>Dassault Systèmes and Mistral AI expanded their collaboration to bring Mistral’s enterprise products onto OUTSCALE. The partnership highlighted the availability of Le Chat Enterprise and AI Studio on OUTSCALE’s sovereign cloud, targeting regulated industries and the public sector seeking strict confidentiality and security.
+This step operationalized the 2024 strategy by widening the catalog of integrated, sovereign AI services available to industrial and public-sector customers across Europe.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-26</span>
+<span class="eh">Mistral’s Le Chat Enterprise and AI Studio land on OUTSCALE sovereign cloud</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Dassault Systèmes and Mistral AI deepened their partnership, making Le Chat Enterprise and AI Studio available on OUTSCALE’s sovereign cloud. The move targets European industry and public sector use cases requiring highest-security AI services.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Le Chat Enterprise</span>
+<span class="span">AI Studio</span>
+<span class="span">OUTSCALE sovereign cloud</span>
+<span class="span">highest security standards</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Sovereign AI foundation with Mistral on OUTSCALE</h2>
+<div class='range'>2024-07-01 → 2024-09-17</div>
+<div class='psum'>Dassault Systèmes initiated a strategic partnership with Mistral AI to deliver sovereign, industry-grade generative AI on its OUTSCALE cloud. The July 2024 announcement positioned LLMaaS (Large Language Models as a Service) as a turnkey, secure offering aligned with European sovereignty and security standards, aimed at Dassault Systèmes’ large installed base across industrial sectors.
+By September 2024, OUTSCALE formally launched LLMaaS, emphasizing SecNumCloud-qualified infrastructure and instant deployment of Mistral AI’s advanced models. The combination of virtual twin experiences and trusted LLMs framed Dassault’s AI go-to-market around compliance, confidentiality, and performance for regulated industries.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-09-17</span>
+<span class="eh">OUTSCALE launches LLMaaS, enabling rapid deployment of Mistral models</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">OUTSCALE, a Dassault Systèmes brand, launched LLMaaS as a turnkey solution to build generative AI applications on SecNumCloud-qualified infrastructure. The service allows instant deployment of Mistral AI’s advanced LLMs with appropriate cloud resources, reinforcing the sovereign AI positioning.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">LLMaaS</span>
+<span class="span">SecNumCloud 3.2 qualification</span>
+<span class="span">Mistral AI’s most advanced LLM models</span>
+<span class="span">OUTSCALE Cloud</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-07-01</span>
+<span class="eh">Dassault Systèmes and Mistral AI announce sovereign LLMaaS on OUTSCALE</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Dassault Systèmes partnered with Mistral AI to provide Large Language Models as a Service (LLMaaS) on OUTSCALE, combining virtual twin experiences with trusted, sovereign AI for industry customers. The offering targets high security and compliance needs while unlocking generative experiences for Dassault’s customer base.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">LLMaaS</span>
+<span class="span">OUTSCALE sovereign infrastructure</span>
+<span class="span">Mistral AI’s</span>
+<span class="span">350,000 industrial customers</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of OUTSCALE revenue in 2025–2026 is attributable to LLMaaS and related AI services?</li>
+<li>What is the scope and technical depth of the NVIDIA collaboration (models, GPUs, deployment scale) tied to Industrial AI?</li>
+<li>How many Medidata customers have enabled the Claude integration, and what early outcomes (time-to-enrollment, support efficiency) are observed?</li>
+<li>Are there defined term lengths or minimum commitments in Dassault’s agreements with Mistral AI or Anthropic for services on OUTSCALE?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items rely on company press releases; third-party corroboration for commercial traction (revenues, users) is limited in the provided evidence.</li>
+<li>The ChosunBiz article may reflect translation nuances; interpretations of executive commentary should be treated cautiously.</li>
+<li>No explicit financial magnitudes or contract terms for AI services were disclosed in the evidence set.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

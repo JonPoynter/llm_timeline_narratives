@@ -1,0 +1,486 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>BSY US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Bentley Systems Inc <span class='sub'>(BSY US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.403</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>18 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 9</span>
+<span class='chip'>web-only (unverified): 8</span>
+<span class='chip'>web-only (verified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Copilot expansion, MCP agent integrations, and AI monetization framework</h2>
+<div class='range'>2026-04-08 → 2026-06-04</div>
+<div class='psum'>Bentley expanded Copilot into OpenFlows 2026, with a Tech Preview powered by ChatGPT 5.1, enabling natural language-driven modeling assistance. Subsequent updates broadened Copilot across additional products via the iTwin Services Add-in.
+At the same time, Bentley advanced its Model Context Protocol (MCP) servers, including in STAAD Foundation Advanced, enabling AI agents like Claude Desktop and Gemini to directly orchestrate engineering workflows. Management outlined its AI monetization approach—currently attended consumption with API/token models under consideration—while flagging that AI compute could pressure gross margins over time. Bentley also reiterated its data policy of not using BIC customer data to train AI without explicit direction.</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">MCP showcased: Claude and Copilot drive direct STAAD optimization</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">A Bentley blog detailed how AI coding tools like Codex and Claude, alongside MCP, enable assistants such as Claude or Copilot to directly interact with engineering software. The post described Claude connecting to STAAD and iterating designs against local building codes.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">AI coding tools (like Codex and Claude)</span>
+<span class="span">MCP, which lets AI assistants like Claude or Copilot talk directly</span>
+<span class="span">Claude, the AI assistant, was able to connect directly to STAAD</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-01</span>
+<span class="eh">STAAD Foundation Advanced adds MCP server with direct Claude/Gemini agent control</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Bentley introduced a Model Context Protocol server for STAAD Foundation Advanced, enabling AI agents like Claude Desktop and Gemini to orchestrate workflows and interact directly with SFA models. The feature is available as a Technical Preview.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Model Context Protocol (MCP) server</span>
+<span class="span">STAAD Foundation Advanced (SFA)</span>
+<span class="span">Claude Desktop, Gemini, or VSCode Copilot</span>
+<span class="span">direct interaction with Claude Desktop</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-20</span>
+<span class="eh">iTwin Services Add-in 26.02.00.31: Copilot improvements and broader support</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Bentley released iTwin Services Add-in 26.02.00.31 with Copilot integration bug fixes and improvements, following April patches that enabled and extended Copilot support across additional applications.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Release Date  20th May, 2026</span>
+<span class="span">26.02.00.31</span>
+<span class="span">Bug fixes and incremental improvements to Copilot</span>
+<span class="span">This patch enables Copilot</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">AI-enabled workflows across portfolio; scaling AI agent-driven usage</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted progress on AI-enabled workflows designed to enable AI agent-driven usage of engineering applications at scale across Bentley’s portfolio.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-enabled workflows across the portfolio</span>
+<span class="span">AI agent-driven usage of engineering applications at scale.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Monetization currently attended-only; API/token pricing being explored</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Bentley stated it currently monetizes only attended consumption, introducing API consumption so users can explore value first, and indicated pricing could be API/token-based though details remain open-minded.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">we only monetize attended consumption</span>
+<span class="span">introducing API consumption</span>
+<span class="span">pricing could be API/token-based</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">MCP server for STAAD released; more MCP servers to follow</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management confirmed an MCP server for STAAD is live and said additional MCP servers will roll out across the portfolio to broaden AI-agent workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">MCP server for STAAD has been released</span>
+<span class="span">more MCP servers will follow</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Policy: no AI training on BIC customer data without explicit direction</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Bentley reiterated that it will not use BIC customer data to train its AI unless explicitly directed, emphasizing transparency via data agreements.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">do not use BIC customer data to train BSY’s AI unless explicitly directed</span>
+<span class="span">transparency via data agreements was reiterated</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">APIs run locally now; selective shift of workloads to cloud planned</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Bentley said API interaction currently runs locally, with plans to move select workloads to cloud services over time.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">API interaction currently runs locally</span>
+<span class="span">move select workloads to cloud services over time</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">CFO flags AI compute as gross margin headwind as scale grows</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management noted AI is early and immaterial today but warned that gross margins will be impacted by AI compute over time, implying pricing must reflect this as usage scales.</p>
+<div class="ev-ch">channels: <span class="chchip">pricing_pressure_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">immaterial today</span>
+<span class="span">gross margins &quot;will be impacted&quot;</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Management conviction on AI-driven shift; outcome-based pricing explored</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Bentley expressed strong conviction in the AI-driven shift and discussed the potential for outcome-based pricing, while acknowledging uncertainty on timing and monetization details.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">It can&#x27;t be doubted that this will happen</span>
+<span class="span">outcome-based pricing</span>
+<span class="span">immateriality of AI revenues today</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">More MCP servers planned; API token-based monetization likely</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management indicated additional MCP servers beyond STAAD are planned to broaden AI-agent workflows and that API consumption monetization is likely token-based, though timing and pricing remain TBD.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Additional MCP servers beyond STAAD</span>
+<span class="span">API consumption monetization likely token-based</span>
+<span class="span">timing/pricing TBD</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">BIC workloads to shift from desktop to cloud services</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Bentley stated that BIC workloads will progressively shift from desktop to cloud services to assure performance and throughput as instrumentation matures.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">BIC workloads to shift progressively from desktop to cloud services</span>
+<span class="span">assure performance/throughput</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-04-08</span>
+<span class="eh">OpenFlows 2026 introduces Copilot (Tech Preview) powered by ChatGPT 5.1</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Bentley made Copilot available in OpenFlows 2026 (Tech Preview), explicitly powered by ChatGPT 5.1, enabling conversational, context-aware assistance for hydraulic modeling. A follow-on OpenFlows 2026 blog detailed natural language interactions within the modeling workspace.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9], web_search_findings[6]</div>
+<span class="span">OpenFlows products</span>
+<span class="span">Bentley Copilot</span>
+<span class="span">powered by ChatGPT 5.1</span>
+<span class="span">natural language</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI emphasis and early Copilot enablement</h2>
+<div class='range'>2025-11-05 → 2025-11-26</div>
+<div class='psum'>Bentley’s Q3 2025 results emphasized AI as a top strategic focus, highlighting user applications and newly unveiled AI capabilities across the portfolio. The company framed a comprehensive approach to Infrastructure AI.
+Shortly after, Bentley introduced Documentation Copilot as an Early Access feature via the iTwin Services Add-in for STAAD.Pro, beginning broader enablement of Copilot features across engineering applications.</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-26</span>
+<span class="eh">iTwin Services Add-in 26.00.00 introduces Documentation Copilot (EA) in STAAD.Pro</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Bentley released iTwin Services Add-in 26.00.00, adding the Documentation Copilot feature as an Early Access capability in STAAD.Pro to gather engineer feedback prior to wider rollout.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">26th November, 2025</span>
+<span class="span">Documentation Copilot</span>
+<span class="span">Early Access</span>
+<span class="span">STAAD.Pro</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-05</span>
+<span class="eh">AI spotlighted in Q3 2025 results and portfolio announcements</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">In its Q3 2025 results, Bentley&#x27;s CEO underscored AI’s role in closing the engineering capacity gap and noted users already applying AI. The company unveiled new AI capabilities across the portfolio and emphasized a principled approach to Infrastructure AI.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">AI was top of mind</span>
+<span class="span">new AI capabilities across our portfolio</span>
+<span class="span">comprehensive and principled approach to Infrastructure AI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Google partnership and first generative AI rollouts</h2>
+<div class='range'>2024-10-09 → 2025-04-09</div>
+<div class='psum'>Bentley initiated a strategic partnership with Google to integrate Google&#x27;s geospatial content, AI, analytics, and cloud technologies with Bentley’s engineering software and digital twin platform. This marked a foundational move to bring high-quality geospatial context into infrastructure workflows at scale.
+Concurrently, Bentley announced new generative AI capabilities for civil site design via OpenSite+, introducing a design copilot and automation features. By April 2025, at Google Cloud Next, Bentley deepened the Google collaboration by unveiling Blyncsy asset analytics powered by Google Maps Platform&#x27;s Imagery Insights and Vertex AI, targeting roadway condition detection and transportation asset analysis.</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-04-09</span>
+<span class="eh">Blyncsy asset analytics leverages Google Maps Platform Imagery Insights and Vertex AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">At Google Cloud Next 2025, Bentley announced new asset analytics in Blyncsy using Imagery Insights from Google Maps Platform. The solution leverages Google Street View and Vertex AI to detect and analyze roadway conditions, supporting transportation agencies and their consultants.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Imagery Insights from Google Maps Platform</span>
+<span class="span">Blyncsy</span>
+<span class="span">Vertex AI</span>
+<span class="span">Google Street View</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-10-09</span>
+<span class="eh">Strategic partnership with Google to integrate geospatial data, AI, and cloud</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Bentley announced a strategic partnership with Google to integrate Google’s geospatial content, AI, analytics, and cloud with Bentley’s infrastructure engineering software and digital twin platform. The partnership is intended to enable engineers to design and manage infrastructure in context and at scale.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[2], web_search_findings[10]</div>
+<span class="span">strategic partnership with Google</span>
+<span class="span">integrate Google’s high-quality geospatial content</span>
+<span class="span">AI and analytics, and cloud technologies</span>
+<span class="span">integrates Google’s breadth and depth of geospatial data</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-10-09</span>
+<span class="eh">Bentley unveils generative AI capabilities for civil site design (OpenSite+)</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">At Bentley’s Year in Infrastructure 2024, the company announced new generative AI features for civil site design, including a design copilot, site layout optimizations, and automated drawing production in OpenSite+. The iTwin-native architecture underpins these capabilities for data-centric workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">new generative AI capabilities for civil site design</span>
+<span class="span">design copilot</span>
+<span class="span">OpenSite+ software uses AI</span>
+<span class="span">iTwin-native architecture</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What timing and pricing will Bentley adopt for API/token-based AI consumption, and how will it affect margins and ARR?</li>
+<li>Beyond OpenFlows, which LLM providers (OpenAI, Google Gemini, Anthropic Claude) underpin Bentley Copilot across other applications?</li>
+<li>What scale of AI compute expense does management anticipate and over what timeframe will gross margins be impacted?</li>
+<li>Are there material, multi-year or minimum-spend commitments with Google Cloud, OpenAI, or Anthropic tied to these integrations?</li>
+<li>How will Bentley’s data agreements govern regional regulatory requirements for customer data used with AI features?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Most sources are Bentley press releases, blogs, and community documentation; independent third-party corroboration is limited.</li>
+<li>Several capabilities are labeled Early Access or Technical Preview and may change prior to general availability.</li>
+<li>Provider mentions (e.g., Claude Desktop, Gemini, ChatGPT 5.1) are feature-specific; broader Copilot provider coverage across products is not fully specified.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,702 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>3661 TT — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Alchip Technologies Ltd <span class='sub'>(3661 TT)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.444</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>30 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 13</span>
+<span class='chip'>single source: 18</span>
+<span class='chip'>web-only (verified): 10</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Cloud EDA scaling, Corsair production, and capital raise</h2>
+<div class='range'>2026-06-01 → 2026-06-30</div>
+<div class='psum'>In June, Alchip expanded its use of AWS to scale compute-intensive EDA workloads across physical design, verification, and tape-out readiness. Partner d-Matrix announced Corsair’s full production with volume shipments beginning on TSMC N6 in partnership with Alchip, targeting low-latency inference alongside GPUs.
+Alchip also completed a US$510 million global depositary share offering to fund advanced technology development amid sustained AI/HPC demand.</div>
+<div class="event t-web_only_unverified" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-26</span>
+<span class="eh">Alchip raises US$510 million via GDS offering to fund growth</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$510M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Alchip completed a GDS offering to raise US$510 million, issuing 4,000,000 new shares to support advanced technology development amid strong AI/HPC-driven demand.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11], web_search_findings[7]</div>
+<span class="span">US$510MM</span>
+<span class="span">4,000,000 new shares</span>
+<span class="span">The GDSs will be listed on the Luxembourg Stock Exchange</span>
+<span class="span">Each GDS represents one common share of Alchip</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">d-Matrix Corsair enters full production on TSMC N6 with Alchip partnership</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">d-Matrix announced Corsair is in full production with volume shipments to priority customers, leveraging TSMC’s N6 node in partnership with Alchip and targeting up to 10x GPU-speed gains for small-batch inference.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Performance claims are vendor-reported and may vary by workload.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Corsair</span>
+<span class="span">full production</span>
+<span class="span">volume shipments to priority customers</span>
+<span class="span">TSMC’s N6 node</span>
+<span class="span">in partnership with Alchip</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">Alchip expands AWS usage for semiconductor design and simulation</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Alchip will continue leveraging AWS elastic compute for complex EDA workflows, spanning implementation, verification, and production tape-out readiness to accelerate advanced-node development.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[7]</div>
+<span class="span">expanded its use of Amazon Web Services (AWS)</span>
+<span class="span">from design implementation and verification through production tape-out</span>
+<span class="span">elastic compute</span>
+<span class="span">Alchip Leverages AWS to Enable Cloud-Based Silicon Execution</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ramps, concentration risks, and renewed hyperscaler momentum</h2>
+<div class='range'>2026-05-08 → 2026-05-31</div>
+<div class='psum'>Alchip’s 26Q1 update signaled imminent ramps: N3 shipments to its #1 North American customer begin in June with a mid-Q3 monthly revenue peak, and a back-half weighted year. Management emphasized sole physical design positioning on N3/N2 accelerators while flagging wafer availability as the main bottleneck and outlining packaging contingency plans if TSMC capacity tightens. Networking programs progressed, with ‘meaningful’ projects defined as &gt;$100M annual revenue per project.
+Customer concentration remained a key risk—management acknowledged having only one major hyperscaler today and heavy North American exposure. External coverage noted a key customer’s chip entering mass production in May and 3nm accelerators heading to mass shipments, with regained orders from a major customer and an Amazon private placement supporting the relationship.</div>
+<div class="event t-web_only_verified" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Alchip regains orders from major customer; N3 ramp slated for next month</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$992M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">At its AGM, Alchip said it recouped orders from a major customer and plans to ramp 3nm AI accelerators from next month. The article notes 2025 revenue of US$992 million and shifting customer concentration.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">recouped orders from a major customer</span>
+<span class="span">US$992 million</span>
+<span class="span">biggest customer accounting for 18 percent</span>
+<span class="span">ramp up production of new 3-nanometer AI accelerators from next month</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Key customer’s AI chip entered mass production in May; 3nm accelerators to ship</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Coverage cited management indicating a major customer’s chip entered mass production in May and that a North American customer’s 3nm AI accelerator is entering mass shipments, supporting sequential revenue gains starting in Q3.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">entered mass production in May</span>
+<span class="span">3nm AI accelerator entering mass shipments</span>
+<span class="span">beginning in the third quarter</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Amazon increases equity exposure to Alchip via private placement</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$75M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Media reported Amazon subscribed to 557,325 new Alchip shares for NT$2.36 billion (~US$75.04 million), lifting its stake to around 1% and reinforcing the strategic relationship.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<p class="cav">⚠ Equity stake percentage and strategic intent inferred from media; company has not disclosed precise post-transaction percentage in this excerpt.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5], web_search_findings[6]</div>
+<span class="span">557,325 new Alchip shares</span>
+<span class="span">NT$2.36 billion (US$75.04 million)</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>亞馬遜</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>持有世芯股權比重升高至1%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">N3 shipments to #1 North American customer set for June; mid-Q3 revenue peak</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management disclosed N3 shipments start in June for the top North American customer, with monthly revenue expected to peak around mid-Q3 2026, setting up a back-half weighted year.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">N3 shipments to the #1 North American customer begin in June</span>
+<span class="span">monthly revenue expected to peak around mid‑Q3 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Back-half weighted guidance: Q2 &gt; Q1; stronger Q3/Q4</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alchip reiterated a back-half weighted year with Q2 above Q1 and a sharper step-up into Q3/Q4 as ramps build.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q2 &gt; Q1 with a much stronger Q3/Q4</span>
+<span class="span">back‑half weighted</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Sole physical design vendor on N3/N2 accelerator programs</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated Alchip is the only PD vendor on current N3 and future N2 accelerator projects, implying strong positioning and potential exclusivity benefits.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">only one physical design vendor</span>
+<span class="span">N3 and the future N2</span>
+<span class="span">It is Alchip Technologies.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Wafer availability identified as primary bottleneck; TSMC support strong</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Alchip highlighted wafer availability—not packaging—as the key constraint, while noting strong capacity support from TSMC.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">the wafer is the bottleneck, not the packaging, not the CoWoS</span>
+<span class="span">TSMC is providing strong capacity support</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Contingency for alternative 2.5D providers if TSMC short</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management said they could work with alternative 2.5D providers if capacity is short, though they would not propose non-TSMC solutions when TSMC capacity is available.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">could work with alternative 2.5D providers</span>
+<span class="span">would not propose non‑TSMC solutions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">N2 programs: larger economics; YE26 tape-out; revenue likely 2028</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alchip expects larger economics on N2 versus N3, with tape-out targeted by year-end 2026 and production revenue most likely in 2028.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">N2 economics are larger than N3</span>
+<span class="span">tape‑out targeted by year‑end 2026</span>
+<span class="span">most likely in 2028</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Margin outlook steady; HBM consigned in production designs</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management expects gross margins to remain similar to current levels, noting HBM is consigned in production designs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">gross margin to be “pretty similar” to current levels</span>
+<span class="span">HBM is consigned</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Networking pipeline advancing; one nearing production; N3/N2 in flight</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alchip cited multiple North American networking customers, with one nearing production and N3/N2 design activities progressing.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">one nearing production</span>
+<span class="span">N3 designs in progress</span>
+<span class="span">N2 to kick off “very soon.”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">‘Meaningful’ networking defined as &gt;$100M annual revenue per project</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management defined meaningful networking programs as exceeding $100 million in annual revenue per project over coming years.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“meaningful,” defined as &gt;$100M annual revenue per project</span>
+<span class="span">in coming years</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Customer concentration: only one major hyperscaler today</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Alchip acknowledged it currently has only one major hyperscaler in its AI/HPC accelerator portfolio, while competing for additional North American hyperscaler projects.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">only one major hyperscaler</span>
+<span class="span">competing for multiple North American hyperscaler projects</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Back-half weighted year reiterated with mid-Q3 monthly peak</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated Q2 above Q1 with a sharp step-up into Q3/Q4 and a mid-Q3 monthly revenue peak, highlighting a back-half weighted year.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q2 above Q1 with a sharp step‑up into Q3/Q4</span>
+<span class="span">monthly revenue peak targeted around mid‑Q3</span>
+<span class="span">back‑half weighted year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Sole PD vendor status; wafer/yield as key upside levers</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alchip underscored sole PD vendor status on N3/N2 accelerators and identified wafer availability and execution/yield as the core upside levers.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">only physical design vendor</span>
+<span class="span">wafer availability and execution/yield are key upside levers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Advanced-node and advanced packaging capacity risk (CoWoS/3DIC)</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Execution depends on access to leading-edge foundry and advanced packaging capacity. Supply constraints or delays could affect delivery and revenue recognition.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">access to leading-edge foundry and advanced packaging (e.g., CoWoS/3DIC) capacity</span>
+<span class="span">Any supply constraints or delays can affect program delivery and revenue recognition</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Geographic/customer concentration risk tied to North American hyperscalers</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Heavy exposure to North America heightens sensitivity to hyperscaler spending cycles and procurement decisions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">heavy exposure to North America</span>
+<span class="span">Concentration heightens sensitivity to specific hyperscaler or large-customer spending cycles</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">COT model flexibility; no structural margin cap seen</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management emphasized flexible engagement under the COT model and indicated no structural margin cap, citing a history of maintained profitability at scale.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">do not see COT structurally capping margins</span>
+<span class="span">track record of maintaining profitability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Flexible engagement models include production-only options</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Alchip described flexible models ranging from back-end implementation to partial PD and even production-only engagement.</p>
+<div class="ev-ch">channels: <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">flexible models from back‑end implementation to partial PD and even production‑only</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Automotive entered volume production; next-gen may add multi-chip content</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Automotive programs entered volume production in Q1 with a Q2 ramp, and next-gen designs may increase vehicle chip content with multiple chips per vehicle.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Automotive: entered volume production in Q1; ramping in Q2</span>
+<span class="span">next‑gen may use multiple chips per vehicle</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem build-out for AI infrastructure</h2>
+<div class='range'>2025-05-19 → 2025-11-17</div>
+<div class='psum'>Through 2025, Alchip deepened its AI infrastructure ecosystem with multiple platform and partner integrations. It unveiled support for NVIDIA NVLink Fusion design infrastructure, partnered with Astera Labs for rack-scale connectivity, joined Arm’s Total Design ecosystem to accelerate Neoverse CSS-based SoCs and chiplets, and collaborated with Ayar Labs on co-packaged optics targeting power-efficient AI scale-up.
+Late in the year, Alchip expanded its collaboration with d-Matrix to co-develop a 3D DRAM-based inference accelerator platform designed to break memory bottlenecks for generative AI workloads.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-17</span>
+<span class="eh">Alchip and d-Matrix co-develop 3D DRAM-based inference accelerator</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alchip and d-Matrix announced collaboration on a 3D DRAM-based datacenter inference accelerator targeting up to 10x faster inference than HBM4-based designs, slated to debut on the Raptor accelerator as a successor to Corsair.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">3D DRAM</span>
+<span class="span">10x Faster Inference Than HBM4-Based Solutions</span>
+<span class="span">Raptor</span>
+<span class="span">Corsair</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-14</span>
+<span class="eh">Alchip joins Arm Total Design to speed Neoverse CSS-based SoCs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">By joining Arm Total Design, Alchip gained access to pre-validated Neoverse CSS, chiplet standards like UCIe, and ecosystem collaboration benefits for AI/ML silicon and cloud providers’ custom CPUs and accelerators.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Arm Total Design</span>
+<span class="span">Neoverse Compute Subsystems (CSS)</span>
+<span class="span">chiplets</span>
+<span class="span">UCIe</span>
+<span class="span">cloud service providers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-09-08</span>
+<span class="eh">Ayar Labs and Alchip to scale AI with co-packaged optics</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Ayar Labs and Alchip announced a strategic partnership to accelerate power-efficient optical engines for next-generation AI workloads, combining CPO technology with advanced packaging to support hyperscaler demands.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Ayar Labs and Alchip</span>
+<span class="span">Co-Packaged Optics</span>
+<span class="span">strategic partnership</span>
+<span class="span">hyperscalers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-16</span>
+<span class="eh">Strategic partnership with Astera Labs for AI rack-scale connectivity</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alchip and Astera Labs formed a strategic partnership to deliver validated, interoperable solutions that reduce integration risks for hyperscalers building next-generation AI infrastructure.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">Astera Labs</span>
+<span class="span">Strategic Partnership</span>
+<span class="span">rack-scale connectivity</span>
+<span class="span">hyperscalers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-05-19</span>
+<span class="eh">Alchip among first to support NVIDIA NVLink Fusion design infrastructure</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alchip announced a comprehensive design and manufacturing ecosystem to support NVIDIA NVLink Fusion, spanning advanced process, packaging, and flexible design flows, positioning the firm as an early enabler for hyperscaler custom compute systems.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">NVLink Fusion</span>
+<span class="span">first adopters</span>
+<span class="span">2nm and 3nm Design Platforms</span>
+<span class="span">comprehensive design and manufacturing ecosystem</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Regulatory shock and realignment</h2>
+<div class='range'>2021-04-14 → 2024-12-31</div>
+<div class='psum'>Alchip’s AI-centric ASIC business weathered a major regulatory disruption in 2021 when a key China customer, Phytium, was added to the US entity list, forcing an immediate halt to shipments and creating significant near-term revenue risk. This episode catalyzed a strategic refocus toward North American hyperscalers and advanced-node programs.
+By the end of 2024, the company reported record financial performance concentrated in leading-edge nodes and North American demand, underscoring a successful pivot toward AI/HPC customers in the US cloud ecosystem.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-03-28</span>
+<span class="eh">Record 2024 results concentrated in advanced nodes and North America</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alchip reported record 2024 results with a sharp mix shift to advanced process nodes and a strong North America contribution, reflecting its repositioning toward hyperscaler AI demand.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">96% of Alchip’s 2024 revenue</span>
+<span class="span">7nm or smaller</span>
+<span class="span">North America accounted for 86%</span>
+<span class="span">strong 7nm AI chip shipments to North America</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2021-04-14</span>
+<span class="eh">Alchip halts Phytium shipments after US entity list action</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Following the US government’s addition of Phytium to the entity list, Alchip suspended shipments and stopped related production activity, warning of up to a 25% revenue impact. The disruption accelerated Alchip’s pivot away from China-centric exposure toward North American AI/HPC programs.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">halted shipments</span>
+<span class="span">Phytium</span>
+<span class="span">entity list</span>
+<span class="span">lower its revenue this year by as much as 25 percent</span>
+<span class="span">Last year, Phytium contributed a bigger share, or about 39 percent</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Who is the “#1 North American customer” referenced for N3 shipments, and what is the multi-year revenue commitment associated with these ramps?</li>
+<li>What are the specific NRE amounts and unit ASPs for N2 programs noted as having “much, much higher” economics versus N3?</li>
+<li>How large (in units and revenue) are the networking programs defined as “&gt; $100M annual revenue per project,” and over what contract duration?</li>
+<li>What are the quantified wafer allocation commitments from TSMC for N3/N2, and how do they scale through 2027–2028?</li>
+<li>What portion of the US$510MM GDS proceeds is earmarked for specific node transitions (e.g., N2) or advanced packaging capacity reservations?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several partnership and capability announcements originate from company press releases and may reflect marketing positioning rather than independent verification.</li>
+<li>Performance claims related to third-party platforms (e.g., d-Matrix Corsair speedups) are vendor-reported and workload-dependent.</li>
+<li>Equity investment details for Amazon are derived from media reports and company disclosures; final ownership percentages may vary with subsequent issuances or conversions.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

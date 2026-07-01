@@ -1,0 +1,577 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>ASAN US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Asana Inc <span class='sub'>(ASAN US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.44</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>23 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 11</span>
+<span class='chip'>single source: 13</span>
+<span class='chip'>web-only (unverified): 5</span>
+<span class='chip'>web-only (verified): 4</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Scale‑up: Claude integration, Teammates GA, StackAI acquisition, and broader distribution</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>In early 2026 Asana expanded its Claude integration and disclosed detailed AI adoption metrics in FY2026 Q4. AI Studio ARR exceeded $6M with strong growth and enterprise beta traction for AI Teammates. In Q1 FY2027, Asana acquired StackAI to accelerate AI orchestration, reiterated AI’s contribution to net‑new ARR, and flagged both integration risks and competitive pressure from platform AI suites. The company also broadened distribution via OpenAI’s ChatGPT app directory and Google’s Gemini Enterprise connector, while highlighting Anthropic as a customer, product, and distribution partner.</div>
+<div class="event t-web_only_verified" id="E0023" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-22</span>
+<span class="eh">Google Gemini Enterprise: Asana connector public preview for search and actions</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google Cloud documentation announced the Asana connector for Gemini Enterprise for federated search and actions in public preview, supporting task and project operations via natural language.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">The Asana connector for Gemini Enterprise</span>
+<span class="span">Public preview</span>
+<span class="span">search and perform actions</span>
+<span class="span">Create tasks</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0022" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">OpenAI ChatGPT: Asana app with sync upgraded; MCP write actions and app directory listing</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI’s help center detailed the Asana app with sync for ChatGPT, including automatic referencing of Asana content and new MCP write actions; users can upgrade via the ChatGPT app directory.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Asana — app with sync</span>
+<span class="span">automatically reference content in Asana</span>
+<span class="span">MCP actions</span>
+<span class="span">ChatGPT app directory</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Asana acquires StackAI to accelerate AI orchestration (deal ~$75M)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$75M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Asana announced the acquisition of StackAI to strengthen cross‑system workflow orchestration for human‑agent teams. TechCrunch reported the purchase price at about $75 million.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], news_rows[0]</div>
+<span class="span">acquisition of StackAI</span>
+<span class="span">cross-system workflow orchestration</span>
+<span class="span">about 75 million dollars</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">27Q1: Broader availability of AI Teammates</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Asana reported product updates including broader availability of AI Teammates during Q1, following earlier GA targeting.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">broader availability of AI Teammates.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">27Q1: AI product bookings contributed 17% of net‑new ARR</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated that AI product bookings were 17% of net‑new ARR in Q1, noting improved adoption signals from early Teammates deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">17% of net‑new ARR in Q1</span>
+<span class="span">improved adoption signals</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">27Q1: Clarified $100k refers to AI Studio SKU; strongest NRR in cohort</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100,000 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Asana clarified that the $100k figure refers specifically to spend on the AI Studio SKU itself and emphasized that AI Studio customers exhibit the strongest net revenue retention with higher seat expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">the $100k figure refers to spend on the AI Studio SKU itself</span>
+<span class="span">strongest net revenue retention</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">27Q1: AI Studio adopters are strongest NRR cohort</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management identified AI Studio adopters as the strongest NRR cohort, combining higher seat expansion with AI attach.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI Studio adopters</span>
+<span class="span">strongest NRR cohort</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">27Q1: Stack.ai expected ~50 bps growth; ~1‑pt operating‑margin drag during integration</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Asana framed Stack.ai as accelerating cross‑system workflow and expanding buying centers, with management expecting roughly 50 bps revenue growth contribution and about a 1‑point operating‑margin drag during Q2 and H2 integration.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">roughly 50 bps contribution to revenue growth</span>
+<span class="span">about a 1‑point operating‑margin drag</span>
+<span class="span">broadening access to new buying centers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">27Q1: Target ~15% of FY27 net‑new ARR from AI</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Asana maintained a qualitative target for AI to contribute roughly 15% of FY2027 net‑new ARR, with a fuller update planned for the Q2 call post broader Teammates GA and initial Stack.ai integration.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~15% of FY27 net‑new ARR from AI</span>
+<span class="span">fuller update deferred to the Q2 call</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">27Q1: Risk flagged on StackAI integration and cross‑sell execution</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management cautioned that integration missteps or slower‑than‑expected cross‑sell of StackAI could dilute near‑term margins and delay revenue synergies.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">integration missteps</span>
+<span class="span">dilute near-term margins</span>
+<span class="span">delay revenue synergies</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">27Q1: Competitive threat from platform AI suites</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Asana cited competitive intensity from platform vendors such as Microsoft Copilot, ServiceNow, and Workday as potentially crowding out Asana’s AI value proposition.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Competitive intensity from platform vendors</span>
+<span class="span">Microsoft Copilot, ServiceNow, Workday</span>
+<span class="span">crowding out Asana’s AI value proposition</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0021" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Anthropic is a customer, product, and distribution partner for Asana</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">On the Q1 call, Asana characterized Anthropic as a customer using AI Studio and AI Teammates, a product partner where Asana was one of nine flagship workplace integrations and launched MCP access to the Work Graph, and a distribution partner through Claude Code and the connector directory.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">they are a customer of ours</span>
+<span class="span">one of nine</span>
+<span class="span">their great MCP service</span>
+<span class="span">presented at Claude Code</span>
+<span class="span">connector directory</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-03-02</span>
+<span class="eh">26Q4: Asana app in Claude and integration mechanics clarified</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">In FY2026 Q4, Asana highlighted expanded integrations including the Asana app in Claude, and clarified that users must be both Asana and Claude customers; chats in Claude can be converted into actionable Asana work.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">including Asana app in Claude</span>
+<span class="span">customers must be both Asana and Claude users</span>
+<span class="span">chats in Claude can be turned into actionable work items</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-02</span>
+<span class="eh">26Q4: AI Studio ARR &gt;$6M; strong q/q growth and Teammates beta traction</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Exiting FY2026, AI Studio ARR exceeded $6M with &gt;50% q/q growth; Asana reported &gt;200 customers in AI Teammates beta and eight customers spending &gt;$100k annually on AI Studio.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">ARR exceeded $6M</span>
+<span class="span">&gt;50% q/q growth</span>
+<span class="span">&gt;200 customers</span>
+<span class="span">eight customers spending &gt;$100k annually</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-02</span>
+<span class="eh">26Q4: AI Teammates GA targeted late Q1; self‑serve H2</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management targeted GA for AI Teammates in late Q1 for sales‑led customers, with self‑serve availability planned in the second half.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">GA targeted for late Q1</span>
+<span class="span">self‑serve availability in the second half</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-02</span>
+<span class="eh">26Q4: Early AI deals largely incremental</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Asana indicated early AI Studio and AI Teammates deals are largely incremental, opening new use cases and buying centers despite some replacement dynamics.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">“a lot” incremental</span>
+<span class="span">unlocking new use cases and buying centers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-02</span>
+<span class="eh">26Q4: AI cited as growth catalyst and internal efficiency driver</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized AI as a lever for both revenue growth and internal efficiency improvements.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">AI as a growth catalyst</span>
+<span class="span">internal efficiency driver</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-01-26</span>
+<span class="eh">Claude integration enhancement: create tasks directly in Claude; app available</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Asana detailed expanded Claude integration capabilities, allowing users to create and update work within Claude with real‑time reflection back in Asana; the Asana app in Claude became available via the Claude app directory.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">crear tareas directamente en Claude</span>
+<span class="span">La aplicación de Asana en Claude ya está disponible.</span>
+<span class="span">consultar sus portafolios de Asana</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Connector ecosystem and third‑party AI surface area</h2>
+<div class='range'>2025-01-01 → 2025-12-31</div>
+<div class='psum'>Asana deepened its role within broader AI ecosystems. It shipped an Amazon Q Business integration to unify third‑party data for AI workflows and launched AI Connectors, including an Asana Connector for ChatGPT. Public materials also highlighted connections with Gemini and Claude, expanding distribution and user entry points through external AI assistants.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-12-17</span>
+<span class="eh">AI Connectors launch: Asana Connector in ChatGPT; links to Gemini and Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Asana launched AI Connectors, with the Asana Connector available in ChatGPT and stated connections to leading AI apps, including Microsoft 365 Copilot, Gemini, and Claude. The Asana community forum reiterated availability and forthcoming Asana for ChatGPT app.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[8]</div>
+<span class="span">The Asana Connector is now available in ChatGPT</span>
+<span class="span">connects with go-to AI apps, like Microsoft 365 Copilot, Gemini, Claude</span>
+<span class="span">Asana Connector in ChatGPT available today</span>
+<span class="span">Asana for ChatGPT app coming soon</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-05</span>
+<span class="eh">Asana + Amazon Q Business integration to power AI workflows with unified third‑party data</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Asana introduced an integration with Amazon Q Business to surface insights from connected tools within Asana AI, broadening access to third‑party data sources across regions where Amazon Q Business is supported.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Asana + Amazon Q Business Integration</span>
+<span class="span">As previewed at AWS re:Invent 2024</span>
+<span class="span">available in all AWS Regions where Amazon Q Business is supported</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI Teammates and multi‑model execution</h2>
+<div class='range'>2024-01-01 → 2024-12-31</div>
+<div class='psum'>Asana debuted AI Teammates, automated collaborators designed to execute and coordinate work. The company reiterated its use of leading labs, specifically Anthropic and OpenAI, underpinning Asana’s multi‑model approach and signaling a strategic commitment to leverage top‑tier models rather than a single provider.</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-06-05</span>
+<span class="eh">Asana announces AI Teammates powered by leading labs (Anthropic and OpenAI)</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Asana launched AI Teammates, positioning them as adaptable AI collaborators. The company noted its AI roadmap is underpinned by frontier models from leading labs, specifically including Anthropic and OpenAI; press and Axios reporting corroborated the provider mix.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2], web_search_findings[3]</div>
+<span class="span">Asana AI teammates</span>
+<span class="span">SAN FRANCISCO--(BUSINESS WIRE)--Jun. 5, 2024</span>
+<span class="span">frontier models from the leading AI labs like Anthropic and OpenAI</span>
+<span class="span">Behind the scenes: Asana is using large language models built by OpenAI and Anthropic.</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundation of Asana AI with frontier LLMs</h2>
+<div class='range'>2023-06-01 → 2023-12-31</div>
+<div class='psum'>Asana initiated its modern AI roadmap by launching Asana Intelligence, introducing generative features powered initially by OpenAI in a closed beta. Within months, the company broadened its stance to a multi-model approach, publicly positioning a technology partner network that includes both OpenAI and Anthropic. These moves established core product integration patterns and signaled an intent to avoid single‑provider dependence.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2023-10-03</span>
+<span class="eh">Asana unveils AI innovations and a multi‑model partner network (OpenAI, Anthropic)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Asana introduced additional AI capabilities and formalized its AI Technology Partner network, explicitly naming OpenAI and Anthropic as foundation model options for enterprise customers, reinforcing a multi‑model strategy.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Asana Unveils New AI Innovations</span>
+<span class="span">Asana AI Technology Partner network</span>
+<span class="span">OpenAI and Anthropic</span>
+<span class="span">tailored for the enterprise</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-06-01</span>
+<span class="eh">Asana Intelligence launches; early generative features powered by OpenAI (closed beta)</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Asana announced Asana Intelligence, embedding generative AI into its work management platform, with features powered by OpenAI available to customers in a closed beta. This marked the company’s initial production alignment with OpenAI models.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Launched today, Asana Intelligence</span>
+<span class="span">powered by OpenAI</span>
+<span class="span">now available to customers in a closed beta</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the definitive StackAI deal terms (final purchase price, cash/stock mix, earn‑outs) beyond the reported “about $75 million dollars”?</li>
+<li>What percentage of total customers have deployed AI Teammates post broader availability, and what is usage depth by seat?</li>
+<li>How much net‑new ARR uplift is attributable specifically to AI Teammates versus AI Studio in FY2027 YTD?</li>
+<li>What referral or revenue‑share mechanics, if any, exist with Anthropic’s connector directory, Claude Code exposure, or OpenAI’s ChatGPT app directory?</li>
+<li>What is the adoption and usage volume of the Gemini Enterprise Asana connector during public preview?</li>
+<li>How materially does StackAI contribute to cross‑sell into new buying centers versus expansion within existing accounts?</li>
+<li>To what extent do platform AI suites (e.g., Microsoft Copilot) displace Asana’s AI features in overlapping enterprise accounts?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several sources are company press releases or investor materials; figures like ARR and cohort performance are self‑reported and unaudited metrics.</li>
+<li>Spanish‑language product page was used for the Claude integration enhancement; translations are not relied upon for verbatim spans but context is inferred.</li>
+<li>The reported StackAI purchase price is a single TechCrunch source and phrased as approximate (“about 75 million dollars”).</li>
+<li>Lack of disclosed long‑term or exclusive contractual terms with LLM providers limits assessment of contractual commitment strength.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

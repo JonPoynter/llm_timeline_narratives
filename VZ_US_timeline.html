@@ -1,0 +1,370 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>VZ US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Verizon Communications Inc <span class='sub'>(VZ US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.358</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>11 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 6</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 7</span>
+<span class='chip'>single source: 4</span>
+<span class='chip'>web-only (verified): 3</span>
+<span class='chip'>web-only (unverified): 3</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Internal AI stack, hyperscaler revenue prospects, and 2026 market signals</h2>
+<div class='range'>2026-04-27 → 2026-06-29</div>
+<div class='psum'>In 26Q1, Verizon’s CEO outlined a four‑layer internal AI stack expected to be substantially complete by July 2026 and fully complete by November 2026, targeting efficiency, customer experience, and personalized offers. Management also referenced exploring hyperscaler and enterprise partnerships with a potential multi‑billion revenue opportunity, with updates in three to six months, and reiterated a goal to become an &quot;AI‑native company.&quot;
+Concurrently, Verizon’s marketplace surfaced AI-forward distribution by featuring Google Workspace with Gemini and Microsoft 365 with Copilot. Market context in June 2026 included S&amp;P Dow Jones Indices replacing Verizon with Alphabet in the Dow Jones Industrial Average to increase exposure to AI and cloud, alongside a mid‑June session where Verizon outperformed during an AI/tech-led selloff.</div>
+<div class="event t-corroborated" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-29</span>
+<span class="eh">Alphabet replaces Verizon in the Dow Jones Industrial Average to increase AI/cloud exposure</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">S&amp;P Dow Jones Indices implemented the change effective before the open on June 29, 2026, replacing Verizon with Alphabet to broaden exposure to artificial intelligence, cloud infrastructure, and advertising. Verizon’s small weight due to the price‑weighted methodology limited index impact but underscored the market’s AI tilt.</p>
+<details>
+<summary>evidence — 5 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[4], news_rows[2], news_rows[3], news_rows[1], news_rows[0]</div>
+<span class="span">replace Verizon in the Dow Jones Industrial Average</span>
+<span class="span">effective June 29</span>
+<span class="span">artificial intelligence, cloud infrastructure, and advertising</span>
+<span class="span">small weight (~0.5%)</span>
+<span class="span">price-weighted methodology</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">Verizon Business Marketplace features Google Workspace with Gemini and Microsoft 365 with Copilot</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">As of June 2026, Verizon’s Business Marketplace highlighted AI‑enabled productivity suites, including Google Workspace with Google Gemini and Microsoft 365 with Copilot, signaling Verizon’s distribution role for leading AI productivity tools.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Publication date on the Marketplace page is presented as June 2026 without a specific day; event date approximated within the month.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Verizon Business Marketplace is your one-stop shop</span>
+<span class="span">Google Workspace — Enhance collaboration and efficiency with Google Workspace and Google Gemini.</span>
+<span class="span">Microsoft 365 — Transform your business and productivity with Microsoft 365, Teams and Copilot.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">Verizon outperforms in a tech/AI-led selloff, closing up 2.45%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">On June 10, 2026, Verizon rose 2.45% to $46.90 despite a market downdraft led by AI/tech names, with major indices falling 1.6–2.0%. The session highlighted defensive resilience versus broader AI-driven volatility.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">closed up 2.45% at $46.90</span>
+<span class="span">S&amp;P 500 fell about 1.6%</span>
+<span class="span">continued selling in AI/tech shares</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-27</span>
+<span class="eh">CEO sets timeline for Verizon’s four-layer internal AI stack (July/Nov 2026)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On the 26Q1 call, management detailed a four‑layer internal AI tech stack, targeted to be substantially complete by July 2026 and fully done by November 2026, with use cases in efficiency, CX, and personalized offers. This sets execution milestones for Verizon’s internal AI enablement.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">four-layer internal AI tech stack</span>
+<span class="span">substantially complete by July 2026</span>
+<span class="span">fully done by November 2026</span>
+<span class="span">efficiency, CX, and personalized offers.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-27</span>
+<span class="eh">Verizon flags hyperscaler AI infrastructure partnerships with multi‑billion revenue potential</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said it is exploring hyperscaler and enterprise partnerships tied to its AI roadmap, indicating a potential multi‑billion revenue opportunity with updates expected in three to six months. This frames AI-driven connectivity/infrastructure as a sizable near‑term revenue vector.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">hyperscaler/enterprise partnerships</span>
+<span class="span">multi‑billion revenue opportunity</span>
+<span class="span">updates in 3–6 months.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-27</span>
+<span class="eh">Management reiterates aim to become an “AI‑native company”</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alongside the 26Q1 AI roadmap, Verizon emphasized a cultural and strategic push to be an &quot;AI‑native company,&quot; while also affirming an &quot;iron clad&quot; view of the dividend. This signals sustained executive commitment to AI at the corporate level.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“AI‑native company”</span>
+<span class="span">“iron clad” view of the dividend.</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Customer experience transformation with Google Gemini and CESuite</h2>
+<div class='range'>2025-04-09 → 2025-06-24</div>
+<div class='psum'>In spring to summer 2025, Verizon highlighted large-scale use of Google Cloud’s Customer Engagement Suite and Gemini models to transform customer experience, including a new AI-powered Verizon Assistant and a &quot;Customer Champion&quot; model to handle complex issues. Google’s blog underscored operational impact for 115 million connections and the Personal Research Assistant supporting 28,000 care reps with 95% question answer coverage.
+These moves deepened Verizon’s reliance on Google’s AI stack for both customer-facing and agent-assist functions, aligning internal operations with generative AI while formalizing productized offers through Digital CX – GCP.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-06-24</span>
+<span class="eh">Verizon announces AI-powered CX innovations leveraging Google’s Gemini and Customer Engagement Suite</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Verizon unveiled a significant CX transformation leveraging Google Cloud’s AI, including Gemini models, with a dedicated expert model and an AI-powered Verizon Assistant. Google’s blog corroborated that Verizon uses the next‑generation Customer Engagement Suite and reported its Personal Research Assistant can answer 95% of questions for care reps.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[1], web_search_findings[2]</div>
+<span class="span">leveraging Google Cloud’s AI, including Google’s Gemini models.</span>
+<span class="span">the only carrier who provides a dedicated expert</span>
+<span class="span">AI-powered Verizon Assistant</span>
+<span class="span">Customer Engagement Suite</span>
+<span class="span">Able to answer 95% of questions</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations with Google AI and early AI connectivity strategy</h2>
+<div class='range'>2024-04-09 → 2025-03-15</div>
+<div class='psum'>From April 2024 through early 2025, Verizon began deploying Google’s enterprise AI tooling across network operations, marketing, and customer service. Public comments by the CIO highlighted using generative AI to reduce agent cognitive load and revamp customer service processes, signaling early internal adoption of large-model assistants.
+In January 2025, Verizon unveiled &quot;AI Connect,&quot; a strategy and suite aimed at hyperscalers and large enterprises to help manage AI-intensive workloads at scale, naming Google Cloud and Meta as early adopters of added capacity. In February 2025, Verizon introduced a consumer-facing AI perk with Google One AI Premium (Gemini Advanced) at a discounted $10/month, and by March published a formal SLA for its Digital CX – GCP offer bundling Google’s Customer Engagement Suite features (Dialogflow, Speech-to-Text, Text-to-Speech, Agent Assist).</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-03-15</span>
+<span class="eh">Verizon Digital CX – GCP SLA formalizes Google AI features and uptime credits</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Verizon Business published its Digital CX – GCP Service Level Agreement, detailing Google’s Customer Engagement Suite capabilities (Dialogflow, Speech-to-Text, Text-to-Speech, Agent Assist) and uptime credit tiers. This codifies service commitments for Google AI-powered customer experience solutions sold by Verizon.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Digital CX – GCP is a cloud-based solution</span>
+<span class="span">Google’s Customer Engagement Suite with Google AI, formerly known as Contact Center AI (CCAI).</span>
+<span class="span">Dialogflow</span>
+<span class="span">Speech to Text</span>
+<span class="span">99.0% to &lt; 99.9% — 10%</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-02-04</span>
+<span class="eh">Verizon adds Google One AI Premium perk offering Gemini Advanced for $10/mo</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10 · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Verizon introduced Google One AI Premium as a new myPlan/myHome perk priced at $10/month—half the usual $19.99—unlocking Gemini Advanced and 2 TB of Google storage. This expands consumer-facing AI access via Verizon’s bundles.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Google One AI Premium</span>
+<span class="span">Get access to Gemini Advanced</span>
+<span class="span">for an exclusive monthly price of just $10/mo.</span>
+<span class="span">half the price of the usual $19.99</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-24</span>
+<span class="eh">Verizon launches AI Connect to serve hyperscalers and large enterprises</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Verizon announced an expanded AI strategy, Verizon AI Connect—a suite to manage AI resource‑intensive workloads at scale—positioned for hyperscalers and global enterprises. The company named Google Cloud and Meta as early adopters leveraging additional capacity for AI workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Verizon AI Connect is a strategy and suite of products and solutions designed to manage AI resource-intensive workloads at scale.</span>
+<span class="span">built for hyperscalers, cloud providers and global enterprises.</span>
+<span class="span">Google Cloud and Meta are among early adopters of Verizon solutions.</span>
+<span class="span">leveraging additional capacity to support their AI workloads.</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-04-09</span>
+<span class="eh">Verizon identified as early Google enterprise AI customer for 5G, marketing, and customer service</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Axios reported Verizon as an early customer of Google’s enterprise AI tools, using them for deploying 5G networks, personalized marketing, and revamping customer service to reduce agent cognitive load. This marked visible internal adoption of Google’s generative AI across key workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Among the early customers of Google&#x27;s enterprise AI tools has been Verizon</span>
+<span class="span">deploying 5G networks</span>
+<span class="span">creating personalized marketing</span>
+<span class="span">revamping how it handles customer service</span>
+<span class="span">We reduce the cognitive load on our agents</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the actual contracted scale and term (if any) of Verizon’s Google One AI Premium partnership (subscriber counts, duration, and revenue share)?</li>
+<li>How much revenue and margin does Verizon expect from AI Connect hyperscaler deals in 2026–2027, and which specific partners are in late‑stage negotiations?</li>
+<li>What providers and models underpin Verizon’s internal four‑layer AI stack (e.g., degree of reliance on Google vs. other LLMs)?</li>
+<li>What quantified CX outcomes has Verizon realized (AHT reduction, CSAT/NPS lift, call deflection) from Google’s CESuite/Gemini deployments?</li>
+<li>How many enterprise customers have adopted Digital CX – GCP under Verizon’s SLA, and what is ARR tied to that offer?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items rely on Verizon and Google Cloud marketing disclosures; independent third‑party validation of performance claims (e.g., 95% answer coverage) is limited.</li>
+<li>The Verizon Business Marketplace page is cited with a June 2026 timeframe but lacks a specific publication date; event timing is approximated within the month.</li>
+<li>Index-composition news (Alphabet replacing Verizon in the Dow) reflects market context for AI exposure rather than a direct provider relationship change for Verizon.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,796 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>CTSH US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Cognizant Technology Solutions Corp <span class='sub'>(CTSH US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.474</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>36 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 16</span>
+<span class='chip'>single source: 20</span>
+<span class='chip'>web-only (verified): 12</span>
+<span class='chip'>web-only (unverified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Operationalizing agentic AI; multi-provider scale and economics</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>Cognizant reported rising AI-assisted engineering, expanding provider partnerships, and codifying economics through token metering and human-to-agentic rate cards. The firm also highlighted risks from third‑party component costs in integrated offerings pressuring gross margins. 
+Partnerships deepened: Google (Gemini Enterprise + Workspace), OpenAI (Codex partner), and Anthropic (Travelport collaboration). Recruiting emphasized multi-model fluency (AWS Bedrock, Claude, Titan, Llama), consistent with a hedge against single-provider dependence. Sector-wide competitive signals emerged as Anthropic’s Claude Code spurred concerns around legacy modernization revenue pools, pressuring services stocks including CTSH.</div>
+<div class="event t-web_only_unverified" id="E0036" data-providers="anthropic_claude meta_llama">
+<div class="ev-top">
+<span class="date">2026-06-01</span>
+<span class="eh">Hiring for AWS Bedrock/agentic AI; models include Claude and Llama</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">meta_llama</span></div>
+<p class="narr">A Principal AI Technical Architect role centers on building autonomous agents on AWS Bedrock, with model selection across Anthropic Claude, Amazon Titan, and Meta Llama based on cost, latency, and reasoning.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Job descriptions are indicative and may change; not a binding commercial commitment.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">AWS Bedrock</span>
+<span class="span">Anthropic Claude, Amazon Titan, Meta Llama</span>
+<span class="span">autonomous AI agents</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0035" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Travelport, Cognizant and Anthropic to modernize travel tech with Claude</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Cognizant is collaborating with Travelport and Anthropic to integrate Claude into engineering and delivery, starting with Trip Services and embedding AI features across Travelport’s platforms.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">This is not a limited pilot.</span>
+<span class="span">Travelport Trip Services</span>
+<span class="span">Neuro® AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Q1: Scaled AI partnerships incl. Google Cloud and OpenAI; integrated offerings</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Cognizant emphasized its AI builder strategy with scaled partnerships (Google Cloud, OpenAI, NVIDIA, Palantir) and noted third‑party product resale contributing to growth mix.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“AI builder” strategy</span>
+<span class="span">Google Cloud, OpenAI, NVIDIA, Palantir</span>
+<span class="span">third‑party product resale</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Cognizant to acquire Astreya to deepen AI-first managed services</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cognizant announced an agreement to acquire Astreya to expand AI-first managed services and AI infrastructure capabilities; recent acquisitions including 3Cloud are expected to add ~150 bps to 2026 revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">acquire Astreya</span>
+<span class="span">AI‑first managed services</span>
+<span class="span">expected to contribute ~150 bps to 2026 revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Token metering confirmed across pricing models</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management confirmed token metering across fixed-price and T&amp;M models, outlining implications for AI services pricing and delivery economics.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Token metering is a reality</span>
+<span class="span">A0 (fully human) to A3 (autonomous digital labor)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Introduces A0–A3 human-to-agentic rate card</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Cognizant outlined a human-to-agentic rate card from A0 to A3, aligning pricing with rising automation levels.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">rate card from A0 (fully human)</span>
+<span class="span">A3 (autonomous digital labor)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Plan to retain portion of AI productivity as margin</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cognizant intends to keep some AI-driven productivity as margin, absorbing start-up costs initially with savings expected at scale.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">retain some productivity as margin</span>
+<span class="span">start‑up costs up front</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Cognizant can manage AI compute/economics for clients</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management positioned Cognizant to manage client AI compute and economics alongside human/digital labor blends and token metering.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">manage compute/economics for clients</span>
+<span class="span">confirmed token metering</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Shift toward tokenized, outcome-based pricing</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cognizant is migrating to outcome-based, tokenized rate cards to capture margin as AI scales, reflecting a maturing commercial model for agentic delivery.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">outcome-based and tokenized rate cards</span>
+<span class="span">support margin capture</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Operations-led AI demand pockets; Financial Services double-digit</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cognizant highlighted operations-led AI demand in customer service, employee services, and finance/legal workflows, with Financial Services called out as a double-digit growth area.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Financial Services called out as double‑digit growth area</span>
+<span class="span">operations‑led AI (customer service, employee services, finance/legal workflows)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Integrated-offering third-party costs pressure gross margin</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The CFO cited higher third‑party element costs in integrated offerings as a contributor to slightly lower Q1 gross margin, expecting improvement as delivery programs progress.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">pricing_pressure_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">higher third‑party element costs in integrated offerings</span>
+<span class="span">slightly lower gross margin</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">AI-builder M&amp;A pipeline described as &quot;very healthy&quot;</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management characterized the M&amp;A environment as attractive for assets aligned to its AI‑builder and platform/outcomes thesis, noting a &quot;very healthy&quot; pipeline.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑builder and platform/outcomes thesis</span>
+<span class="span">a &quot;very healthy&quot; pipeline</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0024" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Cognizant named OpenAI Codex partner to scale enterprise deployments</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI selected Cognizant among a small group of partners to deploy and scale Codex in complex enterprise environments, extending Cognizant’s AI builder positioning.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">named among a select group of partners</span>
+<span class="span">scale the impact of Codex</span>
+<span class="span">Denise Dresser, Chief Revenue Officer, OpenAI</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0023" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">Hiring for GenAI roles referencing Llama and vector search</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Cognizant posted for a Sr. Gen AI Developer role specifying experience with Llama Semantic Search, vector DBs, LLMs, prompt engineering, and LangChain.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">Llama Semantic Search Vector DB</span>
+<span class="span">Large Language Models</span>
+<span class="span">prompt engineering and Langchain</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-02-23</span>
+<span class="eh">Services stocks fall as Anthropic launches Claude Code; CTSH -6.0%</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">A sector-wide selloff followed Anthropic’s Claude Code update amid fears of AI-driven disruption to legacy modernization, with CTSH shares closing down 6.0%.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<p class="cav">⚠ Market move reflects multiple drivers; attribution to a single product update is indirect.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Anthropic unveils Claude Code</span>
+<span class="span">COBOL modernization tool</span>
+<span class="span">CTSH -6.0%</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0022" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-16</span>
+<span class="eh">Cognizant and Google Cloud move to operationalize agentic AI; Workspace + Gemini Enterprise</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Cognizant advanced its Google partnership from platform integration to enterprise-scale execution, investing in internal deployment of Google Workspace alongside Gemini Enterprise and launching a productivity offering for clients.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">operationalize agentic AI</span>
+<span class="span">Gemini Enterprise</span>
+<span class="span">Google Workspace</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">32% of Cognizant code AI-assisted; partnerships highlighted</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management disclosed that 32% of code is now AI-assisted, underscoring rapid internal adoption alongside highlighted partnerships including Anthropic.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">32% of our code is AI‑assisted</span>
+<span class="span">highlighted partnerships (incl. Anthropic)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Partnerships include Anthropic</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Cognizant emphasized partnerships that include Anthropic, reinforcing a multi-model approach and deepening access to frontier capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">highlighted partnerships (incl. Anthropic)</span>
+<span class="span">CEO added</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Management: &quot;AI is a tailwind for us&quot;</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Leadership reiterated AI as a net tailwind for Cognizant while committing to deliver value irrespective of cost-curve timing.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">AI is a tailwind for us</span>
+<span class="span">We deliver…irrespective</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">CFO flags AI cost-curve risk; still underwrites productivity</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Cognizant’s CFO acknowledged AI cost-curve uncertainty but said they underwrite productivity and deliver irrespective of achieved curves, with margins tracking to expectations.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">underwrite productivity</span>
+<span class="span">deliver…irrespective</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Agentifying paralegal work cited as AI example</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited a concrete generative AI use case: agentifying paralegal work as part of emerging AI workflows.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Incremental examples included</span>
+<span class="span">agentifying paralegal work</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">AI to drive SG&amp;A efficiency in corporate functions</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cognizant expects further SG&amp;A efficiency by applying AI across corporate functions, signaling internal productivity gains beyond engineering.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Further SG&amp;A efficiency</span>
+<span class="span">applying AI in corporate functions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">BPO viewed as multiyear AI tailwind due to agentic workflows</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cognizant sees BPO as a multiyear tailwind as agentic AI workflows require ongoing maintenance and outcome ownership.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">BPO characterized as a multiyear tailwind</span>
+<span class="span">agentic workflows require ongoing maintenance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">TriZetto scale and agentic AI opportunity across admin layers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$500.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted TriZetto’s scale and the opportunity to apply agentic AI across administrative layers to transform healthcare operations.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">200M members; ~$0.5T transactions</span>
+<span class="span">apply agentic AI to admin layers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">AI expands TAM via two swim lanes; emphasis on context engineering</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cognizant framed AI demand in two swim lanes—productivity- and innovation-led—highlighting the importance of context engineering.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">two swim lanes</span>
+<span class="span">context engineering</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Multi-model posture; Anthropic enterprise scale-up begins</h2>
+<div class='range'>2025-01-01 → 2025-12-31</div>
+<div class='psum'>Cognizant demonstrated external GenAI delivery on Azure OpenAI through an EdTech case study and published thought leadership on DeepSeek’s implications and alternative fine-tuning methods beyond RL. 
+In late 2025, Cognizant announced a major internal and client-facing scale-up with Anthropic Claude, aligning Claude models and tooling with Cognizant’s engineering platforms and processes to accelerate production outcomes across functions.</div>
+<div class="event t-web_only_verified" id="E0011" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-11-04</span>
+<span class="eh">Cognizant to deploy Anthropic Claude to up to 350k employees and clients</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Cognizant announced a large-scale Anthropic collaboration to deploy Claude across up to 350,000 employees and align Claude models, Claude Code, MCP, and the Agent SDK with Cognizant’s engineering platforms for client delivery.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">deploy Claude to up to 350,000 employees globally</span>
+<span class="span">Claude Code</span>
+<span class="span">Model Context Protocol (MCP)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-28</span>
+<span class="eh">AI Lab proposes ES-based fine-tuning alternative to RL for LLMs</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Cognizant AI Lab discussed an evolution-strategies approach to LLM fine-tuning, contrasting it with RL methods like PPO/GRPO and highlighting practical tradeoffs.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">A New Fine-Tuning Approach</span>
+<span class="span">GPT, Claude, LLaMA, DeepSeek, Qwen</span>
+<span class="span">Reinforcement learning (RL)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2025-02-14</span>
+<span class="eh">Cognizant commentary: DeepSeek as an accelerator for enterprise AI</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Cognizant shared analysis on DeepSeek’s impact, noting smaller, faster models can run locally and accelerate enterprise-grade adoption without massive compute.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">DeepSeek is no Sputnik</span>
+<span class="span">run and tested smaller DeepSeek models on a MacBook</span>
+<span class="span">No massive processing power or storage was needed</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-01-01</span>
+<span class="eh">Case study: EdTech giant uses Azure OpenAI for private GPT platform MVPs</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Cognizant delivered an Azure OpenAI-based framework for an EdTech client, enabling conversational bots and a private GPT platform that drove time savings for instructors and students.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[15]</div>
+<span class="span">Azure OpenAI</span>
+<span class="span">private GPT platform</span>
+<span class="span">significant time savings</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scaling with Microsoft and Google Gemini; early customer proofs</h2>
+<div class='range'>2024-01-16 → 2024-12-31</div>
+<div class='psum'>Cognizant broadened its multi-provider stance by collaborating with Microsoft on an internal Innovation Assistant built on Azure OpenAI Service and expanding its Google Cloud partnership to adopt Gemini for developers. The company also highlighted an enterprise push to operationalize Copilots at scale.
+Customer-facing traction appeared in FY2023 disclosures including a multi-year engagement with Cambridge and internal developer enablement programs tied to Microsoft Copilot and Gemini.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-04-22</span>
+<span class="eh">Cognizant and Microsoft expand partnership; 25k Microsoft 365 Copilot seats</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Cognizant expanded its Microsoft partnership, purchasing 25,000 Microsoft 365 Copilot seats and training tens of thousands of developers on GitHub Copilot, with plans to deploy Copilot broadly across Global 2000 clients.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">contractual_commitment_strength</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">purchased 25,000 Microsoft 365 Copilot seats</span>
+<span class="span">35,000 Cognizant developers</span>
+<span class="span">additional 40,000 developers</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-03-21</span>
+<span class="eh">Cognizant to adopt Gemini for Google Cloud for 70k+ associates</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Cognizant expanded its Google Cloud partnership to adopt Gemini for Google Cloud, enabling more than 70,000 associates and integrating Gemini within internal operations and platforms like Flowsource.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">adopt Gemini for Google Cloud</span>
+<span class="span">enable more than 70,000 associates</span>
+<span class="span">Cognizant Flowsource</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-02-06</span>
+<span class="eh">FY2023 results note Azure OpenAI Innovation Assistant and 5-year Cambridge renewal</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Cognizant’s results recap referenced the Azure OpenAI-based Innovation Assistant and a renewed five-year relationship with Cambridge to leverage AI for operational effectiveness and exam integrity.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">built on Microsoft Azure OpenAI Service</span>
+<span class="span">renewed five-year relationship</span>
+<span class="span">leverage AI technology</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-01-16</span>
+<span class="eh">Cognizant unveils Innovation Assistant on Azure OpenAI Service</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Cognizant launched an internal generative AI Innovation Assistant built on Microsoft Azure OpenAI Service to augment its Bluebolt innovation program and accelerate problem-solving across teams.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Innovation Assistant</span>
+<span class="span">Microsoft Azure OpenAI Service</span>
+<span class="span">augment Cognizant&#x27;s internal innovation program, Bluebolt</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundation of GenAI alliances and platform</h2>
+<div class='range'>2023-05-09 → 2023-12-31</div>
+<div class='psum'>Cognizant began formalizing its generative AI strategy with Google Cloud and its own Neuro AI platform. The company expanded its Google Cloud alliance to accelerate AI adoption for enterprise clients, committing to build delivery capacity and training at scale. 
+Concurrently, Cognizant launched its Neuro AI platform to offer a multi-platform, multi-cloud framework for responsible AI deployments, signaling a deliberate multi-model approach anchored in enterprise governance.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-08-02</span>
+<span class="eh">Cognizant to build healthcare LLM solutions on Google Cloud Vertex AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">As part of its expanded Google Cloud partnership, Cognizant committed to develop healthcare-focused LLM solutions using Vertex AI, initially targeting administrative processes like appeals, grievances, and member engagement.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">healthcare large language model (LLM) solutions</span>
+<span class="span">Vertex AI platform</span>
+<span class="span">appeals and grievances</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2023-05-15</span>
+<span class="eh">Cognizant launches Neuro AI platform for responsible, multi-cloud GenAI</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cognizant introduced its Neuro AI platform to help enterprises adopt generative AI responsibly across multi-platform, multi-cloud environments, emphasizing reusable components, governance, and secure solution design.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>Cognizant Neuro®️ AI</span>
+<span class="span">multi-platform, multi-cloud ecosystems</span>
+<span class="span">Responsible AI principles</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-05-09</span>
+<span class="eh">Cognizant and Google Cloud expand alliance to bring AI to enterprise clients</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Cognizant deepened its Google Cloud partnership to accelerate AI adoption across global enterprises, including new Google Cloud AI Innovation Centers and large-scale workforce training leveraging Google’s generative AI and Vertex AI ecosystem.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">open new Google Cloud AI Innovation Centers</span>
+<span class="span">train 25,000 Cognizant professionals</span>
+<span class="span">Vertex AI Model Garden</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the financial terms and expected revenue contribution of the Astreya acquisition?</li>
+<li>What incremental revenue or margin impact does the OpenAI Codex partner designation drive for FY2026–2027?</li>
+<li>How many Microsoft 365 Copilot and Google Workspace + Gemini Enterprise seats are deployed at clients to date, and what is the ARR attached?</li>
+<li>What portion of delivery mix now includes third‑party product resale, and how does it affect gross margin over 2026?</li>
+<li>What is the timing and scope of the internal Anthropic Claude rollout (by function, geography) and associated seat or usage commitments?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items are company press releases or blog posts; forward-looking statements may not materialize as described.</li>
+<li>Job postings indicate intent and capability focus but do not constitute commercial commitments.</li>
+<li>Sector stock move on 2026-02-23 reflects multiple macro/market factors beyond a single product update.</li>
+<li>Filings highlights are excerpted; additional context in full filings may nuance interpretations.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,462 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>CVLT US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Commvault Systems Inc <span class='sub'>(CVLT US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.377</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>16 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 7</span>
+<span class='chip'>single source: 9</span>
+<span class='chip'>web-only (verified): 5</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Deeper Azure embedding and operational data flows</h2>
+<div class='range'>2026-06-15 → 2026-06-24</div>
+<div class='psum'>Commvault documentation detailed external endpoints for Arlie AI Assistant and specified that data and metadata can be sent to OpenAI models hosted in Microsoft Azure. This clarifies operational connectivity and dependencies behind the AI assistant experience.
+Shortly after, Commvault announced a multi‑year strategic partnership with Microsoft to deliver its platform as a native ISV service on Azure, purchasable via the Microsoft Marketplace and eligible for MACC, with public preview expected in summer 2026. Together, these moves deepen Azure distribution and reinforce Microsoft alignment while highlighting data‑handling pathways.</div>
+<div class="event t-web_only_verified" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">Multi‑year strategic partnership: Commvault native ISV service on Azure</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Commvault and Microsoft announced a multi‑year partnership to deliver Commvault’s AI and cyber resilience platform as a native ISV service on Microsoft Azure. Customers can buy via Microsoft Marketplace and apply spend toward MACC, with public preview expected in summer 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">native ISV Service on Microsoft Azure</span>
+<span class="span">apply usage toward their Microsoft Azure Consumption Commitment (MACC)</span>
+<span class="span">public preview this summer</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0014" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">Docs: Arlie endpoints and Azure OpenAI data flow detailed</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Commvault’s documentation lists external URLs required for Arlie AI Assistant and states that the service can send data and metadata to OpenAI models hosted in Microsoft Azure.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Arlie AI Assistant</span>
+<span class="span">https://cvchatapp.commvault.com</span>
+<span class="span">https://apiengineer.commvault.com</span>
+<span class="span">Send data and metadata to open AI models hosted in Microsoft Azure</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0015" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">Risk note: Data/metadata sent to Azure‑hosted OpenAI models</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Based on Commvault’s AI launch and documentation, Arlie’s backend integrates with Azure OpenAI, and documentation states data and metadata are sent to OpenAI models hosted in Azure. This implies third‑party model processing pathways and associated governance considerations.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<p class="cav">⚠ Operational risk characterization inferred from vendor integration and official documentation.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[3]</div>
+<span class="span">Azure OpenAI Service</span>
+<span class="span">Send data and metadata to open AI models hosted in Microsoft Azure</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Market backdrop and FY26 Q4 execution; AI stack protection and cloud expansion</h2>
+<div class='range'>2026-04-10 → 2026-04-28</div>
+<div class='psum'>A broad market narrative cited AI infrastructure deals and stock‑specific catalysts, with Commvault mentioned among beneficiaries. Commvault’s FY26 Q4 update reinforced momentum across AI‑relevant security integrations and alliances (Microsoft Security, CrowdStrike, NetApp, Okta, STACKIT) and highlighted a recent AI data security acquisition (Satori).
+Management emphasized protecting vector databases, AI pipelines, and identity systems, aiming for single‑click recovery of the AI stack. The company reported ~2,500 new subscription customers in the last 12 months and continued to expand multi‑cloud, air‑gapped protections. KPIs included Total ARR of $1,121.6m, SaaS ARR of $400.2m, deferred revenue of ~$778.7m, and guidance pointing to ~$190m of net new subscription ARR for FY2027.</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q4 FY26: Security integrations and alliances; Satori AI data security acquisition</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Commvault highlighted new and expanded integrations with Microsoft Security, CrowdStrike, NetApp, Okta, and STACKIT, and the acquisition of Satori to strengthen data/AI security.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">integrations with Microsoft Security and CrowdStrike</span>
+<span class="span">strategic alliance with NetApp</span>
+<span class="span">identity resilience extended to Okta</span>
+<span class="span">partnership with STACKIT</span>
+<span class="span">acquisition of data/AI security firm Satori.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q4 FY26: Focus on protecting AI stacks and single‑click recovery</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized early but broadening AI adoption and a product focus on protecting vector databases, pipelines, and identity systems, targeting single‑click recovery for the AI stack.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI adoption as early but broadening</span>
+<span class="span">protecting vector databases, pipelines, identity systems</span>
+<span class="span">“single‑click recovery of the entire AI stack.”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q4 FY26: Customer engagement and new logo momentum</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Commvault reported Unity’s objective to drive engagement across workloads and cited approximately 2,500 new subscription customers over the last 12 months, including ~600 in Q4.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“objective number one” as driving customer engagement</span>
+<span class="span">~2,500 new subscription customers</span>
+<span class="span">~600 in Q4</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q4 FY26: Hyperscaler relationships and multi‑cloud, air‑gapped resilience</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Commvault underscored long‑standing hyperscaler relationships and its ability to provide air‑gapped, immutable capabilities across multiple clouds through a single control plane, with ongoing expansion of cloud‑native protections.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">pivotal, long‑standing hyperscaler relationships</span>
+<span class="span">air‑gapped, immutable capabilities</span>
+<span class="span">single control plane</span>
+<span class="span">cloud‑native protections</span>
+<span class="span">diversify across clouds</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q4 FY26 KPIs: Total ARR $1,121.6m; SaaS NRR 122%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.1B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Commvault reported Total ARR of $1,121.6m, Subscription ARR of $989.3m, SaaS ARR of $400.2m, and SaaS NRR of 122% as of 3/31/26.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Total ARR USD 1,121.6m</span>
+<span class="span">Subscription ARR USD 989.3m</span>
+<span class="span">SaaS ARR USD 400.2m</span>
+<span class="span">SaaS NRR 122%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q4 FY26: Deferred revenue ~$778.7m</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$779M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Deferred revenue totaled approximately $778.7m at 3/31/26, comprising $485.0m current and $293.7m long‑term.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Deferred revenue: current USD 485.0m</span>
+<span class="span">long‑term USD 293.7m</span>
+<span class="span">total USD ~778.7m</span>
+<span class="span">at 3/31/26.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">FY2027 net new subscription ARR guided to roughly $190m</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$190M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Commvault quantified FY2027 net new subscription ARR at roughly $190 million at the midpoint of guidance.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">net new subscription ARR for FY2027</span>
+<span class="span">“roughly $190 million”</span>
+<span class="span">midpoint of guidance.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Average SaaS contract term 1–2 years builds renewal base</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Commvault noted average SaaS contract length of 1–2 years, supporting a growing renewal base and cross‑sell opportunity in 2H FY2027.</p>
+<div class="ev-ch">channels: <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Average SaaS contract length is “1 to 2 years,”</span>
+<span class="span">growing renewal base</span>
+<span class="span">larger cross‑sell opportunity in 2H FY2027.</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Commvault Cloud available on Google Cloud with marketplace and utility pricing</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Commvault announced availability of Commvault Cloud on Google Cloud, distributed globally via Google Cloud Marketplace and aligned to a credit‑based, utility pricing model.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">platform will be available on Google Cloud</span>
+<span class="span">Google Cloud Marketplace</span>
+<span class="span">credit-based, utility-driven pricing model</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-10</span>
+<span class="eh">Market note flags AI infra deals; Commvault cited among catalysts</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">A market wrap highlighted AI infrastructure deals and stock‑specific catalysts, explicitly referencing Commvault within that context.</p>
+<p class="cav">⚠ Broad market color; not a firm‑specific transaction.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">AI infra deals</span>
+<span class="span">Stock-specific catalysts offset macro drag</span>
+<span class="span">Commvault; CoreWeave news</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Conversational AI interface and multi‑model validation</h2>
+<div class='range'>2025-10-28 → 2025-10-29</div>
+<div class='psum'>Commvault unveiled a conversational AI interface for backup and cyber resilience, using its Model Context Protocol (MCP) server to bridge enterprise systems with leading GenAI assistants. The company validated integrations with OpenAI’s ChatGPT Enterprise and Anthropic’s Claude, signaling a multi‑model approach for user interaction.
+Commvault also stated that it does not use or train external AI models with customer data, addressing a key data governance consideration while enabling policy‑based, action‑oriented workflows via conversational commands.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-10-29</span>
+<span class="eh">Commvault introduces conversational AI via MCP with ChatGPT Enterprise and Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Commvault launched conversational resilience capabilities using its Model Context Protocol (MCP) server, integrating with OpenAI’s ChatGPT Enterprise and Anthropic’s Claude. The company emphasized policy controls and stated it does not use or train external AI models with customer data.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1], web_search_findings[2]</div>
+<span class="span">Model Context Protocol (MCP) server</span>
+<span class="span">OpenAI’s ChatGPT Enterprise</span>
+<span class="span">Anthropic’s Claude</span>
+<span class="span">does not use or train external AI models with customer data</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Metallic AI launch and early AI assistant adoption</h2>
+<div class='range'>2023-11-08 → 2025-05-05</div>
+<div class='psum'>Commvault introduced Commvault Cloud, powered by Metallic AI, positioning AI at the core of its cyber resilience platform. The launch included backend integration with Azure OpenAI Service and the debut of Arlie, an AI co‑pilot, while making the platform broadly available through major cloud marketplaces.
+Through FY2025 disclosures, Commvault emphasized Arlie’s operational role in support, citing real‑time, actionable insights and a virtual global support center. This period sets the product foundation and early distribution reach for AI‑assisted resilience workflows.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-05-05</span>
+<span class="eh">10‑K: Arlie AI assistant improves support experience</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Commvault’s FY2025 10‑K highlights Arlie, the AI‑powered assistant within Commvault Cloud, as enhancing support with real‑time insights and enabling a virtual global support center.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Arlie, our artificial intelligence (&quot;AI&quot;)-powered assistant</span>
+<span class="span">real-time, actionable insights</span>
+<span class="span">virtual global support center</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-11-08</span>
+<span class="eh">Commvault Cloud launched with Arlie and Azure OpenAI Service; multi‑marketplace availability</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Commvault announced Commvault Cloud, powered by Metallic AI, introducing Arlie as an AI co‑pilot and integrating on the backend with Azure OpenAI Service. The platform was listed across major marketplaces including Microsoft Azure and Google Cloud, expanding distribution.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Azure OpenAI Service</span>
+<span class="span">Arlie – short for “Autonomous Resilience”</span>
+<span class="span">Microsoft Azure Marketplace</span>
+<span class="span">Google Cloud Marketplace</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What share of Commvault Cloud AI interactions route through Azure OpenAI versus other assistants (e.g., Claude) and how is usage trending?</li>
+<li>Are there any revenue‑share, MDF, or incentive terms embedded in the Microsoft native ISV service/MACC alignment that could impact gross margin?</li>
+<li>What data retention, masking, or redaction controls apply when sending data and metadata to Azure‑hosted OpenAI models via Arlie?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Market wrap item (2026‑04‑10) is broad macro color and not a firm‑specific transaction.</li>
+<li>Press releases and product documentation reflect vendor‑provided claims; independent third‑party validation of performance or security claims is not included in the evidence.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

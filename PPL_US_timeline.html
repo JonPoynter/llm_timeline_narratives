@@ -1,0 +1,684 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>PPL US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>PPL Corp <span class='sub'>(PPL US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.431</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>29 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 11</span>
+<span class='chip'>single source: 17</span>
+<span class='chip'>web-only (verified): 7</span>
+<span class='chip'>corroborated: 4</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Tariff enablement, JV execution steps, and record PA pipeline</h2>
+<div class='range'>2026-02-20 → 2026-07-01</div>
+<div class='psum'>PPL’s 4Q25 and 1Q26 disclosures and related coverage show rapid scaling of hyperscale data center demand and concrete steps to enable generation and transmission. Management advanced the Blackstone Infrastructure JV and turbine sourcing, secured strategic land parcels, and positioned for alternative generation options potentially arriving in 2028–2029 ahead of CCGTs in 2031–2032. They also indicated any major hyperscaler ESA would be disclosed off‑cycle.
+Regulatory developments included progress in Pennsylvania’s rate case culminating in a $275M settlement with a new large-load/data-center tariff featuring minimum 10‑year terms, ramp schedules, minimum load guarantees and exit fees. In Q1 2026, PPL reported an advanced data center pipeline of 28.3 GW in Pennsylvania (up 12% q/q), around 10 GW under ESAs and ~5 GW under construction, alongside a $23B 2026–2029 regulated capex plan (and $5.1B in 2026) to support growth.</div>
+<div class="event t-web_only_verified" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-11</span>
+<span class="eh">PPL cites contracts with QTS, AWS, PowerHouse and CoreWeave; ~5 GW under construction</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management identified major data center counterparties in Pennsylvania, including QTS Data Centers, Amazon Web Services, PowerHouse Data Centers and CoreWeave, and noted about 5 GW of advanced-stage projects are under construction.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">contracts with major data center companies</span>
+<span class="span">QTS Data Centers, Amazon Web Services, PowerHouse Data Centers and CoreWeave</span>
+<span class="span">About 5 GW of the utility’s advanced stage projects are under construction</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">PA advanced-stage data center pipeline reaches 28.3 GW, up 12% q/q</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PPL Electric reported its Pennsylvania advanced-stage data center pipeline increased to 28.3 GW as of Q1 2026, up 12% quarter-over-quarter from 25.2 GW, corroborated by subsequent trade coverage.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[1]</div>
+<span class="span">28.3 GW</span>
+<span class="span">up 12% q/q</span>
+<span class="span">25.2 GW</span>
+<span class="span">jumped 12% to 28.3 GW</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Approximately 10 GW under ESAs; about 5 GW under construction</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PPL indicated around 10 GW of data center load under ESAs with approximately 5 GW under construction, consistent with commentary that ~5 GW is under construction within the advanced-stage portfolio.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[1]</div>
+<span class="span">Around 10 GW</span>
+<span class="span">~5 GW under construction</span>
+<span class="span">About 5 GW of the utility’s advanced stage projects are under construction</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Kentucky potential new load totals 12.9 GW; ~3.5 GW expected by 2032</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PPL’s Kentucky queue reflected 12.9 GW of potential new load through 2032, with updated projections indicating ~3.5 GW expected by 2032, above prior CPCN forecasts.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">12.9 GW potential new load through 2032</span>
+<span class="span">~3.5 GW expected new load by 2032</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Blackstone JV advancing PA BYOG generation; excluded from base plan; turbine reservations underway</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">PPL reported advancing its JV with Blackstone to develop BYOG generation in Pennsylvania for data centers, while excluding any JV earnings/capex from the current plan. Coverage noted execution of multiple gas turbine reservation agreements and interconnection requests submitted to PJM.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[1]</div>
+<span class="span">advancing plans to develop BYOG generation</span>
+<span class="span">business plan excludes any earnings/capex from the JV</span>
+<span class="span">executing multiple gas turbine reservation agreements</span>
+<span class="span">submitted requests for multiple generation projects into PJM&#x27;s interconnection queue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Risk: load conversion timing and JV ESSA execution remain uncertain</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">PPL cautioned that timing and conversion of signed agreements to actual load, and the JV’s ability to secure long-term ESSAs and develop generation, remain uncertain; slippage could affect longer-term growth assumptions.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">timing and conversion of signed agreements to actual load</span>
+<span class="span">secure long‑term ESSAs</span>
+<span class="span">remain uncertain</span>
+<span class="span">slippage could affect longer‑term growth assumptions</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">PA rate case settlement ($275M) includes new large-load/data center tariff with 10+ year terms</span>
+<span class="badge">regulatory</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$275M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">PPL Electric reached a $275M rate case settlement including a new tariff for large-load/data center customers with initial terms of not less than 10 years, ramp schedules up to five years, minimum load guarantees, and exit fees. This aligns with management’s 4Q25 comments on the data-center-focused proceedings timetable.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2], filings[1]</div>
+<span class="span">$275M</span>
+<span class="span">data center tariff</span>
+<span class="span">not less than 10 years</span>
+<span class="span">minimum load guarantees and exit fees</span>
+<span class="span">Briefings are scheduled in March</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">PPL advances Blackstone JV to meet Pennsylvania data center demand</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized advancing the Blackstone JV as a strategic initiative to meet data center demand in Pennsylvania, reinforcing the JV’s centrality to PPL’s hyperscale strategy.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Strategic initiatives include advancing the Blackstone JV</span>
+<span class="span">to meet data-center demand in Pennsylvania</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">Risk: JV upside timing depends on signed hyperscaler agreements and generation mix</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">PPL noted its updated plan excludes potential earnings from the Blackstone JV, with contributions depending on timing of signed hyperscaler agreements and generation mix, creating uncertainty around upside realization and investment sequencing.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">excludes potential earnings</span>
+<span class="span">timing of signed hyperscaler agreements</span>
+<span class="span">creating uncertainty</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">Management signals off-cycle announcement if/when a hyperscaler ESA is signed</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">PPL indicated that any hyperscaler ESA would be announced off‑cycle if/when signed, implying potential news flow outside regular earnings cadence.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">hyperscaler ESA</span>
+<span class="span">off‑cycle</span>
+<span class="span">if/when signed</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">Customers show clear preference for new generation to serve data centers</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PPL highlighted customer preferences for new generation to serve large data center loads, guiding the company’s resource planning and JV posture.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">clear preference for new generation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">Alt generation options could arrive 2028–2029 ahead of CCGTs in 2031–2032</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">PPL framed an arrival window for alternative generation in 2028–2029, potentially preceding large CCGTs in 2031–2032, affecting JV ramp timing and portfolio mix.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">alternative technologies could arrive in 2028–2029</span>
+<span class="span">CCGTs in 2031–2032</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">PPL secures multiple strategic land parcels in Pennsylvania for new generation</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">To support future data center load, PPL reported securing multiple strategic land parcels in Pennsylvania for potential new generation development.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">multiple strategic PA land parcels secured;</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">PPL in active turbine discussions with GE, Siemens, and Mitsubishi</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PPL disclosed ongoing turbine sourcing discussions with major OEMs, supporting JV and generation project optionality.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">active turbine discussions with GE, Siemens, and Mitsubishi;</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">JV contract design intended not to alter company risk profile (regulated-like)</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">PPL described the JV as structured with regulated-like contracts to avoid changing the company’s overall risk profile.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">not to alter company risk profile (regulated‑like contracts).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">PPL does not expect to participate in PJM BRA; may consider special backstop auction</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management indicated no plans to participate in the normal PJM base residual auction, but may consider any special backstop auction depending on structure and risk fit.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">does not expect to participate in the normal base residual auction</span>
+<span class="span">may consider any special backstop auction</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">PA rate case hearings focused on data center load; decision expected by June with July 1 effective date</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">PPL described Pennsylvania hearings as focused on data center load (a transmission issue), with March briefings, a final order expected in June, and rates effective July 1.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">largely focused on data center load (a transmission issue)</span>
+<span class="span">Briefings are scheduled in March</span>
+<span class="span">final order expected in June</span>
+<span class="span">rates effective July 1.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">AI deployment cited to sustain O&amp;M efficiency and smart-grid/IT benefits</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">PPL highlighted AI deployment to sustain O&amp;M efficiency, alongside smart-grid/IT benefits as part of its EPS growth framework for 2027–2029.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">AI deployment to sustain O&amp;M efficiency</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">Kentucky approves Extremely High Load Factor tariff for large-load customers</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PPL reported approval of an Extremely High Load Factor tariff in Kentucky for large-load customers, supporting long-term hyperscale service constructs.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">approved an Extremely High Load Factor tariff for large-load customers;</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">PPL outlines $23B 2026–2029 regulated capex plan; $5.1B in 2026</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$23.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">PPL’s forward indicators include a $23B 2026–2029 regulated capex plan (implying ~10.3% average annual rate base growth) and targeted ~$5.1B capex in 2026, with financial metrics targeted at 16%–18% FFO/CFO-to-debt.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">updated $23B 2026–2029 regulated capex plan</span>
+<span class="span">10.3% average annual rate base growth</span>
+<span class="span">$5.1B 2026 capex</span>
+<span class="span">16%–18%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">Blackstone JV to serve hyperscalers not in base plan; timing depends on signed agreements</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">PPL reiterated that the JV with Blackstone Infrastructure will serve hyperscalers, but is excluded from the base plan pending timing of signed agreements.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">JV with Blackstone Infrastructure to serve hyperscalers</span>
+<span class="span">not included in base plan; timing dependent on signed agreements</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-20</span>
+<span class="eh">Potential off-cycle hyperscaler ESA news flow reiterated</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management again noted that off-cycle disclosure would be used for any hyperscaler ESA, suggesting asynchronous updates before next earnings if signed.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Off‑cycle disclosure for any hyperscaler ESA suggests potential news flow</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Pipeline acceleration and site-level enablement in PA and KY</h2>
+<div class='range'>2025-08-04 → 2025-12-31</div>
+<div class='psum'>PPL Electric’s advanced-stage data center pipeline was reported at 14 GW by August 2025, including announced projects associated with AWS and CoreWeave. Local approvals and site preparation advanced at the PAX‑1 (Pennsylvania Digital 1) campus, including a planning commission laydown yard plan specific to the PPL substation buildout and PPL’s planned switchyard and 500 kV transmission upgrades to serve the site.
+In Kentucky, regulators approved LG&amp;E/KU to invest $3B in two new natural gas plants, with filings and press coverage linking the need to anticipated hyperscale data center loads and referencing the extremely high load factor tariff construct for long-term service obligations.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-28</span>
+<span class="eh">Kentucky PSC authorizes $3B spend for two gas plants to meet future data center demand</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Kentucky regulators granted LG&amp;E/KU permission to invest $3 billion in two new natural gas plants, with filings noting the need is largely driven by anticipated hyperscale data center loads and referencing the extremely high load factor tariff construct.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">$3 billion</span>
+<span class="span">two new natural gas power plants</span>
+<span class="span">future data centers</span>
+<span class="span">extremely high load factor</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-25</span>
+<span class="eh">PAX‑1 site: PPL substation buildout planning and 500 kV upgrades to serve AI campus</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">At the Pennsylvania Digital 1 (PAX‑1) site, a planning commission approved a laydown yard plan specific to the PPL Substation Buildout, while PAX‑1’s site information indicates PPL is planning infrastructure upgrades including a new switchyard and 500 kV transmission lines to serve the campus.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10], web_search_findings[6]</div>
+<span class="span">Planning Commission approves a laydown yard plan</span>
+<span class="span">specific to the PPL Substation Buildout</span>
+<span class="span">PPL, is planning infrastructure upgrades</span>
+<span class="span">new switchyard and 500 kV transmission lines</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-04</span>
+<span class="eh">Advanced-stage PA data center pipeline cited at 14 GW; AWS and CoreWeave expansions noted</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Coverage highlighted PPL Electric’s advanced-stage interconnection pipeline at 14 GW, a 33% jump from the prior quarter, with publicly announced projects including Amazon’s $20B expansion and a $6bn CoreWeave facility in Pennsylvania.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">14GW</span>
+<span class="span">33 percent jump</span>
+<span class="span">Amazon’s $20 billion</span>
+<span class="span">$6bn planned CoreWeave data center</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Hyperscale entry and JV formation momentum</h2>
+<div class='range'>2025-01-16 → 2025-07-15</div>
+<div class='psum'>PPL’s Kentucky utility (LG&amp;E/KU) announced its first hyperscale data center electric customer with a 400 MW campus in Louisville, including staged availability starting in 2026 and access to 335 MW with expansion to 402 MW. This marked the company’s initial, concrete hyperscale load in its portfolio.
+Concurrently, regional ecosystem developments accelerated. AWS and Talen finalized a 17‑year, $18B PPA to supply up to 1,920 MW to AWS data centers in Pennsylvania, with PPL Electric delivering power over the grid. PPL and Blackstone then formed a JV (July 15, 2025) to build, own, and operate new gas-fired combined-cycle plants under long-term ESAs to serve Pennsylvania data centers, alongside Blackstone’s broader plan to invest over $25B in Pennsylvania’s digital and energy infrastructure.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-15</span>
+<span class="eh">PPL and Blackstone Infrastructure form JV to build CCGTs for PA data centers</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$25.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">PPL and Blackstone Infrastructure formed a JV to build, own, and operate new gas-fired combined-cycle generation in Pennsylvania under long-term ESAs for data centers. On the same day, Blackstone announced a plan to invest over $25B in Pennsylvania’s digital and energy infrastructure, with the JV cited as part of the initiative.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ The $25B figure reflects Blackstone’s broader Pennsylvania plan and is not solely the JV commitment.</p>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3], web_search_findings[4]</div>
+<span class="span">formed a joint venture</span>
+<span class="span">new gas-fired, combined-cycle generation</span>
+<span class="span">long-term energy services agreements (ESA)</span>
+<span class="span">invest over $25 billion</span>
+<span class="span">plans for the joint venture to invest in new natural gas power generation facilities</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-12</span>
+<span class="eh">AWS–Talen finalize 17-year, $18B nuclear PPA; PPL Electric to deliver power on the grid</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$18.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Talen and AWS executed a 17-year, $18B PPA for up to 1,920 MW of carbon-free power from Susquehanna into AWS’s Pennsylvania data centers. PPL Electric Utilities will deliver the power across the PJM grid, reinforcing transmission significance in PPL’s PA territory.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">$18 billion</span>
+<span class="span">17-year</span>
+<span class="span">PPL Electric Utilities will deliver the power</span>
+<span class="span">staged ramp-up</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-16</span>
+<span class="eh">LG&amp;E/KU announces first hyperscale data center electric customer (400 MW campus)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">LG&amp;E (a PPL subsidiary) announced its first hyperscale data center electric customer: a 400 MW campus in Louisville, with 130 MW available by October 2026 and access to 335 MW, expandable to 402 MW, supported by a new LG&amp;E switch station and dedicated on-site substation.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">first hyperscale data center electric customer</span>
+<span class="span">400-megawatt data center campus</span>
+<span class="span">first 130 megawatts</span>
+<span class="span">335 megawatts</span>
+<span class="span">402 megawatts</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early grid flexibility and demand-response groundwork</h2>
+<div class='range'>2022-04-05 → 2024-12-31</div>
+<div class='psum'>PPL Electric’s first visible AI-adjacent activity in the period was a demand-response and ancillary services program leveraging smart thermostats (including Google Nest) in PJM. While not a frontier-LLM integration, it established an early relationship with a Google ecosystem device channel and demonstrated PPL’s interest in digital solutions for grid flexibility.
+Through 2024 there are no additional AI-specific disclosures in the inventory, but this period set the stage for a step-change in 2025 as hyperscale data center developments began to anchor long-duration, high-load commitments across PPL’s Pennsylvania and Kentucky territories.</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2022-04-05</span>
+<span class="eh">PPL Electric customers eligible for Voltus/Resideo/Google Nest BYOT grid program</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Voltus, Resideo, and Google announced a bring-your-own-thermostat program in PJM, available to select PPL Electric Utilities customers, to deliver demand response capacity and ancillary services. This establishes an early device-level channel tie to Google (Nest) and signals PPL’s intent to use digital controls for grid support.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">PPL Electric Customers</span>
+<span class="span">Google Nest Thermostats</span>
+<span class="span">Voltus, Inc.</span>
+<span class="span">deliver both demand response capacity and ancillary services</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which hyperscaler will sign PPL’s first long-term ESA in Pennsylvania, and what are the initial contracted MW and term?</li>
+<li>What share of Blackstone’s announced $25B Pennsylvania investment will be allocated to the PPL JV’s generation portfolio, and on what schedule?</li>
+<li>Which turbine OEM (GE, Siemens, Mitsubishi) will PPL/JV ultimately select and for how many units in the initial tranche?</li>
+<li>How many GW of the ~10 GW under ESAs are with a single counterparty vs. diversified across multiple data center operators?</li>
+<li>Will PJM enact a special backstop auction structure that PPL deems suitable for participation, and what would be the risk/return profile?</li>
+<li>What is the expected in-service timing of the first BYOG generation units under the JV relative to alternative generation options (2028–2029) and CCGTs (2031–2032)?</li>
+<li>How quickly will Kentucky’s 12.9 GW potential new load convert to firm ESAs, and what transmission upgrades will be required?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Blackstone’s $25B figure reflects a statewide infrastructure program and is not solely committed to the PPL JV.</li>
+<li>Site-level sources for PAX‑1 (developer pages) are promotional and may evolve; final interconnection and transmission designs are subject to PJM and regulatory approvals.</li>
+<li>No direct integrations with frontier LLM providers (OpenAI, Anthropic, Meta, xAI, DeepSeek) are evidenced; Google exposure is via Nest device program rather than LLM services.</li>
+<li>AWS–Talen PPA is between those parties; PPL’s role is grid delivery, not a counterparty to the PPA.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

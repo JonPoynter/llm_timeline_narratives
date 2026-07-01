@@ -1,0 +1,787 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>LSRCY US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Lasertec Corp <span class='sub'>(LSRCY US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.468</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>35 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 14</span>
+<span class='chip'>single source: 21</span>
+<span class='chip'>web-only (verified): 10</span>
+<span class='chip'>web-only (unverified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>A200HiT launch and AI-driven demand acceleration</h2>
+<div class='range'>2025-10-31 → 2026-06-30</div>
+<div class='psum'>Lasertec introduced the ACTIS A200HiT series in late 2025 with triple the inspection speed of A150, targeting wafer fab operations. Through early 2026, management emphasized AI‑linked strength in GPUs and HBM demand, a growing EUV ecosystem, and detailed order and shipment expectations. The FY26 Q3 disclosure outlined raised order‑intake outlook, strong advances received, multiple A200HiT evaluations, delivery timing, and risk factors including export controls and working capital exposure. Market interest culminated in a June 2026 stock rally tied to AI infrastructure enthusiasm, and filings highlighted customer mix and competitive dynamics.</div>
+<div class="event t-web_only_unverified" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-17</span>
+<span class="eh">Shares hit all-time high amid AI infrastructure rally</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lasertec shares reached an all-time high, breaking past ¥50,000 and finishing more than 13% higher, with YTD up 78%, reflecting investor enthusiasm for AI infrastructure and EUV tool suppliers.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">all-time high</span>
+<span class="span">50,000-yen</span>
+<span class="span">more than 13% higher</span>
+<span class="span">risen 78%</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">EDINET: Major customers include Intel, TSMC, Samsung with large revenue shares</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$83.7B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">EDINET structured extract lists Intel, TSMC, and Samsung as major customers, each contributing significant portions of consolidated sales in FY2025.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ EDINET DB page is an auto-structured extract; verify figures against the original statutory filing.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">Intel Corporation</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>¥837.2億</span>
+<span class="span">Taiwan Semiconductor Manufacturing Company Limited</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>¥660.5億</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">CEO: AI-driven demand accelerating; A200HiT to drive upside beyond CY2027</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On the FY26 Q3 release, management cited accelerating AI-driven demand across logic and memory with expected order recovery from CY2026 and further upside beyond CY2027 as A200HiT adoption progresses.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-driven demand is accelerating</span>
+<span class="span">orders expected to recover from CY2026</span>
+<span class="span">beyond CY2027</span>
+<span class="span">ACTIS A200HiT</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">FY2026 order-intake outlook raised to JPY 200–240bn</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$240.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management raised the FY2026 order-intake outlook to JPY 200–240bn from JPY 170–220bn, citing multiple ACTIS A200HiT orders and improving blanks-related demand, with recovery expected from calendar 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">FY2026 order-intake outlook</span>
+<span class="span">JPY 200–240bn</span>
+<span class="span">from JPY 170–220bn</span>
+<span class="span">ACTIS A200HiT orders</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Advances received JPY 50.6bn as proxy for near-term deliveries</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$50.6B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Advances received totaled JPY 50.6bn at March 31, 2026, serving as a proxy for near-term deliveries and indicating a solid shipment pipeline.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Advances received</span>
+<span class="span">JPY 50.6bn</span>
+<span class="span">March 31, 2026</span>
+<span class="span">proxy for near-term deliveries</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Multiple A200HiT evaluation orders placed by fabs for N2 and beyond</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lasertec reported multiple A200HiT units ordered by multiple fabs for customer-site evaluations targeting advanced nodes (N2 and beyond).</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Multiple A200HiT units</span>
+<span class="span">ordered by multiple fabs</span>
+<span class="span">N2 and beyond</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Recent H2 orders scheduled to ship from CY2026 Q3</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management guided that shipments for recent second-half orders will begin in CY2026 Q3, setting near-term delivery expectations.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Shipments for the recent H2 orders</span>
+<span class="span">CY2026 Q3</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">ACTIS lead time ~1 year; long‑lead parts pre‑prepared</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Lasertec indicated roughly one-year lead times for ACTIS and said it has pre‑prepared long‑lead parts aligned with customer forecasts, supporting delivery reliability.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Lead time for ACTIS is roughly one year</span>
+<span class="span">pre‑prepared long‑lead parts</span>
+<span class="span">customer forecasts</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">MATRICS orders ~JPY40bn last year; tracking ~1.5x</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$40.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">MATRICS orders were about JPY40bn last year and are tracking roughly 1.5x, with management qualitatively expecting a higher next fiscal year.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">MATRICS orders were about JPY40bn</span>
+<span class="span">tracking roughly 1.5x</span>
+<span class="span">next fiscal year likely higher</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">New MATRICS X712 targets legacy nodes; leverages die‑to‑database</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Responding to customer requests as legacy-node tools become obsolete, the new X712 leverages die‑to‑database capabilities to address legacy production needs.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">older legacy-node tools became obsolete</span>
+<span class="span">X712 leverages die‑to‑database</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">MATRICS X712 TAM sized at a few tens of billions of yen</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management characterized the X712 addressable market as mid‑range, a few tens of billions of yen.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">a few tens of billions of yen</span>
+<span class="span">mid-range</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Orders cadence view: H2 CY2026 similar to H1; comparable into H1 CY2027</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management expects H2 CY2026 to resemble H1 CY2026, with a comparable setup into H1 CY2027, indicating a steady orders cadence.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">H2 CY2026</span>
+<span class="span">H1 CY2026</span>
+<span class="span">H1 CY2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Memory demand strengthened; mix roughly 20–30%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Both logic and memory are growing, with management noting stronger memory demand and a memory mix roughly 20–30%.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Logic and memory are both growing</span>
+<span class="span">memory demand has strengthened</span>
+<span class="span">memory roughly 20–30%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Mask shops beginning to introduce ACTIS; memory fabs limited near term</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Mask shops have begun to introduce ACTIS, while ACTIS usage at memory fabs remains limited near term.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">mask shops are beginning to introduce ACTIS</span>
+<span class="span">ACTIS usage at fabs remains limited near term</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">ACTIS mix shifting toward A200HiT and A300; A150 to decline</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Within ACTIS, management expects A150 to gradually decline as A200HiT for fabs and A300 for mask shops increase, reflecting product mix maturation.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">A150 should gradually decline</span>
+<span class="span">A200HiT (fabs)</span>
+<span class="span">A300 (mask shops) increase</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Competitive: U.S. actinic entrant in early demonstration; Lasertec stresses head start</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management acknowledged a U.S. actinic competitor in early demonstration but reiterated Lasertec’s first‑mover advantage since 2019 and accumulated know‑how.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">competitor is in early demonstration</span>
+<span class="span">first‑mover advantage since 2019</span>
+<span class="span">accumulated know‑how</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">China exposure ~6–7% of sales; diversified product shipments</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management estimated China at roughly 6–7% of sales last year, with shipments spanning MATRICS, MAGICS, MPM, and SICA, and refrained from political commentary.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">China was roughly 6–7% of sales last year</span>
+<span class="span">MATRICS, MAGICS, MPM, and SICA</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Regulatory risk: export restrictions would have impact; exposure not large</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Lasertec acknowledged potential impact from export restrictions but emphasized current exposure is not large.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">impact if exports were restricted</span>
+<span class="span">current exposure is not large</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Risk: ACTIS evaluation timing/slippage could defer orders and revenue</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">The raised FY2026 outlook assumes multiple A200HiT wins; slippage in customer evaluations or fab investment timing could defer orders and revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">slippage in customer evaluations</span>
+<span class="span">defer orders and revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Risk: inventories JPY 164.4bn; delivery delays could raise working‑capital risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$164.4B · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Inventories of JPY 164.4bn and advances received of JPY 50.6bn support future shipments; delays or cancellations could increase working‑capital risk and obsolescence amid fast node transitions.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Inventories of JPY 164.4bn</span>
+<span class="span">advances received JPY 50.6bn</span>
+<span class="span">working‑capital risk</span>
+<span class="span">obsolescence</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Orders run‑rate to remain similar; A200HiT could add upside</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management expects H2 CY2026 to be broadly similar to H1 CY2026 with a comparable setup into H1 CY2027; A200HiT outcomes could add upside.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">H2 CY2026 to be broadly similar to H1 CY2026</span>
+<span class="span">A200HiT could add upside</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">HBM stack complexity points to rising ACTIS requirements</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management linked strengthened memory demand and HBM stack complexity to rising ACTIS requirements over time, with mask shops already adopting ACTIS.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">HBM stack complexity points to rising ACTIS requirements</span>
+<span class="span">mask shops already adopting ACTIS</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Launched MATRICS X712; received Intel’s 2026 EPIC Supplier Award and AGC President’s Award</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Operational highlights included the launch of the MATRICS X712 mask inspection system and receipt of Intel’s 2026 EPIC Supplier Award as well as the AGC President’s Award.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">launch of the MATRICS X712 mask inspection system</span>
+<span class="span">Intel’s 2026 EPIC Supplier Award</span>
+<span class="span">AGC President’s Award</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-01</span>
+<span class="eh">Business report cites GPUs/HBM AI demand; market &gt;$1T by 2030, target 10%+ CAGR</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1000.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reported strong demand for GPUs and HBM driven by AI, forecasting the semiconductor market to exceed one trillion US dollars by 2030 and targeting 10%+ average annual growth.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">graphics processing units (GPUs), high-bandwidth memory (HBM)</span>
+<span class="span">increased investment in AI</span>
+<span class="span">more than one trillion US dollars in 2030</span>
+<span class="span">average annual growth rate of 10% or higher</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-01</span>
+<span class="eh">EUV mask-related inspection lineup spans 6 products; AI a key application</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lasertec detailed six EUV mask-related inspection products and highlighted EUV’s role in enabling AI and other innovations since 2019.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">6 products in our lineup</span>
+<span class="span">since 2019</span>
+<span class="span">5th generation mobile communication (5G), artificial intelligence (AI)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-31</span>
+<span class="eh">ACTIS A200HiT series released with triple inspection speed</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lasertec announced ACTIS A200HiT, a high‑throughput actinic EUV inspection model for wafer fabs, delivering triple the inspection speed of A150 while maintaining sensitivity for printable defect detection.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">ACTIS A200HiT series</span>
+<span class="span">High-throughput ACTIS model for wafer fabs</span>
+<span class="span">Triple inspection speed of ACTIS A150</span>
+<span class="span">detect all printable defects</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Recognition and EUV portfolio expansion</h2>
+<div class='range'>2023-12-27 → 2024-12-02</div>
+<div class='psum'>Lasertec received high‑profile customer recognition from TSMC and Intel, reinforcing its role in EUV mask inspection and metrology. The company expanded its EUV portfolio with ABICS E320 for high‑NA requirements and PELMIS for EUV pellicle inspection, while medium‑term planning highlighted generative AI‑driven demand and a six‑year plan through 2030.</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-02</span>
+<span class="eh">ABICS Series E320 released for high-NA EUV mask blank inspection</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lasertec released ABICS E320, enhancing sensitivity and coordinate accuracy for next‑generation high‑NA EUV mask blanks, and began accepting orders, broadening its EUV inspection lineup.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">ABICS Series E320</span>
+<span class="span">EUV mask blank inspection and review system</span>
+<span class="span">high-NA EUV lithography</span>
+<span class="span">now accepting orders</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-02</span>
+<span class="eh">PELMIS Series EUV pellicle inspection system launched</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lasertec launched PELMIS for detection and classification of particles on EUV pellicles, designed to work in combination with the ACTIS Series to enable inspection of the entire EUV mask.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">PELMIS Series</span>
+<span class="span">particles on EUV pellicles</span>
+<span class="span">automatic classification</span>
+<span class="span">in combination with the ACTIS Series</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2024-08-07</span>
+<span class="eh">FY2024 results note HBM for generative AI and mid-term plan through 2030</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted robust investment in HBM for generative AI and early recovery signs in EUV capacity expansion, alongside a six‑year Mid‑term Business Plan spanning July 2024 to June 2030.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">high‑bandwidth memory (HBM) for generative AI</span>
+<span class="span">show signs of recovery in the second half</span>
+<span class="span">Mid-term Business Plan</span>
+<span class="span">July 1, 2024, to June 30, 2030</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-03-29</span>
+<span class="eh">Intel EPIC Distinguished Supplier Award</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Intel named Lasertec one of only 29 Distinguished Award recipients globally, citing performance that consistently exceeds expectations, underscoring Lasertec’s critical role in Intel’s supply chain.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Intel’s EPIC Distinguished Supplier Award</span>
+<span class="span">one of only 29 Distinguished Award recipients</span>
+<span class="span">consistently exceeds Intel’s expectations</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2023-12-27</span>
+<span class="eh">TSMC Excellent Performance Award for EUV mask inspection and metrology collaboration</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TSMC recognized Lasertec with an Excellent Performance Award for Distinguished EUV Mask Inspection and Metrology Collaboration; Lasertec was the only awardee in this category among 20 winners.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">TSMC Excellent Performance Award</span>
+<span class="span">Distinguished EUV Mask Inspection and Metrology Collaboration</span>
+<span class="span">only one to receive</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Commercialization of actinic EUV inspection</h2>
+<div class='range'>2019-09-12 → 2021-10-08</div>
+<div class='psum'>Lasertec introduced ACTIS A150, the world’s first actinic EUV patterned mask inspection system, closing a critical tooling gap for EUV HVM. By 2021, demand broadened from logic toward memory, with first orders from DRAM makers, signaling cross‑segment pull for actinic inspection.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2021-10-08</span>
+<span class="eh">First EUV actinic inspection orders from memory makers (DRAM)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lasertec reported its first orders from DRAM manufacturers for EUV testing gear, broadening its customer base beyond logic. Specific customers and quantities were not disclosed.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">first orders</span>
+<span class="span">memory makers</span>
+<span class="span">DRAM</span>
+<span class="span">declining to name specific customers or disclose exact numbers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2019-09-12</span>
+<span class="eh">Launch of ACTIS A150, the world’s first actinic EUV patterned mask inspection system</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lasertec released ACTIS A150 for actinic EUV patterned mask inspection, supporting EUV mask quality for high volume manufacturing and positioning the company as a sole‑source provider in a critical EUV tooling niche.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">ACTIS A150</span>
+<span class="span">world’s first</span>
+<span class="span">EUV patterned mask inspection system</span>
+<span class="span">High Volume Manufacturing</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations in EUV inspection</h2>
+<div class='range'>2002-11-01 → 2018-12-31</div>
+<div class='psum'>Lasertec laid early groundwork for EUV mask inspection through a joint development with International SEMATECH in 2002, establishing technology and industry relationships that underpinned later commercialization. In 2017, the company released ABICS E120, an EUV mask blank inspection and review system leveraging actinic inspection know‑how built in government‑sponsored programs.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2017-04-03</span>
+<span class="eh">ABICS E120 EUV mask blank inspection and review system released</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lasertec launched ABICS E120, an EUV mask blank inspection and review system, building on actinic blank inspection technologies developed with EIDEC under NEDO sponsorship. This expanded the firm’s EUV-era product footprint.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">ABICS E120</span>
+<span class="span">EUV mask blank inspection and review system</span>
+<span class="span">Actinic Blank Inspection (ABI)</span>
+<span class="span">New Energy and Industrial Technology Development Organization</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2002-11-01</span>
+<span class="eh">Lasertec and International SEMATECH begin joint development of EUVL mask blank inspection system</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Lasertec and International SEMATECH agreed to jointly develop an EUVL Mask Substrate/Blank Inspection System, leveraging multi‑laser beam confocal technology and supported by a consortium of leading chipmakers. This marked an early strategic move into EUV inspection.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">International SEMATECH (ISMT)</span>
+<span class="span">jointly develop an EUVL Mask Substrate/Blank Inspection System</span>
+<span class="span">multi-laser beam confocal technology</span>
+<span class="span">Agere Systems, AMD, Hewlett-Packard, Hynix, IBM, Infineon, Intel, Motorola, Philips, STMicroelectronics, Texas Instruments and TSMC</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What proportion of the FY2026 JPY 200–240bn order-intake outlook pertains to ACTIS A200HiT versus other product lines?</li>
+<li>What are the conversion and acceptance outcomes from the multiple A200HiT customer-site evaluations targeting N2 and beyond?</li>
+<li>How material and near-term is the competitive threat from the U.S. actinic entrant, and what are the customer evaluation timelines?</li>
+<li>To what extent could additional export restrictions affect shipments to China beyond the current ~6–7% exposure?</li>
+<li>What is the shipment phasing for recent H2 orders beginning CY2026 Q3 and its impact on revenue recognition and working capital?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Most web findings are corporate press releases; independent third-party corroboration may be limited.</li>
+<li>EDINET figures are from an auto-structured aggregation page; confirm against the official statutory filing.</li>
+<li>Market commentary on share price performance reflects investor sentiment and not necessarily underlying operational changes.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

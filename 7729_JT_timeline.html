@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Tokyo Seimitsu Co Ltd <span class='sub'>(7729 JT)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.315</div>
@@ -71,37 +81,14 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>single source: 18</span>
 <span class='chip'>web-only (unverified): 1</span>
 </div>
-<div class='phase'>
-<h2>Internal GenAI enablement (ACCT-BRAIN rollout)</h2>
-<div class='range'>2024-09-01 → 2025-11-28</div>
-<div class='psum'>Tokyo Seimitsu introduced an internal generative AI platform, ACCT-BRAIN, based on ChatGPT in September 2024 to support employees’ daily operations in Japan. The company provided training alongside the rollout and positioned the tool as an efficiency and decision-support aid.
-
-This internal deployment, later documented in the Integrated Report 2025 published in November 2025, represents the firm’s primary direct linkage to a frontier LLM provider (OpenAI) during the period. No commercial AI product announcements or external AI-related platform partnerships were disclosed in the evidence set beyond this internal usage.</div>
-<div class="event t-web_only_unverified" id="E0001">
-<div class="ev-top">
-<span class="date">2024-09-01</span>
-<span class="eh">Company rolls out ChatGPT-based internal platform (ACCT-BRAIN) for employees in Japan</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Tokyo Seimitsu launched an internal generative AI platform, ACCT-BRAIN, in September 2024 for employees in Japan, built on ChatGPT. The initiative was later described in the Integrated Report 2025, noting training and a gradual expansion of AI use cases across operations.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">ChatGPT-based internal gener­ ative AI platform (ACCT-BRAIN)</span>
-<span class="span">September 2024</span>
-<span class="span">employees in Japan use for business operations.</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>FY2026 AI/HPC demand cycle and operational scaling</h2>
 <div class='range'>2026-05-13 → 2026-05-13</div>
 <div class='psum'>Management reported continued strength in High Performance Computing (including generative AI) as a key driver for semiconductor equipment demand. Mix within HPC orders skewed toward Logic in 2H, while AI-package grinder demand and very high utilization at key plants underscored tight supply conditions; lead times extended to around five months for probers and beyond six months for grinders. China is expected to remain roughly 30% or more of total SPE sales, and hybrid bonding mass production is expected to accelerate toward CY2028 with more concrete discussions anticipated from FY2027/3 2H, including contributions to NAND applications.
 
 Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4.5% y/y to ¥79.359bn. Investment levels remained solid with capex around ¥11.1bn and R&amp;D around ¥12.0bn, and free cash flow was approximately ¥13.5bn. The SPE segment posted a 26% operating margin in Jan–Mar on a higher-value mix, with further margin improvement expected as the mix improves. Management highlighted several risks: sensitivity to the AI/HPC cycle, potential Middle East–related logistics disruptions not embedded in guidance, and the possibility that a declining backlog could weaken revenue visibility into FY2027. 1H FY2027/3 orders are expected to be somewhat concentrated in Apr–Jun.</div>
-<div class="event t-single_source" id="E0002">
+<div class="event t-single_source" id="E0002" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">HPC/GenAI demand continues to drive semiconductor equipment</span>
@@ -110,6 +97,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management cited ongoing strength in High Performance Computing, including generative AI, as a key demand driver for semiconductor equipment and noted supportive metrology demand and opportunities in aerospace/defense.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -118,7 +106,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">new opportunities in aerospace/defense.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0003">
+<div class="event t-single_source" id="E0003" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">HPC order mix in 2H skewed to Logic (70/30 vs HBM)</span>
@@ -135,7 +123,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">60/40 forecast</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0004">
+<div class="event t-single_source" id="E0004" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">China expected to remain ~30%+ of SPE sales</span>
@@ -150,7 +138,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">Expect China to stay at ~30% or more of total SPE sales.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0005">
+<div class="event t-single_source" id="E0005" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">Competitive intensity in blade dicers; high barriers in probers/grinders</span>
@@ -167,7 +155,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">high‑precision temperature control</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0006">
+<div class="event t-single_source" id="E0006" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">AI‑package grinder demand strong; Nagoya plant highly utilized</span>
@@ -176,6 +164,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">The recently completed Nagoya grinder plant is operating at high utilization amid strong AI‑package grinder demand, supporting near‑term production and shipment activity.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -183,7 +172,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">AI‑package grinder demand is strong.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0007">
+<div class="event t-single_source" id="E0007" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">Lead times extended: probers ~5 months; grinders &gt;6 months</span>
@@ -192,6 +181,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Lead times lengthened with probers around five months and grinders exceeding six months as volumes increased and man‑hours rose.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -200,7 +190,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">rising man‑hours as volumes increase.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0008">
+<div class="event t-single_source" id="E0008" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">Short‑term shipment flex; new nearby facility to start in CY2027</span>
@@ -209,6 +199,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
 <p class="narr">To relieve capacity constraints, the Hanno prober plant will flex shipments via Hachioji and Tsuchiura in the short term, while a nearby facility for inventory and select components is planned to start operations in CY2027.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -217,7 +208,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">a nearby facility to start operations in CY2027</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0009">
+<div class="event t-single_source" id="E0009" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">Hybrid bonding ramp expected toward CY2028; NAND orders from FY2027/3 2H</span>
@@ -226,6 +217,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management expects mass production using hybrid bonding to accelerate toward CY2028, with more concrete discussions beginning in FY2027/3 2H and contributions to NAND application orders from that period.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -234,7 +226,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">contributions to orders for NAND applications</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0010">
+<div class="event t-single_source" id="E0010" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">Non‑HPC demand steady to improving across multiple device types</span>
@@ -250,7 +242,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">general-purpose DRAM, NAND, LCD driver ICs, and analog devices.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0011">
+<div class="event t-single_source" id="E0011" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">FY2026 orders +12% y/y to ¥163.096bn</span>
@@ -267,7 +259,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">(+12.0% y/y)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0012">
+<div class="event t-single_source" id="E0012" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">FY2026 backlog down 4.5% y/y to ¥79.359bn</span>
@@ -284,7 +276,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">(-4.5% y/y)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0013">
+<div class="event t-single_source" id="E0013" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">Capex ~¥11.1bn; R&amp;D ~¥12.0bn in FY2026</span>
@@ -301,7 +293,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">depreciation ~¥5.6bn.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0014">
+<div class="event t-single_source" id="E0014" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">Free cash flow approximately ¥13.5bn</span>
@@ -317,7 +309,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">(OCF + investing CF)</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0015">
+<div class="event t-single_source" id="E0015" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">Risk: Sensitivity to AI/HPC cycle and customer capex timing</span>
@@ -334,7 +326,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">particularly in wafer probers</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0016">
+<div class="event t-single_source" id="E0016" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">Risk: Middle East logistics/shipment disruption not embedded in guidance</span>
@@ -343,6 +335,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
 <p class="narr">The company highlighted Middle East–related risks, noting that potential logistics delays or shipment slippage are not embedded in guidance and could disrupt deliveries and revenue timing.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -351,7 +344,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">disrupt deliveries and revenue timing.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0017">
+<div class="event t-single_source" id="E0017" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">Risk: Backlog decline may weaken revenue visibility into FY2027</span>
@@ -367,7 +360,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">revenue visibility could weaken into FY2027.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0018">
+<div class="event t-single_source" id="E0018" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">Margin tailwind from higher‑value mix; SPE OP margin 26% in Jan–Mar</span>
@@ -376,6 +369,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">SPE operating margin in Jan–Mar FY2026/3 was 26% on a higher share of high‑value products, with several‑point gross margin improvement expected as the mix continues to improve.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -384,7 +378,7 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <span class="span">high‑value mix increases.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0019">
+<div class="event t-single_source" id="E0019" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-13</span>
 <span class="eh">1H FY2027/3 orders expected to be front‑loaded to Apr–Jun</span>
@@ -401,30 +395,72 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class='phase'>
+<h2>Internal GenAI enablement (ACCT-BRAIN rollout)</h2>
+<div class='range'>2024-09-01 → 2025-11-28</div>
+<div class='psum'>Tokyo Seimitsu introduced an internal generative AI platform, ACCT-BRAIN, based on ChatGPT in September 2024 to support employees’ daily operations in Japan. The company provided training alongside the rollout and positioned the tool as an efficiency and decision-support aid.
+
+This internal deployment, later documented in the Integrated Report 2025 published in November 2025, represents the firm’s primary direct linkage to a frontier LLM provider (OpenAI) during the period. No commercial AI product announcements or external AI-related platform partnerships were disclosed in the evidence set beyond this internal usage.</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-09-01</span>
+<span class="eh">Company rolls out ChatGPT-based internal platform (ACCT-BRAIN) for employees in Japan</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Tokyo Seimitsu launched an internal generative AI platform, ACCT-BRAIN, in September 2024 for employees in Japan, built on ChatGPT. The initiative was later described in the Integrated Report 2025, noting training and a gradual expansion of AI use cases across operations.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>1</b></span> <span class="chchip">enterprise_adoption_exposure · OAI <b>2</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>1</b></span> <span class="chchip">provider_specificity · OAI <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">ChatGPT-based internal gener­ ative AI platform (ACCT-BRAIN)</span>
+<span class="span">September 2024</span>
+<span class="span">employees in Japan use for business operations.</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0.1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>1.74</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.2029</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What provider/commercial terms underpin ACCT-BRAIN (seat count, pricing, data retention, and model versions used)?</li>
@@ -438,4 +474,19 @@ Financially, FY2026 orders rose 12% y/y to ¥163.096bn, while backlog declined 4
 <li>All monetary figures quoted in yen (¥) are presented numerically without FX conversion to USD; horizon annotations indicate the period context where applicable.</li>
 <li>No curated news or frontier provider events directly involving the firm were present in the inventory during the period; absence should not be interpreted as absence of activity outside the provided sources.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

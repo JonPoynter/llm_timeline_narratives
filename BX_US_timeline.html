@@ -1,0 +1,699 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>BX US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Blackstone Inc <span class='sub'>(BX US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.451</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>29 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 7</span>
+<span class='chip'>frontier 1</span>
+<span class='chip'>web 11</span>
+<span class='chip'>single source: 19</span>
+<span class='chip'>web-only (verified): 7</span>
+<span class='chip'>corroborated: 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Acceleration: TPU cloud JV, Anthropic partnerships, IPOs, and data center monetizations</h2>
+<div class='range'>2026-01-29 → 2026-06-30</div>
+<div class='psum'>Through 1H26 Blackstone intensified AI exposure across compute, services, capital markets, and real assets. Filings highlighted internal and portfolio AI use cases (e.g., Norm AI), leadership hires to accelerate adoption, and strategic focus on data centers and energy infrastructure. In May, Blackstone, H&amp;F, and Goldman partnered with Anthropic to form a $1.5B enterprise AI services company aimed at portfolio-wide deployments of Claude. Days later, Blackstone announced a $5B equity commitment with Google to create a TPU Cloud JV offering TPUs as-a-service, targeting 500 MW in 2027, while also pricing a data center REIT IPO.
+In June, Apollo and Blackstone structured a roughly $35B private-credit ‘chip financing’ platform to fund Anthropic’s capacity expansion—complemented by a Broadcom-led AI XPV platform targeting more than 20 GW through 2028 and referencing both Anthropic and OpenAI. Portfolio-scale buildouts continued (AirTrunk’s $30B/5GW India plan), while balance-sheet actions included a Blackstone-led creditor recap of Medallia and monetization of data center stakes to Digital Realty for $3.5B.</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Digital Realty to acquire Blackstone funds’ 64% stakes in three VA data centers for $3.5B</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.5B · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Digital Realty agreed to purchase Blackstone‑affiliated funds’ blended 64% equity interests in three fully leased Northern Virginia data centers for $3.5B, valuing the assets at $7.8B. The 288 MW portfolio is 100% leased to investment‑grade hyperscale customers under long‑term contracts, with stabilization expected 1H27–1H28.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Transaction involves Blackstone-affiliated funds; impact to Blackstone Inc. economics depends on fund ownership and fee arrangements.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">purchase Blackstone-affiliated funds’ blended 64% equity interests</span>
+<span class="span">$3.5 billion</span>
+<span class="span">80% interests in two 96‑MW Manassas</span>
+<span class="span">100% leased to investment‑grade hyperscale customers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-19</span>
+<span class="eh">Medallia recap: Blackstone-led creditors inject $150m; ownership shifts from Thoma Bravo</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$150M · loan</span> <span class="badge">mixed</span></div>
+<p class="narr">Medallia agreed to a lender-led recapitalization providing $150m of new capital and transferring ownership from Thoma Bravo to a group led by Blackstone, Apollo, and FS KKR. Reporting noted the move supports Medallia’s previously stated $500m AI investment plans and highlights rising decontrol risk in leveraged software LBOs.</p>
+<p class="cav">⚠ Risk framing from media; final long-term ownership/economic exposure to Blackstone funds may evolve.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">recapitalization with its lenders</span>
+<span class="span">$150 million of new capital</span>
+<span class="span">creditor group is taking over</span>
+<span class="span">$500 million AI investment plans</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0027" data-providers="anthropic_claude openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">Apollo–Blackstone finalize ~$35B chip financing for Anthropic; AI XPV targets &gt;20 GW incl. Anthropic and OpenAI</span>
+<span class="badge">financing</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$35.0B · loan</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Apollo and Blackstone completed a roughly $35B private‑credit structure via an SPV that purchases Alphabet/Google TPUs and leases them to Anthropic. A related Broadcom press detailed the AI XPV Platform’s initial $35B tranche and a path to more than 20 GW of compute capacity through 2028 serving Anthropic and OpenAI.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Structures span multiple tranches and participants; XPV scope extends beyond the Anthropic SPV.</p>
+<details>
+<summary>evidence — 2 source(s), 6 span(s)</summary>
+<div class="ev-src">news_rows[2], web_search_findings[9]</div>
+<span class="span">roughly $35bn private‑credit package</span>
+<span class="span">purchases Alphabet/Google TPUs</span>
+<span class="span">leases them to Anthropic</span>
+<span class="span">more than 20 gigawatts</span>
+<span class="span">initial tranche of $35 billion</span>
+<span class="span">Anthropic and OpenAI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">AirTrunk to invest $30B for 5GW data center capacity in India by 2030</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$30.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Blackstone‑backed AirTrunk announced a plan to invest about $30B to develop roughly 5GW of capacity in India by 2030, including groundwork for a proposed 3GW site in Maharashtra, highlighting accelerating AI/cloud infrastructure buildout.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">invest $30B</span>
+<span class="span">5GW of data center capacity</span>
+<span class="span">by 2030</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0025" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">Blackstone-Google announce TPU Cloud JV with $5B equity; 500 MW targeted for 2027</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Blackstone unveiled a joint venture with Google to create a TPU Cloud offering TPUs as a compute‑as‑a‑service option in addition to Google Cloud. Blackstone committed an initial $5B of equity, aiming to bring 500 MW online in 2027 with plans to scale.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[1], news_rows[4]</div>
+<span class="span">initial $5 billion equity commitment</span>
+<span class="span">500 MW of capacity online in 2027</span>
+<span class="span">Google Cloud&#x27;s Tensor Processing Units (TPUs)</span>
+<span class="span">plan $5b AI infrastructure JV using TPUs</span>
+<span class="span">500 MW by 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Blackstone data center REIT IPO priced at $20; deal size $1.75B</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.8B · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Blackstone priced its data center REIT IPO (BXDC) at $20 per share with approximately $1.75 billion in proceeds; shares opened flat to slightly lower, suggesting near‑term valuation sensitivity despite AI‑driven demand.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">prices data center REIT IPO at 20</span>
+<span class="span">Deal sized at 1.75 billion</span>
+<span class="span">BXDC flat to −2 percent</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0023" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">Anthropic and Blackstone form enterprise AI services firm (~$1.5B) to deploy Claude across portfolios</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.5B · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic, Blackstone, Hellman &amp; Friedman, and Goldman Sachs launched a new AI‑native services company to bring Claude into core business operations, with Anthropic engineers embedded in the team. Coverage framed this as a ~$1.5B JV to accelerate portfolio‑wide AI implementation.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Valuation size referenced in media/frontier summary; Business Wire emphasizes formation and go-to-market scope.</p>
+<details>
+<summary>evidence — 4 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[6], frontier_events[0], web_search_findings[0], web_search_findings[10]</div>
+<span class="span">$1.5b</span>
+<span class="span">AI services JV announced</span>
+<span class="span">bring Claude into their core business operations</span>
+<span class="span">embedded directly within its team</span>
+<span class="span">forms $1.5B enterprise AI JV</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Continued deployment across data centers and energy transition</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blackstone reiterated ongoing deployment into thematic areas including data centers and energy transition, reinforcing AI-adjacent infra priorities.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">continued deployment into thematic areas</span>
+<span class="span">data centers and energy transition.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">AI-driven growth noted across infra, energy transition, ABF, and BXMA</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted broad AI-driven growth in infrastructure, energy transition, asset‑based finance, and multi‑asset investing.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-driven growth</span>
+<span class="span">asset‑based finance</span>
+<span class="span">multi‑asset investing.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Software exposure under 7% of AUM; AI disruption risk monitored</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Blackstone noted software is the largest exposure but less than 7% of firm AUM, and is working with portfolio companies and experts to adapt to AI-driven change with varied outcomes across subsectors.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">largest exposure is software</span>
+<span class="span">“less than 7%”</span>
+<span class="span">firm AUM</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Working with portfolio companies and AI experts to adapt</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management said Blackstone is collaborating with portfolio companies and AI experts to adapt to technological shifts, expecting differentiated outcomes across subsectors.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">working with portfolio companies and AI experts</span>
+<span class="span">adapt</span>
+<span class="span">outcomes expected to be differentiated</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Healthy demand for IPOs of AI beneficiaries</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blackstone observed healthy demand for AI beneficiaries and AI‑unaffected sectors in public markets, aiding realization prospects.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">demand is healthy</span>
+<span class="span">AI beneficiaries</span>
+<span class="span">AI-unaffected sectors.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Blackstone files public vehicle to acquire stabilized data centers</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blackstone disclosed a newly filed public vehicle targeting the acquisition of stabilized data centers; details on timing, structure, and capital commitments were limited.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Structure and commitment details not provided in the filing highlights.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">newly filed public vehicle</span>
+<span class="span">acquire stabilized data centers</span>
+<span class="span">Limited detail on time line</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Realization/IPO pipeline concentrated in AI beneficiaries</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited a strong realization/IPO pipeline concentrated in AI beneficiaries such as digital infrastructure and energy, with pace dependent on geopolitical and market conditions.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Strong realization/IPO pipeline</span>
+<span class="span">concentrated in AI beneficiaries</span>
+<span class="span">digital infrastructure, energy</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Strong conviction on AI infrastructure tailwinds; adoption may take time</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Blackstone emphasized strong conviction in AI infrastructure tailwinds while noting timing uncertainty for realizations and data center channel adoption that ‘will take time’.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">strong conviction on AI infrastructure tailwinds</span>
+<span class="span">hedging language</span>
+<span class="span">“will take time”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Blackstone cites portfolio AI gains incl. Norm AI in legal/compliance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On the 25Q4 call, Blackstone described early but tangible AI benefits across engineering productivity, cyber monitoring, and legal/compliance via Norm AI, reflecting practical AI integration across portfolio operations.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">still early days</span>
+<span class="span">software engineering productivity</span>
+<span class="span">legal/compliance (via Norm AI)</span>
+<span class="span">cyber monitoring</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Blackstone hires ex‑McKinsey AI lead Rodney Zemmel to accelerate AI</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blackstone added Rodney Zemmel, formerly McKinsey’s AI lead, to help accelerate AI efforts across the firm and its portfolio, signaling increased organizational commitment.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Hired Rodney Zemmel</span>
+<span class="span">ex‑McKinsey AI lead</span>
+<span class="span">to accelerate efforts</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Near‑term focus reiterated on AI infrastructure/data centers and privatizations</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blackstone emphasized opportunistic deal focus areas including AI infrastructure/data centers and privatizations, noting seller reluctance but expectations for rising activity as pricing improves.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Near‑term focus on opportunistic deals</span>
+<span class="span">AI infrastructure/data centers</span>
+<span class="span">sellers remain reluctant</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Strategy centers on data centers and energy infrastructure</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted strategic focus areas including data centers and energy infrastructure, alongside private wealth expansion and continued thematic deployment.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Strategic focus areas include data centers and energy infrastructure</span>
+<span class="span">private wealth channel expansion</span>
+<span class="span">continued deployment in thematic areas</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Real estate performance supported by data centers in 2025</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blackstone reported real estate values modestly higher in Q4 and 2025, citing continued strength in data centers, logistics, and rental housing.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">real estate values +~1% in Q4</span>
+<span class="span">+~1.5% in 2025</span>
+<span class="span">continued strength in data centers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Scale/data positioned as a ‘meaningful moat’ including AI infra themes</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management framed scale and data as a moat, pointing to AI infrastructure, India, and Japan as thematic focus areas, alongside secondaries/GP stakes and asset‑light credit client relationships.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">meaningful moat</span>
+<span class="span">(AI infra, India, Japan)</span>
+<span class="span">secondaries/GP stakes</span>
+<span class="span">asset‑light credit</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Exit pipeline tilted to U.S. ‘energy/electrification picks and shovels’</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blackstone said realizations are skewed to the U.S. with a focus on energy/electrification ‘picks and shovels,’ implying monetization opportunities in AI‑adjacent infrastructure supply chains.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">skewed to the U.S.</span>
+<span class="span">energy/electrification</span>
+<span class="span">picks and shovels</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scaling U.S. AI infrastructure footprint and financing platforms</h2>
+<div class='range'>2025-07-15 → 2025-11-21</div>
+<div class='psum'>In 2025 Blackstone advanced large-scale U.S. digital and energy infrastructure initiatives to support AI growth. The firm announced over $25 billion of direct investment in Pennsylvania digital and energy infrastructure with a plan to catalyze an additional $60 billion, including QTS data centers and new gas generation with PPL. Blackstone Credit &amp; Insurance expanded its financing support for Aligned Data Centers past $1 billion to back more than 5 GW of future capacity.
+Customer demand signals strengthened: a major Microsoft AI facility opened at a QTS campus, reflecting increasing hyperscale training and inference requirements colocated within Blackstone’s data center platform.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-21</span>
+<span class="eh">Microsoft opens new AI ‘superfactory’ within a large QTS campus</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Microsoft’s newest AI facility began operations at a 615‑acre QTS campus, spanning more than 1 million square feet. While QTS did not disclose customers, records linked the site to QTS, indicating significant hyperscale AI demand colocated within Blackstone’s data center platform.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Customer identity not disclosed by QTS; records link campus to QTS via local filings.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">AI ‘superfactory’ opens</span>
+<span class="span">QTS</span>
+<span class="span">more than 1 million square feet</span>
+<span class="span">does not disclose customers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-21</span>
+<span class="eh">BXCI-Aligned Data Centers financing upsized; &gt;$1B commitments for 5+ GW pipeline</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · loan</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Blackstone Credit &amp; Insurance and Aligned Data Centers expanded their senior secured credit facility, surpassing $1 billion in commitments to accelerate development of 5+ GW of capacity across the Americas for hyperscale and AI/HPC customers.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Surpassing $1 Billion in Commitments</span>
+<span class="span">Blackstone Credit &amp; Insurance</span>
+<span class="span">5+ GW of future capacity</span>
+<span class="span">Infrastructure &amp; Asset Based Credit Group</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-15</span>
+<span class="eh">Blackstone commits &gt;$25B to Pennsylvania digital/energy infrastructure; aims to catalyze $60B</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$25.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Blackstone announced plans to invest more than $25 billion in Pennsylvania’s digital and energy infrastructure and help catalyze an additional $60 billion, positioning the state as a strategic AI hub. Initiatives include Blackstone‑backed QTS data centers and a JV with PPL for natural gas generation.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ Execution subject to permitting and utility approvals per release.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Invest More Than $25 Billion</span>
+<span class="span">Plus Catalyze an Additional $60 Billion</span>
+<span class="span">strategic hub to power America&#x27;s AI future</span>
+<span class="span">Blackstone-backed QTS</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations: AI infrastructure financing and portfolio energy alignment</h2>
+<div class='range'>2023-08-03 → 2024-12-04</div>
+<div class='psum'>Blackstone-linked activity around AI infrastructure and power began accelerating through 2023–2024 via credit financing to AI compute providers and renewable PPAs tied to Blackstone portfolio data center platforms. In August 2023, Blackstone led a $2.3 billion debt facility for CoreWeave as specialized AI cloud demand surged. By late 2023, portfolio entities AirTrunk and QTS secured renewable PPAs with Google and Meta, respectively, tying long-term green power directly to hyperscale and AI workloads.
+In parallel, ecosystem tools for private markets evolved, including Ontra’s integration of OpenAI’s GPT‑4, foreshadowing legal and operational AI adoption across alternative asset managers (though no direct Blackstone usage was claimed in that item). The period set the stage for larger-scale capital commitments, compute partnerships, and customer demand signals that would intensify in 2025–2026.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-12-04</span>
+<span class="eh">Meta &amp; QTS sign 120MW Oregon solar PPA tied to data center operations</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta and QTS agreed a PPA with Avangrid and PGE for a 120MW solar project in Morrow County, Oregon to serve a QTS data center supporting Meta. The project is expected to reach commercial operations in 2026, advancing long-term clean power sourcing for AI/data workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Meta &amp; QTS</span>
+<span class="span">Power Purchase Agreement (PPA)</span>
+<span class="span">120MW solar</span>
+<span class="span">Morrow County, Oregon</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-12-20</span>
+<span class="eh">AirTrunk and Google sign Australia solar PPA to support data center energy needs</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">AirTrunk and Google executed a PPA with OX2 for 25MW of renewable power in New South Wales, with time-matching to Google’s consumption. The deal underscores portfolio-level alignment to clean power for hyperscale/AI workloads in APJ.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Google and AirTrunk</span>
+<span class="span">Power Purchase Agreement (PPA)</span>
+<span class="span">25MW of renewable power</span>
+<span class="span">time-match Google&#x27;s consumption</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-11-15</span>
+<span class="eh">Ontra adds OpenAI GPT‑4 to legal operating system for private markets</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Ontra announced integration of OpenAI’s GPT‑4 into its AI engine, expanding contract automation and intelligence capabilities for private markets workflows. While not a Blackstone-specific deployment, it indicates growing availability of frontier model tooling in alt‑asset legal processes.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<p class="cav">⚠ Press release does not specify Blackstone as a customer; ecosystem relevance inferred.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Integrates OpenAI’s GPT-4</span>
+<span class="span">AI-Driven Legal Operating System</span>
+<span class="span">private markets</span>
+<span class="span">Ontra Synapse</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2023-08-03</span>
+<span class="eh">Blackstone co-leads $2.3B CoreWeave debt facility to expand AI cloud infrastructure</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.3B · loan</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Blackstone Tactical Opportunities participated in a $2.3 billion debt financing facility for CoreWeave to support expansion of specialized cloud infrastructure for AI, including a new $1.6 billion data center in Plano, Texas. The financing reflects early large-scale private credit support for AI compute supply.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Secures $2.3 Billion Debt Financing Facility</span>
+<span class="span">led by Magnetar Capital and Blackstone</span>
+<span class="span">Plano, Texas</span>
+<span class="span">new $1.6 billion data center</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the ownership structure, governance, and commercialization milestones for the Anthropic enterprise AI services firm, and Blackstone’s precise economic exposure?</li>
+<li>For the Google TPU Cloud JV, what is the revenue model, target customer mix, and committed offtake underpinning the initial 500 MW by 2027?</li>
+<li>How much residual exposure does Blackstone retain to the Northern Virginia data centers sold to Digital Realty, including any fee streams or co-invests?</li>
+<li>What specific portfolio companies are earliest adopters of Claude via the services firm, and what quantified ROI or cost savings have been realized?</li>
+<li>How is the ~$35B chip financing platform sequenced across tranches and sites, and what proportion of capital is expected from Blackstone-managed vehicles versus partners?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some items are press releases or curated reports and may emphasize promotional framing; underlying contracts and economics may differ at close.</li>
+<li>The Ontra GPT‑4 integration item is ecosystem context; it does not assert Blackstone as a direct customer.</li>
+<li>Digital Realty’s $3.5B acquisition involves Blackstone-affiliated funds; impacts to Blackstone Inc. depend on fund ownership, fees, and carried interest.</li>
+<li>AI XPV Platform scope spans multiple stakeholders; provider coverage may extend beyond the Anthropic SPV cited by Yahoo Finance.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

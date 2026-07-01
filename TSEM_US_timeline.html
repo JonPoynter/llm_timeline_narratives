@@ -1,0 +1,609 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>TSEM US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Tower Semiconductor Ltd <span class='sub'>(TSEM US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.416</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>25 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 12</span>
+<span class='chip'>web-only (unverified): 11</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Contracted SiPho bookings, prepayments, and supply-chain actions</h2>
+<div class='range'>2026-04-30 → 2026-06-18</div>
+<div class='psum'>Ahead of Q1 results, Tower’s 2026 Form 20-F reiterated its focus on silicon photonics for AI and data center communications, alongside other analog markets. On May 13, 2026, Tower disclosed and press-released $1.3 billion of contracted SiPho revenue for 2027 with largest customers and $290 million of customer prepayments for capacity reservations, with management clarifying the 2027 figure represents shipments and not full demand, and 2028 expected higher.
+The company highlighted strengthened forward indicators: increased deferred revenue and advances ($127.3m current; $215.4m long-term), and reiterated a long-term model underpinned by ~$920m in SiGe &amp; SiPho investments. Management outlined Japan capacity plans pending METI approval, asserted SiPho leadership, and flagged risks including InP starting-material tightness and potential capacity execution shortfalls versus prepaid and contracted commitments. Subsequent June announcements included a multi-year InP epiwafer supply agreement and IP settlement with IQE, and a shipment milestone of over five million coherent PICs with Marvell for AI-driven DCI networks.</div>
+<div class="event t-web_only_unverified" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-18</span>
+<span class="eh">Marvell and Tower ship over five million coherent PICs for AI-driven DCI</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tower announced a milestone with Marvell of over five million coherent photonic ICs shipped to global customers, targeting bandwidth and efficiency needs of AI-driven data center interconnect networks.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">over five million</span>
+<span class="span">coherent photonic integrated circuits (PICs)</span>
+<span class="span">AI-driven data center interconnect (DCI)</span>
+<span class="span">Vice President and General Manager of the RF Business Unit</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">IQE multi-year InP epiwafer supply agreement and IP dispute settlement</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tower and IQE entered a multi-year agreement for InP epiwafers with minimum purchase and reciprocal supply commitments, covering 200Gb/s and prototyping 400Gb/s modulators; a separate agreement provides IQE a worldwide royalty‑free license to Tower’s porous silicon patents, settling all litigation.</p>
+<p class="cav">⚠ Financial terms not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">multi-year agreement</span>
+<span class="span">Indium Phosphide (InP) epiwafers</span>
+<span class="span">minimum purchase commitment</span>
+<span class="span">settling all litigation</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Tower signs $1.3B 2027 SiPho contracts; receives $290m in customer prepayments</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.3B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Tower announced $1.3 billion of 2027 SiPho revenue contracts with largest customers and $290 million of customer prepayments for capacity reservation. Management and press materials noted additional, larger wafer commitments for 2028 and that the prepaid capacity represents contractual commitments with full demand and shipment forecast being higher.</p>
+<details>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[7], news_rows[0]</div>
+<span class="span">$1.3 billion</span>
+<span class="span">Customer Prepayments of $290 Million</span>
+<span class="span">2028</span>
+<span class="span">capacity reservation</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">$290m of SiPho prepayments flowed into Q1 operating cash flow</span>
+<span class="badge">financing</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$290M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management disclosed that approximately $290 million of SiPho customer prepayments were included in Q1 operating cash flow, corroborated by the company’s press release indicating prepayments received for capacity reservation.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[7]</div>
+<span class="span">~$290m of SiPho customer prepayments</span>
+<span class="span">Q1 operating cash flow</span>
+<span class="span">Customer Prepayments of $290 Million</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Deferred revenue and advances rise: $127.3m current; $215.4m long‑term</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$127M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Tower reported a sharp increase in customer prepayments and advances, with current deferred revenue and advances of $127.3m and long-term advances of $215.4m as of March 31, 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">current deferred revenue &amp; advances $127.3m</span>
+<span class="span">$215.4m</span>
+<span class="span">at March 31, 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Long-term model underpinned by ~$920m SiGe &amp; SiPho investments</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$920M · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Tower reiterated its longer-term financial model targeting ~$2.8b revenue and ~$750m net profit by 2028, inclusive of previously announced ~$920m in SiGe &amp; SiPho capacity and capability investments.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~$2.8b revenue</span>
+<span class="span">~$750m net profit by 2028</span>
+<span class="span">~$920m SiGe &amp; SiPho</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Japan expansion update: METI approval expected; 1H28 shell target; interim capacity adds</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management expects METI approval in the very short term, targets roughly 18 months from ground-breaking to a shell accepting tools (1H28), and outlined interim capacity steps including upgrades at Fab 7 and leveraging an existing Arai facility footprint.</p>
+<p class="cav">⚠ Timing and scope subject to governmental approvals and internal capex phasing.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">METI approval</span>
+<span class="span">very short term</span>
+<span class="span">1H28</span>
+<span class="span">Fab 7</span>
+<span class="span">Arai facility</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Management asserts SiPho leadership position</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">While declining to quantify share, management stated Tower is by far the leading SiPho supplier and sees no reason for that to change.</p>
+<p class="cav">⚠ Leadership claim is management’s assertion; third-party market share data not provided.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">declined to quantify share</span>
+<span class="span">“by far” the leading SiPho supplier</span>
+<span class="span">see no reason that should change</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Risk: InP starting‑material tightness; mitigations underway</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management acknowledged starting-material tightness in InP and said supply-chain actions position Tower to meet ramping demand this year, noting reliability progress and form-factor benefits as channels scale.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">starting‑material tightness in InP</span>
+<span class="span">supply‑chain actions</span>
+<span class="span">ramping demand this year</span>
+<span class="span">reliability progress</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">$1.3B 2027 SiPho commitment pertains to shipments; 2028 outlook higher</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.3B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Tower clarified that the $1.3B SiPho commitment relates to wafers to be shipped in 2027 and is not customers’ full demand; management pointed to a higher 2028 volume outlook.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$1.3B SiPho commitment</span>
+<span class="span">shipped in 2027</span>
+<span class="span">not customers’ full demand</span>
+<span class="span">higher 2028 volume outlook</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Potential timing to update long-term financial model</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management indicated potential timing to update the long-term financial model within the next quarters.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">update the long‑term financial model</span>
+<span class="span">within the next quarters</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">NPO/CPO roadmap: NPO ramps 2026–2027; CPO adoption later</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tower expects near-package optics to ramp in 2026–2027 and sees co-packaged optics adoption several years out.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Near‑package optics</span>
+<span class="span">ramp in 2026–2027</span>
+<span class="span">CPO adoption</span>
+<span class="span">several years out</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">InP integrated lasers expected to ramp this year</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management guided that InP integrated lasers will ramp this year, with supply chain actions in place to alleviate starting‑material constraints.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">InP integrated lasers</span>
+<span class="span">ramp this year</span>
+<span class="span">starting‑material constraints</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Risk: Execution against prepaid and contracted SiPho capacity</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.3B · contract_value</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Tower disclosed significant SiPho customer prepayments and $1.3b of contracted 2027 revenue; failure to qualify and ramp capacity on time could require compensation or repayment of prepayments and damage customer relationships.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">significant SiPho customer prepayments</span>
+<span class="span">$1.3b of contracted 2027 revenue</span>
+<span class="span">failure to qualify and ramp capacity</span>
+<span class="span">prepayment repayments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Management highlights AI-infrastructure demand; guides sequential growth through 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited broad-based y/y growth, emphasized AI-infrastructure demand led by SiPho, and guided for sequential q/q revenue and margin growth throughout 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑infrastructure demand led by SiPho</span>
+<span class="span">sequential q/q revenue and margin growth</span>
+<span class="span">throughout 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Reuters: AI demand strong; capacity tightness reinforces supply squeeze</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Reuters reported Tower guided higher on strong AI foundry demand and highlighted that capacity tightness reinforces the AI supply squeeze as the company announced 2027 contracts.</p>
+<p class="cav">⚠ Media report summarizes company disclosures; numbers corroborated by company press release.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Strong AI foundry demand</span>
+<span class="span">Capacity tightness reinforces AI supply squeeze</span>
+<span class="span">1.3 billion</span>
+<span class="span">AI chip deals</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">20-F highlights SiPho focus for AI and data center communications</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tower’s 2026 Form 20-F describes key markets including silicon photonics for AI and data center communications, alongside RF, power, and CMOS image sensors across multiple end markets.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">silicon photonics for AI and data center communications</span>
+<span class="span">RF for smartphones</span>
+<span class="span">CMOS image sensors</span>
+<span class="span">industrial, automotive, medical</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem build-out across AI networking and optical switching</h2>
+<div class='range'>2025-08-25 → 2026-03-16</div>
+<div class='psum'>Through late 2025 and early 2026, Tower extended its silicon photonics ecosystem with partnerships targeting AI datacenter fabrics and networking. It showcased a jointly developed on-chip, optically pumped multi-wavelength laser with Xscape Photonics built on Tower’s PH18 platform.
+In early 2026, Tower announced collaborations to align its 1.6T modules to NVIDIA networking protocols, and moved optical circuit switching programs with Salience Labs into pre‑production. A March 2026 announcement with Oriole highlighted nanosecond optical circuit switching on Tower’s SiPho platform aimed at ultra-low latency, deterministic AI fabrics.</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">Oriole collaboration targets nanosecond optical circuit switching on Tower’s SiPho</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tower and Oriole announced work on ultra-low, deterministic-latency networking for AI fabrics using nanosecond optical circuit switching and a passive network core built on Tower’s silicon photonics platform.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">nanosecond optical circuit switching</span>
+<span class="span">PRISM (Photonic Routing Infrastructure for Scalable Models)</span>
+<span class="span">passive network core</span>
+<span class="span">scale-up and scale-out</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Salience Labs partnership moves optical circuit switches into pre-production</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tower and Salience Labs advanced PIC-based Optical Circuit Switches for AI datacenter networking, leveraging PH18DA with integrated III-V lasers and TPS45PH nitride platforms as the program enters pre-production toward at-scale deployment.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Optical Circuit Switches (OCS)</span>
+<span class="span">PH18DA</span>
+<span class="span">TPS45PH</span>
+<span class="span">pre-production phase</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Tower aligns 1.6T SiPho modules to NVIDIA networking protocols</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tower announced it is scaling AI infrastructure with 1.6T data center optical modules designed for NVIDIA networking protocols, citing the need for high-speed, scalable networking to connect AI infrastructure and accelerate applications.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">1.6T Data Center Optical Modules</span>
+<span class="span">NVIDIA</span>
+<span class="span">networking protocols</span>
+<span class="span">accelerating AI applications at scale</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-25</span>
+<span class="eh">Xscape Photonics and Tower unveil on-chip multi-wavelength laser for AI fabrics</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tower and Xscape announced the industry’s first optically pumped, multi-wavelength on-chip laser on the PH18 platform, with backing from ecosystem leaders such as NVIDIA and Cisco, targeting scalable CWDM/DWDM AI datacenter fabrics.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">optically pumped, multi-wavelength laser</span>
+<span class="span">PH18 Silicon Photonics platform</span>
+<span class="span">NVIDIA and Cisco</span>
+<span class="span">AI datacenter fabrics</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>300mm capacity corridor and SiPho platform ramp</h2>
+<div class='range'>2023-09-05 → 2024-11-26</div>
+<div class='psum'>Tower established a strategic capacity corridor with Intel Foundry Services in September 2023, planning up to $300 million of tool investments at Intel&#x27;s Fab 11X in New Mexico. The arrangement adds over 600,000 photo layers per month of 300mm capability for Tower&#x27;s advanced analog flows, positioning the company for anticipated AI and datacenter demand.
+By late 2024, Tower advanced its silicon photonics roadmap: management reported the production ramp of 1.6-terabit products for multiple lead customers and asserted leadership in SiPho foundry volume. In November 2024, Tower announced volume production of 1.6 Tbps optical transceivers and released a 300mm SiPho process as a standard foundry offering, complementing its high-volume 200mm PH18 platform.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2024-11-26</span>
+<span class="eh">300mm SiPho process released as a standard foundry offering</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tower released a new 300mm Silicon Photonics process as a standard offering, complementing its 200mm (PH18) platform and featuring best-in-class silicon and low-loss silicon nitride waveguides to support next-generation datacom.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">300mm Silicon Photonics (SiPho) process</span>
+<span class="span">standard foundry offering</span>
+<span class="span">200mm (PH18)</span>
+<span class="span">low-loss silicon nitride</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-11-19</span>
+<span class="eh">Tower begins volume production of 1.6 Tbps SiPho optical transceivers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tower announced the start of volume production of 1.6 Tbps silicon photonic products for multiple lead customers, describing innovations that double the speed relative to current 800Gbps high-volume products.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">1.6 Tbps silicon photonic products</span>
+<span class="span">multiple lead customers</span>
+<span class="span">doubling the speed</span>
+<span class="span">800Gbps</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-11-13</span>
+<span class="eh">Earnings call: 1.6T production ramp and asserted SiPho leadership</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated it had begun a production ramp of 1.6-terabit products and claimed Tower is the number one SiPho foundry by volume, also noting it is the first in production with 1.6T SiPho-based products.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">production ramp of 1.6-terabit products</span>
+<span class="span">eight parallel lanes of 100 gigabit per second</span>
+<span class="span">number one foundry by volume in silicon photonics</span>
+<span class="span">first in production with 1.6T</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2023-09-05</span>
+<span class="eh">Intel Foundry Services agreement adds 300mm capacity corridor; Tower to invest up to $300m</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$300M · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Tower and Intel Foundry Services agreed that Intel’s Fab 11X in Rio Rancho, New Mexico will provide 300mm capacity for Tower’s advanced analog processes. Tower will invest up to $300 million in equipment, enabling a capacity corridor of over 600,000 photo layers per month and supporting 65nm BCD and other flows.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">up to $300 million</span>
+<span class="span">over 600,000 photo layers per month</span>
+<span class="span">Fab 11X in Rio Rancho, New Mexico</span>
+<span class="span">65-nanometer power management BCD</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What proportion of the $1.3B 2027 SiPho commitment is concentrated among Tower’s largest customers, and how many counterparties does it represent?</li>
+<li>What is the size and timing profile of the 2028 contractual wafer commitments referenced, and what additional prepayments are due by January 2027?</li>
+<li>What is the expected capex phasing and toolset mix for the Japan expansion pending METI approval, and how does it align with 2027–2028 demand?</li>
+<li>Post‑settlement with IQE, what residual supply risk remains for InP starting materials, and are there secondary sources qualified for redundancy?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several assertions (e.g., SiPho leadership) are management statements without third‑party market share data in the cited materials.</li>
+<li>Press releases may emphasize promotional aspects; where possible, corroboration was added via filings and independent news.</li>
+<li>Financial figures for customer advances and prepayments may be subject to contract terms, potential refunds, or delivery contingencies as disclosed.</li>
+<li>Regulatory and capacity expansion timelines (e.g., METI approval, Japan shell by 1H28) are contingent on approvals and supply chain/tool availability.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

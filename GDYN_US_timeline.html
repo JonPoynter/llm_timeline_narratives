@@ -1,0 +1,608 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>GDYN US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Grid Dynamics Holdings Inc <span class='sub'>(GDYN US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.434</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>25 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 9</span>
+<span class='chip'>single source: 16</span>
+<span class='chip'>web-only (verified): 5</span>
+<span class='chip'>web-only (unverified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Platformized AI delivery, revenue mix shift, and Azure modernization GTM</h2>
+<div class='range'>2026-04-30 → 2026-05-19</div>
+<div class='psum'>The 26Q1 release emphasized that AI‑related revenue had scaled to 29.3% of total, with 19.1% partner‑influenced revenue and concentrated top‑account exposure. Management highlighted GAIN platform adoption moving into production, a shift toward fixed/outcome pricing enabled by AI agents and Rosetta governance, and contribution margin outliers above 60% on some AI work. They also pointed to both opportunities (hyperscaler marketplaces, NVIDIA for Physical AI) and execution risks tied to non‑T&amp;M/fixed‑bid delivery and the need to prove measurable ROI.
+Concurrently, Grid Dynamics launched an AI‑native modernization offering on Microsoft Azure powered by its GAIN Platform for SDLC, aligning the services portfolio to larger enterprise deals in the Azure ecosystem.</div>
+<div class="event t-web_only_unverified" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-19</span>
+<span class="eh">Launched AI‑native modernization offering on Microsoft Azure (GAIN SDLC)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Grid Dynamics announced an AI‑native modernization service offering on Microsoft Azure, powered by its GAIN Platform for SDLC, targeting larger enterprise deals within the Azure ecosystem.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">AI-native modernization service offering on Microsoft Azure</span>
+<span class="span">GAIN Platform for SDLC</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">AI revenue reached 29.3% of total; partner‑influenced 19.1%; customer concentration disclosed</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Grid Dynamics reported AI‑related revenue at 29.3% of total and partnership‑influenced revenue at 19.1%, noting top‑5 and top‑10 account concentration metrics.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">29.3% of total</span>
+<span class="span">19.1%</span>
+<span class="span">top 5 accounts 40.8% of revenue</span>
+<span class="span">top 10 accounts 59.7%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">GAIN platforms (Agentic, SDLC, R&amp;C, Physical AI) moved into production</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said new GAIN platforms across Agentic Commerce, SDLC, Risk &amp; Compliance, and Physical AI have been moving into production as AI adoption accelerates.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI revenue reaching 29.3% of total</span>
+<span class="span">GAIN platforms (Agentic Commerce, SDLC, Risk &amp; Compliance, Physical AI)</span>
+<span class="span">moving into production.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Hyperscaler partnerships drove 19.1% of revenue in Q1</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Grid Dynamics attributed 19.1% of quarterly revenue to partnerships with top hyperscalers, underscoring cloud channel influence on demand.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Partnerships with top hyperscalers drove 19.1% of revenue.</span>
+<span class="span">top hyperscalers</span>
+<span class="span">19.1% of revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Shift toward fixed/outcome pricing enabled by AI agents and GAIN Rosetta</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management described a shift to fixed/outcome structures supported by AI agents and Rosetta governance, aiming to standardize delivery economics.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">shifting toward fixed/outcome structures</span>
+<span class="span">AI agents</span>
+<span class="span">GAIN Rosetta governance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">AI projects show 60+% contribution margin outliers; non‑T&amp;M higher than T&amp;M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CFO cited contribution margin outliers in the 60‑plus range on some AI work and reiterated that non‑T&amp;M engagements generally carry higher margins than T&amp;M, framing a multi‑year expansion path.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">60‑plus range</span>
+<span class="span">non‑T&amp;M generally carries higher margins than T&amp;M</span>
+<span class="span">multi‑year evolution</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Demand trends: POCs moving to production; modernization; fast‑followers expanding TAM</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted projects transitioning from POCs to production, AI‑driven application modernization/data work, and a wave of fast‑followers broadening the addressable market.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">POCs to production</span>
+<span class="span">application modernization</span>
+<span class="span">fast‑followers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Long‑term target: partner‑influenced revenue at 25–30%</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The SVP set a long‑term goal for partner‑influenced revenue at 25–30%, up from 19.1% in Q1, reinforcing dependence on hyperscaler and specialized AI channels.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">partner‑influenced revenue</span>
+<span class="span">19.1% in Q1</span>
+<span class="span">long‑term goal of 25–30%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Plan to list more GAIN platforms on hyperscaler marketplaces; NVIDIA in Physical AI GTM</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Grid Dynamics plans to expand GAIN platform listings across hyperscaler marketplaces and deepen go‑to‑market with specialized AI firms, calling out NVIDIA for Physical AI.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">distribution_channel_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">list additional GAIN platforms</span>
+<span class="span">hyperscaler marketplaces</span>
+<span class="span">NVIDIA highlighted for Physical AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Competitive context: &quot;AI proliferation equalized the supply base&quot;</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Leadership noted vendor consolidation and that AI proliferation has equalized the supply base, positioning Grid Dynamics as a preferred vendor due to nimbleness versus larger SIs.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">preferred‑vendor status</span>
+<span class="span">vendor consolidation</span>
+<span class="span">AI proliferation equalized the supply base</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Risk: proving measurable ROI on AI deployments under outcome‑based models</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management identified a key forward risk in converting AI deployments into measurable client ROI, particularly as outcome‑based models scale.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">key forward risk</span>
+<span class="span">convert into measurable client ROI</span>
+<span class="span">outcome‑based models</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">AI productivity example: 3–6X improvement in test coverage at a large customer</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">An example cited a 3 to 6X improvement in test‑coverage creation under AI‑enabled workflows at a large customer, supporting account expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">3 to 6X</span>
+<span class="span">test‑coverage creation</span>
+<span class="span">large customer</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">KPI emphasis shifts to revenue‑per‑person in AI/platform model</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The company emphasized revenue‑per‑person as a primary utilization and efficiency KPI under the AI/platform delivery model.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">revenue‑per‑person as the primary</span>
+<span class="span">AI/platform model</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">M&amp;A appetite focused on near‑term tuck‑ins in Data/AI</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reiterated interest in near‑term Data/AI tuck‑in acquisitions, noting improved valuations despite premiums for quality assets.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">M&amp;A appetite</span>
+<span class="span">tuck‑ins in Data/AI</span>
+<span class="span">valuations have improved</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Rosetta de‑risks scoping; non‑T&amp;M margin advantage; cites 60%+ outliers</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described AI‑enabled scoping/governance via GAIN Rosetta and reiterated that non‑T&amp;M carries higher margins, with cited 60%+ contribution margin outliers.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑enabled scoping/governance (GAIN Rosetta)</span>
+<span class="span">non‑T&amp;M generally carries higher margins</span>
+<span class="span">60%+ contribution margin</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Pivot to fixed/outcome‑based AI work expected to expand margins over time</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Pricing and engagement models are shifting toward fixed/outcome‑based work tied to GAIN platforms and AI agents, expected to support structurally higher margins over time.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">pivot to fixed/outcome‑based work</span>
+<span class="span">GAIN platforms and AI agents</span>
+<span class="span">higher margins over time</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Risk: execution challenges in AI‑native platforms and fixed‑bid/non‑T&amp;M delivery</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">The transition to AI‑native platforms and increased fixed‑bid/non‑T&amp;M engagements introduces delivery and pricing risks; missteps or slower adoption could pressure margins and growth.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-native platforms (GAIN)</span>
+<span class="span">fixed-bid/non‑T&amp;M engagements</span>
+<span class="span">could weigh on margins and growth</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Industry solution accelerators and early measurable outcomes</h2>
+<div class='range'>2026-01-14 → 2026-04-20</div>
+<div class='psum'>In early 2026, Grid Dynamics highlighted industry accelerators on Google Cloud, showcasing a GenAI content and catalog enrichment starter kit built on Vertex AI and powered by Gemini. The firm also publicly detailed Rosetta, a governance and context‑engineering layer for AI coding agents integrated into SDLC workflows.
+Customer outcomes were publicized via a Business Wire case study with Galeries Lafayette, citing measurable revenue and basket lifts after integrating Google Vertex AI Search for Commerce with Grid Dynamics’ MXP platform, indicating traction in retail commerce modernization.</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-20</span>
+<span class="eh">Galeries Lafayette sees 7% sales lift using Google Vertex AI Search + MXP</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Grid Dynamics announced a successful deployment for Galeries Lafayette, integrating Google Vertex AI Search for Commerce with its MXP platform, reporting a 7% total sales increase, higher average order value, and modernization of a large product catalog.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">augmentation de 7 % du chiffre d&#x27;affaires</span>
+<span class="span">Google Vertex AI Search for Commerce</span>
+<span class="span">Merchandising Experience Platform (MXP)</span>
+<span class="span">600 000 produits</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">Showcased Rosetta for AI coding agents; context engineering and governance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">At a public session, Grid Dynamics presented Rosetta, a system for meta‑prompting and centralized knowledge to manage AI coding agents, referencing real‑world usage alongside tools like Cursor and Claude Code.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Grid Dynamics Rosetta – Meta-prompting, context engineering &amp; centralized knowledge for AI coding agents</span>
+<span class="span">Rosetta</span>
+<span class="span">Cursor and Claude Code</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-01-14</span>
+<span class="eh">Introduced Catalog Enrichment Starter Kit on Google Cloud using Gemini</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Grid Dynamics promoted a GenAI Content and Catalog Enrichment Starter Kit for Google Cloud, built on Vertex AI and powered by the multimodal Gemini model to automate catalog enrichment at scale.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">GenAI Content and Catalog Enrichment Starter Kit for Google Cloud</span>
+<span class="span">built on Vertex AI</span>
+<span class="span">multimodal large language model Gemini</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational GenAI partnerships and multi‑model blueprints</h2>
+<div class='range'>2023-06-06 → 2024-08-07</div>
+<div class='psum'>Grid Dynamics began formalizing its GenAI go‑to‑market in mid‑2023 by expanding its partnership with Google Cloud around Vertex AI and LLMs. Through late 2023, the company complemented this with solution accelerators such as a GenAI Intelligent Document Processing Starter Kit and internal LLMOps blueprints designed for closed‑source API models (OpenAI, Google, Anthropic) and, later, open‑source LLMs.
+By early 2024, Grid Dynamics secured Microsoft’s AI and Machine Learning on Azure Advanced Specialization, evidencing capability and channel alignment for Azure AI workloads, including Azure OpenAI and Copilot Studio. The August 2024 open‑source LLMOps blueprint rounded out a multi‑model posture spanning Google Gemini, OpenAI/ChatGPT (via Azure OpenAI routes), Anthropic Claude, and Meta Llama where appropriate.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-08-07</span>
+<span class="eh">Published LLMOps blueprint for open‑source LLMs (incl. Llama 2) with cloud‑agnostic design</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Grid Dynamics outlined a scalable LLMOps architecture for open‑source models such as Llama 2, contrasting needs versus closed‑source providers (OpenAI, Google, Anthropic) and emphasizing hybrid/on‑prem deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">open-source large language models (LLMs)</span>
+<span class="span">Llama 2</span>
+<span class="span">OpenAI, Google, and Anthropic</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-01-16</span>
+<span class="eh">Earned Microsoft Azure AI &amp; ML Advanced Specialization; capabilities include Azure OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Grid Dynamics achieved the AI and Machine Learning on Microsoft Azure Advanced Specialization, citing deeper collaboration on Azure AI platforms including Azure OpenAI and Microsoft Copilot Studio, supporting larger GenAI deal pipelines.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">AI and Machine Learning on Microsoft Azure Advanced Specialization</span>
+<span class="span">Azure OpenAI</span>
+<span class="span">Microsoft Copilot Studio</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2023-10-25</span>
+<span class="eh">Launched GenAI Intelligent Document Processing Starter Kit with multi‑provider portability</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Grid Dynamics released a GenAI IDP Starter Kit to accelerate complex document workflows, highlighting portability across cloud LLM providers including Google, OpenAI, and Anthropic, as well as private deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">GenAI Intelligent Document Processing Starter Kit</span>
+<span class="span">Portability: Integrate with cloud LLM providers</span>
+<span class="span">Google, Open AI, Anthropic</span>
+<span class="span">more than 10 pre-packaged</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2023-10-13</span>
+<span class="eh">Published LLMOps blueprint for closed‑source API models (OpenAI, Google, Anthropic)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Grid Dynamics described a reusable platform blueprint for solutions powered by closed‑source LLMs accessed via APIs, citing GPT‑4 (OpenAI), PaLM2 (Google), and Claude (Anthropic). This supports standardized delivery across multiple providers.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">closed-source large language models (LLMs)</span>
+<span class="span">GPT-4 from OpenAI</span>
+<span class="span">PaLM2 from Google</span>
+<span class="span">Anthropic Claude</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-06-06</span>
+<span class="eh">Expanded Google Cloud partnership to implement Vertex AI GenAI solutions</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Grid Dynamics announced a major expansion of its Google Cloud partnership to develop and implement enterprise generative AI solutions leveraging Vertex AI and LLMs. This positioned the firm to accelerate industry‑specific GenAI use cases on Google Cloud.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">June 06, 2023</span>
+<span class="span">major expansion of its partnership with Google Cloud</span>
+<span class="span">Vertex AI</span>
+<span class="span">foundational large language models (LLMs)</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of the 29.3% AI-related revenue is attributable to each provider stack (Google Vertex/Gemini vs. Azure OpenAI vs. Anthropic/others)?</li>
+<li>Are there multi-year, minimum-commitment enterprise agreements behind the Galeries Lafayette deployment or other flagship wins, and what is the $ magnitude?</li>
+<li>How much of the 19.1% partner-influenced revenue flows via Azure programs vs. Google Cloud marketplaces, and what is the co-sell pipeline scale?</li>
+<li>Do any GAIN platform deployments include dedicated GPU capacity or reserved cloud spend commitments (and with which providers)?</li>
+<li>What is the distribution of contribution margins on AI projects beyond the cited 60%+ outliers, and how does fixed/outcome pricing affect risk-adjusted margins?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Most sources are company-originated press releases, blogs, or website content; limited third-party corroboration is available in this window.</li>
+<li>Galeries Lafayette case study is cited from a French Business Wire release; detailed commercial terms and $ amounts were not disclosed.</li>
+<li>Filings highlights provide percentages and qualitative guidance without underlying dollar figures; backlog/RPO specifics were not provided.</li>
+<li>No frontier lab contract announcements or independent news coverage were present in the inventory for cross-corroboration.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

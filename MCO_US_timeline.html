@@ -1,0 +1,507 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>MCO US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Moody&#x27;s Corp <span class='sub'>(MCO US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.428</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>19 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>web-only (verified): 10</span>
+<span class='chip'>single source: 7</span>
+<span class='chip'>web-only (unverified): 1</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>MCP-led multi-platform distribution; filings highlight demand tailwinds and regulatory posture</h2>
+<div class='range'>2026-04-09 → 2026-06-17</div>
+<div class='psum'>In April–June 2026, Moody’s broadened distribution of its decision‑grade intelligence and agentic workflows across leading AI platforms using Model Context Protocol (MCP). It announced native availability of Moody’s Agentic Solutions inside Anthropic’s Claude environment, introduced a Moody’s agent and grounding for Microsoft 365 Copilot experiences, and later enabled access in Amazon Quick via an MCP server. Moody’s also released platform‑agnostic AI skills encoded in SKILL.md, noting adoption by Anthropic, OpenAI, Google, Microsoft, and Amazon, and published an AI partnerships overview highlighting integrations with Microsoft, Anthropic, AWS, and OpenAI.
+Concurrently, 1Q26 filings and prepared remarks emphasized MCP integrations into ChatGPT Enterprise and Claude, a bring‑your‑own‑license distribution approach to preserve customer relationships, and active regulatory engagement with human‑in‑the‑loop controls. Management cited AI‑related financing and data‑center build‑outs as supporting record MIS issuance, discussed hyperscalers’ issuance patterns and pricing analogies to frequent IG borrowers, and cautioned that normalization of AI‑linked capex could temper issuance and analytics demand later in 2026.</div>
+<div class="event t-web_only_verified" id="E0019" data-providers="anthropic_claude openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-17</span>
+<span class="eh">Moody’s launches platform‑agnostic AI skills; SKILL.md and MCP underpin cross‑platform execution</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Moody’s released its first set of AI skills — instruction kits encoding analytical frameworks that connect via MCP to decision‑grade data. The skills are built on the SKILL.md format, which originated with Anthropic and is adopted by OpenAI, Microsoft, Google, and Amazon.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">AI skills – purpose-built, platform-agnostic instruction kits</span>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">SKILL.md</span>
+<span class="span">OpenAI, Microsoft, Google, and Amazon</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">Moody’s intelligence available in Amazon Quick via MCP server</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Moody’s announced that its connected intelligence, including ratings, research, and curated data on over 600 million entities, is now available in Amazon Quick through a dedicated MCP server, enabling grounded AI research and credit/lending workflows natively inside the assistant.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Amazon Quick – a personalized, proactive AI assistant</span>
+<span class="span">Model Context Protocol (MCP) server</span>
+<span class="span">ratings and research from Moody’s Ratings</span>
+<span class="span">more than 600 million public and private entities</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0017" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Moody’s details AI partnerships across Microsoft, Anthropic, AWS, and OpenAI; MCP servers available</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Moody’s outlined a multi‑platform strategy placing decision‑grade intelligence directly in customer workflows via partnerships with Microsoft, Anthropic, AWS, and OpenAI. It highlighted MCP servers on OpenAI’s platform (including ChatGPT Enterprise) and native availability across Claude interfaces.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">partnerships with Microsoft, Anthropic, AWS, and OpenAI</span>
+<span class="span">MCP servers</span>
+<span class="span">ChatGPT Enterprise</span>
+<span class="span">Claude Desktop, Claude.ai, and Claude Enterprise</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0009" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Filings/remarks: MCP integrations bring Moody’s content into ChatGPT Enterprise and Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">1Q26 disclosures emphasized MCP integrations delivering Moody’s agent‑ready intelligence directly inside enterprise AI environments, specifically naming ChatGPT Enterprise and Claude. Management framed this as scaled distribution without compromising governance or independence.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[9]</div>
+<span class="span">agent‑ready data and workflow agents</span>
+<span class="span">ChatGPT Enterprise, Claude</span>
+<span class="span">Model Context Protocol integrations</span>
+<span class="span">ChatGPT Enterprise and Claude</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Filings: BYOL distribution preserves relationships; focus on trials and upsell</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Moody’s noted large regulated customers are trialing AI‑enabled access delivered via bring‑your‑own‑license models that preserve direct relationships, with near‑term focus on trials and upsell into existing enterprise agreements rather than standalone usage fees.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">bring‑your‑own‑license models</span>
+<span class="span">preserving direct customer relationships</span>
+<span class="span">trials and upsell</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Filings: AI trials underway at large financial institutions; no numeric adoption disclosed</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management characterized adoption as several large FIs trialing solutions, while declining to provide direct numeric adoption figures. This indicates early enterprise experimentation without quantified revenue attribution yet.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Direct numeric adoption figures were not provided</span>
+<span class="span">several large financial institutions are trialing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Filings: Regulatory engagement; emphasis on human‑in‑the‑loop and governance for AI decisioning</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Moody’s highlighted active engagement with regulators and stressed strong controls, transparency, and human‑in‑the‑loop approaches, citing heightened sensitivity around AI making decisions in regulated environments.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">heightened sensitivity for sure around the use of AI to actually be making decisions,</span>
+<span class="span">human‑in‑the‑loop and governance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Filings: AI/data‑center financing supporting record MIS issuance and MA growth</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management linked record issuance in Moody’s Ratings (MIS) and continued Moody’s Analytics (MA) growth to strong demand, citing AI‑related financing and data‑center build‑outs as contributing drivers.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑related financing and data‑center build‑outs supporting record MIS issuance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Filings: Hyperscalers viewed like frequent IG issuers; program pricing analogies</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Moody’s framed hyperscalers as analogous to frequent investment‑grade issuers, with economics consistent with program pricing typical for serial IG borrowers.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">hyperscalers as analogous to other frequent investment‑grade issuers</span>
+<span class="span">program pricing typical for serial IG borrowers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Filings: Q1 hyperscaler issuance near full‑year plan, implying potential upside</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted that Q1 hyperscaler issuance was already near the contemplated full‑year level, pointing to potential upside to hyperscaler‑related activity for the remainder of the year.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q1 hyperscaler issuance was already near the full‑year level</span>
+<span class="span">potential upside to full‑year hyperscaler‑related activity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Filings: Risk that normalization of AI‑linked capex could temper demand</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Moody’s cautioned that its outlook assumes modest cuts later in 2026 and that normalization of AI‑linked capex could temper issuance and analytics demand, alongside rate path uncertainties.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">normalization of AI‑linked capex could temper issuance</span>
+<span class="span">Outlook assumes modest cuts later in 2026</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Moody’s intelligence integrated into Microsoft 365 Copilot via MCP; grounding across Copilot experiences</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Moody’s expanded its Microsoft partnership by delivering a dedicated agent via MCP in Microsoft 365 Copilot and enabling its data as a grounding source across Copilot Chat, Researcher agent, and Copilot in Excel. This extends distribution into users’ daily enterprise workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Microsoft 365 Copilot</span>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">Copilot Chat and Researcher agent</span>
+<span class="span">Copilot in Microsoft Excel</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-04-09</span>
+<span class="eh">Moody’s Agentic Solutions available natively in Anthropic’s Claude via MCP</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Moody’s and Anthropic announced that Moody’s Agentic Solutions (MAS) are accessible natively in Claude across Desktop, Claude.ai, and Claude Enterprise through an MCP application, enabling in‑Claude execution of credit and compliance workflows with sourcing and audit trails.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Anthropic’s Claude environment</span>
+<span class="span">Moody’s Agentic Solutions (MAS)</span>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">Claude Desktop, Claude.ai, and Claude Enterprise</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early scaling and adoption of Research Assistant</h2>
+<div class='range'>2025-08-08 → 2025-08-08</div>
+<div class='psum'>By August 2025, Moody’s described tangible traction for Research Assistant, noting it was built on Microsoft Azure OpenAI and expanded to cover information on over 190,000 companies. The blog states that within weeks of release, more than 115 clients adopted the tool, using it to summarize calls, generate comps, and accelerate insight extraction.
+These adoption indicators suggest growing enterprise usage and workflow integration of Moody’s GenAI interfaces, reinforcing the strategy of grounding general‑purpose LLMs with Moody’s proprietary content.</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-08-08</span>
+<span class="eh">Moody’s details Research Assistant adoption and coverage; Azure OpenAI foundation</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Moody’s reported that Research Assistant, built on Microsoft Azure OpenAI, now provides streamlined access to information on over 190,000 companies and saw more than 115 clients adopt within weeks. The tool supports summarization, comps, and insight extraction tasks.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Microsoft Azure OpenAI</span>
+<span class="span">first major step came in December 2023</span>
+<span class="span">over 190,000 companies</span>
+<span class="span">more than 115 clients had adopted it</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundation: Microsoft/OpenAI and Google Cloud partnerships; Research Assistant commercialization</h2>
+<div class='range'>2023-06-29 → 2024-06-27</div>
+<div class='psum'>Moody’s initiated a strategic pivot into generative AI with Microsoft in mid‑2023, anchoring solutions on Microsoft Azure OpenAI Service and deploying “Moody’s CoPilot” internally to 14,000 employees, while previewing a customer‑facing Moody’s Research Assistant. By December 2023, Moody’s Research Assistant launched commercially as an add‑on to CreditView, explicitly powered by Microsoft’s Azure OpenAI Service and positioned to materially reduce time spent on data collection and analysis.
+In parallel, Moody’s formed a Google Cloud partnership (Oct 2023) to co‑create gen‑AI applications on Vertex AI, expose proprietary datasets in BigQuery, and enhance enterprise search with Vertex AI Search. In June 2024, Google announced expanded grounding capabilities on Vertex AI — including third‑party datasets — citing Moody’s as a specialized provider, signaling an additional distribution and workflow channel for Moody’s data in Google’s AI ecosystem.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-06-27</span>
+<span class="eh">Google expands Vertex AI grounding; Moody’s named a specialized third‑party data provider</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google announced expanded grounding capabilities on Vertex AI, including with Google Search and forthcoming third‑party datasets, naming Moody’s among specialized data providers. This positions Moody’s data to ground enterprise agents and apps built on Google’s AI stack.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">ground Gemini outputs with Google Search</span>
+<span class="span">Grounding with third-party datasets is coming in Q3 this year.</span>
+<span class="span">specialized providers like Moody&#x27;s</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-12-05</span>
+<span class="eh">Moody’s Research Assistant launches as a GenAI add‑on to CreditView using Azure OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Moody’s commercially launched Moody’s Research Assistant as an add‑on to CreditView, leveraging Microsoft’s Azure OpenAI Service and Moody’s proprietary content to accelerate research workflows. Pilot users reported significant time savings in data collection and analysis.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Moody’s Research Assistant</span>
+<span class="span">generative artificial intelligence (GenAI)</span>
+<span class="span">Microsoft’s Azure OpenAI Service</span>
+<span class="span">add-on to CreditView</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-10-23</span>
+<span class="eh">Moody’s and Google Cloud partner on gen‑AI applications; BigQuery and Vertex AI Search integrations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Moody’s and Google Cloud announced a partnership to explore gen‑AI applications for financial professionals using Vertex AI, enable access to Moody’s datasets via BigQuery, and improve productivity with Vertex AI Search. The collaboration targets faster analysis of financial disclosures and enhanced enterprise search.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Google Cloud</span>
+<span class="span">Vertex AI</span>
+<span class="span">BigQuery</span>
+<span class="span">Vertex AI Search</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-07-25</span>
+<span class="eh">Management previews Moody’s Research Assistant demo; reiterates Azure OpenAI partnership</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">On Q2 2023 prepared remarks, Moody’s highlighted its Microsoft alliance and published a teaser demo of Moody’s Research Assistant, built on Azure OpenAI and Moody’s proprietary data. The assistant is intended to surface integrated perspectives of risk across multiple data domains.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">partnered with Microsoft</span>
+<span class="span">Azure OpenAI Service</span>
+<span class="span">teaser demo</span>
+<span class="span">Moody&#x27;s Research Assistant</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-06-29</span>
+<span class="eh">Moody’s and Microsoft announce gen‑AI partnership on Azure OpenAI; internal and client copilots unveiled</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Moody’s and Microsoft launched a strategic partnership to deliver gen‑AI solutions built on Microsoft Azure OpenAI Service, debuting Moody’s CoPilot for 14,000 employees and previewing Moody’s Research Assistant for customers. This established OpenAI‑based foundations for internal productivity and external product innovation.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Microsoft Azure OpenAI Service</span>
+<span class="span">Moody’s CoPilot</span>
+<span class="span">14,000 global employees</span>
+<span class="span">Moody’s Research Assistant</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of Moody’s Analytics revenue in 2025–2026 is directly attributable to GenAI products or MCP‑enabled distribution channels (by product line and geography)?</li>
+<li>What are the paid adoption and conversion rates for Moody’s Research Assistant and MCP‑based integrations (e.g., Claude, Microsoft 365 Copilot, Amazon Quick, OpenAI/ChatGPT Enterprise)?</li>
+<li>Are there formal revenue‑sharing or minimum‑commitment terms with Anthropic, OpenAI, Microsoft, Google, or AWS related to MCP integrations?</li>
+<li>How do BYOL deployments impact average contract value and renewal rates compared with traditional CreditView‑only deployments?</li>
+<li>Have regulators provided written guidance affecting Moody’s AI deployment in ratings or analytics workflows beyond human‑in‑the‑loop requirements?</li>
+<li>What safeguards govern data usage/grounding in third‑party platforms (e.g., Vertex AI, Copilot, Claude) to prevent leakage or unauthorized model training on Moody’s content?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several events stem from company press releases or blogs and may emphasize strategic positioning over quantified financial outcomes.</li>
+<li>Adoption metrics cited (e.g., client counts, productivity gains) are point‑in‑time and may not reflect sustained usage or monetization.</li>
+<li>Filings provide qualitative direction on AI‑linked demand and risks without disclosing specific revenue or backlog attributable to AI products.</li>
+<li>Platform integrations (Copilot, Claude, Amazon Quick, OpenAI) imply dependencies, but the strength and duration of contractual commitments are not disclosed in the provided sources.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,332 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>KIGRY US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>KION Group AG <span class='sub'>(KIGRY US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.337</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>9 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>web-only (unverified): 4</span>
+<span class='chip'>web-only (verified): 3</span>
+<span class='chip'>corroborated: 1</span>
+<span class='chip'>single source: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Scaling physical AI: Siemens alliance, live GXO pilot, robotics equity</h2>
+<div class='range'>2026-02-26 → 2026-04-30</div>
+<div class='psum'>KION signaled scale-up of physical AI initiatives, adding a strategic partnership with Siemens to its NVIDIA and Accenture collaborations. The firm emphasized expanding AI and digital twin capabilities to orchestrate supply chains.
+At NVIDIA GTC 2026, KION demonstrated physical AI moving from simulation into live warehouse operations, including an autonomous truck and safety-certified automated trailer loading. KION also disclosed in Q1 2026 a 35% equity investment in ZIKOO Robotics (China) and noted a live physical AI warehouse pilot with GXO in France, underscoring both customer adoption and capability expansion through investment.</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">KION takes 35% equity stake in ZIKOO Robotics (China)</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$35 · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">In its Q1 2026 release, KION disclosed a 35% equity investment in ZIKOO Robotics to expand automated storage capabilities, alongside continued collaboration with NVIDIA and Accenture.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">35% equity investment</span>
+<span class="span">ZIKOO Robotics (China)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">Siemens and KION enter strategic AI partnership with data exchange</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">KION and Siemens announced a strategic partnership to digitalize intralogistics using AI, automation, and simulation, including the creation of digital twins and an agreement to exchange selected industrial data to accelerate AI-enabled deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Siemens and KION</span>
+<span class="span">strategic partnership</span>
+<span class="span">exchange selected industrial data</span>
+<span class="span">analyzed by artificial intelligence (AI)</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">Physical AI moves into live ops; GXO pilot showcased at GTC 2026</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">KION presented live warehouse operations for physical AI at GTC 2026, including an autonomous industrial truck and safety‑certified automated trailer loading. The firm highlighted a GXO pilot as a milestone, corroborated by Q1 2026 disclosure noting a live ‘physical AI’ warehouse pilot with GXO in France.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[5], filings[0]</div>
+<span class="span">live warehouse operations</span>
+<span class="span">GTC 2026</span>
+<span class="span">GXO pilot</span>
+<span class="span">live ‘physical AI’ warehouse pilot</span>
+<span class="span">with GXO in France</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">KION adds Siemens partnership to AI and digital twins push</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On its FY2025 update call, KION highlighted a partnership with Siemens complementing its NVIDIA and Accenture work, focused on scaling physical AI and automation solutions for supply chain orchestration.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Partnership with Siemens</span>
+<span class="span">AI and digital twins</span>
+<span class="span">physical AI and automation solutions</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Physical AI and digital twins with NVIDIA/Accenture</h2>
+<div class='range'>2025-01-07 → 2025-03-18</div>
+<div class='psum'>KION deepened its focus on &quot;physical AI&quot;—the application of AI models in embodied and simulated industrial contexts—through collaborations with NVIDIA and Accenture. At CES 2025, KION described a path to optimize warehouses using NVIDIA’s Omniverse and blueprint architectures, with a next step to integrate fine-tuned vision language models and NVIDIA NIM services to bring foundation models to edge devices.
+At NVIDIA GTC 2025, Dematic showcased an AI Control Tower digital twin of its Solutions Center built on NVIDIA Omniverse, demonstrating how AI-powered digital twins can simulate and test material and order flows before implementing real-world changes in logistics facilities.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-03-18</span>
+<span class="eh">Dematic debuts AI-generated digital twin at NVIDIA GTC 2025</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Dematic showcased an AI Control Tower digital twin simulation built on NVIDIA Omniverse, developed with Accenture, to demonstrate how AI-powered digital twins can simulate and test warehouse scenarios prior to real-world deployment.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">AI Control Tower digital twin</span>
+<span class="span">GTC Artificial Intelligence (AI) Conference</span>
+<span class="span">NVIDIA Omniverse platform</span>
+<span class="span">simulation and testing of material and order flow scenarios</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-07</span>
+<span class="eh">KION, NVIDIA, Accenture outline physical AI roadmap at CES</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">KION highlighted the use of NVIDIA Omniverse blueprints and plans to integrate a fine-tuned vision language model with NVIDIA NIM services to deploy foundation models on edge devices in warehouses, signaling a pathway from simulation to operational AI in intralogistics.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">NVIDIA Omniverse</span>
+<span class="span">physical AI</span>
+<span class="span">fine-tuned vision language model</span>
+<span class="span">NVIDIA NIM</span>
+<span class="span">foundation models</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Cloud AI foundations with Google Cloud (Dematic)</h2>
+<div class='range'>2022-06-06 → 2023-10-02</div>
+<div class='psum'>KION Group, through its Dematic subsidiary, established a foundational partnership with Google Cloud to accelerate cloud, AI, and ML-enabled modernization of warehouse and supply chain software. The initial 2022 announcement framed the collaboration as a strategic move to migrate Dematic offerings to the cloud and co-develop AI/ML capabilities.
+In 2023, Dematic operationalized elements of this strategy: a VividCloud case study documented Dematic’s migration toward a cloud-based microservices architecture on Google Cloud Platform (GCP), and Dematic launched its Sprocket Enterprise Asset Management software on Google Cloud Marketplace, creating a new distribution and deployment channel.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-10-02</span>
+<span class="eh">Dematic Sprocket available on Google Cloud Marketplace</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Dematic launched its Sprocket Enterprise Asset Management software on Google Cloud Marketplace, its first product hosted on GCP and sold via Google’s marketplace channel, expanding reach to joint customers and enabling cloud-native deployment.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Google Cloud Marketplace</span>
+<span class="span">first product to be hosted on the Google Cloud Platform</span>
+<span class="span">Dematic Sprocket</span>
+<span class="span">over 35,000 daily users</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-05-01</span>
+<span class="eh">Dematic Micro-Fulfillment shifts to GCP microservices architecture</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A VividCloud case study detailed Dematic’s move from monolithic software to a cloud-based microservices architecture on Google Cloud Platform, advancing the firm’s AI-ready and scalable software footprint for intralogistics.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">cloud-based microservices architecture</span>
+<span class="span">Google Cloud Platform (GCP)</span>
+<span class="span">Micro-Fulfillment product</span>
+<span class="span">implemented on the Google Cloud Platform (GCP)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2022-06-06</span>
+<span class="eh">Dematic and Google Cloud announce AI/ML partnership</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Dematic, a KION Group subsidiary, announced a partnership with Google Cloud to migrate offerings to the cloud and infuse AI/ML into supply chain execution. This marked the start of KION’s formal alignment with Google’s AI capabilities for intralogistics software.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Google Cloud</span>
+<span class="span">Artificial Intelligence (AI) and Machine Learning (ML)</span>
+<span class="span">migrating Dematic’s offerings to the cloud</span>
+<span class="span">subsidiary of the global intralogistics provider KION Group</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the monetary value and any contingent terms of the 35% equity investment in ZIKOO Robotics (China)?</li>
+<li>Do KION/Dematic deployments on Google Cloud explicitly use Vertex AI/Gemini models, or primarily GCP infrastructure and custom models?</li>
+<li>How many customer sites are live with the physical AI applications (autonomous trucks, automated trailer loading), and what is the revenue/ROI impact to date?</li>
+<li>What are the data governance terms and retention limits for the Siemens–KION industrial data exchange?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items rely on company press releases or marketing materials (Dematic/KION), with limited independent third‑party corroboration.</li>
+<li>Disclosures do not quantify financial impacts (revenue, capex, or contract values) related to AI partnerships; only a percentage stake in ZIKOO is provided without a USD amount.</li>
+<li>NVIDIA collaborations are central to KION’s physical AI narrative but NVIDIA is not one of the six frontier LLM providers tracked; provider exposure mapping therefore emphasizes Google Cloud items.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

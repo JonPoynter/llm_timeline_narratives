@@ -1,0 +1,516 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>MA US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Mastercard Inc <span class='sub'>(MA US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.395</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>20 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 3</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 9</span>
+<span class='chip'>single source: 11</span>
+<span class='chip'>web-only (unverified): 6</span>
+<span class='chip'>web-only (verified): 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Scaling agentic commerce, stablecoin rails, and regulatory focus</h2>
+<div class='range'>2026-01-29 → 2026-06-30</div>
+<div class='psum'>In 1H26, Mastercard emphasized AI and agentic commerce in earnings, citing investment in a trust layer and partnership-led distribution while acknowledging early volumes. The company executed live agentic transactions across Latin America and scaled activity in Asia Pacific, while continuing to expand ecosystem partnerships and developer tooling.
+Mastercard advanced its digital-asset initiatives: it agreed to acquire BVNK to extend digital-asset settlement and was cited in initiatives such as a MoonPay debit card via Mastercard and the Open Standard&#x27;s OUSD launch supported by 140+ firms. Management also reiterated regulatory scrutiny in data/AI and digital economy rules as a risk factor.</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Open Standard unveils Open USD stablecoin backed by 140+ firms including Mastercard</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$300.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Open Standard announced Open USD (OUSD), a dollar-backed stablecoin with zero mint/redemption fees and reserve-yield sharing, supported by 140+ companies including Mastercard. CoinDesk framed the move against a $300B+ stablecoin market.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Open USD (OUSD)</span>
+<span class="span">140+ companies</span>
+<span class="span">Visa, Stripe, Mastercard, BlackRock, Google, and Coinbase</span>
+<span class="span">$300B+ stablecoin market</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">CEO highlights BVNK acquisition and launch of &#x27;Agent Pay&#x27; in interview</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">In a Yahoo Finance interview, Mastercard’s CEO discussed stablecoins for remittances and cross-border transactions, referenced the announced BVNK acquisition, and noted the launch of a platform called &#x27;Agent Pay&#x27; to support agent-assisted and autonomous payments.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">BVNK</span>
+<span class="span">launched a platform called &#x27;Agent Pay&#x27;</span>
+<span class="span">remittances and cross‑border transactions</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0018" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">Scaling agentic transactions in APAC; work with Google and FIDO on frameworks</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Mastercard reported scaling live agentic transactions for businesses in Asia Pacific and said it is working with partners like the FIDO Alliance and Google to advance common frameworks for trusted, user-consented AI interactions.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">partners like the FIDO Alliance and Google</span>
+<span class="span">A year ago, we launched Agent Pay</span>
+<span class="span">live agentic transactions for businesses of all sizes in Asia Pacific</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-02</span>
+<span class="eh">MoonPay launches stablecoin debit card enabling on-chain spend via Mastercard</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">MoonPay introduced a stablecoin debit card that enables direct on-chain spending via Mastercard, bridging fiat rails and on-chain balances and signaling continued convergence of crypto and card networks.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">stablecoin debit card</span>
+<span class="span">via Mastercard</span>
+<span class="span">on-chain balances</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Agent Pay expansion and agreement to acquire BVNK</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">In 26Q1, Mastercard highlighted expansion of agentic commerce via Mastercard Agent Pay and disclosed a definitive agreement to acquire BVNK to extend digital-asset settlement capabilities, subject to closing.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">agentic commerce</span>
+<span class="span">Mastercard Agent Pay</span>
+<span class="span">definitive agreement to acquire BVNK</span>
+<span class="span">extend digital‑asset settlement capabilities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Agent ecosystem standards progress; volumes nascent</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management described the agent ecosystem as early-stage, noting standards work such as verifiable intent and ramping partnerships; volumes remain nascent but strategically important.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">standards work (verifiable intent) now in place</span>
+<span class="span">volumes remain nascent</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">B2B agent opportunities highlighted with focus on trust/standards</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO emphasized urgency around trust and standards work and called out longer-term B2B agent opportunities as agentic commerce evolves.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">B2B agent opportunities</span>
+<span class="span">trust/standards</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Regulatory risk flagged: data/AI scrutiny could raise costs</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Mastercard warned that ongoing global scrutiny of data/AI and digital economy regulations and European merchant claims could increase costs, constrain pricing, or require business changes.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">data/AI and digital economy regulations</span>
+<span class="span">could increase costs</span>
+<span class="span">constrain pricing</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Live agentic payment transactions completed across LAC</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Mastercard announced successful execution of live, end-to-end agentic payment transactions across Latin America and the Caribbean, demonstrating AI agents initiating and completing payments with full cardholder consent using existing infrastructure.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">live, end-to-end agentic payment transactions</span>
+<span class="span">Latin America and the Caribbean (LAC)</span>
+<span class="span">AI-driven commerce</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">VASS growth and AI/agentic commerce initiatives highlighted in 25Q4</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Mastercard’s 25Q4 release cited VASS growth of +26% y/y led by security and analytics, continued tokenization progress (~77% of in-person switched purchases), and thematic initiatives in AI/agentic commerce and credit intelligence.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">VASS growth (+26% y/y)</span>
+<span class="span">≈77% of in‑person switched purchase transactions tokenized</span>
+<span class="span">thematic initiatives in AI/agentic commerce</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">CEO outlines agentic commerce focus and partnership-led distribution</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described agentic commerce as arriving fast and emphasized identity, trust, protections, interoperability of protocols, and a partnership-led distribution model for services and potentially transactions.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">identity, trust, protections</span>
+<span class="span">interoperability of protocols</span>
+<span class="span">partnership‑led distribution</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Management signals strong conviction on agentic commerce</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The company reiterated conviction in agentic commerce opportunities, with the CEO quoted: &#x27;the train is leaving the station, and we’re right in front of it.&#x27;</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Constructive conviction on agentic commerce</span>
+<span class="span">the train is leaving the station</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Planned investment in AI/agentic commerce trust layer</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Mastercard stated it would continue investing in an AI/agentic commerce trust layer and services distribution, with flexibility to reprioritize spend while protecting long-term growth.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Continued investment in AI/agentic commerce trust layer</span>
+<span class="span">services distribution</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Agent Pay launch and ecosystem expansion</h2>
+<div class='range'>2025-04-29 → 2025-09-30</div>
+<div class='psum'>In 2025, Mastercard formally launched Agent Pay and positioned itself at the center of agentic commerce. The firm aligned with Microsoft to integrate Azure OpenAI Service and Copilot Studio, and introduced developer tooling (Agent Toolkit, MCP server) to make Mastercard APIs agent-ready.
+By September, Mastercard highlighted collaborations with Stripe, Google and others to scale secure agentic transactions. Importantly, OpenAI launched Instant Checkout in ChatGPT using the Agentic Commerce Protocol, enabling Mastercard Agent Pay and Agentic Tokens to operate on OpenAI’s platform for the first time.</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-09-30</span>
+<span class="eh">ChatGPT Instant Checkout goes live using Agent Pay and Agentic Tokens</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI launched Instant Checkout in ChatGPT using the Agentic Commerce Protocol, enabling Mastercard Agent Pay and Agentic Tokens to be used on OpenAI’s platform for the first time, with initial U.S. bank cardholders enabled and broader rollout planned.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Instant Checkout in ChatGPT</span>
+<span class="span">Agentic Commerce Protocol</span>
+<span class="span">Agent Pay</span>
+<span class="span">Agentic Tokens</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-09-10</span>
+<span class="eh">Agent Toolkit with MCP supports Claude, Cursor, GitHub Copilot integrations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Mastercard announced new tools and collaborations for agentic commerce. Its Agent Toolkit on Mastercard Developers provides structured, machine-readable API content via an MCP server and supports integration with platforms like Claude, Cursor, and GitHub Copilot, with plans to enable all U.S. Mastercard cardholders by the holiday season.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Model Context Protocol (MCP) server</span>
+<span class="span">Claude, Cursor, and GitHub Copilot</span>
+<span class="span">By the holiday season, all U.S. Mastercard cardholders will be enabled</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-04-29</span>
+<span class="eh">Mastercard launches Agent Pay; integrates Azure OpenAI and Copilot Studio</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Mastercard unveiled Agent Pay and said it would work with Microsoft to integrate Microsoft Azure OpenAI Service and Microsoft Copilot Studio with Mastercard’s trusted payment solutions to develop and scale agentic commerce.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Mastercard will work with Microsoft to integrate Microsoft’s leading AI technologies</span>
+<span class="span">Microsoft Azure OpenAI Service</span>
+<span class="span">Microsoft Copilot Studio</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations and early GenAI deployments</h2>
+<div class='range'>2020-07-28 → 2024-12-31</div>
+<div class='psum'>Mastercard established early cloud-and-AI foundations through a collaboration with Microsoft to accelerate cloud-native R&amp;D, leveraging Azure and AI for digital commerce innovation. In 2024, the company publicly expanded GenAI use in fraud prevention and customer experience.
+Mastercard introduced GenAI enhancements to its Decision Intelligence, citing the ability to scan one trillion data points and materially lift fraud detection. In parallel, its Dynamic Yield unit rolled out Shopping Muse with Michael Kors, reporting double-digit conversion uplifts, and Mastercard announced in-house GenAI knowledge assistants built with Databricks’ platform.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2024-10-29</span>
+<span class="eh">Mastercard unveils in-house GenAI assistants built with Databricks</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Mastercard announced new GenAI digital assistant capabilities built in collaboration with Databricks on its Data Intelligence Platform, including RAG and continuous learning with human feedback under Mastercard governance.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Databricks</span>
+<span class="span">Data Intelligence Platform</span>
+<span class="span">Retrieval Augmented Generation (RAG)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-06-10</span>
+<span class="eh">Michael Kors adopts Dynamic Yield’s Shopping Muse AI assistant</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Michael Kors became the first retailer to deploy Dynamic Yield by Mastercard’s Shopping Muse on its U.S. site. Mastercard cited advanced generative AI capabilities and initial tests showing 15–20% higher conversion versus traditional search.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Shopping Muse</span>
+<span class="span">the AI-powered shopping assistant</span>
+<span class="span">15-20% higher conversion rate</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-02-01</span>
+<span class="eh">GenAI boosts Mastercard Decision Intelligence fraud detection</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Mastercard introduced generative AI techniques into its Decision Intelligence platform to improve fraud detection, stating models will scan one trillion data points and can lift detection rates on average by 20%.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Decision Intelligence (DI)</span>
+<span class="span">one trillion data points</span>
+<span class="span">boost fraud detection rates on average by 20%</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2020-07-28</span>
+<span class="eh">Mastercard and Microsoft collaborate to accelerate digital commerce with Azure and AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Mastercard announced a collaboration with Microsoft to accelerate cloud-native R&amp;D for digital commerce, leveraging Azure and AI across Mastercard Labs and its partner ecosystem. This established a cloud and AI innovation base relevant to later agentic commerce efforts.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">accelerate Mastercard Labs’ cloud native research and development</span>
+<span class="span">Azure and AI</span>
+<span class="span">shape the future of digital commerce</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Has the definitive agreement to acquire BVNK closed, and what are the financial terms and integration timeline?</li>
+<li>What portion of transaction volume or VASS revenue is attributable to Agent Pay and broader agentic commerce services in 2025–2026?</li>
+<li>How are economics shared for ChatGPT Instant Checkout transactions that use Agent Pay (fees, chargebacks, liability, and data rights)?</li>
+<li>Which specific models (e.g., GPT-4.x, Claude variants, Gemini) are in production across Agent Pay and the Agent Toolkit integrations, and how are they governed?</li>
+<li>What metrics define scale for live agentic transactions in LAC and APAC (TPV, approval rates, fraud deltas)?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several web sources are corporate communications or marketing materials and may emphasize forward-looking plans; independent third-party validation of volumes and financial impact is limited.</li>
+<li>No dollar magnitudes were disclosed in filings for agentic commerce initiatives; quantitative contribution to revenue or capex is not provided.</li>
+<li>Provider mappings are inferred only where explicitly named in sources (e.g., Azure OpenAI Service, Claude, ChatGPT); other partner mentions (e.g., Google) may not directly imply a specific model in production.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

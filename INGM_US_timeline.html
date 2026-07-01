@@ -1,0 +1,529 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>INGM US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Ingram Micro Holding Corp <span class='sub'>(INGM US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.437</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>20 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 13</span>
+<span class='chip'>single source: 11</span>
+<span class='chip'>web-only (verified): 8</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Microsoft ecosystem credentials, Anthropic in EMEA, and AI infra mix in 26Q1</h2>
+<div class='range'>2026-03-31 → 2026-06-30</div>
+<div class='psum'>Ingram Micro earned Microsoft’s new Frontier Distributor designation and the AI Apps on Microsoft Azure Specialization, reinforcing its capacity to move partners from experimentation to execution and unlocking Azure Accelerate funding categories for AI apps and agents. Regionally, the company expanded its GenAI catalog by authorizing Anthropic Claude via AWS Bedrock to partners and end customers across EMEA.
+In 26Q1 results, management highlighted strong Xvantage traction and AI‑led sales growth, but also noted AI‑infrastructure mix effects weighing on gross margin. North America net sales reached $5.0B with Cloud up 30% and AI infrastructure leading growth in Advanced Solutions; however, large AI infrastructure engagements were often proofs‑of‑concept or bespoke builds, and AI deals remain lower margin albeit with low cost‑to‑serve. Xvantage/IDA KPIs improved with broader country rollout and rising IDA engagement.</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-20</span>
+<span class="eh">Anthropic Claude offered via AWS Bedrock to partners and customers across EMEA</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Ingram Micro expanded its GenAI portfolio in EMEA by integrating Anthropic Claude on AWS Bedrock and authorizing offers to partners and end customers across the region.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Single media source; region coverage limited to EMEA per article.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">intégrant Anthropic Claude sur AWS Bedrock</span>
+<span class="span">autorisé à proposer Anthropic / Claude sur AWS Bedrock</span>
+<span class="span">dans toute la région EMEA</span>
+<span class="span">canal des partenaires</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">AI Apps on Microsoft Azure Specialization achieved; expanded Azure Accelerate funding access</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Ingram Micro attained the AI Apps on Microsoft Azure Specialization after a third‑party audit, validating capabilities in delivering AI‑powered solutions and unlocking expanded Azure Accelerate funding categories for AI apps, agents, and developer‑focused engagements.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">AI Apps on Microsoft Azure Specialization</span>
+<span class="span">Frontier AI services</span>
+<span class="span">rigorous third‑party audit</span>
+<span class="span">Microsoft Azure Accelerate funding categories</span>
+<span class="span">AI apps, agents, and developer‑focused pre‑sales assessments and deployments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">26Q1: Xvantage traction and AI-led sales; AI infra mix weighs on gross margin</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management cited strong Xvantage traction and AI‑led sales with double‑digit regional net sales growth, while noting a mix shift toward lower‑margin AI‑infrastructure in Advanced Solutions weighed on gross margin.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">strong traction on the Xvantage platform and AI-led sales</span>
+<span class="span">double-digit net sales growth</span>
+<span class="span">mix shift toward lower-margin AI-infrastructure</span>
+<span class="span">weighing on gross margin</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">26Q1: North America net sales $5.0B; Cloud +30%; AI infra led Advanced Solutions growth</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">North America delivered $5.0B in net sales with 12.7% y/y growth; Advanced Solutions growth was led by AI‑infrastructure, and Cloud‑based Solutions grew 30% y/y.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">North America: Net sales $5.0B (+12.7% y/y)</span>
+<span class="span">30% growth in Cloud-based Solutions</span>
+<span class="span">networking/servers incl. low-margin AI-infrastructure</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">26Q1: AI-led sales growth exceeded 60% y/y in largest countries</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO highlighted continued traction of Xvantage alongside AI‑led sales growth of more than 60% year over year in the largest countries.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">continued traction of the Xvantage platform</span>
+<span class="span">AI-led sales growth (&gt;60% y/y in largest countries)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">26Q2 outlook: Cloud double-digits; AI PCs ~25% of PC base</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management guided to Cloud growing double‑digits, Advanced Solutions high single‑digits, and CES lower single‑digits, with AI PCs expected to be roughly a quarter of the PC base.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Cloud to grow double‑digits</span>
+<span class="span">Advanced Solutions high single‑digits</span>
+<span class="span">CES lower single‑digits</span>
+<span class="span">AI PCs roughly a quarter of the PC base</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">26Q1: Large AI infra deals often POCs or bespoke builds</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The company described capabilities across servers, networking, and storage, noting many large AI infrastructure engagements are proofs‑of‑concept or bespoke builds for very large enterprises.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">servers, networking, and storage</span>
+<span class="span">proofs‑of‑concept</span>
+<span class="span">bespoke builds for very large enterprises</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">26Q1: Ingram Micro will not move to ODM-like AI hardware model</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management emphasized a partner‑centric approach and stated moving to an ODM‑like model is not planned.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">moving to an ODM‑like model is “not in our plans today,”</span>
+<span class="span">partner‑centric approach</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">26Q1: AI infra deals are lower margin but low cost-to-serve</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management reiterated that AI infrastructure transactions tend to be lower margin but are also low cost‑to‑serve, implying mix pressure with operational efficiency.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI infra deals tend to be lower margin</span>
+<span class="span">low cost‑to‑serve</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">26Q1: Xvantage/IDA KPIs—21/57 countries live; IDA engagements up ~50% y/y</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Xvantage advanced with 21 of 57 countries live on significant functionality; a majority of revenue in large markets trades through Xvantage. IDA engagements rose ~50% y/y, and mid‑single‑digit revenue in Xvantage countries flows through IDA with a target of double‑digits by year‑end.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">21 of 57 countries are live</span>
+<span class="span">the majority of revenue in the largest markets trades through Xvantage</span>
+<span class="span">engagements rose ~50% y/y</span>
+<span class="span">mid‑single‑digit revenue in Xvantage countries flows through IDA today</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">26Q1: Elevated Xvantage spend expected for another 4–5 quarters</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management guided to another 4–5 quarters of outsized Xvantage investment before reaching a steadier run‑rate.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">another 4–5 quarters of outsized Xvantage spend</span>
+<span class="span">before reaching a steadier run‑rate</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">26Q1: Ongoing AI infrastructure demand affecting mix and margins</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management observed AI‑infrastructure demand within Advanced Solutions continued to affect mix and margins, alongside a 4% FX translation benefit to net sales y/y.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">4% FX translation benefit to net sales y/y</span>
+<span class="span">ongoing AI-infrastructure demand</span>
+<span class="span">affecting mix and margins</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">26Q1 risk: AI-infrastructure mix pressured gross margin; may cap expansion</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Gross margin declined 12 bps y/y with management citing a shift toward lower‑margin, low cost‑to‑serve AI‑infrastructure products, and warning continued AI mix could cap margin expansion even with top‑line growth.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q1 gross margin declined 12 bps y/y</span>
+<span class="span">mix shift toward lower‑margin, lower cost‑to‑serve AI‑infrastructure</span>
+<span class="span">could cap margin expansion</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-31</span>
+<span class="eh">Ingram Micro earns Microsoft Frontier Distributor designation</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Microsoft recognized Ingram Micro as a Frontier Distributor under the Microsoft AI Cloud Partner Program, citing the distributor’s ability to help partners scale AI adoption, including with Copilot.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Microsoft Frontier Distributor designation</span>
+<span class="span">Microsoft AI Cloud Partner Program</span>
+<span class="span">identify world-class, modern distributors</span>
+<span class="span">Copilot</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Agentic AI rollout, Nvidia distribution, and agent framework integration</h2>
+<div class='range'>2025-10-28 → 2025-12-15</div>
+<div class='psum'>Ingram Micro advanced its AI productization by adding Google’s Gemini models to the Xvantage AI Factory and launching its first enterprise‑grade AI agent (Sales Briefing Assistant). The company also secured Nvidia distribution rights in ANZ, expanding access to GPUs, DGX systems, and AI networking solutions for partners addressing AI infrastructure demand.
+To ease partner and developer integration, Ingram Micro introduced the Xvantage MCP, enabling AI assistants and agent frameworks (Claude, ChatGPT, and others) to interact with Xvantage workflows. Internal benchmarking highlighted strong results with Claude Sonnet and GPT‑4‑class models, while Gemini Agent Builder support was noted as inconsistent.</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="anthropic_claude openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-12-15</span>
+<span class="eh">Xvantage MCP enables Claude, ChatGPT, and agent frameworks; Gemini Agent Builder support noted as inconsistent</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Ingram Micro’s MCP allows AI assistants and agent frameworks to operate Xvantage workflows, with documented support for Claude and OpenAI ecosystems and guidance on model performance. The company reported fully supported experiences for Claude Desktop and ChatGPT Custom GPTs, while Gemini Agent Builder support was described as inconsistent.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[8], web_search_findings[9]</div>
+<span class="span">MCP is a simple way to let your AI assistant talk to Xvantage.</span>
+<span class="span">Claude Agents SDK, OpenAI Assistants, LangChain, and LlamaIndex.</span>
+<span class="span">Claude Desktop — Fully supported</span>
+<span class="span">ChatGPT Custom GPTs — Fully supported</span>
+<span class="span">Google Gemini Agent Builder — Inconsistent</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-30</span>
+<span class="eh">Nvidia distribution added in ANZ: GPUs, DGX systems, and AI networking</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Ingram Micro began offering Nvidia’s portfolio across the ANZ market, including GPUs, DGX systems, advanced networking solutions, and software platforms, to meet accelerating AI infrastructure demand.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">distribution_channel_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">offering Nvidia’s portfolio of solutions across the ANZ market</span>
+<span class="span">Nvidia GPUs</span>
+<span class="span">Nvidia DGX systems</span>
+<span class="span">advance networking solutions</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-10-28</span>
+<span class="eh">Gemini models integrated into Xvantage AI Factory; first enterprise-grade AI agent launched</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Ingram Micro added Google’s Gemini models to the Xvantage AI Factory and released its first enterprise‑grade AI Agent, the Sales Briefing Assistant, marking a production deployment of Gemini‑based capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Adds Google’s Gemini Models to Xvantage™ AI Factory</span>
+<span class="span">first enterprise-grade AI Agent</span>
+<span class="span">Sales Briefing Assistant</span>
+<span class="span">using Google’s Gemini large language models</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Platform alignment and channel enablement</h2>
+<div class='range'>2024-10-15 → 2025-06-17</div>
+<div class='psum'>Ingram Micro formalized its AI platform approach around Google Cloud and embedded Google’s AI tooling within Xvantage. The S‑1/A disclosed that Xvantage is hosted on Google Cloud Platform and that Gemini, Vertex AI, AlloyDB, and BigQuery are leveraged to enhance user experience. The relationship is governed under a Google Cloud Master Agreement, highlighting structured provider engagement.
+The company also expanded hyperscaler channel motion by signing a multi‑year Strategic Collaboration Agreement with AWS and integrating AWS Marketplace into Xvantage, with enablement around Bedrock, SageMaker, Redshift, and Glue for generative AI services. To accelerate partner adoption, Ingram Micro launched Xvantage Enable | AI as a step‑by‑step program to help customers and vendors align, adopt, and scale AI‑powered solutions.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-17</span>
+<span class="eh">Launch of Xvantage Enable | AI program to scale partner AI adoption</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Ingram Micro announced mainstream availability of Xvantage Enable | AI, a business‑building program that provides a step‑by‑step guide to help customers and vendors align and scale AI‑powered services and solutions within the channel.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Xvantage™ Enable | AI</span>
+<span class="span">mainstream availability</span>
+<span class="span">step-by-step guide for AI success</span>
+<span class="span">AI-powered services and solutions</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-04</span>
+<span class="eh">Multi‑year AWS SCA; AWS Marketplace integrated into Xvantage; Bedrock and SageMaker for GenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Ingram Micro signed a multi‑year Strategic Collaboration Agreement with AWS to drive more business through the channel via Xvantage, including direct access to AWS Marketplace. The collaboration enables services using Amazon Bedrock, SageMaker, Redshift, and Glue to support generative AI and analytics use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">multi-year Strategic Collaboration Agreement (SCA) with Amazon Web Services (AWS)</span>
+<span class="span">AWS Marketplace through Ingram Micro Xvantage</span>
+<span class="span">generative artificial intelligence (AI), analytics, engineering, and architecture</span>
+<span class="span">Amazon Bedrock, Amazon SageMaker, Amazon Redshift, and AWS Glue</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-10-15</span>
+<span class="eh">S-1/A: Xvantage hosted on GCP; Gemini and Vertex AI used under Google Cloud Master Agreement</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Ingram Micro disclosed that Xvantage runs on Google Cloud Platform and leverages Google’s Gemini models and data services (Vertex AI, AlloyDB, BigQuery) to enhance user experience. The relationship is structured under a Google Cloud Master Agreement.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Google Cloud Platform, which hosts Xvantage</span>
+<span class="span">Gemini, Vertex AI, AlloyDB and BigQuery</span>
+<span class="span">Google Cloud Master Agreement</span>
+<span class="span">proprietary data mesh</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the financial magnitude and specific KPIs attached to the multi-year AWS Strategic Collaboration Agreement (e.g., partner revenue targets, funded headcount, marketing development funds)?</li>
+<li>What adoption and business impact metrics are tied to the Sales Briefing Assistant (e.g., usage, win-rate uplift, sales cycle time reduction)?</li>
+<li>Will Anthropic Claude via AWS Bedrock be offered beyond EMEA, and on what timeline?</li>
+<li>How quickly will Xvantage expand from 21 of 57 countries live to full coverage, and what revenue share will flow through IDA by year-end?</li>
+<li>How durable is the AI-infrastructure mix pressure on gross margin, and what margin guardrails are assumed in FY26 guidance?</li>
+<li>Will Nvidia distribution expand beyond ANZ, and what revenue contribution and inventory commitments are targeted by region?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>The Channel News report on Anthropic Claude availability is a single secondary source and region-specific (EMEA).</li>
+<li>Developer documentation (MCP and compatibility) reflects product claims and internal testing; results may vary by customer environment.</li>
+<li>S-1/A language indicates Google tools enhance user experience but are not critical to transaction processing; dependency scope is limited accordingly.</li>
+<li>Earnings highlights are extracted summaries; detailed segment disclosures may provide additional context not captured here.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

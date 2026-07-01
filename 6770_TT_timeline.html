@@ -1,0 +1,516 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>6770 TT — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Powerchip Semiconductor Manufacturing Corp <span class='sub'>(6770 TT)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.381</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>20 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 15</span>
+<span class='chip'>single source: 11</span>
+<span class='chip'>web-only (unverified): 5</span>
+<span class='chip'>web-only (verified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Micron transaction and AI‑centric foundry pivot</h2>
+<div class='range'>2026-03-16 → 2026-04-21</div>
+<div class='psum'>PSMC completed a $1.8 billion transaction with Micron for the Tongluo P5 plant while commencing collaboration at PSMC’s Hsinchu site to provide HBM/PWF foundry services and advance memory process technologies—supporting its 3D AI Foundry ambitions. Shortly after, PSMC’s Q1’26 disclosure formalized a strategic pivot to an AI‑centric foundry model built on three pillars: Memory, Logic, and 3D AI Foundry (interposer/WoW).
+Management outlined execution milestones: a 12‑inch IPD ramp beginning Q2’26; HBM‑related PWF tool‑in by Q3’26, pilot in Q4’26, mass production around Q4’27 with ~20k wpm at full ramp; and a Micron 1P DRAM node co‑development timeline with equipment move‑in Q1’27, trials in H1’28, and mass production in H2’28. 2026 capex was set at ~$512m. Risks cited included execution on the 3D AI Foundry ramp, capex‑driven FCF pressure, and pricing/cycle sensitivity, while demand tailwinds included multi‑year AI customer DRAM agreements and pricing benefits beginning from June.</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">PSMC pivots to AI‑centric foundry with three pillars</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">In Q1’26 disclosures, management emphasized a strategic pivot to an AI‑centric foundry model structured around Memory, Logic, and 3D AI Foundry (interposer/WoW).</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">strategic pivot toward AI-centric foundry</span>
+<span class="span">three pillars: Memory foundry, Logic foundry, and 3D AI Foundry (interposer/WoW).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">12-inch IPD ramp to begin Q2 2026</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PSMC guided that 12-inch IPD within its 3D AI Foundry would ramp starting Q2’26, expected to improve mix as volumes scale.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">12-inch IPD within 3D AI Foundry</span>
+<span class="span">ramp from Q2 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">HBM-related PWF timeline: tool-in Q3’26, pilot Q4’26, mass prod around Q4’27; ~20k wpm at full ramp</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PSMC detailed the HBM-related PWF plan: Hsinchu cleanroom expansion underway; tool‑in Q3’26; pilot Q4’26; mass production around Q4’27; and ~20k wpm at full-ramp capacity.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">PWF (HBM-related post-wafer fabrication) timeline</span>
+<span class="span">tool-in Q3 2026</span>
+<span class="span">mass production targeted around Q4 2027</span>
+<span class="span">full-ramp capacity goal ~20k wpm</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Micron 1P DRAM node co-development: move-in Q1’27; trials H1’28; MP H2’28</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management disclosed that with Micron, the 1P DRAM node had entered development with equipment move‑in planned Q1’27, trial runs in H1’28, and mass production in H2’28.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">With Micron, the 1P DRAM node has entered development</span>
+<span class="span">equipment move-in planned for Q1 2027</span>
+<span class="span">mass production in H2 2028</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">2026 capex plan set at approximately USD 512m</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$512M · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">PSMC guided to 2026 capital expenditures of about USD 512 million as it scales its AI‑centric foundry investments.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">2026 capex plan: approximately USD 512m.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Pricing benefits expected from June; double‑digit P&amp;L contribution</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management indicated pricing benefits should begin appearing from June, supporting double‑digit revenue contribution as they roll through the P&amp;L.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">pricing benefits should begin to appear from June</span>
+<span class="span">double‑digit revenue contribution</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Multi‑year AI customer DRAM agreements; tightness into 2H26</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PSMC cited multi‑year agreements signed by leading AI customers with DRAM majors and reiterated expectations that DRAM supply could remain tight into the second half of 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">multi‑year agreements signed by leading AI customers with DRAM majors</span>
+<span class="span">supply gap in DRAM could persist into the second half of 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">AI-driven token consumption positioned as structural demand driver</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management framed AI‑driven token consumption as a structural driver of demand for memory‑centric and 3D packaging services.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑driven token consumption</span>
+<span class="span">structural demand driver</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Risk: Execution on 3D AI Foundry and IPD ramp</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management highlighted execution risks around scaling the 3D AI Foundry and Q2’26 IPD ramp, including yield and customer adoption that could impact utilization and margins if timelines slip.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">pivoting to 3D AI Foundry with a Q2 2026 IPD ramp</span>
+<span class="span">Scale-up, yield, and customer adoption risks</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Risk: 2026 capex intensity may pressure free cash flow</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$512M · capex</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">PSMC cautioned that its 2026 capex plan could pressure free cash flow during the transition if operating cash generation normalizes post asset‑sale gains.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">capex plan (~USD 512m) during a transition period may pressure free cash flow</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Risk: Pricing/cycle sensitivity could impact utilization and margins</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management warned that if end‑demand or inventories soften, pricing and utilization may undershoot expectations given recent price hikes across memory and logic.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">price hikes across memory and logic</span>
+<span class="span">soften, realized pricing and utilization may undershoot expectations</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">PSMC closes $1.8B Micron P5 transaction; to provide HBM/PWF services at Hsinchu</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.8B · other</span> <span class="badge">mixed</span></div>
+<p class="narr">PSMC announced completion of a $1.8 billion transaction with Micron for the Tongluo plant and a collaboration at PSMC’s Hsinchu site to offer HBM/PWF foundry services and advance memory processes, aligning with its 3D AI Foundry strategy.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">completion of a $1.8 billion transaction with Micron</span>
+<span class="span">Tongluo plant</span>
+<span class="span">Hsinchu plant site</span>
+<span class="span">HBM/PWF foundry services</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>3D AI Foundry build-out and ecosystem collaborations</h2>
+<div class='range'>2024-09-05 → 2025-10-17</div>
+<div class='psum'>PSMC accelerated its 3D AI Foundry positioning through technology announcements and partnerships. In September–October 2024 it unveiled Logic‑DRAM multi-layer wafer stacking and certified 2.5D interposers, and disclosed investment plans at its Tongluo plant to launch 3D AI foundry services, with ramp targeted for 2H25 and collaborations including AP Memory and mentions of AMD.
+In May–June 2025, PSMC showcased a broader AI ecosystem at Computex with partners across IP, design services, memory architectures, and 3D packaging, and announced a collaboration with Soitec to supply TLT‑ready 300mm substrates to demonstrate advanced wafer‑level 3D stacking. In October 2025, PSMC’s chairman participated in a Paris AI and Quantum roundtable, underscoring international engagement, though without immediate commercial disclosures.</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-17</span>
+<span class="eh">PSMC chairman joins Paris AI &amp; Quantum roundtable hosted by President Macron</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">PSMC noted Chairman Frank Huang joined a Paris roundtable on AI and Quantum, alongside global tech firms. He highlighted Taiwan’s role in the tech supply chain and engagement with leading AI stakeholders.</p>
+<p class="cav">⚠ Corporate press; no commercial metrics disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">France&#x27;s leadership in AI and Quantum</span>
+<span class="span">MISTRAL AI</span>
+<span class="span">IBM, Microsoft, Google, Apple, Intel, AMD, and NVIDIA</span>
+<span class="span">visited Taiwan many times</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-03</span>
+<span class="eh">Soitec to supply TLT‑ready 300mm substrates to PSMC for wafer‑level 3D stacking demo</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Soitec announced a strategic collaboration to provide PSMC with 300mm substrates incorporating a release layer, TLT‑ready, enabling a new demonstration of advanced wafer‑level 3D stacking—its first public announcement of TLT technology.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Transistor Layer Transfer (TLT) ready</span>
+<span class="span">300mm substrates incorporating a release layer</span>
+<span class="span">first public announcement of Soitec’s TLT technology</span>
+<span class="span">advanced 3D chip stacking at the wafer level</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-05-12</span>
+<span class="eh">PSMC showcases 3D AI semiconductor solutions at Computex with partners</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CNA reported PSMC’s pre‑Computex event with partners spanning IP, design services, memory/interposer/3D packaging for AI inference and vision. Chairman Frank Huang noted WoW validation with leading logic foundries and strong interposer demand.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Chinese-language source; demand/integration claims are qualitative.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>台北國際電腦展Computex</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>語言模型推論</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>晶圓堆疊（Wafer-on-Wafer）</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>Interposer更是供不應求</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>將與愛普、晶豪科、工研院、智成、Skymizer、滿拓、Zentel、力晶微元</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2024-10-23</span>
+<span class="eh">PSMC invests NT$2b at Tongluo to launch 3D AI foundry; ramp 2H25</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$62M · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Taiwan News reported PSMC invested NT$2 billion (US$62.3m) at Tongluo to launch 3D AI foundry services, planning NT$10b capex based on demand, and collaborating with AP Memory and AMD, with ramp in 2H25.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">invested NT$2 billion (US$62.3 million) in its Tongluo plant</span>
+<span class="span">launch 3D AI foundry services</span>
+<span class="span">planned capital expenditure of NT$10 billion</span>
+<span class="span">ramp up in the second half of 2025</span>
+<span class="span">collaborate with AP Memory</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2024-09-05</span>
+<span class="eh">PSMC unveils Logic‑DRAM stacking and 2.5D interposers for AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">DIGITIMES reported PSMC’s Logic‑DRAM multi-layer wafer stacking technology and 2.5D interposers to meet rising AI demand, citing involvement of major companies including AMD and setup of production lines at Tongluo.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<p class="cav">⚠ Trade press; mentions of specific customers may be forward-looking.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Logic-DRAM multi-layer wafer stacking technology</span>
+<span class="span">2.5D interposers</span>
+<span class="span">including AMD</span>
+<span class="span">100 times the transmission bandwidth per unit area</span>
+<span class="span">Tongluo facility</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Japan JV exploration and withdrawal</h2>
+<div class='range'>2023-07-05 → 2024-09-27</div>
+<div class='psum'>PSMC and SBI Holdings announced a basic agreement in July 2023 to form a preparatory company aimed at establishing a semiconductor factory in Japan, and by October 2023 selected the Second Northern Sendai Central Industrial Park in Miyagi as the planned fab site, signing a memorandum of understanding with local stakeholders. The plan was premised on receiving a government subsidy.
+By late September 2024, SBI disclosed that, at PSMC’s request, the joint business in Japan would be dissolved, signaling execution or strategic challenges to continuing the Japan fab initiative. This rollback removed a potential geographic expansion lever but did not directly affect PSMC’s AI-foundry pivot elsewhere.</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-09-27</span>
+<span class="eh">Japan JV dissolved at PSMC’s request</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">SBI announced that, based on a request from PSMC, the parties agreed to dissolve the joint business for establishing a semiconductor manufacturing operation in Japan, effectively halting the initiative.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Japanese-language disclosure; no financial terms provided.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>PSMC からの要請に基づき</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>共同事業を解消することになりました</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>見送りたいという通知を受領しました</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2023-10-31</span>
+<span class="eh">Site selected in Miyagi; parties sign MoU premised on subsidy</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">SBI and PSMC named the Second Northern Sendai Central Industrial Park in Ohira Village, Miyagi Prefecture, as the planned fab site and signed a Memorandum of Understanding with local partners, conditioned on a certain level of government subsidy.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Second Northern Sendai Central Industrial Park</span>
+<span class="span">Ohira Village, Kurokawa District, Miyagi Prefecture</span>
+<span class="span">Memorandum of Understanding</span>
+<span class="span">subsidy from the government</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2023-07-05</span>
+<span class="eh">PSMC and SBI sign basic agreement to form preparatory company for Japan fab</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">SBI Holdings announced a basic agreement with PSMC to establish a preparatory company for a semiconductor factory in Japan. The move set the groundwork for a potential Japan-based fab and collaboration structure.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">basic agreement with Powerchip Semiconductor Manufacturing Corporation</span>
+<span class="span">establish a preparatory company</span>
+<span class="span">semiconductor factory in Japan</span>
+<span class="span">third-largest semiconductor foundry in Taiwan</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which anchor customers (by category or region) are committed to PSMC’s 12-inch IPD and interposer capacity from the Q2’26 ramp onward, and what is the contracted volume profile through 2027?</li>
+<li>What is the expected revenue contribution and utilization trajectory for the HBM-related PWF line as it moves from pilot (Q4’26) to mass production (around Q4’27) and toward ~20k wpm full ramp?</li>
+<li>Has the Soitec TLT collaboration progressed beyond demonstration toward qualification or production, and if so, with which customer programs and timelines?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several sources are company or partner press releases (PSMC, Soitec, SBI) and may contain forward-looking statements without independent financial verification.</li>
+<li>Some items are reported by trade press (DIGITIMES) and may reference prospective customer interest (e.g., AMD) rather than firm purchase commitments.</li>
+<li>Non-English sources (Japanese and Chinese) required; translations are not provided here and verbatim spans are taken from the original language excerpts.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

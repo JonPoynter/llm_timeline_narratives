@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Super Micro Computer Inc <span class='sub'>(SMCI US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.454</div>
@@ -72,251 +82,34 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (unverified): 9</span>
 <span class='chip'>web-only (verified): 3</span>
 </div>
-<div class='phase'>
-<h2>xAI build-out and ecosystem positioning</h2>
-<div class='range'>2024-06-20 → 2025-09-25</div>
-<div class='psum'>Supermicro emerged as a key OEM supplier in the build-out of xAI’s Colossus supercomputer and signaled deep participation across the AI infrastructure stack. Public posts and trade coverage in mid‑2024 confirmed that both Dell and Supermicro were providing servers for xAI. By late 2024, Supermicro published a case study detailing the 100,000‑GPU Colossus cluster and its rapid 122‑day deployment, with follow‑on local Memphis announcements indicating expansion and the arrival of Nvidia, Dell, and Supermicro operations in the region.
-In early 2025, third‑party reporting and Supermicro’s own materials reiterated the Colossus scale and timeline. Separately, CoreWeave’s SEC filings explicitly cited Super Micro as an OEM partner enabling rapid deployment of the newest NVIDIA platforms, while Reuters reported successive multi‑billion‑dollar OpenAI–CoreWeave capacity agreements—indirect but material demand drivers for Supermicro’s AI racks and servers. Supermicro also broadened product coverage with Intel Gaudi 3 platforms and AI inference benchmarking on Llama models, expanding model and accelerator optionality for customers.
-By mid‑2025, xAI’s Memphis site reached a 150MW power milestone, underlining the power‑dense nature of deployments Supermicro participates in. The period closed with additional OpenAI–CoreWeave capacity expansion, reinforcing upstream compute demand that can flow through OEMs including Supermicro.</div>
-<div class="event t-web_only_unverified" id="E0001">
-<div class="ev-top">
-<span class="date">2024-06-20</span>
-<span class="eh">Dell and Supermicro confirmed to provide servers for xAI supercomputer</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
-<p class="narr">DataCenterDynamics reported that Dell and Supermicro would provide servers for xAI’s supercomputer. Public posts by Michael Dell and Elon Musk corroborated the role, indicating Supermicro’s direct participation in the Grok infrastructure build.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">Dell and Supermicro to provide servers</span>
-<span class="span">xAI supercomputer</span>
-<span class="span">We’re building a Dell AI factory</span>
-<span class="span">SMC</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0002">
-<div class="ev-top">
-<span class="date">2024-12-01</span>
-<span class="eh">Supermicro case study details xAI Colossus: 100K H100 GPUs built in 122 days</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
-<p class="narr">Supermicro published a case study on the xAI Colossus supercomputer, noting deployment of 100,000 NVIDIA H100 GPUs using Supermicro liquid‑cooled racks and a 122‑day build timeline.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">100,000 NVIDIA H100 GPUs</span>
-<span class="span">in only 122 days</span>
-<span class="span">Supermicro liquid‑cooled rack</span>
-<span class="span">Supermicro 4U Universal GPU</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2024-12-04</span>
-<span class="eh">xAI Memphis expansion; Supermicro to establish operations in region</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
-<p class="narr">The Greater Memphis Chamber announced plans to expand the Colossus supercomputer and stated that Nvidia, Dell, and Supermicro Computer (SMC) would establish operations in Memphis, highlighting regional build‑out around xAI.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">xAI revealed plans for an expansion</span>
-<span class="span">Supermicro Computer (SMC) will be establishing operations</span>
-<span class="span">Digital Delta</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0004">
-<div class="ev-top">
-<span class="date">2025-03-14</span>
-<span class="eh">CEO reiterates 100k H100 Colossus and 122‑day build timeline</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
-<p class="narr">Fortune reported Super Micro CEO Charles Liang’s remarks on assembling racks in San Jose and the 750,000‑sq‑ft xAI Colossus data center, reiterating 100,000 Nvidia H100 GPUs and a 122‑day build timeline.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">100,000 Nvidia H100 GPUs</span>
-<span class="span">It took Elon and Super Micro only 122 days</span>
-<span class="span">Memphis data center</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0005">
-<div class="ev-top">
-<span class="date">2025-03-27</span>
-<span class="eh">CoreWeave SEC filing cites OEM partners including Super Micro for rapid AI chip deployment</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">CoreWeave’s IPO prospectus described rapid deployment of the newest NVIDIA platforms and explicitly cited OEM partners such as Dell and Super Micro. This underscores Supermicro’s role in the AI cloud supply chain.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[8]</div>
-<span class="span">OEM partners such as Dell and Super Micro</span>
-<span class="span">GB200 NVL72‑based instances generally available</span>
-<span class="span">as little as two weeks</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0006">
-<div class="ev-top">
-<span class="date">2025-05-01</span>
-<span class="eh">xAI Memphis Phase I reaches 150MW grid power</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
-<p class="narr">The Greater Memphis Chamber noted that xAI reached full operational capability for Phase I with a new substation providing 150MW of grid power, enabling Colossus to operate at intended scale.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">150MW of power</span>
-<span class="span">full operational capability for Phase I</span>
-<span class="span">xAI reached full operational capability</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0007">
-<div class="ev-top">
-<span class="date">2025-05-01</span>
-<span class="eh">Supermicro debuts Intel Gaudi 3 servers optimized for Llama 2/3 inference</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">A Supermicro product brief detailed Intel Gaudi 3‑based servers optimized for real‑world AI inference, including benchmarking with Llama 2 and Llama 3 and high tokens‑per‑second throughput.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[9]</div>
-<span class="span">Intel Gaudi 3</span>
-<span class="span">Llama 2 and Llama 3</span>
-<span class="span">nearly 15,000 tokens/sec</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0008">
-<div class="ev-top">
-<span class="date">2025-07-11</span>
-<span class="eh">OpenAI signs additional $4B CoreWeave deal; OEMs include Super Micro</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$4.0B · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Reuters reported OpenAI’s additional agreement to pay CoreWeave up to $4B through April 2029. CoreWeave’s SEC prospectus identifies OEM partners such as Super Micro, indicating potential pass‑through demand for SMCI’s AI infrastructure.</p>
-<details>
-<summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[6], web_search_findings[8]</div>
-<span class="span">$4 billion</span>
-<span class="span">OpenAI</span>
-<span class="span">CoreWeave</span>
-<span class="span">OEM partners such as Dell and Super Micro</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0009">
-<div class="ev-top">
-<span class="date">2025-09-25</span>
-<span class="eh">CoreWeave expands OpenAI pact with new $6.5B contract; total to $22.4B</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$6.5B · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Reuters reported a new $6.5B OpenAI–CoreWeave contract, taking total agreements to $22.4B. Given CoreWeave’s cited OEM partners such as Super Micro, this expansion suggests ongoing demand tailwinds for SMCI’s AI servers.</p>
-<details>
-<summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[7], web_search_findings[8]</div>
-<span class="span">$6.5 billion</span>
-<span class="span">to $22.4 billion</span>
-<span class="span">OpenAI</span>
-<span class="span">CoreWeave</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Record guide, xAI showcase, and regulatory shock</h2>
-<div class='range'>2026-02-04 → 2026-03-31</div>
-<div class='psum'>Supermicro reported a record quarter and a stronger FY26 guide amid AI server demand, with market coverage highlighting the revenue beat and elevated full‑year outlook. The company concurrently amplified reference architectures, including a public technical page detailing xAI’s Colossus cluster interconnected with NVIDIA Spectrum‑X Ethernet on 100,000 Hopper‑generation GPUs.
-However, in March 2026, AP reported U.S. charges tied to alleged China AI shipments involving SMCI employees, triggering a sharp share price decline and heightening regulatory scrutiny. In parallel, Supermicro’s materials highlighted integrations with Google Distributed Cloud Virtual (Anthos/GKE) on SuperBlade for hybrid and multi‑cloud, aligning the firm with broader AI/ML services ecosystems.</div>
-<div class="event t-single_source" id="E0010">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">Record quarter; FY26 guide raised to ~$40B</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$40.0B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">MarketWatch reported SMCI’s surge on a record quarter with FY26 guidance to $40B and a revenue beat versus expectations, citing strong AI infrastructure demand despite margin pressure.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[3]</div>
-<span class="span">guide to 40 billion</span>
-<span class="span">revenue 12.7 vs 10.42 exp USD bn</span>
-<span class="span">AI infrastructure demand</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0040">
-<div class="ev-top">
-<span class="date">2026-03-01</span>
-<span class="eh">Supermicro solutions for Google Distributed Cloud Virtual (Anthos/GKE) on SuperBlade</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Supermicro described solutions for Google Distributed Cloud Virtual on bare‑metal SuperBlade, enabled by Anthos and extending Google Kubernetes Engine to on‑prem environments adjacent to AI/ML services.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[11]</div>
-<span class="span">Google Distributed Cloud</span>
-<span class="span">GDC Virtual está habilitado por Anthos</span>
-<span class="span">Google Kubernetes Engine</span>
-<span class="span">aprendizaje automático e inteligencia artificial</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0011">
-<div class="ev-top">
-<span class="date">2026-03-01</span>
-<span class="eh">Supermicro xAI Colossus page: 100,000 Hopper GPUs over Spectrum‑X Ethernet</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
-<p class="narr">Supermicro’s xAI Colossus page outlined a 100,000‑GPU Hopper cluster connected via NVIDIA Spectrum‑X Ethernet and emphasized direct‑to‑chip liquid‑cooled AI systems underpinning large‑scale deployments.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">100,000 NVIDIA Hopper Tensor Core GPUs</span>
-<span class="span">NVIDIA Spectrum‑X Ethernet</span>
-<span class="span">liquid‑cooled AI systems</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0012">
-<div class="ev-top">
-<span class="date">2026-03-20</span>
-<span class="eh">Stock plunges after U.S. charges tied to China AI shipments</span>
-<span class="badge">regulatory</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">AP reported an indictment alleging smuggling of Nvidia‑based servers with two employees placed on leave; shares fell sharply intraday, highlighting regulatory and reputational risk around export‑control enforcement.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[2]</div>
-<span class="span">plunges after US charges tied to China AI shipments</span>
-<span class="span">smuggling of Nvidia-based servers</span>
-<span class="span">-33.3% intraday</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>Guidance reiterated, liquidity actions, and broadened AI integrations</h2>
 <div class='range'>2026-05-01 → 2026-06-27</div>
 <div class='psum'>In May 2026, Supermicro reiterated strong AI demand and signaled continued ramp of next‑gen AI platforms and DCBBs, but also disclosed significant working‑capital usage, elevated debt, and an ongoing board‑led export‑control review. Management guided Q4 revenue of $11.0–$12.5B and FY26 net sales of $38.9–$40.4B, while noting timing dependencies such as site readiness and deferred activity expected to convert into shipments.
 To fund component purchases for a surge in AI orders, Supermicro priced concurrent equity and equity‑linked offerings and outlined an additional ATM program, citing roughly $39B of recent AI server orders from more than 20 customers. On the product front, Supermicro published benchmarking and reference‑architecture materials spanning Intel AMX CPU‑GPU co‑serving with Llama‑3.1 and Gaudi 3 systems optimized for Llama 2/3, reinforcing multi‑model support and accelerator optionality.</div>
-<div class="event t-web_only_unverified" id="E0013">
+<div class="event t-single_source" id="E0038" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-11</span>
+<span class="eh">Supermicro prices $7B equity and equity‑linked offerings; cites ~$39B recent AI orders</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$7.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Supermicro priced concurrent common and mandatory convertible preferred offerings and outlined a future ATM, stating proceeds would fund component purchases to fulfill a surge of AI server orders of roughly $39B from more than 20 customers.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 6 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">$7.0B financing plan</span>
+<span class="span">roughly $1.25B of common stock</span>
+<span class="span">$3.75B of depositary shares</span>
+<span class="span">7.0% mandatory convertible preferred</span>
+<span class="span">up‑to‑$2.0B at‑the‑market</span>
+<span class="span">roughly $39B from more than 20 customers</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0013" data-providers="meta_llama">
 <div class="ev-top">
 <span class="date">2026-06-01</span>
 <span class="eh">Intel AMX CPU‑GPU co‑serving boosts Llama‑3.1 concurrency on Supermicro systems</span>
@@ -325,6 +118,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
 <p class="narr">A Supermicro white paper showed a heterogeneous vLLM setup with a CPU path for Llama‑3.1‑8B and a GPU path for Llama‑3.1‑405B‑Instruct, reporting up to 1.44X higher supported user concurrency versus a GPU‑only baseline.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · LLA <b>2</b></span> <span class="chchip">product_integration_exposure · LLA <b>3</b></span> <span class="chchip">customer_experience_enhancement · LLA <b>2</b></span> <span class="chchip">provider_specificity · LLA <b>2</b></span> <span class="chchip">multi_model_hedge · LLA <b>4</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">web_search_findings[10]</div>
@@ -333,7 +127,25 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">1.44X the supported user concurrency</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0014">
+<div class="event t-single_source" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Shares jump on stronger outlook as AI server demand soars</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters/CNBC coverage noted SMCI’s post‑print surge driven by stronger Q4 outlook and AI server demand momentum.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">Super Micro jumps after guidance beat</span>
+<span class="span">AI server demand soars</span>
+<span class="span">SMCI +18% after hours</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Shift toward total data center infrastructure provider accelerating</span>
@@ -342,6 +154,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management emphasized an accelerating transformation into a full data center infrastructure provider, with margin recovery and rapid DCBBS growth underpinning the shift.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -349,7 +162,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">rapid growth in the DCBBS business</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0015">
+<div class="event t-single_source" id="E0015" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">New Silicon Valley manufacturing facilities positioned for AI and enterprise demand</span>
@@ -358,6 +171,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Supermicro highlighted new U.S. manufacturing facilities in Silicon Valley to support AI and enterprise demand as platform ramps continue.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -365,7 +179,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">positioning the company to meet AI and enterprise demand</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0016">
+<div class="event t-single_source" id="E0016" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">DCBBS growth highlighted; KPIs not disclosed</span>
@@ -374,6 +188,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
 <p class="narr">Management called out growth in Data Center Building Block Solutions but did not provide unit, backlog, or RPO KPIs for the quarter.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">switching_flexibility</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -381,7 +196,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">did not disclose quantitative KPIs</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0017">
+<div class="event t-single_source" id="E0017" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Q4 FY26 revenue guidance $11.0B–$12.5B with EPS ranges</span>
@@ -398,7 +213,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">non-GAAP EPS $0.65–$0.79</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0018">
+<div class="event t-single_source" id="E0018" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">FY2026 net sales outlook $38.9B–$40.4B</span>
@@ -413,7 +228,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">For FY2026: net sales $38.9B–$40.4B</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0019">
+<div class="event t-single_source" id="E0019" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Q3 operating cash outflow ~$6.6B; capex/investments ~$97M</span>
@@ -429,7 +244,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">capex and investments ~$97M</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0020">
+<div class="event t-single_source" id="E0020" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Balance sheet at 3/31/26: cash ~$1.3B; debt ~$8.8B</span>
@@ -445,7 +260,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">total bank debt and convertible notes ~$8.8B</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0021">
+<div class="event t-single_source" id="E0021" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Board export‑control review ongoing; outcome could affect forecasts and prior periods</span>
@@ -454,6 +269,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
 <p class="narr">Management disclosed an independent board review related to export‑control issues and noted potential impacts to forecasts, preliminary results, and possibly prior periods.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -461,7 +277,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">could affect forecasts, preliminary results, and potentially prior periods</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0022">
+<div class="event t-single_source" id="E0022" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Working‑capital strain flagged amid ~$6.6B operating cash outflow</span>
@@ -477,7 +293,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">execution requires tight working capital control</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0023">
+<div class="event t-single_source" id="E0023" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Margins remain single‑digit; sensitive to mix and rack deployments</span>
@@ -493,7 +309,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">sensitive to product/customer mix and large-scale rack deployments</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0024">
+<div class="event t-single_source" id="E0024" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Q3 figures preliminary and unaudited; final results may differ</span>
@@ -502,6 +318,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
 <p class="narr">Management cautioned that Q3 figures are preliminary and unaudited and that final results may differ after closing procedures and auditor review.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -509,7 +326,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">final results may differ</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0025">
+<div class="event t-single_source" id="E0025" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Deferred revenue up ~$1.40B over nine months; no bookings disclosed</span>
@@ -525,7 +342,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">quarterly backlog/booking figures were not provided</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0026">
+<div class="event t-single_source" id="E0026" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">No RPO/backlog reporting provided</span>
@@ -540,7 +357,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">The company does not report RPO or backlog metrics</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0027">
+<div class="event t-single_source" id="E0027" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Not a target/defendant; no restatements expected</span>
@@ -556,7 +373,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">no expectation for restatements</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0028">
+<div class="event t-single_source" id="E0028" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Robust demand for next‑gen AI platforms; supply improving</span>
@@ -565,6 +382,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Supermicro described robust demand for next‑gen AI platforms and improving supply as new systems ramp through Q4 and beyond.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -572,7 +390,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">supply improves</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0029">
+<div class="event t-single_source" id="E0029" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Revenue timing tied to customer site readiness; outlook reiterated</span>
@@ -588,7 +406,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">reiterated Q4 sales outlook range</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0030">
+<div class="event t-single_source" id="E0030" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Enterprise/DCBBS mix and solutions attach support margins</span>
@@ -604,7 +422,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">mix and solutions attach should continue to support margins</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0031">
+<div class="event t-single_source" id="E0031" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Cash usage tied to scaling; liquidity and collections expected to normalize</span>
@@ -620,7 +438,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">near‑term collections as drivers of normalization</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0032">
+<div class="event t-single_source" id="E0032" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Demand broadening across enterprise and cloud; deferred activity to convert</span>
@@ -629,6 +447,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Supermicro characterized demand as broadening across enterprise and cloud and expects deferred activity to convert.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -636,7 +455,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">expects deferred activity to convert</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0033">
+<div class="event t-single_source" id="E0033" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Deferred Q3 activity expected to convert, supporting Q4 and FY26 targets</span>
@@ -652,7 +471,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">supporting Q4 within guided range and FY26 target band</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0034">
+<div class="event t-single_source" id="E0034" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Next‑gen AI platforms and DCBBs continue to ramp</span>
@@ -661,6 +480,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Supermicro emphasized the continued ramp of next‑gen AI platforms and DCBBs, with potential mix tailwinds for gross margin and software/solutions attach.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">switching_flexibility</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -668,7 +488,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">mix tailwinds for gross margin</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0035">
+<div class="event t-single_source" id="E0035" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Working capital usage expected to normalize; liquidity viewed as adequate</span>
@@ -684,7 +504,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">near‑term liquidity viewed as adequate</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0036">
+<div class="event t-single_source" id="E0036" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Legal review ongoing; no new timeline details disclosed</span>
@@ -693,6 +513,7 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
 <p class="narr">Supermicro stated that its board‑led legal review is ongoing with cooperation with authorities and provided no new timelines or milestones.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -700,68 +521,299 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <span class="span">cooperation with authorities</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0037">
+</div>
+<div class='phase'>
+<h2>Record guide, xAI showcase, and regulatory shock</h2>
+<div class='range'>2026-02-04 → 2026-03-31</div>
+<div class='psum'>Supermicro reported a record quarter and a stronger FY26 guide amid AI server demand, with market coverage highlighting the revenue beat and elevated full‑year outlook. The company concurrently amplified reference architectures, including a public technical page detailing xAI’s Colossus cluster interconnected with NVIDIA Spectrum‑X Ethernet on 100,000 Hopper‑generation GPUs.
+However, in March 2026, AP reported U.S. charges tied to alleged China AI shipments involving SMCI employees, triggering a sharp share price decline and heightening regulatory scrutiny. In parallel, Supermicro’s materials highlighted integrations with Google Distributed Cloud Virtual (Anthos/GKE) on SuperBlade for hybrid and multi‑cloud, aligning the firm with broader AI/ML services ecosystems.</div>
+<div class="event t-single_source" id="E0012" data-providers="">
 <div class="ev-top">
-<span class="date">2026-05-06</span>
-<span class="eh">Shares jump on stronger outlook as AI server demand soars</span>
-<span class="badge">customer_adoption</span>
+<span class="date">2026-03-20</span>
+<span class="eh">Stock plunges after U.S. charges tied to China AI shipments</span>
+<span class="badge">regulatory</span>
 <span class="badge b-single_source">single source</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Reuters/CNBC coverage noted SMCI’s post‑print surge driven by stronger Q4 outlook and AI server demand momentum.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">AP reported an indictment alleging smuggling of Nvidia‑based servers with two employees placed on leave; shares fell sharply intraday, highlighting regulatory and reputational risk around export‑control enforcement.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[1]</div>
-<span class="span">Super Micro jumps after guidance beat</span>
-<span class="span">AI server demand soars</span>
-<span class="span">SMCI +18% after hours</span>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">plunges after US charges tied to China AI shipments</span>
+<span class="span">smuggling of Nvidia-based servers</span>
+<span class="span">-33.3% intraday</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0038">
+<div class="event t-web_only_unverified" id="E0040" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-06-11</span>
-<span class="eh">Supermicro prices $7B equity and equity‑linked offerings; cites ~$39B recent AI orders</span>
-<span class="badge">equity</span>
+<span class="date">2026-03-01</span>
+<span class="eh">Supermicro solutions for Google Distributed Cloud Virtual (Anthos/GKE) on SuperBlade</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Supermicro described solutions for Google Distributed Cloud Virtual on bare‑metal SuperBlade, enabled by Anthos and extending Google Kubernetes Engine to on‑prem environments adjacent to AI/ML services.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · GEM <b>1</b></span> <span class="chchip">distribution_channel_exposure · GEM <b>2</b></span> <span class="chchip">product_integration_exposure · GEM <b>2</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>1</b></span> <span class="chchip">provider_specificity · GEM <b>2</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Google Distributed Cloud</span>
+<span class="span">GDC Virtual está habilitado por Anthos</span>
+<span class="span">Google Kubernetes Engine</span>
+<span class="span">aprendizaje automático e inteligencia artificial</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0011" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2026-03-01</span>
+<span class="eh">Supermicro xAI Colossus page: 100,000 Hopper GPUs over Spectrum‑X Ethernet</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Supermicro’s xAI Colossus page outlined a 100,000‑GPU Hopper cluster connected via NVIDIA Spectrum‑X Ethernet and emphasized direct‑to‑chip liquid‑cooled AI systems underpinning large‑scale deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · XAI <b>4</b></span> <span class="chchip">product_integration_exposure · XAI <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">100,000 NVIDIA Hopper Tensor Core GPUs</span>
+<span class="span">NVIDIA Spectrum‑X Ethernet</span>
+<span class="span">liquid‑cooled AI systems</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Record quarter; FY26 guide raised to ~$40B</span>
+<span class="badge">other</span>
 <span class="badge b-single_source">single source</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$7.0B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Supermicro priced concurrent common and mandatory convertible preferred offerings and outlined a future ATM, stating proceeds would fund component purchases to fulfill a surge of AI server orders of roughly $39B from more than 20 customers.</p>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$40.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">MarketWatch reported SMCI’s surge on a record quarter with FY26 guidance to $40B and a revenue beat versus expectations, citing strong AI infrastructure demand despite margin pressure.</p>
 <details>
-<summary>evidence — 1 source(s), 6 span(s)</summary>
-<div class="ev-src">news_rows[0]</div>
-<span class="span">$7.0B financing plan</span>
-<span class="span">roughly $1.25B of common stock</span>
-<span class="span">$3.75B of depositary shares</span>
-<span class="span">7.0% mandatory convertible preferred</span>
-<span class="span">up‑to‑$2.0B at‑the‑market</span>
-<span class="span">roughly $39B from more than 20 customers</span>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">guide to 40 billion</span>
+<span class="span">revenue 12.7 vs 10.42 exp USD bn</span>
+<span class="span">AI infrastructure demand</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class='phase'>
+<h2>xAI build-out and ecosystem positioning</h2>
+<div class='range'>2024-06-20 → 2025-09-25</div>
+<div class='psum'>Supermicro emerged as a key OEM supplier in the build-out of xAI’s Colossus supercomputer and signaled deep participation across the AI infrastructure stack. Public posts and trade coverage in mid‑2024 confirmed that both Dell and Supermicro were providing servers for xAI. By late 2024, Supermicro published a case study detailing the 100,000‑GPU Colossus cluster and its rapid 122‑day deployment, with follow‑on local Memphis announcements indicating expansion and the arrival of Nvidia, Dell, and Supermicro operations in the region.
+In early 2025, third‑party reporting and Supermicro’s own materials reiterated the Colossus scale and timeline. Separately, CoreWeave’s SEC filings explicitly cited Super Micro as an OEM partner enabling rapid deployment of the newest NVIDIA platforms, while Reuters reported successive multi‑billion‑dollar OpenAI–CoreWeave capacity agreements—indirect but material demand drivers for Supermicro’s AI racks and servers. Supermicro also broadened product coverage with Intel Gaudi 3 platforms and AI inference benchmarking on Llama models, expanding model and accelerator optionality for customers.
+By mid‑2025, xAI’s Memphis site reached a 150MW power milestone, underlining the power‑dense nature of deployments Supermicro participates in. The period closed with additional OpenAI–CoreWeave capacity expansion, reinforcing upstream compute demand that can flow through OEMs including Supermicro.</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-09-25</span>
+<span class="eh">CoreWeave expands OpenAI pact with new $6.5B contract; total to $22.4B</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6.5B · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Reuters reported a new $6.5B OpenAI–CoreWeave contract, taking total agreements to $22.4B. Given CoreWeave’s cited OEM partners such as Super Micro, this expansion suggests ongoing demand tailwinds for SMCI’s AI servers.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · OAI <b>3</b></span> <span class="chchip">strategic_option_value · OAI <b>3</b></span> <span class="chchip">dependency_duration · OAI <b>2</b></span> <span class="chchip">contractual_commitment_strength · OAI <b>2</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7], web_search_findings[8]</div>
+<span class="span">$6.5 billion</span>
+<span class="span">to $22.4 billion</span>
+<span class="span">OpenAI</span>
+<span class="span">CoreWeave</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-07-11</span>
+<span class="eh">OpenAI signs additional $4B CoreWeave deal; OEMs include Super Micro</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4.0B · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Reuters reported OpenAI’s additional agreement to pay CoreWeave up to $4B through April 2029. CoreWeave’s SEC prospectus identifies OEM partners such as Super Micro, indicating potential pass‑through demand for SMCI’s AI infrastructure.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · OAI <b>3</b></span> <span class="chchip">strategic_option_value · OAI <b>3</b></span> <span class="chchip">provider_specificity · OAI <b>2</b></span> <span class="chchip">dependency_duration · OAI <b>2</b></span> <span class="chchip">contractual_commitment_strength · OAI <b>2</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6], web_search_findings[8]</div>
+<span class="span">$4 billion</span>
+<span class="span">OpenAI</span>
+<span class="span">CoreWeave</span>
+<span class="span">OEM partners such as Dell and Super Micro</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2025-05-01</span>
+<span class="eh">xAI Memphis Phase I reaches 150MW grid power</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">The Greater Memphis Chamber noted that xAI reached full operational capability for Phase I with a new substation providing 150MW of grid power, enabling Colossus to operate at intended scale.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · XAI <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">150MW of power</span>
+<span class="span">full operational capability for Phase I</span>
+<span class="span">xAI reached full operational capability</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2025-05-01</span>
+<span class="eh">Supermicro debuts Intel Gaudi 3 servers optimized for Llama 2/3 inference</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">A Supermicro product brief detailed Intel Gaudi 3‑based servers optimized for real‑world AI inference, including benchmarking with Llama 2 and Llama 3 and high tokens‑per‑second throughput.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · LLA <b>2</b></span> <span class="chchip">product_integration_exposure · LLA <b>3</b></span> <span class="chchip">customer_experience_enhancement · LLA <b>2</b></span> <span class="chchip">provider_specificity · LLA <b>2</b></span> <span class="chchip">multi_model_hedge · LLA <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Intel Gaudi 3</span>
+<span class="span">Llama 2 and Llama 3</span>
+<span class="span">nearly 15,000 tokens/sec</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-03-27</span>
+<span class="eh">CoreWeave SEC filing cites OEM partners including Super Micro for rapid AI chip deployment</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CoreWeave’s IPO prospectus described rapid deployment of the newest NVIDIA platforms and explicitly cited OEM partners such as Dell and Super Micro. This underscores Supermicro’s role in the AI cloud supply chain.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">distribution_channel_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">OEM partners such as Dell and Super Micro</span>
+<span class="span">GB200 NVL72‑based instances generally available</span>
+<span class="span">as little as two weeks</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2025-03-14</span>
+<span class="eh">CEO reiterates 100k H100 Colossus and 122‑day build timeline</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Fortune reported Super Micro CEO Charles Liang’s remarks on assembling racks in San Jose and the 750,000‑sq‑ft xAI Colossus data center, reiterating 100,000 Nvidia H100 GPUs and a 122‑day build timeline.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · XAI <b>4</b></span> <span class="chchip">enterprise_adoption_exposure · XAI <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">100,000 Nvidia H100 GPUs</span>
+<span class="span">It took Elon and Super Micro only 122 days</span>
+<span class="span">Memphis data center</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2024-12-04</span>
+<span class="eh">xAI Memphis expansion; Supermicro to establish operations in region</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">The Greater Memphis Chamber announced plans to expand the Colossus supercomputer and stated that Nvidia, Dell, and Supermicro Computer (SMC) would establish operations in Memphis, highlighting regional build‑out around xAI.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · XAI <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">xAI revealed plans for an expansion</span>
+<span class="span">Supermicro Computer (SMC) will be establishing operations</span>
+<span class="span">Digital Delta</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2024-12-01</span>
+<span class="eh">Supermicro case study details xAI Colossus: 100K H100 GPUs built in 122 days</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Supermicro published a case study on the xAI Colossus supercomputer, noting deployment of 100,000 NVIDIA H100 GPUs using Supermicro liquid‑cooled racks and a 122‑day build timeline.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · XAI <b>4</b></span> <span class="chchip">enterprise_adoption_exposure · XAI <b>4</b></span> <span class="chchip">provider_specificity · XAI <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">100,000 NVIDIA H100 GPUs</span>
+<span class="span">in only 122 days</span>
+<span class="span">Supermicro liquid‑cooled rack</span>
+<span class="span">Supermicro 4U Universal GPU</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2024-06-20</span>
+<span class="eh">Dell and Supermicro confirmed to provide servers for xAI supercomputer</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">DataCenterDynamics reported that Dell and Supermicro would provide servers for xAI’s supercomputer. Public posts by Michael Dell and Elon Musk corroborated the role, indicating Supermicro’s direct participation in the Grok infrastructure build.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure · XAI <b>4</b></span> <span class="chchip">provider_specificity · XAI <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Dell and Supermicro to provide servers</span>
+<span class="span">xAI supercomputer</span>
+<span class="span">We’re building a Dell AI factory</span>
+<span class="span">SMC</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0038'>E0038</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0040'>E0040</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0040'>E0040</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0040'>E0040</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0037'>E0037</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0040'>E0040</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0040'>E0040</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0040'>E0040</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0040'>E0040</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0040'>E0040</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0040'>E0040</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0.95</td><td>0</td><td>0.25</td><td>0.25</td><td>0.75</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.3</td><td>0</td><td>0.65</td><td>0.55</td><td>0.45</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.775</td><td>0.775</td><td>0.715</td><td>0.715</td><td>0.715</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.3947</td><td>0</td><td>0.2185</td><td>0.233</td><td>0.4369</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What is the exact revenue recognition timeline and margin profile for the xAI Colossus deployments across Phases I/II?</li>
@@ -776,4 +828,19 @@ To fund component purchases for a surge in AI orders, Supermicro priced concurre
 <li>Financing and working‑capital figures for Q3 FY2026 were noted as preliminary/unaudited in the company’s disclosures.</li>
 <li>CoreWeave–OpenAI contract values are reported by Reuters; linkage to Supermicro demand is inferred via CoreWeave’s SEC filing naming Super Micro as an OEM partner rather than via a direct purchase order.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

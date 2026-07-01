@@ -1,0 +1,623 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>PLD US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Prologis Inc <span class='sub'>(PLD US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.434</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>25 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 12</span>
+<span class='chip'>web-only (verified): 7</span>
+<span class='chip'>corroborated: 4</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Execution, power pipeline maturation, and strategic M&amp;A approach</h2>
+<div class='range'>2026-01-21 → 2026-06-24</div>
+<div class='psum'>Entering 2026, Prologis reported a data center power pipeline advanced to 5.7GW and signaled imminent data center starts, with roughly 40% of 2026 development planned in data centers. The firm clarified procurement stages, contemplated a dedicated data center vehicle, and reiterated execution risks tied to power, capex, and regulatory processes. Management also disclosed a 5.6GW secured/advanced pipeline by Q1&#x27;26, initiated ~$1.3B of build-to-suit data center starts in the quarter, and reported 1.3GW of LOIs representing approximately three years of activity, with disclosed DC margin targets of 25–50%.
+External reporting corroborated these milestones: coverage noted two Q1 data center project starts preleased to large tech firms, an additional 350MW pipeline contribution, and LOIs totaling 1.3GW. Prologis simultaneously highlighted tactical advantages (e.g., pre-ordering long-lead items) and a powered-shell-first strategy with optionality for turnkey delivery. In June, Prologis made a public, all-share approach to acquire SEGRO, linking the rationale to development and data center opportunities in the UK; SEGRO’s board rejected the proposal, triggering a UK Takeover Code deadline.</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">Prologis makes public all-share approach to acquire SEGRO; board rejects</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$16.6B · equity_stake</span> <span class="badge">mixed</span></div>
+<p class="narr">Prologis disclosed an indicative all-share proposal to acquire SEGRO, offering 0.084 new Prologis shares per SEGRO share, valuing SEGRO at about £12.6bn ($16.6bn). SEGRO’s board &quot;unequivocally rejected&quot; the proposal; under the UK Takeover Code, Prologis faces a July 22, 2026 deadline. Rationale cited data center and development synergies.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Offer was indicative and subject to UK Takeover Code timelines; no binding agreement.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">£12.6bn ($16.6bn)</span>
+<span class="span">0.084 new Prologis shares</span>
+<span class="span">925p per share</span>
+<span class="span">unequivocally rejected</span>
+<span class="span">July 22, 2026</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">Q1’26: ~$1.3B of build-to-suit data center development starts</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.3B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized momentum in its data center platform with approximately $1.3B of build-to-suit DC starts in Q1’26, alongside record lease signings. Media coverage also noted two DC projects started and preleased to large tech firms.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[7]</div>
+<span class="span">record lease signings (64 MSF)</span>
+<span class="span">momentum in the data‑center platform</span>
+<span class="span">~$1.3B of build‑to‑suit development starts</span>
+<span class="span">started two data center projects</span>
+<span class="span">preleased to large tech firms</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">1.3GW of data center deals under LOI, covering ~3 years of activity</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Prologis disclosed 1.3GW of data center deals under LOI, which management said accounts for approximately the next three years’ worth of business, indicating multiyear visibility tied to hyperscale/AI demand.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[7]</div>
+<span class="span">1.3 gigawatts of deals under LOI</span>
+<span class="span">accounts for the next three years’ worth of business.</span>
+<span class="span">1.3 gigawatts</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">Data center power pipeline ~5.6GW secured or advanced</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Prologis cited a data center power pipeline of approximately 5.6GW secured or in advanced stages as of Q1’26, reflecting ongoing power procurement and site readiness to accelerate DC developments.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[7]</div>
+<span class="span">data‑center power pipeline of ~5.6 GW secured or in advanced stage.</span>
+<span class="span">5.6 gigawatts of power</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">Disclosed DC margin targets: 25%–50%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$25 · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Management disclosed data center margin expectations in the 25% to 50% range, providing initial profitability parameters for the platform.</p>
+<p class="cav">⚠ Actual achieved margins may differ based on project mix and timing.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Margins are actually 25% to 50%</span>
+<span class="span">25% to 50%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">Procurement edge via pre-ordering long-lead items</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Prologis highlighted procurement as a differentiator, specifically pre-ordering long-lead items to mitigate bottlenecks in data center development.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">pre‑ordering long‑lead items</span>
+<span class="span">absolutely a differentiator.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">Data center supplier demand now ~10% of new leasing</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management said data center supplier demand increased from less than 5% to roughly 10% of new leasing, comprising an even larger share of the forward pipeline—evidence of AI-adjacent tenant momentum.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">less than 5% of new leasing a year ago to now 10% of new leasing,</span>
+<span class="span">forward pipeline</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">Powered-shell-first strategy with optionality for turnkey delivery</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Prologis stated a focus on powered shells at the outset of discussions, with the ability to deliver &quot;powered shell plus&quot; and potentially more turnkey solutions over time based on customer needs and cost of capital.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">We’re heavily focused on the powered shell side</span>
+<span class="span">powered shell plus</span>
+<span class="span">maybe you see some more turnkey from us over time</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">Constructive capital formation; build on balance sheet then sell stabilized</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described capital formation discussions with global investors as very constructive and reiterated a model of building on balance sheet and selling stabilized assets as working well for data centers.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">very constructive</span>
+<span class="span">building on balance sheet</span>
+<span class="span">selling stabilized assets</span>
+<span class="span">has worked really well.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">Risk: execution and power procurement delays could defer yields</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Prologis warned that scaling the data center platform—backed by a disclosed 5.6GW power pipeline—faces potential delays in power, permitting, or construction that could defer expected yields and development gains.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">5.6 GW power pipeline</span>
+<span class="span">delays in securing power, permitting, or construction</span>
+<span class="span">could defer expected yields</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">Clarification: 5.6GW refers to utility load; ~two-thirds convert to critical</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6 · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Management clarified the power metric: the cited 5.6GW is utility load and roughly two-thirds translate to critical power, providing better visibility into deliverable IT capacity for customers.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">the cited 5.6 GW is utility load</span>
+<span class="span">two‑thirds translating to critical power</span>
+<span class="span">critical power</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-16</span>
+<span class="eh">CoStar: profit outlook raised; Q1 DC starts add 350MW; plan up to 100 DCs</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$350 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Coverage noted Prologis raised its profit outlook as the data center boom fueled leasing, started two DC projects preleased to large tech firms, added 350MW power capacity to the pipeline in Q1, and plans up to 100 data centers over the next decade.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">raised its profit outlook</span>
+<span class="span">started two data center projects</span>
+<span class="span">preleased to large tech firms</span>
+<span class="span">350 megawatts</span>
+<span class="span">up to 100 data centers</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0013" data-providers="google_gemini_deepmind meta_llama">
+<div class="ev-top">
+<span class="date">2026-02-10</span>
+<span class="eh">Customers include Google and Meta; four hyperscale DC leases secured</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6 · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">meta_llama</span></div>
+<p class="narr">A senior executive noted that Prologis is supporting logistics customers and hyperscalers, explicitly naming Google and Meta on the data center side. He cited more than 5GW of power (5.7, to be exact) and four leases with the biggest hyperscale customers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Only Google and Meta map to the specified provider set; Amazon and Microsoft are not mapped providers in this schema.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Google, Microsoft, Amazon and Meta</span>
+<span class="span">5.7, to be exact</span>
+<span class="span">four leases with the biggest hyperscale customers</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-21</span>
+<span class="eh">Power pipeline advanced to 5.7GW; &gt;1GW solar/storage achieved</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Prologis reported its data center power pipeline advanced to 5.7GW, alongside surpassing 1GW of installed solar and storage. This marks continued expansion of digital infrastructure capacity to serve hyperscale/AI workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1], web_search_findings[8]</div>
+<span class="span">power pipeline advanced to 5.7 GW</span>
+<span class="span">surpassed 1 GW of installed solar and storage</span>
+<span class="span">5.7 gigawatts of capacity</span>
+<span class="span">surpassed its 1 gigawatt target</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-21</span>
+<span class="eh">Imminent data center starts; ~40% of 2026 development in DCs</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$40 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management guided to a small handful of imminent data center starts in 1Q/1H26 and indicated that approximately 40% of 2026 development starts are expected to be data centers, underscoring capital allocation to AI/hyperscale demand.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">a “small handful” of starts</span>
+<span class="span">imminent in 1Q/1H26</span>
+<span class="span">~40% of 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-21</span>
+<span class="eh">Procurement stage definitions clarified (advanced vs. secured)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Prologis clarified that “advanced stages” refers to preliminary utility agreements, while “secured” denotes a binding energy service agreement guaranteeing power delivery and related infrastructure.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">“advanced stages” = preliminary utility agreement</span>
+<span class="span">“secured” = binding energy service agreement</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-21</span>
+<span class="eh">Company evaluating a data center vehicle; update expected in coming weeks/months</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management said it is evaluating structures for a data center vehicle and expects to provide updates in the coming weeks and months, indicating potential third-party capital participation to scale the platform.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">data center vehicle</span>
+<span class="span">expect to know more in the coming weeks and months</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-21</span>
+<span class="eh">Risk flagged: power procurement/capex/regulatory could pressure margins</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Prologis cautioned that the expanded 5.7GW power pipeline and &gt;1GW energy portfolio increase execution requirements; delays or cost inflation across power procurement, capex, or regulatory processes could reduce development margins.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">require power procurement, capex, and regulatory execution</span>
+<span class="span">reduce development margins</span>
+<span class="span">5.7 GW</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scaling strategy and AI inference positioning</h2>
+<div class='range'>2025-02-05 → 2025-12-31</div>
+<div class='psum'>In 2025, Prologis articulated a long-term data center strategy targeting 10GW over a decade and highlighted programmatic developments with hyperscale customers. The firm disclosed specific capex, power procurement progress, and guidance increases tied to data center demand, including a $300 million Austin development with a top hyperscaler and an additional 200MW of power secured.
+Management also framed a strategic opportunity to repurpose infill logistics assets for low-latency AI inference, and marketed a 5.7GW &quot;power bank&quot; alongside an $8B five-year data center investment plan, signaling deepening optionality to address AI-driven infrastructure needs.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-31</span>
+<span class="eh">Prologis markets 5.7GW power bank and $8B five-year DC investment plan</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$8.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Prologis’s data center page highlighted a 5.7-gigawatt power bank and plans for $8B in total expected investment over the next five years, including the Austin, TX Power Campus with a private substation and powered shell developments.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ Figures are presented in marketing materials and may be subject to change.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">5.7-gigawatt power bank</span>
+<span class="span">$8B in TEI</span>
+<span class="span">Austin, TX</span>
+<span class="span">private substation</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-02</span>
+<span class="eh">CEO highlights infill assets for AI inference; 6,000 buildings could convert</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Prologis’s CEO described a &quot;huge opportunity&quot; to convert infill assets into data centers to support the AI inference market, noting some 6,000 buildings in major population centers that resemble data centers and can be converted.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">huge opportunity</span>
+<span class="span">infill assets</span>
+<span class="span">AI inference market</span>
+<span class="span">6,000 buildings</span>
+<span class="span">turn them into data centers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-16</span>
+<span class="eh">$300M Austin data center starts with a top hyperscaler; +200MW power secured</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$300M · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">On its Q2&#x27;25 call, Prologis reported $300 million of development starts tied to an Austin data center project with a top hyperscaler, secured an additional 200MW of power, and raised full-year 2025 development start guidance to $2.25–$2.75 billion.</p>
+<p class="cav">⚠ The hyperscaler counterpart was not named.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">$300 million of development starts</span>
+<span class="span">Austin, Texas</span>
+<span class="span">top hyperscaler</span>
+<span class="span">200 megawatts</span>
+<span class="span">$2.25-$2.75 billion</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-02-05</span>
+<span class="eh">Prologis targets 10GW of data centers over 10 years; 1.4GW secured</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Prologis outlined a plan to develop 10GW of data centers over the next decade, noting 1.4GW of secured power and 1.6GW in advanced procurement. Strategy contemplates fund structures to manage capital intensity.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">10GW of data centers over 10 years</span>
+<span class="span">1.4GW of secured power</span>
+<span class="span">in the advanced stages of procurement</span>
+<span class="span">10GW over the next ten years.</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early groundwork and rezoning for data center expansion</h2>
+<div class='range'>2015-02-06 → 2024-12-12</div>
+<div class='psum'>Prologis’s AI-adjacent posture traces back to earlier relationships with hyperscale technology firms, highlighted by the historical sale of a Silicon Valley industrial campus to Facebook in 2015. While not an AI-specific transaction, it demonstrated proximity to large-scale tech infrastructure stakeholders.
+In 2024, Prologis moved decisively to expand its data center development footprint, including a rezoning push in Northern Virginia near Dulles Airport to enable a multi-million-square-foot data center complex. By year-end, Prologis also transacted on a Chicago data center development, while publicly signaling multi-year, multi-billion-dollar investment intentions in data centers, underscoring anticipated AI and hyperscale demand.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-12</span>
+<span class="eh">Prologis sells Chicago data center development; outlines multi-year DC investment plans</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$7.0B · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">Prologis sold a Chicago data center development to HMC Capital; the facility was a 190,000 sq ft warehouse conversion marketed at 32MW. The company reiterated plans to develop about 20 data centers over four years with $7–8 billion of additional investment, highlighting ongoing AI/hyperscale demand.</p>
+<p class="cav">⚠ Transaction terms for the Chicago sale were not disclosed in the cited source.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">HMC Capital</span>
+<span class="span">32MW</span>
+<span class="span">190,000 sq ft</span>
+<span class="span">ten-acre site</span>
+<span class="span">20 data centers with $7-8 billion</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-07-18</span>
+<span class="eh">Prologis seeks rezoning for Northern Virginia data center expansion</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Prologis requested new zoning and higher density for approximately 94 acres near Dulles International Airport to enable a data center complex potentially exceeding 4 million square feet, including replacement of existing warehouses with data centers.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">rezone roughly 94 acres</span>
+<span class="span">4 million square feet</span>
+<span class="span">Dulles International Airport</span>
+<span class="span">replace the warehouses with more data centers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2015-02-06</span>
+<span class="eh">Prologis sells 56-acre Menlo Park industrial park to Facebook</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Prologis announced the sale of a 21-building, 56-acre industrial park in Menlo Park, CA to Facebook and will provide ongoing management services. While predating the current AI buildout, this transaction reflects a long-running alignment with hyperscale technology tenants.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">sale of a 21-building, 56-acre industrial park</span>
+<span class="span">Facebook, Inc.</span>
+<span class="span">Menlo Science &amp; Technology Park</span>
+<span class="span">Menlo Park, Calif.</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which hyperscaler is the counterparty for the Austin, Texas data center starts referenced as a “top hyperscaler” in 2025?</li>
+<li>What structure and third-party capital mix will Prologis choose for the contemplated data center vehicle, and on what timeline?</li>
+<li>How many of the 1.3GW LOIs convert to binding agreements in 2026–2027, and with what phasing of power delivery?</li>
+<li>What realized development margins will Prologis achieve versus the disclosed 25%–50% target range as projects stabilize?</li>
+<li>What is the outcome of the SEGRO approach by the July 22, 2026 UK Takeover Code deadline, and how would any transaction reshape PLD’s DC footprint in the UK?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some capacity and investment figures are drawn from media and marketing sources and may be revised.</li>
+<li>Chicago data center sale terms were not disclosed; capex plans of $7–8B reflect management commentary rather than committed spend.</li>
+<li>Regulatory outcomes (e.g., Northern Virginia rezoning, SEGRO transaction) remain uncertain and could materially alter timelines and scope.</li>
+<li>Provider names are cited where explicitly mentioned; absence of a named provider does not imply lack of engagement.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

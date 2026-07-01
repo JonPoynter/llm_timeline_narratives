@@ -1,0 +1,823 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>CIFR US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Cipher Digital Inc <span class='sub'>(CIFR US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.393</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>38 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 29</span>
+<span class='chip'>web-only (unverified): 8</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Stingray financing and AWS lease specifics</h2>
+<div class='range'>2026-06-08 → 2026-06-08</div>
+<div class='psum'>Cipher moved to finance the Stingray facility with a proposed $810 million senior secured notes offering, with proceeds to fund remaining costs, reimburse prior equity, and establish reserves. The company disclosed structural protections including a completion guarantee and first-priority liens.
+An accompanying investor presentation detailed the Stingray lease terms: 70 MW Critical IT Load under contract with AWS, approximately $2.0 billion in contracted revenue, a targeted initial rent commencement in April 2027, Amazon coverage of construction cost overruns above $10.5 million per IT MW, and a parent-level tenant guarantee by Amazon.com, Inc.</div>
+<div class="event t-single_source" id="E0038" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">Proposes $810M senior secured notes due 2031 to fund Stingray facility</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$810M · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">Cipher’s Stingray Compute LLC announced an offering of $810 million senior secured notes due 2031 (Rule 144A/Reg S), with net proceeds to fund the remaining cost of the Stingray data center, reimburse ~$63.6 million of prior equity contributions, and fund debt service reserves. The notes are to be secured by first‑priority liens, with a completion guarantee.</p>
+<p class="cav">⚠ Press coverage referenced a 100MW West Texas development; subsequent SEC investor materials describe 70 MW Critical IT Load under contract.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">proposes $810M senior secured notes due 2031</span>
+<span class="span">144A/Reg S</span>
+<span class="span">approximately $63.6 million of prior equity contributions</span>
+<span class="span">first‑priority liens</span>
+<span class="span">completion guarantee</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0039" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">Stingray: 70 MW AWS lease with ~$2.0B contracted revenue; April 2027 rent start; Amazon guarantees</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Investor materials detailed Stingray as a 70 MW Critical IT Load facility leased to AWS with approximately $2.0 billion of contracted revenue, targeted initial rent commencement in April 2027, Amazon coverage of construction cost overruns above $10.5MM per IT MW, and a tenant lease guarantee by Amazon.com, Inc.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">70 MW Critical IT Load Under Contract</span>
+<span class="span">Transaction Overview: ~$2.0Bn of Contracted Revenue</span>
+<span class="span">April 2027 Targeted Initial Rent Commencement Date</span>
+<span class="span">cover any construction cost overruns above $10.5MM/IT MW</span>
+<span class="span">Tenant Lease Guarantee : Amazon.com, Inc.</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Q1’26 execution, scaling pipeline and financing posture</h2>
+<div class='range'>2026-05-05 → 2026-05-05</div>
+<div class='psum'>Cipher reported substantial contracted scale and visibility: ~700 MW of contracted HPC capacity and ~$11.4 billion in total contracted revenue, with an expected ~$787 million average annualized NOI from October 2026 to September 2036. The portfolio totaled ~907 MW operating and contracted, supported by a ~3.3 GW development pipeline aiming for ~4.2 GW by 2030+. Barber Lake topped out in April 2026 and Black Pearl remained on schedule, with most equipment secured.
+Liquidity actions included closing a new $200 million revolver and detailing Q1’26 capex of $554 million and negative free cash flow of approximately -$462.5 million. Management highlighted premium lease pricing, regulatory milestones (ERCOT batch outcomes), and potential strategic steps (e.g., owning compute at Reveille, exiting Bitcoin by end-2027). Risks cited included project execution, funding needs amid large capex and borrowings, counterparty concentration including Google-related lease support, and the transitional reliance on Bitcoin revenue.</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Reports ~700 MW of contracted HPC/data center capacity</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cipher disclosed approximately 700 MW of contracted gross HPC/data center capacity tied to long-term campus leases with hyperscale tenants, indicating strong demand visibility.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~700 MW of contracted gross HPC capacity</span>
+<span class="span">tied to long-term campus leases</span>
+<span class="span">with hyperscale tenants</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Total contracted revenue reaches ~$11.4 billion</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$11.4B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reported approximately $11.4 billion in total contracted revenue/NOI across signed leases, reflecting significant multi-year backlog.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$11.4bn total contracted revenue</span>
+<span class="span">Contracted revenue/NOI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Expects ~$787m average annualized NOI (Oct 2026–Sep 2036)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$787M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cipher guided to approximately $787 million of average annualized NOI over the base lease term from October 2026 through September 2036, tied to Barber Lake with Fluidstack/Google reference.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">average annualized NOI of ~$787m</span>
+<span class="span">Oct 2026–Sep 2036</span>
+<span class="span">Barber Lake base lease with Fluidstack/Google reference</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Portfolio scale at ~907 MW operating + contracted</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cipher cited total operating and contracted capacity of approximately 907 MW across its portfolio, including bitcoin self-mining.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~907 MW of operating and contracted capacity</span>
+<span class="span">inclusive of bitcoin self-mining</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Development pipeline ~3.3 GW; long-term objective ~4.2 GW</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The company outlined a development pipeline of about 3.3 GW targeted for 2027–2030+ and a long-term portfolio objective of approximately 4.2 GW by 2030+.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">3.3 GW of grid pipeline capacity</span>
+<span class="span">4.2 GW by 2030+</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Barber Lake topped out; Black Pearl progressing and on schedule</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cipher reported Barber Lake’s building topped out in April 2026 and that Black Pearl’s retrofit and site work remain on schedule, with mechanical/electrical/networking work ongoing toward early-access and substantial-completion dates.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[8]</div>
+<span class="span">Barber Lake building topped out in April 2026</span>
+<span class="span">projects remain on schedule</span>
+<span class="span">tracking to contractual early-access</span>
+<span class="span">Black Pearl Phase I retrofit and Phase II site work progressing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Signs a third AI data center campus lease with an investment-grade hyperscaler</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management disclosed signing a third AI campus lease with an investment-grade hyperscale tenant, further diversifying contracted demand across sites.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Counterparty not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">signing a third AI data center campus lease</span>
+<span class="span">investment-grade hyperscale tenant</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Closes new $200m revolving credit facility</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$200M · loan</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cipher closed a new $200 million revolving credit facility supported by a syndicate of global financial institutions to bolster liquidity.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">new $200m revolving credit facility</span>
+<span class="span">bolster liquidity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">States capital sufficient for third-campus equity component</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management indicated it expects to have sufficient capital to fund the equity component of its third campus and near-term requirements.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expects to have sufficient capital</span>
+<span class="span">equity component of its third campus</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1’26 capital expenditures of $554.0m</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$554M · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">Cipher reported Q1 2026 capital expenditures (purchases of property and equipment) of $554.0 million, reflecting accelerated buildout activity.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Capital expenditures (purchases of property and equipment): $554.0m</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1’26 free cash flow approximately -$462.5m</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$462M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Management disclosed free cash flow of approximately -$462.5 million in Q1’26, reflecting the timing of large-scale development spending.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Free cash flow ≈ -$462.5m</span>
+<span class="span">OCF less capex</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Notes AI lease pricing remains premium in negotiations</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cipher indicated that it continues to secure premium pricing in AI lease negotiations for premium sites with credible timelines.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">we continue to see premium pricing in our negotiations</span>
+<span class="span">premium sites with good timelines</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Does not expect decline in premium-site lease rates</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated it does not see lease rates going down for premium sites with good timelines, supporting pricing durability.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">do not see lease rates going down</span>
+<span class="span">premium sites with good timelines</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Highlights PJM requires higher deposits than ERCOT</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cipher observed that PJM generally requires higher deposits than ERCOT, supporting a premium for scarce, credible sites with favorable interconnect timelines.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">PJM generally requires higher deposits than ERCOT</span>
+<span class="span">premium for scarce, credible sites</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Evaluating structures to own and operate compute at Reveille</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cipher is considering potential structures where it would participate in owning and operating compute at the Reveille site, indicating optional vertical integration.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">We are considering potential structures</span>
+<span class="span">owning and operating the compute at that site</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Ceases further Bitcoin capex amid HPC pivot</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated it does not plan to deploy further capex into Bitcoin mining, consistent with reallocating capital to AI/HPC infrastructure.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">do not plan to deploy further CapEx into Bitcoin mining</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Targets exiting Bitcoin by end-2027 at latest</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cipher emphasized that Bitcoin will not be part of its story by 2030 and targets exiting by the end of 2027 at the latest.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Bitcoin will not be a part of our story by 2030</span>
+<span class="span">end of 2027 at the latest</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Odessa’s ~$0.028/kWh PPA with potential HPC conversion interest</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$0 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cipher’s Odessa site has a roughly $0.028/kWh PPA with ~14 months remaining and hyperscaler interest for potential HPC conversion, subject to counterparties and PPA renegotiation.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~$0.028/kWh PPA</span>
+<span class="span">could be converted to HPC</span>
+<span class="span">depends on counterparties and PPA renegotiation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Black Pearl equipment procurement 93% (Phase I) and 80% (Phase II) secured</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The company reported substantial procurement progress for Black Pearl with 93% of Phase I and 80% of Phase II equipment secured.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">93% of the phase 1 equipment</span>
+<span class="span">80% of the phase 2 equipment</span>
+<span class="span">secured</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Signals schedules more likely ahead than behind</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated it is more likely to deliver a site ahead of schedule than behind schedule, underscoring execution confidence.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">more likely to deliver a site ahead of schedule than behind schedule</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Awaiting ERCOT batch results; interconnects are key to accelerate leases</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cipher is anxiously awaiting ERCOT’s batch results (expected in June) and views interconnects as the key gate to accelerate large-site lease negotiations.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">anxiously awaiting</span>
+<span class="span">ERCOT’s batch results (expected in June)</span>
+<span class="span">interconnects in hand as the key gate</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Strong tenant interest expected 18+ months ahead of energization</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects strong tenant interest 18+ months before energization once interconnects are confirmed, supporting forward leasing.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">strong tenant interest 18+ months ahead of energization</span>
+<span class="span">once interconnects are confirmed</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Expects project financing at similar or better terms; prioritizes non-recourse</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cipher expects project financing would likely price at similar or better terms and will prioritize non-recourse, flexible structures to avoid trapped cash.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">price at similar, if not better terms</span>
+<span class="span">prioritizing non‑recourse, flexible structures</span>
+<span class="span">avoid trapped cash</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk: timely completion at Barber Lake and Black Pearl is critical</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Cipher highlighted execution risk: delays or cost overruns at Barber Lake and Black Pearl could pressure liquidity and defer lease cash flows.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Timely completion at Barber Lake and Black Pearl is critical</span>
+<span class="span">delays or cost overruns could pressure liquidity</span>
+<span class="span">defer lease cash flows</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk: funding needs amid large capex and significant borrowings</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cited financing risk given Q1’26 capex of ~$554m and significant borrowings (short-term $355m; long-term $4.38bn), with higher interest costs contributing to GAAP losses.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q1’26 capex of ~$554m and significant borrowings</span>
+<span class="span">short-term $355m; long-term $4.38bn</span>
+<span class="span">higher interest costs were a driver of GAAP losses</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk: counterparty concentration including Google-related lease support</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Cipher warned that contracted revenue and Google-related lease support concentrate exposure to a limited number of hyperscale counterparties; adverse changes could materially affect cash flows.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Google-related lease support concentrate exposure</span>
+<span class="span">limited number of hyperscale counterparties</span>
+<span class="span">materially affect cash flows</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk: all Q1’26 revenue from Bitcoin during transition</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Despite the pivot to HPC, management stated all Q1’26 revenue was still from bitcoin mining, leaving near-term results exposed to BTC and power market volatility.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">all Q1’26 revenue was still from bitcoin mining</span>
+<span class="span">BTC price volatility</span>
+<span class="span">can materially impact results</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Reiterates on-schedule 2026 milestones for Barber Lake and Black Pearl</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cipher reiterated that Barber Lake and Black Pearl remain on schedule toward contractual early-access and rack-ready milestones in 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">on schedule toward contractual early-access/rack-ready milestones in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Post-ERCOT approvals, large-site leases could sign reasonably quickly</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated that lease signings for large (~1 GW) sites could proceed reasonably quickly after ERCOT batch 0 interconnects are secured.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Lease signings for large (e.g., ~1 GW) sites</span>
+<span class="span">could proceed “reasonably quickly”</span>
+<span class="span">after ERCOT batch 0 interconnects are secured</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Transformative 2025 HPC leases with Fluidstack/Google and AWS</h2>
+<div class='range'>2025-09-25 → 2025-11-20</div>
+<div class='psum'>Cipher executed a 10-year, 168 MW AI hosting agreement with Fluidstack at Barber Lake, representing about $3 billion in contracted revenue; Google provided a $1.4 billion lease backstop and received warrants, materially strengthening counterparty credit and financing optionality. Two months later, Cipher expanded the agreement to an additional 39 MW (56 MW gross), adding ~$830 million and bringing total contracted revenue across the partnership to ~$3.8 billion, while Google increased its backstop by $333 million to $1.73 billion. Amended warrant and recognition agreements adjusted terms including a top-up threshold and termination fee mechanics.
+Concurrently, Cipher announced a direct 15-year, ~$5.5 billion lease with Amazon Web Services for 300 MW at the Black Pearl campus, with phased 2026 delivery and rent commencement expected in August 2026, establishing a second major hyperscale AI anchor tenant.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-20</span>
+<span class="eh">Adds 39 MW (56 MW gross) to Fluidstack lease for ~$830M; total partnership ~$3.8B</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$830M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cipher and Fluidstack expanded their Barber Lake agreement by an additional 39 MW of critical IT load (56 MW gross), representing approximately $830 million in incremental contracted revenue over 10 years and taking total initial-term contracted revenue across the partnership to about $3.8 billion.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 3 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2], web_search_findings[7], web_search_findings[3]</div>
+<span class="span">Additional 56 MW, 10-Year AI Hosting Agreement</span>
+<span class="span">approximately $830 million in contracted revenue</span>
+<span class="span">lease the entire 300 MW of capacity</span>
+<span class="span">additional 39 MW of critical IT load</span>
+<span class="span">Total Contracted Revenue Across the Partnership Reaches ~$3.8 Billion</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-11-20</span>
+<span class="eh">Google increases Fluidstack lease backstop by $333M to $1.73B total</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$333M · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">As part of the expanded Barber Lake agreement, Google expanded its backstop of Fluidstack’s obligations by an additional $333 million, increasing the total backstop to $1.73 billion.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Google Expands Backstop of Fluidstack’s Obligations by Additional $333 Million</span>
+<span class="span">Increasing Total Backstop to $1.73 Billion</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-11-20</span>
+<span class="eh">Amended and Restated Warrant Agreement adjusts Top-Up Threshold to $435 million</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$435M · other</span> <span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Concurrent with the Barber Lake Phase II expansion, Cipher amended and restated the Warrant Agreement with Google, adjusting the Top-Up Threshold from $430 million to $435 million and modifying recognition agreement terms including termination fee mechanics post-Phase I.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Top-Up Threshold was adjusted from $430 million to $435 million</span>
+<span class="span">increasing the termination fee</span>
+<span class="span">A&amp;R Warrant Agreement</span>
+<span class="span">A&amp;R Recognition Agreement</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-03</span>
+<span class="eh">Signs ~$5.5B, 15-year AWS lease for 300 MW; 2026 phased delivery</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.5B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cipher announced a 15-year data center campus lease with Amazon Web Services to provide 300 MW of capacity in 2026 for AI workloads, with rent commencing in August 2026. The agreement represents approximately $5.5 billion in contracted lease payments.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[5]</div>
+<span class="span">15-Year data center campus lease with Amazon Web Services</span>
+<span class="span">approximately $5.5 billion, 15-year lease agreement</span>
+<span class="span">deliver 300 MW of capacity in 2026</span>
+<span class="span">rent commencing in August 2026</span>
+<span class="span">phased delivery expected to commence in 2026</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-09-25</span>
+<span class="eh">Signs 168 MW, 10-year AI hosting agreement with Fluidstack (~$3B contracted revenue)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cipher agreed to deliver 168 MW of critical IT load (244 MW gross capacity) at Barber Lake under a 10-year HPC colocation lease with Fluidstack, representing approximately $3 billion in contracted revenue over the initial term, with two five-year extension options.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 3 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[6], web_search_findings[1]</div>
+<span class="span">168 MW, 10-Year AI Hosting Agreement with Fluidstack</span>
+<span class="span">approximately $3 billion in contracted revenue</span>
+<span class="span">maximum of 244 MW of gross capacity</span>
+<span class="span">10-year term</span>
+<span class="span">168 megawatts (MW) of critical IT load</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-09-25</span>
+<span class="eh">Google provides $1.4B backstop and receives 24,178,576-share warrants</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.4B · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">In connection with the Fluidstack lease, Google agreed to backstop certain Fluidstack obligations under a recognition agreement and received warrants to purchase 24,178,576 shares at $0.01 per share. The backstop strengthens lease security and financing prospects for the project.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[1]</div>
+<span class="span">Google will backstop $1.4 billion</span>
+<span class="span">backstop (the “Google BackStop”)</span>
+<span class="span">warrants (the “Warrants”) to purchase 24,178,576 shares</span>
+<span class="span">exercise price of $0.01 per share</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundation and site acquisitions ahead of HPC pivot</h2>
+<div class='range'>2024-10-31 → 2025-06-30</div>
+<div class='psum'>Cipher established a physical foundation for its AI/HPC strategy by acquiring and preparing large-scale, ERCOT-connected sites. Management highlighted Barber Lake (300 MW approvals) and Reveille (70 MW approvals, scalable to 200 MW) and secured options totaling up to 1.5 GW for future growth. The firm simultaneously initiated active discussions with hyperscalers to secure its first HPC tenants.
+These steps positioned Cipher to convert energy-advantaged West Texas real estate into contracted AI data-center revenues in subsequent quarters, building an investable pipeline for long-term leases.</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-10-31</span>
+<span class="eh">Acquires Barber Lake (300 MW approvals) and Reveille (70 MW); options for up to 1.5 GW</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cipher completed the acquisition of the Barber Lake site with approvals for 300 MW and also acquired the Reveille site with 70 MW approvals (expandable to 200 MW). It further secured options to acquire three new sites totaling up to 1.5 GW, and reported progress in discussions with hyperscalers to land its first HPC tenants.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Completed acquisition of Barber Lake data center site</span>
+<span class="span">approvals for 300 MW</span>
+<span class="span">approved for 70 MW</span>
+<span class="span">potential to scale to 200 MW</span>
+<span class="span">total cumulative power capacity of up to 1.5 GW</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0037'>E0037</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0039'>E0039</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0039'>E0039</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Who is the unnamed counterparty for the “third AI data center campus lease with an investment-grade hyperscale tenant” disclosed in Q1’26?</li>
+<li>For Stingray, reconcile press mentions of a 100MW development with SEC investor materials specifying 70 MW Critical IT Load under contract—what is the gross capacity versus critical IT load?</li>
+<li>What are the specific ERCOT batch outcomes and timelines for interconnect approvals at pipeline sites beyond Black Pearl and Barber Lake?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Certain capacity figures are presented as critical IT load versus gross capacity; where both are cited (e.g., Barber Lake and Stingray), comparisons should consider the appropriate basis.</li>
+<li>Forward-looking items (e.g., ERCOT batch results, targeted rent commencement dates, and project schedules) are subject to change based on execution, regulatory timing, and counterparties.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,383 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>FIS US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Fidelity National Information Services Inc <span class='sub'>(FIS US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.314</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>12 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 5</span>
+<span class='chip'>single source: 8</span>
+<span class='chip'>web-only (unverified): 3</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>AI adoption signals and agentic features ahead of Anthropic tie-up</h2>
+<div class='range'>2026-02-24 → 2026-05-08</div>
+<div class='psum'>Management framed AI as an accelerant to FIS’s product roadmap, highlighting agentic authorization and refreshed fraud models with card-network collaboration, and describing strong bank interest across sizes. The company cited a POC at a large regional bank that combined core and issuing data to improve credit decisions—an early proof point for enterprise adoption.
+By May 2026, FIS publicly detailed a deeper agentic AI collaboration with Anthropic while, on earnings, it emphasized governance (human-in-the-loop, trust-by-design), internal productivity gains from Copilot in 2025, and a realistic monetization timeline with pilots in H2 2026 and revenue impact expected to take shape in 2027.</div>
+<div class="event t-single_source" id="E0008" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">FIS asserts ownership of AI agents/IP and distribution; Anthropic paid per token</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Management stated FIS will own agent IP, distribution, and regulated delivery; Anthropic will be compensated based on token usage. Leadership dismissed near-term disintermediation risk, positioning the partnership to preserve customer relationships while leveraging Claude.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">will own the agents, IP, distribution</span>
+<span class="span">Anthropic compensated on token usage</span>
+<span class="span">absolutely not.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">AI agent commercialization timeline: pilots H2’26; revenue impact in 2027; not in FY26 guide</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">FIS guided that first AI agents are targeted for the back half of 2026, with monetization not included in the 2026 outlook and revenue &quot;really&quot; taking shape in 2027. This sets expectations for a measured ramp aligned with regulated deployment requirements.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Monetization is not in the 2026 guide</span>
+<span class="span">back half of 2026</span>
+<span class="span">really taking shape in 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Governance approach: human-in-the-loop and trust-by-design architecture</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">FIS emphasized that banks remain in control via human-in-the-loop design and a trust-by-design architecture, indicating a regulated delivery posture for AI agents in financial services.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">human-in-the-loop</span>
+<span class="span">trust-by-design</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Copilot deployment in 2025 delivered engineering productivity lifts; no fully AI-enabled core yet</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported that deploying Copilot in 2025 yielded significant engineering productivity improvements being reinvested into product development and delivery speed, while noting that no fully AI-enabled core currently exists.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Copilot in 2025</span>
+<span class="span">significant engineering productivity lifts</span>
+<span class="span">no fully &quot;AI‑enabled&quot; core exists yet</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-08</span>
+<span class="eh">Risk flagged: regulated rollout depends on client adoption and evolving standards</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">FIS cautioned that scaling AI agents and digital asset platforms in regulated financial services hinges on client adoption and evolving regulatory standards, which could extend sales cycles or limit scope.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">depends on client adoption</span>
+<span class="span">evolving regulatory standards</span>
+<span class="span">extend sales cycles</span>
+<span class="span">limit scope</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0007" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">FIS and Anthropic to co-design agentic AI for financial crimes; early banks named</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">FIS announced it is working with Anthropic to bring agentic AI to banking, starting with a Financial Crimes AI Agent that compresses AML investigations from hours to minutes. Anthropic’s Applied AI team and FDEs are embedded to transfer knowledge so FIS can scale additional agents independently; BMO and Amalgamated Bank are among first adopters, with broader availability planned for H2 2026. Earnings remarks days later highlighted the broader collaboration and governed data/AI platform.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[0], filings[0]</div>
+<span class="span">working with Anthropic</span>
+<span class="span">Financial Crimes AI Agent</span>
+<span class="span">compress anti-money-laundering investigations from hours to minutes</span>
+<span class="span">BMO and Amalgamated Bank</span>
+<span class="span">H2 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">FIS positions AI as accelerant; agentic auth and fraud model updates with network partners</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On the Q4 2025 update, management characterized AI as an accelerant, citing work to flag agentic transactions for authorization and to update fraud models in collaboration with Visa/Mastercard. Initial use cases skew toward back-office efficiencies while meeting bank demand for real-time data access.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">AI as an accelerant, not a threat</span>
+<span class="span">Agentic transactions for authorization</span>
+<span class="span">fraud models with Visa/Mastercard</span>
+<span class="span">back-office efficiencies</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">POC: regional bank uses core + issuing data to improve credit line decisions</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted a proof-of-concept with a large regional bank that combines core and issuing data to inform credit line decisions—an early example of enterprise AI experimentation on FIS data estates.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">POC with a large regional bank</span>
+<span class="span">core + issuing data</span>
+<span class="span">credit line decisions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Broad bank interest in AI cited across sizes</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">FIS reported pervasive bank interest in AI use cases, reinforcing demand across its client base even as early applications skew to efficiency gains.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">there’s not a bank that I talk to</span>
+<span class="span">exploring what AI can do for them</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Generative AI commercialization with Microsoft/OpenAI</h2>
+<div class='range'>2025-03-10 → 2025-11-13</div>
+<div class='psum'>FIS entered production with generative AI in treasury management, launching Treasury GPT as a proprietary support tool embedded in Treasury and Risk Manager – Integrity Edition. The solution was built in collaboration with Microsoft and used Microsoft Azure OpenAI Service, with plans to migrate Integrity to Microsoft Azure to enhance scalability and performance.
+By late 2025, FIS extended commercial reach by listing GETPAID and Treasury and Risk Manager – Integrity Edition on Microsoft Marketplace, highlighting AI-based features such as Treasury GPT for enterprise customers seeking modern workflow tools.</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-13</span>
+<span class="eh">FIS lists Treasury &amp; Risk Manager - Integrity Edition on Microsoft Marketplace</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">FIS expanded distribution by making GETPAID and Treasury and Risk Manager - Integrity Edition available on Microsoft Marketplace. The listing emphasized AI-based capabilities, including Treasury GPT, as a driver of treasury workflow efficiency.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Microsoft Marketplace</span>
+<span class="span">Treasury and Risk Manager - Integrity Edition</span>
+<span class="span">AI-based solutions such as Treasury GPT</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-03-10</span>
+<span class="eh">FIS launches Treasury GPT with Microsoft Azure OpenAI Service; Integrity to migrate to Azure</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">FIS introduced Treasury GPT within Treasury and Risk Manager – Integrity Edition, built with Microsoft and powered by Microsoft Azure OpenAI Service. The company also announced plans to migrate Integrity to Microsoft Azure, positioning the product for improved performance and security while embedding generative AI into core workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1], web_search_findings[2]</div>
+<span class="span">Treasury GPT</span>
+<span class="span">Microsoft Azure OpenAI Service</span>
+<span class="span">collaboration with Microsoft</span>
+<span class="span">teamed up with Microsoft and OpenAI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational AI risk/compliance tooling (C3 AI)</h2>
+<div class='range'>2021-06-17 → 2024-12-31</div>
+<div class='psum'>FIS established an early AI foothold in risk and compliance by partnering with C3 AI to launch the FIS AML Compliance Hub for capital markets. The solution applied artificial intelligence to aggregate and analyze client data across KYC and AML systems.
+This period set the groundwork for later generative and agentic AI initiatives by demonstrating FIS’s willingness to collaborate with external AI specialists while leveraging its domain expertise in regulated financial workflows.</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2021-06-17</span>
+<span class="eh">FIS launches AML Compliance Hub leveraging C3 AI for financial crime detection</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">FIS announced the AML Compliance Hub, using C3 AI technology to improve KYC/AML detection efficiency for capital markets clients. The move marked FIS’s first in a new series of AI-based solutions for compliance and risk.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">FIS AML Compliance Hub</span>
+<span class="span">C3 AI</span>
+<span class="span">anti-money laundering (AML)</span>
+<span class="span">know your customer (KYC)</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the commercial terms of the Anthropic engagement (e.g., token pricing bands, minimum commitments, exclusivity, termination rights)?</li>
+<li>Will FIS’s governed data/AI platform support additional model providers beyond Anthropic and OpenAI (e.g., Gemini/DeepMind, Llama) for multi-model routing?</li>
+<li>What is the adoption trajectory and active user count for Treasury GPT post-Microsoft Marketplace listing, and what ARR contribution is attributable to it?</li>
+<li>What quantitative AML investigation time savings are observed in pilot banks (e.g., average case time reduction, false positive rates) for the Financial Crimes AI Agent?</li>
+<li>Have any regulators or auditors provided formal guidance/approvals on FIS’s human-in-the-loop and trust-by-design controls for AI agents in banking?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items stem from company press releases and earnings highlights; independent third-party validation and customer metrics are limited in the evidence set.</li>
+<li>No contractual dollar values, durations, or revenue contributions for Anthropic/OpenAI collaborations are disclosed in the sources provided.</li>
+<li>The term “Copilot” is referenced without naming the specific vendor, so provider mapping for this tool is not inferred.</li>
+<li>The 2021 C3 AI announcement is historical background; its current commercial scale and continuity are not evidenced here.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

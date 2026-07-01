@@ -1,0 +1,471 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>ERIC US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Telefonaktiebolaget LM Ericsson <span class='sub'>(ERIC US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.401</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>17 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 6</span>
+<span class='chip'>frontier 3</span>
+<span class='chip'>web 11</span>
+<span class='chip'>single source: 9</span>
+<span class='chip'>web-only (verified): 8</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Execution in 2026: Mistral tie-up, Google Cloud scale demo, and component headwinds</h2>
+<div class='range'>2026-02-19 → 2026-05-14</div>
+<div class='psum'>In 2026 Ericsson deepened AI execution with a new partnership with Mistral AI focused on code translation, AI-assisted development for 6G research, and agents for complex workflows, positioning Ericsson as a design partner on Mistral’s platform. At MWC 2026, Ericsson demonstrated a 1 Tbps 5G Core supporting 1 million concurrent subscribers running entirely on Google Cloud, highlighting AI-driven autonomy through real-time telemetry for traffic prediction and resource optimization.
+Quarterly disclosures flagged AI-linked semiconductor cost inflation pressuring Networks gross margins, with mitigation levers including pricing, product substitution to next-gen ASICs, and service-delivery efficiencies. Management reiterated that AI data center capex is not a direct revenue driver for Ericsson; rather, AI inference’s effect on network traffic and enterprise/mission-critical solutions provides tailwinds. Separately, sector read-throughs from peer results highlighted AI networking spillovers and investor interest benefiting ERIC.</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Sector read-through lifts ERIC; AI networking spillovers cited</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Investing.com reported that Cisco’s results improved sentiment for European networkers, with &quot;NOK ERIC higher&quot; and AI networking spillovers referenced, indicating broader demand tailwinds that can benefit Ericsson.</p>
+<p class="cav">⚠ Sector-level read-through; not a firm-specific disclosure.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">NOK ERIC higher</span>
+<span class="span">AI networking spillovers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0016" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Ericsson named 2026 Google Cloud Business Applications Partner of the Year for Telecom</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Ericsson received Google Cloud’s 2026 Business Applications Partner of the Year award for Telecommunications, citing a cloud‑native, AI‑powered ecosystem and leveraging Google’s AI-optimized infrastructure, including Cloud TPUs and GPUs, with plans to integrate Generative AI and policy-driven controls.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Business Applications Partner of the Year for Telecommunications</span>
+<span class="span">cloud‑native, AI‑powered ecosystem</span>
+<span class="span">Cloud TPUs and GPUs</span>
+<span class="span">Generative AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-17</span>
+<span class="eh">AI-linked semiconductor cost inflation pressures Networks gross margin</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management flagged rising component costs, especially AI-linked semiconductors, as a headwind to Networks gross margin and profitability outlook.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">rising component costs</span>
+<span class="span">semiconductors linked to AI demand</span>
+<span class="span">pressuring Networks gross margin</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-17</span>
+<span class="eh">Mitigation levers for AI-driven component headwinds: pricing, next-gen ASICs, efficiencies</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Ericsson outlined mitigation actions for component headwinds, including pricing discussions with customers and suppliers, product substitution to next‑gen ASICs, and service-delivery efficiencies.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">headwind from components</span>
+<span class="span">pricing discussions with customers and suppliers</span>
+<span class="span">product substitution (next‑gen ASICs)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-17</span>
+<span class="eh">No direct revenue from AI data center capex; benefits via inference-driven traffic and enterprise</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management noted that Ericsson does not expect direct benefit from AI data center capex; instead, tailwinds come from AI inference increasing network traffic and enterprise/mission-critical solutions.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">does not expect direct benefit from data‑center AI capex</span>
+<span class="span">inference drives network traffic</span>
+<span class="span">enterprise/mission‑critical solutions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-17</span>
+<span class="eh">Defense and critical-site AI opportunities: initial revenues 9–18 months; scale in 2–3 years</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Ericsson highlighted nearer-term defense and critical-site opportunities with potential initial revenues within 9–18 months and scaling over 2–3 years.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Defense/critical‑site opportunities</span>
+<span class="span">initial revenues potentially within 9–18 months</span>
+<span class="span">scaling over 2–3 years</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-17</span>
+<span class="eh">AI-native radios announced around MWC alongside core network wins</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Ericsson featured AI-native radios announced around MWC, indicating continued product innovation aligned with AI-driven network operations, alongside core network wins.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑native radios</span>
+<span class="span">announced around MWC</span>
+<span class="span">continued core network wins</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">Ericsson demonstrates 1 Tbps 5G Core running entirely on Google Cloud with AI-driven autonomy</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">At MWC 2026, Ericsson showcased a 1 Tbps 5G Core supporting 1 million concurrent subscribers, running fully on Google Cloud. The demo emphasized AI-driven autonomy, using real-time telemetry for traffic prediction and resource optimization.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">1 Terabit per second (Tbps) 5G Core</span>
+<span class="span">running entirely on Google Cloud</span>
+<span class="span">AI-Driven Autonomy</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-19</span>
+<span class="eh">Mistral AI and Ericsson partner to apply advanced AI across telecom use cases</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Ericsson and Mistral AI announced a partnership targeting network efficiency and trusted operations, including legacy code translation, AI-assisted development for 6G research, and custom AI agents. Ericsson serves as a design partner.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Mistral is not one of the six tracked frontier-LLM providers.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Mistral AI and Ericsson</span>
+<span class="span">make networks smarter, more efficient, and more trusted</span>
+<span class="span">design partner</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI policy backdrop and AI-native core SaaS launch</h2>
+<div class='range'>2025-01-23 → 2025-07-23</div>
+<div class='psum'>In early 2025, U.S. federal actions around AI — including EO 14179 and the national AI Action Plan — formed a policy backdrop for AI adoption across industries, including telecom infrastructure and services where Ericsson operates globally.
+Within this context, Ericsson and Google Cloud launched &quot;Ericsson On-Demand,&quot; delivering carrier-grade 5G core as-a-service on Google Cloud’s AI infrastructure with GKE. This productization step, alongside ongoing model advances like Meta’s Llama 4, positioned Ericsson’s core network software to leverage AI-native capabilities in a cloud-SaaS delivery model.</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-23</span>
+<span class="eh">White House unveils America’s AI Action Plan</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The U.S. AI Action Plan outlined national priorities on AI. While not directly tied to Ericsson’s offerings, it contributes to the regulatory environment affecting AI deployments across sectors, including telecom.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Policy context; indirect for Ericsson.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[0]</div>
+<span class="span">White House unveils America&#x27;s AI Action Plan</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-06-12</span>
+<span class="eh">Ericsson On-Demand: carrier-grade 5G core SaaS on Google Cloud AI infrastructure</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Ericsson launched &quot;Ericsson On-Demand,&quot; delivering core network services as a true SaaS platform built with Google Cloud’s AI infrastructure and GKE, managed end-to-end by Ericsson. The platform targets rapid 5G core deployment and AI-driven operations for CSPs.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Ericsson On-Demand</span>
+<span class="span">Google Kubernetes Engine (GKE)</span>
+<span class="span">AI infrastructure</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2025-04-05</span>
+<span class="eh">Meta Llama 4 released; Behemoth announced</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta released Llama 4 variants and announced a larger Behemoth model. As Ericsson experiments with Llama-based tooling internally, open model evolution informs future internal and customer-facing AI use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[1]</div>
+<span class="span">Llama 4 (Scout, Maverick) released</span>
+<span class="span">Behemoth (~2T) announced</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-23</span>
+<span class="eh">U.S. EO 14179 on AI: policy signal for AI adoption and infrastructure</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The White House signed EO 14179, removing barriers to American leadership in AI. While not Ericsson-specific, such regulatory signals shape adoption paths and compliance considerations for AI-enabled telecom solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ High-level policy context; indirect for Ericsson.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[2]</div>
+<span class="span">EO 14179 &quot;Removing Barriers to American Leadership in AI&quot; signed</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early AI productionization and internal LLMs</h2>
+<div class='range'>2024-04-09 → 2024-08-17</div>
+<div class='psum'>Ericsson received Google Cloud’s Industry Solution — Technology Partner of the Year Award for Telecommunications, highlighting joint work enabling AI/ML-driven telecom use cases and plans to further operationalize workloads on GDC Edge. The recognition reinforced the strategic alignment around cloud-native, AI-powered network operations.
+In parallel, Ericsson researchers documented an internal Llama-based RAG chatbot for CI/CD documentation, showing hands-on LLM experimentation and measurable performance on internal queries. These steps illustrate both external validation of Ericsson’s AI initiatives with Google Cloud and internal capability-building with open model families.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-08-17</span>
+<span class="eh">Ericsson details internal Llama-based RAG chatbot for CI/CD Q&amp;A</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">An Ericsson case study describes a Llama-based retrieval-augmented generation (RAG) chatbot tailored to internal CI/CD documentation, reporting accuracy across a defined ground-truth set and using Llama 2 in the design.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Research context; not necessarily production deployment.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Llama-based chatbot</span>
+<span class="span">retrieval-augmented generation (RAG)</span>
+<span class="span">Llama 2</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-04-09</span>
+<span class="eh">Ericsson wins Google Cloud Industry Solution — Technology Partner of the Year Award</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Ericsson was recognized by Google Cloud for its market-leading 5G portfolio and collaboration delivering AI/ML-driven use cases on GDC Edge. The award underscores joint progress enabling telecom workloads and AI-driven automation in networks.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Industry Solution — Technology Partner of the Year Award for Telecommunications</span>
+<span class="span">GDC Edge</span>
+<span class="span">AI/ML-driven use cases</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational Google Cloud telco-edge AI collaboration</h2>
+<div class='range'>2021-06-29 → 2023-09-20</div>
+<div class='psum'>Ericsson and Google Cloud established a foundational partnership to co-develop 5G and edge cloud solutions for CSPs and enterprises, explicitly linking 5G with AI/ML at the edge. Initial work included onboarding Ericsson 5G on Anthos and live edge pilots, framing AI as a core enabler for automated, cloud-native telecom workloads.
+By late 2023 the collaboration expanded to Cloud RAN on Google Distributed Cloud (GDC) with integrated automation and orchestration, and explicit leverage of Google Cloud AI/ML services like Vertex AI and BigQuery to operationalize massive RAN data sets. This period set the technical and commercial groundwork for AI-driven, cloud-delivered network functions that would be productized in subsequent years.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-09-20</span>
+<span class="eh">Ericsson expands Google Cloud collaboration to Cloud RAN on GDC Edge with AI/ML</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Ericsson announced an expanded partnership with Google Cloud to run Ericsson Cloud RAN on Google Distributed Cloud (GDC) Edge, integrating automation/orchestration and enabling CSPs to apply Vertex AI, BigQuery and other services to RAN data for operational benefits.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">expand successful collaboration with Cloud RAN offering</span>
+<span class="span">Google Distributed Cloud (GDC)</span>
+<span class="span">Vertex AI</span>
+<span class="span">AI/ML</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-06-29</span>
+<span class="eh">Ericsson and Google Cloud partner on 5G and edge cloud with AI/ML at the edge</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Ericsson and Google Cloud announced a partnership to co-develop 5G and edge cloud solutions for CSPs and enterprises, including functional onboarding of Ericsson 5G on Anthos and live edge pilots. The collaboration explicitly connects 5G with artificial intelligence and machine learning at the edge.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Google Cloud and Ericsson partner</span>
+<span class="span">Ericsson 5G on Anthos</span>
+<span class="span">artificial intelligence and machine learning at the edge</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the early commercial traction (customers, ARR, margins) for Ericsson On-Demand 5G core SaaS launched with Google Cloud?</li>
+<li>How materially will AI-linked semiconductor cost inflation affect Networks gross margin in 2H26–2027, and how effective are pricing and next‑gen ASIC substitutions?</li>
+<li>To what extent are Ericsson’s AI-native radios and AI-driven autonomy features being adopted by CSPs, and what measurable KPIs (energy savings, SLA improvements) are realized?</li>
+<li>How will Ericsson balance multi-model strategies (Mistral, Llama) with deep Google Cloud integration to avoid over-dependence on a single AI platform?</li>
+<li>Are there any contractual commitments or revenue-sharing terms with Google Cloud that could affect economics or control for Ericsson’s SaaS offerings?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Multiple items are Ericsson or Google Cloud press releases; independent third-party corroboration of performance and commercial outcomes may be limited.</li>
+<li>The Llama-based chatbot is an internal research case study and may not reflect production deployment.</li>
+<li>Regulatory/policy events are general and do not indicate firm-specific compliance outcomes.</li>
+<li>Platform-dependence risk with Google Cloud is inferred from repeated integrations; explicit contractual constraints or exclusivity were not disclosed in the provided sources.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

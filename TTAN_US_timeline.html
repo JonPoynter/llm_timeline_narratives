@@ -1,0 +1,761 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>TTAN US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>ServiceTitan Inc <span class='sub'>(TTAN US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.442</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>34 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 24</span>
+<span class='chip'>web-only (verified): 6</span>
+<span class='chip'>web-only (unverified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>2026 H1: Scaling Max and Virtual Agents; integrations and updated disclosures</h2>
+<div class='range'>2026-01-14 → 2026-06-28</div>
+<div class='psum'>Entering 2026, ServiceTitan’s market research signaled a wide runway, with most contractors not yet using AI or external LLMs. During 26Q4 and 27Q1, the company emphasized scaling Max and Virtual Agents (VA): automated onboarding, capacity doubling, and early monetization of VA within Usage. Management reported Max locations more than doubled in Q1 with a plan to double again in Q2, tested direct onboarding of new customers to Max, and reiterated an ambition for every customer to adopt Max. They framed margins as supported near‑term, noting AI features were additive to gross profit dollars and roughly consistent with overall gross margins.
+Ecosystem signals included Zapier integrations with Anthropic (Claude) and OpenAI (ChatGPT), plus Make.com’s OpenAI modules (ChatGPT, Sora, Whisper), broadening automation pathways for customers. Updated 10‑Q risk language again cited reliance on Microsoft/OpenAI and potential cost/availability constraints. Post‑earnings, shares rose in premarket trading after stronger‑than‑expected Q1 results and guidance. ServiceTitan’s AI positioning page underscored an embedded AI approach—&quot;Built in. Not bolted on.&quot;—even as filings acknowledged the third‑party LLM dependencies.</div>
+<div class="event t-web_only_verified" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-28</span>
+<span class="eh">AI positioning: built-in across the platform, not a layered third-party</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ServiceTitan’s AI page emphasized embedded, first‑party positioning—built in and powered by customer data—stating it is not a third‑party solution layered on top and runs through every part of the operating system.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Built in. Not bolted on.</span>
+<span class="span">third-party “solution” layered on top</span>
+<span class="span">runs through every part of your operating system</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0033" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-27</span>
+<span class="eh">Make.com adds ServiceTitan + OpenAI (ChatGPT, Sora, Whisper) modules</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Make.com highlighted modules integrating ServiceTitan with OpenAI services (ChatGPT, Sora, Whisper), including actions like generating Sora videos and creating jobs/tasks in ServiceTitan.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">OpenAI (ChatGPT, Sora, Whisper)</span>
+<span class="span">Generates a video using Sora models</span>
+<span class="span">Create a Job</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0032" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">Zapier posts ServiceTitan integration with ChatGPT (OpenAI)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Zapier published a no‑code integration to connect ServiceTitan with ChatGPT (OpenAI), supporting actions like image analysis within automated workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">integrate ServiceTitan with ChatGPT (OpenAI)</span>
+<span class="span">No-code AI automation</span>
+<span class="span">Analyze Images</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0029" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">10‑Q reiterates reliance on Microsoft/OpenAI; cost/availability risks</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">The June 2026 Form 10‑Q again highlighted that AI solutions rely on third‑party ML algorithms and LLMs from parties like Microsoft and OpenAI, warning that if such assets become expensive, burdensome, or inefficient, ServiceTitan may be unable to continue to provide AI solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">pricing_pressure_from_provider</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">our AI solutions rely on third-party proprietary machine learning algorithms and LLMs</span>
+<span class="span">such as Microsoft and OpenAI</span>
+<span class="span">become expensive, burdensome, or inefficient</span>
+<span class="span">unable to continue to provide our AI solutions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">Shares rise premarket after stronger-than-expected Q1 and guidance</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Following its Q1 report and above‑consensus guidance, ServiceTitan’s stock rose roughly 12.5% premarket amid broader market caution ahead of payrolls.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">ServiceTitan rose roughly 12.5% premarket</span>
+<span class="span">after reporting stronger‑than‑expected Q1 results</span>
+<span class="span">issuing revenue guidance above estimates</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">Max locations more than doubled in Q1; plan to double again in Q2</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ServiceTitan reported Max locations more than doubled in Q1 with another doubling targeted in Q2, while reinforcing organizational velocity and operating efficiency.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">more than doubled the number of locations</span>
+<span class="span">double again in Q2</span>
+<span class="span">improved organizational velocity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">Demand for Max exceeds onboarding; deliberate ROI-first rollout</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted a deliberate, ROI‑first rollout for Max, citing far more demand than onboarding capacity and a focus on brand protection through successful implementations before scaling.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ROI-first rollout</span>
+<span class="span">way more demand than what we&#x27;ve been onboarding</span>
+<span class="span">protecting Max’s brand</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">Testing direct onboarding of select new customers to Max</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ServiceTitan disclosed early tests to place some new customers directly onto Max at implementation, noting encouraging initial signals.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">early tests of putting select new customers directly onto Max</span>
+<span class="span">encouraging early signals</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">AI margin profile: additive to gross profit; roughly consistent at scale</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management said Max and VA are additive to gross profit dollars and, at scale, roughly consistent with company gross margins, reducing near‑term margin concern from AI usage.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">additive to gross profit dollars</span>
+<span class="span">&#x27;roughly consistent&#x27; with total gross margins</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">No near-term AI token cost compression expected on margins</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">ServiceTitan does not expect AI token usage to compress margins near term, reiterating that Max and VA are additive and broadly consistent with overall gross margins.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">does not expect AI token usage to compress margins near term</span>
+<span class="span">additive to gross profit dollars</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">Usage take rates steady; AI usage supports outgrowing GTV in FY27</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said usage take rates held versus Q4 and are expected to remain around current levels, with AI usage and ecosystem revenues supporting usage revenue outgrowing GTV in FY27.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Usage take rates held vs. Q4</span>
+<span class="span">outgrowing GTV in FY27</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">Virtual Agents: dozens of production use cases; GTM expanded</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">After limited early access in Q4, ServiceTitan built dozens of production VA use cases and expanded go‑to‑market late in the quarter.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">dozens of production use cases</span>
+<span class="span">expanded go-to-market</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">VA adoption path: overflow/after-hours first, then expand</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects many customers to start VA with overflow/after‑hours and expand usage as CSR attrition and ROI reinforce adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">start with overflow/after-hours</span>
+<span class="span">CSR attrition and ROI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">AI-enabled internal &#x27;software factory&#x27; and higher talent density</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ServiceTitan described deploying AI across the product lifecycle—requirements, coding, testing, monitoring—within a &#x27;software factory&#x27; approach, supported by increased talent density and resiliency.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">increasing &#x27;talent density&#x27;</span>
+<span class="span">software factory</span>
+<span class="span">requirements, coding, testing, monitoring</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">Competitive stance: not focused on lower end of the market</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Leadership pushed back on low‑end competition relevance, noting ServiceTitan does not really sell to the lower end and views AI margin risk as manageable near term.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">pushed back on low-end competition relevance</span>
+<span class="span">We don’t really sell to the lower end of the market</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">Monitoring data-center build labor tightness; minimal impact expected</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management is monitoring data‑center build‑out labor tightness but does not expect a meaningful near‑term impact. They also noted residential AI use cases are more mature than commercial.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Data-center build-out labor tightness</span>
+<span class="span">not expected to have a meaningful impact near term</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">Aim for every customer on Max; direct onboarding tests continue</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ServiceTitan aims ultimately to have every customer on Max and is testing onboarding some new customers directly onto Max, alongside a targeted doubling of locations in Q2.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">aims ultimately to have every customer on Max</span>
+<span class="span">testing onboarding some new customers directly onto Max</span>
+<span class="span">Expect another doubling of locations in Q2</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">Increased 2026 investment in Max and AI inference within margin targets</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">ServiceTitan increased investment in Max and AI inference through the year while still targeting full‑year incremental operating margins above the initial framework.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Increased investment in Max and AI inference</span>
+<span class="span">full-year incremental operating margins</span>
+<span class="span">above the initial framework</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Max focus shifts to automated onboarding; capacity doubling in Q1</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">After validating ROI in a high‑touch pilot, ServiceTitan prioritized efficient, largely automated onboarding for Max, with capacity doubling in Q1 and scale paced to onboarding throughput.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">efficient and largely automated onboarding</span>
+<span class="span">capacity is doubling in Q1</span>
+<span class="span">onboarding throughput</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Max pricing aligned with core; may evolve over time</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management said Max is currently priced like core ServiceTitan and tied to field technicians, while noting pricing could evolve over time.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">priced like core ServiceTitan</span>
+<span class="span">may evolve over time</span>
+<span class="span">tied to techs in the field</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Virtual Agents usage-based; minimal FY27 contribution assumed</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Virtual Agents are metered as a usage add‑on, with the CFO embedding very little VA contribution in the FY27 outlook given early stage and forecasting difficulty.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">usage/consumption add-on</span>
+<span class="span">very little</span>
+<span class="span">FY27 outlook</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Max adopters double monthly subscription spend at full ramp</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted that the average customer adopting Max doubles monthly subscription spend at full ramp, excluding expansion in technician count.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">adopting Max “doubles” monthly subscription spend</span>
+<span class="span">full ramp</span>
+<span class="span">excluding technician expansion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Usage revenue could outpace GTV in FY27 on partners and early AI</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CFO indicated usage revenue could surpass GTV growth in FY27 due to partner monetization and early AI consumption from Virtual Agents.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">usage revenue could outpace GTV growth in FY27</span>
+<span class="span">early AI consumption from Virtual Agents</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Early monetization from Virtual Agents within Usage</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ServiceTitan cited strong Pro add‑on adoption and early monetization from AI Virtual Agents within Usage, alongside growth in Commercial and newer trades.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">early monetization from Virtual Agents (AI) within Usage</span>
+<span class="span">strong adoption of Pro add-ons</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">AI-native/DIY competition not impacting pipeline or conversions</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reported no observable impact from AI‑native or DIY competition on its pipeline or conversions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">No impact seen</span>
+<span class="span">pipeline or conversions.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Leadership emphasizes long game on Max; hands-on and real</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Ara emphasized a long‑term approach to Max execution and described recent hands‑on involvement, calling the initiative &quot;absolutely real.&quot;</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">we’re playing the long game</span>
+<span class="span">absolutely real</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">FY27 plan: higher AI inference/tooling spend within 25% framework</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">ServiceTitan maintained its 25% incremental margin framework for FY27 while increasing AI inference/tooling spend and shifting investment priority toward R&amp;D and AI execution under the new CTO.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">25% incremental margin framework</span>
+<span class="span">higher AI inference/tooling spend</span>
+<span class="span">under the new CTO</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Risk: Pro purchases may be deferred due to Max capacity constraints</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management acknowledged possible near‑term deferrals of some Pro purchases tied to Max capacity constraints, prioritizing ROI and repeatable execution over near‑term sales.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">deferral of some Pro purchases</span>
+<span class="span">Max capacity constraints</span>
+<span class="span">prioritizes nailing ROI</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0031" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-03-08</span>
+<span class="eh">Zapier posts ServiceTitan integration with Anthropic (Claude)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Zapier listed a no‑code integration connecting ServiceTitan with Anthropic (Claude), enabling workflows that can trigger from ServiceTitan events and send messages via Claude.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">integrate ServiceTitan with Anthropic (Claude)</span>
+<span class="span">A trigger is the event that starts your Zap</span>
+<span class="span">Send Message</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-14</span>
+<span class="eh">Roofing and Exteriors report: majority not using AI or external LLMs</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">ServiceTitan reported most roofing/exteriors contractors had not adopted AI or external LLMs, indicating significant greenfield adoption potential. A minority use external tools like ChatGPT or Gemini; only a small share use AI features built into their CRM.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">79% Not Using AI or External LLMs</span>
+<span class="span">21% of surveyed contractors</span>
+<span class="span">4% using AI features</span>
+<span class="span">25% use external LLM tools</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Risk disclosures on third‑party LLM reliance and data exposure</h2>
+<div class='range'>2025-06-12 → 2025-06-12</div>
+<div class='psum'>In its June 2025 Form 10‑Q, ServiceTitan explicitly disclosed reliance on third‑party machine learning algorithms and LLMs, naming Microsoft and OpenAI. The filing warned that if such third‑party assets become unavailable or impractical, AI solutions could be impacted, and highlighted potential cybersecurity incidents implicating personal information and possible litigation. This cemented formal risk language around dependence on external AI providers and associated reputational and regulatory exposure.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-06-12</span>
+<span class="eh">10‑Q details reliance on Microsoft/OpenAI LLMs and cybersecurity risks</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">ServiceTitan’s 10‑Q states its AI solutions rely on third‑party ML algorithms and LLMs, citing Microsoft and OpenAI, and warns that unavailability or inefficiency could harm its ability to provide AI solutions. It also flags that AI usage may lead to cybersecurity incidents implicating personal information and litigation.</p>
+<div class="ev-ch">channels: <span class="chchip">pricing_pressure_from_provider</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">third-party proprietary machine learning algorithms and LLMs</span>
+<span class="span">such as Microsoft and OpenAI</span>
+<span class="span">may result in future cybersecurity incidents</span>
+<span class="span">implicate the personal information</span>
+<span class="span">could lead to litigation</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundation of Titan Intelligence and early Azure/OpenAI build-out</h2>
+<div class='range'>2022-04-22 → 2024-10-01</div>
+<div class='psum'>ServiceTitan launched Titan Intelligence (TI) in April 2022 as a suite of AI capabilities embedded across its platform, introducing features such as Smart Dispatch (Beta), Price Insights, and Marketing Pro Ads (Beta). This established an internal AI product foundation focused on trade-specific workflows rather than generic tooling.
+By mid-2024, ServiceTitan publicly detailed a generative AI application, Second Chance Leads, built on Microsoft Azure AI using Azure OpenAI Service and Azure AI prompt flow, indicating the use of third‑party LLMs (OpenAI via Azure) for production features. In October 2024 at Pantheon, the company unveiled an AI assistant spanning its suite alongside Sales Pro and call center applications, all under the Titan Intelligence brand and with partner Siro powering some capabilities—signaling continued expansion of AI features across customer-facing workflows.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-10-01</span>
+<span class="eh">Pantheon 2024: AI assistant, Sales Pro and call center AI unveiled</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">At Pantheon 2024, ServiceTitan announced a cross-suite AI assistant and new sales and call center applications under Titan Intelligence. Sales Pro is powered by Siro, indicating partner-enabled AI in field technician support.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Powerful New AI Solutions</span>
+<span class="span">AI assistant</span>
+<span class="span">Powered by Titan Intelligence</span>
+<span class="span">Sales Pro</span>
+<span class="span">Powered by Siro</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-06-25</span>
+<span class="eh">Azure OpenAI powers ServiceTitan’s Second Chance Leads</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Microsoft’s customer story detailed ServiceTitan’s use of Azure AI and Azure OpenAI Service to build Second Chance Leads and other generative apps (chat/voice bots, content generation, RAG). This confirms OpenAI LLMs, via Azure, in production features.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Second Chance Leads</span>
+<span class="span">Azure OpenAI Service</span>
+<span class="span">Azure AI prompt flow</span>
+<span class="span">generative AI tool</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2022-04-22</span>
+<span class="eh">ServiceTitan launches Titan Intelligence (TI) with AI-powered features</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">At Pantheon 2022, ServiceTitan announced Titan Intelligence, embedding trade-specific AI across its platform, including Smart Dispatch (Beta), Price Insights, and Marketing Pro Ads (Beta). This marked the firm&#x27;s formal AI product foundation.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Titan Intelligence (TI)</span>
+<span class="span">Smart Dispatch (Beta)</span>
+<span class="span">Price Insights</span>
+<span class="span">Marketing Pro Ads (Beta)</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0032'>E0032</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which specific foundation models (e.g., GPT-4.x, Claude variants, other LLMs) power Max and Virtual Agents in production as of mid-2026, and through which intermediaries (Azure OpenAI vs. direct)?</li>
+<li>What portion of Max customers are being onboarded directly to Max at initial implementation, and how does churn/expansion compare to non-Max cohorts?</li>
+<li>What is the per-interaction or per-minute cost structure for VA across call center use cases, and how sensitive are gross margins to provider token price changes?</li>
+<li>How much of Usage revenue outperformance vs GTV in FY27 is expected to come from AI (VA and ecosystem) versus non-AI partners?</li>
+<li>Are there formal multi-model hedging strategies (e.g., Claude/Gemini/Llama) beyond Zapier/Make ecosystem integrations, and are any contracts in place to enable rapid switching?</li>
+<li>What safeguards and data governance controls are in place to mitigate the cybersecurity and personal information risks called out in the 10‑Q filings?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Zapier and Make integrations indicate ecosystem availability rather than direct, first‑party productized partnerships; actual enterprise adoption volumes are not disclosed.</li>
+<li>Marketing pages and conference announcements (Pantheon) may emphasize roadmap and positioning; actual GA dates, attach rates, and revenue contributions may differ.</li>
+<li>10‑Q risk language is generalized and precautionary by design; it does not quantify contract terms, costs, or the magnitude of potential disruptions.</li>
+<li>The AI positioning page asserts built‑in capabilities while filings acknowledge reliance on third‑party LLMs (e.g., Microsoft/OpenAI); the exact split between first‑party vs. third‑party model usage is not disclosed.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

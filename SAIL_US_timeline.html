@@ -1,0 +1,639 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>SAIL US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>SailPoint Inc <span class='sub'>(SAIL US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.404</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>27 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>single source: 20</span>
+<span class='chip'>web-only (verified): 4</span>
+<span class='chip'>web-only (unverified): 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Early FY27 momentum, pricing posture, and pipeline inflection</h2>
+<div class='range'>2026-06-01 → 2026-06-30</div>
+<div class='psum'>In the first quarter of fiscal 2027, SailPoint reported early momentum from AI/agentic capabilities with a quarter‑over‑quarter doubling of the agentic pipeline. Management reiterated that guidance assumed only minimal near‑term agentic contribution with greater revenue impact expected in the back half of FY2027. Pricing and monetization emphasis continued to shift toward non‑human identities with consumption‑based metrics and bundled entitlements.
+ARR and deferred revenue metrics continued to trend upward, while risks included ramp timing and execution against the AI roadmap. Buyer personas expanded beyond identity teams to CISOs, CIOs, and AI program owners, supported by an AI/security overlay team.</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: Early momentum from AI/agentic capabilities cited</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted robust demand for identity security and early momentum tied to agentic capabilities in the quarter.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">robust demand for identity security</span>
+<span class="span">early momentum from new AI/agentic capabilities.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: Agentic pipeline doubled quarter over quarter</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Following the launch of SailPoint’s Agentic framework, interest and evaluations increased and the pipeline for AI‑related offerings doubled sequentially.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Agentic framework</span>
+<span class="span">doubled quarter over quarter.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: Guidance assumes minimal near-term agentic contribution</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reiterated that near‑term guidance bakes in only minimal agentic contribution, with more tangible revenue impact expected later in FY2027.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">guidance bakes in only minimal near‑term</span>
+<span class="span">agentic contribution</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: Monetization to skew to non-human identities; consumption component</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">SailPoint indicated monetization will skew to non‑human identities with a consumption component, referencing performance metrics and bundled entitlements in the new pricing approach.</p>
+<div class="ev-ch">channels: <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">skew toward non‑human identities</span>
+<span class="span">consumption component</span>
+<span class="span">bundled entitlements within new pricing.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: Buyer personas expanding to CISOs, CIOs, and AI program owners</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SailPoint reported buyer expansion beyond identity teams to CISOs, CIOs, and AI program owners, supported by an overlay field team with deeper AI/security expertise.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Buyer personas are expanding</span>
+<span class="span">CISOs, CIOs and AI program owners</span>
+<span class="span">overlay field team</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: Consumption-based pricing metrics for non-human identities</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management outlined consumption‑based pricing tied to multiple performance metrics around non‑human identity usage.</p>
+<div class="ev-ch">channels: <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Consumption‑based pricing</span>
+<span class="span">multiple performance metrics</span>
+<span class="span">non‑human identity usage</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: Expect more visible agentic/AI revenue impact in FY2027 H2</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects agentic/AI revenue impact to become more visible in the back half of fiscal 2027 while maintaining minimal near‑term contribution in guidance.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">more visible in the back half of fiscal 2027</span>
+<span class="span">minimal near‑term contribution</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: Risk—Minimal near-term agentic contribution; ramp risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Guidance assumes minimal near‑term contribution from Agentic/non‑human identity offerings; management warned a slower ramp could undercut the expected uplift to growth and mix.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Guidance assumes minimal near‑term contribution</span>
+<span class="span">slower ramp‑up could prevent the expected uplift</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: Emerging offerings contributed 20% of net new ARR</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted that emerging offerings represented 20% of net new ARR in Q1, aided by modernization pull‑through.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">20% of net new ARR</span>
+<span class="span">emerging offerings.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: ARR climbs to $1.163B (+26% y/y); SaaS ARR $781M (+36% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.2B · run_rate_annual</span> <span class="badge">neutral</span></div>
+<p class="narr">SailPoint reported ARR of $1.163B (+26% y/y) with SaaS ARR of $781M (+36% y/y), reinforcing growth ahead of anticipated AI monetization.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$1.163B (+26% y/y)</span>
+<span class="span">SaaS ARR $781M (+36% y/y).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: Deferred revenue—current $501.777M; non-current $33.529M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$502M · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Deferred revenue stood at $501.777M current and $33.529M non‑current, modestly down from fiscal year‑end, supporting near‑term visibility.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">current $501.777M</span>
+<span class="span">non-current $33.529M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">27Q1: Rising governance needs for non-human identities and AI agents</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO highlighted increasing governance requirements for non‑human identities and AI agents, consistent with the firm’s agentic governance strategy.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">increasing governance needs</span>
+<span class="span">non‑human identities and AI agents.</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Connector expansion and Claude Compliance integration</h2>
+<div class='range'>2026-04-01 → 2026-05-31</div>
+<div class='psum'>SailPoint broadened agent governance coverage with a Databricks connector while continuing to emphasize out‑of‑the‑box integrations across major AI and agent platforms. The company then announced and documented a direct connector to Anthropic’s Claude Compliance API for Claude Enterprise customers, extending identity governance deeper into AI platform access, roles, groups, and managed agents.
+These steps reinforced SailPoint’s role as a cross‑platform governance layer while also underscoring specific dependence and traction with Anthropic’s enterprise stack.</div>
+<div class="event t-web_only_verified" id="E0015" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Claude Compliance API connector for Claude Enterprise goes live; docs detail scope</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">SailPoint launched a connector for the Anthropic Claude Compliance API to govern Claude Enterprise access and usage. Documentation details support for access governance across users, compliance roles and groups, and Claude Managed Agents.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[1]</div>
+<span class="span">Claude Compliance API connector</span>
+<span class="span">Claude Enterprise</span>
+<span class="span">supports access governance</span>
+<span class="span">compliance roles, compliance groups, and Claude Managed Agents</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-21</span>
+<span class="eh">Databricks connector extends agent governance; broad platform coverage reiterated</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SailPoint introduced a Databricks connector, adding to its family of integrations. The post reiterated coverage for AWS Bedrock/AgentCore and Google Vertex AI Agents among others, emphasizing turnkey aggregation of identity/agent metadata.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">The Databricks connector</span>
+<span class="span">Vertex AI Agents</span>
+<span class="span">Bedrock Agents, Bedrock AgentCore</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Agentic connectors, AWS SCA, and Shadow AI controls</h2>
+<div class='range'>2026-03-09 → 2026-03-31</div>
+<div class='psum'>SailPoint launched and highlighted extensive agentic AI integrations across leading platforms and announced a multi‑year strategic collaboration agreement (SCA) with AWS to make SailPoint a preferred identity governance layer for agentic AI on AWS. It simultaneously introduced Shadow AI Remediation to discover and control unsanctioned usage of tools such as ChatGPT, Claude, and Gemini.
+Quarterly filings framed identity as the control plane for the AI era, cited early ARR contributions from emerging products, and flagged regulatory alignment with NIST guidance for auditing AI agents. Management also identified execution risk on the AI roadmap and clarified pricing posture for non‑human identities.</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-18</span>
+<span class="eh">26Q4: Identity platform positioned as AI-era control plane; strong ARR growth</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management positioned SailPoint as the control plane for an AI‑driven enterprise environment, citing a landmark year with 28% ARR and 38% SaaS ARR growth. This reinforced the company’s role in governing AI‑era identity at scale.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">“landmark year”</span>
+<span class="span">28% ARR growth and 38% SaaS ARR growth</span>
+<span class="span">control plane for an AI-driven enterprise environment</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-18</span>
+<span class="eh">26Q4: Emerging products ~17% of net new ARR</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited early traction with emerging products contributing roughly 17% of Q4 net new ARR, with expectations to ramp through FY2027.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">17% of Q4 net new ARR</span>
+<span class="span">expected to ramp through FY2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-18</span>
+<span class="eh">26Q4: NIST guidance cited for AI agent auditing</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">SailPoint referenced new NIST guidance shaping the auditing of AI agents, underscoring alignment to evolving governance standards.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">referenced new NIST guidance</span>
+<span class="span">auditing of AI agents</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-18</span>
+<span class="eh">26Q4: Non-human identity pricing is not metered</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management stated pricing for non‑human identities is not metered and noted a significant non‑human to human ratio, without disclosing precise unit pricing.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">pricing is not a metered model</span>
+<span class="span">non‑human to human ratio will be &quot;significant,&quot;</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-18</span>
+<span class="eh">26Q4: FY2027 framed as a &#x27;proof&#x27; year for scaled AI deployments</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects AI identity modules to ramp through FY2027, with FY2027 framed as a &#x27;proof&#x27; year for scaled deployments across customers.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">ramp through FY2027</span>
+<span class="span">“proof” year for scaled AI deployments.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-18</span>
+<span class="eh">26Q4: ARR reaches $1.125B (+28% y/y); SaaS ARR +38%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.1B · run_rate_annual</span> <span class="badge">neutral</span></div>
+<p class="narr">SailPoint reported ARR of $1.125B (+28% y/y) and SaaS ARR of $746M (+38% y/y) as core forward indicators.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">$1.125B</span>
+<span class="span">SaaS ARR of $746M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-18</span>
+<span class="eh">26Q4: Deferred revenue totals $555.2M (~24% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$555M · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Deferred revenue was $555.2M at 2026‑01‑31, up ~24% y/y, supporting near‑term revenue visibility.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">$555.2M</span>
+<span class="span">up ~24% y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-18</span>
+<span class="eh">26Q4: Risk flagged on AI roadmap delivery and integration</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that delays or missteps in AI‑enabled product releases or integrations could pressure net retention and ARR growth.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">delays or missteps</span>
+<span class="span">could pressure net retention</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="openai_chatgpt anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">Launches Shadow AI Remediation to control unsanctioned use of ChatGPT, Claude, Gemini</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">SailPoint introduced Shadow AI Remediation to discover and secure the use of unauthorized AI tools, citing platforms like ChatGPT, Claude, and Gemini. The product provides real‑time visibility and policy control, including monitoring of document uploads.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">SailPoint Shadow AI Remediation</span>
+<span class="span">unsanctioned generative AI tools like ChatGPT and Gemini</span>
+<span class="span">providing real-time visibility</span>
+<span class="span">monitoring document uploads</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">SailPoint and AWS sign multi-year SCA to unify governance for agentic AI on AWS</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SailPoint and AWS entered a multi‑year Strategic Collaboration Agreement (SCA) establishing SailPoint as a preferred identity governance solution for agentic AI builds on AWS. The companies plan deeper integrations including Bedrock AgentCore to govern human and agent identities.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">multi-year strategic collaboration agreement (SCA)</span>
+<span class="span">preferred identity governance solution for agentic AI builds on AWS</span>
+<span class="span">integrates with AWS AgentCore (Bedrock AgentCore)</span>
+<span class="span">Human-Agent attribution</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-09</span>
+<span class="eh">New adaptive identity innovations include connectors across Bedrock, Vertex AI, and more</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">SailPoint announced AI-powered identity innovations with new non‑human identity connectors spanning Amazon Bedrock, Google Vertex AI, Microsoft Foundry, Salesforce Agentforce, ServiceNow AI Platform, and Snowflake Cortex AI—expanding agent governance coverage.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Non-Human Identities: New connectors</span>
+<span class="span">Amazon Bedrock, Google Vertex AI</span>
+<span class="span">ServiceNow AI Platform</span>
+<span class="span">Snowflake Cortex AI</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-09</span>
+<span class="eh">Blog details turnkey agent connectors including Copilot Studio, Bedrock AgentCore, and Vertex AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A SailPoint blog detailed native connectors for agent platforms with turnkey onboarding, highlighting Microsoft Copilot Studio, AWS Bedrock/AgentCore, Azure AI Foundry, Salesforce Agentforce, ServiceNow Agents, Snowflake Cortex, and Google Cloud Vertex AI.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Native connectors deliver turnkey aggregation.</span>
+<span class="span">Microsoft Copilot Studio Agent</span>
+<span class="span">AWS Bedrock AgentCore</span>
+<span class="span">Google Cloud (GCP) Vertex AI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundation: Model sourcing and provider baseline</h2>
+<div class='range'>2025-03-31 → 2026-03-08</div>
+<div class='psum'>SailPoint publicly described its AI model sourcing posture, noting a mix of proprietary, open‑source, and third‑party large language models. The firm disclosed that its generative AI features at that time were running on Anthropic&#x27;s Claude models provisioned via Amazon Bedrock, signaling an early tilt toward Anthropic for gen‑AI functionality.
+This foundational disclosure established provider specificity and reliance on third‑party hosted models, while leaving room for broader multi‑model use through private cloud deployment for other AI components.</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-03-31</span>
+<span class="eh">Trust Center: Generative AI features run on Anthropic Claude via Amazon Bedrock</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">SailPoint’s Trust Center detailed its AI model sourcing: proprietary, open‑source, and third‑party LLMs, stating that current generative AI features run on Anthropic Claude provided by Amazon Bedrock. This set an initial provider dependency baseline on Anthropic for gen‑AI features.</p>
+<div class="ev-ch">channels: <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Who provides the AI models used in SailPoint’s AI features?</span>
+<span class="span">Third-party large-language models that are hosted by Amazon Bedrock.</span>
+<span class="span">Anthropic Claude family of models</span>
+<span class="span">provided by Amazon Bedrock.</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the commercial terms, co-sell targets, and expected revenue impact of the multi-year AWS SCA for agentic AI governance?</li>
+<li>How many Claude Enterprise tenants have adopted the Claude Compliance API connector, and what is the pipeline-to-win conversion for this integration?</li>
+<li>What portion of ARR or net new ARR is attributable to agentic/AI modules in FY2026–FY2027, and how does that trend by quarter?</li>
+<li>Which specific performance metrics govern consumption-based pricing for non-human identities (e.g., agent actions, API calls, policies evaluated), and what are the current rate cards?</li>
+<li>Will SailPoint introduce direct governance or compliance connectors for additional LLM providers (e.g., OpenAI enterprise offerings, Google Gemini for Workspace/Vertex) beyond current monitoring and agent connectors?</li>
+<li>How is Shadow AI Remediation priced and packaged, and what early adoption or usage telemetry (discoveries, policy remediations) is observable across large enterprises?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Most integration and product items are sourced from SailPoint press releases, blogs, and documentation; independent corroboration via third-party news was not present in the inventory.</li>
+<li>ARR and deferred revenue figures are company-reported and not segmented between AI and non-AI products, limiting precision of AI-specific revenue attribution.</li>
+<li>Providers_touched mapping uses the closest provider taxonomy (e.g., Google Vertex AI under google_gemini_deepmind); connectors to broader cloud agent platforms may not imply direct LLM dependency.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

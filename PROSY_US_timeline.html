@@ -1,0 +1,501 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>PROSY US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Prosus NV <span class='sub'>(PROSY US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.402</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>18 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 3</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 9</span>
+<span class='chip'>single source: 10</span>
+<span class='chip'>web-only (verified): 7</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Multi-model orchestration, scale-up, and capital deployment</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>Prosus began operationalizing a multi-model strategy across the portfolio. OLX built automated ad creation on Google’s Gemini stack, while Prosus launched ToqanClaw — an application builder on its Toqan platform that routes across 20+ models and leverages Prosus’s Large Commerce Model trained on extensive commerce interaction data. 
+The firm complemented product initiatives with capital allocation: co-leading Equal AI’s $30M Series B in India and investing €400m into Alan at a €5.5b (~$6.3b) valuation to accelerate AI-enabled health. Prosus also announced a $5B buyback and continued asset disposals to reduce Tencent dependence, underscoring a balanced approach to AI investment and shareholder returns.</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-29</span>
+<span class="eh">Prosus targets $5B buyback and bolt-on deals to lessen Tencent reliance</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Prosus set a $5 billion share buyback target over the coming year, plans further noncore asset sales, and continues bolt-on deals/minority stakes to build operations and reduce dependence on Tencent holdings.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">$5 billion in share buybacks</span>
+<span class="span">sell more noncore assets</span>
+<span class="span">$2 billion of such disposals</span>
+<span class="span">net profit of $11.64 billion</span>
+<span class="span">revenue up to $9.705 billion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">Prosus invests €400m in Alan at a €5.5b (~$6.3b) valuation</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6.3B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Prosus announced a €400 million investment in French health insurer Alan at a €5.5 billion (~$6.3 billion) valuation, reinforcing a push into AI-enabled preventive healthcare and international expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<p class="cav">⚠ Exact USD value of the €400m investment not provided; valuation figure used for magnitude.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">€400 million</span>
+<span class="span">€5.5 billion (about $6.3 billion) valuation</span>
+<span class="span">annual recurring revenue was ~€800 million</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0016" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2026-06-23</span>
+<span class="eh">Prosus launches ToqanClaw, routing across 20+ models with LCM under the hood</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
+<p class="narr">Prosus introduced ToqanClaw on its Toqan platform, positioned as OpenClaw-inspired tools for 5 million merchants. It leverages Prosus’s Large Commerce Model and routes tasks across 20+ models, including named models such as DeepSeek.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ LCM training claims and cost advantages are company-provided marketing statements.</p>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[3]</div>
+<span class="span">Toqan Claw</span>
+<span class="span">first in Europe to make OpenClaw inspired tools</span>
+<span class="span">5 million restaurants, merchants and entrepreneurs</span>
+<span class="span">20+ models</span>
+<span class="span">DeepSeek, Qwen and Kimi</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-12</span>
+<span class="eh">Prosus Ventures co-leads Equal AI’s $30M Series B to scale AI call assistant</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$30M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Equal AI raised $30 million in a round co-led by Prosus Ventures, citing over 1 million MAUs and 350,000 DAUs for its AI call assistant as it expands into broader agentic use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<p class="cav">⚠ Prosus’s exact check size within the round not specified.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">$30 million Series B</span>
+<span class="span">co-led by Prosus Ventures</span>
+<span class="span">AI call assistant</span>
+<span class="span">1 million monthly active users</span>
+<span class="span">350,000 daily active users</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0014" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">OLX builds automated ad creation using Google Gemini Enterprise Agent Platform</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google highlighted OLX’s automated ad creator using Gemini Enterprise Agent Platform and Gemini Flash, combining image analysis with user input to generate listings with reported 88% precision.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">OLX</span>
+<span class="span">Gemini Enterprise Agent Platform</span>
+<span class="span">Gemini Flash</span>
+<span class="span">88% precision</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Strategy articulation and AI-first operating model</h2>
+<div class='range'>2025-01-01 → 2025-12-31</div>
+<div class='psum'>Prosus publicly framed its AI strategy around the application layer, emphasizing ecosystems built atop foundational models. The company’s venture arm led new AI investments (e.g., Luzia), reinforcing exposure to consumer AI assistants. 
+In November 2025, management announced a group-wide AI-first operating model, reported the deployment of over 20,000 agents under its Large Commerce Model (LCM), and flagged both opportunities and risks from rapid AI advances. Prosus also previewed deeper strategy updates and an acceleration plan in India, aiming for the region to lead group deployments, while acknowledging limited disclosure on AI spend and KPIs.</div>
+<div class="event t-web_only_verified" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-05</span>
+<span class="eh">Prosus signs three-year cloud and AI agreement with AWS across portfolio</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Prosus entered a three-year agreement with AWS enabling portfolio companies (including iFood, OLX, PayU, Despegar, eMag, and Just Eat Takeaway.com) to leverage AWS cloud and AI capabilities and co-create AI solutions. Bloomberg reported the value is in the ‘hundreds of millions of dollars.’</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Deal size not formally disclosed; press cites a broad range.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">three-year cloud and AI contract</span>
+<span class="span">co-create AI solutions</span>
+<span class="span">hundreds of millions of dollars</span>
+<span class="span">iFood, OLX, PayU, Despegar, eMag, and Just Eat Takeaway.com</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-24</span>
+<span class="eh">Prosus implements an AI-first operating model across the group</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized execution of a regional ecosystem strategy and adoption of an AI‑first operating model, noting profitability across operated businesses.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-first operating model</span>
+<span class="span">regional ecosystem strategy</span>
+<span class="span">all operated businesses are now profitable</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-24</span>
+<span class="eh">FY26 priorities: integration, AI-driven growth, disciplined capital deployment</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Prosus reiterated focus on integration (notably JET), AI-driven growth, and disciplined capital deployment, while stating it remains on track to meet full-year adjusted EBITDA guidance.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">on track to achieve full‑year adjusted EBITDA guidance</span>
+<span class="span">AI-driven growth</span>
+<span class="span">integration (notably JET)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-24</span>
+<span class="eh">Risk flagged: rapid AI advances and rising competition</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management warned that rapid AI advances and rising competition across core regions could pressure monetization and profitability if product and AI leadership are not sustained.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">rising competition across LatAm/Europe/India</span>
+<span class="span">rapid AI advances</span>
+<span class="span">pressure monetization and profitability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-24</span>
+<span class="eh">Prosus reports &gt;20k AI agents deployed using LCM across companies</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO outlined Prosus’s Large Commerce Model (LCM) approach with over 20,000 agents deployed to reduce ad costs, improve efficiency, and limit hiring needs across the portfolio.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ No quantitative savings KPIs disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Large Commerce Model (LCM)</span>
+<span class="span">&gt;20k agents already deployed</span>
+<span class="span">reduce ad costs</span>
+<span class="span">limit hiring needs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-24</span>
+<span class="eh">AI positioned as both risk and opportunity; strategy briefings flagged</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Prosus characterized AI as both a risk and an opportunity and noted plans for more detailed strategy presentations to support OLX/La Centrale and portfolio companies.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">both risk and opportunity</span>
+<span class="span">group-level tooling intended to strengthen OLX/La Centrale</span>
+<span class="span">strategy presentations were flagged for December/January</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-24</span>
+<span class="eh">Deeper AI strategy update planned; accelerate deployment in India</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management planned a deeper AI strategy update for late December or mid‑January and highlighted continued rollout of LCM and agentic capabilities with acceleration in India.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">deeper strategy update (late December or mid‑January)</span>
+<span class="span">accelerate AI deployment in India</span>
+<span class="span">agentic capabilities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-24</span>
+<span class="eh">Prosus targets India to &#x27;lead&#x27; in AI deployment; no $8bn plan indicated</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Following a meeting with PM Modi, management said India should lead the group’s AI deployment; management also noted no indication of an $8bn spend near term.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">post‑meeting with PM Modi</span>
+<span class="span">“leads” in AI deployment</span>
+<span class="span">no indication of an $8bn spend near term</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-05-06</span>
+<span class="eh">Prosus Ventures leads $13.5M round in Spanish AI assistant Luzia</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$14M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Prosus Ventures led a $13.5 million funding round in Luzia, strengthening Prosus’s exposure to AI-driven consumer assistants in Spain and Latin America.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<p class="cav">⚠ Stake size attributable specifically to Prosus not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">$13.5 million</span>
+<span class="span">led by Prosus Ventures</span>
+<span class="span">hub for artificial intelligence in Spain</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-04-30</span>
+<span class="eh">Prosus articulates AI strategy focus on the application layer</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Prosus emphasized that while foundational models like GPT and Claude are important, the firm sees durable value in ecosystems and application-layer innovations that operationalize these models.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">foundational models</span>
+<span class="span">GPT, Claude, and open-source equivalents</span>
+<span class="span">the powerful ecosystems built around them</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations and early portfolio AI adoption</h2>
+<div class='range'>2023-10-20 → 2024-12-31</div>
+<div class='psum'>Prosus’s AI exposure initially surfaced through portfolio company usage and experimentation. Spanish AI assistant Luzia demonstrated significant traction in late 2023 using a mix of frontier and open-source models (GPT and Llama among others), highlighting multilingual consumer AI demand across Prosus’s target markets. 
+In 2024, Prosus’s food-delivery affiliate iFood showcased heavy AI use on AWS (Bedrock and SageMaker) at scale, and by October 2024 began piloting OpenAI’s Realtime API (GPT‑4o) with support from Prosus’s AI team to power a voice-enabled courier assistant (“Jhow”). These implementations established real-world customer experience and operational uplift from generative AI across the group’s ecosystem.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-10-16</span>
+<span class="eh">iFood and Prosus AI team pilot OpenAI Realtime API (GPT-4o) for voice assistant</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">iFood, working with the Prosus group AI team, began early testing of OpenAI’s Realtime API powered by GPT‑4o to add a voice layer to “Jhow,” its delivery-partner assistant, aiming to improve customer and courier experiences.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<p class="cav">⚠ Primary source is in Portuguese.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">API Realtime</span>
+<span class="span">GPT-4o</span>
+<span class="span">OpenAI</span>
+<span class="span">Jhow</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-01-01</span>
+<span class="eh">iFood details large-scale AI usage on AWS (Bedrock, SageMaker)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">An AWS case study highlighted iFood’s extensive AI footprint using services like Amazon Bedrock and SageMaker across personalization, fraud prevention, and operations, supporting tens of millions of monthly orders.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Amazon Bedrock</span>
+<span class="span">Amazon SageMaker</span>
+<span class="span">more than 80 million orders per month</span>
+<span class="span">more than 100 AI models</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt meta_llama">
+<div class="ev-top">
+<span class="date">2023-10-20</span>
+<span class="eh">Luzia scales WhatsApp-based AI assistant using GPT and Llama models</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span></div>
+<p class="narr">TechCrunch reported Luzia reached broad adoption while using a combination of GPT and Llama-based models, underscoring early consumer AI traction in Spanish- and Portuguese-speaking markets relevant to Prosus’s portfolio.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">17 million users</span>
+<span class="span">8 million of them active on a monthly basis</span>
+<span class="span">GPT 3.5/4, Llama, and Kandinsky</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the precise contracted value and consumption commitments (if any) under the three-year AWS agreement?</li>
+<li>Which specific frontier models (by provider) are included in Toqan’s 20+ routing catalog beyond those named (e.g., OpenAI, Google, Anthropic)?</li>
+<li>What quantified efficiency gains or revenue uplifts have &gt;20k deployed AI agents (LCM) delivered across OLX, iFood, and other operators?</li>
+<li>How much AI-specific opex/capex is Prosus allocating in FY26–FY27, and what KPIs will management track?</li>
+<li>To what extent will iFood’s OpenAI Realtime pilot progress into production, and what are the target markets and expected uplift metrics?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>AWS deal value cited as &#x27;hundreds of millions of dollars&#x27; is press-reported; no official figure disclosed.</li>
+<li>iFood OpenAI Realtime source is Portuguese-language; translations inferred for narrative.</li>
+<li>Claims about Toqan/LCM training data scale and cost advantages are company-provided marketing statements and lack independent verification.</li>
+<li>Equity round amounts (e.g., Luzia, Equal AI) reflect total round sizes; Prosus’s exact check sizes and resulting ownership percentages are not disclosed.</li>
+<li>Alan investment magnitude recorded using the reported USD valuation (approx. $6.3b) rather than converting the €400m check.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,554 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>SNAP US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Snap Inc <span class='sub'>(SNAP US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.346</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>21 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 4</span>
+<span class='chip'>frontier 1</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 9</span>
+<span class='chip'>web-only (verified): 6</span>
+<span class='chip'>web-only (unverified): 4</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>2026 reset: cost actions, ads AI, eyewear, and spin-out</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>In 2026 Snap executed cost reductions and refocused on monetizable AI surfaces. The company announced workforce reductions targeting over $500 million in run-rate savings, then reported ad performance gains and the launch of AI Sponsored Snaps. Management highlighted automation and regulatory dynamics, and disclosed the amicable end of the Perplexity relationship with no contribution assumed in guidance.
+Snap also unveiled consumer AR ‘Specs’ with Qualcomm silicon and developer tooling featuring agentic integrations across Claude Code, Codex, and Cursor. To manage compute-heavy R&amp;D, Snap spun off its internal generative-AI video team into Dotmo, retaining a large equity stake to preserve upside while shifting costs off Snap’s P&amp;L.</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-18</span>
+<span class="eh">Snap spins off generative-AI video team into Dotmo; retains equity</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">To manage high AI development costs, Snap spun off its internal generative-AI video team into Dotmo, licensing Snap tech and retaining a large equity stake; Dotmo may pursue external funding. The move shifts compute-heavy costs off Snap’s P&amp;L while preserving upside.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">spins off internal generative‑AI video team</span>
+<span class="span">separate company called Dotmo</span>
+<span class="span">reduce the high costs</span>
+<span class="span">hold a large equity stake</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">Snap unveils $2,195 consumer AR ‘Specs’ with agentic AI integrations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2,195 · other</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">At AWE, Snap announced ‘Specs’ priced at $2,195 with a $200 refundable preorder deposit, using dual Qualcomm Snapdragon processors and supporting AI/AR Lenses. Developer tooling highlighted agentic integrations for Claude Code, Codex, and Cursor.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">$2,195</span>
+<span class="span">$200 refundable deposit</span>
+<span class="span">agentic integrations for Claude Code, Codex, and Cursor</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">AI Sponsored Snaps launched; strong ad performance metrics</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Snap reported AI Sponsored Snaps launch alongside improved ad performance metrics including +226% CTR per impression and +59% 7‑day conversions; Dynamic Product Ads revenue grew over 30% YoY and Promoted Places showed offline lift.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI Sponsored Snaps launched</span>
+<span class="span">per‑impression CTR +226%</span>
+<span class="span">7‑day conversions +59%</span>
+<span class="span">Dynamic Product Ads revenue grew &gt;30% YoY</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Snap ends Perplexity relationship; cites geopolitical headwinds</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management noted Middle East geopolitical headwinds and the amicable end of the Perplexity relationship, with no contribution assumed in Q2 guidance.</p>
+<div class="ev-ch">channels: <span class="chchip">ecosystem_control_loss</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">amicable end of the Perplexity relationship</span>
+<span class="span">assumed no contribution in Q2 guide</span>
+<span class="span">geopolitical headwinds in March</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Guidance excludes Perplexity and assumes stable Middle East ops</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Snap’s Q2 outlook assumed no Perplexity contribution and that Middle East operating conditions remain consistent with March/April.</p>
+<div class="ev-ch">channels: <span class="chchip">ecosystem_control_loss</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Guidance assumes no Perplexity contribution</span>
+<span class="span">remain consistent with March/April</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Qualcomm collaboration continues; intelligent eyewear update planned</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Snap reiterated ongoing collaboration with Qualcomm on Specs and plans to share more on intelligent eyewear at AWE on June 16.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">continued collaboration with Qualcomm on Specs</span>
+<span class="span">preparing to share more on intelligent eyewear (AWE, June 16)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Street Q&amp;A centers on AI ad automation and eCPM vs. volume</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Analysts focused on traction of AI-powered ad automation, monetization of new surfaces, and balancing eCPM pressures versus volume growth.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">traction of AI-powered ad automation</span>
+<span class="span">monetization of newer ad surfaces</span>
+<span class="span">eCPM pressures versus volume growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Management notes adoption of automation tools and regulatory risks</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management cited growing adoption of automation tools and ongoing work to balance eCPM and volume, while noting external risks including evolving regulatory landscape.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">growing adoption of automation tools</span>
+<span class="span">balance eCPM and volume</span>
+<span class="span">evolving regulatory landscape</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-15</span>
+<span class="eh">Snap to cut ~16% of staff; aims for $500M+ run-rate savings</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Snap announced a restructuring to reduce about 16% of its workforce targeting over $500 million in run-rate savings, with shares up premarket as investors focused on margin improvement and AI efficiencies.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">cut about 16 percent of staff</span>
+<span class="span">over 500 million run-rate savings</span>
+<span class="span">shares jump premarket</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem partnerships and internal video-gen model</h2>
+<div class='range'>2025-01-01 → 2025-12-31</div>
+<div class='psum'>In 2025 Snap advanced tooling for multimodal, AI-powered Lenses and cited partners like OpenAI and Gemini, while also securing a major monetization partnership with Perplexity to integrate AI search directly into Snapchat’s chat. By year-end, Snap launched Animate It, an open-prompt video generation Lens powered by an internally developed AI video model for Lens+ subscribers.</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-22</span>
+<span class="eh">Snap launches Animate It video generation Lens (internal model)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Snap introduced Animate It, its first open-prompt video generation Lens for Lens+ subscribers, noting it leverages Snap’s internally developed AI video generation model to turn prompts into short videos.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Animate It</span>
+<span class="span">open prompt video generation Lens</span>
+<span class="span">Lens+ subscribers</span>
+<span class="span">internally developed AI video generation model</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-05</span>
+<span class="eh">Snap and Perplexity sign $400M one-year integration deal</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$400M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Snap and Perplexity agreed to integrate Perplexity’s AI answer engine into Snapchat’s Chat interface, with Perplexity paying Snap $400 million over one year through a combination of cash and equity as global rollout milestones are achieved; revenue expected to contribute in 2026. Media reported shares jumped on the deal.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9], news_rows[3]</div>
+<span class="span">will pay Snap $400 million over one year</span>
+<span class="span">combination of cash and equity</span>
+<span class="span">Revenue from the partnership is expected to begin contributing in 2026</span>
+<span class="span">$400 million Perplexity AI deal</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-07-23</span>
+<span class="eh">Snap OS adds multimodal AI Lenses with OpenAI and Gemini partners</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Snap reported updates enabling developers to publish multimodal AI-powered Lenses and new tools, highlighting partnerships with OpenAI and Gemini on Google Cloud, along with a new Depth Module API for spatial intelligence.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">multimodal AI-powered Lenses</span>
+<span class="span">partners like OpenAI and Gemini</span>
+<span class="span">Depth Module API</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scaling multimodal AI and adoption; regulatory scrutiny</h2>
+<div class='range'>2023-06-01 → 2024-12-31</div>
+<div class='psum'>Through late 2023 and 2024, Snap scaled generative features and reported strong early adoption. The company launched Dreams, a Gen AI-powered selfie feature, and highlighted that over 200 million people had exchanged over 20 billion messages with My AI by Q3 2023.
+In 2024, Snap faced formal regulatory review in the UK about My AI’s operation and data flows to OpenAI via API. Later in the year, Snap deepened its AI stack with Google, integrating Gemini on Vertex AI into My AI for multimodal understanding, reporting a 2.5x engagement lift in the U.S. after deployment.</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-09-24</span>
+<span class="eh">Snap partners with Google Cloud to power My AI with Gemini multimodal</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Snap announced an expanded partnership with Google Cloud to use Gemini on Vertex AI for multimodal My AI experiences, noting over 2.5x engagement within Snapping to My AI in the U.S. after deployment. Google’s press reiterated millions of multimodal interactions daily.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6], web_search_findings[7]</div>
+<span class="span">expanded strategic partnership with Google Cloud</span>
+<span class="span">Gemini on Vertex AI</span>
+<span class="span">over 2.5x as much engagement</span>
+<span class="span">multimodal interactions</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-05-21</span>
+<span class="eh">UK ICO decision describes My AI’s OpenAI-powered data flows</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">The UK Information Commissioner’s Office detailed how Snap’s My AI uses OpenAI’s GPT via API, including passing user queries, prior context, certain attributes, and city-level location to OpenAI for model responses. The decision references the February 27, 2023 launch to Snapchat+ subscribers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">My AI is powered by</span>
+<span class="span">OpenAI’s GPT technology</span>
+<span class="span">implemented via OpenAI’s API</span>
+<span class="span">launched My AI for Snapchat+ subscribers on 27 February 2023</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-10-24</span>
+<span class="eh">My AI hits 200M+ users and 20B+ messages</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">In Q3 2023, Snap reported over 200 million people had sent over 20 billion messages to My AI, positioning it among the most widely used AI chatbots.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">over 200 million people</span>
+<span class="span">over 20 billion messages</span>
+<span class="span">My AI</span>
+<span class="span">most widely used AI chatbots</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2023-08-29</span>
+<span class="eh">Snap launches Dreams, a Gen AI selfie feature</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Snap introduced Dreams, enabling users to create fantastical AI images and generated selfies, initially including eight free creations and in-app purchases, rolling out from Australia and New Zealand.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Gen AI powered feature called Dreams</span>
+<span class="span">create fantastical images</span>
+<span class="span">up to eight</span>
+<span class="span">in-app purchase</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational cloud and My AI launch</h2>
+<div class='range'>2017-02-24 → 2023-05-31</div>
+<div class='psum'>Snap established its foundational cloud relationship with Google in 2017, committing to significant annual minimums for Google Cloud usage that underpinned the company’s computing needs. In early 2023, Snap launched My AI, a chatbot customized from OpenAI’s GPT technology, first to Snapchat+ subscribers and then expanded capabilities.
+Following OpenAI’s ChatGPT API launch naming Snapchat as an early adopter, Snap rolled out My AI globally and began adding visual-gen features like My AI Snaps, embedding generative AI deeper into the chat experience.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-05-31</span>
+<span class="eh">My AI can now reply with generative Snaps</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Snap enabled Snapchat+ subscribers to send Snaps to My AI and receive unique generative Snaps in return, extending the chatbot beyond text responses.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">My AI Snaps</span>
+<span class="span">send it Snaps</span>
+<span class="span">receive a unique generative Snap back</span>
+<span class="span">Snapchat+ subscribers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-04-19</span>
+<span class="eh">My AI opens to global users with added features</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Snap expanded access to its OpenAI-powered My AI globally, moving from Snapchat+ to free access and noting nearly 2 million daily messages to date. The update added group chat, Maps recommendations, and future plans for generative Snaps back.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">now opening up to a global audience</span>
+<span class="span">powered by OpenAI’s GPT technology</span>
+<span class="span">nearly 2 million messages per day</span>
+<span class="span">will be available for free</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-03-01</span>
+<span class="eh">OpenAI launches ChatGPT API; Snapchat named an early adopter</span>
+<span class="badge">model_release</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI released the ChatGPT API, listing Snapchat among early adopters. This provider-side model release aligned with Snap’s My AI rollout powered by OpenAI GPT.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[0], web_search_findings[1]</div>
+<span class="span">ChatGPT API launched</span>
+<span class="span">Snapchat</span>
+<span class="span">OpenAI&#x27;s GPT technology</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-02-27</span>
+<span class="eh">Snap launches My AI using OpenAI’s GPT for Snapchat+</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Snap introduced My AI, a chatbot customized from OpenAI’s latest GPT technology, as an experimental feature for Snapchat+ subscribers, with rollout beginning that week.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">we’re launching My AI</span>
+<span class="span">OpenAI&#x27;s GPT technology</span>
+<span class="span">experimental feature for Snapchat+</span>
+<span class="span">rolling out this week</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2017-02-24</span>
+<span class="eh">Snap signs Google Cloud agreement with $400M annual minimums</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$400M · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Snap disclosed a Google Cloud Platform License Agreement requiring at least $400.0 million of cloud services each year for an initial five-year term, noting it ran the vast majority of computing on Google Cloud. The agreement granted discounted pricing and required make-whole payments if annual minimums were not met.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">$400.0 million</span>
+<span class="span">initial term of five years</span>
+<span class="span">vast majority of our computing</span>
+<span class="span">Google Cloud Platform License Agreement</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What specific technical and commercial reasons led to the amicable end of the Perplexity relationship, and will Snap pursue a replacement partner for conversational search?</li>
+<li>How large is Snap’s retained equity stake in Dotmo and what are the commercial terms of the IP license and any revenue sharing?</li>
+<li>What is the expected margin impact and unit economics for the $2,195 ‘Specs’ launch, including expected bill-of-materials and Qualcomm silicon costs?</li>
+<li>Across My AI and Lenses, what is the current mix of OpenAI vs. Google Gemini usage by volume and cost, and how does Snap optimize routing?</li>
+<li>Have there been any updates from the UK ICO or other regulators regarding My AI data handling practices since the May 2024 decision?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some third-party news summaries may condense details (pricing, geographies, or timelines); where possible, we anchored on company releases.</li>
+<li>Dotmo spin-out terms (equity stake size, licensing economics) were not disclosed in the cited article.</li>
+<li>Layoff savings were cited as run-rate and not provided with a precise dollar figure in filings; we did not assign a USD magnitude.</li>
+<li>Provider mentions tied to developer tooling for ‘Specs’ (Claude Code, Codex, Cursor) indicate integrations but not production routing volumes or costs.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

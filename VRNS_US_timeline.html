@@ -1,0 +1,435 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>VRNS US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Varonis Systems Inc <span class='sub'>(VRNS US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.38</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>15 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>single source: 9</span>
+<span class='chip'>web-only (verified): 5</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Atlas AI control plane, multi-model governance (Claude), and Copilot exposure research</h2>
+<div class='range'>2026-04-28 → 2026-06-30</div>
+<div class='psum'>Varonis launched Varonis Atlas, a control plane powered by the AllTrue.ai acquisition, to provide end-to-end visibility and control over enterprise AI systems. Management cited increasing AI security conversations and urgency from AI agents, with encouraging early Atlas POCs, while noting that potential H2 upside from Atlas and AI-related modules was not embedded in guidance.
+Varonis broadened its multi-model governance footprint by integrating with Anthropic’s Claude Compliance API, bringing Claude Enterprise and Claude Platform activity into Atlas for continuous monitoring and session-level investigations. The firm’s Threat Labs also disclosed ‘SearchLeak’, a critical vulnerability chain in Microsoft 365 Copilot Enterprise, later patched by Microsoft, highlighting enterprise AI risks and Varonis’ research credentials.</div>
+<div class="event t-corroborated" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">Varonis Threat Labs discloses ‘SearchLeak’ critical Copilot Enterprise vulnerability; Microsoft patched</span>
+<span class="badge">risk</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Varonis Threat Labs revealed ‘SearchLeak’, a three‑stage vulnerability chain in Microsoft 365 Copilot Enterprise enabling one‑click data exfiltration, later remediated by Microsoft under CVE‑2026‑42824 with a critical severity rating. The disclosure received coverage as Microsoft indicated it was patched.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4], news_rows[0]</div>
+<span class="span">SearchLeak</span>
+<span class="span">Microsoft 365 Copilot Enterprise</span>
+<span class="span">CVE-2026-42824</span>
+<span class="span">critical</span>
+<span class="span">one‑click mailbox and file exfiltration</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0014" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Varonis integrates with Anthropic’s Claude Compliance API</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Varonis announced an integration with the Claude Compliance API, bringing Claude Enterprise and Claude Platform activity into the Atlas AI Security Platform for continuous monitoring and session‑level investigations. Anthropic concurrently listed Varonis among 28 new integrations powered by the Compliance API.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 3 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[5], web_search_findings[6], web_search_findings[7]</div>
+<span class="span">Claude Compliance API</span>
+<span class="span">Claude Enterprise and Claude Platform</span>
+<span class="span">Atlas AI Security Platform</span>
+<span class="span">Session-level investigations</span>
+<span class="span">28 integrations</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Varonis launches Atlas AI control plane powered by AllTrue.ai</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On its Q1 2026 release, Varonis introduced the Varonis Atlas AI control plane, leveraging the AllTrue.ai acquisition to deliver end-to-end visibility and control over enterprise AI systems.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">launched Varonis Atlas, powered by the AllTrue.ai acquisition</span>
+<span class="span">provide end-to-end visibility and control</span>
+<span class="span">enterprise AI systems</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Management reports increasing, strategic AI security conversations</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Varonis highlighted healthy, broad-based demand and more strategic AI security conversations among customers in Q1 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">healthy, broad‑based demand</span>
+<span class="span">more strategic AI security conversations</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">AI agents increase urgency; guidance remains conservative</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Varonis stated that AI agents are increasing urgency to secure data and systems. Management framed Q2 outlook under a responsible guidance philosophy without quantifying April trends.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI agents increasing urgency to secure data and systems</span>
+<span class="span">responsible guidance philosophy</span>
+<span class="span">without quantifying April trends</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Early Atlas POCs are very encouraging; not in guidance</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described early Atlas POCs and results as very encouraging, noting a nice but not material Q1 contribution and that Atlas is not included in guidance.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Early Atlas POCs/results were characterized as “very encouraging”</span>
+<span class="span">contribution in Q1 was “nice” but not material</span>
+<span class="span">not in guidance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">AI security budgets beginning to flow to Varonis platform</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Varonis positioned its unified platform beyond DSPM discovery and cited wins against point solutions, adding that AI security budgets are beginning to flow toward the platform.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">unified platform beyond DSPM discovery</span>
+<span class="span">wins against point solutions</span>
+<span class="span">AI security budgets are beginning to flow toward the platform</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Atlas provides a control plane across AI agents, models, and pipelines</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Varonis said Microsoft Copilot is one of several AI systems customers must govern and that Atlas provides a control plane spanning agents, models, and pipelines.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Copilot is one of several AI systems customers must govern</span>
+<span class="span">Atlas provides a control plane across agents/models/pipelines</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Coverage beyond Microsoft: AWS, GCP, and Microsoft 365</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized that Microsoft is a small portion of customers’ information estates and that Varonis protects data across AWS, GCP, Microsoft 365, and more.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Microsoft is a “small portion” of customers’ total information estate</span>
+<span class="span">Varonis protecting data across AWS, GCP, Microsoft 365 and more</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">H2 opportunity from Atlas and AI-related modules not embedded in guidance</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Varonis indicated that Atlas, database activity monitoring, Interceptor, and AI‑related modules represent incremental H2 opportunity that is not currently in guidance.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑related modules represent incremental H2 opportunity</span>
+<span class="span">not embedded in current guidance</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">AI security competitive and technology shift risks flagged</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Varonis cautioned that rapidly evolving AI adoption and competitive responses could require sustained R&amp;D and sales investment, and failure to differentiate offerings like Varonis Atlas could impact growth.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Rapidly evolving AI adoption and competitive responses</span>
+<span class="span">sustained R&amp;D and sales investment</span>
+<span class="span">failure to differentiate offerings like Varonis Atlas</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI security productization for Copilot and ChatGPT Enterprise</h2>
+<div class='range'>2025-03-13 → 2025-12-31</div>
+<div class='psum'>Varonis expanded its AI security coverage to Microsoft 365 Copilot with a purpose-built solution that monitors prompts, responses, and referenced content, and provides readiness assessments via the Azure Marketplace. The company then integrated its platform with OpenAI’s ChatGPT Enterprise Compliance API, followed by a detailed product blog outlining controls for 3+ million paying ChatGPT Enterprise users and describing ChatGPT’s connected apps approach.
+These moves deepened Varonis’ role in securing enterprise AI usage, aligning with both Microsoft Copilot and OpenAI ChatGPT Enterprise while emphasizing real-time monitoring and protection against misuse and exposure.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-11-11</span>
+<span class="eh">Varonis for ChatGPT Enterprise detailed with monitoring and data controls</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Varonis published a product blog for ChatGPT Enterprise describing monitoring of prompts and responses, discovery and classification of sensitive data, and threat detection. It emphasized support for OpenAI’s ChatGPT Enterprise and explained the connected apps approach to data access.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Introducing Varonis for ChatGPT Enterprise</span>
+<span class="span">OpenAI’s ChatGPT Enterprise</span>
+<span class="span">3+ million paying users of ChatGPT Enterprise</span>
+<span class="span">connected apps’ approach</span>
+<span class="span">Google Drive, Microsoft OneDrive and SharePoint</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-06-17</span>
+<span class="eh">Integration announced with OpenAI’s ChatGPT Enterprise Compliance API</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Varonis extended its Data Security Platform to OpenAI’s ChatGPT Enterprise Compliance API to identify sensitive uploads, monitor prompts and responses, and prevent breaches. The release noted reach across more than 3 million enterprise users and availability in private preview.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">OpenAI’s ChatGPT Enterprise Compliance API</span>
+<span class="span">more than 3 million enterprise users</span>
+<span class="span">available to customers in private preview</span>
+<span class="span">This integration complements OpenAI’s robust native security and privacy features</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-03-13</span>
+<span class="eh">Varonis details security for Microsoft 365 Copilot and Azure Marketplace availability</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Varonis outlined its Microsoft 365 Copilot security capabilities, including monitoring prompts and responses, limiting sensitive data access, and capturing interactions in a centralized audit trail. The company also highlighted availability through the Azure Marketplace.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Overview of Varonis for Microsoft 365 Copilot</span>
+<span class="span">monitor Copilot prompts, responses, and data access in real time</span>
+<span class="span">automatically limit access to sensitive data</span>
+<span class="span">Azure Marketplace</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational AI layer and platform alignment</h2>
+<div class='range'>2023-11-15 → 2025-03-12</div>
+<div class='psum'>Varonis introduced its first-generative AI layer, Athena AI, as a natural-language interface across the Varonis Data Security Platform. The company emphasized privacy and data residency, explicitly noting that neither Varonis nor Microsoft Azure OpenAI uses customer data or queries for model training.
+This phase established Varonis&#x27; AI posture and technical direction, positioning its platform to leverage OpenAI models via Azure while assuring enterprise controls and governance.</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-11-15</span>
+<span class="eh">Varonis launches Athena AI built on Microsoft Azure OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Varonis introduced Athena AI, a generative AI layer spanning its Data Security Platform, and clarified that neither Varonis nor Microsoft Azure OpenAI uses customer data or queries for model training. This anchored the firm’s early AI strategy and aligned it with OpenAI’s models delivered via Azure.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Varonis Introduces Athena AI</span>
+<span class="span">spans across the entire Varonis Data Security Platform</span>
+<span class="span">Microsoft Azure OpenAI (the platform Varonis is built on)</span>
+<span class="span">does not leave the jurisdiction chosen by a customer</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the expected revenue contribution and timeline for monetization of Varonis Atlas and related AI modules in H2 2026 and beyond?</li>
+<li>Are there any formal commercial agreements or minimum commitments with OpenAI (via Azure OpenAI) or Anthropic associated with these integrations?</li>
+<li>How many customers are in active production using Varonis’ ChatGPT Enterprise and Claude Compliance API integrations, and what are early win rates versus point solutions?</li>
+<li>Did the SearchLeak disclosure lead to incremental demand or pipeline for Copilot security assessments and Atlas deployments?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>No dollar-value metrics (e.g., RPO, ARR attributable to AI) were disclosed in the provided evidence; magnitudes are therefore left null.</li>
+<li>Provider associations for Microsoft 365 Copilot are treated as Microsoft and not mapped to a listed LLM provider, even if underlying models may be OpenAI.</li>
+<li>Press releases and blogs are vendor-sourced; independent corroboration was added where available (e.g., Anthropic blog, external coverage of SearchLeak).</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

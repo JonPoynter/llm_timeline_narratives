@@ -1,0 +1,389 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>CCC US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>CCC Intelligent Solutions Holdings Inc <span class='sub'>(CCC US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.358</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>12 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>web-only (unverified): 8</span>
+<span class='chip'>single source: 2</span>
+<span class='chip'>web-only (verified): 1</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Acceleration: Cloud migration benefits, AI monetization, new features, and large insurer expansions</h2>
+<div class='range'>2026-01-01 → 2026-04-30</div>
+<div class='psum'>An AWS case study in January 2026 described CCC’s completed migration to AWS by the end of 2024, highlighting use of EKS and CloudWatch to improve observability and productivity at the scale of billions of daily transactions. In February 2026 prepared remarks, management stated AI represented roughly 10% of total revenue and is the fastest-growing part of the portfolio, with deployments across more than 125 insurers and 15,000+ repair facilities.
+CCC launched an AI-enabled mobile invoice scanning feature in April 2026, and Q1 2026 results cited multi-year enterprise expansions with top-five insurers across APD and AI solutions, along with a separate top-five insurer moving significant Casualty operations to CCC’s platform. The quarter also disclosed RPO of approximately $1.908B and reiterated adoption dependencies and regulatory risks around AI.</div>
+<div class="event t-corroborated" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1 2026: Top‑five insurers expand APD + AI suite; significant Casualty move to CCC</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CCC reported a multi-year enterprise expansion with a top‑five U.S. insurer covering APD and AI solutions, and a separate top‑five insurer moving a significant portion of its Casualty operations to CCC’s platform, reinforcing momentum across both APD and Casualty.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[4]</div>
+<span class="span">multi‑year enterprise agreement</span>
+<span class="span">Auto Physical Damage (APD)</span>
+<span class="span">full suite of AI‑enabled solutions</span>
+<span class="span">significant portion of its Casualty operations</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">RPO stands at ~$1.908B; ~$814M expected in next 12 months</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.9B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CCC disclosed total remaining performance obligations of approximately $1.908B as of March 31, 2026, with about $814M expected to be recognized over the next 12 months and $1.094B thereafter, indicating strong contracted backlog.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$1.908B</span>
+<span class="span">$814M</span>
+<span class="span">$1.094B</span>
+<span class="span">March 31, 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Management flags AI adoption and regulatory/ethical risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management noted that growth assumes scaling of AI-enabled workflows and warned that adverse changes in customer perceptions or in AI regulatory frameworks could moderate adoption or necessitate added compliance costs.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">adverse changes in customer perceptions</span>
+<span class="span">regulatory frameworks for AI</span>
+<span class="span">could moderate adoption</span>
+<span class="span">require added compliance costs</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">CCC ONE adds mobile invoice scanning; AI matches invoices to repair orders</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CCC launched mobile invoice scanning in the CCC ONE platform, enabling repair facilities to scan invoices from the mobile app. CCC’s AI extracts invoice data and matches it to the correct repair order, reducing manual steps and errors.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">mobile invoice scanning</span>
+<span class="span">allowing AI to match invoice line items to repair orders</span>
+<span class="span">CCC ONE Mobile App</span>
+<span class="span">identifying part numbers, quantities and prices</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Prepared remarks: AI ~10% of revenue; deployed across &gt;125 insurers and 15k repairers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated that AI is the fastest-growing part of CCC’s portfolio and accounted for roughly 10% of total revenue, with production deployments across more than 125 insurers and over 15,000 collision repairers.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">AI has now grown to roughly 10% of total revenue</span>
+<span class="span">more than 125 insurers</span>
+<span class="span">over 15,000 collision repairers</span>
+<span class="span">fastest-growing part of the CCC portfolio</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-01</span>
+<span class="eh">AWS migration completed; CloudWatch/EKS drive observability gains at multi‑billion‑tx scale</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CCC completed its migration to AWS by end of 2024 and implemented managed services including Amazon EKS and CloudWatch. The company reported improved MTTR and cost reductions while gaining observability into roughly 5 billion transactions daily.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">migrated to Amazon Web Services (AWS)</span>
+<span class="span">completed its migration by the end of 2024</span>
+<span class="span">Amazon Elastic Kubernetes Service (Amazon EKS)</span>
+<span class="span">5 billion daily transactions</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scale-up: EvolutionIQ deal closing, AI scale disclosures, and governance alignment</h2>
+<div class='range'>2025-01-06 → 2025-12-31</div>
+<div class='psum'>CCC completed the EvolutionIQ acquisition on January 6, 2025, with total consideration of approximately $674.3 million, including both cash and newly issued shares. The 10-Q later detailed the share issuance and valuation inputs at close.
+In February 2025, CCC’s 10-K highlighted the breadth of its AI operations and data assets, noting more than $1 trillion of historical data processed, over 300 AI models, and wide enterprise deployment across insurers and repair facilities. In May 2025, CCC joined the World Economic Forum’s AI Governance Alliance (AIGA), signaling engagement with responsible AI frameworks across the P&amp;C insurance ecosystem.</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-05-08</span>
+<span class="eh">CCC joins World Economic Forum’s AI Governance Alliance (AIGA)</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">CCC joined the AI Governance Alliance led by the World Economic Forum, engaging with a global initiative of 600+ members from 500 organizations to shape responsible AI frameworks for the P&amp;C insurance industry.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">AI Governance Alliance (AIGA)</span>
+<span class="span">World Economic Forum (WEF)</span>
+<span class="span">more than 600 members from 500 organizations</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-02-25</span>
+<span class="eh">10-K: CCC discloses AI scale (&gt;$1T data processed; 300+ AI models)</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1000.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">In its 2024 10-K filed February 25, 2025, CCC reported processing more than $1 trillion of historical data and deploying over 300 AI models across a broad installed base of insurers and repair facilities, demonstrating enterprise-scale AI operations.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">processed more than $1 trillion of historical data</span>
+<span class="span">more than 300 AI models</span>
+<span class="span">more than 100 insurers</span>
+<span class="span">more than 10,000 repair facilities</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-06</span>
+<span class="eh">CCC completes EvolutionIQ acquisition for ~$674.3M; issues 26.0M shares</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$674M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CCC closed the acquisition of EvolutionIQ with total consideration of approximately $674.3 million, funded through a mix of cash and equity. As part of the transaction, CCC issued 26,035,603 common shares based on a 9-day VWAP of $11.83.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">completed its acquisition of EvolutionIQ, Inc.</span>
+<span class="span">total consideration of $ 674.3 million</span>
+<span class="span">26,035,603 shares of common stock</span>
+<span class="span">9-day volume weighted average price of $11.83</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundation: Fraud analytics partnership, AI recognition, and EvolutionIQ agreement</h2>
+<div class='range'>2023-05-09 → 2024-12-20</div>
+<div class='psum'>CCC began formalizing AI-related ecosystem moves by partnering with Verisk in May 2023 to integrate anti-fraud analytics into CCC’s claims platform. The company’s AI capabilities gained third-party recognition in August 2024 with an AI Breakthrough Award for Best Overall Computer Vision Solution, underscoring CCC’s long-running use of computer vision and deep learning in auto claims.
+In December 2024, CCC signed a definitive agreement to acquire EvolutionIQ, an AI-powered guidance platform for disability and injury claims, signaling a strategic push deeper into casualty and injury workflows and expanding the company’s AI footprint beyond auto physical damage.</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-20</span>
+<span class="eh">CCC signs definitive agreement to acquire EvolutionIQ for $730M (cash/stock mix with term loan)</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$730M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CCC announced a definitive agreement to acquire EvolutionIQ to expand its AI capabilities in disability and injury claims. The deal was structured at approximately $730 million, with about 40% paid in CCCS stock and 60% in cash, supported in part by a new $225 million term loan.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Definitive agreement terms were later updated at close; see closing consideration disclosed in the 10-Q.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">signed a definitive agreement to acquire EvolutionIQ</span>
+<span class="span">$730 million</span>
+<span class="span">approximately 40% CCCS common stock</span>
+<span class="span"> $225 million term loan</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-08-01</span>
+<span class="eh">CCC wins 2024 AI Breakthrough Award for Best Overall Computer Vision Solution</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CCC was recognized with a 2024 AI Breakthrough Award for Best Overall Computer Vision Solution, highlighting the company’s use of AI to analyze vehicle damage photos and its breadth of AI models deployed across insurers and repair facilities.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">2024 AI Breakthrough Award</span>
+<span class="span">Best Overall Computer Vision Solution</span>
+<span class="span">analyze and assess vehicle damage photos</span>
+<span class="span">more than 300 AI models</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2023-05-09</span>
+<span class="eh">CCC and Verisk announce strategic partnership to integrate anti-fraud analytics</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CCC and Verisk formed a strategic partnership to integrate Verisk’s claims fraud detection analytics into CCC’s platform, targeting growing fraud risks alongside the emergence of generative AI. The partnership positions CCC to enhance fraud detection within P&amp;C claims workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">strategic partnership</span>
+<span class="span">anti-fraud analytics</span>
+<span class="span">claims fraud detection</span>
+<span class="span">generative AI</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which frontier LLM providers (OpenAI, Anthropic, Google/DeepMind, Meta, xAI, DeepSeek) power CCC’s current or planned generative AI use cases across APD and Casualty?</li>
+<li>How is the ~10% AI revenue split between computer vision/ML versus generative AI workloads, and what is the targeted mix over the next 12–24 months?</li>
+<li>What is the integration roadmap and expected revenue/cost synergy from EvolutionIQ within CCC’s Casualty suite, and what portion leverages third‑party LLMs?</li>
+<li>Are there any committed spend, minimums, or multi‑year commitments with AWS (or other AI/ML platform vendors) that impact gross margin or switching flexibility?</li>
+<li>How does the Verisk partnership monetize (license, revenue share), and does it influence CCC’s data rights or model training policies?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Most disclosures are from CCC press materials and marketing case studies; limited independent third‑party corroboration is available in the inventory.</li>
+<li>Acquisition pricing differed between announcement ($730M) and close ($674.3M) per the 10‑Q; definitive agreement terms were preliminary and subject to closing adjustments.</li>
+<li>No explicit disclosure in the evidence set ties CCC to any of the six frontier LLM providers; provider dependencies, if any, remain unconfirmed.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,724 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>EXLS US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>ExlService Holdings Inc <span class='sub'>(EXLS US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.485</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>33 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 21</span>
+<span class='chip'>web-only (unverified): 7</span>
+<span class='chip'>web-only (verified): 5</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Agentic AI expansion, Google Cloud strategic services, NVIDIA integrations, and 26Q1 financials</h2>
+<div class='range'>2026-03-11 → 2026-06-30</div>
+<div class='psum'>In early 2026, EXL broadened its product stack with agentic AI and formalized a strategic services collaboration with Google Cloud. The company launched EXL Agent Studio and a Governance Hub housing more than 40 specialized models. Google named EXL a strategic services collaborator to accelerate AI-led transformation across priority industries.
+Financially, 26Q1 showed pronounced AI mix: Data &amp; AI-led revenue reached $341.6M (~60% of total) with NRR above 1. Management raised FY2026 guidance despite FX headwinds, flagged reinvestment in AI R&amp;D, and outlined a shift toward fixed-fee and outcome-based models. Capital structure updates included modest operating cash flow, planned FY26 capex of ~$50–55M, and net debt of ~$151M.
+EXL also integrated NVIDIA’s Transaction Foundation Model developer workflow for financial institutions, and announced a definitive agreement to acquire iMerit for up to $310M to deepen foundation model training, evaluation and RL capabilities. A case study highlighted tangible client savings from an agentic AI IVR built on Google’s Gemini platform.</div>
+<div class="event t-web_only_verified" id="E0033" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Case study: Agentic IVR on Google Gemini projects $12M savings via call containment</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$12M · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">An EXL case study describes an agentic AI IVR built on Google Cloud’s Gemini platform—including Gemini Flash—that automated approximately 3 million additional calls annually, projecting $12M in cost savings.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<p class="cav">⚠ Undated case study page; publication date not provided.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Google Cloud’s Gemini platform</span>
+<span class="span">Gemini Flash</span>
+<span class="span">$12 million</span>
+<span class="span">3 million additional calls annually</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">EXL to acquire iMerit for up to $310M to deepen foundation model expertise</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$310M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">EXL entered into a definitive agreement to acquire iMerit, a provider of AI model training, evaluation and reinforcement learning, for up to $310M, expanding relationships with leading foundation model builders.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">definitive agreement to acquire iMerit</span>
+<span class="span">up to $310 million</span>
+<span class="span">foundation model builders</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">EXL integrates NVIDIA Transaction Foundation Model workflow</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EXL incorporated NVIDIA’s Build Your Own Transaction Foundation Model developer example into its offerings to help financial institutions build transaction intelligence applications with proprietary data.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Build Your Own Transaction Foundation Model</span>
+<span class="span">transaction intelligence applications</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Data &amp; AI-led revenue reached $341.6M (~60% of total) in 26Q1</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$342M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">EXL reported 26Q1 Data &amp; AI-led revenue of $341.6M, representing approximately 60% of total revenue, highlighting the rapid shift toward AI-centric offerings.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Data &amp; AI-led revenue $341.6M</span>
+<span class="span">~60% of total</span>
+<span class="span">(+28% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">AI partnerships highlighted; recognition by Google Cloud</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Management emphasized AI partnerships with NVIDIA, AWS, Genesys and recognition by Google Cloud, reinforcing multi-cloud and ecosystem collaboration.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Partnerships with NVIDIA, AWS, Genesys</span>
+<span class="span">recognition by Google Cloud</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">AI-led portfolio now 60% of total; management raised outlook prudently</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EXL stated its Data &amp; AI-led portfolio represents 60% of the total portfolio and noted a guidance midpoint raised by $20M despite a $2M FX headwind, with prudence given macro/geopolitics.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">now represents 60% of our total portfolio</span>
+<span class="span">midpoint raised $20m</span>
+<span class="span">a $2m FX headwind</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Reinvestment in AI R&amp;D to offset margin expansion</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Despite gross margin improvement, EXL plans reinvestment—particularly in AI R&amp;D—resulting in EPS growth slightly outpacing revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">gross margin improvement to 38.9% (from 37.7% in 2Q25)</span>
+<span class="span">reinvestment, particularly in R&amp;D for AI</span>
+<span class="span">EPS growth slightly outpacing revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Commercial model shifting to fixed-fee and outcome-based</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management noted a move toward fixed-fee, milestone-based, and outcome-based commercial models to manage pricing and margins for AI-led work.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">towards a fixed-fee and milestone-based</span>
+<span class="span">outcome-based model</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Payment integrity offering already fully outcome-based</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">EXL stated its payment integrity offering is already fully outcome-based, signaling mature adoption of value-aligned pricing in that line.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Payment integrity is already fully outcome‑based.</span>
+<span class="span">Payment integrity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">NRR above 1; AI-at-scale drivers cited</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported net revenue retention above 1 and pointed to end-to-end outsourcing to enable AI at scale as a driver.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">NRR above 1</span>
+<span class="span">AI at scale</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">FY26 guidance raised despite FX headwind</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">EXL raised its full-year 2026 guidance and noted the guidance midpoint was raised by $20M even with a $2M FX headwind.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">raised full‑year 2026 guidance</span>
+<span class="span">midpoint raised $20m</span>
+<span class="span">$2m FX headwind</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">FY2026 guidance: $2.30–$2.33B revenue; $2.18–$2.23 EPS</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.3B · run_rate_annual</span> <span class="badge">neutral</span></div>
+<p class="narr">EXL guided FY2026 revenue to $2.30–$2.33B and adjusted diluted EPS to $2.18–$2.23, reflecting double-digit growth expectations.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">guides revenue of $2.30–$2.33B</span>
+<span class="span">adjusted diluted EPS of $2.18–$2.23</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">FY26 capex plan of ~$50–55M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$52M · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">The CFO guided FY2026 capex to approximately $50–55M.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~$50–55M</span>
+<span class="span">capex</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Q1 operating cash flow of $1.7M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">EXL reported operating cash flow of $1.7M for the quarter.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow $1.7M</span>
+<span class="span">in the quarter</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Q1 capex spend of approximately $13M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$13M · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">Management disclosed capex of about $13M during Q1 FY26.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">capex ~$13M</span>
+<span class="span">(from call)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Cash &amp; investments totaled $271M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$271M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">EXL ended the quarter with $271M in cash and investments including short- and long-term holdings.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Cash &amp; investments $271M</span>
+<span class="span">cash &amp; ST/LT investments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Total debt $417M outstanding on revolver</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$417M · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">EXL reported total debt of $417M outstanding on its revolver.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">total debt $417M</span>
+<span class="span">revolver outstanding</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Net debt approximately $151M at 3/31/26</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$151M · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">Net debt stood at roughly $151M as of March 31, 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">net debt ~$151M</span>
+<span class="span">3/31/26</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Execution risk from AI-led mix shift highlighted</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management flagged execution risk as legacy digital operations decline y/y while work migrates to Data &amp; AI-led categories, emphasizing the need to avoid revenue/margin leakage during transition.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">declined y/y</span>
+<span class="span">without revenue/margin leakage</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">AI-led mix and strong partner pipeline cited as leading indicators</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EXL pointed to its AI-led mix and a strong partner pipeline with NVIDIA, AWS, and Genesys as forward indicators of demand.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Mix shift to AI-led work</span>
+<span class="span">strong partner pipeline (NVIDIA, AWS, Genesys)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Embedded AI demand remains robust; macro/FX prudence maintained</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management remained prudent on macro and FX while noting a robust pipeline and demand for embedded AI solutions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">prudent on macro/FX</span>
+<span class="span">robust pipeline and demand for embedded AI solutions.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Hiring expected to lag revenue growth as AI mix rises</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EXL expects operating leverage as AI mix increases, with management noting headcount growth trailing revenue growth by about 3%.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">headcount up ~11% vs. revenue up ~14%</span>
+<span class="span">3% delta between revenue growth and headcount growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Management signals AI-focused M&amp;A intent</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EXL described a strong pipeline of AI enablement assets and expressed the hope to close an acquisition soon, prioritizing AI capabilities and geographic diversification.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">fairly strong pipeline of assets</span>
+<span class="span">We hope that we will be able to close an acquisition soon</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Analyst Day set for May 13, 2026 to detail AI monetization</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EXL scheduled an Investor &amp; Analyst Day for May 13, 2026, to outline a multiyear growth framework and AI monetization model.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Investor &amp; Analyst Day scheduled for 2026-05-13</span>
+<span class="span">AI monetization model.</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-02</span>
+<span class="eh">Strategic services collaboration with Google Cloud</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">EXL and Google Cloud announced a strategic collaboration to scale enterprise AI and deepen co‑innovation and go‑to‑market execution across priority industries and markets.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">strategic collaboration with Google Cloud</span>
+<span class="span">accelerate AI-led transformation</span>
+<span class="span">global strategic services partner</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-11</span>
+<span class="eh">EXL unveils agentic AI solutions incl. EXL Agent Studio and Governance Hub</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EXL launched new agentic AI capabilities, including EXL Agent Studio for no‑code agent building and an EXL Governance Hub with more than 40 specialized models and built‑in guardrails.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">agentic AI solutions</span>
+<span class="span">EXL Agent Studio</span>
+<span class="span">EXL Governance Hub</span>
+<span class="span">more than 40 specialized models</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scaling on AWS and competency milestones</h2>
+<div class='range'>2025-06-03 → 2025-12-11</div>
+<div class='psum'>EXL deepened its AWS footprint with formal recognition and platform migrations. In June 2025, EXL achieved the AWS Generative AI Competency within the AWS Partner Network, signaling validated delivery capability for GenAI on AWS.
+By December 2025, EXL completed the migration of its LifePRO Digital Suite platforms to AWS, leveraging Amazon Bedrock and Amazon Kendra to enhance performance, reduce operational costs, and accelerate feature deployment for life and annuity carriers.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-11</span>
+<span class="eh">EXL completes migration of LifePRO Digital Suite to AWS; leverages Bedrock and Kendra</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EXL migrated its LifePRO Digital Suite platforms to AWS, citing performance and cost benefits. The modernization employs Amazon Bedrock and Amazon Kendra for next-generation capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">LifePRO Digital Suite</span>
+<span class="span">Amazon Bedrock and Kendra</span>
+<span class="span">secure, scalable and resilient infrastructure</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-03</span>
+<span class="eh">EXL achieves AWS Generative AI Competency</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AWS awarded EXL the Generative AI Competency, recognizing domain expertise and proven success delivering GenAI solutions as part of the AWS Partner Network.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">AWS Generative AI Competency</span>
+<span class="span">AWS Partner Network (APN)</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational hyperscaler alignments and vertical AI builds</h2>
+<div class='range'>2023-11-15 → 2024-09-26</div>
+<div class='psum'>EXL began formalizing AI go-to-market routes through hyperscalers. In November 2023, EXL was recognized as a Premier Level Partner for Google Cloud in the Service Engagement Model, validating its Google Cloud delivery proficiency. In February 2024, EXL simultaneously expanded with Microsoft and AWS: it announced a collaboration using Microsoft Azure OpenAI Service to co‑develop generative AI solutions, and rolled out cloud‑native generative AI solutions on AWS built using Amazon Bedrock via EXL’s AI workbench.
+By mid‑2024 EXL leaned into NVIDIA’s full‑stack AI platform to develop production‑grade AI across insurance, healthcare, banking and other sectors, and then launched a specialized Insurance LLM leveraging NVIDIA AI Enterprise. The Insurance LLM emphasized domain specialization and reported internal accuracy improvements versus generic frontier models, positioning EXL for industry‑specific AI work.</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2024-09-26</span>
+<span class="eh">EXL launches specialized Insurance LLM leveraging NVIDIA AI Enterprise</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EXL released an industry-specific Insurance LLM built on NVIDIA AI Enterprise, citing internal accuracy gains versus general-purpose models and targeting claims and underwriting workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">EXL Insurance LLM</span>
+<span class="span">NVIDIA AI Enterprise</span>
+<span class="span">OpenAI GPT4, Claude and Gemini</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2024-07-31</span>
+<span class="eh">EXL to build enterprise AI apps using full-stack NVIDIA AI platform</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EXL announced an initiative to develop and deploy production-grade AI applications across multiple industries using NVIDIA’s accelerated computing, networking and software stack.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">full-stack NVIDIA AI platform</span>
+<span class="span">insurance, healthcare, banking</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-02-28</span>
+<span class="eh">EXL collaborates with Microsoft using Azure OpenAI Service</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">EXL and Microsoft announced a collaboration to co-develop and accelerate generative AI solutions using Microsoft Azure OpenAI Service, with early access to emerging technologies to enhance EXL’s AI offerings.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Microsoft Azure OpenAI Service</span>
+<span class="span">co-develop and accelerate generative AI solutions</span>
+<span class="span">early access to emerging technologies</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-02-28</span>
+<span class="eh">EXL rolls out generative AI solutions on AWS built using Amazon Bedrock</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EXL unveiled new generative AI solutions on AWS using its AI workbench and Amazon Bedrock, enabling enterprise access to domain-specific datasets and a modular, scalable platform to integrate multiple foundation models.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">cloud-native AI workbench</span>
+<span class="span">Amazon Bedrock</span>
+<span class="span">a choice of high-performing foundation models</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-11-15</span>
+<span class="eh">EXL recognized as Google Cloud Premier Level Partner (Service Engagement Model)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">EXL achieved Premier Partner status with Google Cloud in the Service Engagement Model, underscoring its capability to deliver data-led analytics and AI services on Google Cloud and strengthening its Google channel.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Premier Level Partner for Google Cloud</span>
+<span class="span">Service Engagement Model</span>
+<span class="span">We’re pleased to welcome EXL as a Google Cloud Premier Partner</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the closing timeline and final consideration mix (cash vs. contingent payments) for the iMerit acquisition, and will there be any retention or earn-out structures tied to model training KPIs?</li>
+<li>How is EXL’s AI revenue mix distributed by platform/provider (Google vs. Microsoft Azure OpenAI vs. AWS Bedrock vs. NVIDIA stack), and how has that mix trended over the last four quarters?</li>
+<li>What are the commercial terms and duration of the strategic services collaboration with Google Cloud, including any co-sell targets or joint solution commitments?</li>
+<li>To what extent are outcome-based commercial models being adopted beyond payment integrity, and what margin volatility do these models introduce as AI scales?</li>
+<li>What portion of the FY26 capex (~$50–55M) is specifically allocated to AI platform, tooling, or data infrastructure investments?</li>
+<li>Is there third-party validation or dated publication for the Gemini-based IVR case study citing $12M in annual savings?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Most items are based on company press releases and management commentary; independent third-party corroboration is limited.</li>
+<li>The case study on Google Gemini IVR savings is undated; we used the as-of date for timeline placement.</li>
+<li>NVIDIA-related integrations reflect platform and workflow adoption rather than procurement volumes for specific accelerators.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

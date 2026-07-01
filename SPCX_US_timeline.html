@@ -1,0 +1,863 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>SPCX US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>SpaceX <span class='sub'>(SPCX US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-28 · built by gpt-5 · $0.416</div>
+</header>
+<div class='stats'>
+<span class='chip'>6 phases</span>
+<span class='chip'>39 events</span>
+<span class='chip'>filings 0</span>
+<span class='chip'>news 23</span>
+<span class='chip'>frontier 18</span>
+<span class='chip'>web 3</span>
+<span class='chip'>single source: 31</span>
+<span class='chip'>corroborated: 5</span>
+<span class='chip'>web-only (verified): 2</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Post‑IPO commercialization and financing mechanics</h2>
+<div class='range'>2026-06-16 → 2026-06-28</div>
+<div class='psum'>Following the debut, secondary market infrastructure formed rapidly (options launch; ETF themes), and SpaceX moved to consolidate AI software (Cursor acquisition) and deepen compute commercialization (Reflection deal). Regulatory dynamics around xAI’s power sourcing progressed as DOJ sought dismissal of the NAACP Clean Air Act suit. Governance and M&amp;A steps included adding an independent director and FTC early termination for Mesh Optical. Financing scaled with a $25B inaugural bond sale that subsequently softened in secondary trading.</div>
+<div class="event t-single_source" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-26</span>
+<span class="eh">SpaceX closes $25B inaugural bond sale across five tranches</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$25.0B · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">SpaceX completed a $25B debut senior unsecured notes offering, upsized from $20B amid ~$85–$89B in orders, with coupons from 5.35% (2031) to 6.65% (2056).</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">completed a $25 billion inaugural senior unsecured notes</span>
+<span class="span">coupons ranging from 5.35% (2031) to 6.65% (2056)</span>
+<span class="span">upsized from an initial $20 billion</span>
+<span class="span">orders approached ~$85–$89 billion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-26</span>
+<span class="eh">New SpaceX bonds widen in secondary; ~$305m paper losses cited</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$305M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Bloomberg/AdvisorPerspectives noted SpaceX’s long-end bonds widened up to 28 bps from issue, with roughly $305m in paper losses; 10‑year notes traded ~157 bps over Treasuries vs ~140 bps at sale.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">sold off quickly after pricing</span>
+<span class="span">28 bps wider</span>
+<span class="span">about $305m</span>
+<span class="span">157 bps over Treasuries</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-26</span>
+<span class="eh">FTC grants early termination for Musk acquisition of Mesh Optical</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The FTC granted early termination for Elon Musk’s acquisition of Mesh Optical Technologies, a data-center optical interconnect startup with potential fit in AI datacenter buildouts.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">early-termination notice</span>
+<span class="span">Elon Musk as acquiring party</span>
+<span class="span">Mesh Optical Technologies</span>
+<span class="span">status “Granted,”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0038" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-26</span>
+<span class="eh">Report: SpaceX plans Starlink-branded U.S. mobile service</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">FT reporting relayed by multiple outlets said SpaceX told investors it plans a Starlink mobile service and may build a U.S. terrestrial mobile network; Reuters could not independently verify.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<p class="cav">⚠ Single-source FT report relayed; company did not immediately comment.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">plans to launch a Starlink mobile service</span>
+<span class="span">build a terrestrial U.S. mobile network</span>
+<span class="span">could not independently verify</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">SpaceX fast‑tracked into Russell 1000 at June reconstitution</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Reuters reported FTSE Russell will fast‑track SpaceX into the Russell 1000 at the June reconstitution, with index changes effective after the close.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[4]</div>
+<span class="span">fast‑tracked into Russell 1000</span>
+<span class="span">reconstitution</span>
+<span class="span">62 companies will join the Russell 1000</span>
+<span class="span">after the U.S. market close on Friday</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-22</span>
+<span class="eh">Reflection to pay $150M/month for Colossus 2 compute (from Jul 1, 2026)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.8B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Axios and The Information reported Reflection signed for Colossus 2 capacity with payments of $150M/month starting July 1, 2026 through 2029, after an initial ramp and a 90‑day termination right following the first three months.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">$150 million per month</span>
+<span class="span">beginning July 1, 2026</span>
+<span class="span">through 2029</span>
+<span class="span">Colossus 2</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-17</span>
+<span class="eh">Roelof Botha elected independent director</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">SpaceX added Roelof Botha as an independent director, aligning with governance build‑out including an audit committee post‑IPO.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[6]</div>
+<span class="span">Roelof Botha</span>
+<span class="span">independent director</span>
+<span class="span">audit committee</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">Options on SPCX set record first‑day volume</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Options on SpaceX began trading with record debut activity, exceeding half a million contracts in the first hour and 675,000 by 10:40 a.m. ET; implied vol printed near 110%–115%.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[10]</div>
+<span class="span">record debut activity</span>
+<span class="span">over half a million contracts</span>
+<span class="span">675,000 by 10:40 a.m. ET</span>
+<span class="span">near 110%–115%</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0029" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">DOJ seeks to dismiss NAACP Clean Air Act suit over xAI turbines</span>
+<span class="badge">regulatory</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">xai_grok</span></div>
+<p class="narr">DOJ moved to intervene and dismiss the NAACP’s Clean Air Act suit over gas turbines powering xAI’s Colossus 2, citing national security and Grok’s government uses; filings argue shutdown would threaten AI innovation.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · XAI <b>0</b></span> <span class="chchip">regulatory_or_reputational_risk · XAI <b>0</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[8], frontier_events[0]</div>
+<span class="span">filed to intervene and seek dismissal</span>
+<span class="span">threaten AI innovation and U.S. national security</span>
+<span class="span">NAACP’s Clean Air Act citizen suit</span>
+<span class="span">moves to dismiss NAACP Clean Air Act suit</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">SpaceX signs $60B all‑stock deal to acquire Cursor (Anysphere)</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$60.0B · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">SpaceX filed an 8‑K for a stock‑for‑stock merger to acquire Anysphere (Cursor) valued at $60.0B, expected to close in Q3 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[7]</div>
+<span class="span">$60.0 billion</span>
+<span class="span">Agreement and Plan of Merger</span>
+<span class="span">expects to close in Q3 2026</span>
+<span class="span">stock‑for‑stock</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">First ‘MANGOS’ AI‑theme ETFs filed to include SpaceX</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Reuters reported ETF sponsors filed to launch ‘MANGOS’ funds holding Meta, Nvidia, Google/Alphabet, SpaceX, and private AI leaders, reflecting thematic investor demand.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[9]</div>
+<span class="span">‘MANGOS’ AI mega‑cap</span>
+<span class="span">filed late Monday with the SEC</span>
+<span class="span">Meta, Nvidia, Google/Alphabet, SpaceX</span>
+<span class="span">could debut by late August</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>June 2026: Rules, projections, safety dispute, and IPO debut</h2>
+<div class='range'>2026-06-04 → 2026-06-14</div>
+<div class='psum'>Index providers and banks shaped the market context for SpaceX’s listing: S&amp;P DJI declined to fast‑track mega‑cap IPOs into the S&amp;P 500, while banks circulated aggressive AI revenue projections. Regulatory attention rose as Sen. Warren urged the SEC to delay the IPO. A former xAI engineer sued xAI and SpaceX over Grok safety concerns. SpaceX concurrently filed an FWP revealing a massive Google compute agreement slated to start in October 2026. On June 12, SpaceX executed the largest IPO ever, with orderly first‑day trading.</div>
+<div class="event t-corroborated" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-12</span>
+<span class="eh">SpaceX completes largest IPO ever; priced at $135, raises ~$75B</span>
+<span class="badge">financing</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$75.0B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">SpaceX priced its IPO at $135 for 555.6M shares, raising about $75B. Shares opened near $150 and closed up ~19%, with CNBC citing a $160.95 close.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[11], news_rows[12]</div>
+<span class="span">fixed IPO price of $135 per share</span>
+<span class="span">555.6 million shares</span>
+<span class="span">largest IPO ever</span>
+<span class="span">Closed at $160.95</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">Sen. Warren urges SEC to delay SpaceX IPO over valuation/governance/index risks</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">A Senate Banking Committee release said Sen. Warren asked the SEC to delay SpaceX’s IPO, citing speculative valuation, governance control, and potential index-inclusion distortions.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[14]</div>
+<span class="span">delay SpaceX’s IPO</span>
+<span class="span">speculative valuation</span>
+<span class="span">governance structure</span>
+<span class="span">index-provider rule changes</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0026" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">Ex‑xAI engineer sues xAI and SpaceX over Grok safety concerns</span>
+<span class="badge">risk</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">xai_grok</span></div>
+<p class="narr">TechCrunch and Reuters reported Devin Kim filed suit alleging he was fired for raising Grok safety issues; the complaint names xAI and parent SpaceX.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk · XAI <b>0</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[13], frontier_events[1]</div>
+<span class="span">fired for repeatedly raising AI-safety concerns about Grok</span>
+<span class="span">names xAI and its parent SpaceX</span>
+<span class="span">sues xAI over Grok safety concerns</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">Musk outlines orbital AI satellite design using Starlink V3 tech</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Ahead of the IPO, Musk said orbital AI data-center satellites would mostly reuse Starlink V3 technology, citing ~150 kW peak (~120 kW sustained) comparable to a single Nvidia GB300 rack.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[15]</div>
+<span class="span">orbital AI data‑center satellites</span>
+<span class="span">Starlink V3</span>
+<span class="span">about 150 kW peak</span>
+<span class="span">Nvidia GB300 rack</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">SpaceX FWP: Google to pay $920M/month for ~110k GPUs (Oct 2026–Jun 2029)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$11.0B · run_rate_annual</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">SpaceX disclosed a Cloud Service Agreement under which Google will pay $920M per month from Oct 2026 to Jun 2029 for access to ~110,000 NVIDIA GPUs; the agreement includes delivery milestones and termination options.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · GEM <b>5</b></span> <span class="chchip">chip_accelerator_exposure · GEM <b>4</b></span> <span class="chchip">enterprise_adoption_exposure · GEM <b>4</b></span> <span class="chchip">provider_specificity · GEM <b>3</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b></span> <span class="chchip">switching_flexibility · GEM <b>3</b></span> <span class="chchip">dependency_duration · GEM <b>4</b></span> <span class="chchip">contractual_commitment_strength · GEM <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[17]</div>
+<span class="span">$920 million per month</span>
+<span class="span">October 2026 through June 2029</span>
+<span class="span">110,000 NVIDIA GPUs</span>
+<span class="span">either party may terminate after December 31, 2026 with 90 days’ notice</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">S&amp;P DJI declines fast-track S&amp;P 500 entry for mega-cap IPOs</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">S&amp;P DJI made no changes to S&amp;P 500 eligibility after its consultation, maintaining the seasoning and profitability rules; mega-cap IPOs like SpaceX will not be fast-tracked into the S&amp;P 500.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[18]</div>
+<span class="span">make no changes to S&amp;P 500</span>
+<span class="span">12‑month trading &#x27;seasoning&#x27; requirement</span>
+<span class="span">June 8, 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">Banks pitch AI unit to $322B revenue by 2030 during IPO roadshow</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$322.0B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Reuters reported Goldman’s materials projected SpaceX AI revenue at $322B by 2030 ($15.6B in 2026; $34.5B in 2027), supporting valuation narratives in the roadshow.</p>
+<p class="cav">⚠ Third-party projections; not company guidance.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[16]</div>
+<span class="span">projects $322B AI revenue by 2030</span>
+<span class="span">$15.6B in 2026</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early 2026: Corporate consolidation and pre-IPO compute deals</h2>
+<div class='range'>2026-02-02 → 2026-05-21</div>
+<div class='psum'>SpaceX acquired xAI in February 2026, then secured early government access for Grok in classified systems. The company pursued energy and materials inputs for compute at scale, while striking major third‑party compute agreements. In May, Anthropic signed for Colossus‑1 capacity, with reporting indicating about $1.25B per month of spend and 300MW+ infrastructure. SpaceX also filed for its record IPO in late May.</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">SpaceX files S-1 for Nasdaq IPO (SPCX), reveals AI ambitions</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">SpaceX filed for a Nasdaq IPO under ticker SPCX; contemporaneous coverage emphasized heavy losses and expansive AI infrastructure ambitions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[19]</div>
+<span class="span">files for Nasdaq IPO under ticker SPCX</span>
+<span class="span">S-1 reveals heavy losses and AI ambitions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0039" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-16</span>
+<span class="eh">BlackRock discusses $5–10B anchor order for SpaceX IPO</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Reuters reported BlackRock was in talks to anchor SpaceX’s IPO with a potential $5–10B order, signaling strong institutional demand for the listing.</p>
+<p class="cav">⚠ Size was reported as discussions, not a binding commitment.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[20]</div>
+<span class="span">5 to 10 billion USD anchor</span>
+<span class="span">June IPO</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0019" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Anthropic signs for SpaceX Colossus‑1 capacity (300MW+, ~220k GPUs) with ~$1.25B/mo spend reported</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$15.0B · run_rate_annual</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic agreed to use all capacity at SpaceX’s Colossus‑1 (300MW+, ~220k NVIDIA GPUs). Reporting around late May indicated Anthropic agreed to pay about $1.25B per month for compute, underscoring severe scarcity and SpaceX’s role as supplier.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · ANT <b>5</b></span> <span class="chchip">chip_accelerator_exposure · ANT <b>4</b></span> <span class="chchip">enterprise_adoption_exposure · ANT <b>4</b></span> <span class="chchip">provider_specificity · ANT <b>3</b></span> <span class="chchip">multi_model_hedge · ANT <b>4</b></span> <span class="chchip">switching_flexibility · ANT <b>2</b></span></div>
+<details>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">frontier_events[2], news_rows[21], news_rows[17]</div>
+<span class="span">300MW+</span>
+<span class="span">220k+ NVIDIA GPUs</span>
+<span class="span">about $1.25 billion per month</span>
+<span class="span">secures SpaceX compute capacity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="xai_grok openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Musk says OpenAI models were partly used to train Grok</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">xai_grok</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">xAI acknowledged using OpenAI models in part to train Grok, highlighting cross‑provider exposure in Grok’s development.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · XAI <b>5</b> OAI <b>1</b></span> <span class="chchip">provider_specificity · XAI <b>5</b> OAI <b>1</b></span> <span class="chchip">multi_model_hedge · XAI <b>1</b> OAI <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[3]</div>
+<span class="span">used OpenAI models to train Grok</span>
+<span class="span">Elon Musk confirms</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-14</span>
+<span class="eh">OCI unit in talks to supply polysilicon to SpaceX</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Reuters reported a unit of Korea’s OCI is in talks to supply polysilicon to SpaceX, indicating materials sourcing for energy-intensive compute infrastructure.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[22]</div>
+<span class="span">Unit of Korea’s OCI in talks to supply polysilicon to SpaceX</span>
+<span class="span">Possible long-term materials deal</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2026-02-23</span>
+<span class="eh">Pentagon set to use Grok in classified systems</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Axios reported the DoD reached a deal to deploy Grok in classified environments, broadening government adoption pathways for xAI within SpaceX.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure · XAI <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[4]</div>
+<span class="span">Pentagon reaches deal to use xAI’s Grok in classified systems</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2026-02-02</span>
+<span class="eh">SpaceX acquires xAI</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">xai_grok</span></div>
+<p class="narr">SpaceX completed the acquisition of xAI, internalizing the Grok frontier model program within the SpaceX corporate structure.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure · XAI <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[5]</div>
+<span class="span">SpaceX acquires xAI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>2025: Government traction and Grok 4 lineage</h2>
+<div class='range'>2025-02-19 → 2025-11-17</div>
+<div class='psum'>Through 2025 xAI progressed from Grok 3 beta to Grok 4, 4 Heavy, 4 Fast, and 4.1. The U.S. Department of Defense awarded ceiling contracts up to $200M (alongside peers) for government AI capabilities, cementing initial enterprise/government adoption channels.</div>
+<div class="event t-single_source" id="E0014" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2025-11-17</span>
+<span class="eh">Grok 4.1 rollout</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI rolled out Grok 4.1, continuing rapid iteration of its frontier models.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[6]</div>
+<span class="span">Grok 4.1 rolled out</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2025-09-19</span>
+<span class="eh">Grok 4 Fast released</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI introduced Grok 4 Fast as a cost-efficient reasoning model, expanding deployment options.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[7]</div>
+<span class="span">Grok 4 Fast released</span>
+<span class="span">cost-efficient reasoning model</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2025-07-14</span>
+<span class="eh">DoD awards xAI ceiling contract up to $200M</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$200M · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">The Pentagon awarded xAI a ceiling contract up to $200M for Grok for Government, alongside Anthropic, Google, and OpenAI, providing a structured channel for federal adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure · XAI <b>5</b></span> <span class="chchip">multi_model_hedge · XAI <b>1</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[8]</div>
+<span class="span">up to $200M contract</span>
+<span class="span">Grok for Government</span>
+<span class="span">Anthropic, Google, OpenAI</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0011" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2025-07-09</span>
+<span class="eh">xAI launches Grok 4/Heavy with benchmark claims</span>
+<span class="badge">model_release</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI released Grok 4 and Grok 4 Heavy, with claims of frontier performance on key reasoning benchmarks.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[9], frontier_events[10]</div>
+<span class="span">Grok 4 and Grok 4 Heavy released</span>
+<span class="span">launches Grok 4 with frontier benchmark claims</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2025-02-19</span>
+<span class="eh">Grok 3 beta reasoning models announced</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI announced Grok 3 beta reasoning models, advancing the Grok roadmap toward the Grok 4 series.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[11]</div>
+<span class="span">Grok 3 beta reasoning models announced</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>xAI’s Grok launch and 2024 model cadence</h2>
+<div class='range'>2023-11-03 → 2024-11-04</div>
+<div class='psum'>xAI introduced Grok in late 2023 and accelerated releases through 2024, including context-length and multimodal upgrades and an API beta. These steps positioned SpaceX (now parent of xAI) within the frontier-model landscape ahead of the 2025–2026 commercialization drive.</div>
+<div class="event t-single_source" id="E0009" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2024-11-04</span>
+<span class="eh">Grok API public beta</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI launched a public beta for the Grok API, opening programmatic access for developers.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[12]</div>
+<span class="span">Grok API public beta launched</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2024-08-13</span>
+<span class="eh">Grok-2 and Grok-2 mini beta</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI released Grok-2 and Grok-2 mini in beta, extending its model lineup across performance-cost points.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[13]</div>
+<span class="span">Grok-2 and Grok-2 mini beta released</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2024-04-12</span>
+<span class="eh">Grok-1.5 Vision preview</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI previewed Grok-1.5 Vision, adding multimodal capabilities to the Grok 1.5 family.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[14]</div>
+<span class="span">Grok-1.5 Vision preview announced</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2024-03-28</span>
+<span class="eh">Grok-1.5 announced with longer context</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI announced Grok-1.5 with a 128K-token context, expanding reasoning windows for advanced tasks.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[15]</div>
+<span class="span">Grok-1.5 announced</span>
+<span class="span">128K-token context</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2024-03-17</span>
+<span class="eh">Grok-1 weights and architecture opened</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI released the Grok-1 weights and architecture openly, signaling an open approach to core model artifacts at this stage.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[16]</div>
+<span class="span">Grok-1 weights and architecture open released</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0004" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2023-11-03</span>
+<span class="eh">xAI unveils Grok chatbot</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI announced Grok as its first frontier LLM chatbot, initiating the product line that would later see multiple releases and government traction.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[17]</div>
+<span class="span">Grok announced</span>
+<span class="span">xAI&#x27;s first frontier LLM chatbot</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational partnerships and equity links</h2>
+<div class='range'>2015-02-11 → 2021-05-13</div>
+<div class='psum'>SpaceX established foundational relationships with leading cloud providers and investors years before the current AI compute push. In early 2015, Alphabet invested $900 million in SpaceX, a tie later reflected in Alphabet’s 2016 10-K. This equity link foreshadowed deeper technical collaborations.
+By 2020–2021, SpaceX’s Starlink formed strategic integrations with hyperscale clouds. Microsoft’s Azure Space program highlighted Starlink as a connectivity backbone for modular datacenters and AI/ML workloads. Shortly after, Google Cloud and SpaceX announced the placement of Starlink ground stations within Google data centers to bring low-latency edge access to cloud services, including AI/ML.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-05-13</span>
+<span class="eh">Google Cloud–Starlink integration to place ground stations in Google data centers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google Cloud and SpaceX announced a partnership to locate Starlink ground stations within Google data center properties, enabling low-latency connectivity to cloud workloads including AI/ML. Availability was targeted for 2H 2021.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · GEM <b>3</b></span> <span class="chchip">product_integration_exposure · GEM <b>3</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Google Cloud and SpaceX today announced</span>
+<span class="span">locate Starlink ground stations within Google data center properties</span>
+<span class="span">artificial intelligence, or machine learning</span>
+<span class="span">expected to be available in the second half of 2021</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2020-10-20</span>
+<span class="eh">Microsoft Azure Space highlights Starlink as connectivity for AI/ML and MDC</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Microsoft announced Azure Space with SpaceX Starlink providing high-speed, low-latency connectivity for Azure Modular Datacenter, supporting AI/ML and data analytics and enabling AI algorithm training for satellite constellations.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Azure Space</span>
+<span class="span">provide high-speed, low-latency</span>
+<span class="span">Azure Modular Datacenter (MDC)</span>
+<span class="span">train AI algorithms</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2016-02-11</span>
+<span class="eh">Alphabet discloses $900 million SpaceX investment (2015)</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$900M · equity_stake</span> <span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Alphabet’s 2016 10-K disclosed it purchased a $900 million stake in SpaceX in January 2015, signaling an early strategic and financial link between Google and SpaceX that precedes current AI collaborations.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure · GEM <b>0</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">$900 million investment in SpaceX</span>
+<span class="span">January 2015</span>
+<span class="span">ALPHABET INC.</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0038'>E0038</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0038'>E0038</a></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0</td><td>1.6</td><td>1.6</td><td>0</td><td>1.5</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.15</td><td>0</td><td>1</td><td>0</td><td>1.75</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>1.74</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.775</td><td>0.745</td><td>0.85</td><td>0.775</td><td>1</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.0395</td><td>0.6475</td><td>1.3505</td><td>0</td><td>7.395</td><td>0</td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the definitive total contract value and delivery schedule for the Anthropic Colossus‑1 agreement beyond the late‑May $1.25B/month indication?</li>
+<li>Will the Google Cloud Service Agreement persist beyond mid‑2029, and how will termination options be exercised in practice?</li>
+<li>When will the Cursor (Anysphere) acquisition close, and how will Cursor integrate with xAI and Starlink developer tooling?</li>
+<li>What is the outcome of DOJ’s intervention in the NAACP Clean Air Act suit, and how might it affect xAI’s Colossus 2 operations timeline and power sourcing?</li>
+<li>Will SpaceX proceed with a Starlink‑branded U.S. mobile service and/or a terrestrial network, and how would that interplay with existing D2C and partner channels?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Numerous items rely on contemporaneous media summaries rather than primary filings; figures and terms may evolve post‑publication.</li>
+<li>Bank projections (e.g., $322B by 2030) reflect third‑party assumptions, not company guidance.</li>
+<li>Some reports (e.g., Starlink mobile service plans) were not independently verified at the time of reporting.</li>
+<li>Frontier release notes for Grok versions summarize provider claims that may not be independently benchmarked.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

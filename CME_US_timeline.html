@@ -1,0 +1,497 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>CME US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>CME Group Inc <span class='sub'>(CME US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.358</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>18 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 3</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>single source: 10</span>
+<span class='chip'>web-only (unverified): 8</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>2026 transition acceleration, AI testing, tokenization exploration, and compute futures</h2>
+<div class='range'>2026-03-01 → 2026-06-30</div>
+<div class='psum'>Into 2026, CME’s disclosures emphasized the operational costs and cadence of the Google Cloud transition and introduced an AI hardware testing program alongside timeline updates for the Chicago region migration. CME also expanded its digital-asset roadmap with tokenized cash efforts and exploration of a potential stablecoin aimed at efficiency in daily margin flows. Separately, CME and Silicon Data moved to commercialize AI compute as a tradable commodity via planned GPU compute futures, sparking ETF interest—subject to regulatory review.
+Operational risk persisted, with reports that a May 2026 AWS outage briefly impacted CME-linked trading. Overall, the period reflects increasing alignment with Google Cloud’s AI stack (including TPU-based inference testing) and product optionality in both tokenization and novel AI-linked derivatives.</div>
+<div class="event t-web_only_unverified" id="E0016" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">Globex roadmap adds AI testing on Google Cloud; TPU capacity near matching engines</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CME announced an AI on Google Cloud Testing Program in Dallas starting July 2026 for clients to evaluate hardware accelerators for inference, with Google Cloud featuring TPU capacity near CME Globex matching engines; Chicago region production migration is slated to begin in 2027.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">AI on Google Cloud Testing Program</span>
+<span class="span">hardware accelerators for inference</span>
+<span class="span">TPU capacity</span>
+<span class="span">Dallas region</span>
+<span class="span">Chicago Region Migration - Starting in 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-12</span>
+<span class="eh">CME–Silicon Data plan AI compute power futures; ETF interest emerges</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CME and Silicon Data announced plans to launch a first‑of‑its‑kind futures market tied to AI computing power based on GPU rental‑rate indices, pending regulatory review; subsequent ETF filings referenced exposure to compute futures.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">CME Group and Silicon Data announced on May 12, 2026</span>
+<span class="span">first-of-its-kind futures market</span>
+<span class="span">AI computing power</span>
+<span class="span">GPU rental-rate indices</span>
+<span class="span">pending regulatory review</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-09</span>
+<span class="eh">AWS outage reportedly briefly impacted CME-linked trading</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">An AWS incident in US‑EAST‑1 reportedly caused latency and access issues that briefly impacted CME‑linked trading, highlighting multi‑provider operational dependencies.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Based on external reporting; CME-specific impact not quantified.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">AWS outage</span>
+<span class="span">US-EAST-1</span>
+<span class="span">Latency and access issues</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1: Ongoing Google Cloud transition; higher technology support services spend</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CME reported continued Google Cloud migration activity and noted higher technology support services spend in Q1, reflecting transitional run-rate dynamics.</p>
+<div class="ev-ch">channels: <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Ongoing Google Cloud transition</span>
+<span class="span">higher technology support services spend</span>
+<span class="span">23.6% in Q1</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Exploring tokenization and evaluating “our own stablecoin” to enhance ~$85B/day flows</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$85.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CME stated it is exploring tokenization initiatives and evaluating a potential CME stablecoin to reduce collateral frictions, framing benefits against approximately $85B per day of margin and capital efficiency.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">exploring tokenization initiatives</span>
+<span class="span">evaluating “our own stablecoin,”</span>
+<span class="span">~$85B/day of margin and capital efficiency</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Resilience shock and FY2025 cloud/AI posture</h2>
+<div class='range'>2025-11-01 → 2026-02-29</div>
+<div class='psum'>In late 2025, CME suffered a material outage after a third-party data center cooling failure, disrupting Globex and EBS FX operations for hours and highlighting infrastructure fragility and operational risks to market plumbing. The incident sharpened the focus on resiliency as CME continued its multi-year migration.
+Early 2026 disclosures underscored momentum and costs of the cloud transition. CME’s 2025 10‑K reiterated the Google Cloud partnership and anticipated clearing migration completion by end of Q1 2026, and described forthcoming Aurora, IL private region and co-lo capabilities, including access to Google’s AI and data tools for client use. Q4 and FY2025 commentary outlined cloud spend of about $29M in Q4 and around $100M for 2025, an OPEX outlook of ~$1.695B for 2026 including cloud and on‑prem spend, a tokenized cash initiative with Google and a depository bank targeted for 2026, and explicitly flagged AI-/disintermediation-related risk to market data growth.</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">10-K: Clearing migration to Google Cloud by end of Q1 2026; AI tools for clients</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CME’s 2025 10‑K reported significant progress migrating non‑latency sensitive applications to Google Cloud, anticipated completing clearing migration by end of Q1 2026, and highlighted the Aurora private region/co-lo and access to Google’s AI and data capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">10-year strategic partnership with Google Cloud</span>
+<span class="span">completing the migration of the applications supporting clearing by the end of the first quarter of 2026</span>
+<span class="span">new private cloud region and a co-location facility in Aurora, Illinois</span>
+<span class="span">utilize Google’s artificial intelligence and data capabilities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Q4/FY2025 cloud spend: ~$29M in Q4; around $100M in 2025</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · other</span> <span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Management disclosed approximately $29M in Q4 cloud spending and guided around $100M for full-year 2025 as migration activity accelerated.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">in the fourth quarter</span>
+<span class="span">about $29 million</span>
+<span class="span">around $100 million” for 2025</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Google Chicago low‑latency region testing slated for 2027; non‑ULL migration early 2026</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CME reiterated that non‑ULL migration should complete in early 2026 and that a purpose‑built Chicago Google region would be available for client testing in 2027.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">non‑ULL migration completes early 2026</span>
+<span class="span">available for client testing in 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">2026 OPEX outlook ~$1.695B including cloud and on‑prem spend</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.7B · other</span> <span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CME guided to approximately $1.695B of operating expenses for 2026, inclusive of both cloud and on‑premises technology spending as the migration advances.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">2026 opex (~$1.695B)</span>
+<span class="span">includes cloud and on‑prem spend</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Tokenized cash initiative with Google and a depository bank targeted for 2026</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Management stated a tokenized cash initiative is being rolled out with Google and a depository bank, targeted for 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Tokenized cash initiative</span>
+<span class="span">with Google and a depository bank</span>
+<span class="span">targeted for 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">AI/disintermediation risk flagged around market data growth</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">CME highlighted risk to the durability of market data growth given AI and potential disintermediation narratives.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Durability of market data growth</span>
+<span class="span">AI/disintermediation narratives.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-28</span>
+<span class="eh">CME outage halts futures and EBS FX; Globex resumes after ~10 hours</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">A cooling failure at a CyrusOne facility disrupted CME’s Globex across asset classes and EBS FX, with quotes frozen and trading resuming intraday after approximately 10 hours, exposing infrastructure fragility.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">Cooling failure at CyrusOne</span>
+<span class="span">Globex outage ~10 hours</span>
+<span class="span">EBS FX resumed ~7:00 am ET</span>
+<span class="span">Globex reopened 8:30 am ET</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Specialized Chicago region buildout and public internet APIs</h2>
+<div class='range'>2024-06-01 → 2024-12-31</div>
+<div class='psum'>In mid-2024, CME and Google Cloud disclosed a major physical and architectural milestone: a new private Google Cloud region and co-location facility in Aurora, Illinois, purpose-built for CME’s markets. The platform is marketed to offer ultra-low-latency networking and high-performance computing alongside increased access to Google Cloud services and AI capabilities such as Vertex AI.
+By September 2024, CME extended client access by introducing a new Order Entry Suite of APIs hosted by Google Cloud and reachable over the public internet, targeting less latency-sensitive traders and algorithms while maintaining CME Globex risk and credit controls.</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-09-09</span>
+<span class="eh">CME debuts Globex Order Entry APIs hosted on Google Cloud over public internet</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CME introduced a new Order Entry Suite of APIs hosted by Google Cloud, accessible over the public internet with RESTful and WebSocket interfaces, designed for less latency-sensitive traders and algorithms.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Order Entry Suite of APIs - Hosted by Google Cloud</span>
+<span class="span">accessible over the public internet</span>
+<span class="span">RESTful and WebSocket APIs</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-06-26</span>
+<span class="eh">CME and Google to build private Cloud region and co-location in Aurora, IL</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">The partners announced a new private Google Cloud region and a co-location facility in Aurora, Illinois to support CME’s global futures and options markets, enabling access to AI capabilities including Vertex AI.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">new private Google Cloud region</span>
+<span class="span">Aurora, Illinois</span>
+<span class="span">artificial intelligence (AI) capabilities</span>
+<span class="span">Vertex AI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational Google Cloud partnership and initial migration</h2>
+<div class='range'>2021-11-04 → 2023-12-31</div>
+<div class='psum'>CME Group and Google Cloud entered a 10-year strategic partnership on November 4, 2021 that coupled a $1 billion equity investment from Google with a plan to migrate CME’s technology infrastructure to Google Cloud. The agreement envisioned staged migration beginning with data and clearing, with Google’s analytics and machine learning capabilities positioned to support new real-time data, modeling, and risk tools.
+During 2023, CME advanced the program from planning to formal regulatory and client-facing milestones. In June 2023, CME filed an advance notice with the CFTC to migrate clearing and settlement systems to Google Cloud Platform, citing resiliency and security benefits from GCP’s global infrastructure. By July 2023, CME launched Reference Data API v3 hosted on Google Cloud and made historical referential data accessible via Google Cloud BigQuery, signaling the first visible productized components of the cloud transition for customers.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-07-27</span>
+<span class="eh">CME launches Reference Data API v3 on Google Cloud; BigQuery historical data available</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CME announced Reference Data API v3 hosted on Google Cloud and made historical product referential data available in Google Cloud BigQuery, with plans to decommission RD APIv2 in October 2023.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">CME Reference Data API version 3 (RD APIv3), hosted on Google Cloud (GC).</span>
+<span class="span">Historical Product Referential Data in Google Cloud BigQuery</span>
+<span class="span">RD APIv2 will be decommissioned on Friday, October 27</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-06-14</span>
+<span class="eh">CME files CFTC advance notice to migrate clearing/settlement to Google Cloud</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CME submitted an advance notice to the CFTC (Submission No. 23‑233) detailing plans to migrate clearing and settlement systems to GCP as part of its ten‑year agreement with Google, citing resiliency and security objectives.</p>
+<div class="ev-ch">channels: <span class="chchip">ecosystem_control_loss</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Advance Notice — Migration of Clearing and Settlement Systems to the Google Cloud Platform</span>
+<span class="span">CME Submission No. 23-233</span>
+<span class="span">derivatives clearing organization (“DCO”)</span>
+<span class="span">ten-year agreement with Google LLC (“Google”)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-11-04</span>
+<span class="eh">Google invests $1B in CME preferred stock as part of strategic partnership</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CME issued 4,584,020 shares of Series G Non‑Voting Convertible Preferred Stock to Google for approximately $1 billion in cash, bolstering CME’s technology transformation and aligning with the firms’ broader 10‑year collaboration.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1], web_search_findings[0]</div>
+<span class="span">4,584,020 shares of Series G Non-Voting Convertible Preferred Stock</span>
+<span class="span">approximately $1 billion in cash</span>
+<span class="span">10-year partnership</span>
+<span class="span">Google has also made a $1 billion equity investment</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-11-04</span>
+<span class="eh">CME and Google Cloud sign 10-year partnership to migrate markets to GCP</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">The firms announced a 10‑year strategic partnership to migrate CME’s technology infrastructure to Google Cloud, beginning with data and clearing services and ultimately moving all markets, leveraging Google Cloud analytics and ML.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[2]</div>
+<span class="span">10-year strategic partnership</span>
+<span class="span">migrate its technology infrastructure to Google Cloud</span>
+<span class="span">data and clearing services</span>
+<span class="span">migrate the systems supporting its clearing and settlement functions to a cloud-based infrastructure hosted on the Google Cloud Platform</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the regulatory timeline and likelihood for approval of AI compute power futures, and what safeguards will govern index integrity and potential manipulation?</li>
+<li>Will CME’s tokenized cash initiative with Google and a depository bank meet the 2026 target, and what specific settlement or margin workflows will be supported at launch?</li>
+<li>How will CME quantify ongoing cloud OPEX versus legacy on‑prem costs through 2026–2027, and when does net cost inflect as legacy systems decommission?</li>
+<li>What scale and SLA characteristics will the Google Cloud Chicago private region deliver for ultra‑low‑latency use cases, and how will it compare to physical co‑location post‑migration?</li>
+<li>To what extent do third‑party cloud outages (e.g., AWS) create correlated operational risk across CME-linked services despite Google Cloud migration?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some items (e.g., impacts from the AWS outage) are based on external reporting without CME‑quantified metrics.</li>
+<li>Compute futures remain subject to regulatory review; timing and final contract specifications could change.</li>
+<li>Cloud migration timelines (e.g., Chicago region cutover) are subject to technical and regulatory dependencies and may shift.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

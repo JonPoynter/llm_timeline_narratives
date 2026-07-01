@@ -1,0 +1,503 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>TXN US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Texas Instruments Inc <span class='sub'>(TXN US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.339</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>19 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 2</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 6</span>
+<span class='chip'>single source: 13</span>
+<span class='chip'>web-only (verified): 5</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>AI infrastructure collaborations and demand acceleration</h2>
+<div class='range'>2026-03-05 → 2026-06-17</div>
+<div class='psum'>In March 2026, TI announced collaborations with NVIDIA: integrating TI radar and power with NVIDIA Jetson Thor and Holoscan for humanoid robots (&quot;physical AI&quot;), and unveiling a complete 800 VDC power architecture for next-generation AI data centers with a two-stage conversion from 800V to processor power showcased at NVIDIA GTC 2026.
+The April 2026 quarter reinforced momentum: TI pointed to particular strength in data center with demand up ~+90% y/y, guided Q2 a little above seasonal on data center mix, and highlighted expanding moats in high-power density including Vcore. Management flagged OSAT tightness and continued backend investment. TI also received $555M in CHIPS Act direct funding tied to the Sherman 300mm fab ramp. In June, TI documented official CCStudio IDE support for AI code assistants—Anthropic’s Claude Code and OpenAI’s Codex—via the AI Assistant Configurator.</div>
+<div class="event t-web_only_verified" id="E0019" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-17</span>
+<span class="eh">CCStudio IDE adds official AI code assistant support (Claude Code, Codex)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">TI documented that CCStudio IDE v20.5.x and greater supports Anthropic’s Claude Code and OpenAI’s Codex via the AI Assistant Configurator tool, with Claude Code recommended and officially supported.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Anthropic&#x27;s Claude Code</span>
+<span class="span">OpenAI&#x27;s Codex</span>
+<span class="span">OFFICIALLY SUPPORTED</span>
+<span class="span">AI Assistant Configurator</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Reuters/TI PR: Beat and guide above; AI/data center cited</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters/TI PR reported a beat and guide above expectations with analog rebound tied to AI/data center and hyperscaler capex, and shares rising after-hours.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Analog rebound tied to AI/data center</span>
+<span class="span">TXN +7% AH</span>
+<span class="span">Rev 4.83 B vs 4.58 B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1: Particular strength in data center; Analog and Embedded up</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TI cited broad‑based growth with particular strength in data center; both Analog and Embedded grew sequentially and year over year.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">particular strength in industrial and data center</span>
+<span class="span">both Analog and Embedded grew sequentially and y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Data center demand up ~+90% y/y; backend tightness noted</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported data center demand up about 90% year over year and flagged OSAT tightness requiring further backend investment to sustain competitive lead times.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">data center (~+90% y/y) demand</span>
+<span class="span">OSAT (outsourced assembly/test) tightness necessitating further backend investment</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q2 guide a little above seasonal (~8% q/q) on DC mix</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TI framed Q2 outlook as a little above seasonal (~8% sequential), attributing strength to data center mix and order trends.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">a little bit above seasonal… 8% sequential</span>
+<span class="span">linked to mix (data center)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Expanding moats in data center power including Vcore</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO emphasized breadth across sockets and investments such as BCD process and 300mm, supporting higher power density and Vcore opportunities, with expectations for continued expansion as data center CapEx persists.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">higher power density, including Vcore opportunities</span>
+<span class="span">BCD process, 300mm</span>
+<span class="span">continued expansion as data center CapEx persists</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">OSAT tightness prompts further backend capacity investment</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management reiterated a focus on internal manufacturing scale and backend capacity expansion amid OSAT tightness, signaling potential near-term supply constraints and execution risk.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">OSAT tightness</span>
+<span class="span">backend capacity investment</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Received $555M in CHIPS Act direct funding tied to Sherman fab</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$555M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">TI received $555M in Q1 from CHIPS Act direct funding to support the ramp at the 300mm Sherman fab; trailing twelve-month CHIPS benefits totaled about $965M.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">received $555M in Q1 from CHIPS Act direct funding</span>
+<span class="span">tied to ramp at the new 300mm Sherman fab</span>
+<span class="span">TTM cash benefits from CHIPS incentives totaled ~$965M</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">TI unveils 800 VDC power architecture for AI data centers with NVIDIA</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TI introduced a complete 800 VDC power solution requiring only two conversion stages from 800V to processor power, featuring an 800V to 6V isolated bus converter and a 6V to &lt;1V multiphase buck stage; to be demonstrated at NVIDIA GTC 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">800 VDC power</span>
+<span class="span">two conversion stages from 800V to processor power</span>
+<span class="span">NVIDIA GTC 2026</span>
+<span class="span">6V to &lt;1V multiphase buck</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-05</span>
+<span class="eh">TI and NVIDIA collaborate on &quot;physical AI&quot; for humanoid robots</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TI announced integration of its sensing and power technologies with NVIDIA platforms, including Jetson Thor and Holoscan, to accelerate safe deployment of humanoid robots and enable low-latency 3D perception and safety awareness.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">physical AI</span>
+<span class="span">humanoid robots</span>
+<span class="span">Jetson Thor</span>
+<span class="span">Holoscan</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Data center end‑market formalization and supply readiness</h2>
+<div class='range'>2026-01-27 → 2026-01-28</div>
+<div class='psum'>With the 25Q4 release in January 2026, TI formally elevated Data Center to a distinct end market, citing rapid growth and reporting ~$1.5B in 2025 revenue (9% mix, +64% y/y). Management also highlighted BCD-based high-current power solutions for accelerator/CPU rails entering sampling, indicating strategic alignment with AI compute power delivery.
+Operationally, TI emphasized short lead times (below ~13 weeks) and strong factory execution, including the Sherman 300mm ramp running ahead of schedule. The next day, Reuters coverage highlighted the market’s positive reaction to the guidance and AI/data center tailwinds.</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Reuters: Shares rise on strong Q1 outlook tied to AI data centers</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters reported TXN shares up premarket after guidance above estimates, with commentary linking analog demand to AI data centers and AI infrastructure normalization.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">Premarket: Texas Instruments up 7 percent</span>
+<span class="span">guides Q1 revenue 4.32-4.68b</span>
+<span class="span">AI infrastructure</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">Data Center revenue ~$1.5B in 2025 (9% mix, +64% y/y)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.5B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">TI disclosed that Data Center revenue was approximately $1.5B in 2025, comprising 9% of the mix and growing 64% year over year, reflecting strengthening AI/data center demand for TI’s analog and embedded solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Data Center ~$1.5B (9%, +64% y/y)</span>
+<span class="span">Annual 2025 end‑market mix</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">TI reorganizes end markets to add Data Center</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reorganized end markets to explicitly include Data Center, citing rapid growth exiting Q4 and signaling a strategic priority to address AI infrastructure demand.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">reorganized end markets to add Data Center</span>
+<span class="span">rapid growth (around +70% y/y in Q4)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">Sampling BCD high‑current power for accelerator/CPU rails</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TI reported that BCD-based high-current power solutions for accelerator/CPU rails produced in Sherman are sampling, expanding the company’s data center opportunities aligned to AI accelerator power delivery.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">BCD-based high‑current power solutions</span>
+<span class="span">accelerator/CPU rails</span>
+<span class="span">are sampling</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">Lead times below ~13 weeks support DC/AI builds</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TI noted average lead times remained below ~13 weeks with many parts available within weeks, supporting customer execution for data center and AI builds.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Lead times: Average lead times remain below ~13 weeks</span>
+<span class="span">many parts are available within weeks</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">Sherman 300mm fab ramp ahead of schedule</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated the Sherman 300mm fab ramp was ahead of schedule with high yield and higher‑than‑planned throughput, bolstering TI’s ability to meet growing AI data center power demand.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Sherman ramp is ahead of schedule</span>
+<span class="span">high yield and higher‑than‑planned throughput</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Developer demos on voice/AI peripherals</h2>
+<div class='range'>2024-08-16 → 2024-08-16</div>
+<div class='psum'>TI published a developer-focused demonstration in 2024 showing how to adapt Google’s VoiceKit for the BeagleY-AI platform. The example highlighted end-to-end behavior—audio capture, Google search, and response—illustrating TI’s engagement with AI-enabled peripherals and developer education.
+While not tied directly to frontier LLM providers, the demo signals TI’s continued investment in showcasing practical AI integrations across its developer ecosystem.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-08-16</span>
+<span class="eh">Adapting Google VoiceKit for BeagleY-AI demo</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">TI released a video demo on adapting Google’s VoiceKit for the BeagleY-AI platform, walking through audio I/O manipulation and demonstrating query-response via Google search.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Google VoiceKit</span>
+<span class="span">BeagleY-AI</span>
+<span class="span">run it through a Google search</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational cloud/AI ecosystem groundwork</h2>
+<div class='range'>2014-12-09 → 2018-01-01</div>
+<div class='psum'>Texas Instruments began building an ecosystem position related to cloud and AI-adjacent workflows well before the current AI cycle. In 2014, TI announced an expanded IoT cloud ecosystem and open-source Energia support, highlighting integration paths that could route data and events to popular cloud and web services.
+In early 2018, TI content showcased developer pathways that connected TI hardware to Google Cloud IoT Core using Mongoose OS, emphasizing quick prototyping and integration with Google’s analytics and machine learning services. These efforts foreshadowed TI’s later focus on data-center and AI infrastructure demand by cultivating developer familiarity with cloud-centric architectures.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2018-01-01</span>
+<span class="eh">TI SimpleLink CC3220SF pathway to Google Cloud IoT Core with Mongoose OS</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A TI technical article described how Mongoose OS enables TI’s SimpleLink CC3220SF MCU-based devices to prototype quickly and connect to Google Cloud IoT Core and related analytics services, including BigQuery and Machine Learning.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Mongoose OS</span>
+<span class="span">Google Cloud IoT Core</span>
+<span class="span">CC3220SF</span>
+<span class="span">BigQuery and Machine Learning</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2014-12-09</span>
+<span class="eh">TI expands IoT cloud ecosystem and Energia support</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TI announced an expansion of its IoT cloud ecosystem to 18 companies and integration with Energia and Temboo, enabling developers to connect TI-based devices to cloud workflows such as logging into Google spreadsheets.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">IoT cloud ecosystem</span>
+<span class="span">18 companies</span>
+<span class="span">Google spreadsheet</span>
+<span class="span">Energia + Temboo</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What proportion of TI’s data center revenue (~$1.5B in 2025) is directly tied to AI accelerator power-delivery sockets (e.g., GPU/TPU/ASIC Vcore) versus general server infrastructure?</li>
+<li>How durable is the ~+90% y/y data center demand cited in 26Q1, and what portion reflects hyperscaler AI capex versus broader cloud/enterprise rebuilds?</li>
+<li>To what extent will OSAT tightness constrain shipments into AI data center programs in 2H26, and what is the expected timeline/scale for TI’s backend capacity additions?</li>
+<li>What is the adoption and usage intensity of Claude Code and Codex within CCStudio IDE among TI’s developer base, and does TI plan to support additional AI assistants/providers?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Older TI web materials (2014, 2018) are included as historical context and may reflect programs or services that have since evolved.</li>
+<li>News excerpts summarize market reactions and may not reflect full underlying financials; rely on TI filings for definitive disclosures.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

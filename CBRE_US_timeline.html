@@ -1,0 +1,528 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>CBRE US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>CBRE Group Inc <span class='sub'>(CBRE US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.363</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>20 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 6</span>
+<span class='chip'>single source: 14</span>
+<span class='chip'>web-only (verified): 3</span>
+<span class='chip'>web-only (unverified): 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>AI-driven DC monetization, workforce scale-up, and agentic AI platforming</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>Entering 2026, CBRE highlighted monetization from a substantial data center (DC) land pipeline alongside continued services demand from hyperscalers. Q4 2025 results (reported Feb 12, 2026) showed Project Management revenue of $2.21B aided by hyperscaler projects, REI segment operating profit of $201M driven by U.S. DC site monetization, and a ~$1.2B Pearce Services acquisition to expand digital and power infrastructure services. Management also flagged multi‑year DC services workload with ~30 sites under control at TCC, while noting power availability as a gating factor. Market sentiment acknowledged AI‑disruption risk to real-estate services valuations.
+Q1 2026 (reported Apr 23, 2026) underscored DC-linked momentum: critical infrastructure services revenue rose ~71% YoY, REI posted sharply higher operating profit with earlier-than-expected gains from the DC land program, and management clarified Pearce’s telecom/power orientation while DC demand lifted multiple service lines. CBRE maintained tight controls on internal AI adoption and reiterated it does not plan to invest directly in AI companies, framing benefits to accrue first in G&amp;A.
+Concurrently, CBRE’s external AI posture advanced: the firm joined McKinsey and Google Cloud’s transformation initiative to deploy agentic AI using the Gemini stack, and deepened Meta-related workforce initiatives via LevelUp and America’s Workforce Academy to train thousands for DC buildouts, addressing a skilled-trades bottleneck.</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">Meta launches America’s Workforce Academy; CBRE named partner</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$115M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta announced America’s Workforce Academy with an initial $115M first-year investment and job guarantees for graduates. CBRE is named among partners to help staff Meta’s U.S. data center buildout.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Program is led by Meta; CBRE’s specific scope and throughput not quantified in the source.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">America’s Workforce Academy (AWA)</span>
+<span class="span">initial $115 million first‑year investment</span>
+<span class="span">guarantees job offers</span>
+<span class="span">CBRE</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Critical infrastructure services revenue grew ~71% YoY</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CBRE reported ~71% YoY growth in critical infrastructure services within BOE, aided by Data Center Solutions and the Pearce Services acquisition, underscoring accelerating DC-linked demand.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">critical infrastructure services revenue grew ~71% YoY</span>
+<span class="span">Data Center Solutions</span>
+<span class="span">Pearce Services acquisition (Nov 2025)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">REI operating profit bolstered; earlier gains from DC land program</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$180M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">In Q1 2026, REI revenue was $199M with segment operating profit of $180M, driven by earlier-than-anticipated profits from the data center land program.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">revenue 199M</span>
+<span class="span">SOP 180M (up sharply YoY)</span>
+<span class="span">data center land program</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">DC land program profits realized earlier than anticipated</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said profits from the DC land development program were realized earlier in the year than anticipated, reflecting strong market demand and execution.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">profits from the data center land development program were realized earlier</span>
+<span class="span">earlier in the year than anticipated</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Pearce oriented to telecom/power; DC demand lifts multiple segments</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CBRE clarified Pearce is oriented to telecom/power rather than owned data centers, while data-center demand is lifting brokerage, BOE, and project work across the platform.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Pearce is oriented to telecom/power rather than data centers</span>
+<span class="span">data-center demand is lifting brokerage, BOE, and project work</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">CBRE states no plans to invest directly in AI companies</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management indicated that CBRE does not plan to invest directly in AI companies, preferring controlled adoption and operational deployment over direct equity exposure.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">do not plan to invest directly in AI companies.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Tightly controlled AI adoption; earliest benefits in G&amp;A</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">CBRE is tightly controlling AI access and usage to balance benefits and costs, expecting productivity leverage over years with earliest effects in G&amp;A functions.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI adoption is being tightly controlled (access/usage)</span>
+<span class="span">earliest effects in G&amp;A functions.</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0013" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">CBRE joins McKinsey–Google Cloud initiative to deploy agentic AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">McKinsey and Google Cloud launched a Transformation Group centered on Gemini. CBRE is working with them to deploy agentic AI across domains using Google’s AI stack, including multimodal Gemini and Gemini Enterprise.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Commercial terms and scope of CBRE’s deployment were not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">McKinsey and Google Cloud today announced</span>
+<span class="span">multimodal Gemini models</span>
+<span class="span">Gemini Enterprise</span>
+<span class="span">agentic AI</span>
+<span class="span">working with McKinsey and Google Cloud</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-20</span>
+<span class="eh">Meta and CBRE launch LevelUp to train thousands of fiber technicians</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CBRE and Meta announced LevelUp, a multiyear program to recruit and train thousands of fiber technicians. CBRE will establish and run training centers, creating a talent pipeline for Meta’s U.S. data center construction network.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Program scale in trainees per year and budget not disclosed in the release.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">LevelUp</span>
+<span class="span">multiyear program to recruit and train thousands of fiber technicians</span>
+<span class="span">CBRE will establish and run multiple training centers</span>
+<span class="span">build Meta data centers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">CBRE targets ~25% reduction in research costs using AI tools</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated AI will enhance data delivery while brokerage remains expertise-driven, aiming to save about 25% of research costs over this year into next.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<p class="cav">⚠ Savings target is managerial guidance; realization timing and baseline not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">not easily displaced by AI</span>
+<span class="span">save … about 25% of the cost of our research work</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">Project Management revenue $2.21B, aided by hyperscaler projects</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.2B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CBRE reported Project Management revenue of $2.21B (+8.3% y/y) and segment operating profit of $175M (+4.2%), noting contributions from hyperscaler projects and U.K. public-sector infrastructure.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Project Management revenue $2.21B (+8.3% y/y)</span>
+<span class="span">aided by hyperscaler projects</span>
+<span class="span">segment op profit $175M (+4.2%)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">DC pipeline strong; ~30 TCC sites under control and multi-year workload</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CBRE cited a robust DC pipeline, indicating multi-year services work, minimal balance-sheet exposure to owned data centers, and approximately 30 land sites under control at TCC for monetization.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">having trouble keeping up</span>
+<span class="span">a few years</span>
+<span class="span">~30 sites are under control</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">REI profit driven by monetization of U.S. data center sites</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$201M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Despite lower REI revenue, segment operating profit reached $201M, driven by monetization of U.S. data center sites.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">segment op profit $201M (+34% y/y)</span>
+<span class="span">monetization of U.S. data center sites</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">TCC controls ~30 DC land sites; monetization tied to power availability</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management emphasized multi-year services workload and noted monetization timing for ~30 DC land sites is tied to power availability.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Multiple‑year services workload</span>
+<span class="span">~30 DC land sites under control</span>
+<span class="span">power availability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">CBRE acquires Pearce Services for ~$1.2B to expand digital/power infra</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.2B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CBRE completed the approximately $1.2B acquisition of Pearce Services to expand advanced technical services for digital and power infrastructure.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">the ~$1.2B acquisition of Pearce Services</span>
+<span class="span">digital and power infrastructure</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-12</span>
+<span class="eh">AI-disruption fears cited as a risk to real-estate services sentiment</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management flagged that post-print trading reflected broader AI-disruption concerns affecting real-estate services stocks, noting potential impacts to pricing and demand if sentiment persists.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">‘AI‑disruption’ concerns</span>
+<span class="span">could affect pricing and demand</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-09</span>
+<span class="eh">Forrester case study spotlights CBRE’s Ellis AI platform and impact</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Forrester profiled CBRE’s high‑performance IT and Ellis AI platform as a 2025 Technology Strategy Impact Award winner, citing gains across software development, AI-powered products, and employee productivity.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<p class="cav">⚠ Award and case study are vendor/analyst narratives; quantitative impact not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Technology Strategy Impact Award</span>
+<span class="span">high‑performance IT</span>
+<span class="span">Ellis AI</span>
+<span class="span">AI-powered products</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scaling genAI in operations and property management</h2>
+<div class='range'>2025-01-01 → 2025-11-26</div>
+<div class='psum'>CBRE extended its Bedrock-based approach into property operations, launching a unified PULSE search and digital assistant that spans millions of documents and multiple databases. The implementation uses multiple foundation models via Bedrock, including Amazon Nova Pro for SQL generation and Anthropic Claude Haiku for document interactions, and reported a 67% processing-time reduction.
+This period marks CBRE’s shift from experimentation to broad internal enablement, setting up a consistent architecture (RAG + OpenSearch + Bedrock) to accelerate employee workflows across property management and adjacent functions.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-11-26</span>
+<span class="eh">PULSE global search and assistant on Bedrock; Claude Haiku + Nova Pro</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">CBRE deployed a unified property-management search and digital assistant within PULSE using Amazon Bedrock. The solution combines Amazon Nova Pro for SQL query generation with Anthropic Claude Haiku for intelligent document interactions, reducing processing time by 67% across a corpus exceeding eight million documents.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ Performance improvement is reported in a vendor co-authored blog; third-party validation not provided.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">PULSE</span>
+<span class="span">Amazon Nova Pro</span>
+<span class="span">67% reduction in processing time</span>
+<span class="span">Claude Haiku</span>
+<span class="span">more than eight million documents</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations: ESG data tie-up and first Bedrock/Claude builds</h2>
+<div class='range'>2023-05-10 → 2024-05-30</div>
+<div class='psum'>CBRE began formalizing its data- and AI-enabled operating posture in 2023 with a property-management partnership and minority investment in Deepki, an ESG data platform, to standardize energy and sustainability analytics across billions of square feet under management. While not a frontier-model relationship, it signaled an enterprise appetite for data-driven tooling at portfolio scale.
+In 2024, CBRE publicly documented hands-on generative AI development with AWS Prototyping using Amazon Bedrock, selecting Anthropic Claude 2 for natural-language querying of structured data, including reasoning and SQL generation with 100k-token contexts. These early builds established a multi-model-capable, privacy-preserving path to embed genAI in analyst workflows.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-05-30</span>
+<span class="eh">CBRE builds NLQ-to-SQL prototype using Amazon Bedrock with Anthropic Claude 2</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">CBRE and AWS Prototyping implemented a natural-language query environment on Bedrock that uses Anthropic Claude 2 for reasoning and SQL generation against structured data, with managed prompts and OpenSearch integration.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ Described as a prototype/guest post; production scale not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">natural language query (NLQ) prompts</span>
+<span class="span">Anthropic Claude 2 on Amazon Bedrock</span>
+<span class="span">100,000 maximum tokens</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2023-05-10</span>
+<span class="eh">CBRE partners with and invests in ESG data platform Deepki</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">CBRE’s property management arm partnered with Paris-based Deepki to roll out ESG data tooling globally and took a minority stake (undisclosed). The deployment targets more than 2.9B square feet under management.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<p class="cav">⚠ Investment amount undisclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">partnered with Deepki</span>
+<span class="span">investing an undisclosed sum</span>
+<span class="span">minority share</span>
+<span class="span">2.9 billion square feet</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the commercial terms, timeline, and target KPIs for CBRE’s agentic AI deployment with McKinsey and Google Cloud (scope across functions, spend commitments, and expected value capture)?</li>
+<li>To what extent are Bedrock-based assistants (PULSE, NLQ-to-SQL) running in production globally versus pilot deployments, and what are the realized savings beyond the reported 67% processing-time reduction?</li>
+<li>How many technicians will LevelUp and America’s Workforce Academy graduate annually into Meta’s DC buildout, and what portion is expected to be staffed through CBRE-managed programs?</li>
+<li>How materially do DC land monetization and critical infrastructure services contribute to segment margins going forward, given power availability as a gating factor?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>AWS and Forrester sources are vendor/analyst marketing content; independent audit of outcomes was not provided.</li>
+<li>Some financial metrics are segment-level and may reflect multiple drivers beyond AI-related demand (e.g., general infrastructure cycles).</li>
+<li>Training program announcements (LevelUp, AWA) outline intent and initial funding but do not specify throughput, CBRE-specific economics, or duration terms.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,532 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>NTNX US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Nutanix Inc <span class='sub'>(NTNX US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.425</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>21 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 11</span>
+<span class='chip'>web-only (verified): 6</span>
+<span class='chip'>web-only (unverified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>AMD strategic AI partnership; Agentic AI stack; multi‑provider API gateway</h2>
+<div class='range'>2026-02-25 → 2026-06-30</div>
+<div class='psum'>Nutanix announced a multi‑year enterprise AI infrastructure partnership with AMD, including a $150M equity investment and up to $100M of R&amp;D/GTM funding. Management guided the first jointly developed platform for late 2026 with modest revenue contribution beginning in 2H FY27, and reiterated a strategy to support both NVIDIA and AMD accelerated compute. Shares rallied on the news. Risks flagged included execution and monetization of AI initiatives.
+In May 2026, Nutanix unveiled an Agentic AI software stack and related platform integrations (e.g., NKP Metal, NetApp, MongoDB), while reiterating that AI offerings were still early but showing encouraging customer signals. The company also formalized a multi‑provider LLM abstraction with NAI API docs listing Anthropic, OpenAI, and Google Gemini among supported providers, and in June announced a technology preview of an MCP server enabling AI assistants (including Anthropic Claude) to interact with Nutanix APIs.</div>
+<div class="event t-web_only_unverified" id="E0021" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">Technology preview: MCP server connects AI assistants (incl. Anthropic Claude) to Nutanix APIs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Nutanix announced a technology preview of an MCP server for Nutanix Cloud Platform to bridge AI assistants to Nutanix V4 APIs, explicitly naming Claude by Anthropic among supported tools.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">technology preview of the MCP server</span>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">Claude AI assistant by Anthropic</span>
+<span class="span">directly interact with Nutanix&#x27;s V4 APIs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Agentic AI software stack unveiled; NKP Metal and data platform integrations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Around .NEXT and NVIDIA GTC, Nutanix unveiled its Agentic AI software stack, introduced NKP Metal for bare‑metal Kubernetes, and expanded its database platform (e.g., certified MongoDB) and migration programs.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">unveiled Nutanix Agentic AI software stack</span>
+<span class="span">NVIDIA GTC</span>
+<span class="span">introduced NKP Metal</span>
+<span class="span">certified MongoDB integration</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">AI offerings characterized as early with encouraging signs</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted Nutanix’s AI offerings are relatively new but showing encouraging early signs across verticals.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">relatively new with encouraging early signs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">AMD‑enabled AI solution traction expected 2H FY27; no FY26 revenue</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Nutanix expects first meaningful traction from its AMD‑enabled solution in 2H FY27 and did not quantify any FY26 revenue contribution.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">second half of FY2027</span>
+<span class="span">no revenue contribution was quantified for FY2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">Risk: adoption of Agentic AI stack and new integrations remains unproven</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management cautioned that adoption of the Agentic AI stack, NKP Metal, and NetApp integration is unproven; slower uptake would temper raised FY26 targets.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Adoption of recently announced offerings (Agentic AI stack, NKP Metal, NetApp integration) is unproven</span>
+<span class="span">slower uptake would temper growth assumptions</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0016" data-providers="anthropic_claude google_gemini_deepmind openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">NAI API docs enumerate multi‑provider LLM connectivity (Anthropic, OpenAI, Google Gemini)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Nutanix developer docs for NAI list supported LLM providers and OpenAI‑compatible specs, indicating a multi‑provider gateway architecture spanning Anthropic, OpenAI, Google Gemini, and others.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Enum: &quot;anthropic&quot; &quot;awsBedrock&quot; &quot;azureOpenai&quot; &quot;cohere&quot; &quot;gcpVertexAI&quot; &quot;googleGemini&quot; &quot;mistral&quot; &quot;nai&quot; &quot;openai&quot;</span>
+<span class="span">openaiChatV1APISpec</span>
+<span class="span">openaiEmbeddingsV1APISpec</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-31</span>
+<span class="eh">Nutanix commentary: open-source models can be ~87% cheaper than closed LLMs</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">A Nutanix publication highlighted economic advantages of open‑source LLMs versus closed models from leading labs, framing TCO considerations for enterprise inference.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">open-source models from Meta, DeepSeek, Mistral</span>
+<span class="span">closed models from OpenAI, Anthropic, and Google</span>
+<span class="span">about 87% less</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Stock jumps on AMD $150M equity and AI partnership announcement</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$150M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Following the AMD partnership and equity investment, NTNX traded up materially premarket; coverage reiterated the $150M equity and up to $250M inclusive of R&amp;D/GTM support.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">$150M equity</span>
+<span class="span">up to $250M</span>
+<span class="span">NTNX +15–20% premarket</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">AMD to invest $150M equity in Nutanix as part of AI partnership</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$150M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Nutanix announced a multi‑year AI infrastructure partnership with AMD, including a $150M common stock investment to align incentives across joint R&amp;D and go‑to‑market.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">multi-year AI infrastructure partnership with AMD</span>
+<span class="span">$150M equity investment</span>
+<span class="span">common stock investment</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">AMD to fund up to $100M for multi‑year R&amp;D and GTM with Nutanix</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated AMD’s planned support of up to $100M over multiple years for R&amp;D and GTM to accelerate the joint AI infrastructure roadmap.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">up to $100M of multi‑year R&amp;D/GTMS funding</span>
+<span class="span">AMD’s $150M common stock investment</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">First joint AMD–Nutanix AI platform targeted for late 2026; modest 2H FY27 revenue</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Nutanix targeted late 2026 for the first jointly developed AI platform, with only small revenue contribution expected to begin next calendar year/2H FY27.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">late 2026</span>
+<span class="span">small revenue contribution</span>
+<span class="span">2H FY27</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Nutanix to support both NVIDIA and AMD accelerated compute across stack</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Nutanix stated it will sell its full software stack on servers using AMD accelerated compute while maintaining support for both NVIDIA and AMD to maximize customer choice.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">servers using AMD accelerated compute</span>
+<span class="span">support both NVIDIA and AMD to maximize customer choice</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">AMD equity stake expected to dilute Nutanix shareholders slightly over 1%</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management characterized the AMD equity as aligning incentives, estimating dilution as slightly over 1%.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">estimated dilution as slightly over 1%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Risk flagged: AI initiative execution, competitive response, and adoption</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Nutanix cautioned that realizing anticipated growth and monetization from AI initiatives depends on execution, competitive response, and customer adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">depends on execution, competitive response, and customer adoption</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Enterprise AI platform expansion and open‑model tooling</h2>
+<div class='range'>2024-11-12 → 2025-05-09</div>
+<div class='psum'>Nutanix extended its Enterprise AI (NAI) platform beyond on‑prem and edge to run in public clouds, aiming for a consistent hybrid multicloud operating model for accelerated AI workloads. The platform leverages NVIDIA NIM and targets faster, easier deployment of inference endpoints across environments.
+Technical publications detailed how to deploy new &quot;reasoning&quot;-oriented models efficiently on Nutanix, including DeepSeek R1‑derived Llama variants, and highlighted OpenAI API compatibility in NAI to simplify developer integration. Nutanix also published guidance on enterprise data privacy risks of public LLM services, underscoring the rationale for controlled, customer‑owned AI infrastructure.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-05-09</span>
+<span class="eh">NAI exposes OpenAI‑compatible inference APIs and SDK workflow</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Nutanix documented that NAI inference APIs are OpenAI API compatible and can be accessed via the OpenAI Python client/SDK, easing application integration against NAI‑hosted endpoints.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">NAI inference APIs are OpenAI API compatible</span>
+<span class="span">use the OpenAI Python client</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-05-04</span>
+<span class="eh">Nutanix highlights enterprise data privacy risks of public LLMs</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">A Nutanix blog warned about exposing private data to public LLM services like ChatGPT and noted some legal departments restrict cloud LLM inference services over data risk, supporting on‑premises inference approaches.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">public LLM services like ChatGPT</span>
+<span class="span">Providers like OpenAI</span>
+<span class="span">restrict the use of cloud-based LLM inference services</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="deepseek meta_llama openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-02-18</span>
+<span class="eh">Guidance to run &quot;reasoning&quot; models (DeepSeek R1, OpenAI O1, Llama‑70B) on NAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span> <span class="prov">meta_llama</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Nutanix outlined deploying reasoning models on NAI, referencing OpenAI O1 and DeepSeek R1, and demonstrating DeepSeek‑R1‑Distill‑Llama‑70B operations and resource requirements.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">DeepSeek R1</span>
+<span class="span">OpenAI O1</span>
+<span class="span">DeepSeek-R1-Distill-Llama-70B</span>
+<span class="span">approximately 180GB</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2024-11-12</span>
+<span class="eh">Nutanix Enterprise AI extends to public cloud (AWS/Azure/GCP)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Nutanix announced a cloud‑native NAI offering deployable on Kubernetes platforms and public cloud services (AWS EKS, Azure AKS, Google GKE), providing a unified generative AI experience and rapid deployment of inference endpoints.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Nutanix Enterprise AI (NAI)</span>
+<span class="span">public cloud services like AWS EKS, Azure AKS, and Google GKE</span>
+<span class="span">in minutes, not days or weeks</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational Enterprise AI offerings and early traction</h2>
+<div class='range'>2023-08-15 → 2024-05-21</div>
+<div class='psum'>Nutanix introduced its first packaged generative AI offering, GPT-in-a-Box, positioning the Nutanix Cloud Platform as an on‑prem and edge foundation for fine‑tuning and running LLMs while keeping customer data under control. The launch emphasized curating open-source models and MLOps frameworks, and specifically cited support for Meta’s Llama family alongside other open models.
+Through late 2023, management disclosed the first GPT-in-a-Box customer win at a U.S. federal agency, noting the product was still early and not yet a material revenue driver. In May 2024 at .NEXT, Nutanix expanded functionality via integrations with NVIDIA NIM and Hugging Face and announced an AI Partner Program, further building an ecosystem to speed time-to-value for on‑prem generative AI use cases.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-05-21</span>
+<span class="eh">GPT-in-a-Box 2.0 adds NVIDIA NIM, Hugging Face; AI Partner Program</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">At .NEXT 2024, Nutanix announced new functionality for GPT‑in‑a‑Box including integrations with NVIDIA NIM inference microservices and Hugging Face LLM library, and launched the Nutanix AI Partner Program.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">NVIDIA NIM inference microservices</span>
+<span class="span">Hugging Face Large Language Models (LLMs) library</span>
+<span class="span">Nutanix AI Partner Program</span>
+<span class="span">GPT-in-a-Box 2.0</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2023-11-29</span>
+<span class="eh">First GPT-in-a-Box win disclosed; early-stage pipeline</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On its November 2023 call, Nutanix said it landed the first GPT‑in‑a‑Box win with a U.S. federal agency focused on document retrieval/pattern detection use cases, while reiterating it was still early to gauge material revenue impact.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">first win for GPT-in-a-Box</span>
+<span class="span">It is a federal agency.</span>
+<span class="span">still early days</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2023-08-15</span>
+<span class="eh">Nutanix launches GPT-in-a-Box for on‑prem/edge LLMs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Nutanix announced GPT-in-a-Box, a full‑stack AI‑ready platform to fine‑tune and run LLMs at the edge or in data centers on Nutanix Cloud Platform, with curated open-source models including Llama2.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">GPT-in-a-Box™</span>
+<span class="span">fine-tune and run generative pre-trained transformers (GPT)</span>
+<span class="span">curated set of large language models (LLMs)</span>
+<span class="span">Llama2, Falcon and MPT</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What specific scope, milestones, and committed deliverables govern the AMD multi-year AI partnership, including any lock-up or standstill terms tied to the $150M equity investment and up to $100M funding?</li>
+<li>When will the first jointly developed AMD–Nutanix AI platform reach general availability, and what are the target performance benchmarks and initial customer cohorts?</li>
+<li>What portion of NAI deployments run local/open models versus routing calls to external providers (e.g., Anthropic, OpenAI, Google), and how is usage metered/revenue-recognized across those modes?</li>
+<li>What are current GPT-in-a-Box/NAI/Agentic AI customer counts, pipeline conversion rates, and expected FY27–FY28 ARR contribution?</li>
+<li>What is the GA timeline and adoption trajectory for the MCP server, and which assistants/providers are prioritized for certified integrations beyond Claude?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many web findings are Nutanix-authored press releases or blogs and may emphasize marketing positioning; independent corroboration of adoption and revenue impact is limited.</li>
+<li>No third-party frontier events directly reference Nutanix in this period; provider integration details rely on Nutanix developer documentation.</li>
+<li>News price action reflects media summaries and premarket indications and may not capture full-day trading or subsequent revisions.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

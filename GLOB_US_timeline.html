@@ -1,0 +1,668 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>GLOB US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Globant SA <span class='sub'>(GLOB US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.405</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>30 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 3</span>
+<span class='chip'>web 9</span>
+<span class='chip'>single source: 21</span>
+<span class='chip'>web-only (unverified): 7</span>
+<span class='chip'>web-only (verified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>AI Pods scale and economics; multi-provider alliances and regulatory headwinds</h2>
+<div class='range'>2026-02-26 → 2026-06-30</div>
+<div class='psum'>By February 2026 Globant reported AI Pods ARR exit-rate of $20.6M with 45–60% gross margins, a ~$3.4B pipeline, and a willingness to cannibalize legacy projects into Pods. Management described fewer people per Pod, rising acceptance of token pricing, and an upper-end FY26 outcome tied to strong Pods execution, with an ARR target of $60–$100M by year-end.
+In May 2026, AI Pods ARR reached $32.8M as of March, with deployments across roughly 40% of top-tier accounts and no client reversions, though adjusted operating margin compressed to 14.1% y/y amid AI-native investments. Globant deepened provider ties: a February shareholder letter highlighted ongoing OpenAI engagement, and on June 30, Globant announced a multi-year alliance with Anthropic to launch Claude-powered AI Pods and joined Claude’s Partner Network as a Preferred Services Partner. Mid-June, U.S. export-control forced Anthropic to shut down Fable 5 and Mythos 5 globally the same day—an external regulatory risk relevant to Claude-integrated solutions.</div>
+<div class="event t-web_only_verified" id="E0030" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Globant and Anthropic announce multi-year alliance; Claude-powered AI Pods</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Globant announced a multi-year alliance with Anthropic, introduced Claude-powered AI Pods, and joined the Claude Partner Network as a Preferred Services Partner; 28,500 Globers gain access to Claude and certifications.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Claude-powered AI Pods</span>
+<span class="span">Preferred Services Partner</span>
+<span class="span">multi-year alliance</span>
+<span class="span">28,500 Globers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-13</span>
+<span class="eh">U.S. order forces Anthropic to disable Fable 5 and Mythos 5</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">A U.S. export-control order led Anthropic to disable Fable 5 and Mythos 5 with a global shutdown the same day, creating regulatory risk for Claude-dependent solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[0]</div>
+<span class="span">disable Fable 5 and Mythos 5</span>
+<span class="span">global shutdown</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">AI Pods ARR reaches $32.8M as of March 2026</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$33M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Globant reported AI Pods ARR of $32.8M as of March 2026, indicating rapid quarter-on-quarter momentum from the FY25 exit rate.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI Pods ARR of $32.8M as of March 2026.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">AI Pods margins characterized as structurally higher</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said AI Pods margins are structurally higher than company average and expected to remain so as tooling and agents improve.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI Pods margins are structurally higher</span>
+<span class="span">expected to remain so</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">No clients reverting from AI Pods</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported retention resilience, noting not a single client has reverted away from AI Pods.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">not a single client actually going back from AI Pods.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">AI Pods deployed across roughly 40% of top-tier accounts</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">AI Pods had penetrated approximately 40% of Globant’s top-tier accounts, signaling broadening enterprise adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">already deployed in roughly 40% of top‑tier accounts</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Greater confidence delivering fixed-price AI Pods engagements</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">CFO noted the market push toward fixed-price and said Globant is more confident delivering fixed-price engagements due to AI Pods efficiency; mix was roughly stable vs. last quarter.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">market is pushing fixed price</span>
+<span class="span">more confident</span>
+<span class="span">fixed‑price engagements</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Forward-deployed engineers drive agentic transformation</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management described senior, platform-literate engineers leading agentic transformation and solutioning, with discovery often on-site but possible offshore.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">forward‑deployed engineers</span>
+<span class="span">agentic transformation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">CEO emphasizes model independence and no vendor bias</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Leadership reiterated independence and advisory without vendor bias, asserting services demand is too large for a winner‑take‑all outcome—implicitly addressing platform concentration risks.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">model independence</span>
+<span class="span">winner‑take‑all</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Palantir framed as a partner while remaining product‑agnostic</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management positioned Palantir as a partner in certain situations while remaining product-agnostic to serve client interests, reflecting coopetition dynamics with vendor platforms.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">partner in certain situations</span>
+<span class="span">product-agnostic</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Minimal margin help from AI Pods until later in 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reiterated limited near-term margin contribution from AI Pods, with benefits expected later in the year as the model scales.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">minimal margin help from AI Pods until later in the year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Margin risk from AI-native investment; operating margin down y/y</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Adjusted operating margin fell to 14.1% from 14.8% y/y as Globant invests in AI-native services and navigates pricing/mix, signaling near-term profitability pressure.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Adjusted operating margin fell to 14.1% from 14.8% y/y</span>
+<span class="span">invests in AI-native services</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">AI Pods ARR exit-rate $20.6M; 45–60% gross margin</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$21M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Globant reported AI Pods ARR exit-rate of $20.6M with 45–60% gross margin, establishing a baseline for Pods subscriptions heading into FY26.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">AI Pods ARR exit-rate $20.6M</span>
+<span class="span">45–60% gross margin</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">$52M optimization costs to restructure for AI Pods and subscriptions</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$52M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Globant recorded $52M of FY25 business optimization costs to realign delivery for AI Pods and subscription models, reflecting investment intensity of the transition.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">FY25 included $52M of business optimization costs</span>
+<span class="span">support AI Pods and subscriptions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Pipeline ~$3.4B; Q4 bookings up 32% y/y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.4B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management cited a robust demand environment with approximately $3.4B total pipeline at quarter-end and Q4 bookings growth of 32.4% y/y.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">total pipeline approximately $3.4B at quarter-end.</span>
+<span class="span">Q4 bookings grew 32.4% y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">CEO embraces cannibalization moving large engagements into Pods</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Leadership explicitly endorsed transitioning $15–$20M engagements into AI Pods even if it cannibalizes legacy delivery, signaling a strategic pivot toward AI-native revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">transitioning large engagements ($15–$20M) into Pods</span>
+<span class="span">I am not in a position to prevent cannibalization. So I want that transformation to happen.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">AI Pod model requires fewer people; raises revenue per head</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">CFO highlighted that AI Pods need fewer people, expecting higher revenue per head and more scalable supervision with agentic workflows.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">The AI Pod model by definition requires less people</span>
+<span class="span">higher revenue per head</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Token-pricing acceptance rising across procurement; pilots scaling</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted procurement is increasingly comfortable with transparent token-consumption pricing and that pilots are scaling across top clients.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">transparent token‑consumption pricing</span>
+<span class="span">rising pilots scaling across top clients</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">FY26 upper-end scenario explicitly tied to strong AI Pods execution</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The upper-end FY26 outlook depends on strong AI Pods execution alongside macro improvement; the midpoint assumes no macro change.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Upper‑end 2026 scenario explicitly tied to both strong AI Pods execution</span>
+<span class="span">midpoint assumes no macro change</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">AI Pods 2026 exit-rate ARR target set at $60–$100M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$60M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated a path to a $60–$100M exit-rate ARR target for 2026, framing scale aspirations for Pods subscriptions.</p>
+<p class="cav">⚠ Target range; magnitude reflects the low end for anchoring only.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">the path to the $60–$100M 2026 exit‑rate ARR target</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0018" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Shareholder letter highlights OpenAI partnership and agentic AI showcases</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Globant’s shareholder letter emphasized presenting its strategic partnership with OpenAI to clients, hosting a multi-industry event in Spain, and showcasing agentic AI use cases (e.g., LALIGA) around Nvidia GTC.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">strategic partnership with Open AI</span>
+<span class="span">first multi-industry event in Spain</span>
+<span class="span">over 60 current and potential clients</span>
+<span class="span">Nvidia GTC</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Commercialization of GenAI solutions; OpenAI collaboration and platform interoperability</h2>
+<div class='range'>2025-03-25 → 2025-12-31</div>
+<div class='psum'>In 2025 Globant accelerated productized GenAI solutions on Google Cloud, launching AI Retail Search and Recommendations built on Vertex AI and Gemini. By July, Globant announced a multi-year collaboration with OpenAI, positioning as a global services partner and deploying ChatGPT Enterprise into client workflows with measured productivity gains.
+Globant upgraded its proprietary Globant Enterprise AI (GEAI) platform to support Model Context Protocol (MCP) and Agent2Agent (A2A), enabling interoperability with major hyperscaler ecosystems and access to cutting-edge models from OpenAI, Anthropic, xAI, and Google. A separate strategy blog underscored Globant’s multi-model, client-centric stance.</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-18</span>
+<span class="eh">Globant reiterates multi-model, client‑centric AI strategy</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">A Globant strategy blog emphasized remaining model‑agnostic and combining models such as OpenAI’s GPT, Meta’s LLaMA, Google’s PaLM/Gemini, Anthropic’s Claude, and xAI’s Grok via Globant Enterprise AI.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">OpenAI’s GPT series</span>
+<span class="span">Meta’s LLaMA series</span>
+<span class="span">Google’s PaLM/Gemini</span>
+<span class="span">Anthropic’s Claude</span>
+<span class="span">xAI Grok</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="openai_chatgpt anthropic_claude xai_grok google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-07-31</span>
+<span class="eh">GEAI adds MCP and A2A interoperability; expands access to multi-provider models</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">xai_grok</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Globant upgraded Globant Enterprise AI (GEAI) to support Model Context Protocol and Agent2Agent interoperability, enabling agents to connect with major enterprise tools and access models like OpenAI o3-pro, Anthropic Claude 4, xAI Grok 4, and Google Imagen 4.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Globant Enterprise AI (GEAI)</span>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">Agent2Agent (A2A) Protocol</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-07-25</span>
+<span class="eh">Globant announces multi-year collaboration with OpenAI; early ChatGPT Enterprise wins</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Globant became one of OpenAI’s global services partners and, as the first partner based in Latin America, began deploying ChatGPT Enterprise at clients like Cordis, reporting strong productivity uplifts.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">multi-year collaboration with OpenAI</span>
+<span class="span">global services partners</span>
+<span class="span">first partner based in Latin America</span>
+<span class="span">ChatGPT Enterprise</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-03-25</span>
+<span class="eh">Globant debuts Google Cloud–based AI Retail Search and Recommendations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Globant launched a retail-focused search and recommendations engine leveraging Google Cloud Vertex AI Search for Retail and Gemini models to enhance personalization and conversions.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">AI Retail Search and Recommendations</span>
+<span class="span">Google Cloud Vertex AI Search for Retail</span>
+<span class="span">models from Gemini for Google Cloud</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational cloud and AI partnerships; early ecosystem signals</h2>
+<div class='range'>2023-03-30 → 2024-12-31</div>
+<div class='psum'>Globant expanded its Google Cloud collaboration in March 2023, creating a dedicated Google Cloud Studio and committing to train 1,500 Google-certified engineers, laying groundwork for scaled AI delivery on hyperscaler tooling. Through 2024, Globant showcased concrete Google GenAI integrations, including an Advanced Video Search tool powered by Gemini.
+Concurrently, the broader AI content-licensing landscape evolved as OpenAI struck global journalism deals with Axel Springer (Dec 2023) and News Corp (May 2024). While not specific to Globant, these frontier events shape the content ecosystem available within ChatGPT, indirectly influencing enterprise AI solutioning. Globant also documented its use of NVIDIA AI Enterprise and its GeneXus Enterprise AI approach to orchestrate multiple models, reflecting a platform mindset.</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-10-01</span>
+<span class="eh">Globant launches Advanced Video Search tool powered by Google Gemini</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Globant released an AI-powered Advanced Video Search (AVS) tool for media and enterprise customers, built on Google Cloud’s Vertex AI and Gemini models to transform video search and management.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Advanced Video Search (AVS)</span>
+<span class="span">powered by Google Cloud’s Gemini models</span>
+<span class="span">Vertex AI + Gemini</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-05-22</span>
+<span class="eh">OpenAI signs multiyear content deal with News Corp</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI secured access to News Corp’s current and archived journalism for ChatGPT and model development. While not a Globant contract, it affects the content corpus available within OpenAI’s products used in enterprise settings.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[1]</div>
+<span class="span">multiyear global content partnership</span>
+<span class="span">News Corp’s current and archived journalism</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-03-18</span>
+<span class="eh">Globant details NVIDIA AI Enterprise stack and GeneXus Enterprise AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">A Globant technical blog outlined use of NVIDIA AI Enterprise as an AI OS and positioned GeneXus Enterprise AI as Globant’s layer to manage and deploy models (including community and vendor models) in production.</p>
+<div class="ev-ch">channels: <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">NVIDIA AI Enterprise</span>
+<span class="span">GeneXus Enterprise AI</span>
+<span class="span">Code Llama-70B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-12-13</span>
+<span class="eh">OpenAI and Axel Springer global journalism partnership</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI and Axel Springer agreed a global partnership to license Axel Springer content for ChatGPT answers with attribution, shaping available content ecosystems that Globant may leverage in client solutions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[2]</div>
+<span class="span">OpenAI and Axel Springer ink global journalism partnership</span>
+<span class="span">Axel Springer content</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-03-30</span>
+<span class="eh">Globant expands collaboration with Google Cloud; launches dedicated Google Cloud Studio</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Globant announced an expansion of its global collaboration with Google Cloud and created a new dedicated Google Cloud Studio focused on client adoption of Google Cloud AI/ML, including a commitment to train 1,500 Google-certified engineers.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">new dedicated Google Cloud Studio</span>
+<span class="span">train 1,500 Google-certified engineers</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0007'>E0007</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of AI Pods ARR is attributable to specific model providers (OpenAI vs. Google Gemini vs. Anthropic Claude)?</li>
+<li>Do the multi-year collaborations with OpenAI and Anthropic include minimum spend, exclusivity, or co-selling commitments?</li>
+<li>How materially could U.S. export-control actions impacting Anthropic models affect Globant’s Claude-powered AI Pods delivery pipeline?</li>
+<li>What is the expected cadence for AI Pods margin uplift in 2H26 and into FY27?</li>
+<li>How many clients have adopted token-consumption pricing at scale versus pilot stages?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several sources are company press releases or blogs; performance metrics and positioning are self-reported.</li>
+<li>No contract dollar values or minimum commitments were disclosed for the OpenAI or Anthropic alliances.</li>
+<li>Frontier provider licensing deals (Axel Springer, News Corp) are ecosystem context and not direct Globant agreements.</li>
+<li>Magnitude for the $60–$100M 2026 ARR target is anchored to the low end for representation; actual outcome may vary within the range.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

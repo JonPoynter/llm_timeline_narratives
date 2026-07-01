@@ -1,0 +1,504 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>MTZ US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>MasTec Inc <span class='sub'>(MTZ US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.381</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>20 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 5</span>
+<span class='chip'>single source: 13</span>
+<span class='chip'>web-only (unverified): 5</span>
+<span class='chip'>web-only (verified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Scaling AI-adjacent data center, power delivery and fiber interconnect (2026H1)</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>MasTec’s 2026 disclosures emphasize scaling capacity across data center turnkey projects, power delivery/transmission, and data-center interconnect fiber. The 2025 proxy highlights nearly $1B of data-center related awards and the NV2A Group acquisition to deepen construction management in strategic facilities, including data centers. The 2026 10-K frames AI data center growth as a key demand driver for robust fiber networks.
+Q1’26 showed a substantial 18-month backlog of $20.33B (+28% y/y; +$1.4B q/q), broad-based bookings with book-to-bill &gt;1x, and specific commentary on multiyear growth from data center interconnect fiber. Management also flagged operational risks including rising DSO and Communications segment repositioning costs. Separate municipal updates in 2026 show ongoing Google Fiber coordination in the Southeast.</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Q1’26: 18‑month backlog $20.33B (+28% y/y; +$1.4B q/q)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20.3B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">MasTec reported an 18‑month backlog of $20.33B at 3/31/26, up 28% y/y and $1.4B sequentially, with strength noted across CE&amp;I and Power Delivery tied to energy and data center work.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">18‑month backlog</span>
+<span class="span">$20.33B</span>
+<span class="span">+28% y/y</span>
+<span class="span">+$1.4B q/q</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">CE&amp;I demand diversified; data center subset described as “massive”</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized sequential backlog growth across all four CE&amp;I buckets, calling the data center subset “massive,” while noting it is not the sole driver.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">all four CE&amp;I buckets</span>
+<span class="span">data center subset is “massive”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Scaling turnkey data center projects; evaluating more self‑perform</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">MasTec highlighted capabilities to scale turnkey data center projects and is evaluating expanding self-perform to enhance margins on these sites.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">scale turnkey data center projects</span>
+<span class="span">evaluating more self-perform</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Near‑term strength in long‑haul/metro fiber for data‑center interconnect</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted limited BEAD construction contribution in 2H26 but expects near‑term strength in long‑haul and metro fiber tied to data-center interconnectivity.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">limited BEAD construction contribution in 2H26</span>
+<span class="span">near‑term strength is in long‑haul and metro fiber</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Capacity to take on more large transmission projects in 2027 without M&amp;A</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">MasTec stated it can absorb additional large projects in 2027 without needing M&amp;A, citing Greenlink experience as a differentiator.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">more large projects in 2027</span>
+<span class="span">without needing M&amp;A</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Power Delivery positioned for additional transmission awards</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said Power Delivery is positioned for additional transmission awards, with Greenlink experience expected to aid upcoming wins and execution.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">additional transmission awards</span>
+<span class="span">Greenlink experience is expected to aid</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Data‑center interconnect fiber cited as multiyear growth driver; expand self‑perform</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">MasTec sees data‑center interconnect fiber as a multiyear growth driver and aims to expand self‑perform scope on turnkey data‑center sites to enhance margins.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Data‑center interconnect fiber viewed as a multiyear growth driver</span>
+<span class="span">expand self‑perform scope on turnkey data‑center sites</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">BEAD timing: modest 2H26 design; really meaningful in 2027</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management expects only modest BEAD-related design revenue in 2H26, with a really meaningful impact deferred to 2027.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">modest design revenue in 2H26</span>
+<span class="span">“a really meaningful impact” in 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">MasTec plans to be more active in M&amp;A amid growth opportunities</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management indicated they expect to be more active in M&amp;A given growth opportunities, while reiterating they do not need M&amp;A to meet Power Delivery objectives.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“more active in M&amp;A”</span>
+<span class="span">do not need M&amp;A</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Broad-based bookings with book-to-bill &gt;1x in Q1’26</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Backlog growth was broad-based with book-to-bill greater than 1x, supported by Greenlink experience positioning MasTec well for upcoming awards.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">book‑to‑bill &gt;1x</span>
+<span class="span">positioning MasTec well</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Risk: DSO increases to 72 days, potential cash conversion volatility</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">MasTec reported DSO rose to 72 days from 65 at 12/31/25, introducing potential volatility in cash conversion that could weigh on free cash flow.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">DSO increased to 72 days</span>
+<span class="span">versus 65 at 12/31/25</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Risk: Communications repositioning may pressure margins</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management is incurring costs to exit certain install‑to‑the‑home markets within Communications; execution and timing could pressure segment margins near term.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">incurring costs to exit</span>
+<span class="span">could pressure segment margins</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Policy environment characterized as supportive of infrastructure and pipelines</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">MasTec described the current administration as supportive of infrastructure and pipeline development, constructive for industry demand that includes AI-driven data and power infrastructure.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">supportive of infrastructure</span>
+<span class="span">pipeline development</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-09</span>
+<span class="eh">Proxy: Nearly $1B of data-center related awards and first turnkey CM agreement</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">The 2025 proxy reports MasTec was awarded nearly $1B of data-center related work, including its first turnkey construction management agreement within CE&amp;I—expanding visibility into AI-related infrastructure builds.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Amount described as &#x27;nearly&#x27; $1B; approximate.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">nearly $1 billion of data-center related work</span>
+<span class="span">first turnkey construction management agreement</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-09</span>
+<span class="eh">Proxy: Acquires NV2A Group to expand construction management in data centers</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">MasTec completed the acquisition of NV2A Group, LLC, expanding construction management capabilities in data centers and other strategic facilities, complementing existing infrastructure operations.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">NV2A Group, LLC</span>
+<span class="span">expands the Company’s construction management capabilities, including in data centers</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-20</span>
+<span class="eh">Stallings, NC: Coordination with Google Fiber; MasTec Charlotte contact listed</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Town of Stallings staff reported initiating plan reviews with Google Fiber and provided a MasTec Charlotte office contact, indicating active regional fiber program coordination.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">working with Google Fiber to initiate plan reviews</span>
+<span class="span">phone number for follow-up by MasTec’s Charlotte office</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">10-K: AI data center growth cited as a key driver of communications demand</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">MasTec’s 2025 Form 10-K highlights that demand for connectivity is accelerating due to broadband expansion and AI data center growth, with companies making substantial data center investments to support AI initiatives.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">AI data center growth</span>
+<span class="span">data center buildout and interconnection</span>
+<span class="span">support AI initiatives</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Data center revenue traction and outlook inflection</h2>
+<div class='range'>2025-01-01 → 2025-12-31</div>
+<div class='psum'>Management quantified initial data center revenue in 2024 and set higher expectations for 2025. Commentary highlighted that AI and related applications will significantly drive power and fiber bandwidth needs—tailwinds aligned with MasTec’s Communications and Power Delivery capabilities.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-02-28</span>
+<span class="eh">MasTec reports 2024 data center activities at ~$200M+</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$200M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">On the Q4 2024 call, management cited &quot;$200,000,000 plus&quot; in 2024 data center activity, establishing a baseline that links MasTec’s portfolio to accelerating AI-driven infrastructure demand.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Secondary transcript source.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">$200,000,000 plus range</span>
+<span class="span">data center activities for 2024</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-02-28</span>
+<span class="eh">Management targets ~$300M in 2025 data center activity</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$300M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">MasTec guided to about $300M in data center activity in 2025, up from ~$200M+ in 2024, underscoring momentum tied to AI-era infrastructure builds.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Forward-looking management target.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">about a $300,000,000 number in 2025</span>
+<span class="span">We expect that number to increase significantly in 2025</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early telco build activity and groundwork for AI-era demand</h2>
+<div class='range'>2023-06-01 → 2024-12-31</div>
+<div class='psum'>MasTec&#x27;s visible AI-adjacent exposure began through Communications work tied to Google Fiber in mid-2023. The Lakewood, Colorado program letters identify MasTec as a prime general contractor and note early field activities (exploratory potholing) as part of pre-construction.
+While 2024 lacks discrete filings in this inventory, these groundwork activities position MasTec within the broadband and fiber build ecosystems that underpin subsequent AI data-center interconnect and backbone demand.</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-06-01</span>
+<span class="eh">MasTec onboarded by GFiber (Google Fiber) in Lakewood, CO; begins exploratory work</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Lakewood’s June 2023 GFiber update states MasTec was onboarded as a prime general contractor and engaged for exploratory potholing as the program moved toward an August 2023 construction start estimate. This embeds MasTec within Alphabet’s fiber expansion supporting broader connectivity trends.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">MasTec has been onboarded as one of prime general contractors</span>
+<span class="span">We have engaged MasTec to perform exploratory potholing</span>
+<span class="span">construction start - estimated Aug ’23</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which hyperscaler or data center developers comprised the ~$1B in 2025 data-center related awards (customer mix and concentration)?</li>
+<li>What portion of MasTec’s 18‑month backlog is directly attributable to AI data center sites and interconnect versus other CE&amp;I work?</li>
+<li>Are there any named multi-year framework agreements with Alphabet/Google (GFiber) or hyperscalers, and what are their durations and termination terms?</li>
+<li>What is the NV2A Group acquisition purchase price, structure, and expected EBITDA contribution tied specifically to data centers?</li>
+<li>How does BEAD program timing shift revenue recognition for MasTec’s Communications segment across 2026–2027?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some figures are management commentary or targets (e.g., 2025 data center activity guidance) and may differ from realized results.</li>
+<li>Investing.com transcript is a secondary source; exact phrasing may vary from the official company transcript.</li>
+<li>Provider-specific exposure to frontier LLM labs is inferred via data center and fiber work; direct AI model integrations are not evidenced in the inventory.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

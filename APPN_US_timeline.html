@@ -1,0 +1,615 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>APPN US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Appian Corp <span class='sub'>(APPN US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.466</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>24 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 12</span>
+<span class='chip'>web-only (verified): 9</span>
+<span class='chip'>web-only (unverified): 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Pre‑GenAI distribution foundation</h2>
+<div class='range'>2015-10-05 → 2015-10-05</div>
+<div class='psum'>Appian launched the AppMarket in 2015, creating a distribution channel for pre‑built applications and components developed by Appian and partners. This marketplace later became a key route to deliver AI connectors and components to customers, supporting faster adoption and integration of external AI services within Appian apps.</div>
+<div class="event t-web_only_verified" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2015-10-05</span>
+<span class="eh">Appian launches AppMarket for apps and components</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$70 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Appian unveiled the public AppMarket with over 70 applications/components at launch, many available at no additional charge, establishing a distribution surface that would later host AI connectors and components.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span></div>
+<p class="cav">⚠ Historical foundation; not AI‑specific at launch.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Appian App Market</span>
+<span class="span">over 70 business applications and components</span>
+<span class="span">available at no additional charge</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Productization, MCP adoption and AI monetization</h2>
+<div class='range'>2026-04-28 → 2026-06-11</div>
+<div class='psum'>In 2026 Appian emphasized process‑anchored AI with interoperable agents and Model Context Protocol (MCP) while introducing clear AI monetization. At Appian World (Apr 28, 2026), the company announced AI‑assisted spec‑driven development and MCP integration, enabling agents to securely interface with external systems. 
+On May 7, 2026, Q1 results highlighted AI‑led demand: roughly 40% of customers were on AI‑inclusive tiers, DocCenter adoption was strong, and management reiterated monetization of external AI/MCP‑initiated usage by charging for all external inbound requests. Risks flagged included potential rises in AI provider costs to the cost of provision and execution risk on AI‑driven upsell. Financially, cloud subscriptions revenue grew 25% y/y to $124.5M, net ARR expansion stood at 115%, and full‑year cloud subscriptions guidance was $515–$521M.</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-11</span>
+<span class="eh">CNBC quotes Appian CEO caution amid SpaceX IPO debate</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">CNBC referenced Appian’s CEO among voices cautioning on valuation and governance as SpaceX’s IPO was framed as a ‘referendum’ on leadership; this was commentary, not an operational change for Appian.</p>
+<p class="cav">⚠ No direct operational or financial impact disclosed for Appian.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">CNBC reported</span>
+<span class="span">‘referendum’</span>
+<span class="span">Appian’s CEO</span>
+<span class="span">valuation, governance, and long‑dated execution risks</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Q1: ~40% of customers on AI‑inclusive tiers; DocCenter demand</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$40 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management cited accelerating AI‑led demand with approximately 40% of customers on AI‑inclusive license tiers and strong DocCenter adoption, supporting go‑to‑market momentum.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-led demand</span>
+<span class="span">~40% of customers on AI-inclusive license tiers</span>
+<span class="span">DocCenter adoption</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Monetization: charge for all external, inbound AI requests</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Appian reiterated it monetizes external AI usage by charging inbound external requests, aligning pricing with AI‑driven workloads accessed via external AI interfaces.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">customers can build an entire app via external AI interfaces</span>
+<span class="span">put a charge on all external, inbound requests.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">New disclosure: monetize external AI/MCP‑initiated usage</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management specified monetization for external AI/MCP‑initiated usage by charging for all external inbound requests, adding clarity beyond prior remarks and materials.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<p class="cav">⚠ Pricing granularity beyond this disclosure was not provided.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">monetize external AI/MCP‑initiated usage</span>
+<span class="span">charging for “all external, inbound requests,”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Risk: AI costs likely to rise toward cost of provision</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">CEO cautioned that AI is currently underpriced and expected to rise toward the cost of provision, underscoring the need for cost‑efficient automation choices and potential margin headwinds from provider pricing.</p>
+<div class="ev-ch">channels: <span class="chchip">pricing_pressure_from_provider</span></div>
+<p class="cav">⚠ Direction and timing of provider pricing changes are uncertain.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI is underpriced</span>
+<span class="span">is going to rise to its cost of provision</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">NRR drivers: AI tier upgrades and moving up‑market</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CFO cited AI tier upgrades and moving up‑market with larger strategic deals as key drivers of net revenue retention, with EMEA as a standout region.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI tier upgrades</span>
+<span class="span">moving up‑market</span>
+<span class="span">EMEA the standout region</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">DocCenter positioned as cross‑industry wedge; AI‑anchored pipeline</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted pipeline strength anchored in process‑centric AI and emphasized DocCenter’s broad cross‑industry applicability as a wedge use case.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">cruising through [macro] volatility</span>
+<span class="span">process‑anchored AI</span>
+<span class="span">cross‑industry wedge</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Cloud net ARR expansion at 115%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$115 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Cloud net ARR expansion was 115% as of March 31, 2026, reflecting expansion within the cloud subscription base alongside AI‑tier adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Cloud net ARR expansion: 115%</span>
+<span class="span">as of 2026-03-31</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Pricing and AI tier adoption support NRR</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated that charging for external inbound (MCP/AI‑initiated) requests and ongoing AI advanced‑tier adoption are supporting NRR improvement.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Charging for external, inbound (MCP/AI‑initiated) requests</span>
+<span class="span">supports NRR</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Risk: execution on AI‑driven upsell/adoption</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management warned that slower‑than‑expected AI upsell/adoption or competitive responses could dampen ARR expansion and guidance trajectory.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Slower-than-expected AI upsell/adoption</span>
+<span class="span">dampen ARR expansion</span>
+<span class="span">guidance trajectory</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Cloud subscriptions revenue $124.5M (+25% y/y) in Q1</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$124M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Appian reported Q1 cloud subscriptions revenue of $124.5M, up 25% year over year, reflecting continued cloud and AI‑tier momentum.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Cloud subscriptions revenue $124.5M</span>
+<span class="span">(+25% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">FY26 cloud subscriptions guidance: $515–$521M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$515M · run_rate_annual</span> <span class="badge">neutral</span></div>
+<p class="narr">For full‑year 2026, Appian guided cloud subscriptions revenue to $515–$521M (+18–19% y/y) alongside total revenue and profitability targets.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Magnitude reflects low end of guidance range.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">cloud subscriptions revenue $515–$521M</span>
+<span class="span">(+18–19% y/y)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Appian adopts Model Context Protocol and advances AI agents</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Appian announced AI‑assisted spec‑driven development and MCP integration so agents can interface securely with external systems, aiming to deliver reliable, scalable AI anchored in process models.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">AI-assisted spec-driven development</span>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">Advancements in AI agents</span>
+<span class="span">interface securely with external enterprise systems</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Multi‑model ecosystem hardening: AWS Bedrock, Anthropic, xAI; deprecation risk</h2>
+<div class='range'>2024-01-10 → 2025-09-30</div>
+<div class='psum'>Appian deepened its multi‑model and multi‑cloud stance. In January 2024, Appian updated guidance on its legacy Google AutoML connector noting Google’s deprecation, signaling a dependency risk and potential migration needs to Vertex AI. In April 2024, Appian signed a Strategic Collaboration Agreement with AWS to deliver Private AI using Amazon Bedrock and SageMaker, reinforcing secure, compliant LLM access for enterprises. 
+Through 2025 Appian broadened accessible model choices: an xAI Connected System plugin exposed Grok models; AWS’s APN highlighted Appian AI Copilot on Bedrock leveraging Anthropic’s Claude; and a third‑party AI Chat Component supported OpenAI, Azure OpenAI, Gemini, and Anthropic within Appian apps. The Azure OpenAI connector was also maintained and updated, demonstrating continued investment in multi‑provider optionality.</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-09-30</span>
+<span class="eh">AI Chat Component adds multi‑model chat (OpenAI, Gemini, Anthropic)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">A third‑party AppMarket AI Chat Component enabled embedded chat with multiple AI services—OpenAI, Azure OpenAI, Gemini, and Anthropic—inside Appian apps, supporting enterprise conversational AI and knowledge retrieval workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ Third‑party component; adoption may vary by customer.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">AI Chat Component</span>
+<span class="span">First Released: 30 Sep 2025</span>
+<span class="span">OpenAI, Azure OpenAI, Gemini, Anthropic</span>
+<span class="span">embeddable AI chat interface</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-07-22</span>
+<span class="eh">APN: Appian AI Copilot on Amazon Bedrock leveraging Anthropic’s Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">AWS’s APN blog profiled Appian AI Copilot built on Amazon Bedrock and leveraging Anthropic’s Claude LLMs, reinforcing Appian’s use of Bedrock as an orchestration layer for gen‑AI assistants in process automation.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Amazon Bedrock</span>
+<span class="span">Anthropic’s Claude large language models</span>
+<span class="span">Appian AI Copilot</span>
+<span class="span">AWS Partner Network (APN) Blog</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2025-03-11</span>
+<span class="eh">xAI Connected System plugin released on AppMarket</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Appian launched an xAI Connected System plugin enabling access to Grok models with chat completion and tokenization features. Supported models included grok‑2‑vision‑1212 and grok‑2‑1212, expanding model choice within Appian.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">xAI</span>
+<span class="span">First Released: 11 Mar 2025</span>
+<span class="span">Grok Models</span>
+<span class="span">grok-2-vision-1212</span>
+<span class="span">grok-2-1212</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0024" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-02-18</span>
+<span class="eh">AzureOpenAI Connected System maintained; updated February 2025</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Appian’s AzureOpenAI Connected System remained supported and was updated on Feb 18, 2025, providing direct access to Azure OpenAI services including Chat Completions and Embeddings, reinforcing multi‑provider optionality.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">AzureOpenAI</span>
+<span class="span">Last Updated: 18 Feb 2025</span>
+<span class="span">direct access to Azure OpenAI’s services</span>
+<span class="span">Chat Completions (ChatGPT)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-04-15</span>
+<span class="eh">Strategic Collaboration Agreement with AWS to deliver Private AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Appian signed an SCA with AWS to make generative AI more accessible in enterprise processes, leveraging Amazon Bedrock for hosted/customized LLMs under customer compliance boundaries and Amazon SageMaker for creating, training, and fine‑tuning proprietary models.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Terms and financial commitments of the SCA were not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Strategic Collaboration Agreement</span>
+<span class="span">Amazon Bedrock</span>
+<span class="span">Amazon SageMaker</span>
+<span class="span">host LLMs within customer compliance boundaries</span>
+<span class="span">privately customize those models</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-01-10</span>
+<span class="eh">Google AutoML connector deprecation risk and Vertex AI migration path</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Appian’s Google Cloud AutoML Connected System page noted Google has deprecated the legacy AutoML service and warned the connector will no longer function after shutdown, advising customers to build integrations to newer services like Vertex AI. This highlights ecosystem dependency risk.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">ecosystem_control_loss</span></div>
+<p class="cav">⚠ Customer impact depends on specific deployments and timelines for Google’s shutdown.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Last Updated: 10 Jan 2024</span>
+<span class="span">Google has deprecated</span>
+<span class="span">will no longer function</span>
+<span class="span">Google Vertex AI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational AI integrations and strategy build-out</h2>
+<div class='range'>2020-03-09 → 2023-08-21</div>
+<div class='psum'>Appian established core AI building blocks and early provider integrations. In March 2020, the firm expanded its technology partnership with Google Cloud to embed Google AI services for intelligent document processing. In 2023 Appian accelerated its generative AI roadmap: it launched an AppMarket ChatGPT component, announced a broader gen‑AI strategy including an Azure OpenAI Connected System and Pinecone vector integration, and introduced Appian AI Copilot to boost developer productivity.
+These steps positioned Appian as a process‑centric platform with embedded gen‑AI options, while creating a distribution surface through the AppMarket for provider‑specific connectors and components. The period laid the groundwork for multi‑model flexibility that would be hardened in subsequent years.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2023-08-21</span>
+<span class="eh">Appian AI Copilot released to boost developer productivity</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Appian made AI Copilot generally available as part of its AI‑Powered Process Platform, using generative AI to create interfaces and accelerate development (e.g., converting PDFs/structured forms). Additional planned capabilities included natural‑language workflow creation and data fabric querying.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Appian AI Copilot</span>
+<span class="span">increases developer productivity</span>
+<span class="span">generative AI interface creation</span>
+<span class="span">convert PDF and other structured forms</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-06-12</span>
+<span class="eh">Generative AI strategy: Azure OpenAI and Pinecone connectors</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Appian announced an expanded generative AI strategy, including an Azure OpenAI Connected System and a Pinecone Connected System, and noted that ChatGPT is trained on Appian’s declarative SAIL expression language. This broadened access to LLMs and retrieval‑augmented workflows within Appian.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Generative AI Strategy and Expanded AI Roadmap</span>
+<span class="span">OpenAI/ChatGPT low-code integration</span>
+<span class="span">ChatGPT is trained on Appian’s declarative SAIL expression language</span>
+<span class="span">Appian Azure OpenAI Connected System</span>
+<span class="span">Appian Pinecone Connected System</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-03-15</span>
+<span class="eh">AppMarket: OpenAI ChatGPT component plugin released (later EOL)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Appian published an OpenAI ChatGPT component plugin on the AppMarket, enabling customizable chat experiences within Appian apps. The listing notes it was later designated End of Life and not under active maintenance.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<p class="cav">⚠ EOL status limits forward relevance; replacement components may supersede functionality.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">OpenAI ChatGPT</span>
+<span class="span">First Released: 15 Mar 2023</span>
+<span class="span">component plugin</span>
+<span class="span">End of Life and is no longer under active maintenance</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2020-03-09</span>
+<span class="eh">Expanded Google Cloud partnership for Intelligent Document Processing</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Appian announced an expanded technology partnership with Google Cloud to power intelligent document processing by incorporating Google Cloud AI/ML services out‑of‑the‑box (Translation, Vision AI, Natural Language). This deepened Appian’s native AI toolkit for process automation and content understanding.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">expanded technology partnership with Google Cloud</span>
+<span class="span">Appian AI incorporates Google Cloud AI and ML services out-of-the-box</span>
+<span class="span">Google Cloud Translation</span>
+<span class="span">Google Cloud Vision AI</span>
+<span class="span">Google Cloud Natural Language</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of ARR or bookings is attributable to AI-inclusive license tiers and DocCenter use cases?</li>
+<li>How much external AI/MCP-initiated usage volume is being monetized (requests, revenue) and at what effective price per request?</li>
+<li>What is the model mix within Amazon Bedrock for Appian AI Copilot (Anthropic Claude vs. others) and how is unit cost trending?</li>
+<li>Are there any minimum spend, credits, or term commitments embedded in the AWS SCA?</li>
+<li>What is the migration status from deprecated Google AutoML connectors to Vertex AI or alternatives, and how many customers are affected?</li>
+<li>What is adoption/usage of the xAI Connected System and multi-model AI Chat Component among enterprise customers?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many items are based on Appian press releases or product listings; independent customer adoption metrics are limited.</li>
+<li>Financial magnitudes reflect disclosed figures and guidance; detailed AI revenue breakout was not provided.</li>
+<li>Third-party AppMarket component adoption may vary and is not uniformly disclosed.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,824 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>RIOT US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Riot Platforms Inc <span class='sub'>(RIOT US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.337</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>37 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 11</span>
+<span class='chip'>single source: 25</span>
+<span class='chip'>web-only (verified): 6</span>
+<span class='chip'>web-only (unverified): 4</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Power supply optionality via external energy innovation</h2>
+<div class='range'>2026-06-11 → 2026-06-11</div>
+<div class='psum'>Riot participated in a $54M Series A financing for Endurance Energy, a company pursuing subsea geothermal plants aimed at delivering firm, clean power for AI/data centers. This complements Riot’s broader strategy to secure diverse, scalable power sources for high-density compute.</div>
+<div class="event t-single_source" id="E0036" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-11</span>
+<span class="eh">Participates in Endurance Energy $54M Series A for subsea geothermal</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$54M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Riot joined a $54M Series A round in Endurance Energy, targeting subsea geothermal solutions to meet surging AI/data-center power demand.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ Riot’s specific investment amount within the round was not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">$54M Series A</span>
+<span class="span">Riot</span>
+<span class="span">AI/data‑center power demand</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Rockdale AMD lease, delivery, and Q1 2026 financing and risk profile</h2>
+<div class='range'>2026-01-16 → 2026-05-06</div>
+<div class='psum'>Riot signed a 10-year data center lease with AMD for an initial 25 MW at Rockdale, with expansion pathways up to 200 MW. The company also acquired 200 acres at Rockdale for $96 million funded by Bitcoin sales. By Q1 2026, Riot delivered the first 5 MW to AMD; AMD exercised an additional 25 MW option to reach 50 MW contracted, and an April amendment to the lease added the 25 MW expansion.
+Q1 2026 filings outlined ~$636m total AMD lease-and-option contract value with estimated ~$510m NOI over the initial term, phasing milestones for additional capacity, robust leasing pipeline commentary, and operating metrics (data center revenue $33.2m). The quarter also reflected significant cash movements (BTC sales, capex), leverage (~$853.7m principal debt), negative free cash flow, and risk items including a $51.9m power derivative loss and $326.7m BTC fair value loss.</div>
+<div class="event t-web_only_unverified" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">AMD Lease Amendment in April 2026 adds additional 25 MW deployment</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Riot’s 10-Q disclosed an April 2026 amendment to the AMD Lease to provide an additional 25 MW deployment under the existing expansion option.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">In April 2026, the Company entered into an amendment to the AMD Lease</span>
+<span class="span">to provide an additional deployment of 25 MW</span>
+<span class="span">exercise a portion of the existing expansion option</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Riot and Terrestrial Energy sign MOU to co-develop nuclear-powered data centers (up to 4 GW)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Riot and Terrestrial Energy executed an MOU to pair data centers with advanced nuclear IMSR Plants, contemplating deployment of multiple 390 MW units totaling up to 4 GW, with potential natural gas as a bridge.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ MOU is non-binding and subject to permitting, financing, and technology readiness.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Memorandum of Understanding</span>
+<span class="span">co-located with data centers</span>
+<span class="span">up to 4 GW of nuclear power capacity</span>
+<span class="span">multiple 390 MW IMSR Plants</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">AMD lease + exercised option totals ~$636m CV; est. NOI ~$510m over 10 years</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$636M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Riot disclosed combined contract value of approximately $636m with estimated total NOI of ~$510m across the initial 10-year term, reflecting the AMD lease and exercised 25 MW option.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Estimates include escalators and exercised options; further options remain at AMD’s discretion.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">contract value ~$636m</span>
+<span class="span">estimated total NOI of ~$510m</span>
+<span class="span">initial 25 MW</span>
+<span class="span">over 10 years</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">AMD holds an additional 100 MW option (potential 200 MW total)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated AMD’s unexercised 100 MW option, which would take total potential AMD capacity at Rockdale to 200 MW if fully exercised.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ Option mechanics are confidential and may not be exercised.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">additional 100 MW option</span>
+<span class="span">total potential AMD capacity 200 MW</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Delivered first 5 MW; AMD exercised +25 MW option to 50 MW contracted</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Riot delivered 5 MW in January 2026 and AMD exercised an additional 25 MW, bringing contracted capacity to 50 MW. Power is provided at pass-through rates and recognized as variable lease revenue.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[6], web_search_findings[7]</div>
+<span class="span">first 5 MW to AMD</span>
+<span class="span">exercise of an additional 25 MW option</span>
+<span class="span">bringing contracted capacity to 50 MW</span>
+<span class="span">recognized as variable lease revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">AMD expansion phasing: 10 MW Nov’26; 15 MW May’27; next 100 MW needs new build</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Riot detailed AMD expansion delivery milestones of 10 MW in November 2026 and 15 MW in May 2027, noting the subsequent 100 MW option would require a new building.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">10 MW in November 2026</span>
+<span class="span">15 MW in May 2027</span>
+<span class="span">next 100 MW would require a new building</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Remaining 20 MW of initial 25 MW due May’26; 25 MW expansion through May’27</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Riot targeted delivery of the remaining 20 MW of AMD’s initial 25 MW in May 2026, with the incremental 25 MW expansion delivered in phases through May 2027.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">remaining 20 MW</span>
+<span class="span">May 2026</span>
+<span class="span">to be delivered in phases through May 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Lease economics include escalator; option details confidential</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management noted an escalator clause within the AMD lease and that certain option mechanics remain confidential.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">there is an escalator clause</span>
+<span class="span">there is some confidentiality to the agreement</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Leasing pipeline advanced; timing of next lease uncertain</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Riot reported its leasing discussions have advanced considerably with no gating issues, though it could not provide timing for the next lease signing.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">advanced considerably</span>
+<span class="span">I cannot tell you when our next lease will be signed</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Demand still outstrips supply for high-density capacity</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized that demand continues to outstrip supply, with urgency varying by buyer cycle.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Demand still outstrips supply</span>
+<span class="span">urgency varies by buyer cycle</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Corsicana GC mobilized; long‑lead equipment procurement underway</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Riot secured and mobilized a general contractor for Corsicana’s core-and-shell phase, with long‑lead equipment procurement already in progress.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">general contractor has been secured and mobilized</span>
+<span class="span">long‑lead equipment procurement</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Corsicana tenanting preference single‑tenant, but flexible</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Riot prefers a single-tenant structure for Corsicana but remains open to flexible arrangements based on market dynamics.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">prefers single-tenant</span>
+<span class="span">remains flexible</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Core lease margin 91%; target 80%+ NOI at scale</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Riot reported a 91% core operating lease revenue margin for the quarter and is targeting 80%+ NOI margins at scale as O&amp;M normalizes.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">core operating lease revenue margin was 91%</span>
+<span class="span">targets 80%+ NOI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Financing approach: competitive spreads and diversified instruments</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Riot expects competitive spreads for AMD given tenant quality and intends to use a mix of instruments across debt markets rather than a single channel.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expects competitive spreads</span>
+<span class="span">mix of instruments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">No equity issuance; sold 3,778 BTC for ~$289.5m; fit‑out spend to be reimbursed</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$290M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Riot avoided ATM equity issuance in Q1, sold 3,778 BTC for approximately $289.5m, and noted tenant fit-out spending expected to be reimbursed.</p>
+<p class="cav">⚠ BTC proceeds subject to crypto price volatility.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">no ATM issuance in Q1</span>
+<span class="span">sold 3,778 BTC</span>
+<span class="span">approximately $289.5m of proceeds</span>
+<span class="span">fit-out spend to be reimbursed</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1 PP&amp;E capex ~$115.5m for data centers and miners</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$116M · capex</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Riot reported approximately $115.5m of Q1 PP&amp;E capex across data center build-out and miners.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q1 capex for data center build-out and miners</span>
+<span class="span">roughly $115.5m</span>
+<span class="span">PP&amp;E</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1 free cash flow approximately -$298m</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$298M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Riot’s implied Q1 free cash flow (OCF - capex) was approximately -$298m, reflecting operating cash outflows and capital spending.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">free cash flow (OCF - capex)</span>
+<span class="span">approximately -$298m</span>
+<span class="span">for the quarter</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Total principal debt ~$853.7m; cash $205.7m (press release cash on hand $282.5m incl. restricted)</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$854M · loan</span> <span class="badge">mixed</span></div>
+<p class="narr">Riot disclosed total principal debt of approximately $853.7m and cash and cash equivalents of $205.7m as of March 31, 2026.</p>
+<p class="cav">⚠ Press release cash figure includes restricted cash; balance sheet subject to BTC valuation swings.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">total principal debt ~$853.7m</span>
+<span class="span">Cash and cash equivalents $205.7m</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Data Center segment revenue $33.2m; gross margin ~7% in Q1</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$33M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Riot reported $33.2m of Data Center revenue in Q1 2026 with gross margin of ~7%, including tenant fit-out services revenue.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[6]</div>
+<span class="span">Data Center: revenue $33.2m</span>
+<span class="span">gross margin ~7%</span>
+<span class="span">Data Center revenue of $33.2 million</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">$30.7m tenant fit‑out reimbursement expected in Q2 2026</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$31M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Riot expects approximately $30.7m of Q1 tenant fit-out costs to be reimbursed in Q2 2026, aiding near-term working capital.</p>
+<p class="cav">⚠ Timing dependent on tenant reimbursement schedule.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$30.7m</span>
+<span class="span">expected to be reimbursed in Q2 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Power derivative loss $51.9m; ERCOT/hedging exposure risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$52M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Riot recorded a $51.9m loss from changes in fair value of power purchase agreement derivatives, highlighting exposure to ERCOT pricing and hedging assumptions.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$51.9m loss</span>
+<span class="span">ERCOT pricing</span>
+<span class="span">hedging assumptions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Execution risk in data center build-out and tenant delivery</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management flagged execution risk in building out data centers and meeting tenant delivery milestones.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Execution risk in data center build-out</span>
+<span class="span">tenant delivery</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Capital intensity and funding mix risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Riot cited risks related to the capital intensity of development and the mix of funding sources required to scale its data center platform.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Capital intensity</span>
+<span class="span">funding mix</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">BTC fair value loss $326.7m drives GAAP volatility risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$327M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Riot recognized a $326.7m fair value loss on bitcoin holdings in Q1, underscoring GAAP earnings volatility independent of operating performance.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$326.7m fair value loss</span>
+<span class="span">GAAP volatility</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Strategic advantages: large power portfolio and in‑house engineering</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized its fully approved power portfolio and in-house engineering as key competitive advantages for scaling AI/HPC-ready data centers.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">large, fully approved power portfolio</span>
+<span class="span">in-house engineering capabilities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Leadership changes had “absolutely no impact” on development/commercial efforts</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Riot stated leadership changes had absolutely no impact on development or commercial discussions and that core leadership remains in place.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">absolutely no impact</span>
+<span class="span">development or commercial discussions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Power-portfolio growth approach has “no single preference”</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Riot reported no single preferred approach to expanding its power portfolio, indicating it is pulling all levers amid industry constraints.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">no single preference</span>
+<span class="span">industry power constraints</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">AMD ROFR converted to an option; mechanics remain confidential</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Riot converted AMD’s ROFR into an option to simplify expansion, while keeping certain option mechanics confidential.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ROFR with AMD was converted to an option</span>
+<span class="span">option mechanics remain confidential</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1 2026 results: $167.2m revenue incl. $33.2m Data Center; AMD adds 25 MW</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$167M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Riot reported quarterly revenue of $167.2m with $33.2m from Data Center, and confirmed AMD’s exercise of an additional 25 MW option, validating delivery and demand.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Quarterly revenue of $167.2 million</span>
+<span class="span">Data Center revenue of $33.2 million</span>
+<span class="span">exercise of option for an additional 25 MW</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-19</span>
+<span class="eh">Acquires 200 acres at Rockdale for $96m funded by ~1,080 BTC</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$96M · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Riot purchased 200 acres at Rockdale for $96 million, funded entirely by selling approximately 1,080 Bitcoin, alongside the AMD lease announcement for 25 MW with expansion potential.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">200 acres of land</span>
+<span class="span">for $96 million</span>
+<span class="span">sale of approximately 1,080 Bitcoin</span>
+<span class="span">25MW of critical IT load capacity</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-16</span>
+<span class="eh">Signs 10-year data center lease with AMD for 25 MW, expandable to 200 MW</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$311M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Riot executed a Data Center Lease with AMD for 25 MW at Rockdale with a 10-year term and base rent expected at ~$311.0m, with three 5-year extensions and total potential up to 200 MW.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Full-term revenue including extensions (~$1.0 billion) is contingent on options being exercised.</p>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[10]</div>
+<span class="span">Data Center Lease</span>
+<span class="span">25 MW of critical IT load capacity</span>
+<span class="span">initial term of 10 years</span>
+<span class="span">approximately $311.0 million</span>
+<span class="span">expand to a total of up to 200 MW</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Corsicana scaling and design milestones</h2>
+<div class='range'>2025-08-07 → 2025-10-30</div>
+<div class='psum'>Riot expanded its Corsicana land bank by 238 acres to 858 acres total, providing flexibility for multiple data center designs and reinforcing the plan to allocate a majority of power to AI/HPC workloads.
+By October 2025, Riot initiated core-and-shell development for the first two Corsicana buildings (112 MW), completed campus and basis-of-design work, and continued to build an in-house data center team, advancing its multi-faceted data center operator strategy.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-30</span>
+<span class="eh">Begins core-and-shell for first two Corsicana buildings (112 MW)</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Riot initiated core-and-shell development of the first two buildings at Corsicana totaling 112 MW, underpinned by campus and basis-of-design completion and in-house team build-out.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">core and shell development of the first two buildings</span>
+<span class="span">112 MW of total critical IT capacity</span>
+<span class="span">Campus Design for Corsicana</span>
+<span class="span">in-house data center team</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-07</span>
+<span class="eh">Adds 238 acres; Corsicana campus totals 858 acres with majority to AI/HPC</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Riot acquired an additional 238 acres at Corsicana, bringing the campus to 858 acres and aligning plans to allocate 600 MW to HPC and AI workloads as part of AI/HPC Phase I.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">additional 238 acres</span>
+<span class="span">total of 858 acres</span>
+<span class="span">600MW is expected to be allocated to HPC and AI</span>
+<span class="span">AI/HPC Phase I</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundation and AI/HPC pivot setup</h2>
+<div class='range'>2024-04-18 → 2025-02-12</div>
+<div class='psum'>Riot energized major power infrastructure at its Corsicana site in April 2024, positioning the campus for large-scale compute with a 400 MW substation and a 1 GW vision. This created a platform for future diversification beyond Bitcoin mining.
+In early 2025, Riot formally launched an evaluation to repurpose ~600 MW of remaining Corsicana capacity for AI/HPC uses, halted a planned Phase II Bitcoin mining build, and signaled a significant 2025 capex reduction. The company augmented its board with directors experienced in AI/HPC conversion and retained advisors to accelerate partner engagement.</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-02-12</span>
+<span class="eh">Board strengthened for AI/HPC; Evercore and Northland retained</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Riot added three directors with AI/HPC conversion, data center, and real estate experience, and retained Evercore and Northland Capital to lead engagement with potential AI/HPC partners amid increased inbound interest.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Announces Changes to Its Board of Directors</span>
+<span class="span">directly applicable AI/HPC</span>
+<span class="span">Retains Evercore and Northland Capital</span>
+<span class="span">increased inbound interest</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-21</span>
+<span class="eh">Riot launches AI/HPC evaluation and halts Phase II mining; 2025 capex reduced</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$245M · capex</span> <span class="badge">mixed</span></div>
+<p class="narr">Riot began a formal process to evaluate developing approximately 600 MW of Corsicana capacity for AI/HPC uses and halted the previously announced Phase II Bitcoin mining expansion. The company projected a 2025 capex reduction of $245 million.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Capex reduction refers to projected 2025 Corsicana spending; AI/HPC development remains under evaluation.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">evaluate the feasibility of developing the approximately 600 megawatts</span>
+<span class="span">AI/HPC</span>
+<span class="span">halting the development of its previously announced 600 MW Phase II Bitcoin mining expansion</span>
+<span class="span">reduced by $245 million</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-04-18</span>
+<span class="eh">Corsicana 400 MW substation energized; 1 GW campus vision</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Riot energized the Corsicana Facility substation, enabling the initial 400 MW phase and reaffirming a 1 GW full-site plan. Management highlighted progress toward increased capacity targets.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">successfully energized the substation</span>
+<span class="span">400-megawatt substation</span>
+<span class="span">will have a total capacity of 1 GW</span>
+<span class="span">increase our self-mining hash rate capacity to 31 EH/s</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0035'>E0035</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the effective per-MW base rent and escalation mechanics under the AMD lease and amendment?</li>
+<li>Will AMD exercise the remaining 100 MW option and on what timeline?</li>
+<li>What is the expected timing and counterparty profile for Riot’s next non-AMD lease at Rockdale or Corsicana?</li>
+<li>How will Riot finance remaining fit-out and new-build requirements while managing negative free cash flow?</li>
+<li>What scope, timeline, and regulatory pathway exist for the Terrestrial Energy MOU projects, and what are the capital commitments?</li>
+<li>What is Riot’s specific check size and strategic rights (if any) from the Endurance Energy investment?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several lease option details are confidential; expansion remains at AMD’s discretion.</li>
+<li>Financial figures marked with ~ are estimates and may change in subsequent filings.</li>
+<li>The Terrestrial Energy collaboration is a non-binding MOU subject to permitting, financing, and technology readiness.</li>
+<li>Riot’s exact investment amount in the Endurance Energy $54M round was not disclosed.</li>
+<li>GAAP results are sensitive to BTC price and derivative fair value changes, which may obscure underlying operating trends.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

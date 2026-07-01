@@ -1,0 +1,494 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>4704 JP — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Trend Micro Inc/Japan <span class='sub'>(4704 JP)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.388</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>18 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 9</span>
+<span class='chip'>web-only (verified): 5</span>
+<span class='chip'>web-only (unverified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>TrendAI era: Anthropic and OpenAI partnerships; ARR milestones and AI-driven risks</h2>
+<div class='range'>2026-04-01 → 2026-06-30</div>
+<div class='psum'>Trend Micro rebranded its enterprise business as TrendAI and advanced a multi-partner strategy with Anthropic and OpenAI while positioning TrendAI/TrendLife to secure the agentic-AI era. A strategic engagement embedded Anthropic Claude across the platform and the company evaluated Claude Opus 4.8 while integrating the Claude Compliance API into Vision One for governance and observability. TrendAI also joined OpenAI’s Daybreak Cyber Partner Program to access frontier capabilities for agentic triage in Vision One.
+Financially, management emphasized ARR prioritization with TrendAI enterprise ARR surpassing $1.3B and total ARR above $1.7B. Management acknowledged rising cloud costs tied to AI usage and competitive pressures from rapid AI-driven innovation by peers, as well as margin impacts from incubation investments (VicOne, Magna). Analysts probed positioning relative to Anthropic’s Glasswing/Mythos founding cohort; management asserted no technical gap and cited ongoing AI security investments and Anthropic collaboration.</div>
+<div class="event t-web_only_verified" id="E0017" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-22</span>
+<span class="eh">TrendAI named Trusted Partner in OpenAI Daybreak Cyber Partner Program</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">TrendAI joined OpenAI’s Daybreak Cyber Partner Program, gaining access to frontier AI capabilities. Managed security teams are deploying agentic triage powered by OpenAI models directly integrated into TrendAI Vision One.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">OpenAI Daybreak Cyber Partner Program</span>
+<span class="span">agentic triage capabilities</span>
+<span class="span">powered by OpenAI&#x27;s frontier AI models</span>
+<span class="span">TrendAI Vision One™</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0016" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-12</span>
+<span class="eh">Integrated Claude Compliance API into TrendAI Vision One for observability and governance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">TrendAI integrated the Claude Compliance API into Vision One, enabling retrieval of Claude usage data (uploaded files and activity events) and feeding TrendAI Agentic SIEM for correlation across the attack surface.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Claude Compliance API</span>
+<span class="span">TrendAI Vision One™ platform</span>
+<span class="span">retrieve Claude usage data</span>
+<span class="span">Agentic SIEM</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0015" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Evaluating Claude Opus 4.8 and participating in Anthropic’s Cyber Verification Program</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">TrendAI worked with Anthropic to evaluate Claude Opus 4.8 for improved vulnerability detection and prioritization, and joined Anthropic’s Cyber Verification Program to enable defensive use of frontier models.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Claude Opus 4.8</span>
+<span class="span">working with Anthropic</span>
+<span class="span">Cyber Verification Program</span>
+<span class="span">defensive use of frontier AI models</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Rebrand to TrendAI (enterprise) and TrendLife (consumer); incubation focus (VicOne, Magna)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trend Micro rebranded its enterprise business to TrendAI and consumer to TrendLife, prioritized ARR over perpetual licenses, and increased incubation investments including VicOne for vehicle/robotic AI security and Magna for AI systems integration.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">rebranded enterprise business as TrendAI</span>
+<span class="span">consumer as TrendLife</span>
+<span class="span">VicOne</span>
+<span class="span">Magna</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">ARR milestones: TrendAI enterprise ARR &gt;$1.3B; total ARR &gt;$1.7B</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.3B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reported KPIs including total ARR over $1.7B and TrendAI (enterprise) ARR over $1.3B, alongside Vision One ARR growth and consumer ARR/ARPU data, signaling ongoing adoption of the platform approach.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">total ARR &gt;$1.7B</span>
+<span class="span">enterprise ARR (TrendAI) &gt;$1.3B</span>
+<span class="span">consumer ARR $372M</span>
+<span class="span">ARPU ~$33.3</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Analyst concern: not a founding partner on Anthropic’s Glasswing/Mythos</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Analysts questioned whether Trend Micro was disadvantaged relative to peers by not being an initial founding partner on Anthropic’s Glasswing/Mythos effort, probing the concreteness of its AI security strategy.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">not an initial founding partner</span>
+<span class="span">Anthropic’s Glasswing/Mythos</span>
+<span class="span">disadvantaged versus peers</span>
+<span class="span">concrete AI security strategy</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Mgmt response: no technical gap; highlights collaboration with Anthropic and ZDI/virtual patching</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Management emphasized no technical gap limiting competitiveness and cited collaboration with Anthropic, virtual patching, and ZDI research as differentiators focused on end-to-end vulnerability mitigation.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">no technical gap</span>
+<span class="span">collaboration with Anthropic</span>
+<span class="span">virtual patching</span>
+<span class="span">mitigating vulnerabilities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Platform positioning: TrendAI and TrendLife to secure the agentic‑AI era</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management positioned TrendAI (enterprise) and TrendLife (consumer) as the platforms to secure the agentic-AI era across customers’ environments.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">TrendAI (enterprise)</span>
+<span class="span">TrendLife (consumer)</span>
+<span class="span">secure the agentic‑AI era</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Rising cloud costs tied to AI usage</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Trend Micro noted that cloud costs are increasing alongside platform adoption and AI usage, characterizing the effect as a by-product of healthy engagement but nevertheless a cost headwind.</p>
+<div class="ev-ch">channels: <span class="chchip">pricing_pressure_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Cloud costs are rising</span>
+<span class="span">AI usage</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Risk: AI-driven peer innovation may pressure win rates/pricing and slow ARR growth</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management warned that rapid platform consolidation and AI-driven innovation by global peers could pressure Vision One win rates and pricing, potentially slowing ARR growth relative to plan.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑driven innovation by global peers</span>
+<span class="span">may pressure win rates and pricing</span>
+<span class="span">slowing ARR growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Risk: Incubation spend (VicOne, Magna) and GTM may weigh operating margins</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Trend Micro flagged that increased spend on internal start-ups (VicOne, Magna) and go-to-market/channel investments may weigh on operating margins despite efficiency gains, with incubation costs impacting profitability.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">may weigh on operating margins</span>
+<span class="span">VicOne, Magna</span>
+<span class="span">incubation costs impacting profitability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Ongoing AI security investment and Anthropic collaboration to underpin differentiation</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Management reiterated ongoing AI security investment and execution on partnerships, citing Anthropic collaboration as a pillar to support platform differentiation.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Ongoing AI security investment</span>
+<span class="span">Anthropic collaboration</span>
+<span class="span">platform differentiation</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-04-15</span>
+<span class="eh">Strategic engagement with Anthropic: embedding Claude models across TrendAI platform</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">TrendAI announced a strategic engagement with Anthropic to embed Claude models for agentic workflows, automation, AI-native SecOps, and AI system vulnerability research, deepening its Claude-driven capabilities across the enterprise platform.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">strategic engagement with Anthropic</span>
+<span class="span">embedding Claude models</span>
+<span class="span">agentic workflows, automation</span>
+<span class="span">TrendAI™</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scaling AI integrations across cloud ecosystems and model providers</h2>
+<div class='range'>2025-04-01 → 2025-12-31</div>
+<div class='psum'>Trend Micro expanded AI-powered detection leveraging NVIDIA frameworks on AWS and tapped Amazon Bedrock to enhance investigative context in Vision One workflows. This period shows deepening ties to hyperscaler and accelerator ecosystems without locking to a single frontier model provider.
+The company broadened its Google Cloud alliance: Vision One SPC integrated with Assured Workloads and consumer/enterprise protections advanced, while the ScamCheck app began using Gemini models via Vertex AI, with distribution evidenced by four million Google Workspace Marketplace downloads. Research also highlighted model-risk realism by documenting deepseek-r1 hallucination behavior, underscoring the need for robust AI governance and evaluation.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2025-08-04</span>
+<span class="eh">Research flags hallucination risks: deepseek-r1 produced non-existent package</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">deepseek</span></div>
+<p class="narr">Trend Micro researchers demonstrated model-risk by prompting deepseek-r1 to hallucinate a non-existent Python package, highlighting accuracy and safety concerns with LLM outputs and the need for strong evaluation and controls.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">deepseek-r1</span>
+<span class="span">hallucinated Python package</span>
+<span class="span">mlj</span>
+<span class="span">PyPi repository</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-07-28</span>
+<span class="eh">Expanded Google Cloud partnership; ScamCheck now uses Gemini via Vertex AI; marketplace scale</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Trend Micro deepened its Google Cloud collaboration, integrating Vision One SPC with Google Cloud Assured Workloads and advancing AI-driven protections. ScamCheck began using Gemini models through Vertex AI, and Trend Micro reported over four million downloads on the Google Workspace Marketplace, evidencing broad distribution.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[5]</div>
+<span class="span">utilizes Gemini models through Vertex AI</span>
+<span class="span">Google Cloud Assured Workloads</span>
+<span class="span">four million downloads</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-04-28</span>
+<span class="eh">AI detection model using NVIDIA on AWS; Vision One leverages Amazon Bedrock</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trend Micro introduced AI-powered threat detection built on NVIDIA Morpheus/NVIDIA AI Enterprise and deployed on AWS. Additional Vision One capabilities leverage Amazon Bedrock to enhance SOC investigations via Workbench Insights.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">NVIDIA Morpheus AI framework</span>
+<span class="span">NVIDIA AI Enterprise</span>
+<span class="span">AWS cloud infrastructure</span>
+<span class="span">Amazon Bedrock</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational AI security offerings and governance controls</h2>
+<div class='range'>2024-08-01 → 2025-03-31</div>
+<div class='psum'>Trend Micro introduced governance and protection for generative AI usage with the Japan launch of Trend Vision One - Zero Trust Secure Access - AI Service Access, explicitly covering popular public services like ChatGPT (OpenAI) and Gemini (Google). The solution focuses on preventing prompt injection attacks and blocking inadvertent data leakage when employees interact with public AI tools.
+In early 2025, the company open-sourced Trend Cybertron, a specialized AI model and agent framework for autonomous cybersecurity agents. Cybertron was fine-tuned on Llama 3.1 and engineered for deployment on NVIDIA infrastructure (NIM and DGX), signaling an internal capability build-out and optionality around open models and accelerated inference.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2025-03-19</span>
+<span class="eh">Open-sourcing of Trend Cybertron model/agent framework (fine-tuned on Llama 3.1; NVIDIA support)</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Trend Micro open-sourced its Trend Cybertron AI model and agent framework to accelerate autonomous cybersecurity agents. The Cybertron model was fine-tuned using Llama 3.1 and engineered for deployment with NVIDIA NIM microservices and NVIDIA DGX systems, expanding the firm’s AI R&amp;D base and deployment options.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">open-sourcing of Trend Cybertron</span>
+<span class="span">fine-tuned using Llama 3.1</span>
+<span class="span">NVIDIA NIM</span>
+<span class="span">NVIDIA DGX</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-08-01</span>
+<span class="eh">Launch of AI Service Access to govern and secure usage of public generative AI (ChatGPT, Gemini)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Trend Micro launched Trend Vision One - Zero Trust Secure Access - AI Service Access in Japan to protect enterprise use of both private and public generative AI services. The solution blocks risky uploads to public services including ChatGPT (OpenAI) and Gemini (Google) to prevent information leakage and defend against prompt injection attacks.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>2024年8月1日</span>
+<span class="span">AI Service Access</span>
+<span class="span">ChatGPT(OpenAI)</span>
+<span class="span">Gemini(Google)</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0008'>E0008</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the commercial/contractual terms and expected revenue impact from joining OpenAI’s Daybreak Cyber Partner Program (e.g., minimum commitments, GTM alignment, co-selling)?</li>
+<li>How material are Anthropic-related costs (Claude API usage, evaluation of Opus 4.8, Compliance API integration) to near-term gross margin and COGS?</li>
+<li>To what extent does Amazon Bedrock vs. direct model integrations (Anthropic, OpenAI, Gemini) represent a deliberate multi-model abstraction strategy?</li>
+<li>What portion of ARR growth is specifically attributable to AI-native features (e.g., agentic triage, Compliance API governance, ScamCheck with Gemini)?</li>
+<li>Are there timelines or targets for margin recovery as incubation investments (VicOne, Magna) scale revenues?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many items are company press releases without independent financial quantification; revenue and cost impacts are not disclosed.</li>
+<li>Management’s assertions about competitive positioning and lack of technical gaps are forward-looking and unverified.</li>
+<li>Some integrations are described as evaluations or program participation rather than full GA deployment; timelines and scope may change.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

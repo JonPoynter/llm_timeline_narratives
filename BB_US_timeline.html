@@ -1,0 +1,541 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>BB US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>BlackBerry Ltd <span class='sub'>(BB US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.414</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>22 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 9</span>
+<span class='chip'>single source: 16</span>
+<span class='chip'>web-only (verified): 3</span>
+<span class='chip'>web-only (unverified): 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>QNX expansion into physical AI; NVIDIA ecosystem alignment; backlog and guidance updates</h2>
+<div class='range'>2026-04-01 → 2026-06-30</div>
+<div class='psum'>BlackBerry’s QNX business accelerated into 2026 with a strategic push beyond automotive into robotics/physical AI, increased OEM activity around Alloy Kore, and a growing, diversified backlog. Early access trials for Alloy Kore with Mercedes‑Benz and planned BMW ‘Neue Klasse’ integration signaled momentum. Management highlighted the potential for Alloy Kore to significantly impact the ~$950M QNX royalty backlog (up ~$85M y/y), with GEM contributing ~20% of backlog and ~10% of revenue and exhibiting margin‑accretive pricing dynamics.
+In June, BlackBerry emphasized a collaboration with NVIDIA (IGX Thor / Halos Safety Stack) and stated NVIDIA standardized its safety stack on QNX and is extending into physical‑AI use cases. The company released QNX Hypervisor 8.0 for Safety, announced Leapmotor’s selection of SDP 8.0 and Hypervisor 8.0, and flagged retrofit paths for Alloy Kore that could uplift existing backlog. Q1 FY2027 results showed strong QNX growth, a higher FY2027 revenue outlook, Secure Communications ARR of $220M with 92% DBNRR, and the first cash‑positive fiscal Q1 in years, while also noting delivery/adoption and competitive risks around new offerings and ecosystem collaborations.</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">NVIDIA collaboration (IGX Thor / Halos) to advance safety‑critical edge AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BlackBerry highlighted a collaboration with NVIDIA involving IGX Thor and the Halos Safety Stack aimed at advancing safety‑critical edge AI, aligning QNX with NVIDIA’s ecosystem.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">collaboration with NVIDIA (IGX Thor / Halos Safety Stack)</span>
+<span class="span">advance safety‑critical edge AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">QNX Hypervisor 8.0 for Safety released</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BlackBerry announced the release of QNX Hypervisor 8.0 for Safety, expanding its safety‑certified virtualization platform footprint.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">release of QNX Hypervisor 8.0 for Safety</span>
+<span class="span">QNX Hypervisor 8.0 for Safety</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">Leapmotor selects QNX SDP 8.0 and Hypervisor 8.0 for premium EV</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted Leapmotor selected QNX SDP 8.0 and Hypervisor 8.0 for a premium EV program, indicating continued OEM wins for the latest QNX stack.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Leapmotor selecting QNX SDP 8.0 and Hypervisor 8.0</span>
+<span class="span">for a premium EV</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">NVIDIA standardized safety stack on QNX; extending into physical‑AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said NVIDIA has standardized its safety stack on QNX in automotive and is extending into physical‑AI use cases, reinforcing QNX’s position across safety‑critical domains.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">standardized its safety stack on QNX</span>
+<span class="span">physical‑AI use cases</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">Alloy Kore retrofit path may uplift existing backlog</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said Kore can be retrofitted into in‑flight programs and that some could be curtailed and moved to Kore, potentially creating an uplift to existing backlog.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">can be and will be retrofitted</span>
+<span class="span">uplift to existing backlog</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">GEM identified as QNX’s fastest‑growing sub‑segment</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BlackBerry stated that GEM is currently the fastest‑growing sub‑segment within QNX, highlighting momentum beyond automotive.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">GEM is currently QNX’s fastest‑growing sub‑segment.</span>
+<span class="span">fastest‑growing sub‑segment</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">Secure Communications ARR disclosed at $220M with 92% DBNRR</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$220M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BlackBerry disclosed Secure Communications ARR of $220M and DBNRR of 92%, indicating a stable, high‑retention base in secure comms.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$220M</span>
+<span class="span">DBNRR (92%).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">Deferred revenue decreased by $18.7M in Q1</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$19M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">BlackBerry reported a $18.7M decrease in deferred revenue during Q1 per the cash flow statement, a working capital headwind as revenue is recognized.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Deferred revenue decreased by $18.7M</span>
+<span class="span">during Q1</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">Execution risk flagged for Hypervisor 8.0, safety offerings, and ecosystem collaborations</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Outlook depends on timely delivery and adoption of QNX Hypervisor 8.0, safety‑critical offerings, and ecosystem collaborations (e.g., NVIDIA, TKMS). Management cautioned that delays or competitive responses from alternative RTOS/embedded stacks could impede targets.</p>
+<div class="ev-ch">channels: <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">adoption of QNX Hypervisor 8.0</span>
+<span class="span">could impede targets.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">Q1 FY2027 beat and raised FY2027 revenue outlook to $594–$621M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$594M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BlackBerry reported Q1 FY2027 revenue of $152.9M (up 26% y/y) and raised full‑year FY2027 revenue guidance to $594–$621M, citing momentum in embedded software and ‘physical AI’ use cases.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">revenue of $152.9 million</span>
+<span class="span">up 26% year over year</span>
+<span class="span">projecting total revenue of $594–$621 million</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-09</span>
+<span class="eh">QNX expands beyond autos into robotics/physical AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported QNX is expanding outside automotive into robotics/physical AI—broadening addressable market for the real‑time OS and middleware.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">QNX expansion beyond autos into robotics/physical AI</span>
+<span class="span">robotics/physical AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-09</span>
+<span class="eh">Alloy Kore early access with Mercedes-Benz; BMW ‘Neue Klasse’ integration planned</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BlackBerry cited early access trials of QNX/Vector’s Alloy Kore with Mercedes‑Benz and plans for integration in BMW’s ‘Neue Klasse’, indicating marquee OEM engagement.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Alloy Kore</span>
+<span class="span">Mercedes‑Benz</span>
+<span class="span">BMW ‘Neue Klasse’</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-09</span>
+<span class="eh">Alloy Kore could significantly impact QNX’s $950m backlog</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$950M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">The CEO called Alloy Kore an underappreciated upside lever with rollout on track this calendar year, noting OEM interest and potential for a significant impact on the $950m backlog.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">underappreciated upside lever</span>
+<span class="span">“significant impact”</span>
+<span class="span">$950m backlog</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-09</span>
+<span class="eh">QNX royalty backlog approximately $950M, up ~$85M y/y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$950M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BlackBerry reported the QNX royalty backlog at approximately $950M, increasing by about $85M year over year, underscoring sustained program wins.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">QNX royalty backlog ~$950M</span>
+<span class="span">up ~$85M y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-09</span>
+<span class="eh">GEM demand less price sensitive; growth margin accretive</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said GEM customers show less price sensitivity given speed‑to‑market needs and that GEM growth could be accretive to gross margins as more QNX instances and software layers are deployed.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">less price sensitivity</span>
+<span class="span">accretive to gross margins</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-09</span>
+<span class="eh">GEM now ~20% of QNX backlog and ~10% of revenue</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BlackBerry quantified diversification beyond automotive, with non‑auto GEM accounting for about 20% of QNX backlog and roughly 10% of revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">non‑auto GEM now represents ~20% of QNX backlog</span>
+<span class="span">roughly 10% of revenue</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Portfolio reshaping and on-device AI posture</h2>
+<div class='range'>2025-01-01 → 2026-03-31</div>
+<div class='psum'>In early 2025, BlackBerry closed the sale of its Cylance business to Arctic Wolf, while retaining a commercial relationship as customer and reseller, and remaining a shareholder—reshaping its direct AI cybersecurity product exposure but preserving strategic optionality. In parallel, the company articulated a conservative, enterprise‑grade posture for mobile AI.
+In March 2026, BlackBerry published guidance warning that using Google Gemini within BlackBerry Dynamics apps can result in data leakage to Google, directing administrators to apply DLP controls. Shortly thereafter, BlackBerry introduced Work Smart Tools, stating that features process data locally on-device using Apple Foundation Models on iOS or Google Gemini Nano on Android, ensuring email and AI‑generated content never leaves the device.</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">Work Smart Tools: on-device AI using Apple FMs (iOS) and Google Gemini Nano (Android)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">BlackBerry introduced Work Smart Tools stating all features process data locally on-device, using Apple Foundation Models on iOS or Google Gemini Nano on Android, with AI‑generated summaries and suggestions never leaving the user’s device.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">procesan los datos de forma local</span>
+<span class="span">Google Gemini Nano (Android)</span>
+<span class="span">nunca salen del teléfono</span>
+<span class="span">Gemini Nano es un modelo de IA ligero</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-01</span>
+<span class="eh">BlackBerry warns Google Gemini use in Dynamics apps can leak data to Google</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">BlackBerry’s Dynamics SDK documentation cautioned that using Google Gemini within BlackBerry Dynamics apps can lead to data leakage to Google, advising administrators to apply data leakage prevention settings.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Google Gemini — Using Google Gemini</span>
+<span class="span">data leakage to Google</span>
+<span class="span">BlackBerry Dynamics apps</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-02-03</span>
+<span class="eh">BlackBerry closes sale of Cylance to Arctic Wolf; remains customer, reseller, and shareholder</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">BlackBerry and Arctic Wolf announced the closing of the Cylance acquisition. BlackBerry said it will continue as an Arctic Wolf customer, act as a reseller to large government customers, and remain a shareholder.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">distribution_channel_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Closing of Acquisition for Cylance</span>
+<span class="span">reseller of the portfolio</span>
+<span class="span">shareholder of this dynamic, growing company</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early enterprise GenAI positioning and Cylance Assistant launch</h2>
+<div class='range'>2023-08-08 → 2024-12-31</div>
+<div class='psum'>BlackBerry began signaling its enterprise stance on generative AI risk and opportunity in 2023. In August 2023, the company published survey research highlighting that a large share of enterprises were moving to restrict ChatGPT and other GenAI apps on work devices due to data security, privacy, and reputational concerns. In October 2023, BlackBerry announced a new Generative AI powered assistant for SOC teams, emphasizing use of private LLMs for accuracy and data privacy.
+In April 2024, BlackBerry brought this to general availability as Cylance Assistant, a generative AI cybersecurity advisor delivered via Amazon Bedrock, framed with privacy-preserving principles that do not share customer data to train models. Bedrock’s model choice provides an abstraction layer over multiple LLM providers, potentially improving flexibility while limiting provider lock‑in.</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-04-30</span>
+<span class="eh">Cylance Assistant GA; built on Amazon Bedrock with privacy-preserved principles</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BlackBerry announced general availability of Cylance Assistant, a generative AI cybersecurity advisor that utilizes Amazon Bedrock. The company emphasized responsible AI and that customer data isn’t shared to train models. Bedrock’s multi‑model access broadens future model options.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 4 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[2], web_search_findings[3], web_search_findings[4]</div>
+<span class="span">general availability of Cylance Assistant</span>
+<span class="span">generative AI cybersecurity advisor</span>
+<span class="span">doesn’t share customer data</span>
+<span class="span">Amazon Bedrock</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2023-10-16</span>
+<span class="eh">BlackBerry announces Generative AI powered SOC assistant using private LLMs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BlackBerry unveiled a Generative AI powered assistant for SOC teams, designed to act as an analyst leveraging private LLMs to improve accuracy and preserve data privacy for Cylance AI customers.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">new Generative AI powered assistant</span>
+<span class="span">leverages private large language models (LLMs)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-08-08</span>
+<span class="eh">BlackBerry research: majority of organizations plan bans on ChatGPT/GenAI apps on work devices</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">BlackBerry released survey findings indicating widespread intent to ban ChatGPT and other GenAI apps on corporate devices, citing security, privacy, and reputational risks. This underscores customer caution that shapes enterprise AI adoption and governance.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">75% of organizations worldwide</span>
+<span class="span">bans on ChatGPT</span>
+<span class="span">61% of those deploying</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which specific foundation models (e.g., Claude, Llama, Titan/Nova) are enabled by default within Cylance Assistant’s Bedrock deployment, and how frequently are they swapped or combined?</li>
+<li>What is the commercial and technical scope of the NVIDIA (IGX Thor / Halos) collaboration (e.g., certification targets, revenue sharing, term length)?</li>
+<li>How much of the ~$950M QNX royalty backlog is tied to programs likely to migrate to Alloy Kore, and what is the expected timing of any backlog uplift?</li>
+<li>Post-Cylance divestiture, what ongoing revenue or equity upside does BlackBerry retain from Arctic Wolf, and how is the reseller arrangement recognized financially?</li>
+<li>For Work Smart Tools, what proportion of deployed devices use Apple Foundation Models vs. Google Gemini Nano, and how does that vary by vertical or geography?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some items are single-source disclosures (company filings or blogs) without independent third-party corroboration.</li>
+<li>The Bedrock model choices available to BlackBerry are corroborated by AWS sources, but specific model selections in production were not disclosed.</li>
+<li>Spanish-language Work Smart Tools blog was used for on-device AI details; English documentation may differ in phrasing.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

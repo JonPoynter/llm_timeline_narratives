@@ -1,0 +1,527 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>CDW US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>CDW Corp/DE <span class='sub'>(CDW US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.434</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>19 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 13</span>
+<span class='chip'>web-only (unverified): 9</span>
+<span class='chip'>single source: 6</span>
+<span class='chip'>web-only (verified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Shift to agentic AI at scale; GPUaaS and supply risks</h2>
+<div class='range'>2026-04-22 → 2026-05-06</div>
+<div class='psum'>CDW marked a transition from experimentation to production AI with Google Cloud by achieving the Gemini Enterprise Competency and launching teams to build and operate custom AI agents, emphasizing security and governance. In parallel, CDW published guidance on agentic AI governance, warning of risks such as potential source code leaks when interacting with external models.
+Operationally, CDW reported finalizing a GPU‑as‑a‑service partner arrangement to address accelerator supply constraints and composable deployments. Management also flagged memory and GPU/server supply and pricing volatility as risks to order timing, margins, and backlog conversion. An efficiency program targeting ~$100–$200 million run-rate improvements into 2027–2028 is intended to fund AI capabilities and support profitability.</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Finalized GPU‑as‑a‑service partner arrangement to ease supply constraints</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CDW reported finalizing a GPU‑as‑a‑service partner arrangement to address accelerator supply constraints and support composable deployments, expanding AI infrastructure solution options.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">finalized a GPU‑as‑a‑service partner arrangement</span>
+<span class="span">address supply constraints</span>
+<span class="span">composable deployments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Ongoing AI‑enabled productivity investments targeted for 2H efficiency</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted ongoing AI‑enabled productivity investments expected to enhance expense efficiency in the second half, indicating internal AI use to improve operating leverage.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Ongoing AI‑enabled productivity investments</span>
+<span class="span">enhance expense efficiency</span>
+<span class="span">in 2H</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">AI infrastructure demand moving from exploration to production</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CDW cited healthy AI‑related infrastructure demand driving hardware sales, with customers moving from exploration to production and creating follow-on services and recurring revenue opportunities.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">healthy AI-related infrastructure demand</span>
+<span class="span">moving from exploration to production</span>
+<span class="span">follow-on services</span>
+<span class="span">recurring revenue opportunities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Memory supply/pricing dynamics flagged as a watch item</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management identified memory supply and pricing dynamics as a watch item, indicating potential upstream component cost pressure that could affect margins and deal timing.</p>
+<div class="ev-ch">channels: <span class="chchip">pricing_pressure_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">supply/pricing dynamics in memory</span>
+<span class="span">a watch item</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Risk: Tighter GPU/server supply or price spikes could disrupt margins and backlog conversion</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">CDW warned that customer urgency around memory-related price increases and potential tighter GPU/server supply or price spikes could disrupt order timing, margins, and backlog conversion.</p>
+<div class="ev-ch">channels: <span class="chchip">pricing_pressure_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">customer urgency to get ahead of memory‑related price increases</span>
+<span class="span">tighter GPU/server supply or price spikes</span>
+<span class="span">disrupt order timing, margins, and backlog conversion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Efficiency program targeting ~$100–$200M run‑rate improvements to fund AI capabilities</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CDW launched an efficiency program targeting approximately $100–$200 million of run‑rate improvements into 2027–2028, intended to fund growth initiatives including AI capabilities and support profitability.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<p class="cav">⚠ Magnitude shown at lower bound of stated ~$100–$200 million range.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Efficiency program targeting ~$100–$200 million</span>
+<span class="span">run-rate improvements</span>
+<span class="span">into 2027–2028</span>
+<span class="span">including AI capabilities</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0012" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">CDW attains Google Cloud Gemini Enterprise Competency; introduces agentic AI solutions</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Timed with Google Cloud Next 2026, CDW announced achieving the Gemini Enterprise Competency and the formation of specialized engineering teams to build, deploy, and operate custom AI agents with enterprise-grade security and governance.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">achieved the Google Cloud Gemini Enterprise Competency</span>
+<span class="span">Google Cloud Next 2026</span>
+<span class="span">AI agents that automate complex work</span>
+<span class="span">enterprise-grade security and governance</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0013" data-providers="anthropic_claude xai_grok">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">CDW flags governance risk: agentic AI may leak source code to external models</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">anthropic_claude</span> <span class="prov">xai_grok</span></div>
+<p class="narr">CDW advised that agentic AI requires strong governance, cautioning that leaking source code to external AI models is a risk, particularly with frontier models such as Claude or Grok, given agentic systems’ memory and use of external APIs.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">Leaking source code to external AI models</span>
+<span class="span">frontier models like Claude or Grok</span>
+<span class="span">agentic systems have memory</span>
+<span class="span">external APIs</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Multi-cloud AI expansion across Google and AWS; specialization milestones</h2>
+<div class='range'>2025-03-31 → 2025-12-08</div>
+<div class='psum'>CDW broadened its AI portfolio beyond Microsoft, highlighting production deployments for Google Workspace customers and thought leadership on rapid model progress and agentic AI. The company documented a 4,572-seat Gemini for Google Workspace sale with special pricing and emphasized Gemini Enterprise as a hub to tame AI sprawl and deploy agents.
+On AWS, CDW promoted an Amazon Connect Non-Emergency Response Solution leveraging Bedrock for generative AI self-service, while also achieving Microsoft Copilot Specialization to deepen delivery credentials. CDW’s publications framed a multi-model landscape spanning OpenAI, Anthropic, Gemini, Llama and DeepSeek, signaling a hedged approach.</div>
+<div class="event t-web_only_unverified" id="E0011" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-12-08</span>
+<span class="eh">CDW achieves Microsoft Copilot Specialization, validating delivery credentials</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">CDW earned Microsoft’s Copilot Specialization, underscoring consulting and professional services expertise around Microsoft Copilot and related AI offerings such as Copilot Studio and AI agents.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Microsoft Copilot Specialization</span>
+<span class="span">consulting and professional services</span>
+<span class="span">Copilot Studio</span>
+<span class="span">AI agents</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-25</span>
+<span class="eh">CDW’s Amazon Connect Non‑Emergency Response Solution adds generative AI self‑service via Bedrock</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CDW highlighted a cloud-based contact center solution on Amazon Connect with generative AI automation powered by Amazon Bedrock, enabling self-service for non-emergency calls and rapid deployments in about six weeks.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Amazon Connect Non-Emergency Response Solution</span>
+<span class="span">generative AI automation</span>
+<span class="span">Amazon Bedrock</span>
+<span class="span">in about six weeks</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-10-08</span>
+<span class="eh">CDW promotes Google Gemini Enterprise as a hub to centralize AI workflows and agents</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CDW described organizations facing AI sprawl and presented Google Gemini Enterprise as a central hub to provide secure data access and simplify deployment of AI agents, including a three-step value framework.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Google Gemini Enterprise</span>
+<span class="span">AI sprawl</span>
+<span class="span">agentic AI</span>
+<span class="span">three-step process</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-28</span>
+<span class="eh">CDW outlines rapid model progress and agentic AI operating model implications</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">CDW highlighted rapid frontier model iteration (OpenAI o1/o3, DeepSeek R1/R2) and the maturing multi-model ecosystem (Claude, Gemini, Llama, Mistral), noting multimodal capabilities and agent behavior. This frames CDW’s advisory stance and multi-model hedging approach.</p>
+<div class="ev-ch">channels: <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">OpenAI’s top-tier models (like o1 and o3</span>
+<span class="span">DeepSeek R1/R2</span>
+<span class="span">Llama, Mistral</span>
+<span class="span">Multimodal AI is now standard</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-03-31</span>
+<span class="eh">CDW enables 4,572-seat Gemini for Google Workspace deployment with special pricing</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CDW implemented Gemini for Google Workspace for a mortgage company, securing special pricing and attaching 4,572 Gemini licenses to the customer’s existing Workspace agreement, accelerating productivity adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Gemini for Google Workspace</span>
+<span class="span">4,572 licenses of Gemini</span>
+<span class="span">special pricing</span>
+<span class="span">Google Workspace</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Partnership expansion and AWS capability acquisition</h2>
+<div class='range'>2024-01-23 → 2024-12-02</div>
+<div class='psum'>CDW&#x27;s AI commercialization accelerated in 2024 via a broadened Microsoft relationship and an acquisition to scale AWS capabilities. A multi-year agreement deepened CDW&#x27;s services around Microsoft AI, Security, and Copilot, with an incremental MACC underpinning go-to-market momentum. Internally, CDW showcased significant Copilot adoption outcomes.
+CDW also moved to consolidate AWS-focused AI services through the acquisition of Mission Cloud, an AWS Premier Tier Partner with generative AI credentials. Mission Cloud&#x27;s prior customer work demonstrated applied Bedrock and Claude 2 integration expertise that would become part of CDW&#x27;s AWS practice post-close.</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-02</span>
+<span class="eh">CDW acquires Mission Cloud, forming dedicated AWS practice with generative AI capabilities</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CDW acquired Mission Cloud Services, an AWS Premier Tier Partner and AWS-certified generative AI partner, integrating cloud, data, and AI expertise into CDW Digital Velocity and establishing a dedicated AWS practice.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ Transaction value not disclosed in cited excerpt.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">acquired Mission Cloud Services Inc.</span>
+<span class="span">AWS Premier Tier Partner</span>
+<span class="span">AWS-certified generative AI partner</span>
+<span class="span">CDW Digital Velocity</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-10-23</span>
+<span class="eh">CDW rolls out Microsoft 365 Copilot to 10,000 employees, reports strong productivity gains</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">CDW adopted Microsoft 365 Copilot internally at scale, with 10,000 employees enabled and reported benefits including improved work quality for 88% of users, faster task completion for 77%, and productivity increases for 85%. This showcases referenceable outcomes to drive customer adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">10,000 employees</span>
+<span class="span">improving work quality for 88% of users</span>
+<span class="span">77% to complete tasks faster</span>
+<span class="span">increasing productivity for 85% of users</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-02-27</span>
+<span class="eh">CDW and Microsoft sign multi-year agreement with incremental MACC to expand AI services</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">CDW announced a new multi-year Microsoft collaboration to deepen services around Microsoft AI, Security, and Copilot for Microsoft 365, anchored by an incremental multi-year Microsoft Azure Consumption Commitment (MACC). This strengthens CDW’s Copilot attach and Azure services motion.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">new multi-year agreement</span>
+<span class="span">Copilot for Microsoft 365</span>
+<span class="span">incremental multi-year Microsoft Azure Consumption Commitment (MACC)</span>
+<span class="span">Strategic Partnership Framework</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-01-23</span>
+<span class="eh">Mission Cloud delivers generative AI chatbot using Anthropic Claude 2 on Bedrock (pre-acquisition capability)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Before CDW’s acquisition, Mission Cloud implemented a generative AI chatbot for Fexa using Amazon Bedrock with Anthropic Claude 2, Amazon Kendra, Streamlit, and LangChain. This evidences AI solution depth later incorporated into CDW’s AWS practice.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Work was performed by Mission Cloud prior to CDW’s acquisition.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Anthropic Claude 2</span>
+<span class="span">Amazon Kendra</span>
+<span class="span">Amazon Bedrock</span>
+<span class="span">LangChain</span>
+<span class="span">Streamlit</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations for Copilot-led services</h2>
+<div class='range'>2023-03-16 → 2023-12-04</div>
+<div class='psum'>CDW&#x27;s AI go-to-market began aligning with Microsoft&#x27;s Copilot strategy as Microsoft publicly framed Copilot as an orchestration layer powered by GPT-4 and the Microsoft Graph. This provided external validation that enterprise-grade generative AI would be delivered through Microsoft 365 workloads familiar to CDW customers.
+CDW rapidly positioned around Copilot enablement content, advising customers on readiness steps and emphasizing Microsoft&#x27;s partnership with OpenAI and integration across core productivity apps. These moves set the groundwork for services, enablement, and downstream license attach as Copilot advanced toward broader availability.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-12-04</span>
+<span class="eh">CDW publishes Copilot for Microsoft 365 readiness guidance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">CDW outlined preparation steps for Copilot for Microsoft 365, tying Microsoft&#x27;s partnership with OpenAI to enterprise use cases across Word, Outlook, Excel, Teams, and PowerPoint. The piece supports CDW&#x27;s advisory and deployment services for Copilot rollouts.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Copilot for Microsoft 365</span>
+<span class="span">Microsoft&#x27;s partnership with OpenAI</span>
+<span class="span">same powerful large language model (LLM)</span>
+<span class="span">Word, Outlook, Excel, Teams and PowerPoint</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-03-16</span>
+<span class="eh">Microsoft introduces Microsoft 365 Copilot powered by GPT-4 and Microsoft Graph</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Microsoft announced Microsoft 365 Copilot, describing it as more than ChatGPT embedded—an orchestration engine combining GPT-4 with Microsoft 365 apps and the Microsoft Graph. This contextualizes CDW&#x27;s subsequent Copilot-focused services and customer adoption motions.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Copilot is more than OpenAI’s ChatGPT</span>
+<span class="span">including GPT-4</span>
+<span class="span">Microsoft 365 apps</span>
+<span class="span">Microsoft Graph</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which vendor(s) underpin CDW’s finalized GPU‑as‑a‑service partner arrangement, and what is the committed capacity and term?</li>
+<li>What is the dollar value, term, and consumption targets associated with the incremental multi‑year MACC between CDW and Microsoft?</li>
+<li>How much revenue and margin contribution does the Mission Cloud acquisition add to CDW’s AI/ML and Bedrock-related services post-integration?</li>
+<li>What proportion of CDW’s AI-related revenue in 2026 is tied to Microsoft Copilot vs. Google Gemini vs. AWS Bedrock solutions?</li>
+<li>How is CDW pricing and packaging agentic AI build/operate services (e.g., Gemini Enterprise agents) and what are attach rates to managed services?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many sources are company-authored materials or partner blogs; independent third-party corroboration and financial magnitudes are limited in excerpts.</li>
+<li>Mission Cloud capability evidence predates CDW’s acquisition; applicability reflects integration into CDW’s AWS practice post-close.</li>
+<li>Efficiency program magnitude reflects the lower bound of a stated ~$100–$200 million range; exact realized run-rate impact may vary.</li>
+<li>Provider mentions in governance risk guidance (Claude, Grok) are illustrative; not all reflect CDW’s direct usage.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

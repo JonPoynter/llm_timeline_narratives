@@ -1,0 +1,617 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>NGG US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>National Grid PLC <span class='sub'>(NGG US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.432</div>
+</header>
+<div class='stats'>
+<span class='chip'>5 phases</span>
+<span class='chip'>25 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 13</span>
+<span class='chip'>web-only (verified): 11</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Digital twin, flexible AI compute trials, and FY27–31 build-out plan</h2>
+<div class='range'>2026-01-29 → 2026-06-11</div>
+<div class='psum'>National Grid launched Triton, a digital twin and data visualization platform developed with Atos to accelerate network planning, claiming up to 70% reduction in analysis time. In parallel, a UK-first live trial with Emerald AI, EPRI, Nebius, and NVIDIA demonstrated real-time, non-disruptive power flexibility of an AI cluster, validating data centers as grid-responsive assets.
+On May 14, 2026, management issued FY26 results and a multi-year plan for FY27–FY31: at least £70bn cumulative capex, with substantial regulatory coverage and supply chain contracting. The plan embeds significant AI/data center demand, highlights acceleration measures to bridge constraints, and flags execution risks around delivery capacity, permitting, and inflation. Additional initiatives included internal policies for AI meeting summaries and an Ofgem-funded Alpha-phase collaboration (FoSMo) to develop a shared foundational AI model for grid asset management with multiple UK operators.</div>
+<div class="event t-web_only_verified" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-11</span>
+<span class="eh">FoSMo: Alpha funding to build Britain’s first shared AI model for the grid</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$355,985 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">National Grid and Keen AI secured Ofgem Strategic Innovation Fund Alpha-phase funding to develop FoSMo, a shared foundational AI model for asset management across GB operators; the Alpha award totaled £355,985.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<p class="cav">⚠ Early-stage Alpha funding; solution architecture and model provider choices may evolve.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Alpha-phase funding from the Strategic Innovation Fund</span>
+<span class="span">Foundational Shared Model Operations (FoSMo)</span>
+<span class="span">£355,985 Alpha award</span>
+<span class="span">a single, continuously improving foundational model</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-01</span>
+<span class="eh">Guidance on AI-generated meeting summaries and Microsoft privacy</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">National Grid published guidance noting that AI-generated meeting summaries may contain inaccuracies and must be verified before sharing, alongside references to Microsoft’s privacy and AI conduct resources.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Microsoft Privacy Statement</span>
+<span class="span">AI-Generated Meeting Summaries</span>
+<span class="span">AI-generated summaries may contain inaccuracies</span>
+<span class="span">must be verified for accuracy before sharing with others</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">UK demand plan embeds 19 GW (incl. ~10 GW data centers) with ~75 GW broader queue</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management outlined a five-year UK demand plan of 19 GW including ~10 GW for data centers, and cited a broader ~75 GW UK demand queue not yet embedded in plan assumptions.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Beyond the 19 GW five-year demand plan (incl. ~10 GW data centers)</span>
+<span class="span">the broader UK demand queue at ~75 GW</span>
+<span class="span">indicating significant upside interest not yet embedded in plan assumptions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Four UK AI/data center growth zones could deliver ~500 MW before 2030</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">National Grid identified four AI/data center growth zones with ~500 MW of capacity potentially deliverable before 2030 via targeted measures and connection acceleration.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Four AI/data center growth zones identified with ~500 MW of capacity</span>
+<span class="span">could be delivered before 2030</span>
+<span class="span">via targeted measures and connection acceleration</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">US GridCARE initiatives unlock ~650 MW near-term capacity</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">GridCARE initiatives identified ~650 MW of near-term capacity relief on US networks ahead of major build-outs.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">GridCARE initiatives identified ~650 MW of capacity on US networks</span>
+<span class="span">as near-term relief ahead of major build-outs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">FY27–FY31 capex plan of at least £70bn announced</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$70.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management announced at least £70bn of cumulative capex over FY27–FY31 to modernize and expand UK and US networks, targeting asset and EPS growth.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">at least £70bn over FY27–FY31</span>
+<span class="span">targeting ~10% asset CAGR and 8–10% underlying EPS CAGR</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Multi‑year guidance reiterates ≥£70bn capex and 8–10% EPS CAGR</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Guidance for FY27–FY31 reiterated at least £70bn cumulative capex and underlying EPS CAGR of 8–10%, with asset growth and inflation-linked dividends.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Multi‑year (FY27–FY31): at least £70bn cumulative capex</span>
+<span class="span">underlying EPS CAGR 8–10%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Approximately three-quarters of five-year supply chain contracted</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management reported ~75% of the five-year supply chain contracted, improving cost and delivery visibility but also implying future lock-in.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Supply chain lock-in: Approximately three-quarters of the five-year</span>
+<span class="span">supply chain is contracted, providing cost and delivery visibility</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Execution risks flagged for £70bn build-out</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$13.0B · capex</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Delivering nearly £13bn per year from FY27 carries risks around supply-chain capacity, permitting, labor, and inflation; delays or overruns could defer allowed revenue and dilute returns.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Delivering nearly £13bn of annual investment from FY27 requires</span>
+<span class="span">Schedule slippage or cost overruns could defer allowed revenue and dilute returns</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Connection acceleration and behind-the-meter solutions emphasized as bridges</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management highlighted connection acceleration schemes, targeted reinforcements, and behind-the-meter generation as bridging tools to manage near-term constraints.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">connection acceleration schemes, targeted reinforcements</span>
+<span class="span">behind-the-meter generation as bridging tools</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Transmission investments enable +35 GW generation capacity in T3</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Transmission investments were noted as enabling over 35 GW of generation capacity in T3, supporting rising electricity demand including AI-driven load.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">transmission investments also enable +35 GW generation capacity in T3</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">About 75% of delivery mechanisms for plan already secured</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management stated approximately 75% of delivery mechanisms are secured for the multi-year capex plan, improving execution visibility.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">at least £70bn over FY27–FY31</span>
+<span class="span">~75% of delivery mechanisms secured</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Around two‑thirds of £70bn covered by regulatory agreements</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Roughly two-thirds of the planned £70bn capex is already under regulatory agreements, reducing regulatory uncertainty for the investment program.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~two‑thirds of the £70bn already covered</span>
+<span class="span">by regulatory agreements</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">No hybrid debt issuance expected over five years</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management indicated it does not expect to issue hybrid debt within the five-year frame and signaled headroom across credit metrics as gearing trends higher into FY31.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">does not expect to issue hybrid debt within the five-year frame</span>
+<span class="span">regulatory gearing trends to the high-60s by FY31</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Open to NGV opportunities including innovative solutions for data centers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">National Grid remains open to selective National Grid Ventures opportunities where it holds strengths, including innovative solutions for data center customers and related infrastructure.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">open to selective NGV opportunities</span>
+<span class="span">innovative solutions for data center customers</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-02</span>
+<span class="eh">UK-first live trial proves real-time power flexibility of AI cluster</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">National Grid and partners demonstrated that a 96 NVIDIA Blackwell Ultra cluster can cut demand by over a third within a minute without disrupting critical workloads, supporting the case for grid-responsive AI data centers.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">UK’s first live trial of AI technology that adjusts the power usage of data centres in real time</span>
+<span class="span">cut electricity demand of a 96 NVIDIA Blackwell Ultra cluster by more than a third</span>
+<span class="span">without disrupting critical compute workloads</span>
+<span class="span">flexible, grid-responsive asset</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Triton digital twin launched with Atos to accelerate network planning</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">National Grid unveiled Triton, a digital twin and visualization tool developed with Atos to accelerate planning and support the UK’s decarbonization goals, aiming to reduce analysis time by up to 70%.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Digital Twin and Data Visualisation Tool, Triton</span>
+<span class="span">Developed in collaboration with Atos</span>
+<span class="span">reducing the time needed to analyse and decide on where to reinforce the network by 70%</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Venture commitments and flexible AI data center partnership</h2>
+<div class='range'>2025-03-17 → 2025-09-15</div>
+<div class='psum'>Through National Grid Partners, the company committed $100 million to invest in AI startups, including a disclosed investment in Amperon. Separately, National Grid and Emerald AI announced a strategic partnership to demonstrate power-flexible AI data centers, with National Grid Partners also investing in Emerald AI. These actions position the grid to accommodate AI growth while exploring demand flexibility to mitigate infrastructure strain.</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2025-09-15</span>
+<span class="eh">Strategic partnership with Emerald AI to demonstrate power-flexible AI data centers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">National Grid and Emerald AI announced a UK live demonstration of Emerald Conductor to dynamically adjust AI data center energy consumption using NVIDIA GPUs. National Grid Partners also made a strategic investment in Emerald AI.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Demonstration targeted for late 2025; performance and scale outcomes not yet disclosed at announcement.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">strategic partnership to demonstrate how AI data centres can work with the transmission network</span>
+<span class="span">deliver a live demonstration in the United Kingdom</span>
+<span class="span">use cutting-edge NVIDIA GPUs</span>
+<span class="span">has also made a strategic investment in Emerald AI</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-03-17</span>
+<span class="eh">National Grid Partners commits $100m to AI startups; invests in Amperon</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">National Grid Partners announced a $100 million commitment to AI startups advancing the future of energy and disclosed a new investment in Amperon, an AI-powered energy forecasting and analytics provider.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">commitment to invest $100 million</span>
+<span class="span">National Grid Partners – our corporate venture capital and innovation arm</span>
+<span class="span">latest investment in Amperon</span>
+<span class="span">37% of its portfolio</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Institutional genAI rollout and governance</h2>
+<div class='range'>2024-06-19 → 2024-09-25</div>
+<div class='psum'>National Grid formalized internal governance for generative AI and launched GridGPT, a protected internal genAI service following trials in the US and UK. Alongside this, the company expanded its collaboration with Microsoft, moving workloads to Azure and adopting Copilot to automate documentation and reporting across corporate functions, with a stated commitment to responsible AI and ‘human in the loop’ safeguards.</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-09-25</span>
+<span class="eh">Microsoft Azure and Copilot adopted to support automation and reporting</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">National Grid broadened its Microsoft collaboration, moving workloads to Azure and deploying Copilot to assist automation, document management, and report generation across regulatory, finance, and legal operations, emphasizing responsible AI with human oversight.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Vendor-authored customer story; does not enumerate underlying LLM provider or licensing terms.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">utilises Microsoft Copilot in the drive to net zero</span>
+<span class="span">moving workloads into Microsoft Azure</span>
+<span class="span">Copilot is assisting with automation, document management, and report generation</span>
+<span class="span">keeping a human in the loop</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2024-06-19</span>
+<span class="eh">Launched GridGPT and established genAI governance framework</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">In its 2023/24 Annual Report, National Grid disclosed a leadership and governance group for generative AI and the January 2024 launch of GridGPT, an internal genAI service protected from the public domain, alongside AI demand modeling work.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">leadership and governance group for generative AI</span>
+<span class="span">launched GridGPT, our internal generative AI service</span>
+<span class="span">protected from the public domain</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI-enabled forecasting with ESO</h2>
+<div class='range'>2021-08-19 → 2021-08-19</div>
+<div class='psum'>National Grid ESO partnered with Open Climate Fix to pilot AI ‘nowcasting’ for solar generation to improve national control room forecasts and system balancing. The collaboration applied ML to satellite imagery to predict cloud movement and solar output.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2021-08-19</span>
+<span class="eh">ESO launches AI solar nowcasting pilot with Open Climate Fix</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">National Grid ESO partnered with Open Climate Fix, co-founded by a former DeepMind researcher, to develop a first-of-its-kind solar nowcasting service for the national control room, improving short-term solar generation forecasts.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<p class="cav">⚠ National Grid ESO is a system operator unit; organizational boundaries and subsequent restructuring may affect attribution within NGG.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">co-founded by former DeepMind researcher Jack Kelly</span>
+<span class="span">develop a first-of-its-kind solar ‘nowcasting’ service</span>
+<span class="span">balances Britain’s electricity system second by second</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early AI vendor dialogues and security investment</h2>
+<div class='range'>2017-03-13 → 2019-11-26</div>
+<div class='psum'>National Grid’s first publicly reported exploration of frontier AI centered on exploratory talks with Google DeepMind about applying AI to grid balancing. Those talks did not progress to a commercial deal, highlighting early-stage uncertainties around compensation and intellectual property ownership. 
+Concurrently, National Grid Partners began selectively investing in AI capabilities, backing SparkCognition with an initial focus on cybersecurity use cases, signaling a strategic intent to access AI through venture-backed partnerships even as headline talks with DeepMind wound down.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2019-11-26</span>
+<span class="eh">National Grid Partners invests in SparkCognition to explore AI in cybersecurity</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">National Grid Partners made a strategic investment in AI specialist SparkCognition (now Avathon) with an initial focus on cybersecurity applications for critical energy infrastructure.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">has recently invested in AI specialist SparkCognition</span>
+<span class="span">The first application that National Grid Partners will explore with SparkCognition is cybersecurity</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2019-03-06</span>
+<span class="eh">Talks with Google DeepMind ended without a deal</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">By March 2019, DeepMind and National Grid were no longer in discussions, with reporting suggesting the effort did not materialize into a deal and that IP ownership may have been a sticking point.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<p class="cav">⚠ Single-source media reporting; precise commercial terms and reasons for ending talks were not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">no longer discussing how DeepMind&#x27;s artificial intelligence</span>
+<span class="span">did not materialise into a deal</span>
+<span class="span">own the intellectual property</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2017-03-13</span>
+<span class="eh">Exploratory AI talks with Google DeepMind for grid optimization</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">National Grid confirmed early-stage discussions with Google’s DeepMind on applying AI to manage power supply and demand in the UK. The engagement evaluated whether DeepMind’s ML efficiency learnings from data centers could translate to grid operations.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">National Grid and Google’s Deepmind confirmed</span>
+<span class="span">in early talks about how artificial intelligence could be deployed</span>
+<span class="span">cut total energy use at its data centres by 15%</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What LLM(s) and hosting approach underpin GridGPT (e.g., Azure OpenAI, on-prem models, or other)?</li>
+<li>What are the scale and seat counts of Microsoft Copilot deployment across functions, and how is usage governed?</li>
+<li>Will the Emerald Conductor flexibility approach be operationalized at scale across multiple UK or US data centers, and under what commercial terms?</li>
+<li>How will FoSMo select, train, and govern foundational models (including any frontier LLM components) and handle cross-operator data sharing?</li>
+<li>What portion of the 19 GW five-year demand plan and ~75 GW queue is attributable to AI/data center load by region, and how is connection sequencing prioritized?</li>
+<li>How do execution risks (permitting, supply chain, labor) specifically impact AI-related grid reinforcements and connection acceleration timelines?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some items reference National Grid ESO; organizational changes (e.g., establishment of NESO) may affect attribution within NGG over time.</li>
+<li>Currency figures are reported as stated in sources (GBP or USD) and not converted.</li>
+<li>Vendor-authored materials (e.g., Microsoft Customer Story, partner press releases) may emphasize benefits and omit commercial or performance specifics.</li>
+<li>Older media reports (e.g., DeepMind talks ending) are single-source and may lack full commercial detail.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

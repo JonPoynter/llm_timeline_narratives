@@ -1,0 +1,625 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>ZM US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Zoom Communications Inc <span class='sub'>(ZM US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.421</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>26 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 2</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 17</span>
+<span class='chip'>web-only (unverified): 6</span>
+<span class='chip'>web-only (verified): 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Monetization focus, policy disclosure, and Claude ecosystem integration</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>In early 2026, Zoom tied CX momentum directly to paid AI attach and adoption, while maintaining its AI‑first platform narrative and FY27 revenue target. The company also published policy language in its FY26 10‑K reiterating multi‑model use (OpenAI, Anthropic, Meta) and a commitment not to use communications‑like customer content to train models.
+Product work continued with a Claude integration via the Model Context Protocol, exposing meeting intelligence and scheduling into Claude’s environment. On the 27Q1 call, management emphasized AI Companion growth, monetization focus, longer‑term deal mix tied to AI, pricing shifts toward outcome‑based models, and ongoing margin optimization to offset AI‑related COGS. Guidance was raised on AI uptake per Reuters coverage, though management also cautioned AI Services is not the top near‑term revenue driver.</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-22</span>
+<span class="eh">Zoom lifts full‑year guidance on AI uptake; shares rise after‑hours</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Reuters reported Zoom raised full‑year guidance on AI uptake, with shares up after hours and a higher EPS range, reflecting investor confidence in AI monetization.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Zoom lifts full-year guidance on AI uptake</span>
+<span class="span">ZM +4–6% after-hours</span>
+<span class="span">EPS 5.96–6.00</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">AI Companion paid users +184% y/y; My Notes hits 1.5M licensed users</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On the 27Q1 update, Zoom reported AI Companion paid users grew 184% year over year, and the new My Notes feature reached 1.5M licensed users in roughly four months.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI Companion paid users grew 184% y/y</span>
+<span class="span">My Notes reached 1.5M licensed users</span>
+<span class="span">in ~four months.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Management focus: monetize AI while maintaining profitability and cash flow</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Zoom emphasized strong profitability and cash flow while focusing on monetizing AI capabilities across the platform.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">maintaining strong profitability, cash flow</span>
+<span class="span">focus on monetizing AI across the platform.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Zoom frames evolution to an AI‑first system of action</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited rapid uptake of AI features and positioned Zoom as evolving into an AI‑first system of action.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">rapid uptake of AI features</span>
+<span class="span">AI-first system of action.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Custom AI Companion features highlighted; AI Services quality testing well</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Zoom highlighted Custom AI Companion capabilities, including enterprise retrieval, workflow builder, and an agentic builder, and said AI Services quality tests well with customers with plans to co‑innovate on use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Custom AI Companion capabilities</span>
+<span class="span">enterprise retrieval, workflow builder, agentic builder</span>
+<span class="span">AI Services quality tests well</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">No AI revenue breakout; AI Services not top near‑term driver</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management declined to quantify AI revenue and said AI Services is not the top near‑term driver, with a strategy to embed AI in paid SKUs to reduce churn and drive expansion.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">declined to quantify AI revenue</span>
+<span class="span">AI Services is not the top near-term driver</span>
+<span class="span">embedding AI in paid SKUs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Pricing shift toward consumptive/outcome‑based models</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Zoom said pricing is moving toward more consumptive and outcome‑based models for virtual agent and new Insights capabilities, providing flexibility as customer staffing levels evolve.</p>
+<div class="ev-ch">channels: <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">consumptive/outcome-based pricing</span>
+<span class="span">virtual agent and new Insights</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Longer terms tied to mix of Phone, ZCX, and AI deals</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management linked an RPO mix shift to a higher mix of Phone, ZCX, and AI deals that carry longer terms.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">RPO mix shift</span>
+<span class="span">carry longer terms</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">CFO targets margin optimization to offset AI‑related COGS</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Zoom cited ongoing gross‑margin optimization and always‑on efficiency programs to offset AI‑related COGS, with disciplined internal capital allocation toward growth priorities.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">gross‑margin optimization</span>
+<span class="span">offset AI‑related COGS</span>
+<span class="span">always‑on efficiency programs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">CEO teases upcoming AI product announcements next month</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CEO flagged very exciting AI product announcements coming next month, signaling continued feature velocity.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI product announcements coming next month.</span>
+<span class="span">&quot;very exciting&quot; AI product announcements</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Outcome‑based pricing expands to ZVA and ZCX Insights</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Zoom articulated that pricing for Zoom Virtual Agent (ZVA) and new ZCX Insights is shifting toward consumptive and outcome‑based models.</p>
+<div class="ev-ch">channels: <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ZVA (virtual agent)</span>
+<span class="span">consumptive/outcome-based models.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">AI roadmap momentum signaled beyond FY27 guidance horizon</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said upcoming AI product announcements indicate continued product velocity beyond the FY27 guidance horizon.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">product velocity beyond the FY27 guidance horizon.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Execution risks amid strong competition from large platform vendors</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Zoom cautioned that while leaning on AI Companion and CX products for growth, execution risks remain amid strong competition from large platform vendors and specialized CCaaS providers.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">execution risks remain</span>
+<span class="span">strong competition from large platform vendors</span>
+<span class="span">specialized CCaaS providers</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0013" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-04-09</span>
+<span class="eh">Zoom adds Claude MCP connector to unlock meeting intelligence in Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Zoom announced a new integration with Anthropic’s Claude via the Model Context Protocol, enabling access to meeting summaries, transcripts, recordings, and scheduling from Claude Cowork and Claude Code through a Zoom MCP connector.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">integration with Anthropic’s Claude</span>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">Zoom MCP connector</span>
+<span class="span">connector directory</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0012" data-providers="openai_chatgpt anthropic_claude meta_llama">
+<div class="ev-top">
+<span class="date">2026-02-27</span>
+<span class="eh">10‑K: Multi‑model (OpenAI, Anthropic, Meta) and no training on customer comms content</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Zoom’s FY26 10‑K described a federated approach leveraging LLMs from OpenAI, Anthropic, and Meta, and reiterated that Zoom does not use communications‑like customer content to train Zoom’s or third‑party AI models.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">leverages multiple Large Language Models (&quot;LLMs&quot;) (including those from OpenAI, Anthropic, and Meta)</span>
+<span class="span">does not use customer audio, video, chat, screen sharing, attachments</span>
+<span class="span">communications-like customer content</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Paid AI included in top 10 CX deals; FY26 growth 4.4%</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported FY26 revenue growth of 4.4% and indicated paid AI was included in each of the top 10 CX deals in Q4, underscoring AI attach in Customer Experience.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">4.4%</span>
+<span class="span">paid AI included in each of the top 10 CX deals in Q4</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">High double‑digit CX growth; continued AI adoption, no RPO disclosed</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Zoom highlighted high‑double‑digit growth in Contact Center and continued AI adoption as demand signals, while noting no bookings or RPO metrics were provided.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">high‑double‑digit growth</span>
+<span class="span">continued AI adoption</span>
+<span class="span">no bookings/RPO metrics were provided</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Zoom reaffirms AI‑first platform; targets FY27 revenue &gt;$5B</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized expanding the AI‑first platform and targeted FY27 revenue above $5B, while maintaining profitability and durable free cash flow.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">expanding the AI-first platform</span>
+<span class="span">targeting FY27 revenue &gt;$5B</span>
+<span class="span">maintaining profitability and durable FCF</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Agentic workflows and ecosystem integrations</h2>
+<div class='range'>2025-01-01 → 2025-12-31</div>
+<div class='psum'>In 2025, Zoom extended AI Companion into multi‑agent and agentic workflows while integrating with external ecosystems. Zoom partnered with Google Cloud on the Agent2Agent (A2A) protocol and Agentspace, demonstrating cross‑app scheduling via AI agents. The company also introduced AI Companion 3.0 with broader agentic capabilities and reaffirmed its multi‑model stack with OpenAI, Anthropic, and support for open‑source models like NVIDIA Nemotron.
+Investor updates late in 2025 linked stronger financial outlook to AI tool adoption, with an expanded buyback authorization alongside raised guidance.</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-12-15</span>
+<span class="eh">Zoom unveils AI Companion 3.0 with agentic workflows</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Zoom launched AI Companion 3.0, adding agentic AI for personal workflows and Zoom Docs, and reiterated its federated stack that combines Zoom’s own models with third‑party LLMs from OpenAI and Anthropic, plus optional open source like NVIDIA Nemotron.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">AI Companion 3.0</span>
+<span class="span">agentic</span>
+<span class="span">third-party LLMs from OpenAI and Anthropic</span>
+<span class="span">NVIDIA Nemotron</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-24</span>
+<span class="eh">Zoom beats and raises; cites AI tools adoption; adds $1B buyback</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Reuters and other outlets reported Zoom beat expectations and raised guidance, noting AI tools adoption and enterprise demand, and added a $1B share repurchase authorization.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">Zoom beats and raises; stock climbs in after‑hours</span>
+<span class="span">added 1b to buyback</span>
+<span class="span">AI tools adoption</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-05-20</span>
+<span class="eh">Zoom supports Google Cloud’s A2A protocol and Agentspace for agent collaboration</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Zoom announced adoption and contribution to Google Cloud’s Agent2Agent (A2A) protocol and an integration with Agentspace that can automatically schedule Zoom Meetings from Gmail context and update Google Calendar, with initial launch expected in summer 2025.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Agent2Agent (A2A) protocol</span>
+<span class="span">Google Cloud Agentspace</span>
+<span class="span">Expected to launch later this summer</span>
+<span class="span">automatically schedule Zoom Meetings</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early adoption momentum and third‑party validation</h2>
+<div class='range'>2024-01-01 → 2024-12-31</div>
+<div class='psum'>Through 2024, Zoom’s federated AI approach showed traction in third‑party narratives. Meta highlighted that Zoom leverages Llama models within AI Companion, citing growing usage including hundreds of thousands of enabled accounts and rapid growth in meeting summaries.</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-08-09</span>
+<span class="eh">Meta notes Llama’s role in Zoom AI Companion; 700k+ accounts enabled</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">A Meta AI blog detailed how Zoom leverages Llama within its federated AI to power AI Companion features, reporting more than 700,000 accounts enabled and meeting summaries doubling quarter over quarter since launch.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">leverages Llama</span>
+<span class="span">more than 700,000 accounts have enabled AI Companion</span>
+<span class="span">meeting summaries doubling quarter over quarter</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational federated AI approach and early model partnerships</h2>
+<div class='range'>2023-03-27 → 2023-12-31</div>
+<div class='psum'>Zoom began formalizing its generative AI strategy in 2023 with the expansion of Zoom IQ and an explicit commitment to a &quot;federated approach to AI&quot; that can route tasks across Zoom&#x27;s own models and leading third‑party LLMs. Early execution included naming OpenAI as a model provider and announcing a strategic partnership and investment in Anthropic to bring Claude into the Zoom platform, starting with Contact Center.
+By September 2023, Zoom rebranded and broadened its generative assistant as Zoom AI Companion, making it available at no additional cost to paid accounts. Public technical updates through late 2023 documented active use of OpenAI&#x27;s GPT‑3.5/4 and Anthropic Claude 2, reinforcing the multi‑model strategy and laying groundwork for broader adoption.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2023-11-28</span>
+<span class="eh">CTO details federated AI using OpenAI GPT‑3.5/4 and Anthropic Claude 2</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Zoom’s CTO published a technical deep dive confirming use of Zoom’s own LLMs alongside OpenAI GPT‑3.5, GPT‑4 (including GPT‑4 Turbo), and Anthropic Claude 2, highlighting the ability to incorporate new open‑ and closed‑source LLMs.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">OpenAI GPT 3.5 and GPT 4, and Anthropic Claude 2</span>
+<span class="span">GPT 4 Turbo</span>
+<span class="span">open- and closed-source LLMs alike</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="meta_llama openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2023-09-05</span>
+<span class="eh">Zoom launches AI Companion at no additional cost; confirms multi‑model stack</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Zoom introduced Zoom AI Companion, included at no additional cost for paid accounts, and reiterated its federated approach using Zoom’s own LLMs plus third‑party models including Meta Llama 2, OpenAI, and Anthropic. Zoom also emphasized that it does not use customer communications‑like content to train its or third‑party models.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2], web_search_findings[8]</div>
+<span class="span">available at no additional cost</span>
+<span class="span">Meta Llama 2, OpenAI, and Anthropic</span>
+<span class="span">does not use any customer audio, video, chat</span>
+<span class="span">AI Companion is turned off by default</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2023-05-16</span>
+<span class="eh">Zoom partners with and invests in Anthropic; begins Claude integration</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Zoom announced a strategic partnership with and investment in Anthropic to integrate Claude across its platform, beginning with Zoom Contact Center. The undisclosed investment was made via Zoom Ventures.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">strategic partnership with and investment in Anthropic</span>
+<span class="span">Claude</span>
+<span class="span">Zoom Ventures has made an investment in Anthropic</span>
+<span class="span">Zoom did not disclose the amount.</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-03-27</span>
+<span class="eh">Zoom expands Zoom IQ and adopts OpenAI within a federated AI strategy</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">At Enterprise Connect, Zoom announced the expansion of Zoom IQ and stated it will use OpenAI as part of a federated AI approach that can incorporate Zoom’s models, leading AI companies’ models, and select customers’ own models.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">expansion of Zoom IQ</span>
+<span class="span">will use OpenAI</span>
+<span class="span">federated approach to AI</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0022'>E0022</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What was the dollar amount and structure (equity, SAFE, warrants) of Zoom Ventures’ investment in Anthropic?</li>
+<li>How much ARR or revenue uplift is attributable to AI Companion and ZCX AI features, and what is the paid AI attach rate by cohort?</li>
+<li>What portion of AI inference currently runs on each third‑party model (OpenAI, Anthropic, Meta) versus Zoom’s own models, and how is routing decided?</li>
+<li>What is the gross‑margin impact of AI Services and ZVA under the new consumptive/outcome‑based pricing model?</li>
+<li>Are there any long‑term minimum‑commit contracts or exclusivity terms with OpenAI, Anthropic, Meta, or Google Cloud related to AI workloads or integrations?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several disclosures come from company press releases and blog posts; third‑party or independent corroboration of performance claims (e.g., adoption metrics) is limited.</li>
+<li>Investment in Anthropic was disclosed without an amount; financial exposure magnitude is unknown.</li>
+<li>Privacy statements (non‑use of customer communications‑like content for model training) are self‑reported policy; external audit details are not included in cited sources.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

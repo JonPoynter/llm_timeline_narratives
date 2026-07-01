@@ -1,0 +1,514 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>FIVN US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Five9 Inc <span class='sub'>(FIVN US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.411</div>
+</header>
+<div class='stats'>
+<span class='chip'>5 phases</span>
+<span class='chip'>19 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>single source: 11</span>
+<span class='chip'>web-only (verified): 5</span>
+<span class='chip'>web-only (unverified): 2</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Consumer AI shifts and ongoing GenAI productization</h2>
+<div class='range'>2026-05-15 → 2026-06-30</div>
+<div class='psum'>Five9 observed that consumer use of AI assistants like ChatGPT, Gemini, and Claude is rapidly changing how customers will interact with brands, suggesting structural shifts in inbound demand patterns for CX. This may create both opportunities and competitive dynamics around how customers reach support.
+Concurrently, Five9 continued to promote and evolve its GenAI capabilities, highlighting AI Summaries that leverage the same technology behind ChatGPT and OpenAI GPT LLMs to cut after‑call work and improve consistency, reinforcing GenAI’s role in customer experience enhancement.</div>
+<div class="event t-web_only_verified" id="E0019" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">AI Summaries marketed as powered by tech behind ChatGPT; OpenAI GPT used</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Five9 underscored that AI Summaries uses the same generative AI technology behind ChatGPT and leverages OpenAI GPT LLMs, claiming up to 40% agent time savings and improved summary consistency.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">powered by Generative AI</span>
+<span class="span">behind ChatGPT</span>
+<span class="span">saves up to 40% of an agent’s time</span>
+<span class="span">OpenAI GPT‘s large language models</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0018" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">Consumer AI assistants expected to change brand interactions</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Five9 stated that consumer AI assistants such as ChatGPT, Google’s Gemini, and Anthropic’s Claude will fundamentally change how consumers interact with brands, implying channel and demand shifts that CX leaders must address.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">traffic_or_distribution_bypass_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">consumer use of AI has exploded</span>
+<span class="span">ChatGPT</span>
+<span class="span">Google’s Gemini</span>
+<span class="span">Anthropic’s Claude</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Q1’26 AI traction, guidance, and execution dependencies</h2>
+<div class='range'>2026-04-30 → 2026-04-30</div>
+<div class='psum'>Five9 reported strong AI momentum in Q1’26: AI revenue grew 68% year over year and reached approximately 13% of subscription revenue. Management expects full‑year AI growth to exceed 40%, though cadence could be lumpy due to deployment schedules. AI ARR run‑rate surpassed $125M, with acceleration vs. Q4’25. The quarter benefited from earlier‑than‑anticipated AI deployments, and several AI products in beta were slated for near‑term GA.
+Management highlighted a commercial shift from seat‑based pricing to fixed revenue commitments, enabling customers to reallocate spend toward AI even as seats compress. They also noted mixed results in on‑prem AI tests, with cloud favored for dependable outcomes, and reiterated that seats continue to grow while AI augments rather than replaces agents. Execution into H2 depends on converting backlog. RPO stood at $1.198B with roughly four‑fifths expected to be recognized within 24 months; for the remaining three quarters of 2026, ~$80M of incremental recurring revenue is needed, largely from DBR improvement and backlog conversion.</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">AI revenue +68% YoY; ~13% of subs; FY AI growth &gt;40% but lumpy</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management reported Q1 AI revenue up 68% YoY and ~13% of subscription revenue, with full‑year AI growth expected to exceed 40%. They cautioned cadence may fluctuate quarter to quarter due to deployment timing.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI revenue grew 68% YoY in Q1</span>
+<span class="span">represents ~13% of subscription revenue</span>
+<span class="span">full‑year AI growth is expected to exceed 40%</span>
+<span class="span">will fluctuate quarter to quarter</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">AI ARR run‑rate surpasses $125M; growth accelerated in Q1’26</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$125M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Five9 disclosed AI ARR run‑rate above $125M, noting Q1 AI growth accelerated to 68% YoY versus 49% in Q4’25. This underscores rising AI mix within subscription revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI ARR run‑rate &gt;$125M.</span>
+<span class="span">68% YoY</span>
+<span class="span">49% in Q4 2025</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Commercial model shift to fixed revenue commitments to fund AI</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Five9 is transitioning new logos and renewals to fixed revenue commitments, providing flexibility to reallocate spend toward AI as seat counts compress. This aims to increase revenue predictability and AI adoption.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">fixed revenue commitments</span>
+<span class="span">reallocate spend toward AI</span>
+<span class="span">as seats compress</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">On‑prem AI tests mixed; cloud preferred for dependable outcomes</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management observed many contact centers remain on‑prem and some test AI there first, but results are mixed due to data/architecture limitations. Five9 expects a cloud migration tailwind as customers seek dependable AI outcomes under security and trust.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">on‑prem</span>
+<span class="span">results are mixed</span>
+<span class="span">cloud for dependable AI outcomes</span>
+<span class="span">governed by security and trust</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Seats continue to grow; AI augments agents rather than replaces</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Five9 reported concurrent seat counts continue to grow roughly in line with CCaaS growth, and reiterated AI spend is augmenting human agents rather than broadly replacing them near‑term.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">concurrent seat counts continue to grow</span>
+<span class="span">augmenting human agents rather than broadly replacing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1 beat aided by earlier AI deployments</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Five9’s Q1 upside was driven by earlier‑than‑anticipated deployments across multiple customers, with AI deployments especially strong.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">earlier‑than‑anticipated deployments</span>
+<span class="span">AI deployments especially strong</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">New AI products in beta slated for near‑term GA</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Five9 indicated several new AI products in beta are slated for GA in the next quarter or so, supporting continued AI mix expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">New AI products in beta</span>
+<span class="span">slated for GA</span>
+<span class="span">in the next quarter or so</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">AI cadence risk; H2 acceleration depends on backlog conversion</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">While AI growth is strong, management cautioned that revenue may fluctuate quarter‑to‑quarter and that H2 acceleration depends on converting existing backlog, introducing forecasting risk if ramps slip.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">may fluctuate quarter‑to‑quarter</span>
+<span class="span">H2 acceleration depends</span>
+<span class="span">converting existing backlog</span>
+<span class="span">forecasting risk</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">RPO reaches $1.198B; ~80% expected within 24 months</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.2B · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Five9 reported RPO of $1.198B as of 3/31/26, with roughly four‑fifths expected to be recognized over the next 24 months, providing revenue visibility to support AI investments.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Remaining Performance Obligations (RPO) were $1.198 billion</span>
+<span class="span">roughly four-fifths over the next 24 months</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">~$80M incremental recurring revenue needed in FY’26 remainder</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$80M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Management estimated needing ~$80M of incremental recurring revenue over the remaining three quarters of 2026, with roughly two‑thirds expected from DBR improvement and one‑third from backlog conversion, indicating execution dependencies.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">needing ~$80M of incremental recurring revenue</span>
+<span class="span">two‑thirds expected from DBR</span>
+<span class="span">one‑third from backlog conversion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Elevated RFPs and AI‑first customer conversations</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Five9 cited elevated RFP levels and AI‑first customer conversations, with several AI products in beta moving toward GA, supporting continued AI mix expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">elevated RFP levels</span>
+<span class="span">AI‑first conversations</span>
+<span class="span">moving to GA</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Strategic deepening with Google Cloud: joint Enterprise CX AI and GTM</h2>
+<div class='range'>2026-01-12 → 2026-01-12</div>
+<div class='psum'>In early 2026, Five9 expanded its partnership with Google Cloud, launching a joint Enterprise CX AI solution that combines Five9’s Intelligent CX Platform with Google’s Gemini Enterprise for Customer Experience and Vertex AI. The partnership also broadened go‑to‑market motion, enabling purchase through Google Cloud Marketplace, while Five9 committed to running key internal workloads on Google Cloud and using Gemini Enterprise internally.
+This event broadened Five9’s distribution exposure via a hyperscaler marketplace and signaled increased reliance on Google’s AI infrastructure and models, with potential benefits in demand generation and product breadth.</div>
+<div class="event t-corroborated" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-01-12</span>
+<span class="eh">Expanded Google Cloud partnership: Enterprise CX AI, Gemini/Vertex AI, Marketplace</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Five9 and Google Cloud launched a joint Enterprise CX AI solution integrating Gemini Enterprise and Vertex AI, expanded GTM with availability on Google Cloud Marketplace, and Five9 began running key internal workloads on Google Cloud. This deepens product and distribution ties to Google’s AI stack.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[5], filings[0]</div>
+<span class="span">expanded partnership with Google Cloud</span>
+<span class="span">Enterprise CX AI solution</span>
+<span class="span">Google Cloud Marketplace</span>
+<span class="span">Gemini Enterprise</span>
+<span class="span">Vertex AI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Engine‑agnostic GenAI expansion and developer tooling</h2>
+<div class='range'>2023-09-25 → 2024-08-26</div>
+<div class='psum'>Five9 broadened its GenAI posture with an engine‑agnostic approach, embedding LLM access across its AI portfolio and explicitly supporting OpenAI in Five9 IVA Studio alongside Google language detection and additional speech engines. This approach emphasized practical, embedded AI with flexibility to use best‑of‑breed components.
+In March 2024, Five9 launched GenAI Studio to let enterprises click‑and‑customize off‑the‑shelf generative models, such as OpenAI, for contact center use cases. Subsequent content highlighted tailoring generic models like GPT‑3.5 or Llama 3 via prompting and prompt construction within GenAI Studio, reinforcing Five9’s multi‑model, future‑proof design.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt meta_llama">
+<div class="ev-top">
+<span class="date">2024-08-26</span>
+<span class="eh">Guidance on tailoring GenAI: GPT‑3.5 or Llama 3 via GenAI Studio</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Five9 detailed how GenAI Studio operationalizes prompting and prompt construction to tailor generic LLMs like GPT‑3.5 or Llama 3 for unique CX needs, reinforcing an engine‑agnostic, multi‑model strategy.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">GPT-3.5 or Llama 3</span>
+<span class="span">We have a new capability we didn’t have before – Large Language Model (LLM) prompting</span>
+<span class="span">This is what GenAI Studio does</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-03-25</span>
+<span class="eh">Five9 launches GenAI Studio to customize off‑the‑shelf models</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Five9 introduced GenAI Studio, allowing organizations to take off‑the‑shelf generative AI models like OpenAI and customize them for contact center workflows. The Engine‑Agnostic Layer lets customers select from a range of models, future‑proofing investments.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">GenAI Studio</span>
+<span class="span">off-the-shelf Generative AI models, such as OpenAI</span>
+<span class="span">Engine-Agnostic Layer</span>
+<span class="span">select from a range of Generative AI models</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-09-25</span>
+<span class="eh">IVA and AI portfolio enhanced: OpenAI support and Google language detection</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Five9 embedded access to LLMs across its AI portfolio, including AI Summaries and AI Insights powered by OpenAI’s LLMs, and announced support for OpenAI in Five9 IVA Studio along with Google’s automatic language detection. This expanded multi‑engine capability for developers.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">engine-agnostic, embedded, and practical</span>
+<span class="span">AI Summaries and AI Insights products are now powered by OpenAI’s LLMs</span>
+<span class="span">support for OpenAI now provides developers</span>
+<span class="span">Google’s automatic language detection</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational AI integrations: Google CCAI and OpenAI entry</h2>
+<div class='range'>2018-07-24 → 2023-03-28</div>
+<div class='psum'>Five9 began its AI journey with an early, foundational integration to Google Cloud’s Contact Center AI in 2018, embedding conversational AI to route and resolve common issues while elevating live-agent work. This positioned Five9’s Intelligent CX Platform to leverage third‑party AI engines in production contact center workflows.
+By March 2023, Five9 moved into generative AI with Agent Assist 2.0 featuring AI Summaries powered by OpenAI, using the same technology behind ChatGPT to reduce after‑call work. This marked Five9’s first explicit incorporation of OpenAI LLMs in a generally available product, signaling a multi‑engine approach to practical AI in the contact center.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-03-28</span>
+<span class="eh">Agent Assist 2.0 GA with AI Summary powered by OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Five9 made generally available Agent Assist 2.0 with AI Summary powered by OpenAI, using the same generative AI behind ChatGPT to summarize call transcripts and reduce after‑call work. This delivered immediate, practical GenAI value to contact centers.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Agent Assist 2.0 with AI Summary</span>
+<span class="span">powered by OpenAI</span>
+<span class="span">behind ChatGPT</span>
+<span class="span">reducing manual, after-call work</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2018-07-24</span>
+<span class="eh">Five9 integrates with Google Cloud Contact Center AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Five9 announced an integration with Google Cloud’s new Contact Center AI, enabling enterprises to deploy intelligent virtual agents and improve agent productivity. This established Google as a long‑standing AI partner within Five9’s ecosystem.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">July 24, 2018</span>
+<span class="span">an integration with Google Cloud’s new Contact Center AI</span>
+<span class="span">The solution integrates with Five9</span>
+<span class="span">enable consumers to easily resolve more common issues</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What proportion of Five9’s AI revenue and workloads is attributable to OpenAI models vs. Google Gemini/Vertex AI within customer deployments?</li>
+<li>What is the expected conversion rate and timing of AI‑related backlog into recognized revenue in H2’26, and how sensitive is guidance to potential deployment slippage?</li>
+<li>What are the commercial terms of the Google Cloud Marketplace arrangement (e.g., take rate, co‑sell commitments) and any minimum cloud infrastructure commitments from Five9?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several sources are Five9 marketing or blog content and may emphasize product positioning; limited third‑party corroboration is available in this inventory.</li>
+<li>Filings highlights describe trends and expectations that may be subject to forecasting risk and customer deployment timing.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,722 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>TT US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Trane Technologies PLC <span class='sub'>(TT US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.433</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>32 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 11</span>
+<span class='chip'>single source: 21</span>
+<span class='chip'>web-only (verified): 7</span>
+<span class='chip'>web-only (unverified): 2</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>End-to-end DC cooling expansion and record backlog growth</h2>
+<div class='range'>2026-02-10 → 2026-05-20</div>
+<div class='psum'>Trane moved to consolidate data center thermal solutions by acquiring LiquidStack, a leader in liquid cooling technology, building on a prior minority investment and complementing the Stellar Energy acquisition. The company reported substantial backlog growth, including a record $10.7B and significant Stellar program contributions, while investing in capacity and workforce development.
+Filings emphasized co‑design with hyperscalers and chipmakers on reference designs and noted service monetization remains largely ahead. Trane also opened the BrainBox AI Trane Technologies AI Lab and showroom in Montreal to accelerate AI‑driven innovations.</div>
+<div class="event t-web_only_verified" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-20</span>
+<span class="eh">BrainBox AI Trane Technologies AI Lab and showroom opened in Montreal</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trane opened the BrainBox AI Trane Technologies AI Lab and showroom in Montreal to bring together researchers, software engineers, data scientists and technologists focused on AI-driven HVAC and transport refrigeration solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">BrainBox AI Trane Technologies AI Lab and showroom in Montreal</span>
+<span class="span">develop AI-driven solutions</span>
+<span class="span">reduce energy consumption and carbon emissions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Stellar backlog about $1B; roughly half to ship in 2026</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">In Q1 2026, management reported the Stellar program carried approximately $1B of backlog with about half expected to ship during 2026, supporting near‑term revenue conversion.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">backlog ~$1B with about half expected to ship in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Stellar expected to contribute roughly $500M revenue in 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$500M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Trane guided to approximately $500M of 2026 revenue contribution from Stellar as deployments ramp across data center thermal solutions.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">revenue contribution of roughly $500M in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Target to scale Stellar to ~$1B revenue in 2–3 years</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management set a goal to scale Stellar to around $1B revenue within 2–3 years with mid‑teens‑plus EBITDA, indicating durable demand and margin potential.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">goal to scale Stellar to a ~$1B revenue business in 2–3 years</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">LiquidStack broadens CDU options within Trane portfolio</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Following integration, LiquidStack expanded cold‑plate/CDU options in Trane’s data center thermal stack, enhancing liquid‑cooling solution breadth.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">LiquidStack broadens CDU options.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Service opportunity from recent deployments largely ahead</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trane noted that service monetization from recent data center deployments remains mostly ahead, implying incremental recurring revenue opportunity as installed base matures.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Service opportunity from recent deployments</span>
+<span class="span">still well in front of us.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Co-design underway with hyperscalers and chipmakers on next-gen DC</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted direct engagement with hyperscalers and chipmakers on next‑gen data center reference designs, including exploration of adiabatic/DC architectures and smarter chiller control/heat recovery.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">hyperscalers and chipmakers</span>
+<span class="span">adiabatic, DC architectures</span>
+<span class="span">smarter chiller control/heat recovery.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1 backlog increased by about $3B; about $1B from Stellar</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Trane reported total backlog up approximately $3B in Q1 2026, including roughly $1B from Stellar-related acquisitions and $1.8B organic, underscoring accelerating demand.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Backlog increased by about $3B in Q1</span>
+<span class="span">about $1B from Stellar</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">CapEx raised to 2–3% of revenue to expand Stellar capacity and open TX site</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">To meet demand, Trane raised 2026 CapEx to 2–3% of revenue, expanding Stellar capacity in Florida and planning a Texas site opening later in 2026; factories running one–two shifts provide flexibility.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">2–3% of revenue</span>
+<span class="span">open a TX site later in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Advanced Technology Training Center opened to scale DC project execution</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Trane opened an Advanced Technology Training Center in April 2026 to expand technician capacity supporting long‑cycle commercial and data center projects.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Advanced Technology Training Center</span>
+<span class="span">April 2026</span>
+<span class="span">data center projects</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Global data center pipeline strong; service monetization largely ahead</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated a strong global data center pipeline, continued co‑design on reference designs, and that service monetization remains mostly ahead of the installed base ramp.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">pipeline strong globally</span>
+<span class="span">co‑design with hyperscalers/chipmakers</span>
+<span class="span">service monetization viewed as largely ahead.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Stellar added about $50M incremental to 2026 guidance</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$50M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Trane increased its 2026 revenue outlook by approximately $50M versus January guidance, captured in April, reflecting stronger Stellar program contribution.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$50M incremental revenue</span>
+<span class="span">captured in April.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Record backlog reached $10.7B, more than 30% above YE25</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10.7B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Trane reported a record $10.7B backlog, up more than 30% versus year‑end 2025, with particularly strong Americas Commercial HVAC momentum.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">record $10.7B</span>
+<span class="span">up &gt;30% vs year-end 2025</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">Trane completes acquisition of LiquidStack</span>
+<span class="badge">equity</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trane completed the acquisition of LiquidStack, a global leader in liquid cooling for data centers, previously announced on February 10, 2026, strengthening its end‑to‑end data center cooling capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8], filings[1]</div>
+<span class="span">completed the acquisition of LiquidStack</span>
+<span class="span">liquid cooling technology for data centers</span>
+<span class="span">previously announced on February 10, 2026</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-10</span>
+<span class="eh">Agreement to acquire LiquidStack to scale DC liquid cooling globally</span>
+<span class="badge">equity</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trane announced an agreement to acquire LiquidStack, enhancing its data center thermal management portfolio across chillers, heat rejection, controls, liquid distribution, and on‑chip cooling, following a 2023 minority investment.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7], filings[1]</div>
+<span class="span">to Acquire LiquidStack</span>
+<span class="span">minority investment in LiquidStack in 2023</span>
+<span class="span">data center thermal management solutions</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Scaling into AI data centers and orderbook expansion</h2>
+<div class='range'>2025-10-28 → 2026-01-29</div>
+<div class='psum'>Trane expanded into AI-intensive data centers, unveiling a comprehensive thermal management reference design aligned to NVIDIA’s Omniverse DSX Blueprint for gigawatt‑scale AI data centers. The company also reported strong end‑2025 backlog metrics and accelerating applied equipment demand into 2026, with significant long‑dated orders.
+Management emphasized the continued role of chillers in data center reference designs 2–4 years out, while cautioning that data center service intensity could be a bit lower than historical norms. Service attachment with hyperscalers/colos improved, and capacity and technician scale were highlighted.</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Stellar completed and LiquidStack agreement highlighted to bolster DC thermal</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trane’s year-end 2025 disclosures noted completion of Stellar Energy and an agreement to acquire LiquidStack, enhancing end-to-end data center thermal solutions across chillers, heat rejection, controls, distribution, and on‑chip cooling.</p>
+<p class="cav">⚠ Timeline references include February/March 2026 completions within a January 2026 release highlight.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">completion of Stellar Energy (Feb 18, 2026)</span>
+<span class="span">acquire LiquidStack (completed March 2026)</span>
+<span class="span">bolstering data‑center thermal solutions.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Record $7.8B backlog entering 2026 (+15% y/y)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$7.8B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Trane reported a record $7.8B enterprise backlog at year‑end 2025, up 15% year over year, supporting multi‑quarter visibility into demand including data center projects.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">record $7.8B</span>
+<span class="span">(+15% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Applied equipment book-to-bill ~200% for second consecutive quarter</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Applied equipment demand accelerated with a Q4 book-to-bill near 200% for the second straight quarter, signaling sustained strength in order intake versus shipments.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">book‑to‑bill ~200%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">More than $1B of backlog scheduled for 2027+</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Within the $7.8B backlog, Trane identified over $1B scheduled for 2027 and beyond, up more than 30% year over year, indicating longer-duration projects including data centers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">&gt;$1 billion scheduled for 2027+</span>
+<span class="span">within the $7.8b backlog</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Chillers remain in data center reference designs 2–4 years out</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized that chillers continue to play a role in reference-design data centers looking 2–4 years ahead, supporting the relevance of Trane’s applied HVAC solutions in AI infrastructure builds.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">reference design</span>
+<span class="span">2–4 years out</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Risk: Data center service intensity could be below usual 8–10 year tail</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Trane noted that while applied systems typically carry an 8–10 year service tail, the service intensity for data centers could be a bit lower and is still being modeled, implying potential headwind to long‑term service revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">“8 to 10”</span>
+<span class="span">data center service intensity could be “a bit lower”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Higher service attachment with hyperscalers and colocation providers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported that service attachment rates with hyperscalers and colos are higher than a decade ago, indicating stronger adoption of Trane’s ongoing service offerings in the data center segment.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">hyperscalers/colos</span>
+<span class="span">higher than a decade ago.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">Chiller capacity increased over 4x in the past 2–3 years</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trane highlighted that chiller capacity has scaled more than fourfold over the past 2–3 years, positioning the company to serve rapidly expanding data center cooling needs.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">“over 4x”</span>
+<span class="span">2–3 years</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">More than 7,500 technicians to commission/service applied systems</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The company cited a global base of over 7,500 technicians available to commission and service applied systems, supporting execution and service capacity for large projects including data centers.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">&gt;7,500 technicians</span>
+<span class="span">commission/service</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-28</span>
+<span class="eh">Reference design launched for NVIDIA Omniverse DSX gigawatt-scale AI data centers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trane announced an industry-first comprehensive thermal management system reference design engineered for the NVIDIA Omniverse DSX Blueprint serving gigawatt-scale AI data centers, with NVIDIA stating it is working with Trane to enable higher density and faster deployment.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Omniverse DSX Blueprint</span>
+<span class="span">gigawatt-scale AI data centers</span>
+<span class="span">NVIDIA is working with Trane Technologies</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Productization and platforming of autonomous building AI</h2>
+<div class='range'>2024-12-18 → 2025-09-18</div>
+<div class='psum'>Trane moved from collaboration to ownership by signing and then closing the acquisition of BrainBox AI, a pioneer in autonomous HVAC controls and generative AI for buildings. Management positioned BrainBox’s AI to reduce energy consumption by up to 25% and GHG emissions by up to 40% when combined with Trane’s building management capabilities.
+During 2025, Trane publicly highlighted its use of frontier models (ChatGPT, Claude, Llama) and launched AI Control and ARIA, an AI‑building agent providing conversational insights. These steps signaled accelerated product development and commercialization of AI‑driven building optimization.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-09-18</span>
+<span class="eh">Trane launches AI Control and ARIA AI-building agent</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trane announced AI Control, an integrated AI solution for continuous building optimization, and ARIA, a multilingual AI‑building agent delivering conversational insights. Trane cited reductions of up to 25% in energy costs and up to 40% in carbon emissions, developed by the BrainBox AI Lab.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">AI Control and ARIA</span>
+<span class="span">reduce heating and cooling energy costs by up to 25%</span>
+<span class="span">carbon emissions by up to 40%</span>
+<span class="span">BrainBox AI Lab</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="openai_chatgpt anthropic_claude meta_llama">
+<div class="ev-top">
+<span class="date">2025-05-01</span>
+<span class="eh">Partner Exchange: Trane details frontier model usage (ChatGPT, Claude, Llama)</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">meta_llama</span></div>
+<p class="narr">At Trane Partner Exchange 2025, Trane’s Lead AI Domain Architect described internal acceleration using frontier models, highlighting a ChatGPT Digital Assistant, multi‑model options (ChatGPT, Claude, Llama), and Azure Bing Search integration; the deck also cited OpenAI o3 performance on ARC benchmarks.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Launch of ChatGPT Digital Assistant (Nov ‘22)</span>
+<span class="span">ChatGPT actually uses Bing Search via Azure</span>
+<span class="span">Real AI powered by Frontier Models – ChatGPT, Claude, Llama.</span>
+<span class="span">OpenAI o3 outperformed humans</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-03</span>
+<span class="eh">Trane completes acquisition of BrainBox AI</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trane completed the acquisition of BrainBox AI, previously announced on December 18, 2024. BrainBox AI’s platform uses deep learning to predict building energy needs and automate HVAC, with claims of up to 25% energy and up to 40% GHG reductions.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[3]</div>
+<span class="span">completed the acquisition of BrainBox AI</span>
+<span class="span">previously announced in a press release on December 18, 2024</span>
+<span class="span">reduce energy consumption by up to 25%</span>
+<span class="span">reduce greenhouse gas (GHG) emissions by up to 40%</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-18</span>
+<span class="eh">Trane signs definitive agreement to acquire BrainBox AI</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trane announced it signed a definitive agreement to acquire BrainBox AI to combine its AI technology with Trane’s building management and digital capabilities. The deal, expected to close in early 2025, targets up to 25% energy and up to 40% GHG reductions; terms were undisclosed and stated as not material.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">signed a definitive agreement to acquire BrainBox AI</span>
+<span class="span">expected to close in early 2025</span>
+<span class="span">reduce energy consumption by up to 25%</span>
+<span class="span">reduce GHG emissions by up to 40%</span>
+<span class="span">The transaction is not material</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational AI pilots and early collaborations</h2>
+<div class='range'>2022-11-11 → 2024-09-06</div>
+<div class='psum'>Trane Technologies began engaging directly with leading AI research and control systems in the built environment. In late 2022, DeepMind/Google ran live reinforcement-learning experiments on commercial cooling in partnership with Trane, reporting meaningful energy savings in real-world facilities. In 2023, Trane announced a technology collaboration with BrainBox AI to pair Trane’s Tracer SC+ building automation with autonomous decarbonizing AI.
+By 2024 Trane had also deployed an internal generative AI Personal Assistant Tool (PAT) using OpenAI’s GPT models on Microsoft Azure, making it available to more than 40,000 employees and evaluating outputs with GPT‑4. These steps established both external and internal AI capabilities that later underpinned productization.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-09-06</span>
+<span class="eh">Company-wide PAT launched using OpenAI GPT models on Azure</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Trane developed and deployed an internal Personal Assistant Tool (PAT) based on OpenAI GPT‑3.5 via Microsoft Azure for secure access, with an ‘LLM‑as‑a‑judge’ approach using GPT‑4 to assess response quality. The tool was made available to 40,000+ staff across business units and regions.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">OpenAI&#x27;s GPT 3.5 model</span>
+<span class="span">Microsoft Azure</span>
+<span class="span">40,000+ staff</span>
+<span class="span">employing GPT-4</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2023-09-13</span>
+<span class="eh">Trane and BrainBox AI announce technology collaboration</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trane and BrainBox AI announced a strategic collaboration coupling Trane’s Tracer SC+ building automation with BrainBox AI’s autonomous decarbonization to target multi‑site retailers across North America. The integration enables cloud‑based optimization that can autonomously send real‑time HVAC control commands.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Tracer SC+ building automation system</span>
+<span class="span">autonomous decarbonizing AI-tech</span>
+<span class="span">multi-site retailers across North America</span>
+<span class="span">autonomously send real-time control commands</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2022-11-11</span>
+<span class="eh">DeepMind/Google RL controls pilot with Trane on commercial cooling</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">DeepMind and Google conducted live reinforcement‑learning experiments to control commercial cooling systems in partnership with Trane Technologies, demonstrating 9–13% energy savings at two real‑world sites. This showcased AI-driven HVAC optimization with Trane’s systems.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">DeepMind and Google&#x27;s recent work</span>
+<span class="span">partnership with Trane Technologies</span>
+<span class="span">energy savings of approximately 9% and 13%</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0032'>E0032</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What specific foundation or frontier models power Trane’s ARIA and AI Control products in production?</li>
+<li>What were the purchase prices and earnout/retention structures (if any) for the BrainBox AI and LiquidStack acquisitions?</li>
+<li>What proportion of Trane’s backlog is explicitly tied to AI data center builds versus general data centers and other end markets?</li>
+<li>How will potentially lower data center service intensity affect long-term service revenue mix and margins?</li>
+<li>What is the timeline and scale for service monetization from the recent data center deployments?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items are company press releases containing forward-looking statements and marketing claims that may not fully materialize.</li>
+<li>The DeepMind/Google RL experiment results are from pilot deployments and may not generalize to all Trane-controlled environments.</li>
+<li>The BrainBox AI transaction was stated as not material and financial terms were not disclosed, limiting quantitative assessment.</li>
+<li>Filings highlights referencing 2026 completion dates appear within a January 2026 report; timing reflects management commentary rather than separate filings.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

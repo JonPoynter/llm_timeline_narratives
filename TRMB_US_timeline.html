@@ -1,0 +1,422 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>TRMB US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Trimble Inc <span class='sub'>(TRMB US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.387</div>
+</header>
+<div class='stats'>
+<span class='chip'>2 phases</span>
+<span class='chip'>15 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 9</span>
+<span class='chip'>single source: 8</span>
+<span class='chip'>web-only (verified): 4</span>
+<span class='chip'>web-only (unverified): 3</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>2026: Claude connector launch, AI M&amp;A, and Q1’26 earnings signals</h2>
+<div class='range'>2026-03-09 → 2026-05-06</div>
+<div class='psum'>In early 2026, Trimble advanced both internal and product-facing AI initiatives. Internally, a partner case study reported near-80% employee adoption of Gemini for Google Workspace. Externally, Trimble announced a specialized integration linking SketchUp with Anthropic’s Claude via an MCP Connector, enabling Claude to generate and modify SketchUp models from conversational prompts with downstream monetization via SketchUp subscriptions. Trimble also signed an agreement to acquire Document Crunch, an AI document analysis company that builds on OpenAI’s GPT and Anthropic’s Claude, to embed contract intelligence across Trimble Construction One.
+The Q1’26 earnings cycle emphasized AI feature integration reinforcing adoption while acknowledging investor questions on the pace of AI monetization and consumption-based elements. ARR was reported at $2.43B (+12% y/y), with deferred revenue of $970.7M at quarter-end.</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">SketchUp AI add-on disclosed as subscription with monthly AI credits</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Trimble disclosed that in Q4’25, SketchUp AI was released as a hybrid add-on available to subscribers, sold as an additional subscription with a fixed number of AI credits each month, with monetization flowing through SketchUp subscriptions.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">released SketchUp AI as an add-on</span>
+<span class="span">hybrid add-on is an additional subscription</span>
+<span class="span">fixed number of AI credits</span>
+<span class="span">monetization is downstream in our SketchUp subscriptions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Q1’26: Analysts probe AI-enabled offerings and consumption mix</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">On the Q1’26 release, analysts focused on ARR composition, traction of AI-enabled offerings, and whether consumption-based elements were becoming more material.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Analysts asked about the pace and composition of ARR growth</span>
+<span class="span">early traction of AI-enabled offerings</span>
+<span class="span">consumption-based elements are becoming a more meaningful contributor</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Mgmt: AI-enabled features reinforcing product adoption</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized ARR expansion and progress on licensing migration, stating that AI-enabled features are reinforcing product adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">continued ARR expansion</span>
+<span class="span">AI-enabled features viewed as reinforcing product adoption</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Q&amp;A: Ongoing AI feature integration underpinning 2026 guidance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management indicated ongoing product integration, including AI features, to support adoption, with 2026 guidance underpinned by recurring revenue growth and margin mix benefits.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ongoing product integration (including AI features)</span>
+<span class="span">2026 guidance is underpinned by recurring revenue growth</span>
+<span class="span">margin mix benefits</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Risk flagged: Pace of AI monetization and consumption</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management and investors flagged concern about the pace of monetization for AI-enabled features and the development of consumption-based models.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">concern: Pace of monetization for AI-enabled features</span>
+<span class="span">consumption-based models</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Unanswered: Sizing AI/consumption contribution to ARR</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Trimble did not provide granular sizing of AI and consumption-based contributions to ARR, leaving investors without detailed attribution.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Granular sizing of AI/consumption-based revenue contribution to ARR</span>
+<span class="span">deeper regional or channel inventory metrics</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Positioning: Intelligence layer bridging digital and physical</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The CEO emphasized Trimble’s role as the intelligence and execution layer connecting digital models with physical reality, a positioning aligned with AI-enhanced workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">intelligence and execution layer</span>
+<span class="span">connecting digital models with physical reality</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">ARR reported at $2.43B (+12% y/y; +12% organic)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.4B · run_rate_annual</span> <span class="badge">neutral</span></div>
+<p class="narr">Trimble reported ARR of $2.43B in Q1’26, growing 12% year over year and organically, with AI features cited as reinforcing adoption though not separately broken out.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ARR $2.43B</span>
+<span class="span">(+12% y/y; +12% organic)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-06</span>
+<span class="eh">Deferred revenue $970.7M (seq. decrease vs YE25)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$971M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Deferred revenue ended the quarter at $970.7M versus $998.7M at year-end 2025, a sequential decline as reported with Q1’26 results.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Deferred revenue $970.7M at quarter-end</span>
+<span class="span">vs $998.7M at year-end 2025</span>
+<span class="span">sequential decrease</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">SketchUp–Claude MCP Connector launches for conversational 3D modeling</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Trimble launched a specialized integration linking SketchUp with Anthropic’s Claude via an MCP Connector, enabling Claude to create and modify SketchUp files from conversational prompts. Availability is through Claude’s MCP directory, requiring a Claude account and Trimble ID; monetization is expected downstream via SketchUp subscriptions.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[1], web_search_findings[4]</div>
+<span class="span">Links SketchUp with Anthropic&#x27;s Claude</span>
+<span class="span">conversational text or speech prompts</span>
+<span class="span">allows Claude to interact directly with SketchUp (.skp) files</span>
+<span class="span">Claude&#x27;s MCP directory connector settings</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-04-02</span>
+<span class="eh">Trimble to acquire Document Crunch; targets AI contract intelligence</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Trimble signed an agreement to acquire Document Crunch to embed AI-powered document analysis and risk management across its construction ecosystem. Document Crunch states it builds on OpenAI’s GPT and Anthropic’s Claude, indicating multi-model leverage within Trimble’s portfolio. Financial terms were not disclosed.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2], web_search_findings[3]</div>
+<span class="span">signed an agreement to acquire Document Crunch</span>
+<span class="span">AI-powered Risk Management and Document Compliance</span>
+<span class="span">expected to close in the second quarter of 2026</span>
+<span class="span">OpenAI’s GPT and Anthropic’s Claude</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-09</span>
+<span class="eh">About 8,900 Trimble employees using Gemini for Google Workspace</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A partner success story reported broad internal adoption of Gemini for Google Workspace at Trimble, with more than 8,900 employees—nearly 80% of the company—using Gemini to boost productivity.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">deployment of Gemini for Google Workspace</span>
+<span class="span">more than 8,900 Trimble employees</span>
+<span class="span">nearly 80% of the company</span>
+<span class="span">are now using Gemini</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations: SketchUp asset and Google Workspace base</h2>
+<div class='range'>2012-04-26 → 2025-10-02</div>
+<div class='psum'>Trimble’s modern AI posture builds on two foundations: the 2012 acquisition of SketchUp and an enterprise-wide shift to Google Workspace that later enabled Gemini-based AI features. SketchUp became a core platform asset with a large user base and an ecosystem including 3D Warehouse, establishing a distribution surface for future AI-driven modeling experiences.
+From 2017 onward (as documented in 2023), Trimble consolidated collaboration on Google Workspace across nearly the entire company, later adopting Gemini features that improve productivity, search, and code generation. By late 2025, Google publicly highlighted Trimble’s use of Workspace AI features, signaling institutional readiness to scale GenAI workflows internally.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-10-02</span>
+<span class="eh">Google highlights Trimble’s use of Workspace AI (Gemini) features</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google showcased Trimble among customers transforming work with Gemini for Google Workspace, citing productivity gains from Workspace AI features including document search and code generation efficiencies.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Google Workspace with Gemini</span>
+<span class="span">Trimble manufactures software and hardware</span>
+<span class="span">improve document search and code generation efficiency</span>
+<span class="span">enhances productivity with the Google Workspace AI features</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-07-18</span>
+<span class="eh">Enterprise-wide Google Workspace adoption documented</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google documented Trimble’s organization-wide migration to Workspace, with the platform used across most Trimble entities. This created a base for subsequent adoption of Gemini AI features within Workspace.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">migrated our entire organization to Google Workspace</span>
+<span class="span">moved over 9,000 employees to Google Workspace</span>
+<span class="span">98% of Trimble’s companies operating on Google Workspace</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2012-04-26</span>
+<span class="eh">Trimble to acquire SketchUp from Google; 3D Warehouse hosted by Google</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Trimble entered into a definitive agreement to acquire SketchUp from Google, with Google continuing to host and operate 3D Warehouse for Trimble. This established SketchUp as a core platform asset that would later support AI-enabled modeling experiences.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">entered into a definitive agreement to acquire SketchUp</span>
+<span class="span">from Google</span>
+<span class="span">expected to close in the second quarter of 2012</span>
+<span class="span">Google will host and operate the 3D Warehouse for Trimble</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of ARR is attributable to AI-enabled features and consumption-based models?</li>
+<li>What are the financial terms and expected revenue impact of the Document Crunch acquisition?</li>
+<li>What percentage of SketchUp subscribers are adopting the SketchUp AI add-on and what is the ARPU uplift?</li>
+<li>How are Claude Connector users converting into paid SketchUp subscriptions over time?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Prepared remarks reference a Q4 2025 SketchUp AI release without a specific release date.</li>
+<li>Document Crunch’s use of OpenAI and Anthropic is self-disclosed by Document Crunch; Trimble’s release does not name model providers.</li>
+<li>Promevo adoption metrics are from a partner case study and may not reflect audited internal KPIs.</li>
+<li>No explicit pricing, revenue contribution, or contractual term details were disclosed for the Claude Connector at launch.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

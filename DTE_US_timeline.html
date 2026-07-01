@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>DTE Energy Co <span class='sub'>(DTE US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.394</div>
@@ -73,45 +83,67 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (verified): 3</span>
 <span class='chip'>corroborated: 1</span>
 </div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
-<h2>Oracle/OpenAI Michigan entry and first regulatory approval</h2>
-<div class='range'>2025-10-30 → 2025-12-31</div>
-<div class='psum'>OpenAI, Oracle, and Related Digital announced a Michigan data center campus exceeding 1 GW of capacity, explicitly naming DTE Energy as the power supplier with project‑financed storage ensuring no rate impact. This marked DTE&#x27;s first at‑scale AI‑driven hyperscale load tied to OpenAI&#x27;s Stargate buildout in the state.
-By December, the Michigan Public Service Commission (MPSC) conditionally approved DTE Electric&#x27;s special contracts to supply the Oracle‑affiliated Saline Township data center, imposing enhanced protections including a 19‑year minimum term, an 80% minimum billing demand, and substantial termination payment provisions.</div>
-<div class="event t-web_only_verified" id="E0001">
+<h2>Storage build‑out, V2G integration tests, and contested review of Google contracts</h2>
+<div class='range'>2026-05-01 → 2026-06-27</div>
+<div class='psum'>DTE announced a $1.6 billion partnership with LG Energy Solution Vertech to deploy 1.5 GW/6 GWh of battery storage across Michigan, citing the Oracle‑funded systems as sufficient to meet DTE&#x27;s portion of the state&#x27;s 2030 battery standard. External coverage described it as a 6 GWh ESS supply deal tied to surging AI‑driven data‑center and grid needs.
+GM Energy named DTE a utility partner in turning on vehicle‑to‑grid capability, including a 30‑home stress test. Meanwhile, Michigan’s Attorney General filed testimony seeking stronger customer protections in the contested MPSC review of DTE’s 20‑year special contracts with Google for a 1 GW data center in Van Buren Township, advocating higher minimum billing demand and exit fees.</div>
+<div class="event t-web_only_unverified" id="E0024" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2025-10-30</span>
-<span class="eh">OpenAI/Oracle/Related Digital announce &gt;1 GW Saline Township data center; DTE to supply 100% of power</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">OpenAI, Oracle, and Related Digital unveiled plans for a Saline Township, Michigan data center campus with more than a gigawatt of capacity. The announcement explicitly states DTE Energy will supply 100% of the project&#x27;s power, augmented by project‑financed battery storage, linking DTE directly to OpenAI&#x27;s Stargate expansion.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">OpenAI, Oracle, and Related Digital</span>
-<span class="span">more than a gigawatt of capacity</span>
-<span class="span">additional Stargate capacity</span>
-<span class="span">DTE Energy is supplying 100% of the power</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0002">
-<div class="ev-top">
-<span class="date">2025-12-18</span>
-<span class="eh">MPSC conditionally approves DTE Electric special contracts to power 1,383 MW Saline data center (Oracle/OpenAI)</span>
+<span class="date">2026-06-11</span>
+<span class="eh">Michigan AG files testimony seeking stronger protections in Google 1 GW special contracts</span>
 <span class="badge">regulatory</span>
 <span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Michigan regulators conditionally approved DTE Electric&#x27;s application to serve the 1,383 MW Saline Township data center associated with Oracle and OpenAI, strengthening protections for other customers. Conditions include a 19‑year minimum term, an 80% minimum billing demand, and sizable termination payments, ensuring costs are borne by the project.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Attorney General Dana Nessel filed testimony in the MPSC’s contested review of DTE’s 20‑year special contracts to serve Google’s 1 GW Van Buren Township data center, urging increased minimum charges (from 80% to ≥90%) and higher exit fees to protect ratepayers.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk · GEM <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">AG Nessel Files Testimony</span>
+<span class="span">20-year special contracts</span>
+<span class="span">1-gigawatt data center</span>
+<span class="span">Van Buren Township</span>
+<span class="span">raise minimum monthly charges required from Google from 80% to no lower than 90%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">GM Energy turns on V2G; DTE named utility partner and runs 30‑home stress test</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">GM Energy activated vehicle‑to‑grid capability and cited DTE as a utility partner, including a 30‑home stress test. The initiative underscores growing grid‑service participation from EV fleets that can complement data center‑era capacity needs.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">vehicle‑to‑grid (V2G) capability</span>
+<span class="span">named PG&amp;E and DTE as utility partners</span>
+<span class="span">30‑home stress test with DTE</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-27</span>
+<span class="eh">DTE and LGES Vertech announce $1.6B Michigan battery storage program (1.5 GW / 6 GWh)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.6B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">DTE announced a $1.6 billion investment with LG Energy Solution Vertech to develop Michigan‑made battery storage systems totaling 1.5 GW or 6 GWh across eight projects. Coverage in Seoul highlighted a 6 GWh ESS supply to a U.S. utility, reflecting grid and AI data‑center‑driven demand.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span></div>
 <details>
 <summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[1], web_search_findings[2]</div>
-<span class="span">approves DTE Electric energy contracts for data center</span>
-<span class="span">1,383- megawatt (MW) data center in Saline Township</span>
-<span class="span">minimum contract duration of 19 years</span>
-<span class="span">minimum billing demand of 80%</span>
+<div class="ev-src">web_search_findings[7], news_rows[1]</div>
+<span class="span">announced a $1.6 billion investment</span>
+<span class="span">LG Energy Solution Vertech</span>
+<span class="span">1.5 gigawatts or 6 gigawatt hours</span>
+<span class="span">1.6 billion dollar US battery storage deal with DTE Energy</span>
 </details>
 </div>
 </div>
@@ -120,61 +152,7 @@ By December, the Michigan Public Service Commission (MPSC) conditionally approve
 <div class='range'>2026-03-17 → 2026-04-30</div>
 <div class='psum'>Google announced a partnership with DTE to develop a Michigan data center using a Clean Capacity Acceleration Agreement that enables 2.7 GW of new clean resources (solar, advanced storage, demand flexibility) in DTE&#x27;s territory. The MPSC subsequently denied rehearing petitions and reaffirmed prior approval of DTE’s special contracts for the 1,383 MW Saline data center, restating strong counterparty obligations (80% minimum billing demand, long duration).
 DTE indicated it would pause additional electric rate cases for at least two years after its late‑April 2026 filing if data center milestones and approvals proceed as planned, citing nearly $9 billion in system improvements attributable to the two data‑center contracts through 2045. On April 30, DTE’s Q1’26 update detailed the AI‑driven large‑load pipeline (~2 GW advanced; 3–4 GW possible), Google special‑contract filing/structure, late‑stage hyperscaler siting, BTM project near agreement (~350 MW), financing actions ($1.6B mortgage bonds; $1.5B ATM forwards), and 2026 capex outlook (&gt; $6B).</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2026-03-17</span>
-<span class="eh">Google partners with DTE to develop MI data center; 2.7 GW new clean resources via CCAA structure</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Google disclosed an energy‑first plan with DTE to add 2.7 GW of new clean resources supporting a Michigan data center, using a Clean Capacity Acceleration Agreement similar to its Clean Transition Tariff approach. The plan includes solar, advanced storage, and demand flexibility and references a potential site in Van Buren Township.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">partnering with DTE Energy</span>
-<span class="span">new data center in Michigan</span>
-<span class="span">2.7 gigawatts (GW) of new resources</span>
-<span class="span">Clean Capacity Acceleration Agreement</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0004">
-<div class="ev-top">
-<span class="date">2026-03-27</span>
-<span class="eh">MPSC denies rehearing; reaffirms approval of DTE’s special contracts for 1,383 MW Saline data center</span>
-<span class="badge">regulatory</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">The MPSC denied rehearing and motions to reopen regarding DTE’s approved special contracts for the 1,383 MW Saline data center, reiterating customer‑protection terms. Key provisions include a 19‑year minimum duration, 80% minimum billing demand, and significant termination payments if the facility stops early.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span">denied petitions for rehearing</span>
-<span class="span">approval of special contracts for DTE Electric Co.</span>
-<span class="span">1,383 MW data center</span>
-<span class="span">minimum billing demand of 80%</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0005">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">DTE signals at least two‑year pause in rate requests as data centers contribute ~$9B through 2045</span>
-<span class="badge">regulatory</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$9.0B · other</span> <span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">DTE announced it intends to forego asking for electric rate increases for at least two years following its April 28, 2026 filing, contingent on data center milestones and approvals. The company said its two data center contracts—one approved and one at the MPSC—will contribute nearly $9 billion in system improvements through 2045 without raising customer rates.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">intends to forego asking for rate increases</span>
-<span class="span">at least two years</span>
-<span class="span">will contribute nearly $9 billion</span>
-<span class="span">data centers will not raise customer rates</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0006">
+<div class="event t-single_source" id="E0006" data-providers="google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">DTE submitted Google 1 GW special contracts to MPSC with affordability benefits</span>
@@ -183,6 +161,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
 <p class="narr">In its Q1’26 update, DTE highlighted that it submitted special contracts to the MPSC to serve Google’s planned 1 GW Michigan data center, designed to deliver affordability benefits over the life of the contract.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · GEM <b>3</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -191,7 +170,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">affordability benefits over the life of the contract.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0007">
+<div class="event t-single_source" id="E0007" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">Late‑stage large‑load pipeline: ~2 GW advanced; 3–4 GW additional possible</span>
@@ -200,6 +179,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management reported approximately 2 GW of new large loads under advanced discussions, with a further 3–4 GW possible. This reflects heightened hyperscale demand exploration in DTE’s territory.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -208,7 +188,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">3–4 GW possible</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0008">
+<div class="event t-single_source" id="E0008" data-providers="google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">Google contract structured so customer bears full incremental costs</span>
@@ -217,13 +197,14 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
 <p class="narr">DTE stated the proposed Google special contracts are structured so Google bears full incremental costs of service, aligning with the company’s customer‑protection posture.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength · GEM <b>4</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 1 span(s)</summary>
 <div class="ev-src">filings[0]</div>
 <span class="span">structured so Google bears full incremental costs.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0009">
+<div class="event t-single_source" id="E0009" data-providers="google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">Google special contract order targeted by September 10, 2026</span>
@@ -240,7 +221,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">without a PFD</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0010">
+<div class="event t-single_source" id="E0010" data-providers="openai_chatgpt google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">Ramp outlook: Oracle attach by YE26; Google to 1 GW by end‑2028</span>
@@ -249,6 +230,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
 <p class="narr">DTE expects the Oracle‑affiliated Saline data center to attach by year‑end 2026 with an initial ramp, and the Google Michigan data center to reach 1 GW by end‑2028.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · OAI <b>4</b> GEM <b>3</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b> GEM <b>4</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -256,7 +238,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">Google is expected to reach 1 GW by end‑2028.</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0011">
+<div class="event t-single_source" id="E0011" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">2 GW late‑stage hyperscaler talks; zoning completed at one site; Oracle structure higher benefits</span>
@@ -265,6 +247,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">DTE cited 2 GW in late‑stage hyperscaler negotiations with at least one site having zoning completed. Management said Oracle’s structure yields higher benefits (storage‑only additions) relative to Google’s, which requires added generation.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -273,7 +256,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">Oracle’s structure yields higher benefits</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0012">
+<div class="event t-single_source" id="E0012" data-providers="google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">Google‑related incremental capital funding mix: ~40% equity plus converts/hybrids</span>
@@ -289,7 +272,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">converts and hybrids</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0013">
+<div class="event t-single_source" id="E0013" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">Large‑load deals to be run through the utility to maximize customer benefits</span>
@@ -304,7 +287,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">run these large‑load arrangements through the utility</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0014">
+<div class="event t-single_source" id="E0014" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">Management flags potential data‑center concentration risk up to ~40% of sales</span>
@@ -319,7 +302,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">data‑center concentration could be roughly 40% of sales</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0015">
+<div class="event t-single_source" id="E0015" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">BTM hyperscaler project (~350 MW) near agreement; seen as replicable</span>
@@ -328,6 +311,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management described a behind‑the‑meter hyperscaler project of roughly 350 MW as nearing agreement and potentially replicable with other hyperscalers and in other regions.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -335,7 +319,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">potential for replication</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0016">
+<div class="event t-single_source" id="E0016" data-providers="google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">1 GW data center contracts require MPSC approvals; rate outcomes affect cash flow</span>
@@ -344,6 +328,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
 <p class="narr">DTE underscored that contracts to serve a new 1 GW data center require MPSC approvals, with outcomes and timing of rate cases affecting cash flow and earnings trajectories.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk · GEM <b>3</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -351,7 +336,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">filed additional rate requests</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0017">
+<div class="event t-single_source" id="E0017" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">DTE Electric issued $1.6B mortgage bonds (Feb‑26)</span>
@@ -366,7 +351,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">issued $1.6B of mortgage bonds in Feb‑26</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0018">
+<div class="event t-single_source" id="E0018" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">Executed equity forwards under $1.5B ATM (~2.5M shares) at parent</span>
@@ -382,7 +367,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">$1.5B ATM</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0019">
+<div class="event t-single_source" id="E0019" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">Q1 2026 capex totaled approximately $1.229B</span>
@@ -397,7 +382,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">capex (utility and non‑utility): ~$1.229B</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0020">
+<div class="event t-single_source" id="E0020" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">DTE on track to invest over $6B in 2026</span>
@@ -406,13 +391,14 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="mag">$6.0B · capex</span> <span class="badge">neutral</span></div>
 <p class="narr">The company reaffirmed it is on pace to invest more than $6 billion during 2026, highlighting reliability improvements and clean energy progress.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
 <details>
 <summary>evidence — 1 source(s), 1 span(s)</summary>
 <div class="ev-src">filings[0]</div>
 <span class="span">on‑track to invest &gt;$6B in 2026</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0021">
+<div class="event t-single_source" id="E0021" data-providers="">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">Proposed stay‑out mechanism tied to large‑load ramp may defer next rate case until at least 2028</span>
@@ -421,6 +407,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
 <p class="narr">Management emphasized a stay‑out concept that would defer excess margins for later customer flow‑back, potentially enabling DTE to refrain from filing a new electric case until at least 2028 if Oracle ramps by end‑2027 and approvals are received.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -429,7 +416,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">refrain from filing a new electric case until at least 2028</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0025">
+<div class="event t-web_only_unverified" id="E0025" data-providers="google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-04-30</span>
 <span class="eh">DTE secures agreement to power Google’s new Michigan data center; contracts submitted to MPSC</span>
@@ -438,6 +425,7 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
 <p class="narr">Alongside Q1 results, DTE said it secured an agreement to power Google’s new Michigan data center and, in March, submitted energy contracts to the MPSC to support the planned 1 GW facility.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · GEM <b>3</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">web_search_findings[8]</div>
@@ -445,91 +433,149 @@ DTE indicated it would pause additional electric rate cases for at least two yea
 <span class="span">submitted energy contracts to the Michigan Public Service Commission (MPSC)</span>
 </details>
 </div>
-</div>
-<div class='phase'>
-<h2>Storage build‑out, V2G integration tests, and contested review of Google contracts</h2>
-<div class='range'>2026-05-01 → 2026-06-27</div>
-<div class='psum'>DTE announced a $1.6 billion partnership with LG Energy Solution Vertech to deploy 1.5 GW/6 GWh of battery storage across Michigan, citing the Oracle‑funded systems as sufficient to meet DTE&#x27;s portion of the state&#x27;s 2030 battery standard. External coverage described it as a 6 GWh ESS supply deal tied to surging AI‑driven data‑center and grid needs.
-GM Energy named DTE a utility partner in turning on vehicle‑to‑grid capability, including a 30‑home stress test. Meanwhile, Michigan’s Attorney General filed testimony seeking stronger customer protections in the contested MPSC review of DTE’s 20‑year special contracts with Google for a 1 GW data center in Van Buren Township, advocating higher minimum billing demand and exit fees.</div>
-<div class="event t-corroborated" id="E0022">
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-05-27</span>
-<span class="eh">DTE and LGES Vertech announce $1.6B Michigan battery storage program (1.5 GW / 6 GWh)</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-corroborated">corroborated</span>
+<span class="date">2026-04-23</span>
+<span class="eh">DTE signals at least two‑year pause in rate requests as data centers contribute ~$9B through 2045</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$1.6B · capex</span> <span class="badge">positive_demand</span></div>
-<p class="narr">DTE announced a $1.6 billion investment with LG Energy Solution Vertech to develop Michigan‑made battery storage systems totaling 1.5 GW or 6 GWh across eight projects. Coverage in Seoul highlighted a 6 GWh ESS supply to a U.S. utility, reflecting grid and AI data‑center‑driven demand.</p>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$9.0B · other</span> <span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">DTE announced it intends to forego asking for electric rate increases for at least two years following its April 28, 2026 filing, contingent on data center milestones and approvals. The company said its two data center contracts—one approved and one at the MPSC—will contribute nearly $9 billion in system improvements through 2045 without raising customer rates.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · OAI <b>4</b> GEM <b>3</b></span> <span class="chchip">strategic_option_value · OAI <b>2</b> GEM <b>2</b></span></div>
 <details>
-<summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[7], news_rows[1]</div>
-<span class="span">announced a $1.6 billion investment</span>
-<span class="span">LG Energy Solution Vertech</span>
-<span class="span">1.5 gigawatts or 6 gigawatt hours</span>
-<span class="span">1.6 billion dollar US battery storage deal with DTE Energy</span>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">intends to forego asking for rate increases</span>
+<span class="span">at least two years</span>
+<span class="span">will contribute nearly $9 billion</span>
+<span class="span">data centers will not raise customer rates</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0023">
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt">
 <div class="ev-top">
-<span class="date">2026-06-10</span>
-<span class="eh">GM Energy turns on V2G; DTE named utility partner and runs 30‑home stress test</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">GM Energy activated vehicle‑to‑grid capability and cited DTE as a utility partner, including a 30‑home stress test. The initiative underscores growing grid‑service participation from EV fleets that can complement data center‑era capacity needs.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[0]</div>
-<span class="span">vehicle‑to‑grid (V2G) capability</span>
-<span class="span">named PG&amp;E and DTE as utility partners</span>
-<span class="span">30‑home stress test with DTE</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0024">
-<div class="ev-top">
-<span class="date">2026-06-11</span>
-<span class="eh">Michigan AG files testimony seeking stronger protections in Google 1 GW special contracts</span>
+<span class="date">2026-03-27</span>
+<span class="eh">MPSC denies rehearing; reaffirms approval of DTE’s special contracts for 1,383 MW Saline data center</span>
 <span class="badge">regulatory</span>
 <span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Attorney General Dana Nessel filed testimony in the MPSC’s contested review of DTE’s 20‑year special contracts to serve Google’s 1 GW Van Buren Township data center, urging increased minimum charges (from 80% to ≥90%) and higher exit fees to protect ratepayers.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">The MPSC denied rehearing and motions to reopen regarding DTE’s approved special contracts for the 1,383 MW Saline data center, reiterating customer‑protection terms. Key provisions include a 19‑year minimum duration, 80% minimum billing demand, and significant termination payments if the facility stops early.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · OAI <b>4</b></span> <span class="chchip">regulatory_or_reputational_risk · OAI <b>2</b></span> <span class="chchip">switching_flexibility · OAI <b>1</b></span> <span class="chchip">dependency_duration · OAI <b>4</b></span> <span class="chchip">contractual_commitment_strength · OAI <b>5</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 5 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">AG Nessel Files Testimony</span>
-<span class="span">20-year special contracts</span>
-<span class="span">1-gigawatt data center</span>
-<span class="span">Van Buren Township</span>
-<span class="span">raise minimum monthly charges required from Google from 80% to no lower than 90%</span>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">denied petitions for rehearing</span>
+<span class="span">approval of special contracts for DTE Electric Co.</span>
+<span class="span">1,383 MW data center</span>
+<span class="span">minimum billing demand of 80%</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">Google partners with DTE to develop MI data center; 2.7 GW new clean resources via CCAA structure</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google disclosed an energy‑first plan with DTE to add 2.7 GW of new clean resources supporting a Michigan data center, using a Clean Capacity Acceleration Agreement similar to its Clean Transition Tariff approach. The plan includes solar, advanced storage, and demand flexibility and references a potential site in Van Buren Township.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · GEM <b>3</b></span> <span class="chchip">provider_specificity · GEM <b>3</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">partnering with DTE Energy</span>
+<span class="span">new data center in Michigan</span>
+<span class="span">2.7 gigawatts (GW) of new resources</span>
+<span class="span">Clean Capacity Acceleration Agreement</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class='phase'>
+<h2>Oracle/OpenAI Michigan entry and first regulatory approval</h2>
+<div class='range'>2025-10-30 → 2025-12-31</div>
+<div class='psum'>OpenAI, Oracle, and Related Digital announced a Michigan data center campus exceeding 1 GW of capacity, explicitly naming DTE Energy as the power supplier with project‑financed storage ensuring no rate impact. This marked DTE&#x27;s first at‑scale AI‑driven hyperscale load tied to OpenAI&#x27;s Stargate buildout in the state.
+By December, the Michigan Public Service Commission (MPSC) conditionally approved DTE Electric&#x27;s special contracts to supply the Oracle‑affiliated Saline Township data center, imposing enhanced protections including a 19‑year minimum term, an 80% minimum billing demand, and substantial termination payment provisions.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-12-18</span>
+<span class="eh">MPSC conditionally approves DTE Electric special contracts to power 1,383 MW Saline data center (Oracle/OpenAI)</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Michigan regulators conditionally approved DTE Electric&#x27;s application to serve the 1,383 MW Saline Township data center associated with Oracle and OpenAI, strengthening protections for other customers. Conditions include a 19‑year minimum term, an 80% minimum billing demand, and sizable termination payments, ensuring costs are borne by the project.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · OAI <b>4</b></span> <span class="chchip">regulatory_or_reputational_risk · OAI <b>2</b></span> <span class="chchip">switching_flexibility · OAI <b>1</b></span> <span class="chchip">dependency_duration · OAI <b>4</b></span> <span class="chchip">contractual_commitment_strength · OAI <b>5</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1], web_search_findings[2]</div>
+<span class="span">approves DTE Electric energy contracts for data center</span>
+<span class="span">1,383- megawatt (MW) data center in Saline Township</span>
+<span class="span">minimum contract duration of 19 years</span>
+<span class="span">minimum billing demand of 80%</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-10-30</span>
+<span class="eh">OpenAI/Oracle/Related Digital announce &gt;1 GW Saline Township data center; DTE to supply 100% of power</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI, Oracle, and Related Digital unveiled plans for a Saline Township, Michigan data center campus with more than a gigawatt of capacity. The announcement explicitly states DTE Energy will supply 100% of the project&#x27;s power, augmented by project‑financed battery storage, linking DTE directly to OpenAI&#x27;s Stargate expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · OAI <b>4</b></span> <span class="chchip">provider_specificity · OAI <b>3</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">OpenAI, Oracle, and Related Digital</span>
+<span class="span">more than a gigawatt of capacity</span>
+<span class="span">additional Stargate capacity</span>
+<span class="span">DTE Energy is supplying 100% of the power</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0020'>E0020</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0.3</td><td>0</td><td>0.25</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>-0.1</td><td>0</td><td>-0.15</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.895</td><td>0.775</td><td>0.88</td><td>0.775</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.1033</td><td>0</td><td>0.0448</td><td>0</td><td>0</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What final terms (minimum billing demand, exit fees) will the MPSC adopt for the Google special contracts in Case U-22058, and will the order arrive by September 10, 2026 as guided?</li>
@@ -543,4 +589,19 @@ GM Energy named DTE a utility partner in turning on vehicle‑to‑grid capabili
 <li>Public sources reference multi‑billion dollar project investments without disclosing exact contract values attributable to DTE.</li>
 <li>Provider mapping associates OpenAI and Google where explicitly named; other hyperscaler references are not attributed to the six specified LLM providers without explicit sourcing.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

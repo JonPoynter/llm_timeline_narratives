@@ -1,0 +1,527 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>IQV US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>IQVIA Holdings Inc <span class='sub'>(IQV US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.422</div>
+</header>
+<div class='stats'>
+<span class='chip'>5 phases</span>
+<span class='chip'>20 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 14</span>
+<span class='chip'>web-only (verified): 12</span>
+<span class='chip'>single source: 7</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Agentic platform launch, earnings traction, and governance scale-up</h2>
+<div class='range'>2026-03-16 → 2026-06-30</div>
+<div class='psum'>IQVIA launched IQVIA.ai at NVIDIA GTC, a unified agentic AI platform built with NVIDIA Nemotron, NeMo Agent Toolkit, Dynamo and LangChain, aimed at secure, responsible adoption across clinical, commercial, and real‑world workflows. The 26Q1 earnings release underscored AI-enabled commercial outperformance, record pipelines tied to healthcare‑grade AI agents, and management’s confidence in competitive positioning.
+Concurrently, IQVIA scaled governance and talent for enterprise generative AI, advertising roles to implement security controls and architecture for tools including Microsoft Copilot, Claude, and ChatGPT, and to build next‑generation foundation‑model initiatives. IQVIA also published market perspectives on generative assistants’ impact on consumer health discovery in multiple languages, indicating client advisory momentum.</div>
+<div class="event t-web_only_verified" id="E0018" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Hiring: AI Security &amp; Governance Architect to manage Copilot/Claude, genAI controls</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">IQVIA sought an AI Security &amp; Governance Architect to ensure security controls and architectural guardrails for enterprise adoption of Microsoft Copilot, Claude, and other generative AI platforms.</p>
+<div class="ev-ch">channels: <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Microsoft Copilot, Claude</span>
+<span class="span">generative AI platforms</span>
+<span class="span">security controls</span>
+<span class="span">architectural guardrails</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0019" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Hiring: AI Consultant (Principal) with ChatGPT/Claude and cloud platform expertise</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">A Principal AI Consultant role called for familiarity with foundation‑model platforms including ChatGPT and Claude, and cloud platforms like AWS, Azure ML, and Databricks to deliver scalable AI solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">AWS, Azure ML, Databricks</span>
+<span class="span">ChatGPT, Claude</span>
+<span class="span">foundation-model platforms</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0020" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Hiring: Associate Principal – AI Consulting for next‑gen foundation model initiatives</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">IQVIA advertised an Associate Principal role to support client‑facing application of next‑generation foundation model initiatives, citing familiarity with ChatGPT and Claude and major cloud platforms.</p>
+<div class="ev-ch">channels: <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">cloud/AI platforms: AWS, Azure ML, Databricks</span>
+<span class="span">ChatGPT, Claude</span>
+<span class="span">next‑generation foundation model initiatives</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0017" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-26</span>
+<span class="eh">IQVIA France: Generative AI assistants reshape consumer health journey</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">An IQVIA France blog described consumers using ChatGPT, Gemini, or Claude for ingredient comparisons and personalized recommendations, noting higher engagement and conversion from conversational assistants.</p>
+<div class="ev-ch">channels: <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">ChatGPT, Gemini ou Claude</span>
+<span class="span">assistants conversationnels</span>
+<span class="span">IA génératives</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">26Q1: Commercial outperformance aided by AI‑enabled offerings</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported Commercial Solutions outperformed expectations, citing AI‑enabled offerings as a contributor across patient solutions, analytics &amp; consulting, and commercial engagement.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Commercial Solutions outperformed expectations</span>
+<span class="span">aided by AI‑enabled offerings</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">26Q1: Healthcare‑grade AI agents tied to record pipelines</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">IQVIA attributed traction to healthcare‑grade AI agents embedded in offerings and noted pipelines were at record levels.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">healthcare‑grade AI agents</span>
+<span class="span">pipelines are at record levels</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">26Q1: No trials lost to AI‑enabled competitors</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated that trials lost to competitors using AI tools were exactly zero, indicating no observed displacement from AI‑enabled rivals in the period.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">trials lost to competitors using AI tools</span>
+<span class="span">exactly zero.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">26Q1: AI expected to increase targets and trials (CRO tailwind)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">IQVIA expects AI to increase the number of targets and trials over time, representing a demand tailwind for CRO services.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">increase the number of targets and trials</span>
+<span class="span">tailwind for CRO demand.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">26Q1: Clients inquire about scaling capacity for more targets</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted some clients asked what it would take to ramp capacity to handle more targets, indicating AI‑driven pipeline expansion interest.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">clients have asked</span>
+<span class="span">ramp capacity to handle more targets.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">26Q1: AI/data privacy regulations flagged as risk</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">IQVIA cautioned that evolving privacy regulations or compliance failures could constrain data access or increase costs for its model relying on large‑scale health data and AI‑enabled offerings.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">evolving privacy regulations</span>
+<span class="span">constrain data access or increase costs.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">26Q1: Management reiterates traction of AI‑enabled offerings</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized traction of AI‑enabled offerings alongside core KPIs like bookings/backlog and book‑to‑bill for the CRO/data &amp; analytics hybrid model.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">bookings/backlog, book‑to‑bill</span>
+<span class="span">traction of AI‑enabled offerings.</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">IQVIA launches IQVIA.ai, a unified agentic AI platform</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">At NVIDIA GTC, IQVIA unveiled IQVIA.ai, combining Healthcare‑grade AI and data with NVIDIA Nemotron, NeMo Agent Toolkit, Dynamo and LangChain to enable responsible, scalable agentic automation.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1], web_search_findings[13]</div>
+<span class="span">IQVIA.ai</span>
+<span class="span">unified agentic AI platform</span>
+<span class="span">NVIDIA Nemotron</span>
+<span class="span">NeMo Agent Toolkit</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Strategic compute/model partners and agent buildout</h2>
+<div class='range'>2025-01-13 → 2025-12-31</div>
+<div class='psum'>IQVIA formed a strategic collaboration with NVIDIA to accelerate Healthcare‑grade AI, leveraging NVIDIA AI Foundry and tooling for agentic automation across the therapeutic lifecycle. It later unveiled custom-built AI agents at GTC Paris using NVIDIA NIM, NeMo Customizer, and Guardrails. IQVIA also announced AWS as its Preferred Agentic Cloud Provider to deploy its AI platform at scale.
+The company introduced Med‑R1, an 8B-parameter biomedical reasoning model, demonstrating competitive small‑model performance relative to larger frontier systems and benchmarked against o3 and Gemini 2.5 Pro. IQVIA additionally analyzed shifts in consumer discovery due to ChatGPT, Copilot, and Gemini, highlighting the rise of Generative Engine Optimization.</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-10</span>
+<span class="eh">IQVIA details Med‑R1 8B biomedical reasoning LLM</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">IQVIA introduced its Med‑R1‑8B model and deep research agent, reporting small‑model performance close to larger systems and benchmarking against Llama 3, o3, and Gemini 2.5 Pro.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">Med-R1-8B</span>
+<span class="span">8 billion-parameter</span>
+<span class="span">Gemini 2.5 Pro (24/50)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-02</span>
+<span class="eh">AWS named IQVIA’s Preferred Agentic Cloud Provider</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">IQVIA selected AWS as its Preferred Agentic Cloud Provider, announcing at re:Invent that it will deploy its AI platform on AWS to scale agentic automation across trials, medical affairs, and analytics.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Preferred Agentic Cloud Provider</span>
+<span class="span">re:Invent</span>
+<span class="span">deploy its AI platform on AWS</span>
+<span class="span">90% of the world’s largest pharmaceutical companies</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-06-24</span>
+<span class="eh">IQVIA analyzes shift to GEO amid ChatGPT, Copilot, Gemini</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">An IQVIA blog highlighted the rise of AI-powered search and Generative Engine Optimization, noting consumer movement toward ChatGPT, Copilot, and Gemini for health information discovery.</p>
+<div class="ev-ch">channels: <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">ChatGPT, Copilot and Gemini</span>
+<span class="span">Generative Engine Optimization</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-11</span>
+<span class="eh">IQVIA unveils NVIDIA-powered AI agents at GTC Paris</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">IQVIA showcased custom-built AI agents designed to enhance workflows across life sciences, built with NVIDIA technology including NIM Agent Blueprints, NeMo Customizer, and NeMo Guardrails.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">AI agents at GTC Paris</span>
+<span class="span">NIM Agent Blueprints</span>
+<span class="span">NeMo Guardrails</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-13</span>
+<span class="eh">IQVIA and NVIDIA partner to accelerate Healthcare‑grade AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">IQVIA and NVIDIA announced a collaboration combining IQVIA Connected Intelligence with the NVIDIA AI Foundry service to scale agentic automation with Healthcare‑grade AI across life sciences.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">NVIDIA AI Foundry service</span>
+<span class="span">IQVIA Connected Intelligence™</span>
+<span class="span">Healthcare-grade AI™</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>First-gen AI productization</h2>
+<div class='range'>2024-10-02 → 2025-01-12</div>
+<div class='psum'>IQVIA introduced the IQVIA AI Assistant, a generative AI interface for analytic insights, built on IQVIA Healthcare‑grade AI. The launch translated IQVIA’s domain data and governance approach into a customer-facing product experience.
+The release marked the firm’s pivot from AI-enablement to direct, conversational interfaces for decision support across life sciences workflows.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-10-02</span>
+<span class="eh">IQVIA launches IQVIA AI Assistant for conversational analytics</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">IQVIA debuted a generative AI assistant providing a conversational text interface to deliver timely, powerful insights to life sciences customers, leveraging IQVIA Healthcare‑grade AI.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">IQVIA AI Assistant</span>
+<span class="span">conversational text interface</span>
+<span class="span">IQVIA Healthcare-grade AI™</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>CRM platform alignment for AI engagement</h2>
+<div class='range'>2024-04-08 → 2024-10-01</div>
+<div class='psum'>IQVIA expanded its strategic partnership with Salesforce to accelerate development of Salesforce’s Life Sciences Cloud, building on the OCE platform. The collaboration emphasizes unifying CRM, AI, and life sciences data on Salesforce’s Einstein 1 Platform.
+This positioned IQVIA to integrate its engagement capabilities with a scaled enterprise AI CRM ecosystem, potentially broadening distribution while also increasing platform interdependence.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-04-08</span>
+<span class="eh">IQVIA and Salesforce expand partnership to advance Life Sciences Cloud</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">IQVIA deepened its collaboration with Salesforce to bring OCE innovations into Salesforce’s Life Sciences Cloud, aligning with the Einstein 1 Platform for AI-enabled HCP engagement.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Salesforce’s Life Sciences Cloud</span>
+<span class="span">Orchestrated Customer Engagement (OCE)</span>
+<span class="span">Einstein 1 Platform</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations and LLM risk framing</h2>
+<div class='range'>2023-03-09 → 2024-04-07</div>
+<div class='psum'>IQVIA’s earliest public commentary in the period focused on opportunities and risks from large language models in clinical settings, explicitly referencing ChatGPT and hallucination concerns. This established an internal awareness of safety, evidence, and validation requirements for generative AI applied to healthcare.
+The period served as groundwork ahead of deeper commercial platform alignment, signaling that IQVIA would approach generative AI with domain guardrails appropriate for regulated life sciences use cases.</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-03-09</span>
+<span class="eh">IQVIA publishes clinical perspective on ChatGPT/LLMs and risk</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">IQVIA outlined opportunities and limitations of ChatGPT and LLMs for clinical use, highlighting hallucination and fabricated citations as key risks that must be mitigated in healthcare contexts.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">ChatGPT</span>
+<span class="span">fabricated a publication</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the specific commercial terms, scope, and duration of the AWS “Preferred Agentic Cloud Provider” collaboration (e.g., committed spend, regions, data residency, and exit provisions)?</li>
+<li>How is IQVIA monetizing IQVIA.ai and the AI Assistant (pricing model, attach rate to existing contracts, and impact on bookings/backlog KPIs)?</li>
+<li>What compute infrastructure (GPU type, capacity, and scheduling) underpins IQVIA.ai and Med‑R1 training/inference, and is there any reserved capacity with NVIDIA/AWS?</li>
+<li>To what extent are external frontier LLMs (e.g., Claude, ChatGPT, Gemini) used in production client workflows versus IQVIA’s own models (e.g., Med‑R1)?</li>
+<li>Have any regulators raised inquiries regarding IQVIA’s AI/data use since the 26Q1 privacy risk disclosure, and what mitigation costs are anticipated?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many sources are IQVIA-authored press releases, blogs, or job postings; independent third-party corroboration and financial magnitudes are limited.</li>
+<li>Partnership announcements (AWS, NVIDIA, Salesforce) do not disclose contract values, term lengths, or exclusivity, constraining assessment of dependency duration and commitment strength.</li>
+<li>Mentions of ChatGPT, Claude, and Gemini in blogs and job descriptions indicate ecosystem engagement but not necessarily production integrations.</li>
+<li>Competitive claims (e.g., no trials lost to AI-enabled competitors) are management assertions from a single quarterly disclosure.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

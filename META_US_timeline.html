@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Meta Platforms Inc <span class='sub'>(META US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.374</div>
@@ -73,1143 +83,47 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (verified): 3</span>
 <span class='chip'>web-only (unverified): 2</span>
 </div>
-<div class='phase'>
-<h2>Open LLaMA era and cross-platform seeding</h2>
-<div class='range'>2023-02-24 → 2024-12-06</div>
-<div class='psum'>Meta initiated its modern AI push with the research release of LLaMA 1 in early 2023, followed by a weights leak that catalyzed widespread experimentation. In mid-2023, Meta broadened distribution by launching Llama 2 and aligning with Microsoft to make open-weight models available on Azure and Windows, while also integrating Bing into Meta AI chat experiences across WhatsApp, Messenger, and Instagram to enhance real-time answers. 
-Throughout 2024, Meta scaled its open model cadence: Llama 3 shipped (8B/70B), then Llama 3.1 and 3.2, culminating with Llama 3.3 70B. Distribution expanded to Amazon Bedrock and Google Vertex AI, reinforcing an open, multi-cloud strategy. Meanwhile, Meta joined industry initiatives like the AI Alliance and signed a deepfakes election pact. Financially, management lifted 2024 capex toward $35–40B to accelerate AI infrastructure. Apple reportedly rejected a Meta partnership in June 2024, signaling competitive friction with platform gatekeepers.</div>
-<div class="event t-single_source" id="E0001">
-<div class="ev-top">
-<span class="date">2023-02-24</span>
-<span class="eh">Meta releases LLaMA 1 for research use</span>
-<span class="badge">model_release</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta released LLaMA 1 under a research-only license, marking the start of its modern open-weight LLM strategy.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[17]</div>
-<span class="span">LLaMA 1 released</span>
-<span class="span">research-only</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0002">
-<div class="ev-top">
-<span class="date">2023-03-03</span>
-<span class="eh">LLaMA 1 weights leak sparks uncontrolled proliferation</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Within days of release, LLaMA 1 weights leaked online via a torrent, accelerating community access beyond Meta’s intended scope.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[16]</div>
-<span class="span">weights leaked via 4chan torrent</span>
-<span class="span">LLaMA 1</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0003">
-<div class="ev-top">
-<span class="date">2023-07-18</span>
-<span class="eh">Llama 2 launches; Microsoft to host on Azure and Windows</span>
-<span class="badge">model_release</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta launched Llama 2 with commercial terms and expanded distribution via Microsoft Azure and Windows, positioning open models for broad developer use.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[15], web_search_findings[0]</div>
-<span class="span">Llama 2</span>
-<span class="span">on Azure and Windows</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0004">
-<div class="ev-top">
-<span class="date">2023-09-27</span>
-<span class="eh">Bing integrated into Meta AI chat for real‑time answers</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Microsoft’s Bing was integrated into Meta AI and other AIs in WhatsApp, Messenger, and Instagram to provide up-to-date search results within chat experiences.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">integrate Bing into Meta AI’s chat experiences</span>
-<span class="span">WhatsApp, Messenger, and Instagram</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0005">
-<div class="ev-top">
-<span class="date">2023-12-04</span>
-<span class="eh">IBM and Meta launch the AI Alliance</span>
-<span class="badge">other</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Meta co-launched the AI Alliance with IBM and dozens of founding members to advance open, safe, responsible AI.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[7]</div>
-<span class="span">AI Alliance</span>
-<span class="span">IBM and Meta</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0006">
-<div class="ev-top">
-<span class="date">2024-02-16</span>
-<span class="eh">Meta signs election deepfake mitigation pact</span>
-<span class="badge">regulatory</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Meta joined a voluntary industry pact to take precautions against AI-generated election deepfakes, reflecting sector cooperation ahead of global elections.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span">pact to combat AI-generated election deepfakes</span>
-<span class="span">Meta</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0007">
-<div class="ev-top">
-<span class="date">2024-04-18</span>
-<span class="eh">Meta releases Llama 3 (8B/70B) and updates Meta AI assistant</span>
-<span class="badge">model_release</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Llama 3 debuted with 8B and 70B parameter models; Meta AI assistant built on Llama 3 broadened availability across platforms.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[14], web_search_findings[4]</div>
-<span class="span">Meta Llama 3</span>
-<span class="span">8B and 70B</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0008">
-<div class="ev-top">
-<span class="date">2024-04-23</span>
-<span class="eh">Llama 3 available in Amazon Bedrock</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">AWS announced general availability of Meta’s Llama 3 models in Amazon Bedrock, expanding enterprise access via AWS regions.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">Meta’s Llama 3 models</span>
-<span class="span">Amazon Bedrock</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0009">
-<div class="ev-top">
-<span class="date">2024-04-24</span>
-<span class="eh">2024 capex guidance lifted to $35–40B to accelerate AI</span>
-<span class="badge">financing</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$35.0B · capex</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta raised 2024 capex guidance to $35–40B to accelerate AI infrastructure, flagging further increases in 2025.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">range of $35-40 billion</span>
-<span class="span">accelerate our infrastructure investments</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0010">
-<div class="ev-top">
-<span class="date">2024-06-24</span>
-<span class="eh">Apple reportedly rejects Meta partnership</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Reports indicated Apple rejected a partnership with Meta, underscoring competitive dynamics and distribution constraints for Meta’s AI.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">frontier_events[13]</div>
-<span class="span">Apple reportedly rejects Meta partnership</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0011">
-<div class="ev-top">
-<span class="date">2024-07-23</span>
-<span class="eh">Llama 3.1 ships; 405B parameter model announced</span>
-<span class="badge">model_release</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta released Llama 3.1 and announced a 405B parameter model, pushing scale of its open-weight roadmap.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[12]</div>
-<span class="span">405B parameter model</span>
-<span class="span">Llama 3.1</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0012">
-<div class="ev-top">
-<span class="date">2024-09-25</span>
-<span class="eh">Llama 3.2 available on Google Cloud Vertex AI</span>
-<span class="badge">product_integration</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Google announced support for Llama 3.2 on Vertex AI Model Garden, extending Meta’s multi-cloud distribution alongside prior open releases.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[9], frontier_events[11]</div>
-<span class="span">Llama 3.2</span>
-<span class="span">Vertex AI Model Garden</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0013">
-<div class="ev-top">
-<span class="date">2024-12-06</span>
-<span class="eh">Llama 3.3 70B released</span>
-<span class="badge">model_release</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta shipped Llama 3.3 with a 70B parameter variant, continuing its cadence of large open-weight models.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[10]</div>
-<span class="span">Llama 3.3 70B</span>
-<span class="span">released</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Superclusters, Scale AI stake, and 2025 platform escalations</h2>
-<div class='range'>2025-04-05 → 2025-12-04</div>
-<div class='psum'>In 2025, Meta highlighted long-horizon compute and model ambitions: Llama 4 was announced (with Behemoth ~2T discussed), and Zuckerberg revealed Prometheus (1 GW) and Hyperion (to 5 GW) superclusters. Meta finalized a roughly $14.3B equity stake tied to Scale AI while recruiting founder Alexandr Wang into its superintelligence efforts. 
-The year also saw shifts in commercial posture and dependency: reports suggested Meta could rent Google TPUs, while partners like EssilorLuxottica experienced surging demand for Ray‑Ban Meta wearables. Financially, investors oscillated over higher spend vs. growth prospects as Meta navigated tax charges and ongoing platform investment, while signals of spend discipline included reports of metaverse budget reductions.</div>
-<div class="event t-single_source" id="E0014">
-<div class="ev-top">
-<span class="date">2025-04-05</span>
-<span class="eh">Meta previews Llama 4 and teases Behemoth (~2T)</span>
-<span class="badge">model_release</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta disclosed plans for Llama 4 (Scout, Maverick) and referenced a Behemoth model at ~2T parameters, indicating next-wave scale targets.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[9]</div>
-<span class="span">Llama 4 (Scout, Maverick)</span>
-<span class="span">Behemoth (~2T)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0015">
-<div class="ev-top">
-<span class="date">2025-06-13</span>
-<span class="eh">Meta finalizes ~$14.3B Scale AI stake; Alexandr Wang joins effort</span>
-<span class="badge">equity</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$14.3B · equity_stake</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta closed a roughly $14.3B equity stake associated with Scale AI, with founder Alexandr Wang joining Meta’s superintelligence initiative.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[8]</div>
-<span class="span">roughly $14.3B</span>
-<span class="span">Alexandr Wang</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0016">
-<div class="ev-top">
-<span class="date">2025-07-15</span>
-<span class="eh">Prometheus (1GW) and Hyperion (to 5GW) superclusters announced</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$5 · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta unveiled major AI datacenter plans—Prometheus (1GW, online 2026) and Hyperion (scaling to 5GW)—as part of the Superintelligence Labs buildout.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[7]</div>
-<span class="span">Prometheus (1GW, online 2026)</span>
-<span class="span">Hyperion (scaling to 5GW)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0017">
-<div class="ev-top">
-<span class="date">2025-10-17</span>
-<span class="eh">EssilorLuxottica surges on Ray‑Ban Meta wearables momentum</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">EssilorLuxottica’s record day on Q3 beat cited capacity ramp for Ray‑Ban Meta wearables, signaling strong demand for Meta-linked devices.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[34]</div>
-<span class="span">Ray-Ban Meta wearables</span>
-<span class="span">shares +14% intraday to record</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0018">
-<div class="ev-top">
-<span class="date">2025-10-29</span>
-<span class="eh">Record revenue overshadowed by $15.93B tax charge and higher spend</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$15.9B · other</span> <span class="badge">mixed</span></div>
-<p class="narr">Despite a revenue beat, a $15.93B non-cash tax charge and higher spend outlook drove a negative stock reaction, raising margin concerns.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[33]</div>
-<span class="span">15.93b non-cash tax charge</span>
-<span class="span">higher future spend</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0019">
-<div class="ev-top">
-<span class="date">2025-11-25</span>
-<span class="eh">Report: Meta may rent Google Cloud TPUs</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Reuters reported Meta could rent Google Cloud TPUs in 2026 as part of cross-cloud AI infrastructure sourcing.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[32]</div>
-<span class="span">TPUs rented via Google Cloud</span>
-<span class="span">next year</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0020">
-<div class="ev-top">
-<span class="date">2025-12-04</span>
-<span class="eh">Reports of deep metaverse budget cuts</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Meta shares rose on reports of up to 30% cuts to metaverse spend, signaling capital reallocation toward higher-return AI efforts.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[31]</div>
-<span class="span">deep cuts to metaverse budget</span>
-<span class="span">up to 30 percent</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>2026 acceleration: capex surge, multi-supplier chips, infra and creator AI</h2>
 <div class='range'>2026-01-09 → 2026-06-24</div>
 <div class='psum'>Meta entered 2026 with sweeping AI infrastructure commitments and monetization bets. Q4 2025 disclosures set 2026 capex at $115–135B, with management stating Meta remained compute‑constrained and would bridge via third‑party cloud. Early 2026 brought blockbuster chip and infra alignments across Nvidia, AMD (including a 6GW scope), Broadcom (multi‑year, $35B; initial 1GW), AWS Graviton adoption, and large AI capacity contracts with CoreWeave and Nebius. Energy sourcing broadened from SMR‑based nuclear (Oklo, 1.2 GW) to space‑solar (up to 1 GW equivalent), and a 168 MW lease in Jamnagar, India (Reliance). 
 Product momentum included the first model from Meta Superintelligence Labs (Muse Spark), creator‑facing assistants across Facebook/Instagram, Business Agent on WhatsApp, and new wearables. Risks surfaced via a publisher lawsuit over Llama training, an AI support chatbot exploit on Instagram, removal of facial-recognition code from smart‑glasses, internal unrest, and a China-driven unwind of the Manus acquisition. Financially, Meta raised capex again to $125–145B in Q1, floated a potential equity raise per media reports, and issued $25B in bonds; shares were volatile on spend signals.</div>
-<div class="event t-single_source" id="E0021">
+<div class="event t-single_source" id="E0073" data-providers="meta_llama">
 <div class="ev-top">
-<span class="date">2026-01-28</span>
-<span class="eh">FY2026 capex set at $115–135B to fund AI infrastructure</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$115.0B · capex</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta guided 2026 capex to $115–135B for AI infrastructure and core business, while still expecting operating income above 2025.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">FY2026 capex expected at $115–135B</span>
-<span class="span">AI infrastructure (Meta Superintelligence Labs)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0022">
-<div class="ev-top">
-<span class="date">2026-01-28</span>
-<span class="eh">Expense outlook: infra and AI-focused hiring drive FY2026 opex</span>
-<span class="badge">personnel</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Management cited infrastructure costs and AI-focused hiring as primary drivers of FY2026 total expenses of $162–169B.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">FY2026 total expenses of $162–169B</span>
-<span class="span">AI-focused hiring</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0023">
-<div class="ev-top">
-<span class="date">2026-01-28</span>
-<span class="eh">Compute-constrained; adding third‑party cloud as bridge</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Meta said it remains capacity‑constrained through much of 2026 and will add third‑party cloud capacity as interim relief.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">capacity‑constrained</span>
-<span class="span">third‑party cloud</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0024">
-<div class="ev-top">
-<span class="date">2026-01-28</span>
-<span class="eh">Evaluating build vs. cloud to stand up capacity</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Meta reaffirmed $115–135B 2026 capex and said it continues evaluating build vs. cloud and other paths to add capacity.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">build vs. cloud</span>
-<span class="span">$115–135B for 2026</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0025">
-<div class="ev-top">
-<span class="date">2026-01-28</span>
-<span class="eh">Zuckerberg: need leading general‑purpose model capabilities</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Leadership underscored the importance of having leading general‑purpose models to shape Meta’s future product roadmap.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">quite important</span>
-<span class="span">leading general‑purpose model</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0026">
-<div class="ev-top">
-<span class="date">2026-01-28</span>
-<span class="eh">GEM extended to Facebook Reels; training cluster doubled</span>
+<span class="date">2026-06-24</span>
+<span class="eh">Facebook Creator Studio reimagined as standalone AI companion app</span>
 <span class="badge">product_integration</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta extended GEM to Reels and doubled its training cluster size; in 2026 it plans further LLM integration into recommendation systems.</p>
+<p class="narr">Meta began testing a standalone AI companion app for creators, integrating personalized recommendations and AI‑powered comment tools.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>5</b></span> <span class="chchip">customer_experience_enhancement · LLA <b>5</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">GEM was extended to Facebook Reels</span>
-<span class="span">training cluster size doubled</span>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">standalone AI companion app</span>
+<span class="span">testing with select users</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0027">
+<div class="event t-single_source" id="E0074" data-providers="">
 <div class="ev-top">
-<span class="date">2026-01-28</span>
-<span class="eh">Meta AI available in over 200 markets</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Management reported Meta AI availability in 200+ markets, with regional usage differences across apps.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">over 200 markets</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0028">
-<div class="ev-top">
-<span class="date">2026-01-28</span>
-<span class="eh">Q4 capex $22.14B; FY capex $72.22B</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$22.1B · capex</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta disclosed $22.14B capex in Q4 and $72.22B for FY2025 including finance lease principal, reflecting accelerated AI infra spend.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Capital expenditures (incl. finance lease principal): $22.14B in Q4</span>
-<span class="span">$72.22B FY</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0029">
-<div class="ev-top">
-<span class="date">2026-01-28</span>
-<span class="eh">Liquidity and leverage context: $81.59B cash; $58.74B LT debt</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$58.7B · loan</span> <span class="badge">neutral</span></div>
-<p class="narr">Meta reported $81.59B in cash and marketable securities and $58.74B in long‑term debt, providing context for funding the AI buildout.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Cash, cash equivalents, and marketable securities: $81.59B</span>
-<span class="span">Long‑term debt: $58.74B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0030">
-<div class="ev-top">
-<span class="date">2026-01-28</span>
-<span class="eh">Meta expects to remain compute‑constrained; will add cloud near‑term</span>
+<span class="date">2026-06-24</span>
+<span class="eh">Qualcomm names Meta as first Dragonfly data‑center CPU customer</span>
 <span class="badge">infra_deal</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Meta reiterated it expects to remain compute‑constrained through much of 2026, with near‑term relief from added cloud capacity.</p>
+<p class="narr">Qualcomm announced Meta as a first named customer for its Dragonfly data‑center CPU under a multi‑generation supply agreement.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">remain compute‑constrained</span>
-<span class="span">added cloud capacity</span>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">Dragonfly data‑center CPU</span>
+<span class="span">multi‑generation supply agreement</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0031">
-<div class="ev-top">
-<span class="date">2026-01-09</span>
-<span class="eh">Oklo deal to develop 1.2 GW Ohio nuclear campus</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$1 · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta partnered with Oklo on a 1.2 GW nuclear campus in Ohio to power AI data centers, validating SMR timelines and energy strategy.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[30]</div>
-<span class="span">1.2 GW</span>
-<span class="span">Ohio nuclear campus</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0032">
-<div class="ev-top">
-<span class="date">2026-01-27</span>
-<span class="eh">Corning inks multiyear Meta fiber deal up to $6B</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$6.0B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Corning announced a U.S. data-center optical supply pact with Meta valued up to $6B, supporting AI buildout interconnect.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[29]</div>
-<span class="span">multiyear Meta fiber deal up to 6B</span>
-<span class="span">optical</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0033">
-<div class="ev-top">
-<span class="date">2026-01-29</span>
-<span class="eh">META jumps on Q4 beat and higher 2026 AI capex guide</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Meta shares rose after a Q4 beat and a capex guide of $115–135B for 2026, reinforcing AI investment ramp.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[28]</div>
-<span class="span">capex guide 115b to 135b for 2026</span>
-<span class="span">META +10.4 percent close</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0034">
-<div class="ev-top">
-<span class="date">2026-02-18</span>
-<span class="eh">Meta to deploy millions of Nvidia AI chips and networking gear</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">An expanded multiyear pact with Nvidia signaled large-scale GPU and networking deployments for Meta’s training and inference needs.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[27]</div>
-<span class="span">millions of its AI chips</span>
-<span class="span">networking gear</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0035">
-<div class="ev-top">
-<span class="date">2026-02-24</span>
-<span class="eh">AMD pact includes performance-based warrant; scope up to 6GW</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$6 · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">AMD disclosed a Meta AI infrastructure pact with a performance-based warrant (up to 160M shares) and deployments scoped up to 6GW of Instinct GPUs.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[26]</div>
-<span class="span">160M-share warrant</span>
-<span class="span">up to 6GW</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0036">
-<div class="ev-top">
-<span class="date">2026-03-16</span>
-<span class="eh">Nebius contract headlines: up to $27b over five years</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$27.0B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">AP reported Dutch AI cloud firm Nebius spiked on Meta contract headlines valued up to $27b over five years, indicating diversified capacity sourcing.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[25]</div>
-<span class="span">up to 27b</span>
-<span class="span">five years</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0037">
-<div class="ev-top">
-<span class="date">2026-04-09</span>
-<span class="eh">CoreWeave inks $21B AI capacity deal with Meta</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$21.0B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">AP reported a $21B AI capacity deal between CoreWeave and Meta, reinforcing external compute procurement at scale.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[24]</div>
-<span class="span">21 billion</span>
-<span class="span">AI capacity deal</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0038">
-<div class="ev-top">
-<span class="date">2026-04-13</span>
-<span class="eh">eMarketer: Meta set to surpass Google in 2026 ad revenue</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$243.5B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Forecasts suggested Meta could reach ~$243.46B in digital ad revenue vs. Google’s ~$239.54B in 2026, reflecting AI-driven ad performance.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[23]</div>
-<span class="span">243.46b</span>
-<span class="span">239.54b 2026</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0039">
-<div class="ev-top">
-<span class="date">2026-04-15</span>
-<span class="eh">Meta–Broadcom MTIA chip partnership: $35B through 2029; initial 1GW</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$35.0B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta extended its Broadcom AI chip partnership, with an initial 1GW commitment and a reported ~$35B multi‑year scale through 2029.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[22], frontier_events[5]</div>
-<span class="span">initial 1GW commitment</span>
-<span class="span">Meta-Broadcom $35B MTIA chip deal</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0040">
-<div class="ev-top">
-<span class="date">2026-04-15</span>
-<span class="eh">Meta frames ~$135B 2026 AI infrastructure spend</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$135.0B · capex</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta signaled approximately $135B in 2026 AI infrastructure outlays, aligning with heightened compute and data center expansion.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[4]</div>
-<span class="span">announces ~$135B 2026</span>
-<span class="span">AI infrastructure spend</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0041">
-<div class="ev-top">
-<span class="date">2026-04-24</span>
-<span class="eh">Meta to adopt hundreds of thousands of AWS Graviton chips</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">CNBC reported Meta will adopt large volumes of AWS’s Arm-based Graviton chips, broadening its compute supplier base.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[21]</div>
-<span class="span">hundreds of thousands</span>
-<span class="span">AWS Graviton chips</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0042">
-<div class="ev-top">
-<span class="date">2026-04-27</span>
-<span class="eh">Overview Energy space‑solar PPA framework up to 1 GW equivalent</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$1 · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta inked an agreement framework with Overview Energy to beam solar from orbit to grids serving data centers, targeting up to 1 GW equivalent by decade’s end.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[20]</div>
-<span class="span">space‑solar power</span>
-<span class="span">up to 1 GW equivalent</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0043">
-<div class="ev-top">
-<span class="date">2026-04-30</span>
-<span class="eh">Meta raises $25B via bond sale post capex plan lift</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$25.0B · loan</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Following an increased AI spending plan, Meta issued $25B in bonds to support capex and infrastructure programs.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[3]</div>
-<span class="span">Meta raises $25B</span>
-<span class="span">bond sale</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0044">
-<div class="ev-top">
-<span class="date">2026-04-30</span>
-<span class="eh">Shares fall on raised 2026 capex outlook</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Bloomberg noted META shares fell 6–8% after-hours as investors digested the raised 2026 capex outlook despite a revenue beat.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[19]</div>
-<span class="span">raising 2026 capex outlook</span>
-<span class="span">down 6–8 percent</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0045">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">First Meta Superintelligence Labs model ships (Muse Spark)</span>
-<span class="badge">model_release</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta reported release of the first model from Meta Superintelligence Labs; Muse Spark was introduced as part of the AI roadmap.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0], frontier_events[6]</div>
-<span class="span">first model from Meta Superintelligence Labs</span>
-<span class="span">Muse Spark</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0046">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">FY2026 capex guidance raised to $125–145B on components and DC costs</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$125.0B · capex</span> <span class="badge">mixed</span></div>
-<p class="narr">Meta raised FY2026 capex guidance to $125–145B, citing higher component pricing and additional data center costs.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">$125–145B</span>
-<span class="span">higher component pricing</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0047">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Q1 2026 capex was $19.84B</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$19.8B · capex</span> <span class="badge">neutral</span></div>
-<p class="narr">Meta reported Q1 capital expenditures, including finance lease principal payments, of $19.84B.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Capital expenditures (incl. principal payments on finance leases) $19.84B in Q1.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0048">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Business AIs currently free; monetization model to come</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management reiterated Business AIs are currently free for most messaging app businesses, with monetization to follow over time.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">currently free</span>
-<span class="span">monetization model</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0049">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Muse Spark and Meta AI upgrades referenced on call</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta referenced the release of Muse Spark and upgrades to Meta AI as part of its product roadmap.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">release of “Muse Spark”</span>
-<span class="span">upgrades to Meta AI</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0050">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Larger models routed to high‑value ads within latency limits</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta described advancing inference architectures and routing higher‑value opportunities to more compute‑intensive models while meeting latency constraints.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">routing higher-value opportunities</span>
-<span class="span">within latency constraints</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0051">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Flexibility to pace deployments and spend</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Management emphasized flexibility to modulate deployments and spending if capacity exceeds near-term needs.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">flexibility to pace deployments</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0052">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Business AIs to expand geographically in Q2; monetization after scale</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Meta plans geographic expansion for Business AIs in Q2, with paid services or commission-like monetization after usage and utility mature.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">expand geographically in Q2</span>
-<span class="span">paid services or commission-like</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0053">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Q1 operating cash flow $32.23B; free cash flow $12.39B</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$12.4B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta generated $32.23B in operating cash flow and $12.39B in free cash flow in Q1, supporting the AI investment cycle.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Operating cash flow $32.23B</span>
-<span class="span">free cash flow $12.39B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0054">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Raised AI infra capex elevates FCF/ROI risk</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Meta flagged that raising FY2026 capex to $125–145B heightens free‑cash‑flow risk and ROI hurdles if revenue growth or monetization lags.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">capex guidance was raised to $125–145B</span>
-<span class="span">free‑cash‑flow risk</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0055">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">AI tools driving internal productivity</span>
-<span class="badge">personnel</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management said AI tools are substantially increasing internal productivity and that structure will be evaluated for efficiency.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">substantially increase productivity</span>
-<span class="span">no staffing targets</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0056">
-<div class="ev-top">
-<span class="date">2026-05-18</span>
-<span class="eh">Meta to lay off ~8,000 amid AI capex surge</span>
-<span class="badge">personnel</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Reports indicated Meta would cut around 8,000 jobs to fund AI infrastructure, reflecting an opex reset alongside heavy capex.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[18]</div>
-<span class="span">~8000 layoffs</span>
-<span class="span">AI capex surge</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0057">
-<div class="ev-top">
-<span class="date">2026-05-22</span>
-<span class="eh">Meta backs $125m UCLA chip hub with industry partners</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$125M · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta joined Broadcom, Applied Materials, GlobalFoundries, and Synopsys to back a $125m UCLA AI semiconductor hub focused on workforce and research.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[17]</div>
-<span class="span">125m UCLA chip hub</span>
-<span class="span">Workforce</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0058">
-<div class="ev-top">
-<span class="date">2026-05-28</span>
-<span class="eh">Meta signals cloud business optionality if excess capacity</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Meta indicated it could offer a cloud business if it has excess AI capacity, opening a potential monetization lever on infra spend.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[16]</div>
-<span class="span">cloud business is on the table</span>
-<span class="span">excess AI capacity</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0059">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Meta Business Agent launches globally on WhatsApp; token pricing for large accounts</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta rolled out its customer-support AI globally on WhatsApp and expanded to Instagram DMs, introducing a Business Agent Platform and token-based pricing for large enterprises.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[15]</div>
-<span class="span">Meta Business Agent</span>
-<span class="span">token-based pricing</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0060">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Muse Spark API rollout delayed; no firm date yet</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Reports said Meta repeatedly delayed the developer release of its Muse Spark model/API, with no firm date as of early June.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[14]</div>
-<span class="span">delays developer rollout</span>
-<span class="span">no firm date</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0061">
-<div class="ev-top">
-<span class="date">2026-06-04</span>
-<span class="eh">AI creator assistant launches on Facebook in U.S., Canada, and India</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta launched a conversational AI creator assistant embedded in Facebook’s creator dashboard, initially rolling out to the U.S., Canada, and India.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[12]</div>
-<span class="span">AI creator assistant</span>
-<span class="span">U.S., Canada and India</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0062">
-<div class="ev-top">
-<span class="date">2026-06-05</span>
-<span class="eh">Report: Meta weighs multibillion-dollar stock sale to fund AI capex</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Media citing the FT reported Meta is considering raising tens of billions via a stock offering to finance AI infrastructure, noting 2026 AI capex could reach up to $145B.</p>
-<p class="cav">⚠ Single‑source FT reporting referenced; no official Meta confirmation in cited source.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[10]</div>
-<span class="span">tens of billions of dollars via a stock offering</span>
-<span class="span">up to $145 billion in 2026</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0063">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">AI support chatbot flaw enabled Instagram account takeovers; patched</span>
-<span class="badge">risk</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">A flaw in Meta’s AI-powered support system let attackers change Instagram recovery emails to seize accounts; Meta said the issue was resolved and impacted accounts were being secured.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[11], frontier_events[1]</div>
-<span class="span">AI-powered support system</span>
-<span class="span">change the recovery email</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0064">
-<div class="ev-top">
-<span class="date">2026-06-08</span>
-<span class="eh">Meta removes facial-recognition code (&#x27;NameTag&#x27;) from companion app</span>
-<span class="badge">regulatory</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">After reports, Meta stripped exploratory NameTag facial-recognition components from the Meta AI companion app build for smart‑glasses.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[8]</div>
-<span class="span">removes facial-recognition code</span>
-<span class="span">NameTag</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0065">
-<div class="ev-top">
-<span class="date">2026-06-08</span>
-<span class="eh">Meta launches America’s Workforce Academy with $115M first‑year investment</span>
-<span class="badge">personnel</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$115M · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta introduced a cost‑free skilled‑trades training program backed by $115M, guaranteeing job offers for graduates to staff data center buildout.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[9]</div>
-<span class="span">$115 million</span>
-<span class="span">guarantees job offers</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0066">
-<div class="ev-top">
-<span class="date">2026-06-10</span>
-<span class="eh">Meta to lease 168 MW AI-enabled data center in Jamnagar with Reliance</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$168 · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta and Reliance announced an agreement for a renewable‑powered, AI‑enabled 168 MW data center in Jamnagar, India, targeted for delivery in ~2 years.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[7], frontier_events[0]</div>
-<span class="span">168 MW</span>
-<span class="span">Jamnagar</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0067">
-<div class="ev-top">
-<span class="date">2026-06-11</span>
-<span class="eh">Instagram’s Edits app: AI assistant previewed; desktop version coming</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Meta previewed an AI assistant for Edits and announced a desktop version is coming, alongside new creator analytics features.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[6]</div>
-<span class="span">Edits AI assistant</span>
-<span class="span">desktop version</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0068">
-<div class="ev-top">
-<span class="date">2026-06-12</span>
-<span class="eh">Internal unrest in Applied AI unit surfaces in reports</span>
-<span class="badge">personnel</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Wired detailed a tense environment in a three‑month‑old Applied AI unit of ~6,500 staff, citing a livestream outburst, ‘soul‑crushing’ tasks, and internal petitions.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[4]</div>
-<span class="span">Applied AI unit</span>
-<span class="span">about 6,500 engineers</span>
-<span class="span">soul‑crushing</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0069">
-<div class="ev-top">
-<span class="date">2026-06-11</span>
-<span class="eh">Meta begins unwinding ~$2B Manus acquisition after Beijing order</span>
-<span class="badge">regulatory</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · equity_stake</span> <span class="badge">negative_displacement</span></div>
-<p class="narr">Meta split operations from Manus and halted data sharing to comply with Chinese regulators’ April unwind order of its roughly $2B acquisition.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[5]</div>
-<span class="span">unwinding $2B Manus acquisition</span>
-<span class="span">stop using Manus tools</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0070">
-<div class="ev-top">
-<span class="date">2026-06-13</span>
-<span class="eh">Rapid‑deployment data‑center tents in Ohio; ~200 MW gas turbines</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$200 · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Meta erected six large ‘rapid deployment’ tent structures in New Albany, Ohio, with nearby modular gas turbines (~200 MW) to speed AI buildouts.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[13]</div>
-<span class="span">rapid deployment</span>
-<span class="span">New Albany, Ohio</span>
-<span class="span">125,000‑sq‑ft</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0071">
+<div class="event t-single_source" id="E0071" data-providers="meta_llama">
 <div class="ev-top">
 <span class="date">2026-06-15</span>
 <span class="eh">CNBC: Meta under pressure to monetize Muse Spark; layoffs weigh</span>
@@ -1226,39 +140,260 @@ Product momentum included the first model from Meta Superintelligence Labs (Muse
 <span class="span">about $14.3 billion</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0073">
+<div class="event t-single_source" id="E0070" data-providers="">
 <div class="ev-top">
-<span class="date">2026-06-24</span>
-<span class="eh">Facebook Creator Studio reimagined as standalone AI companion app</span>
+<span class="date">2026-06-13</span>
+<span class="eh">Rapid‑deployment data‑center tents in Ohio; ~200 MW gas turbines</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$200 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta erected six large ‘rapid deployment’ tent structures in New Albany, Ohio, with nearby modular gas turbines (~200 MW) to speed AI buildouts.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[13]</div>
+<span class="span">rapid deployment</span>
+<span class="span">New Albany, Ohio</span>
+<span class="span">125,000‑sq‑ft</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0068" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-12</span>
+<span class="eh">Internal unrest in Applied AI unit surfaces in reports</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Wired detailed a tense environment in a three‑month‑old Applied AI unit of ~6,500 staff, citing a livestream outburst, ‘soul‑crushing’ tasks, and internal petitions.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[4]</div>
+<span class="span">Applied AI unit</span>
+<span class="span">about 6,500 engineers</span>
+<span class="span">soul‑crushing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0067" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-11</span>
+<span class="eh">Instagram’s Edits app: AI assistant previewed; desktop version coming</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Meta previewed an AI assistant for Edits and announced a desktop version is coming, alongside new creator analytics features.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[6]</div>
+<span class="span">Edits AI assistant</span>
+<span class="span">desktop version</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0069" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-11</span>
+<span class="eh">Meta begins unwinding ~$2B Manus acquisition after Beijing order</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · equity_stake</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Meta split operations from Manus and halted data sharing to comply with Chinese regulators’ April unwind order of its roughly $2B acquisition.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">unwinding $2B Manus acquisition</span>
+<span class="span">stop using Manus tools</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0066" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">Meta to lease 168 MW AI-enabled data center in Jamnagar with Reliance</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$168 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta and Reliance announced an agreement for a renewable‑powered, AI‑enabled 168 MW data center in Jamnagar, India, targeted for delivery in ~2 years.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[7], frontier_events[0]</div>
+<span class="span">168 MW</span>
+<span class="span">Jamnagar</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0064" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">Meta removes facial-recognition code (&#x27;NameTag&#x27;) from companion app</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">After reports, Meta stripped exploratory NameTag facial-recognition components from the Meta AI companion app build for smart‑glasses.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[8]</div>
+<span class="span">removes facial-recognition code</span>
+<span class="span">NameTag</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0065" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">Meta launches America’s Workforce Academy with $115M first‑year investment</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$115M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta introduced a cost‑free skilled‑trades training program backed by $115M, guaranteeing job offers for graduates to staff data center buildout.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[9]</div>
+<span class="span">$115 million</span>
+<span class="span">guarantees job offers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0062" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">Report: Meta weighs multibillion-dollar stock sale to fund AI capex</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Media citing the FT reported Meta is considering raising tens of billions via a stock offering to finance AI infrastructure, noting 2026 AI capex could reach up to $145B.</p>
+<p class="cav">⚠ Single‑source FT reporting referenced; no official Meta confirmation in cited source.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[10]</div>
+<span class="span">tens of billions of dollars via a stock offering</span>
+<span class="span">up to $145 billion in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0061" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">AI creator assistant launches on Facebook in U.S., Canada, and India</span>
 <span class="badge">product_integration</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Meta began testing a standalone AI companion app for creators, integrating personalized recommendations and AI‑powered comment tools.</p>
+<p class="narr">Meta launched a conversational AI creator assistant embedded in Facebook’s creator dashboard, initially rolling out to the U.S., Canada, and India.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>5</b></span> <span class="chchip">customer_experience_enhancement · LLA <b>5</b></span> <span class="chchip">user_lock_in_relevance · LLA <b>5</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[0]</div>
-<span class="span">standalone AI companion app</span>
-<span class="span">testing with select users</span>
+<div class="ev-src">news_rows[12]</div>
+<span class="span">AI creator assistant</span>
+<span class="span">U.S., Canada and India</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0074">
+<div class="event t-single_source" id="E0059" data-providers="meta_llama">
 <div class="ev-top">
-<span class="date">2026-06-24</span>
-<span class="eh">Qualcomm names Meta as first Dragonfly data‑center CPU customer</span>
-<span class="badge">infra_deal</span>
+<span class="date">2026-06-03</span>
+<span class="eh">Meta Business Agent launches globally on WhatsApp; token pricing for large accounts</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta rolled out its customer-support AI globally on WhatsApp and expanded to Instagram DMs, introducing a Business Agent Platform and token-based pricing for large enterprises.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>5</b></span> <span class="chchip">enterprise_adoption_exposure · LLA <b>5</b></span> <span class="chchip">user_lock_in_relevance · LLA <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[15]</div>
+<span class="span">Meta Business Agent</span>
+<span class="span">token-based pricing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0060" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Muse Spark API rollout delayed; no firm date yet</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Reports said Meta repeatedly delayed the developer release of its Muse Spark model/API, with no firm date as of early June.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[14]</div>
+<span class="span">delays developer rollout</span>
+<span class="span">no firm date</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0063" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">AI support chatbot flaw enabled Instagram account takeovers; patched</span>
+<span class="badge">risk</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">A flaw in Meta’s AI-powered support system let attackers change Instagram recovery emails to seize accounts; Meta said the issue was resolved and impacted accounts were being secured.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[11], frontier_events[1]</div>
+<span class="span">AI-powered support system</span>
+<span class="span">change the recovery email</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0058" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Meta signals cloud business optionality if excess capacity</span>
+<span class="badge">other</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Qualcomm announced Meta as a first named customer for its Dragonfly data‑center CPU under a multi‑generation supply agreement.</p>
+<p class="narr">Meta indicated it could offer a cloud business if it has excess AI capacity, opening a potential monetization lever on infra spend.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[1]</div>
-<span class="span">Dragonfly data‑center CPU</span>
-<span class="span">multi‑generation supply agreement</span>
+<div class="ev-src">news_rows[16]</div>
+<span class="span">cloud business is on the table</span>
+<span class="span">excess AI capacity</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0075">
+<div class="event t-single_source" id="E0057" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-22</span>
+<span class="eh">Meta backs $125m UCLA chip hub with industry partners</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$125M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta joined Broadcom, Applied Materials, GlobalFoundries, and Synopsys to back a $125m UCLA AI semiconductor hub focused on workforce and research.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[17]</div>
+<span class="span">125m UCLA chip hub</span>
+<span class="span">Workforce</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0056" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">Meta to lay off ~8,000 amid AI capex surge</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Reports indicated Meta would cut around 8,000 jobs to fund AI infrastructure, reflecting an opex reset alongside heavy capex.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[18]</div>
+<span class="span">~8000 layoffs</span>
+<span class="span">AI capex surge</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0075" data-providers="meta_llama">
 <div class="ev-top">
 <span class="date">2026-05-05</span>
 <span class="eh">Major publishers sue Meta over Llama training data</span>
@@ -1267,6 +402,7 @@ Product momentum included the first model from Meta Superintelligence Labs (Muse
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">meta_llama</span></div>
 <p class="narr">Five major publishers and author Scott Turow filed a class action in SDNY alleging Meta used millions of copyrighted works to train Llama.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk · LLA <b>0</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">frontier_events[2]</div>
@@ -1274,31 +410,963 @@ Product momentum included the first model from Meta Superintelligence Labs (Muse
 <span class="span">filed a class action</span>
 </details>
 </div>
+<div class="event t-single_source" id="E0043" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Meta raises $25B via bond sale post capex plan lift</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$25.0B · loan</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Following an increased AI spending plan, Meta issued $25B in bonds to support capex and infrastructure programs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[3]</div>
+<span class="span">Meta raises $25B</span>
+<span class="span">bond sale</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0044" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Shares fall on raised 2026 capex outlook</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Bloomberg noted META shares fell 6–8% after-hours as investors digested the raised 2026 capex outlook despite a revenue beat.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[19]</div>
+<span class="span">raising 2026 capex outlook</span>
+<span class="span">down 6–8 percent</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0045" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">First Meta Superintelligence Labs model ships (Muse Spark)</span>
+<span class="badge">model_release</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta reported release of the first model from Meta Superintelligence Labs; Muse Spark was introduced as part of the AI roadmap.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], frontier_events[6]</div>
+<span class="span">first model from Meta Superintelligence Labs</span>
+<span class="span">Muse Spark</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0046" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">FY2026 capex guidance raised to $125–145B on components and DC costs</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$125.0B · capex</span> <span class="badge">mixed</span></div>
+<p class="narr">Meta raised FY2026 capex guidance to $125–145B, citing higher component pricing and additional data center costs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$125–145B</span>
+<span class="span">higher component pricing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0047" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Q1 2026 capex was $19.84B</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$19.8B · capex</span> <span class="badge">neutral</span></div>
+<p class="narr">Meta reported Q1 capital expenditures, including finance lease principal payments, of $19.84B.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Capital expenditures (incl. principal payments on finance leases) $19.84B in Q1.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0048" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Business AIs currently free; monetization model to come</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated Business AIs are currently free for most messaging app businesses, with monetization to follow over time.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">currently free</span>
+<span class="span">monetization model</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0049" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Muse Spark and Meta AI upgrades referenced on call</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta referenced the release of Muse Spark and upgrades to Meta AI as part of its product roadmap.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">release of “Muse Spark”</span>
+<span class="span">upgrades to Meta AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0050" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Larger models routed to high‑value ads within latency limits</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta described advancing inference architectures and routing higher‑value opportunities to more compute‑intensive models while meeting latency constraints.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">routing higher-value opportunities</span>
+<span class="span">within latency constraints</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0051" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Flexibility to pace deployments and spend</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management emphasized flexibility to modulate deployments and spending if capacity exceeds near-term needs.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">flexibility to pace deployments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0052" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Business AIs to expand geographically in Q2; monetization after scale</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Meta plans geographic expansion for Business AIs in Q2, with paid services or commission-like monetization after usage and utility mature.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expand geographically in Q2</span>
+<span class="span">paid services or commission-like</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0053" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Q1 operating cash flow $32.23B; free cash flow $12.39B</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$12.4B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta generated $32.23B in operating cash flow and $12.39B in free cash flow in Q1, supporting the AI investment cycle.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow $32.23B</span>
+<span class="span">free cash flow $12.39B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0054" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Raised AI infra capex elevates FCF/ROI risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Meta flagged that raising FY2026 capex to $125–145B heightens free‑cash‑flow risk and ROI hurdles if revenue growth or monetization lags.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">capex guidance was raised to $125–145B</span>
+<span class="span">free‑cash‑flow risk</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0055" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">AI tools driving internal productivity</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said AI tools are substantially increasing internal productivity and that structure will be evaluated for efficiency.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">substantially increase productivity</span>
+<span class="span">no staffing targets</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0042" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-27</span>
+<span class="eh">Overview Energy space‑solar PPA framework up to 1 GW equivalent</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta inked an agreement framework with Overview Energy to beam solar from orbit to grids serving data centers, targeting up to 1 GW equivalent by decade’s end.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[20]</div>
+<span class="span">space‑solar power</span>
+<span class="span">up to 1 GW equivalent</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0041" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Meta to adopt hundreds of thousands of AWS Graviton chips</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CNBC reported Meta will adopt large volumes of AWS’s Arm-based Graviton chips, broadening its compute supplier base.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[21]</div>
+<span class="span">hundreds of thousands</span>
+<span class="span">AWS Graviton chips</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0039" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-15</span>
+<span class="eh">Meta–Broadcom MTIA chip partnership: $35B through 2029; initial 1GW</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$35.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta extended its Broadcom AI chip partnership, with an initial 1GW commitment and a reported ~$35B multi‑year scale through 2029.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[22], frontier_events[5]</div>
+<span class="span">initial 1GW commitment</span>
+<span class="span">Meta-Broadcom $35B MTIA chip deal</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0040" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-15</span>
+<span class="eh">Meta frames ~$135B 2026 AI infrastructure spend</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$135.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta signaled approximately $135B in 2026 AI infrastructure outlays, aligning with heightened compute and data center expansion.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[4]</div>
+<span class="span">announces ~$135B 2026</span>
+<span class="span">AI infrastructure spend</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0038" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-13</span>
+<span class="eh">eMarketer: Meta set to surpass Google in 2026 ad revenue</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$243.5B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Forecasts suggested Meta could reach ~$243.46B in digital ad revenue vs. Google’s ~$239.54B in 2026, reflecting AI-driven ad performance.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[23]</div>
+<span class="span">243.46b</span>
+<span class="span">239.54b 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-09</span>
+<span class="eh">CoreWeave inks $21B AI capacity deal with Meta</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$21.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AP reported a $21B AI capacity deal between CoreWeave and Meta, reinforcing external compute procurement at scale.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[24]</div>
+<span class="span">21 billion</span>
+<span class="span">AI capacity deal</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-16</span>
+<span class="eh">Nebius contract headlines: up to $27b over five years</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$27.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AP reported Dutch AI cloud firm Nebius spiked on Meta contract headlines valued up to $27b over five years, indicating diversified capacity sourcing.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[25]</div>
+<span class="span">up to 27b</span>
+<span class="span">five years</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">AMD pact includes performance-based warrant; scope up to 6GW</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">AMD disclosed a Meta AI infrastructure pact with a performance-based warrant (up to 160M shares) and deployments scoped up to 6GW of Instinct GPUs.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[26]</div>
+<span class="span">160M-share warrant</span>
+<span class="span">up to 6GW</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-18</span>
+<span class="eh">Meta to deploy millions of Nvidia AI chips and networking gear</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">An expanded multiyear pact with Nvidia signaled large-scale GPU and networking deployments for Meta’s training and inference needs.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[27]</div>
+<span class="span">millions of its AI chips</span>
+<span class="span">networking gear</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-29</span>
+<span class="eh">META jumps on Q4 beat and higher 2026 AI capex guide</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Meta shares rose after a Q4 beat and a capex guide of $115–135B for 2026, reinforcing AI investment ramp.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[28]</div>
+<span class="span">capex guide 115b to 135b for 2026</span>
+<span class="span">META +10.4 percent close</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">FY2026 capex set at $115–135B to fund AI infrastructure</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$115.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta guided 2026 capex to $115–135B for AI infrastructure and core business, while still expecting operating income above 2025.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">FY2026 capex expected at $115–135B</span>
+<span class="span">AI infrastructure (Meta Superintelligence Labs)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Expense outlook: infra and AI-focused hiring drive FY2026 opex</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management cited infrastructure costs and AI-focused hiring as primary drivers of FY2026 total expenses of $162–169B.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">FY2026 total expenses of $162–169B</span>
+<span class="span">AI-focused hiring</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Compute-constrained; adding third‑party cloud as bridge</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Meta said it remains capacity‑constrained through much of 2026 and will add third‑party cloud capacity as interim relief.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">capacity‑constrained</span>
+<span class="span">third‑party cloud</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Evaluating build vs. cloud to stand up capacity</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Meta reaffirmed $115–135B 2026 capex and said it continues evaluating build vs. cloud and other paths to add capacity.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">build vs. cloud</span>
+<span class="span">$115–135B for 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Zuckerberg: need leading general‑purpose model capabilities</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Leadership underscored the importance of having leading general‑purpose models to shape Meta’s future product roadmap.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">quite important</span>
+<span class="span">leading general‑purpose model</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">GEM extended to Facebook Reels; training cluster doubled</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta extended GEM to Reels and doubled its training cluster size; in 2026 it plans further LLM integration into recommendation systems.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · LLA <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">GEM was extended to Facebook Reels</span>
+<span class="span">training cluster size doubled</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Meta AI available in over 200 markets</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Management reported Meta AI availability in 200+ markets, with regional usage differences across apps.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement · LLA <b>5</b></span> <span class="chchip">user_lock_in_relevance · LLA <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">over 200 markets</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Q4 capex $22.14B; FY capex $72.22B</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$22.1B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta disclosed $22.14B capex in Q4 and $72.22B for FY2025 including finance lease principal, reflecting accelerated AI infra spend.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Capital expenditures (incl. finance lease principal): $22.14B in Q4</span>
+<span class="span">$72.22B FY</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Liquidity and leverage context: $81.59B cash; $58.74B LT debt</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$58.7B · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">Meta reported $81.59B in cash and marketable securities and $58.74B in long‑term debt, providing context for funding the AI buildout.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Cash, cash equivalents, and marketable securities: $81.59B</span>
+<span class="span">Long‑term debt: $58.74B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Meta expects to remain compute‑constrained; will add cloud near‑term</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Meta reiterated it expects to remain compute‑constrained through much of 2026, with near‑term relief from added cloud capacity.</p>
+<div class="ev-ch">channels: <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">remain compute‑constrained</span>
+<span class="span">added cloud capacity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-27</span>
+<span class="eh">Corning inks multiyear Meta fiber deal up to $6B</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Corning announced a U.S. data-center optical supply pact with Meta valued up to $6B, supporting AI buildout interconnect.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[29]</div>
+<span class="span">multiyear Meta fiber deal up to 6B</span>
+<span class="span">optical</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-09</span>
+<span class="eh">Oklo deal to develop 1.2 GW Ohio nuclear campus</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta partnered with Oklo on a 1.2 GW nuclear campus in Ohio to power AI data centers, validating SMR timelines and energy strategy.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[30]</div>
+<span class="span">1.2 GW</span>
+<span class="span">Ohio nuclear campus</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Superclusters, Scale AI stake, and 2025 platform escalations</h2>
+<div class='range'>2025-04-05 → 2025-12-04</div>
+<div class='psum'>In 2025, Meta highlighted long-horizon compute and model ambitions: Llama 4 was announced (with Behemoth ~2T discussed), and Zuckerberg revealed Prometheus (1 GW) and Hyperion (to 5 GW) superclusters. Meta finalized a roughly $14.3B equity stake tied to Scale AI while recruiting founder Alexandr Wang into its superintelligence efforts. 
+The year also saw shifts in commercial posture and dependency: reports suggested Meta could rent Google TPUs, while partners like EssilorLuxottica experienced surging demand for Ray‑Ban Meta wearables. Financially, investors oscillated over higher spend vs. growth prospects as Meta navigated tax charges and ongoing platform investment, while signals of spend discipline included reports of metaverse budget reductions.</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-04</span>
+<span class="eh">Reports of deep metaverse budget cuts</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Meta shares rose on reports of up to 30% cuts to metaverse spend, signaling capital reallocation toward higher-return AI efforts.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[31]</div>
+<span class="span">deep cuts to metaverse budget</span>
+<span class="span">up to 30 percent</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-11-25</span>
+<span class="eh">Report: Meta may rent Google Cloud TPUs</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Reuters reported Meta could rent Google Cloud TPUs in 2026 as part of cross-cloud AI infrastructure sourcing.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider · GEM <b>2</b></span> <span class="chchip">ecosystem_control_loss · GEM <b>2</b></span> <span class="chchip">provider_specificity · GEM <b>1</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[32]</div>
+<span class="span">TPUs rented via Google Cloud</span>
+<span class="span">next year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-29</span>
+<span class="eh">Record revenue overshadowed by $15.93B tax charge and higher spend</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$15.9B · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Despite a revenue beat, a $15.93B non-cash tax charge and higher spend outlook drove a negative stock reaction, raising margin concerns.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[33]</div>
+<span class="span">15.93b non-cash tax charge</span>
+<span class="span">higher future spend</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-17</span>
+<span class="eh">EssilorLuxottica surges on Ray‑Ban Meta wearables momentum</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">EssilorLuxottica’s record day on Q3 beat cited capacity ramp for Ray‑Ban Meta wearables, signaling strong demand for Meta-linked devices.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[34]</div>
+<span class="span">Ray-Ban Meta wearables</span>
+<span class="span">shares +14% intraday to record</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-15</span>
+<span class="eh">Prometheus (1GW) and Hyperion (to 5GW) superclusters announced</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta unveiled major AI datacenter plans—Prometheus (1GW, online 2026) and Hyperion (scaling to 5GW)—as part of the Superintelligence Labs buildout.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[7]</div>
+<span class="span">Prometheus (1GW, online 2026)</span>
+<span class="span">Hyperion (scaling to 5GW)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-13</span>
+<span class="eh">Meta finalizes ~$14.3B Scale AI stake; Alexandr Wang joins effort</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$14.3B · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta closed a roughly $14.3B equity stake associated with Scale AI, with founder Alexandr Wang joining Meta’s superintelligence initiative.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[8]</div>
+<span class="span">roughly $14.3B</span>
+<span class="span">Alexandr Wang</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2025-04-05</span>
+<span class="eh">Meta previews Llama 4 and teases Behemoth (~2T)</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta disclosed plans for Llama 4 (Scout, Maverick) and referenced a Behemoth model at ~2T parameters, indicating next-wave scale targets.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[9]</div>
+<span class="span">Llama 4 (Scout, Maverick)</span>
+<span class="span">Behemoth (~2T)</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Open LLaMA era and cross-platform seeding</h2>
+<div class='range'>2023-02-24 → 2024-12-06</div>
+<div class='psum'>Meta initiated its modern AI push with the research release of LLaMA 1 in early 2023, followed by a weights leak that catalyzed widespread experimentation. In mid-2023, Meta broadened distribution by launching Llama 2 and aligning with Microsoft to make open-weight models available on Azure and Windows, while also integrating Bing into Meta AI chat experiences across WhatsApp, Messenger, and Instagram to enhance real-time answers. 
+Throughout 2024, Meta scaled its open model cadence: Llama 3 shipped (8B/70B), then Llama 3.1 and 3.2, culminating with Llama 3.3 70B. Distribution expanded to Amazon Bedrock and Google Vertex AI, reinforcing an open, multi-cloud strategy. Meanwhile, Meta joined industry initiatives like the AI Alliance and signed a deepfakes election pact. Financially, management lifted 2024 capex toward $35–40B to accelerate AI infrastructure. Apple reportedly rejected a Meta partnership in June 2024, signaling competitive friction with platform gatekeepers.</div>
+<div class="event t-single_source" id="E0013" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-12-06</span>
+<span class="eh">Llama 3.3 70B released</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta shipped Llama 3.3 with a 70B parameter variant, continuing its cadence of large open-weight models.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[10]</div>
+<span class="span">Llama 3.3 70B</span>
+<span class="span">released</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0012" data-providers="meta_llama google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-09-25</span>
+<span class="eh">Llama 3.2 available on Google Cloud Vertex AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google announced support for Llama 3.2 on Vertex AI Model Garden, extending Meta’s multi-cloud distribution alongside prior open releases.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · LLA <b>5</b> GEM <b>2</b></span> <span class="chchip">ecosystem_control_loss · LLA <b>0</b> GEM <b>2</b></span> <span class="chchip">provider_specificity · LLA <b>5</b> GEM <b>1</b></span> <span class="chchip">multi_model_hedge · LLA <b>1</b> GEM <b>4</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[9], frontier_events[11]</div>
+<span class="span">Llama 3.2</span>
+<span class="span">Vertex AI Model Garden</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-07-23</span>
+<span class="eh">Llama 3.1 ships; 405B parameter model announced</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta released Llama 3.1 and announced a 405B parameter model, pushing scale of its open-weight roadmap.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[12]</div>
+<span class="span">405B parameter model</span>
+<span class="span">Llama 3.1</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2024-06-24</span>
+<span class="eh">Apple reportedly rejects Meta partnership</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Reports indicated Apple rejected a partnership with Meta, underscoring competitive dynamics and distribution constraints for Meta’s AI.</p>
+<div class="ev-ch">channels: <span class="chchip">traffic_or_distribution_bypass_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[13]</div>
+<span class="span">Apple reportedly rejects Meta partnership</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2024-04-24</span>
+<span class="eh">2024 capex guidance lifted to $35–40B to accelerate AI</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$35.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Meta raised 2024 capex guidance to $35–40B to accelerate AI infrastructure, flagging further increases in 2025.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">range of $35-40 billion</span>
+<span class="span">accelerate our infrastructure investments</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-04-23</span>
+<span class="eh">Llama 3 available in Amazon Bedrock</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">AWS announced general availability of Meta’s Llama 3 models in Amazon Bedrock, expanding enterprise access via AWS regions.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · LLA <b>5</b></span> <span class="chchip">provider_specificity · LLA <b>5</b></span> <span class="chchip">multi_model_hedge · LLA <b>1</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Meta’s Llama 3 models</span>
+<span class="span">Amazon Bedrock</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0007" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-04-18</span>
+<span class="eh">Meta releases Llama 3 (8B/70B) and updates Meta AI assistant</span>
+<span class="badge">model_release</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Llama 3 debuted with 8B and 70B parameter models; Meta AI assistant built on Llama 3 broadened availability across platforms.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[14], web_search_findings[4]</div>
+<span class="span">Meta Llama 3</span>
+<span class="span">8B and 70B</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-02-16</span>
+<span class="eh">Meta signs election deepfake mitigation pact</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Meta joined a voluntary industry pact to take precautions against AI-generated election deepfakes, reflecting sector cooperation ahead of global elections.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">pact to combat AI-generated election deepfakes</span>
+<span class="span">Meta</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2023-12-04</span>
+<span class="eh">IBM and Meta launch the AI Alliance</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Meta co-launched the AI Alliance with IBM and dozens of founding members to advance open, safe, responsible AI.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">AI Alliance</span>
+<span class="span">IBM and Meta</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2023-09-27</span>
+<span class="eh">Bing integrated into Meta AI chat for real‑time answers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Microsoft’s Bing was integrated into Meta AI and other AIs in WhatsApp, Messenger, and Instagram to provide up-to-date search results within chat experiences.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">integrate Bing into Meta AI’s chat experiences</span>
+<span class="span">WhatsApp, Messenger, and Instagram</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0003" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2023-07-18</span>
+<span class="eh">Llama 2 launches; Microsoft to host on Azure and Windows</span>
+<span class="badge">model_release</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta launched Llama 2 with commercial terms and expanded distribution via Microsoft Azure and Windows, positioning open models for broad developer use.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · LLA <b>5</b></span> <span class="chchip">provider_specificity · LLA <b>5</b></span> <span class="chchip">multi_model_hedge · LLA <b>1</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[15], web_search_findings[0]</div>
+<span class="span">Llama 2</span>
+<span class="span">on Azure and Windows</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0002" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2023-03-03</span>
+<span class="eh">LLaMA 1 weights leak sparks uncontrolled proliferation</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Within days of release, LLaMA 1 weights leaked online via a torrent, accelerating community access beyond Meta’s intended scope.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[16]</div>
+<span class="span">weights leaked via 4chan torrent</span>
+<span class="span">LLaMA 1</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0001" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2023-02-24</span>
+<span class="eh">Meta releases LLaMA 1 for research use</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta released LLaMA 1 under a research-only license, marking the start of its modern open-weight LLM strategy.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[17]</div>
+<span class="span">LLaMA 1 released</span>
+<span class="span">research-only</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0058'>E0058</a></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0041'>E0041</a>, <a class='evref' href='#E0074'>E0074</a></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0066'>E0066</a>, <a class='evref' href='#E0070'>E0070</a></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0049'>E0049</a>, <a class='evref' href='#E0050'>E0050</a>, <a class='evref' href='#E0059'>E0059</a>, <a class='evref' href='#E0061'>E0061</a>, <a class='evref' href='#E0067'>E0067</a>, <a class='evref' href='#E0073'>E0073</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0059'>E0059</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0061'>E0061</a>, <a class='evref' href='#E0073'>E0073</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0058'>E0058</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0051'>E0051</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0049'>E0049</a>, <a class='evref' href='#E0050'>E0050</a>, <a class='evref' href='#E0059'>E0059</a>, <a class='evref' href='#E0061'>E0061</a>, <a class='evref' href='#E0067'>E0067</a>, <a class='evref' href='#E0073'>E0073</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0061'>E0061</a>, <a class='evref' href='#E0073'>E0073</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0019'>E0019</a></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0075'>E0075</a></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0075'>E0075</a></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0063'>E0063</a>, <a class='evref' href='#E0064'>E0064</a>, <a class='evref' href='#E0068'>E0068</a>, <a class='evref' href='#E0069'>E0069</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0044'>E0044</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0041'>E0041</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0041'>E0041</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0051'>E0051</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0039'>E0039</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0036'>E0036</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0039'>E0039</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0059'>E0059</a>, <a class='evref' href='#E0061'>E0061</a></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0</td><td>0</td><td>0</td><td>1.5</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0</td><td>0</td><td>0.3</td><td>1.75</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>-0.7</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>1.74</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.775</td><td>0.775</td><td>0.73</td><td>1</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0</td><td>0</td><td>-0.1226</td><td>7.395</td><td>0</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What is the finalized public API GA timeline and pricing for Muse Spark, and how will it be positioned relative to Llama open-weight offerings?</li>
@@ -1313,4 +1381,19 @@ Product momentum included the first model from Meta Superintelligence Labs (Muse
 <li>Frontier event entries distill headlines and may omit granular terms; corroborating news/filing sources were linked when available.</li>
 <li>Capacity figures (MW/GW) reflect power scale, not direct financial commitments, and timing/availability may vary with permitting and construction risks.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

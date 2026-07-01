@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Alphabet Inc <span class='sub'>(GOOG US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.581</div>
@@ -73,287 +83,857 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (verified): 11</span>
 <span class='chip'>web-only (unverified): 1</span>
 </div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
-<h2>Foundations, ecosystem openness, and early AI shocks</h2>
-<div class='range'>2021-11-01 → 2023-12-31</div>
-<div class='psum'>Alphabet laid early groundwork for a multi‑model AI ecosystem on Google Cloud, onboarding third‑party providers and open models alongside its first‑party stack. Cohere’s 2021 marketplace availability and Anthropic’s 2023 partnership signaled Google Cloud’s role as a distribution hub for multiple model families. Google also made notable equity commitments to Anthropic. Internally, Alphabet consolidated research by forming Google DeepMind and accelerated its own model cadence with Bard and PaLM 2 while advancing TPU infrastructure (v5p and AI Hypercomputer).
-The period also included regulatory attention (FTC 6(b) inquiry) and an industry coordination move (Frontier Model Forum). Market sensitivity to AI execution risk was evident in February 2023 when a Bard demo error drove a sharp one‑day market cap drawdown.</div>
-<div class="event t-web_only_unverified" id="E0001">
+<h2>Capex surge, flagship partnerships, backlog blowout, and talent churn</h2>
+<div class='range'>2026-01-01 → 2026-06-27</div>
+<div class='psum'>In 1H26 Alphabet escalated AI infrastructure commitment and secured marquee integrations. It announced a multi‑year Apple–Gemini deal for Siri/Apple Intelligence, confirmed at Cloud Next and later reiterated by Apple’s June reveal. Alphabet raised 2026 capex guidance toward $190B, signaled even higher 2027 spend, and reported a record RPO/backlog approaching $468B with Google Cloud at the core. Multiple financing avenues surfaced, including senior notes, a potential yen bond, and an up to $80B equity raise with a $10B Berkshire component. TPU 8t/8i, Gemma 4, Gemini Omni, and Gemini 3.5 Flash marked cadence on model/infrastructure roadmaps; selective direct TPU sales and multi‑GW TPU capacity alignments with Anthropic/Broadcom extended reach beyond Google Cloud.
+External demand signals included Reuters‑reported Meta renting Google AI chips and OpenAI’s cross‑cloud moves. Regulatory pathways advanced (NIST CAISI, classified DoD work). Risks intensified around supply constraints, depreciation, AI infrastructure cost worries, search competition dynamics, and high‑profile AI talent departures to Anthropic and OpenAI, which coincided with sharp stock drawdowns. Alphabet’s addition to the Dow reflected index recognition of its AI/cloud/ads exposure amid volatile sentiment.</div>
+<div class="event t-single_source" id="E0073" data-providers="">
 <div class="ev-top">
-<span class="date">2021-11-01</span>
-<span class="eh">Cohere becomes available via Google Cloud Marketplace under multi‑year partnership</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Cohere announced a multi‑year technology partnership with Google Cloud and made its models available via Google Cloud Marketplace, reinforcing Alphabet’s open ecosystem strategy on Vertex/Marketplace distribution.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[14]</div>
-<span class="span">multi-year technology partnership with Google Cloud</span>
-<span class="span">available via Google Cloud Marketplace</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0002">
-<div class="ev-top">
-<span class="date">2023-02-03</span>
-<span class="eh">Anthropic selects Google Cloud as provider for GPU/TPU training and deployment</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Anthropic named Google Cloud as its cloud provider to co‑develop AI computing systems and leverage GPU and TPU clusters for training and deployment, expanding Alphabet’s third‑party model footprint.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">selected Google Cloud as its cloud provider</span>
-<span class="span">GPU and TPU clusters</span>
-<span class="span">train, scale, and deploy its AI systems</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2023-02-03</span>
-<span class="eh">Google invests $300M for ~10% stake in Anthropic with preferred‑provider cloud tie‑in</span>
-<span class="badge">equity</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$300M · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Google disclosed a $300M investment in Anthropic for roughly a 10% stake alongside a preferred‑provider cloud arrangement, tightening commercial and infrastructure alignment.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">invested $300 million</span>
-<span class="span">about a 10% stake</span>
-<span class="span">preferred provider</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0004">
-<div class="ev-top">
-<span class="date">2023-02-06</span>
-<span class="eh">Google announces Bard (LaMDA‑based)</span>
-<span class="badge">model_release</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet introduced Bard as its conversational AI system based on LaMDA, marking a key step in its generative AI product lineup.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">frontier_events[30]</div>
-<span class="span">Bard announced by Google (LaMDA-based)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0005">
-<div class="ev-top">
-<span class="date">2023-02-08</span>
-<span class="eh">Bard demo error triggers ~$144B market cap drawdown</span>
+<span class="date">2026-06-26</span>
+<span class="eh">Chip stocks fall again as AI infrastructure cost worries resurface; Alphabet lags</span>
 <span class="badge">risk</span>
 <span class="badge b-single_source">single source</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$144.0B · market_cap_impact</span> <span class="badge">negative_displacement</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">A widely reported Bard demo error precipitated a sharp decline in Alphabet’s market value, underscoring execution risk in high‑visibility AI rollouts.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Coverage highlighted renewed concerns that rising AI infrastructure input costs could squeeze margins and demand, with Alphabet lagging alongside chip names.</p>
+<div class="ev-ch">channels: <span class="chchip">pricing_pressure_from_provider</span></div>
 <details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[29]</div>
-<span class="span">Bard demo error</span>
-<span class="span">wipes ~$144B from Alphabet market cap</span>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">AI infrastructure cost worries resurface</span>
+<span class="span">Alphabet and Tesla lower</span>
+<span class="span">Nvidia and Alphabet lag</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0006">
+<div class="event t-single_source" id="E0072" data-providers="">
 <div class="ev-top">
-<span class="date">2023-04-20</span>
-<span class="eh">Alphabet combines DeepMind and Google Brain into Google DeepMind</span>
+<span class="date">2026-06-25</span>
+<span class="eh">Nasdaq slides 0.5% amid megacap weakness; Alphabet declines</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Markets ended mixed with megacap tech under pressure; coverage noted Alphabet fell alongside other large caps amid rotation.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">Nasdaq falls 0.5%</span>
+<span class="span">Alphabet also declined</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0070" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">Reports: Google to lose AI researchers Jonas Adler and Alexander Pritzel to Anthropic</span>
+<span class="badge">personnel</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Bloomberg and others reported that Jonas Adler and Alexander Pritzel—key contributors to Gemini—plan to leave Google for Anthropic, extending a series of high‑profile AI departures that pressured Alphabet shares.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider · ANT <b>3</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[5], news_rows[2]</div>
+<span class="span">Jonas Adler and Alexander Pritzel</span>
+<span class="span">plan to leave for Anthropic</span>
+<span class="span">key contributors to Google’s Gemini</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0071" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">TechCrunch: Engineering roles were most resilient in 2025 at large tech incl. Alphabet</span>
 <span class="badge">personnel</span>
 <span class="badge b-single_source">single source</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet consolidated its AI research units into Google DeepMind to accelerate model progress and operational focus.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">SignalFire data cited by TechCrunch showed engineers made up 55% of new hires in 2025 among large tech firms including Alphabet, despite broader hiring declines.</p>
 <details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[28]</div>
-<span class="span">combines DeepMind and Google Brain</span>
-<span class="span">Google DeepMind</span>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[6]</div>
+<span class="span">engineering as the most resilient</span>
+<span class="span">engineers made up 55% of new hires in 2025</span>
+<span class="span">Alphabet</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0007">
+<div class="event t-corroborated" id="E0067" data-providers="">
 <div class="ev-top">
-<span class="date">2023-05-10</span>
-<span class="eh">PaLM 2 announced at Google I/O 2023</span>
+<span class="date">2026-06-23</span>
+<span class="eh">Tech‑led selloff deepens on AI capex/debt worries; NDX futures &gt;2% lower</span>
+<span class="badge">risk</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Reports highlighted a sharp tech‑led risk‑off move as investors fretted over debt‑financed AI build‑outs and rate path repricing; Nasdaq 100 E‑minis fell over 2% with commentary citing trillions in market cap at risk.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[8], news_rows[9]</div>
+<span class="span">debt‑financed AI build‑outs</span>
+<span class="span">Nasdaq 100 E‑minis −2.69%</span>
+<span class="span">would shed about $1.15 trillion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0068" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-23</span>
+<span class="eh">Reports flag search pressure: DuckDuckGo ‘No‑AI’ surge; Google adds ‘AI Mode’ control</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Coverage underscored competitive dynamics in Search as DuckDuckGo’s ‘No‑AI’ option saw traffic surges while Google introduced an AI Mode in a major Search redesign described as its biggest upgrade in over 25 years.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">traffic_or_distribution_bypass_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[10]</div>
+<span class="span">No‑AI</span>
+<span class="span">traffic booms</span>
+<span class="span">biggest upgrade in over 25 years</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0069" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-23</span>
+<span class="eh">Alphabet to replace Verizon in the Dow; S&amp;P DJI cites AI/cloud/ads exposure</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">S&amp;P Dow Jones Indices announced Alphabet will replace Verizon in the DJIA effective June 29, noting the change broadens exposure to AI, cloud and advertising. Alphabet rose about 1% after‑hours on the news.</p>
+<details>
+<summary>evidence — 5 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[3], news_rows[4], news_rows[7], news_rows[11], news_rows[12]</div>
+<span class="span">replace Verizon</span>
+<span class="span">effective prior to the open on Monday, June 29, 2026</span>
+<span class="span">broadens the Dow’s exposure to artificial intelligence</span>
+<span class="span">rose about 1% after-hours</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0066" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-22</span>
+<span class="eh">Alphabet logs worst day in a year amid AI talent exits; &gt;$270B intraday value erased</span>
+<span class="badge">risk</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$270.0B · market_cap_impact</span> <span class="badge">negative_displacement</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Following announcements that Noam Shazeer would join OpenAI and John Jumper would join Anthropic, Alphabet shares fell about 5% at the close and dropped over 7% intraday, briefly erasing over $270B in market value.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider · OAI <b>3</b> ANT <b>3</b></span></div>
+<p class="cav">⚠ Intraday market cap swing; close-to-close impact smaller.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[13], news_rows[14]</div>
+<span class="span">worst day in over a year</span>
+<span class="span">fell about 5%</span>
+<span class="span">erasing over $270 billion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0065" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-11</span>
+<span class="eh">DeepMind to move into Platform 37 at King’s Cross, expanding UK AI footprint</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google said DeepMind and Google teams will begin moving into the Platform 37 building in London, expanding its UK AI facilities.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[0]</div>
+<span class="span">Platform 37 at King’s Cross</span>
+<span class="span">expanding UK AI footprint</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0064" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">Apple integrates Google Gemini into new Siri AI (Apple Intelligence)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Apple unveiled ‘Siri AI’ incorporating Google’s Gemini under Apple Intelligence, reinforcing the multi‑year Apple–Google integration in consumer experiences.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · GEM <b>5</b></span> <span class="chchip">product_integration_exposure · GEM <b>5</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>5</b></span> <span class="chchip">customer_relationship_disintermediation · GEM <b>0</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[1]</div>
+<span class="span">integrates Google’s Gemini</span>
+<span class="span">new Siri AI</span>
+<span class="span">Apple Intelligence</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0063" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">Alphabet to raise up to $80B for AI infrastructure; includes $10B from Berkshire</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$80.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Reports said Alphabet plans an equity raise of up to $80B to fund AI compute, featuring a $10B private investment from Berkshire Hathaway.</p>
+<p class="cav">⚠ Structure/timing subject to market conditions.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[2]</div>
+<span class="span">raise up to $80B</span>
+<span class="span">$10B from Berkshire</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0061" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-19</span>
+<span class="eh">Google unveils Gemini Omni multimodal with video generation</span>
 <span class="badge">model_release</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet unveiled PaLM 2, demonstrating continued cadence in first‑party foundation models.</p>
+<p class="narr">At Google I/O 2026, Alphabet introduced Gemini Omni with video generation capabilities, rolling out initially to the Gemini app, Flow, and YouTube Shorts.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>5</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>5</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">frontier_events[27]</div>
-<span class="span">PaLM 2 announced at Google I/O 2023</span>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[3]</div>
+<span class="span">Gemini Omni multimodal model with video generation</span>
+<span class="span">rolling out to the Gemini app</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0008">
+<div class="event t-single_source" id="E0062" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2023-07-26</span>
-<span class="eh">Frontier Model Forum launched by Anthropic, Google, Microsoft, OpenAI</span>
+<span class="date">2026-05-19</span>
+<span class="eh">Gemini 3.5 Flash released for agentic workflows (GA)</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Alphabet announced the Gemini 3.5 family and released 3.5 Flash for fast, long‑horizon agentic tasks and coding, available via Gemini app and enterprise APIs.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[4]</div>
+<span class="span">Gemini 3.5 Flash</span>
+<span class="span">agentic tasks and coding</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0060" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-11</span>
+<span class="eh">Alphabet considers first‑ever yen bond sale to fund AI spending</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Reports indicated Alphabet was considering its first yen bond issuance to support AI investment plans, diversifying funding sources.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[5]</div>
+<span class="span">first-ever yen bond sale</span>
+<span class="span">fund AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0059" data-providers="google_gemini_deepmind xai_grok">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">NIST CAISI agreements with Google DeepMind and xAI for pre‑deployment evaluations</span>
 <span class="badge">regulatory</span>
 <span class="badge b-single_source">single source</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Major AI labs formed the Frontier Model Forum to coordinate on safety and standards, with Google participating alongside Anthropic and OpenAI.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">xai_grok</span></div>
+<p class="narr">NIST’s CAISI announced new agreements with Google DeepMind and xAI to conduct pre‑deployment and national‑security evaluations of frontier models.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value · GEM <b>5</b> XAI <b>1</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[26]</div>
-<span class="span">Anthropic, Google, Microsoft, and OpenAI</span>
-<span class="span">Frontier Model Forum</span>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[6]</div>
+<span class="span">NIST’s CAISI</span>
+<span class="span">pre‑deployment evaluations</span>
+<span class="span">xAI</span>
 </details>
 </div>
-<div class="event t-web_only_verified" id="E0009">
+<div class="event t-corroborated" id="E0048" data-providers="">
 <div class="ev-top">
-<span class="date">2023-10-17</span>
-<span class="eh">Mistral‑7B integrated with Vertex AI Notebooks</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
+<span class="date">2026-04-29</span>
+<span class="eh">FY2026 CapEx guidance raised to $180–$190B; 2027 expected ‘significantly’ higher</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$185.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Alphabet lifted 2026 CapEx guidance to $180–$190B for data centers and servers/network, with 2027 expected to be significantly higher, underscoring continued AI infra scale‑up.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], frontier_events[7]</div>
+<span class="span">capex guidance raised to $180–$190B</span>
+<span class="span">expects 2027 capex to be ‘significantly’ higher</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0049" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">RPO reached $467.6B; $462.3B tied to Google Cloud; &gt;50% in 24 months</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$467.6B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Alphabet reported remaining performance obligations of $467.6B with $462.3B related to Google Cloud; just over half is to be recognized within 24 months.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], frontier_events[7]</div>
+<span class="span">remaining performance obligations (revenue backlog) of $467.6B</span>
+<span class="span">$462.3B relates to Google Cloud</span>
+<span class="span">just over 50% expected to be recognized as revenue within 24 months</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0050" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Cloud backlog described as ‘nearly doubling’ q/q</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Google Cloud added Mistral’s open‑source model to Vertex AI workflows, expanding third‑party choice for customers.</p>
+<p class="narr">Management highlighted that Google Cloud backlog nearly doubled quarter‑over‑quarter in the press release commentary.</p>
 <details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[11]</div>
-<span class="span">Mistral AI&#x27;s first open source model</span>
-<span class="span">Vertex AI Notebooks</span>
+<summary>evidence — 2 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0], frontier_events[7]</div>
+<span class="span">Cloud backlog ‘nearly doubling’ q/q</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0010">
+<div class="event t-single_source" id="E0051" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2023-10-27</span>
-<span class="eh">Google to invest up to $2B in Anthropic via convertible notes</span>
+<span class="date">2026-04-29</span>
+<span class="eh">TPU sales to begin revenue recognition late 2026; majority in 2027</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Alphabet expects initial TPU hardware sales to start contributing revenue in late 2026, with the majority recognized in 2027.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · GEM <b>0</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">begin recognizing a small percentage of revenue from TPU sales</span>
+<span class="span">majority in 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0052" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Selective direct sales of TPU hardware outside Cloud</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Management described selective direct TPU hardware sales to certain customers in addition to cloud‑delivered capacity, positioned as ROI‑driven and secondary to Cloud.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · GEM <b>0</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Selective direct sales of TPU hardware to certain customers</span>
+<span class="span">secondary to Cloud delivery</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0053" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Compute availability remains a near‑term gating factor</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Alphabet acknowledged compute availability constraints in the near term and deferred specific 2027 spending details to future updates.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">compute availability remains a gating factor</span>
+<span class="span">declined to quantify 2027 spending</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0054" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">2027 CapEx expected to be higher than 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated expectations that 2027 capital expenditures will exceed 2026 levels while emphasizing ROI discipline.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">2027 capital expenditures are expected to be higher than 2026</span>
+<span class="span">ROI discipline</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0055" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">AI demand cited across Search and Google Cloud; AI experiences lifting usage</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alphabet said strong AI demand is driving Search and Cloud, with Search ‘AI experiences’ supporting usage growth and Cloud strength from AI solutions/infrastructure.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], frontier_events[7]</div>
+<span class="span">strong AI demand across Search and Google Cloud</span>
+<span class="span">Search ‘AI experiences’ supported usage growth</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0056" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Google Cloud revenue $20.0B (+63% y/y) reported for Q1 2026</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Alphabet reported Google Cloud quarterly revenue of $20.0B, up 63% year‑over‑year, highlighting rapid scale in AI‑aligned services.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0], frontier_events[7]</div>
+<span class="span">Google Cloud revenue $20.0B (+63% y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0057" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Alphabet issues $31.1B in senior unsecured notes</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$31.1B · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">Alphabet completed a $31.1B senior notes issuance, augmenting its funding capacity for large‑scale AI infrastructure.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Issued senior unsecured notes (net proceeds $31.1B).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0058" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Depreciation to step up; continued hiring in AI/Cloud under efficiency discipline</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Alphabet noted depreciation would step up with the larger asset base and hiring would continue in AI/Cloud and other priority areas while maintaining efficiency.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">depreciation will step up with the larger asset base</span>
+<span class="span">hiring will continue in AI/Cloud</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0047" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Google signs classified Pentagon AI‑model deal</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Reports indicated Google signed a classified Pentagon AI‑model agreement, adding to Alphabet’s government AI engagements.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value · GEM <b>5</b></span></div>
+<p class="cav">⚠ Terms undisclosed due to classification.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[8]</div>
+<span class="span">classified Pentagon AI-model deal</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0046" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-27</span>
+<span class="eh">OpenAI–Microsoft end exclusivity, clearing path to AWS/Google clouds</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Reuters reported OpenAI and Microsoft revised terms to allow OpenAI to sell models on rival clouds, potentially enabling broader availability on Google Cloud while Microsoft retains key licenses and revenue share.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>4</b> GEM <b>5</b></span> <span class="chchip">strategic_option_value · OAI <b>3</b> GEM <b>5</b></span> <span class="chchip">provider_specificity · OAI <b>2</b> GEM <b>5</b></span> <span class="chchip">switching_flexibility · OAI <b>4</b> GEM <b>0</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[9]</div>
+<span class="span">end exclusivity</span>
+<span class="span">sell models directly on rival clouds</span>
+<span class="span">license and revenue share</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0045" data-providers="anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Google to invest up to $40B in Anthropic; $10B cash now; plus 5GW TPU capacity over 5 years</span>
 <span class="badge">equity</span>
 <span class="badge b-single_source">single source</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Reports indicated Google would commit up to $2B to Anthropic in the form of convertible notes, deepening financial alignment with a key third‑party model provider.</p>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$40.0B · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Coverage indicated Google would invest up to $40B in Anthropic ($10B cash initially) alongside a multi‑year TPU capacity plan totaling 5GW, reinforcing financial and infrastructure alignment.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure · ANT <b>5</b> GEM <b>5</b></span> <span class="chchip">chip_accelerator_exposure · ANT <b>4</b> GEM <b>0</b></span> <span class="chchip">data_center_power_exposure · ANT <b>4</b> GEM <b>0</b></span> <span class="chchip">provider_specificity · ANT <b>4</b> GEM <b>5</b></span></div>
+<p class="cav">⚠ Structure/milestones not fully detailed.</p>
 <details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[25]</div>
-<span class="span">invest up to $2B</span>
-<span class="span">convertible notes</span>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[10]</div>
+<span class="span">invest up to $40B in Anthropic</span>
+<span class="span">$10B cash now</span>
+<span class="span">5GW Google Cloud TPU capacity</span>
 </details>
 </div>
-<div class="event t-corroborated" id="E0011">
+<div class="event t-single_source" id="E0043" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2023-12-06</span>
-<span class="eh">Google Cloud introduces TPU v5p and AI Hypercomputer</span>
+<span class="date">2026-04-22</span>
+<span class="eh">Cloud Next: Apple Gemini‑Siri partnership confirmed; Apple exploring Google DCs for inference</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">At Cloud Next 2026, Google Cloud affirmed the Apple–Gemini partnership and noted Apple is exploring using Google data centers for Siri inference, deepening infrastructure ties.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · GEM <b>5</b></span> <span class="chchip">product_integration_exposure · GEM <b>5</b></span> <span class="chchip">strategic_option_value · GEM <b>5</b></span> <span class="chchip">provider_specificity · GEM <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[11]</div>
+<span class="span">confirms Apple Gemini-Siri partnership</span>
+<span class="span">Apple exploring Google data centers for Siri inference</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0044" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Google announces TPU 8t and 8i at Cloud Next 2026</span>
 <span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Alphabet expanded its accelerator roadmap with TPU 8t and 8i, targeting training and inference performance/efficiency.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · GEM <b>0</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[12]</div>
+<span class="span">TPU 8t and 8i</span>
+<span class="span">Cloud Next 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0042" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-14</span>
+<span class="eh">Gemini Robotics‑ER 1.6 launched for embodied reasoning</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google DeepMind released Robotics‑ER 1.6 to improve spatial and physical reasoning, accessible via Gemini API and AI Studio.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[13]</div>
+<span class="span">Robotics‑ER 1.6</span>
+<span class="span">embodied reasoning</span>
+<span class="span">Gemini API</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0041" data-providers="anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-06</span>
+<span class="eh">Anthropic–Google–Broadcom multi‑GW TPU capacity agreement incl. 3.5GW from 2027+</span>
+<span class="badge">infra_deal</span>
 <span class="badge b-corroborated">corroborated</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet announced Cloud TPU v5p and the AI Hypercomputer architecture to accelerate large‑scale training, detailing a pod size of 8,960 chips and interconnect topology.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A Broadcom 8‑K and related announcements detailed a multi‑gigawatt TPU capacity arrangement under which Anthropic will access approximately 3.5GW from 2027 onward as part of next‑gen TPU compute, extending through up to 2031.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · ANT <b>4</b> GEM <b>5</b></span> <span class="chchip">chip_accelerator_exposure · ANT <b>4</b> GEM <b>0</b></span> <span class="chchip">data_center_power_exposure · ANT <b>4</b> GEM <b>0</b></span> <span class="chchip">provider_specificity · ANT <b>4</b> GEM <b>5</b></span> <span class="chchip">dependency_duration · ANT <b>4</b> GEM <b>5</b></span> <span class="chchip">contractual_commitment_strength · ANT <b>4</b> GEM <b>5</b></span></div>
+<p class="cav">⚠ Capacity (GW) figures disclosed; dollar values not provided.</p>
 <details>
 <summary>evidence — 2 source(s), 3 span(s)</summary>
-<div class="ev-src">frontier_events[24], web_search_findings[5]</div>
-<span class="span">Cloud TPU v5p</span>
-<span class="span">AI Hypercomputer</span>
-<span class="span">8,960 chips</span>
+<div class="ev-src">frontier_events[14], web_search_findings[13]</div>
+<span class="span">approximately 3.5 gigawatts</span>
+<span class="span">through up to 2031</span>
+<span class="span">next generation TPU-based AI compute</span>
 </details>
 </div>
-<div class="event t-web_only_verified" id="E0012">
+<div class="event t-single_source" id="E0040" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2023-08-29</span>
-<span class="eh">Vertex AI adds Llama 2 and pre‑announces Anthropic Claude 2 in Model Garden</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">meta_llama</span></div>
-<p class="narr">At Google Cloud Next, Alphabet expanded Vertex AI’s curated model set, adding Meta’s Llama 2 and pre‑announcing Anthropic’s Claude 2 alongside over 100 large models.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">Model Garden</span>
-<span class="span">Llama 2</span>
-<span class="span">Claude 2</span>
-<span class="span">Over 100 large models</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0013">
-<div class="ev-top">
-<span class="date">2024-01-25</span>
-<span class="eh">FTC launches 6(b) inquiry into AI investments and partnerships including Alphabet</span>
-<span class="badge">regulatory</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">The FTC issued compulsory orders to Alphabet, Amazon, Anthropic, Microsoft, and OpenAI to probe AI deals and their competitive effects, elevating regulatory scrutiny of Alphabet’s ecosystem ties.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">frontier_events[23]</div>
-<span class="span">FTC launches 6(b) inquiry</span>
-<span class="span">Compulsory orders to Alphabet</span>
-<span class="span">investments and partnerships</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0014">
-<div class="ev-top">
-<span class="date">2024-03-19</span>
-<span class="eh">Anthropic Claude 3 Sonnet/Haiku GA on Vertex AI</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Google Cloud made Anthropic’s Claude 3 Sonnet and Haiku generally available in Vertex AI, broadening enterprise model choice; Opus to follow.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">Claude 3 Sonnet</span>
-<span class="span">generally available</span>
-<span class="span">Vertex AI</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0015">
-<div class="ev-top">
-<span class="date">2024-04-05</span>
-<span class="eh">YouTube warns training OpenAI’s Sora on YouTube videos would violate platform rules</span>
-<span class="badge">regulatory</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">YouTube’s CEO stated that using YouTube content to train OpenAI’s Sora would be a clear violation of YouTube’s terms, highlighting data rights enforcement tensions relevant to Alphabet’s platforms.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[8]</div>
-<span class="span">Using Videos to Train OpenAI’s Sora Breaks Rules</span>
-<span class="span">clear violation</span>
-<span class="span">terms of use</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0016">
-<div class="ev-top">
-<span class="date">2024-05-14</span>
-<span class="eh">Gemini 1.5 Flash announced at Google I/O 2024</span>
+<span class="date">2026-04-02</span>
+<span class="eh">DeepMind releases Gemma 4 open models optimized for agentic workflows</span>
 <span class="badge">model_release</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet introduced Gemini 1.5 Flash, furthering its model lineup aimed at efficient multimodal and agentic workloads.</p>
+<p class="narr">Alphabet introduced the Gemma 4 open model family targeted at agentic workflows with updated model cards in April 2026.</p>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[22]</div>
-<span class="span">Gemini 1.5 Flash announced</span>
-<span class="span">Google I/O</span>
+<div class="ev-src">frontier_events[15]</div>
+<span class="span">Gemma 4 open models</span>
+<span class="span">agentic workflows</span>
 </details>
 </div>
-<div class="event t-web_only_verified" id="E0017">
+<div class="event t-web_only_verified" id="E0039" data-providers="meta_llama google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2024-09-25</span>
-<span class="eh">Meta’s Llama 3.2 available on Google Cloud Vertex AI Model Garden</span>
-<span class="badge">product_integration</span>
+<span class="date">2026-02-26</span>
+<span class="eh">Reuters: Meta signs multi‑billion dollar deal to rent Google AI chips</span>
+<span class="badge">infra_deal</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Google Cloud expanded Model Garden with Meta’s Llama 3.2 multimodal models, reinforcing a multi‑model enterprise platform approach.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Reuters reported Meta agreed to rent Google’s AI chips and may explore purchasing TPUs for its data centers, expanding third‑party demand for Google’s accelerator stack.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · LLA <b>4</b> GEM <b>5</b></span> <span class="chchip">chip_accelerator_exposure · LLA <b>4</b> GEM <b>0</b></span></div>
+<p class="cav">⚠ Financial terms not fully disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">multi-billion dollar deal to rent artificial intelligence chips from Google</span>
+<span class="span">Meta Platforms</span>
+<span class="span">Google’s AI chips</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">2026 CapEx guided to $175–$185B (ramp through the year)</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$180.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Alphabet guided 2026 capital expenditures to $175–$185B focused on AI compute and data centers, indicating a substantial ramp.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1], frontier_events[16]</div>
+<span class="span">2026 CapEx guided to $175–$185B</span>
+<span class="span">ramp through the year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Management expects to remain supply‑constrained through 2026</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Alphabet cautioned that it expects to remain supply‑constrained through 2026 given demand and supply‑chain timelines.</p>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[10]</div>
-<span class="span">Llama 3.2</span>
-<span class="span">available on Vertex AI Model Garden</span>
+<div class="ev-src">filings[1]</div>
+<span class="span">remain &quot;supply-constrained&quot; through 2026</span>
+<span class="span">given demand and supply-chain timelines</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Over half of 2026 ML compute allocated to Google Cloud</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alphabet stated that just over half of its 2026 ML compute would be directed to the Cloud business, prioritizing external monetization.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">just over half of our ML compute</span>
+<span class="span">expected to go towards the Cloud business</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">CapEx mix reiterated: ~60% servers / ~40% data centers &amp; networking</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reiterated a CapEx mix skewed to servers (~60%) versus data centers/networking (~40%), with a similar mix expected in 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">~60% servers and ~40% data centers/networking</span>
+<span class="span">2026 mix will be &quot;fairly similar.&quot;</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Google Cloud backlog ~$240B; +55% q/q; &gt;2x y/y</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$240.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Alphabet reported Google Cloud backlog near $240B at year‑end 2025, up 55% quarter‑over‑quarter and more than doubling year‑over‑year.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Google Cloud backlog reached ~$240B</span>
+<span class="span">+55% q/q and more than doubled y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Google Cloud ARR run‑rate exceeds $70B</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$70.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management cited Google Cloud annualized revenue run‑rate above $70B, reflecting strong enterprise adoption.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">annualized revenue run-rate &gt;$70B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">AI momentum including Gemini 3 launch supports Search and Cloud</span>
+<span class="badge">model_release</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Alphabet emphasized AI‑driven momentum including the Gemini 3 launch, with strong Cloud demand and Search usage highs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">AI-driven momentum (Gemini 3 launch)</span>
+<span class="span">strong Cloud demand</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Depreciation to accelerate in 2026 due to higher AI infrastructure</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management guided that depreciation would accelerate meaningfully in 2026 as AI infrastructure scales.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">depreciation to accelerate in Q1</span>
+<span class="span">meaningfully for full-year 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Approximately 50% of Google’s code written by AI agents internally</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alphabet indicated about half of internal code is now written by AI agents, signaling deep internal product integration.</p>
+<div class="ev-ch">channels: <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">About 50% of our code[s] are written by agents</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">AI Max cited as unlocking billions of net new queries for advertisers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Alphabet highlighted that AI Max is used by hundreds of thousands of advertisers and is helping unlock billions of net new queries, evidencing early monetization impacts.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">used by hundreds of thousands of advertisers</span>
+<span class="span">unlock billions of net new queries</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">No commitment to TPU monetization outside Cloud (Q4 commentary)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Pichai positioned end‑to‑end data center efficiencies and TPUs as core to Cloud momentum without committing to broader TPU monetization outside Cloud at that time.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">without committing to TPU monetization outside Cloud</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">FY25 CapEx totaled $91.45B (Q4 $27.85B)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$91.5B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Alphabet reported FY25 CapEx of $91.45B with $27.85B in Q4, reflecting the step‑function in AI infrastructure buildout.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">FY25 CapEx: $91.45B</span>
+<span class="span">Q4 CapEx (purchases of property &amp; equipment): $27.85B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0038" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Issued $24.8B senior notes in Nov‑2025</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$24.8B · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">Alphabet noted a $24.8B senior notes issuance in November 2025, bolstering liquidity for AI infrastructure investments.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">$24.8B senior notes issued in Nov-2025</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0074" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Gemini App reaches 750M MAU (Q4 2025 earnings context)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Alphabet’s Q4 2025 earnings materials referenced the Gemini App attaining 750M monthly active users, signaling broad consumer adoption ahead of 2026 product cadence.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement · GEM <b>5</b></span> <span class="chchip">user_lock_in_relevance · GEM <b>5</b></span></div>
+<p class="cav">⚠ MAU figure conveyed in event title; underlying documentation not included here.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[16]</div>
+<span class="span">Gemini App 750M MAU</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-01-12</span>
+<span class="eh">Apple–Google multi‑year Gemini deal (~$1B/yr; custom 1.2T‑param model for Siri/AFM)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Alphabet and Apple announced a multi‑year agreement for Gemini tailored for Siri and Apple Foundation Models, with coverage citing roughly $1B per year and a custom 1.2T‑parameter Gemini variant.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>5</b></span> <span class="chchip">strategic_option_value · GEM <b>5</b></span> <span class="chchip">provider_specificity · GEM <b>5</b></span> <span class="chchip">dependency_duration · GEM <b>5</b></span> <span class="chchip">contractual_commitment_strength · GEM <b>5</b></span></div>
+<p class="cav">⚠ Commercial terms beyond directional figures not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">frontier_events[17]</div>
+<span class="span">multi-year Gemini partnership</span>
+<span class="span">~$1B/yr</span>
+<span class="span">1.2T-param</span>
+<span class="span">Siri</span>
 </details>
 </div>
 </div>
@@ -361,91 +941,23 @@ The period also included regulatory attention (FTC 6(b) inquiry) and an industry
 <h2>Ecosystem expansion, government pathways, and partner traction</h2>
 <div class='range'>2025-01-01 → 2025-12-31</div>
 <div class='psum'>Alphabet broadened external adoption of its AI infrastructure in 2025. Reuters reported OpenAI would add Google Cloud and later rent Google TPUs, while the DoD established ceiling contracts across multiple labs including Google. Alphabet and Nvidia invested in SSI, and Google continued high‑velocity model releases (Veo 3, Imagen 4, Gemini 3 Deep Think, Antigravity agent IDE). Regulatory and platform dynamics persisted, including app store governance actions in Italy.</div>
-<div class="event t-web_only_verified" id="E0018">
+<div class="event t-single_source" id="E0024" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2025-01-29</span>
-<span class="eh">DeepSeek app removed from Apple and Google app stores in Italy</span>
-<span class="badge">regulatory</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">deepseek</span></div>
-<p class="narr">Following inquiries by Italian authorities, DeepSeek’s app became unavailable on Apple’s App Store and Google’s Play Store in Italy, underscoring ongoing platform governance and compliance roles for Alphabet.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[9]</div>
-<span class="span">DeepSeek’s app</span>
-<span class="span">no longer available</span>
-<span class="span">Google’s Play Store</span>
-<span class="span">Italy</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0019">
-<div class="ev-top">
-<span class="date">2025-04-14</span>
-<span class="eh">Alphabet and Nvidia invest in SSI amid reported $32B valuation</span>
-<span class="badge">equity</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$32.0B · other</span> <span class="badge">neutral</span></div>
-<p class="narr">Coverage indicated Alphabet and Nvidia invested in SSI at a reported $32B valuation, reflecting continued ecosystem bets around AI‑related infrastructure and tools.</p>
-<p class="cav">⚠ Reported valuation; individual investment sizes not specified.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[21]</div>
-<span class="span">invest in SSI</span>
-<span class="span">$32B valuation</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0020">
-<div class="ev-top">
-<span class="date">2025-05-20</span>
-<span class="eh">Google I/O 2025: Veo 3 and Imagen 4 announced</span>
+<span class="date">2025-12-02</span>
+<span class="eh">Google releases Gemini 3 Deep Think and Antigravity agent IDE</span>
 <span class="badge">model_release</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet advanced its generative media stack by launching Veo 3 and Imagen 4, targeting higher quality video and image synthesis.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">frontier_events[20]</div>
-<span class="span">Veo 3 and Imagen 4 announced</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0021">
-<div class="ev-top">
-<span class="date">2025-06-10</span>
-<span class="eh">Reuters: OpenAI to add Google Cloud; collaboration includes TPUs</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Reuters reported OpenAI would add Google Cloud services, supplying additional compute including Google’s TPUs, marking a notable cross‑ecosystem collaboration opportunity for Alphabet’s cloud business.</p>
-<p class="cav">⚠ Deal terms not disclosed.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span">add Alphabet (NASDAQ:GOOGL)&#x27;s Google cloud service</span>
-<span class="span">surprising collaboration</span>
-<span class="span">tensor processing units</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0022">
-<div class="ev-top">
-<span class="date">2025-06-27</span>
-<span class="eh">Reuters: OpenAI begins renting Google TPUs to power ChatGPT and other products</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Reuters indicated OpenAI started renting Google’s TPUs through Google Cloud, signaling the first meaningful non‑Nvidia deployment for OpenAI’s inference and potentially improving cost profiles.</p>
+<p class="narr">Alphabet rolled out a new Gemini 3 reasoning mode and the Antigravity agentic developer environment, aiming to accelerate agent workflows and coding use cases.</p>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">web_search_findings[7]</div>
-<span class="span">begun renting Google’s ... chips</span>
-<span class="span">first time OpenAI has used non-Nvidia</span>
+<div class="ev-src">frontier_events[18]</div>
+<span class="span">Gemini 3 Deep Think</span>
+<span class="span">Antigravity agent IDE</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0023">
+<div class="event t-single_source" id="E0023" data-providers="xai_grok anthropic_claude google_gemini_deepmind openai_chatgpt">
 <div class="ev-top">
 <span class="date">2025-07-14</span>
 <span class="eh">DoD awards ceiling contracts up to $200M each; xAI alongside Anthropic, Google, OpenAI</span>
@@ -464,870 +976,435 @@ The period also included regulatory attention (FTC 6(b) inquiry) and an industry
 <span class="span">alongside Anthropic, Google, OpenAI</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0024">
+<div class="event t-web_only_verified" id="E0022" data-providers="openai_chatgpt google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2025-12-02</span>
-<span class="eh">Google releases Gemini 3 Deep Think and Antigravity agent IDE</span>
+<span class="date">2025-06-27</span>
+<span class="eh">Reuters: OpenAI begins renting Google TPUs to power ChatGPT and other products</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Reuters indicated OpenAI started renting Google’s TPUs through Google Cloud, signaling the first meaningful non‑Nvidia deployment for OpenAI’s inference and potentially improving cost profiles.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · OAI <b>4</b> GEM <b>5</b></span> <span class="chchip">chip_accelerator_exposure · OAI <b>4</b> GEM <b>0</b></span> <span class="chchip">product_integration_exposure · OAI <b>4</b> GEM <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">begun renting Google’s ... chips</span>
+<span class="span">first time OpenAI has used non-Nvidia</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0021" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-06-10</span>
+<span class="eh">Reuters: OpenAI to add Google Cloud; collaboration includes TPUs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Reuters reported OpenAI would add Google Cloud services, supplying additional compute including Google’s TPUs, marking a notable cross‑ecosystem collaboration opportunity for Alphabet’s cloud business.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · OAI <b>4</b> GEM <b>5</b></span> <span class="chchip">chip_accelerator_exposure · OAI <b>4</b> GEM <b>0</b></span> <span class="chchip">product_integration_exposure · OAI <b>4</b> GEM <b>5</b></span></div>
+<p class="cav">⚠ Deal terms not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">add Alphabet (NASDAQ:GOOGL)&#x27;s Google cloud service</span>
+<span class="span">surprising collaboration</span>
+<span class="span">tensor processing units</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-05-20</span>
+<span class="eh">Google I/O 2025: Veo 3 and Imagen 4 announced</span>
 <span class="badge">model_release</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet rolled out a new Gemini 3 reasoning mode and the Antigravity agentic developer environment, aiming to accelerate agent workflows and coding use cases.</p>
+<p class="narr">Alphabet advanced its generative media stack by launching Veo 3 and Imagen 4, targeting higher quality video and image synthesis.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[20]</div>
+<span class="span">Veo 3 and Imagen 4 announced</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2025-04-14</span>
+<span class="eh">Alphabet and Nvidia invest in SSI amid reported $32B valuation</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$32.0B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Coverage indicated Alphabet and Nvidia invested in SSI at a reported $32B valuation, reflecting continued ecosystem bets around AI‑related infrastructure and tools.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<p class="cav">⚠ Reported valuation; individual investment sizes not specified.</p>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[18]</div>
-<span class="span">Gemini 3 Deep Think</span>
-<span class="span">Antigravity agent IDE</span>
+<div class="ev-src">frontier_events[21]</div>
+<span class="span">invest in SSI</span>
+<span class="span">$32B valuation</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0018" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2025-01-29</span>
+<span class="eh">DeepSeek app removed from Apple and Google app stores in Italy</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">deepseek</span></div>
+<p class="narr">Following inquiries by Italian authorities, DeepSeek’s app became unavailable on Apple’s App Store and Google’s Play Store in Italy, underscoring ongoing platform governance and compliance roles for Alphabet.</p>
+<div class="ev-ch">channels: <span class="chchip">traffic_or_distribution_bypass_risk · DSK <b>1</b></span> <span class="chchip">regulatory_or_reputational_risk · DSK <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">DeepSeek’s app</span>
+<span class="span">no longer available</span>
+<span class="span">Google’s Play Store</span>
+<span class="span">Italy</span>
 </details>
 </div>
 </div>
 <div class='phase'>
-<h2>Capex surge, flagship partnerships, backlog blowout, and talent churn</h2>
-<div class='range'>2026-01-01 → 2026-06-27</div>
-<div class='psum'>In 1H26 Alphabet escalated AI infrastructure commitment and secured marquee integrations. It announced a multi‑year Apple–Gemini deal for Siri/Apple Intelligence, confirmed at Cloud Next and later reiterated by Apple’s June reveal. Alphabet raised 2026 capex guidance toward $190B, signaled even higher 2027 spend, and reported a record RPO/backlog approaching $468B with Google Cloud at the core. Multiple financing avenues surfaced, including senior notes, a potential yen bond, and an up to $80B equity raise with a $10B Berkshire component. TPU 8t/8i, Gemma 4, Gemini Omni, and Gemini 3.5 Flash marked cadence on model/infrastructure roadmaps; selective direct TPU sales and multi‑GW TPU capacity alignments with Anthropic/Broadcom extended reach beyond Google Cloud.
-External demand signals included Reuters‑reported Meta renting Google AI chips and OpenAI’s cross‑cloud moves. Regulatory pathways advanced (NIST CAISI, classified DoD work). Risks intensified around supply constraints, depreciation, AI infrastructure cost worries, search competition dynamics, and high‑profile AI talent departures to Anthropic and OpenAI, which coincided with sharp stock drawdowns. Alphabet’s addition to the Dow reflected index recognition of its AI/cloud/ads exposure amid volatile sentiment.</div>
-<div class="event t-single_source" id="E0025">
+<h2>Foundations, ecosystem openness, and early AI shocks</h2>
+<div class='range'>2021-11-01 → 2023-12-31</div>
+<div class='psum'>Alphabet laid early groundwork for a multi‑model AI ecosystem on Google Cloud, onboarding third‑party providers and open models alongside its first‑party stack. Cohere’s 2021 marketplace availability and Anthropic’s 2023 partnership signaled Google Cloud’s role as a distribution hub for multiple model families. Google also made notable equity commitments to Anthropic. Internally, Alphabet consolidated research by forming Google DeepMind and accelerated its own model cadence with Bard and PaLM 2 while advancing TPU infrastructure (v5p and AI Hypercomputer).
+The period also included regulatory attention (FTC 6(b) inquiry) and an industry coordination move (Frontier Model Forum). Market sensitivity to AI execution risk was evident in February 2023 when a Bard demo error drove a sharp one‑day market cap drawdown.</div>
+<div class="event t-web_only_verified" id="E0017" data-providers="meta_llama">
 <div class="ev-top">
-<span class="date">2026-01-12</span>
-<span class="eh">Apple–Google multi‑year Gemini deal (~$1B/yr; custom 1.2T‑param model for Siri/AFM)</span>
+<span class="date">2024-09-25</span>
+<span class="eh">Meta’s Llama 3.2 available on Google Cloud Vertex AI Model Garden</span>
 <span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · run_rate_annual</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet and Apple announced a multi‑year agreement for Gemini tailored for Siri and Apple Foundation Models, with coverage citing roughly $1B per year and a custom 1.2T‑parameter Gemini variant.</p>
-<p class="cav">⚠ Commercial terms beyond directional figures not disclosed.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">frontier_events[17]</div>
-<span class="span">multi-year Gemini partnership</span>
-<span class="span">~$1B/yr</span>
-<span class="span">1.2T-param</span>
-<span class="span">Siri</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0026">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">2026 CapEx guided to $175–$185B (ramp through the year)</span>
-<span class="badge">other</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$180.0B · capex</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Alphabet guided 2026 capital expenditures to $175–$185B focused on AI compute and data centers, indicating a substantial ramp.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1], frontier_events[16]</div>
-<span class="span">2026 CapEx guided to $175–$185B</span>
-<span class="span">ramp through the year</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0027">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">Management expects to remain supply‑constrained through 2026</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Alphabet cautioned that it expects to remain supply‑constrained through 2026 given demand and supply‑chain timelines.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">remain &quot;supply-constrained&quot; through 2026</span>
-<span class="span">given demand and supply-chain timelines</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0028">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">Over half of 2026 ML compute allocated to Google Cloud</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Alphabet stated that just over half of its 2026 ML compute would be directed to the Cloud business, prioritizing external monetization.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">just over half of our ML compute</span>
-<span class="span">expected to go towards the Cloud business</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0029">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">CapEx mix reiterated: ~60% servers / ~40% data centers &amp; networking</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Management reiterated a CapEx mix skewed to servers (~60%) versus data centers/networking (~40%), with a similar mix expected in 2026.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">~60% servers and ~40% data centers/networking</span>
-<span class="span">2026 mix will be &quot;fairly similar.&quot;</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0030">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">Google Cloud backlog ~$240B; +55% q/q; &gt;2x y/y</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$240.0B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Alphabet reported Google Cloud backlog near $240B at year‑end 2025, up 55% quarter‑over‑quarter and more than doubling year‑over‑year.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Google Cloud backlog reached ~$240B</span>
-<span class="span">+55% q/q and more than doubled y/y</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0031">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">Google Cloud ARR run‑rate exceeds $70B</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$70.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Management cited Google Cloud annualized revenue run‑rate above $70B, reflecting strong enterprise adoption.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">annualized revenue run-rate &gt;$70B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0032">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">AI momentum including Gemini 3 launch supports Search and Cloud</span>
-<span class="badge">model_release</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet emphasized AI‑driven momentum including the Gemini 3 launch, with strong Cloud demand and Search usage highs.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">AI-driven momentum (Gemini 3 launch)</span>
-<span class="span">strong Cloud demand</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0033">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">Depreciation to accelerate in 2026 due to higher AI infrastructure</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Management guided that depreciation would accelerate meaningfully in 2026 as AI infrastructure scales.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">depreciation to accelerate in Q1</span>
-<span class="span">meaningfully for full-year 2026</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0034">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">Approximately 50% of Google’s code written by AI agents internally</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Alphabet indicated about half of internal code is now written by AI agents, signaling deep internal product integration.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">About 50% of our code[s] are written by agents</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0035">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">AI Max cited as unlocking billions of net new queries for advertisers</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Alphabet highlighted that AI Max is used by hundreds of thousands of advertisers and is helping unlock billions of net new queries, evidencing early monetization impacts.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">used by hundreds of thousands of advertisers</span>
-<span class="span">unlock billions of net new queries</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0036">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">No commitment to TPU monetization outside Cloud (Q4 commentary)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Pichai positioned end‑to‑end data center efficiencies and TPUs as core to Cloud momentum without committing to broader TPU monetization outside Cloud at that time.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">without committing to TPU monetization outside Cloud</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0037">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">FY25 CapEx totaled $91.45B (Q4 $27.85B)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$91.5B · capex</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Alphabet reported FY25 CapEx of $91.45B with $27.85B in Q4, reflecting the step‑function in AI infrastructure buildout.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">FY25 CapEx: $91.45B</span>
-<span class="span">Q4 CapEx (purchases of property &amp; equipment): $27.85B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0038">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">Issued $24.8B senior notes in Nov‑2025</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$24.8B · loan</span> <span class="badge">neutral</span></div>
-<p class="narr">Alphabet noted a $24.8B senior notes issuance in November 2025, bolstering liquidity for AI infrastructure investments.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">$24.8B senior notes issued in Nov-2025</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0039">
-<div class="ev-top">
-<span class="date">2026-02-26</span>
-<span class="eh">Reuters: Meta signs multi‑billion dollar deal to rent Google AI chips</span>
-<span class="badge">infra_deal</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Reuters reported Meta agreed to rent Google’s AI chips and may explore purchasing TPUs for its data centers, expanding third‑party demand for Google’s accelerator stack.</p>
-<p class="cav">⚠ Financial terms not fully disclosed.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[12]</div>
-<span class="span">multi-billion dollar deal to rent artificial intelligence chips from Google</span>
-<span class="span">Meta Platforms</span>
-<span class="span">Google’s AI chips</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0040">
-<div class="ev-top">
-<span class="date">2026-04-02</span>
-<span class="eh">DeepMind releases Gemma 4 open models optimized for agentic workflows</span>
-<span class="badge">model_release</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet introduced the Gemma 4 open model family targeted at agentic workflows with updated model cards in April 2026.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Google Cloud expanded Model Garden with Meta’s Llama 3.2 multimodal models, reinforcing a multi‑model enterprise platform approach.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · LLA <b>3</b></span> <span class="chchip">product_integration_exposure · LLA <b>3</b></span> <span class="chchip">multi_model_hedge · LLA <b>5</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[15]</div>
-<span class="span">Gemma 4 open models</span>
-<span class="span">agentic workflows</span>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Llama 3.2</span>
+<span class="span">available on Vertex AI Model Garden</span>
 </details>
 </div>
-<div class="event t-corroborated" id="E0041">
+<div class="event t-single_source" id="E0016" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-04-06</span>
-<span class="eh">Anthropic–Google–Broadcom multi‑GW TPU capacity agreement incl. 3.5GW from 2027+</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">A Broadcom 8‑K and related announcements detailed a multi‑gigawatt TPU capacity arrangement under which Anthropic will access approximately 3.5GW from 2027 onward as part of next‑gen TPU compute, extending through up to 2031.</p>
-<p class="cav">⚠ Capacity (GW) figures disclosed; dollar values not provided.</p>
-<details>
-<summary>evidence — 2 source(s), 3 span(s)</summary>
-<div class="ev-src">frontier_events[14], web_search_findings[13]</div>
-<span class="span">approximately 3.5 gigawatts</span>
-<span class="span">through up to 2031</span>
-<span class="span">next generation TPU-based AI compute</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0042">
-<div class="ev-top">
-<span class="date">2026-04-14</span>
-<span class="eh">Gemini Robotics‑ER 1.6 launched for embodied reasoning</span>
+<span class="date">2024-05-14</span>
+<span class="eh">Gemini 1.5 Flash announced at Google I/O 2024</span>
 <span class="badge">model_release</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Google DeepMind released Robotics‑ER 1.6 to improve spatial and physical reasoning, accessible via Gemini API and AI Studio.</p>
+<p class="narr">Alphabet introduced Gemini 1.5 Flash, furthering its model lineup aimed at efficient multimodal and agentic workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>5</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">frontier_events[13]</div>
-<span class="span">Robotics‑ER 1.6</span>
-<span class="span">embodied reasoning</span>
-<span class="span">Gemini API</span>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[22]</div>
+<span class="span">Gemini 1.5 Flash announced</span>
+<span class="span">Google I/O</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0043">
+<div class="event t-web_only_verified" id="E0015" data-providers="openai_chatgpt google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-04-22</span>
-<span class="eh">Cloud Next: Apple Gemini‑Siri partnership confirmed; Apple exploring Google DCs for inference</span>
+<span class="date">2024-04-05</span>
+<span class="eh">YouTube warns training OpenAI’s Sora on YouTube videos would violate platform rules</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">YouTube’s CEO stated that using YouTube content to train OpenAI’s Sora would be a clear violation of YouTube’s terms, highlighting data rights enforcement tensions relevant to Alphabet’s platforms.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk · OAI <b>3</b> GEM <b>0</b></span> <span class="chchip">regulatory_or_reputational_risk · OAI <b>3</b> GEM <b>0</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Using Videos to Train OpenAI’s Sora Breaks Rules</span>
+<span class="span">clear violation</span>
+<span class="span">terms of use</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0014" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-03-19</span>
+<span class="eh">Anthropic Claude 3 Sonnet/Haiku GA on Vertex AI</span>
 <span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">At Cloud Next 2026, Google Cloud affirmed the Apple–Gemini partnership and noted Apple is exploring using Google data centers for Siri inference, deepening infrastructure ties.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[11]</div>
-<span class="span">confirms Apple Gemini-Siri partnership</span>
-<span class="span">Apple exploring Google data centers for Siri inference</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0044">
-<div class="ev-top">
-<span class="date">2026-04-22</span>
-<span class="eh">Google announces TPU 8t and 8i at Cloud Next 2026</span>
-<span class="badge">model_release</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet expanded its accelerator roadmap with TPU 8t and 8i, targeting training and inference performance/efficiency.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[12]</div>
-<span class="span">TPU 8t and 8i</span>
-<span class="span">Cloud Next 2026</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0045">
-<div class="ev-top">
-<span class="date">2026-04-24</span>
-<span class="eh">Google to invest up to $40B in Anthropic; $10B cash now; plus 5GW TPU capacity over 5 years</span>
-<span class="badge">equity</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$40.0B · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Coverage indicated Google would invest up to $40B in Anthropic ($10B cash initially) alongside a multi‑year TPU capacity plan totaling 5GW, reinforcing financial and infrastructure alignment.</p>
-<p class="cav">⚠ Structure/milestones not fully detailed.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Google Cloud made Anthropic’s Claude 3 Sonnet and Haiku generally available in Vertex AI, broadening enterprise model choice; Opus to follow.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · ANT <b>3</b></span> <span class="chchip">product_integration_exposure · ANT <b>4</b></span> <span class="chchip">enterprise_adoption_exposure · ANT <b>2</b></span> <span class="chchip">multi_model_hedge · ANT <b>5</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">frontier_events[10]</div>
-<span class="span">invest up to $40B in Anthropic</span>
-<span class="span">$10B cash now</span>
-<span class="span">5GW Google Cloud TPU capacity</span>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Claude 3 Sonnet</span>
+<span class="span">generally available</span>
+<span class="span">Vertex AI</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0046">
+<div class="event t-single_source" id="E0013" data-providers="anthropic_claude google_gemini_deepmind openai_chatgpt">
 <div class="ev-top">
-<span class="date">2026-04-27</span>
-<span class="eh">OpenAI–Microsoft end exclusivity, clearing path to AWS/Google clouds</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Reuters reported OpenAI and Microsoft revised terms to allow OpenAI to sell models on rival clouds, potentially enabling broader availability on Google Cloud while Microsoft retains key licenses and revenue share.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">frontier_events[9]</div>
-<span class="span">end exclusivity</span>
-<span class="span">sell models directly on rival clouds</span>
-<span class="span">license and revenue share</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0047">
-<div class="ev-top">
-<span class="date">2026-04-28</span>
-<span class="eh">Google signs classified Pentagon AI‑model deal</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Reports indicated Google signed a classified Pentagon AI‑model agreement, adding to Alphabet’s government AI engagements.</p>
-<p class="cav">⚠ Terms undisclosed due to classification.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">frontier_events[8]</div>
-<span class="span">classified Pentagon AI-model deal</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0048">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">FY2026 CapEx guidance raised to $180–$190B; 2027 expected ‘significantly’ higher</span>
-<span class="badge">other</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$185.0B · capex</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Alphabet lifted 2026 CapEx guidance to $180–$190B for data centers and servers/network, with 2027 expected to be significantly higher, underscoring continued AI infra scale‑up.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0], frontier_events[7]</div>
-<span class="span">capex guidance raised to $180–$190B</span>
-<span class="span">expects 2027 capex to be ‘significantly’ higher</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0049">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">RPO reached $467.6B; $462.3B tied to Google Cloud; &gt;50% in 24 months</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$467.6B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Alphabet reported remaining performance obligations of $467.6B with $462.3B related to Google Cloud; just over half is to be recognized within 24 months.</p>
-<details>
-<summary>evidence — 2 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0], frontier_events[7]</div>
-<span class="span">remaining performance obligations (revenue backlog) of $467.6B</span>
-<span class="span">$462.3B relates to Google Cloud</span>
-<span class="span">just over 50% expected to be recognized as revenue within 24 months</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0050">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Cloud backlog described as ‘nearly doubling’ q/q</span>
-<span class="badge">other</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management highlighted that Google Cloud backlog nearly doubled quarter‑over‑quarter in the press release commentary.</p>
-<details>
-<summary>evidence — 2 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0], frontier_events[7]</div>
-<span class="span">Cloud backlog ‘nearly doubling’ q/q</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0051">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">TPU sales to begin revenue recognition late 2026; majority in 2027</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet expects initial TPU hardware sales to start contributing revenue in late 2026, with the majority recognized in 2027.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">begin recognizing a small percentage of revenue from TPU sales</span>
-<span class="span">majority in 2027</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0052">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Selective direct sales of TPU hardware outside Cloud</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Management described selective direct TPU hardware sales to certain customers in addition to cloud‑delivered capacity, positioned as ROI‑driven and secondary to Cloud.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Selective direct sales of TPU hardware to certain customers</span>
-<span class="span">secondary to Cloud delivery</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0053">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Compute availability remains a near‑term gating factor</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Alphabet acknowledged compute availability constraints in the near term and deferred specific 2027 spending details to future updates.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">compute availability remains a gating factor</span>
-<span class="span">declined to quantify 2027 spending</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0054">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">2027 CapEx expected to be higher than 2026</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management reiterated expectations that 2027 capital expenditures will exceed 2026 levels while emphasizing ROI discipline.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">2027 capital expenditures are expected to be higher than 2026</span>
-<span class="span">ROI discipline</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0055">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">AI demand cited across Search and Google Cloud; AI experiences lifting usage</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Alphabet said strong AI demand is driving Search and Cloud, with Search ‘AI experiences’ supporting usage growth and Cloud strength from AI solutions/infrastructure.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0], frontier_events[7]</div>
-<span class="span">strong AI demand across Search and Google Cloud</span>
-<span class="span">Search ‘AI experiences’ supported usage growth</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0056">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Google Cloud revenue $20.0B (+63% y/y) reported for Q1 2026</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$20.0B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Alphabet reported Google Cloud quarterly revenue of $20.0B, up 63% year‑over‑year, highlighting rapid scale in AI‑aligned services.</p>
-<details>
-<summary>evidence — 2 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0], frontier_events[7]</div>
-<span class="span">Google Cloud revenue $20.0B (+63% y/y)</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0057">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Alphabet issues $31.1B in senior unsecured notes</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$31.1B · loan</span> <span class="badge">neutral</span></div>
-<p class="narr">Alphabet completed a $31.1B senior notes issuance, augmenting its funding capacity for large‑scale AI infrastructure.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Issued senior unsecured notes (net proceeds $31.1B).</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0058">
-<div class="ev-top">
-<span class="date">2026-04-29</span>
-<span class="eh">Depreciation to step up; continued hiring in AI/Cloud under efficiency discipline</span>
-<span class="badge">personnel</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Alphabet noted depreciation would step up with the larger asset base and hiring would continue in AI/Cloud and other priority areas while maintaining efficiency.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">depreciation will step up with the larger asset base</span>
-<span class="span">hiring will continue in AI/Cloud</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0059">
-<div class="ev-top">
-<span class="date">2026-05-05</span>
-<span class="eh">NIST CAISI agreements with Google DeepMind and xAI for pre‑deployment evaluations</span>
+<span class="date">2024-01-25</span>
+<span class="eh">FTC launches 6(b) inquiry into AI investments and partnerships including Alphabet</span>
 <span class="badge">regulatory</span>
 <span class="badge b-single_source">single source</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">xai_grok</span></div>
-<p class="narr">NIST’s CAISI announced new agreements with Google DeepMind and xAI to conduct pre‑deployment and national‑security evaluations of frontier models.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">The FTC issued compulsory orders to Alphabet, Amazon, Anthropic, Microsoft, and OpenAI to probe AI deals and their competitive effects, elevating regulatory scrutiny of Alphabet’s ecosystem ties.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk · ANT <b>1</b> GEM <b>0</b> OAI <b>3</b></span> <span class="chchip">ecosystem_control_loss · ANT <b>1</b> GEM <b>0</b> OAI <b>1</b></span> <span class="chchip">regulatory_or_reputational_risk · ANT <b>1</b> GEM <b>0</b> OAI <b>3</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">frontier_events[6]</div>
-<span class="span">NIST’s CAISI</span>
-<span class="span">pre‑deployment evaluations</span>
-<span class="span">xAI</span>
+<div class="ev-src">frontier_events[23]</div>
+<span class="span">FTC launches 6(b) inquiry</span>
+<span class="span">Compulsory orders to Alphabet</span>
+<span class="span">investments and partnerships</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0060">
+<div class="event t-corroborated" id="E0011" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-05-11</span>
-<span class="eh">Alphabet considers first‑ever yen bond sale to fund AI spending</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Reports indicated Alphabet was considering its first yen bond issuance to support AI investment plans, diversifying funding sources.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[5]</div>
-<span class="span">first-ever yen bond sale</span>
-<span class="span">fund AI</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0061">
-<div class="ev-top">
-<span class="date">2026-05-19</span>
-<span class="eh">Google unveils Gemini Omni multimodal with video generation</span>
+<span class="date">2023-12-06</span>
+<span class="eh">Google Cloud introduces TPU v5p and AI Hypercomputer</span>
 <span class="badge">model_release</span>
-<span class="badge b-single_source">single source</span>
+<span class="badge b-corroborated">corroborated</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">At Google I/O 2026, Alphabet introduced Gemini Omni with video generation capabilities, rolling out initially to the Gemini app, Flow, and YouTube Shorts.</p>
+<p class="narr">Alphabet announced Cloud TPU v5p and the AI Hypercomputer architecture to accelerate large‑scale training, detailing a pod size of 8,960 chips and interconnect topology.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · GEM <b>0</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[3]</div>
-<span class="span">Gemini Omni multimodal model with video generation</span>
-<span class="span">rolling out to the Gemini app</span>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[24], web_search_findings[5]</div>
+<span class="span">Cloud TPU v5p</span>
+<span class="span">AI Hypercomputer</span>
+<span class="span">8,960 chips</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0062">
+<div class="event t-single_source" id="E0010" data-providers="anthropic_claude">
 <div class="ev-top">
-<span class="date">2026-05-19</span>
-<span class="eh">Gemini 3.5 Flash released for agentic workflows (GA)</span>
-<span class="badge">model_release</span>
+<span class="date">2023-10-27</span>
+<span class="eh">Google to invest up to $2B in Anthropic via convertible notes</span>
+<span class="badge">equity</span>
 <span class="badge b-single_source">single source</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet announced the Gemini 3.5 family and released 3.5 Flash for fast, long‑horizon agentic tasks and coding, available via Gemini app and enterprise APIs.</p>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Reports indicated Google would commit up to $2B to Anthropic in the form of convertible notes, deepening financial alignment with a key third‑party model provider.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure · ANT <b>5</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[4]</div>
-<span class="span">Gemini 3.5 Flash</span>
-<span class="span">agentic tasks and coding</span>
+<div class="ev-src">frontier_events[25]</div>
+<span class="span">invest up to $2B</span>
+<span class="span">convertible notes</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0063">
+<div class="event t-web_only_verified" id="E0009" data-providers="">
 <div class="ev-top">
-<span class="date">2026-06-02</span>
-<span class="eh">Alphabet to raise up to $80B for AI infrastructure; includes $10B from Berkshire</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$80.0B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Reports said Alphabet plans an equity raise of up to $80B to fund AI compute, featuring a $10B private investment from Berkshire Hathaway.</p>
-<p class="cav">⚠ Structure/timing subject to market conditions.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[2]</div>
-<span class="span">raise up to $80B</span>
-<span class="span">$10B from Berkshire</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0064">
-<div class="ev-top">
-<span class="date">2026-06-08</span>
-<span class="eh">Apple integrates Google Gemini into new Siri AI (Apple Intelligence)</span>
+<span class="date">2023-10-17</span>
+<span class="eh">Mistral‑7B integrated with Vertex AI Notebooks</span>
 <span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Google Cloud added Mistral’s open‑source model to Vertex AI workflows, expanding third‑party choice for customers.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Mistral AI&#x27;s first open source model</span>
+<span class="span">Vertex AI Notebooks</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="anthropic_claude meta_llama">
+<div class="ev-top">
+<span class="date">2023-08-29</span>
+<span class="eh">Vertex AI adds Llama 2 and pre‑announces Anthropic Claude 2 in Model Garden</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">meta_llama</span></div>
+<p class="narr">At Google Cloud Next, Alphabet expanded Vertex AI’s curated model set, adding Meta’s Llama 2 and pre‑announcing Anthropic’s Claude 2 alongside over 100 large models.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · ANT <b>3</b> LLA <b>3</b></span> <span class="chchip">product_integration_exposure · ANT <b>4</b> LLA <b>3</b></span> <span class="chchip">multi_model_hedge · ANT <b>5</b> LLA <b>5</b></span> <span class="chchip">switching_flexibility · ANT <b>3</b> LLA <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Model Garden</span>
+<span class="span">Llama 2</span>
+<span class="span">Claude 2</span>
+<span class="span">Over 100 large models</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="anthropic_claude google_gemini_deepmind openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-07-26</span>
+<span class="eh">Frontier Model Forum launched by Anthropic, Google, Microsoft, OpenAI</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Major AI labs formed the Frontier Model Forum to coordinate on safety and standards, with Google participating alongside Anthropic and OpenAI.</p>
+<div class="ev-ch">channels: <span class="chchip">ecosystem_control_loss · ANT <b>1</b> GEM <b>0</b> OAI <b>1</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[26]</div>
+<span class="span">Anthropic, Google, Microsoft, and OpenAI</span>
+<span class="span">Frontier Model Forum</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-05-10</span>
+<span class="eh">PaLM 2 announced at Google I/O 2023</span>
+<span class="badge">model_release</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Apple unveiled ‘Siri AI’ incorporating Google’s Gemini under Apple Intelligence, reinforcing the multi‑year Apple–Google integration in consumer experiences.</p>
+<p class="narr">Alphabet unveiled PaLM 2, demonstrating continued cadence in first‑party foundation models.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · GEM <b>5</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">frontier_events[1]</div>
-<span class="span">integrates Google’s Gemini</span>
-<span class="span">new Siri AI</span>
-<span class="span">Apple Intelligence</span>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">frontier_events[27]</div>
+<span class="span">PaLM 2 announced at Google I/O 2023</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0065">
+<div class="event t-single_source" id="E0006" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-06-11</span>
-<span class="eh">DeepMind to move into Platform 37 at King’s Cross, expanding UK AI footprint</span>
-<span class="badge">other</span>
+<span class="date">2023-04-20</span>
+<span class="eh">Alphabet combines DeepMind and Google Brain into Google DeepMind</span>
+<span class="badge">personnel</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Google said DeepMind and Google teams will begin moving into the Platform 37 building in London, expanding its UK AI facilities.</p>
+<p class="narr">Alphabet consolidated its AI research units into Google DeepMind to accelerate model progress and operational focus.</p>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">frontier_events[0]</div>
-<span class="span">Platform 37 at King’s Cross</span>
-<span class="span">expanding UK AI footprint</span>
+<div class="ev-src">frontier_events[28]</div>
+<span class="span">combines DeepMind and Google Brain</span>
+<span class="span">Google DeepMind</span>
 </details>
 </div>
-<div class="event t-corroborated" id="E0066">
+<div class="event t-single_source" id="E0005" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-06-22</span>
-<span class="eh">Alphabet logs worst day in a year amid AI talent exits; &gt;$270B intraday value erased</span>
+<span class="date">2023-02-08</span>
+<span class="eh">Bard demo error triggers ~$144B market cap drawdown</span>
 <span class="badge">risk</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$270.0B · market_cap_impact</span> <span class="badge">negative_displacement</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Following announcements that Noam Shazeer would join OpenAI and John Jumper would join Anthropic, Alphabet shares fell about 5% at the close and dropped over 7% intraday, briefly erasing over $270B in market value.</p>
-<p class="cav">⚠ Intraday market cap swing; close-to-close impact smaller.</p>
-<details>
-<summary>evidence — 2 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[13], news_rows[14]</div>
-<span class="span">worst day in over a year</span>
-<span class="span">fell about 5%</span>
-<span class="span">erasing over $270 billion</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0067">
-<div class="ev-top">
-<span class="date">2026-06-23</span>
-<span class="eh">Tech‑led selloff deepens on AI capex/debt worries; NDX futures &gt;2% lower</span>
-<span class="badge">risk</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Reports highlighted a sharp tech‑led risk‑off move as investors fretted over debt‑financed AI build‑outs and rate path repricing; Nasdaq 100 E‑minis fell over 2% with commentary citing trillions in market cap at risk.</p>
-<details>
-<summary>evidence — 2 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[8], news_rows[9]</div>
-<span class="span">debt‑financed AI build‑outs</span>
-<span class="span">Nasdaq 100 E‑minis −2.69%</span>
-<span class="span">would shed about $1.15 trillion</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0068">
-<div class="ev-top">
-<span class="date">2026-06-23</span>
-<span class="eh">Reports flag search pressure: DuckDuckGo ‘No‑AI’ surge; Google adds ‘AI Mode’ control</span>
-<span class="badge">competitive_threat</span>
 <span class="badge b-single_source">single source</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Coverage underscored competitive dynamics in Search as DuckDuckGo’s ‘No‑AI’ option saw traffic surges while Google introduced an AI Mode in a major Search redesign described as its biggest upgrade in over 25 years.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[10]</div>
-<span class="span">No‑AI</span>
-<span class="span">traffic booms</span>
-<span class="span">biggest upgrade in over 25 years</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0069">
-<div class="ev-top">
-<span class="date">2026-06-23</span>
-<span class="eh">Alphabet to replace Verizon in the Dow; S&amp;P DJI cites AI/cloud/ads exposure</span>
-<span class="badge">other</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">S&amp;P Dow Jones Indices announced Alphabet will replace Verizon in the DJIA effective June 29, noting the change broadens exposure to AI, cloud and advertising. Alphabet rose about 1% after‑hours on the news.</p>
-<details>
-<summary>evidence — 5 source(s), 4 span(s)</summary>
-<div class="ev-src">news_rows[3], news_rows[4], news_rows[7], news_rows[11], news_rows[12]</div>
-<span class="span">replace Verizon</span>
-<span class="span">effective prior to the open on Monday, June 29, 2026</span>
-<span class="span">broadens the Dow’s exposure to artificial intelligence</span>
-<span class="span">rose about 1% after-hours</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0070">
-<div class="ev-top">
-<span class="date">2026-06-24</span>
-<span class="eh">Reports: Google to lose AI researchers Jonas Adler and Alexander Pritzel to Anthropic</span>
-<span class="badge">personnel</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Bloomberg and others reported that Jonas Adler and Alexander Pritzel—key contributors to Gemini—plan to leave Google for Anthropic, extending a series of high‑profile AI departures that pressured Alphabet shares.</p>
-<details>
-<summary>evidence — 2 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[5], news_rows[2]</div>
-<span class="span">Jonas Adler and Alexander Pritzel</span>
-<span class="span">plan to leave for Anthropic</span>
-<span class="span">key contributors to Google’s Gemini</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0071">
-<div class="ev-top">
-<span class="date">2026-06-24</span>
-<span class="eh">TechCrunch: Engineering roles were most resilient in 2025 at large tech incl. Alphabet</span>
-<span class="badge">personnel</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">SignalFire data cited by TechCrunch showed engineers made up 55% of new hires in 2025 among large tech firms including Alphabet, despite broader hiring declines.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[6]</div>
-<span class="span">engineering as the most resilient</span>
-<span class="span">engineers made up 55% of new hires in 2025</span>
-<span class="span">Alphabet</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0072">
-<div class="ev-top">
-<span class="date">2026-06-25</span>
-<span class="eh">Nasdaq slides 0.5% amid megacap weakness; Alphabet declines</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Markets ended mixed with megacap tech under pressure; coverage noted Alphabet fell alongside other large caps amid rotation.</p>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$144.0B · market_cap_impact</span> <span class="badge">negative_displacement</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A widely reported Bard demo error precipitated a sharp decline in Alphabet’s market value, underscoring execution risk in high‑visibility AI rollouts.</p>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[1]</div>
-<span class="span">Nasdaq falls 0.5%</span>
-<span class="span">Alphabet also declined</span>
+<div class="ev-src">frontier_events[29]</div>
+<span class="span">Bard demo error</span>
+<span class="span">wipes ~$144B from Alphabet market cap</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0073">
+<div class="event t-single_source" id="E0004" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-06-26</span>
-<span class="eh">Chip stocks fall again as AI infrastructure cost worries resurface; Alphabet lags</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Coverage highlighted renewed concerns that rising AI infrastructure input costs could squeeze margins and demand, with Alphabet lagging alongside chip names.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[0]</div>
-<span class="span">AI infrastructure cost worries resurface</span>
-<span class="span">Alphabet and Tesla lower</span>
-<span class="span">Nvidia and Alphabet lag</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0074">
-<div class="ev-top">
-<span class="date">2026-02-04</span>
-<span class="eh">Gemini App reaches 750M MAU (Q4 2025 earnings context)</span>
-<span class="badge">customer_adoption</span>
+<span class="date">2023-02-06</span>
+<span class="eh">Google announces Bard (LaMDA‑based)</span>
+<span class="badge">model_release</span>
 <span class="badge b-single_source">single source</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Alphabet’s Q4 2025 earnings materials referenced the Gemini App attaining 750M monthly active users, signaling broad consumer adoption ahead of 2026 product cadence.</p>
-<p class="cav">⚠ MAU figure conveyed in event title; underlying documentation not included here.</p>
+<p class="narr">Alphabet introduced Bard as its conversational AI system based on LaMDA, marking a key step in its generative AI product lineup.</p>
 <details>
 <summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">frontier_events[16]</div>
-<span class="span">Gemini App 750M MAU</span>
+<div class="ev-src">frontier_events[30]</div>
+<span class="span">Bard announced by Google (LaMDA-based)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2023-02-03</span>
+<span class="eh">Anthropic selects Google Cloud as provider for GPU/TPU training and deployment</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic named Google Cloud as its cloud provider to co‑develop AI computing systems and leverage GPU and TPU clusters for training and deployment, expanding Alphabet’s third‑party model footprint.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>4</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">selected Google Cloud as its cloud provider</span>
+<span class="span">GPU and TPU clusters</span>
+<span class="span">train, scale, and deploy its AI systems</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2023-02-03</span>
+<span class="eh">Google invests $300M for ~10% stake in Anthropic with preferred‑provider cloud tie‑in</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$300M · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Google disclosed a $300M investment in Anthropic for roughly a 10% stake alongside a preferred‑provider cloud arrangement, tightening commercial and infrastructure alignment.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure · ANT <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">invested $300 million</span>
+<span class="span">about a 10% stake</span>
+<span class="span">preferred provider</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2021-11-01</span>
+<span class="eh">Cohere becomes available via Google Cloud Marketplace under multi‑year partnership</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Cohere announced a multi‑year technology partnership with Google Cloud and made its models available via Google Cloud Marketplace, reinforcing Alphabet’s open ecosystem strategy on Vertex/Marketplace distribution.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">multi-year technology partnership with Google Cloud</span>
+<span class="span">available via Google Cloud Marketplace</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0049'>E0049</a>, <a class='evref' href='#E0056'>E0056</a>, <a class='evref' href='#E0055'>E0055</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0064'>E0064</a>, <a class='evref' href='#E0041'>E0041</a></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0044'>E0044</a>, <a class='evref' href='#E0052'>E0052</a>, <a class='evref' href='#E0051'>E0051</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0039'>E0039</a>, <a class='evref' href='#E0041'>E0041</a>, <a class='evref' href='#E0045'>E0045</a></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0041'>E0041</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0048'>E0048</a>, <a class='evref' href='#E0054'>E0054</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0064'>E0064</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0046'>E0046</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0061'>E0061</a>, <a class='evref' href='#E0062'>E0062</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0049'>E0049</a>, <a class='evref' href='#E0056'>E0056</a>, <a class='evref' href='#E0055'>E0055</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0055'>E0055</a>, <a class='evref' href='#E0061'>E0061</a>, <a class='evref' href='#E0064'>E0064</a>, <a class='evref' href='#E0074'>E0074</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0046'>E0046</a>, <a class='evref' href='#E0059'>E0059</a>, <a class='evref' href='#E0047'>E0047</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0043'>E0043</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0064'>E0064</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0046'>E0046</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0042'>E0042</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0061'>E0061</a>, <a class='evref' href='#E0062'>E0062</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0055'>E0055</a>, <a class='evref' href='#E0061'>E0061</a>, <a class='evref' href='#E0064'>E0064</a>, <a class='evref' href='#E0074'>E0074</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0068'>E0068</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0066'>E0066</a>, <a class='evref' href='#E0070'>E0070</a>, <a class='evref' href='#E0068'>E0068</a></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0073'>E0073</a></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0068'>E0068</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0064'>E0064</a></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0064'>E0064</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0067'>E0067</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0041'>E0041</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0046'>E0046</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0046'>E0046</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0041'>E0041</a>, <a class='evref' href='#E0049'>E0049</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0049'>E0049</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0041'>E0041</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0074'>E0074</a></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>1.35</td><td>1.5</td><td>1.5</td><td>1.25</td><td>0.05</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.6</td><td>1.1</td><td>1.75</td><td>0.9</td><td>0</td><td>-0.15</td></tr>
+<tr><td class='k'>CompetCannib</td><td>-0.85</td><td>-0.85</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>-0.45</td><td>-0.15</td><td>0</td><td>0</td><td>0</td><td>-0.1</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>1.74</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.73</td><td>0.85</td><td>1</td><td>0.745</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.279</td><td>1.3614</td><td>7.395</td><td>0.897</td><td>0.0149</td><td>-0.0746</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What are the specific financial terms, milestones, and equity structure of the reported up to $40B Anthropic investment and the associated 5GW capacity commitment?</li>
@@ -1340,4 +1417,19 @@ External demand signals included Reuters‑reported Meta renting Google AI chips
 <li>Market‑movement events reflect contemporaneous reporting; intraday versus closing impacts differ.</li>
 <li>Capacity (GW) disclosures are non‑monetary; conversion to spend depends on power, PUE, and equipment cost assumptions.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

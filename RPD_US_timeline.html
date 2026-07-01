@@ -1,0 +1,486 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>RPD US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Rapid7 Inc <span class='sub'>(RPD US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.409</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>18 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 9</span>
+<span class='chip'>web-only (verified): 7</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Scale-up with provider programs, SOC automation, and Kenzo integration</h2>
+<div class='range'>2026-04-22 → 2026-06-09</div>
+<div class='psum'>By April–June 2026, Rapid7 intensified AI deployment. A Google Cloud case study cited use of Gemini models to improve cybersecurity support efficiency, reporting a 30% decrease in case handling times and a 35% increase in agent capacity. Rapid7 published acceptance into OpenAI’s Trusted Access for Cyber program and then, within days, highlighted joint work with OpenAI using GPT‑5.5 to reduce false-positive handling time by 25%.
+Concurrently, Rapid7 enabled Model Context Protocol in Metasploit to allow AI agents (e.g., Claude, Cursor) to query framework data, and joined Anthropic’s Project Glasswing to test Claude Mythos Preview for internal defensive workflows. On the product/financial front, Rapid7 acquired Kenzo Security to accelerate an AI-powered SOC roadmap and expand Exposure Command, but management cautioned on adoption/pricing and integration execution risks even as they emphasized MDR efficiency gains and machine-speed investigations.</div>
+<div class="event t-web_only_verified" id="E0017" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">Rapid7 gains access to Anthropic’s Project Glasswing (Claude Mythos Preview)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Rapid7 joined Anthropic’s Project Glasswing, gaining access to Claude Mythos Preview to explore frontier AI for internal, practitioner-led defensive workflows and guardrailed use.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Project Glasswing</span>
+<span class="span">Claude Mythos Preview</span>
+<span class="span">internal and practitioner-led</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0016" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Rapid7 partners with OpenAI under Trusted Access for Cyber; cites GPT‑5.5 benefits</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Rapid7 announced participation in OpenAI’s Trusted Access for Cyber and reported that using frontier AI models, including GPT‑5.5, reduced time chasing false positives by 25%, with OpenAI confirming the program’s scope.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4], web_search_findings[5]</div>
+<span class="span">Trusted Access for Cyber</span>
+<span class="span">GPT‑5.5</span>
+<span class="span">25% reduction in time spent chasing false-positive events in the queue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Rapid7 acquires Kenzo Security; accelerates AI-powered SOC and expands Exposure Command</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported the March acquisition of Kenzo Security to accelerate preemptive, AI-powered security operations and broaden Exposure Command with runtime validation and DSPM features.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">acquired Kenzo Security</span>
+<span class="span">AI-powered security operations</span>
+<span class="span">expanded Exposure Command</span>
+<span class="span">runtime validation/DSPM</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">CEO emphasizes AI-powered SOC focus alongside Exposure Management and D&amp;R</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Corey Thomas emphasized the focus on AI-powered SOC capabilities and continued importance of Exposure Management and Detection &amp; Response within Rapid7’s product priorities.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">CEO Corey Thomas</span>
+<span class="span">AI-powered SOC capabilities</span>
+<span class="span">Exposure Management</span>
+<span class="span">Detection &amp; Response</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Management: No incremental pricing planned for new AI features</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Rapid7 stated it is not looking to charge incrementally for AI features, positioning AI as a catalyst for platform upgrades and MDR efficiency rather than standalone pricing.</p>
+<div class="ev-ch">channels: <span class="chchip">pricing_pressure_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">not looking to actually charge incrementally for it,</span>
+<span class="span">platform upgrades</span>
+<span class="span">MDR efficiency</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Caution against unsafe fully autonomous remediation; measured roadmap</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management warned against fully autonomous remediation without sufficient controls and trust, highlighting a measured roadmap toward automation to mitigate operational and reputational risk.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">fully autonomous remediation</span>
+<span class="span">appropriate controls and trust</span>
+<span class="span">measured roadmap</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">AI adoption commentary: customers in &#x27;show-me stage&#x27;; investor confusion</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Rapid7 noted more confusion among investors than security experts, with customers in a &#x27;show-me stage&#x27; focused on outcomes and scalability, framing near-term adoption dynamics for AI-driven SOC capabilities.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">more confusion with investors</span>
+<span class="span">show-me stage</span>
+<span class="span">outcomes and scalability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk flagged: AI SOC adoption pace could constrain growth and profitability</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management highlighted that prioritizing MDR growth and margins may be impacted if cross-sell/upsell or adoption of AI SOC is slower than expected, potentially limiting revenue growth and profitability progress.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">prioritizing MDR growth and margin improvement</span>
+<span class="span">slower adoption of AI SOC capabilities</span>
+<span class="span">limit revenue growth and profitability progress</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk flagged: Kenzo AI SOC integration and GTM execution challenges</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Rapid7 cautioned that closing and integrating Kenzo to enhance preemptive AI SOC carries product/technology and go-to-market execution risks that could distract or delay roadmap benefits.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Closing and integrating Kenzo Security</span>
+<span class="span">go-to-market execution risks</span>
+<span class="span">distract or delay</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Kenzo-driven AI expected to improve MDR efficiency and margins over time</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Rapid7 expects Kenzo integration to enhance MDR gross margin and service efficiency using AI to scale investigations and response, supporting long-term SOC automation benefits.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">MDR efficiency</span>
+<span class="span">enhance MDR gross margin</span>
+<span class="span">scale investigations and response</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Kenzo integration progressing; machine-speed alert investigation highlighted</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated that Kenzo integration is not yet complete, with current capabilities focused on machine-speed alert investigations and expansion to broader data sources.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">integration is in progress and not yet complete</span>
+<span class="span">machine-speed alert investigation</span>
+<span class="span">broader data sources</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Rapid7 accepted into OpenAI’s Trusted Access for Cyber program</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Rapid7 disclosed acceptance into OpenAI’s Trusted Access for Cyber, with Anthropic consideration ongoing at the time. This formalized privileged access to OpenAI cyber capabilities for defensive use cases.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">accepted into OpenAI&#x27;s Trusted Access for Cyber program</span>
+<span class="span">remains under consideration at Anthropic</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Metasploit adds Model Context Protocol (MCP) server enabling AI agent access</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Rapid7 implemented the Metasploit MCP Server, bringing Model Context Protocol support so AI applications, including Claude and other agents, can query Metasploit Framework data.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Metasploit MCP Server (msfmcpd)</span>
+<span class="span">Model Context Protocol</span>
+<span class="span">like Claude, Cursor</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0018" data-providers="openai_chatgpt anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Frontier labs advance cyber-capable AI; potential platform competition risk</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Rapid7’s whitepaper notes that in April 2026, Anthropic, OpenAI, and Google DeepMind announced production-grade AI capable of discovering, chaining, and remediating vulnerabilities at machine speed, signaling potential competitive pressure from providers’ platforms.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<p class="cav">⚠ Provider advances are industry-wide; direct displacement depends on productization and enterprise adoption paths.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">In April 2026, Anthropic, OpenAI, and Google DeepMind</span>
+<span class="span">production-grade AI systems</span>
+<span class="span">discovering, chaining, and in some cases remediating software vulnerabilities</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Google Cloud: Rapid7 implemented Gemini models for support; 30% faster case handling</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A Google Cloud use case states Rapid7 worked with Ask AI to implement Gemini models, delivering a 30% decrease in case handling times and a 35% increase in agent capacity for cybersecurity support.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Rapid7 worked with Ask AI</span>
+<span class="span">implement Gemini models</span>
+<span class="span">30% decrease in case handling times</span>
+<span class="span">35% increase in agent capacity</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Command Platform AI risk intelligence</h2>
+<div class='range'>2025-10-29 → 2025-10-29</div>
+<div class='psum'>In late 2025, Rapid7 expanded platform capabilities by introducing AI-generated risk intelligence within the Rapid7 Command Platform. Delivered through Remediation Hub and complemented by enhancements to Intelligence Hub, this pushed AI deeper into exposure remediation and vulnerability context to support faster, more actionable security operations.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-29</span>
+<span class="eh">AI-generated risk intelligence launched in Rapid7 Command Platform</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Rapid7 announced AI-generated risk intelligence delivered via Remediation Hub and additional vulnerability intelligence in Intelligence Hub. The update aims to translate vulnerability data into contextual, actionable insights to accelerate remediation and detection.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">AI-generated risk intelligence</span>
+<span class="span">Rapid7 Command Platform</span>
+<span class="span">Delivered through Remediation Hub</span>
+<span class="span">added new vulnerability intelligence capabilities to Intelligence Hub</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational multi-cloud GenAI support and AI Engine infusion</h2>
+<div class='range'>2023-12-22 → 2024-06-13</div>
+<div class='psum'>Rapid7 began formalizing its generative AI posture in late 2023 by enabling InsightCloudSec users to leverage major cloud providers&#x27; GenAI services, explicitly citing Azure OpenAI Service and GCP Vertex AI alongside AWS Bedrock. This established a multi-cloud integration stance with direct touchpoints to OpenAI and Google’s Gemini ecosystem.
+In mid-2024, Rapid7 extended its internal Rapid7 AI Engine with new generative AI capabilities to augment MDR operations and signaled continued expansion of support for GenAI services from AWS Bedrock, Azure OpenAI Service, and GCP Vertex. These steps framed the company’s AI strategy as platform-embedded and cloud-agnostic, with clear operational benefits for security operations.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-06-13</span>
+<span class="eh">Rapid7 AI Engine extended with new GenAI capabilities; ongoing CSP GenAI support</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Rapid7 announced the Rapid7 AI Engine now includes new generative AI capabilities to transform MDR delivery. The company also reiterated expansion of support for GenAI services from AWS Bedrock, Azure OpenAI Service, and GCP Vertex, reinforcing multi-provider flexibility.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1], web_search_findings[2]</div>
+<span class="span">includes new generative artificial intelligence (AI) capabilities</span>
+<span class="span">The Rapid7 AI Engine is the foundational analytics engine</span>
+<span class="span">extended the Rapid7 AI Engine to include new Generative AI capabilities</span>
+<span class="span">including AWS Bedrock, Azure OpenAI service and GCP Vertex</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-12-22</span>
+<span class="eh">InsightCloudSec adds multi-cloud GenAI support (Azure OpenAI, GCP Vertex, AWS Bedrock)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Rapid7 detailed InsightCloudSec support for generative AI across the major clouds, explicitly naming Azure OpenAI Service and GCP Vertex AI, with AWS Bedrock enabling customization of foundation models. This marked early product-level integration with OpenAI and Google ecosystems.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">our platform now includes support for Generative AI across AWS, GCP, and Azure</span>
+<span class="span">Azure OpenAI Service</span>
+<span class="span">GCP Vertex AI</span>
+<span class="span">AWS’ newly released Bedrock</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What specific contractual terms, data controls, and duration govern Rapid7’s participation in OpenAI’s Trusted Access for Cyber program?</li>
+<li>What is the timeline and measurable milestones for completing Kenzo Security integration into Rapid7’s AI-powered SOC and Exposure Command?</li>
+<li>How, if at all, does Rapid7 plan to monetize AI enhancements given the stance of no incremental pricing for new AI features?</li>
+<li>Will Anthropic’s Project Glasswing (Claude Mythos Preview) findings translate into externally available product features for customers, and on what timeline?</li>
+<li>Beyond support operations, where else within Rapid7’s platform and services are Google Gemini models being applied and what outcomes are measured?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several sources are Rapid7-authored blogs/press content; limited third-party corroboration or financial quantification is provided.</li>
+<li>No dollarized revenue, RPO, or capex figures are disclosed for AI initiatives; efficiency impacts are expressed as percentages only.</li>
+<li>Provider competitive threat assessments are inferred from industry statements and may not directly translate into near-term customer displacement.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,556 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>CXM US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Sprinklr Inc <span class='sub'>(CXM US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.416</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>22 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 13</span>
+<span class='chip'>web-only (verified): 11</span>
+<span class='chip'>single source: 9</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Azure OpenAI migration; multi-provider expansion and AI operating economics</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>In 2026, Sprinklr operationalized a migration of OpenAI usage to Azure OpenAI per the 26.1 release, and expanded multi-provider capabilities across Vertex and Amazon Bedrock. Documentation introduced a provider capability matrix and BYOK integrations for Anthropic and xAI. The Sprinklr AI Agent’s default model was shifted from Azure OpenAI GPT 4.1 to Gemini 2.5 Flash Lite to reduce latency and improve RAG guardrails.
+Concurrently, management outlined AI commercial/operational dynamics: ~180 active AI engagements, product cadence around “LLM Insights” and agentic/Copilot features, prudent token usage, selective forward-deployed AI hiring, near-term margin pressure from AI-driven COGS and negative services mix, and continued small AI-adjacent tuck-in M&amp;A with strong FCF expected to lift cash toward ~$0.5B.</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="google_gemini_deepmind anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-29</span>
+<span class="eh">Supported models updated: OpenAI via Azure OpenAI; Vertex and Bedrock models including Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Sprinklr published an updated supported models list: OpenAI models delivered via Azure OpenAI, new Google Vertex Gemini variants, and Amazon Bedrock models including Anthropic’s Claude.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">26.1 release onwards</span>
+<span class="span">transitioned from OpenAI to Azure OpenAI</span>
+<span class="span">gemini-2.5-pro</span>
+<span class="span">claude-4.5-opus</span>
+<span class="span">OpenAI will not be visible</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0013" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-27</span>
+<span class="eh">Company overview reiterates official engagement with OpenAI within AI+</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Sprinklr’s overview emphasized its official engagement with OpenAI and its intent to continue partnering with leading generative AI providers under the AI+ strategy.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">official engagement with OpenAI</span>
+<span class="span">Sprinklr AI+</span>
+<span class="span">OpenAI’s generative AI</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">Amazon Bedrock added as an AI provider within AI+ Studio</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Sprinklr added Amazon Bedrock as a provider with options to connect via Sprinklr-managed access or BYOK, enabling customers to select models for deployment across use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Amazon Bedrock</span>
+<span class="span">Bring your own Key (BYOK)</span>
+<span class="span">provider card corresponding to Amazon Bedrock</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">Anthropic added as BYOK provider option in AI+ Studio</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Sprinklr published guidance to integrate Anthropic via BYOK in AI+ Studio, listing supported Claude models to broaden customer choice.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">integrating Anthropic as a provider</span>
+<span class="span">Bring Your Own Key (BYOK)</span>
+<span class="span">Claude 3.5 Sonnet (New)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">Google Vertex support enabled via Sprinklr-provided or customer-owned keys</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Sprinklr documented two integration paths for Google Vertex in AI+ Studio—through Sprinklr-provided LLM access or customer-owned keys—improving deployment flexibility.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Providers and Models Settings</span>
+<span class="span">Sprinklr Provided LLM</span>
+<span class="span">own keys</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">xAI added as BYOK provider option in AI+ Studio</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Sprinklr enabled xAI as a provider via BYOK in AI+ Studio, with supported Grok model identifiers, further extending multi-model breadth.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Add xAI as a Provider</span>
+<span class="span">Bring Your Own Key (BYOK)</span>
+<span class="span">grok-2-1212</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Management positions Sprinklr as AI-native; notes renewals and pipeline</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On the Q1 FY27 release, management underscored AI-native platform positioning alongside improving renewals and a healthy pipeline.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑native platform positioning</span>
+<span class="span">improving renewals</span>
+<span class="span">healthy pipeline</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">~180 active AI engagements; &#x27;LLM Insights&#x27; expected in summer</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Sprinklr reported approximately 180 active AI engagements and targeted a summer release for ‘LLM Insights’.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~180 active AI engagements</span>
+<span class="span">LLM Insights</span>
+<span class="span">coming in summer</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Cost discipline and AI staffing: prudent token usage; forward-deployed hiring</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management emphasized prudent token usage and selective hiring of forward-deployed AI engineers to balance innovation with unit economics.</p>
+<div class="ev-ch">channels: <span class="chchip">pricing_pressure_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Prudent token usage</span>
+<span class="span">forward‑deployed engineers</span>
+<span class="span">selective hiring</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Near-term margin trough and mix headwind including ViralMoment costs</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">CFO guided that subscription gross margin was at/near a trough with expected Q3–Q4 improvement, noting negative services margin and costs including the ViralMoment tuck-in.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">subscription gross margin is at/near the trough</span>
+<span class="span">sequential improvement in Q3 and Q4</span>
+<span class="span">negative services margin</span>
+<span class="span">ViralMoment</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Ongoing small AI-adjacent tuck-in M&amp;A under innovation acceleration</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management framed ViralMoment as part of an innovation acceleration strategy and indicated openness to additional small AI-adjacent tuck-ins.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ViralMoment</span>
+<span class="span">innovation acceleration</span>
+<span class="span">additional small AI‑adjacent tuck‑ins</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Product cadence: LLM Insights in summer; continued agentic/Copilot build-out</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Sprinklr highlighted near-term LLM Insights timing and ongoing investment in agentic/Copilot capabilities with forward-deployed engineers.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">LLM Insights</span>
+<span class="span">agentic/Copilot</span>
+<span class="span">forward‑deployed engineers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Selective headcount reduction and forward-deployed AI engineering hiring</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management continued selective headcount reductions while hiring forward-deployed AI engineers to support product velocity.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">selective headcount reduction</span>
+<span class="span">forward‑deployed AI engineering hiring</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">AI-driven COGS and services margin weigh on gross margins near term</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cited AI-driven COGS and negative professional services margin as near-term pressures on gross margin and operating leverage.</p>
+<div class="ev-ch">channels: <span class="chchip">pricing_pressure_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑driven COGS</span>
+<span class="span">pressuring gross margin</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Strong FCF expected; cash targeted toward ~$0.5B with buybacks in play</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$500M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Sprinklr guided that strong FCF could lift cash balances toward ~$0.5B over coming quarters, with buybacks considered based on valuation.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">toward ~$0.5B</span>
+<span class="span">buybacks remain in play</span>
+<span class="span">strong FCF</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-10</span>
+<span class="eh">Default model for Sprinklr AI Agent changed from Azure OpenAI GPT 4.1 to Gemini 2.5 Flash Lite</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">To reduce response latency and improve RAG workflows, Sprinklr updated the default AI Agent model from Azure OpenAI GPT 4.1 to Gemini 2.5 Flash Lite and optimized guardrails and fallbacks.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">reduce response latency</span>
+<span class="span">updated from Azure OpenAI GPT 4.1 to Gemini 2.5 Flash Lite</span>
+<span class="span">fallback framework</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Provider capability matrix published: Azure OpenAI, Google Vertex, Amazon Bedrock</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Sprinklr documented supported capabilities by provider across AI+ Studio, including Azure OpenAI, Google Vertex, and Amazon Bedrock, clarifying multimodal and embedding support profiles.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">capabilities currently supported for each AI provider</span>
+<span class="span">Azure OpenAI</span>
+<span class="span">Google Vertex</span>
+<span class="span">Amazon Bedrock</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-01-07</span>
+<span class="eh">Release 26.1: OpenAI usage migrated to Azure OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Sprinklr’s 26.1 release instituted a platform-level change migrating all usage previously configured on OpenAI to Azure OpenAI, aligning with enterprise security and reliability requirements.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">all usage currently configured on OpenAI</span>
+<span class="span">migrated to Azure OpenAI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Formalization of multi-model strategy</h2>
+<div class='range'>2025-01-01 → 2025-12-31</div>
+<div class='psum'>In its 2025 10-K, Sprinklr documented a model-dynamic approach to generative AI, emphasizing that multiple models can power a single use case alongside Sprinklr’s own AI. The filing enumerated support for OpenAI, Google Cloud’s Vertex AI, and Microsoft’s Azure OpenAI Service within Sprinklr AI+, framing a clear multi-provider posture designed for governance, security, and privacy.
+This period signaled an institutionalization of multi-model support in core disclosures, reinforcing optionality and flexibility in provider choice.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-03-21</span>
+<span class="eh">10-K details model-dynamic AI approach; supports OpenAI, Google Vertex, and Azure OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Sprinklr’s annual report formalized a multi-model strategy under AI+, listing support for OpenAI, Google’s Vertex AI, and Azure OpenAI Service to deliver governed enterprise-grade generative capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">model-dynamic approach to Generative AI</span>
+<span class="span">supports OpenAI, Google Cloud’s Vertex AI and Microsoft Azure OpenAI Service</span>
+<span class="span">Sprinklr AI+ – An AI-everywhere offering</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational Generative AI integrations</h2>
+<div class='range'>2023-03-30 → 2023-12-31</div>
+<div class='psum'>Sprinklr initiated its generative AI journey in 2023 with productized integrations of OpenAI across its Social offering and the broader Unified-CXM platform. In March 2023, it launched a self-service plan for Sprinklr Social enhanced with ChatGPT-enabled tools and OpenAI’s generative models, introducing accessible pricing and a trial to accelerate adoption. 
+By May 2023, Sprinklr formally announced AI+, unifying Sprinklr’s proprietary AI with OpenAI via the enterprise API across all four product suites. In October 2023, Sprinklr expanded its advertising capabilities to support Google and YouTube’s AI-powered Demand Gen campaigns and emphasized the unified power of Sprinklr AI with Google Cloud’s Vertex AI and OpenAI’s GPT models.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-10-10</span>
+<span class="eh">Support for Google/YouTube AI-powered Demand Gen campaigns; Vertex AI and OpenAI GPT on one platform</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Sprinklr extended advertising capabilities to Google and YouTube Demand Gen Campaigns and highlighted the unified use of Vertex AI and OpenAI GPT models, aiming to boost productivity for advertisers.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Demand Gen Campaigns</span>
+<span class="span">Vertex AI</span>
+<span class="span">OpenAI’s GPT models</span>
+<span class="span">40% more productive</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-05-23</span>
+<span class="eh">Sprinklr AI+ announced; integrates with OpenAI enterprise API across product suites</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Sprinklr launched AI+, unifying its proprietary AI with OpenAI via the enterprise API, bringing generative capabilities to all four product suites with an emphasis on enterprise data protection.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Sprinklr AI+ integrates with the OpenAI enterprise API</span>
+<span class="span">generative AI from OpenAI</span>
+<span class="span">all four Sprinklr product suites</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-03-30</span>
+<span class="eh">Sprinklr Social self-service plan launches with ChatGPT-enabled tools and OpenAI integration</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$299 · other</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Sprinklr introduced a self-service version of Sprinklr Social enhanced with ChatGPT-enabled tools and OpenAI’s generative AI models, including accessible pricing and a trial to drive adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">ChatGPT-Enabled Tools</span>
+<span class="span">OpenAI’s generative AI models</span>
+<span class="span">$299 per user per month</span>
+<span class="span">90-day Free Trial</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What share of Sprinklr’s AI workload volume and spend now runs on Azure OpenAI versus Google Vertex and Amazon Bedrock?</li>
+<li>What is the expected revenue and customer adoption impact of the forthcoming &#x27;LLM Insights&#x27; launch timing noted for summer?</li>
+<li>How materially do LLM token costs contribute to AI‑driven COGS, and how effective is &#x27;prudent token usage&#x27; at mitigating margin pressure?</li>
+<li>What is the size, cadence, and strategic focus of any additional small AI‑adjacent tuck‑ins beyond ViralMoment?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Help Center documentation may reflect rolling feature deployments and can change; availability may vary by customer/region and over time.</li>
+<li>Some 2026 default model and provider integrations are being rolled out in phases, which may not apply to all customers immediately.</li>
+<li>No AI‑specific highlights were extracted from the 26Q4 (2026-03-11) release; absence of evidence there is not evidence of absence.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

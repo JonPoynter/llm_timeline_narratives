@@ -1,0 +1,686 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>SPGI US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>S&amp;P Global Inc <span class='sub'>(SPGI US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.458</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>30 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 2</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 15</span>
+<span class='chip'>single source: 16</span>
+<span class='chip'>web-only (verified): 9</span>
+<span class='chip'>web-only (unverified): 4</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Multi-platform connectors, customer uptake, and policy controls</h2>
+<div class='range'>2026-02-09 → 2026-06-14</div>
+<div class='psum'>In early 2026 SPGI accelerated multi-platform distribution: launching a verified MCP connector app for ChatGPT (OpenAI), sustaining a multi-partner strategy with explicit data-protection policies, and reporting early adoption and pricing uplift tied to AI-Ready data. Management highlighted no training of LLMs on SPGI data, continued deployment of plug-ins and agents, and progress on the Titan AI Upstream platform ahead of a hard launch later in 2026.
+SPGI broadened reach across third-party platforms: Cohere’s North, xAI’s Grok connector catalog, and previously announced Google Cloud and AWS integrations. Operationally, SPGI hardened trading infrastructure with AI and expanded capacity for a high-profile IPO rehearsal. Ratings commentary also incorporated AI-related risks in credit views for issuers with large software exposure.</div>
+<div class="event t-web_only_verified" id="E0031" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2026-06-14</span>
+<span class="eh">xAI Grok connector catalog lists S&amp;P Global</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">xAI’s Grok platform added an S&amp;P Global connector in its catalog, enabling Grok users to access SPGI financial and market intelligence within conversations.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">S&amp;P Global Financial data, market intelligence, and company information</span>
+<span class="span">Last updated: June 14, 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-11</span>
+<span class="eh">SPGI stress-tests and uses AI to harden code ahead of SpaceX IPO</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Ahead of SpaceX’s record-scale IPO preparations, SPGI boosted infrastructure capacity by about 200% and used AI to harden code as part of broader market readiness exercises.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">boosted infrastructure capacity by about 200%</span>
+<span class="span">used AI to harden code</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">Cohere collaboration brings SPGI data into North for agentic workflows</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SPGI announced a strategic collaboration with Cohere to deliver trusted financial data within Cohere’s secure enterprise AI platform, North, extending reach across customer AI environments.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">S&amp;P Global Expands AI Ecosystem Reach with Cohere to Power Trusted, Agentic Workflows</span>
+<span class="span">secure enterprise AI platform, North</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">S&amp;P Ratings flags AI disruption risk in software-heavy BDC portfolio</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">A WSJ/Dow Jones roundup cited S&amp;P Global Ratings’ view that Blackstone Secured Lending’s large software exposure could face asset-quality pressure from AI-related disruption; outlook revised to stable from positive.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">software exposure could pose a key asset‑quality risk</span>
+<span class="span">revised its outlook on the BDC to stable from positive</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">AI-ready data via MCP and a Claude-aligned plug-in for Financial Services</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">SPGI detailed plans to expose AI-ready data through MCP and a new plug-in aligned with Anthropic Claude for Financial Services, alongside integrating SPGI logic/workflows on CapIQ Pro.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">integrate SPGI logic/workflows on CapIQ Pro</span>
+<span class="span">AI‑ready data via MCP</span>
+<span class="span">plug‑in aligned with Claude for Financial Services.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">AI-ready renewals priced 35%–45% higher on select contracts</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported that select client renewals opting for AI-ready data access saw roughly 35%–45% higher pricing, indicating early monetization of AI enablement.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑ready data access</span>
+<span class="span">35%–45% higher renewal pricing.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Rising AI usage; retention uplift where AI tools are used</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">LLM call volumes increased materially and retention improved by a couple hundred bps in Market Intelligence and over 500 bps in Energy where AI tools are adopted.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">LLM call volumes up ~2x</span>
+<span class="span">~5x from Dec. to Mar.</span>
+<span class="span">&gt;500 bps in Energy</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Titan AI Upstream set for subscription model; hard launch later in 2026</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SPGI confirmed Titan will be subscription-based with a hard launch later in 2026; early demos already contributed to renewal uplift.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">subscription‑based</span>
+<span class="span">hard launch later in 2026</span>
+<span class="span">significant renewal uplift.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Divesting ~25% of Upstream software; SLB to distribute retained data</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">SPGI is selling a portion of its Upstream software (about 25% of Upstream revenue) to SLB while retaining proprietary data and insights, with SLB as a new distribution partner for the retained data.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">25% of Upstream revenue</span>
+<span class="span">SLB distribution partnership.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Medium-term demand tailwind tied to data-center build-outs</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Despite near-term energy demand pressure, management sees medium-term demand from power, utilities and critical minerals linked to data-center build-outs.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">medium‑term demand</span>
+<span class="span">data‑center build‑outs.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Continued AI deployment across products via plug-ins and agents</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Operational updates included continued deployment of AI features across products, such as plug-ins and agents.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">continued AI deployment</span>
+<span class="span">plug‑ins/agents</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Ratings billed issuance included large hyperscaler transactions</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Billed issuance rose 14% y/y in Q1 with outsized IG activity, including large hyperscaler and M&amp;A-related transactions, supporting Ratings revenue momentum.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">billed issuance up 14% y/y in Q1</span>
+<span class="span">large hyperscaler/M&amp;A transactions;</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Some hyperscaler issuance pulled forward to Q1; outlook tempered on comps</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management believes some hyperscaler issuance shifted into Q1; they maintained full-year issuance assumptions and noted Ratings growth moderation on tough comps later in the year.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">some hyperscaler issuance was pulled forward into 1Q</span>
+<span class="span">should not accelerate in 2Q, moderating in 3Q</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-10</span>
+<span class="eh">Policy: SPGI bars LLM training on its data</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reiterated that LLM providers are not permitted to train on S&amp;P Global data, emphasizing content protection in multi-partner AI distribution.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">we don’t allow the LLM providers to train on S&amp;P Global data,</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-10</span>
+<span class="eh">Strategy: multi-partner LLM distribution with control and protections</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">SPGI emphasized a multi-partner distribution model while retaining commercial control and data protections across AI channels.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">multi‑partner distribution</span>
+<span class="span">retaining commercial control and data protections</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-10</span>
+<span class="eh">AI/productivity investment level maintained at ~3–4% of expense base</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management noted ongoing AI and productivity investment at roughly 3–4% of the expense base, consistent with prior practice.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">3%, 4% of our expense base.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-10</span>
+<span class="eh">No specific AI revenue contribution guidance provided</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">SPGI stated it is not providing separate guidance for AI revenue contribution at this time.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">we’re not providing guidance around the contribution of AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-10</span>
+<span class="eh">Ratings tailwind possible if hyperscaler issuance tops 2025</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management indicated potential upside if hyperscaler issuance exceeds 2025 levels, reflecting exposure to cloud provider financing activity within Ratings.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">upside if hyperscaler issuance exceeds 2025 levels.</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0013" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-02-09</span>
+<span class="eh">Verified MCP connector app brings SPGI data into ChatGPT</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">SPGI launched an app for ChatGPT using a verified S&amp;P Global MCP connector built by Kensho that connects to the Kensho LLM-ready API. Management had also disclosed an OpenAI MCP connector alongside Q4 results.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8], filings[1]</div>
+<span class="span">app for ChatGPT</span>
+<span class="span">verified S&amp;P Global MCP connector</span>
+<span class="span">connects to the Kensho LLM-ready API</span>
+<span class="span">OpenAI MCP connector</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem integrations and platform distribution</h2>
+<div class='range'>2025-01-30 → 2025-12-10</div>
+<div class='psum'>In 2025 SPGI broadened distribution across major AI and cloud platforms. It integrated Commodity Insights data with Microsoft 365 Copilot to ease enterprise adoption, collaborated with Anthropic to bring trusted SPGI data into Claude via MCP, and partnered with Google Cloud to distribute commodities data through BigQuery. SPGI also delivered MCP server integrations for AWS’s Quick Suite and deepened a multi-year strategic partnership with Google Cloud to unify proprietary data on BigQuery and expand agentic offerings on Gemini Enterprise.
+Kensho’s public AI Benchmarks iteration was sunset in mid-2025 after tracking rapid model progress, reflecting a lifecycle transition from public benchmarking to other customer-focused AI initiatives. SPGI’s content also covered macro AI themes, including DeepSeek’s rise and its implications for AI competitiveness.</div>
+<div class="event t-web_only_verified" id="E0011" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-12-10</span>
+<span class="eh">Multi-year Google Cloud partnership to unify data and expand Gemini agentic offerings</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">SPGI and Google Cloud agreed a multi-year partnership to unify proprietary SPGI data on BigQuery and expand agentic experiences on Gemini Enterprise, including a Kensho-developed Data Retrieval Agent.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Multi-year strategic partnership</span>
+<span class="span">unifying its proprietary data on BigQuery</span>
+<span class="span">Gemini Enterprise</span>
+<span class="span">Data Retrieval Agent, developed by Kensho</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-08-21</span>
+<span class="eh">Google Cloud partnership brings Commodity Insights data to BigQuery</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">SPGI partnered with Google Cloud to integrate AI-Ready Commodity Insights datasets into BigQuery, enabling analytics workflows on Google’s data-to-AI platform.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Commodity Insights data now available in Google Cloud&#x27;s BigQuery</span>
+<span class="span">AI-Ready Data packages include energy, power and gas</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-23</span>
+<span class="eh">Kensho sunsets public iteration of S&amp;P AI Benchmarks leaderboard</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Kensho noted it would sunset further public updates to the S&amp;P AI Benchmarks leaderboard as of July 2025, after charting rapid advances among reasoning models.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">sunsetting the current iteration of S&amp;P AI Benchmarks</span>
+<span class="span">you won’t see further updates to our public leaderboards</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-07-15</span>
+<span class="eh">Anthropic collaboration brings SPGI data into Claude via MCP</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">SPGI and Anthropic announced an integration using a Kensho-built MCP server to bring trusted SPGI datasets (e.g., Capital IQ Financials, transcripts) directly into Claude for financial professionals.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Claude by Anthropic</span>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">Kensho developed an MCP server</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-04-21</span>
+<span class="eh">AI-Ready Commodities Data integrated with Microsoft 365 Copilot</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SPGI integrated Commodity Insights data into Microsoft 365 Copilot to simplify enterprise AI deployment and enable users to leverage SPGI data inside familiar productivity tools without coding.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">Integrated With Microsoft 365 Copilot</span>
+<span class="span">requires no coding</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-01-30</span>
+<span class="eh">SPGI commentary: DeepSeek challenges US AI dominance assumptions</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">S&amp;P Global’s Daily Update discussed DeepSeek’s rapid progress and low-resource advantage, highlighting competitive shifts in LLM development landscapes relevant to financial workflows and costs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">DeepSeek Challenges Core Assumptions of US AI Dominance</span>
+<span class="span">on Jan. 10, DeepSeek</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundation and benchmarking build-out</h2>
+<div class='range'>2018-03-06 → 2024-12-31</div>
+<div class='psum'>S&amp;P Global established its modern AI foundation with the acquisition of Kensho in 2018, bringing core AI/ML, NLP, and data engineering capabilities in-house. This deal set the stage for internal productivity gains and external product innovation across divisions.
+In 2024, SPGI began productizing AI for customers: launching a generative AI-enabled search on S&amp;P Global Marketplace and introducing S&amp;P AI Benchmarks by Kensho to evaluate LLMs on finance tasks. Kensho also released an LLM-ready API (open beta) to make SPGI’s structured data accessible for generative AI, designed to interoperate with leading models (e.g., GPT, Gemini, Claude). A public leaderboard showcased multi-model performance, underscoring SPGI’s role as a neutral evaluator rather than a single-provider bet.</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-11-13</span>
+<span class="eh">Kensho LLM-ready API (open beta) makes SPGI data accessible to LLMs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">SPGI launched the Kensho LLM-ready API in open beta to let customers query key SPGI tabular datasets using natural language via LLMs. The API integrates with major LLMs (e.g., GPT, Gemini, Claude) without exposing SPGI data for training.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Kensho LLM-ready API</span>
+<span class="span">open beta</span>
+<span class="span">like GPT, Gemini, or Claude</span>
+<span class="span">LLM-enabled applications</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2024-04-24</span>
+<span class="eh">Public leaderboard highlights multi-model finance performance</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Kensho’s Finance Fundamentals leaderboard displayed comparative results across closed and open models, including Meta’s Llama, Google’s Gemini, Anthropic’s Claude, OpenAI GPT-4 Turbo, and DeepSeek variants. This reinforced SPGI’s neutral, comparative stance.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">Llama 3 70B</span>
+<span class="span">Gemini Pro</span>
+<span class="span">Claude 2</span>
+<span class="span">GPT-4 Turbo</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-04-03</span>
+<span class="eh">S&amp;P AI Benchmarks by Kensho (Beta) unveiled for finance LLM evaluation</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SPGI introduced S&amp;P AI Benchmarks by Kensho to assess quantitative reasoning and finance expertise of LLMs, publishing a scoreboard for transparent model comparison.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">S&amp;P AI Benchmarks by Kensho</span>
+<span class="span">assesses and ranks the quantitative reasoning abilities</span>
+<span class="span">displayed on a scoreboard</span>
+<span class="span">secure submission process</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-02-06</span>
+<span class="eh">Generative AI search launched on S&amp;P Global Marketplace</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SPGI launched an AI-enabled search experience on Marketplace, using an LLM to answer natural-language queries and recommend relevant datasets and services across divisions and partners.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">launch of artificial intelligence (AI)-enabled search</span>
+<span class="span">leverages a Large Language Model (LLM)</span>
+<span class="span">responds to user&#x27;s natural language queries</span>
+<span class="span">proactively recommends other relevant data sets</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2018-03-06</span>
+<span class="eh">S&amp;P Global to acquire Kensho for approximately $550m</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$550M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">S&amp;P Global signed an agreement to acquire Kensho to bolster AI, NLP, and analytics capabilities. The $550m cash-and-stock acquisition deepened SPGI’s internal AI capacity and underpins later AI productization.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">acquire Kensho</span>
+<span class="span">approximately $550m, net of cash acquired</span>
+<span class="span">mix of cash and stock.</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What percentage of total SPGI customer renewals opted for AI-ready data in 26Q1, and how did this vary by segment?</li>
+<li>What is the planned pricing and packaging for Titan AI Upstream at hard launch, and is there an ARR target?</li>
+<li>What proportion of SPGI’s data access now flows through third-party AI platforms (ChatGPT, Claude, Gemini, AWS Quick Suite, Cohere North, Grok) versus native SPGI interfaces?</li>
+<li>How does SPGI measure and contract for usage via MCP connectors (e.g., metering, minimums, or per-seat pricing) across platforms?</li>
+<li>What are the data governance and latency SLAs for the Kensho LLM-ready API across different providers?</li>
+<li>Has SPGI moved the Kensho LLM-ready API from open beta to GA, and what is adoption by top customer cohorts?</li>
+<li>To what extent do Google Cloud and AWS deals include revenue commitments or co-sell motions, and what is the contract term beyond the ‘multi-year’ descriptor?</li>
+<li>What safeguards prevent inadvertent model training via third-party platforms that intermediate SPGI data?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many items are sourced from SPGI press releases and earnings highlights; third-party corroboration may be limited.</li>
+<li>The xAI Grok connector catalog page may change over time; availability could vary by region/account.</li>
+<li>The WSJ/Dow Jones roundup is an aggregated brief; underlying S&amp;P Ratings research should be referenced for full context.</li>
+<li>Percentages in filings are directional and may reflect management commentary rather than audited metrics.</li>
+<li>Some integrations (e.g., AWS Quick Suite, Cohere North, MCP connectors) imply distribution exposure; specific commercial terms are undisclosed.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

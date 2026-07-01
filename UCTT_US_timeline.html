@@ -1,0 +1,653 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>UCTT US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Ultra Clean Holdings Inc <span class='sub'>(UCTT US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.429</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>29 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 7</span>
+<span class='chip'>single source: 20</span>
+<span class='chip'>web-only (unverified): 6</span>
+<span class='chip'>corroborated: 2</span>
+<span class='chip'>web-only (verified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Q1’26 beat, AI-driven upcycle posture, capacity and guidance raised</h2>
+<div class='range'>2026-04-28 → 2026-06-30</div>
+<div class='psum'>On April 28, 2026, UCT reported Q1 results above guidance midpoint and framed the business within an early-stage, AI-driven WFE upcycle. Management cited customer outlooks for 2026 WFE of ~$140–$145B and 2027 growth of 15%+, with AI drivers including leading-edge foundry logic, HBM, and advanced packaging. Capacity was positioned to scale from a ~$3B run-rate today to ~$4B within 6–9 months, and services were expected to grow double digits and represent ~10–12% of revenue at a $4B run-rate.
+Guidance for Q2 revenue was set at $565–$605M. The company completed a convertible notes offering (later referenced as $600M) and repaid its Term Loan B, though Q1 also featured negative free cash flow due to inventory build. Risks cited included execution through rapid ramps, supply chain and labor bottlenecks, product margin dispersion, potential dilution from converts, and lack of disclosed backlog/book-to-bill metrics. The Spring 2026 corporate presentation reiterated a 2030 vision for $4B revenue and &gt;20% gross margin, with AI-related HBM supply tightness persisting.</div>
+<div class="event t-corroborated" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1: above guidance midpoint; early-stage AI-driven upcycle</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management characterized Q1 performance as above midpoint and emphasized an early-stage, AI-driven WFE upcycle, aligning with the press release’s view of a multi-year AI driven expansion.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[2]</div>
+<span class="span">above the midpoint of guidance</span>
+<span class="span">early‑stage, AI‑driven upcycle</span>
+<span class="span">multi-year, AI driven expansion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Customer WFE outlook ~$140–$145B for 2026; AI drivers HBM/packaging</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$145.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">UCT cited customer outlooks for 2026 WFE of ~$140B–$145B, highlighting HBM memory and advanced packaging among key AI-related demand drivers.</p>
+<p class="cav">⚠ Outlooks reflect customer forecasts, not UCT guidance.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">customer outlooks for 2026 WFE of ~$140B–$145B</span>
+<span class="span">HBM memory</span>
+<span class="span">advanced packaging</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">WFE 2026 $140–$145B; 2027 growth 15%+ amid AI ramp</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$145.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management relayed customer forecasts of $140–$145B WFE in 2026 and 2027 growth of 15%+, citing the AI-driven ramp and memory bottleneck resolution.</p>
+<p class="cav">⚠ Forecasts are customer-derived and may change.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$140–$145B</span>
+<span class="span">“15% and above,”</span>
+<span class="span">AI-driven ramp</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Capacity plan: from ~$3B run-rate to ~$4B within 6–9 months</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">UCT stated it can support a ~$3B run-rate today and, with modest capital, reach ~$4B capacity within 6–9 months as AI-driven WFE ramps.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">support a ~$3B run-rate today</span>
+<span class="span">reach ~$4B capacity</span>
+<span class="span">within 6–9 months</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Services: double-digit growth, 10%–12% mix at $4B run-rate</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects services to grow double digits in 2026, representing ~10%–12% of revenue at a $4B run-rate, adding a mix tailwind alongside product ramps.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Services revenue is expected to grow double digits</span>
+<span class="span">represent ~10%–12% of total revenue</span>
+<span class="span">at a $4B run-rate</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Margin trajectory: sequential improvement through 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UCT guided to slightly higher gross margin in Q2 with continued improvement toward Q4 as revenue ramps; product margins vary widely by mix and region.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Gross margin should start to continue to improve</span>
+<span class="span">slightly up in Q2</span>
+<span class="span">moving higher toward Q4</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">China domestic OEM exposure assessed at &lt;5% of revenue</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management noted domestic China OEM exposure is less than 5% of revenue, tempering direct risk from China domestic OEM demand fluctuations.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Domestic China OEM exposure is “less than 5% of our overall revenue.”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">NPI centers of excellence expanded near customer hubs</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UCT is enhancing NPI centers of excellence in the U.S. and building out capabilities in Asia and Europe to co‑innovate adjacent to customer engineering hubs.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">enhancing NPI centers of excellence in the U.S.</span>
+<span class="span">expanding capabilities in Asia and Europe</span>
+<span class="span">co‑innovate near customers’ engineering hubs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Etch/deposition share mix rising into 2H26</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects higher etch/deposition share from mid‑30s% in 1H to high‑30s% in 2H, consistent with AI-driven leading-edge process intensity.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">higher etch/deposition share</span>
+<span class="span">mid‑30s% in 1H</span>
+<span class="span">high‑30s% in 2H</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Completed convertible notes and repaid Term Loan B</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$600M · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">The company completed a convertible notes offering and repaid its Term Loan B; management indicated the refinancing should lower cash interest and expand revolver capacity.</p>
+<p class="cav">⚠ Amount reflects Q1 disclosure; pricing press release on 2/26 cited $525M.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">completed a $600M convertible notes offering</span>
+<span class="span">repaid its Term Loan B</span>
+<span class="span">lowers cash interest expense</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Repurchased $40M of shares in Q1</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$40M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">UCT executed $40M of share repurchases in Q1 as part of capital allocation alongside refinancing actions.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Capital allocation in Q1 included $40M of share repurchases.</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q2 2026 outlook: revenue $565–$605M; EPS ranges</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$605M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">For Q2 2026, UCT guided revenue to $565–$605M with GAAP and non‑GAAP EPS ranges, consistent with the 8‑K press release.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[2]</div>
+<span class="span">revenue to $565–$605M</span>
+<span class="span">expects revenue in the range of $565 million to $605 million</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Risk: ramp execution and supply chain bottlenecks</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that labor, cleanroom capacity, or component supply bottlenecks could affect delivery timing, mix, and profitability during AI-led ramps.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ramp‑readiness</span>
+<span class="span">bottlenecks in labor, cleanroom capacity or component supply</span>
+<span class="span">could hinder delivery timing, mix and profitability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Risk: margin mix and negative operating cash flow in Q1</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Q1 non‑GAAP operating margin was 5.1% with negative operating cash flow due to inventory build; sustained working capital needs could defer margin expansion.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">non‑GAAP operating margin was 5.1%</span>
+<span class="span">negative operating cash flow</span>
+<span class="span">inventory build</span>
+<span class="span">working‑capital needs could defer cash conversion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Risk: convertible notes add debt and dilution potential</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$600M · loan</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Management noted that the $600M convertible notes improve cash interest but add debt and potential dilution; future conversion or refinancing could impact per‑share metrics.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">The $600M convertible notes improve cash interest</span>
+<span class="span">add debt and potential dilution</span>
+<span class="span">conversion (or refinancing risk)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Disclosure gap: no orders/RPO/backlog metrics provided</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">UCT did not disclose orders, book‑to‑bill, RPO, or backlog metrics in the Q1 materials, limiting direct visibility into order momentum during the ramp.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">did not disclose orders, book‑to‑bill, RPO or backlog metrics</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Revenue cadence: sequential growth with 2H weighting</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management indicated sequential growth from Q1→Q2 with continued momentum in 2H 2026, acknowledging second‑half weighting.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Implied sequential growth from Q1→Q2</span>
+<span class="span">second‑half weighting acknowledged</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1 2026 free cash flow ≈ $(42.9)M on inventory build</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$43M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Operating cash flow was $(33.3)M and capex $9.6M, implying free cash flow of roughly $(42.9)M as the company prepared for ramps.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow: $(33.3)M</span>
+<span class="span">capex: $9.6M</span>
+<span class="span">free cash flow ≈ $(42.9)M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Liquidity snapshot: $323.5M cash; $601.9M long-term debt</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$324M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">UCT ended Q1 with $323.5M in cash and cash equivalents and $601.9M in long‑term debt, supporting ramp investments and working capital.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Cash &amp; cash equivalents: $323.5M</span>
+<span class="span">long‑term debt: $601.9M</span>
+<span class="span">equity: $702.1M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Expected to at least track WFE with upside from share/services</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects UCT to at least track overall WFE, with additional upside potential from share gains and services tailwinds.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">positioning UCT to at least track WFE</span>
+<span class="span">upside from share gains and services tailwinds</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Wide product margin dispersion highlights mix sensitivity</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Product margins span a large bell curve (~10% to 50%–60%), underscoring how mix/region and hiring cadence can drive margin variability during ramps.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">product margins span a “large bell curve”</span>
+<span class="span">ranging from ~10% to 50%–60%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">CFO retirement announced</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">UCT announced its CFO plans to retire, initiating a leadership transition during an AI-led growth period.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“After a lot of thought, I’ve decided to retire from UCT,”</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">2030 vision: $4B revenue, &gt;20% GM; AI/HBM tightness persists</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$4.0B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">UCT’s Spring 2026 presentation set a 2030 vision of $4B revenue and &gt;20% gross margin; it emphasized AI-driven technology changes and noted HBM supply imbalance persisting through 2027.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">2030 Corporate Vision  Revenue of $4B  Gross Margin &gt;20%</span>
+<span class="span">AI is fueling rapid technology changes</span>
+<span class="span">HBM supply imbalance to persist through 2027.</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1 2026 results: revenue $533.7M; AI expansion cited</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$534M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">UCT reported Q1 2026 revenue of $533.7M and reiterated confidence in a multi-year, AI-driven expansion supported by accelerated customer roadmaps.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">reported its financial results for the first quarter</span>
+<span class="span">Total revenue was $533.7 million.</span>
+<span class="span">multi-year, AI driven expansion</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early 2026: AI ramp messaging and balance sheet repositioning</h2>
+<div class='range'>2026-02-23 → 2026-04-27</div>
+<div class='psum'>Management’s February 23, 2026 8-K for Q4/FY25 emphasized preparedness for a multi-year AI-driven expansion, with Q4 revenue of $506.6M and ramp-readiness initiatives underway. The same day’s 2025 Form 10-K reiterated high customer concentration and deep exposure to semiconductor verticals.
+On February 26, 2026 UCT priced an upsized $525M 0.00% convertible due 2031, strengthening liquidity ahead of anticipated AI-led WFE growth. A March 23, 2026 industry post highlighted contamination control needs for High NA EUV, aligning UCT services (e.g., ChemTrace, AMC testing) with advanced lithography ramps.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-23</span>
+<span class="eh">High NA EUV contamination control positioning (ChemTrace/AMC)</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UCT highlighted increasing importance of contamination control for High NA EUV and referenced its analytical services, including TOC characterization, AMC testing, and ChemTrace methodologies supporting advanced lithography ramp quality and uptime.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">High NA EUV</span>
+<span class="span">contamination control is no longer a secondary concern</span>
+<span class="span">airborne molecular contamination (AMC) testing</span>
+<span class="span">ChemTrace methodologies</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-26</span>
+<span class="eh">Priced $525M 0.00% convertible due 2031 (Rule 144A)</span>
+<span class="badge">financing</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$525M · loan</span> <span class="badge">neutral</span></div>
+<p class="narr">UCT priced an upsized offering of $525.0M 0.00% convertible senior notes due 2031 to qualified institutional buyers under Rule 144A, providing capital for the expected AI-driven upcycle.</p>
+<p class="cav">⚠ Final settled principal amount later referenced as $600M in Q1 disclosures.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">pricing of its offering of $525.0 million</span>
+<span class="span">0.00% convertible senior notes due 2031</span>
+<span class="span">pursuant to Rule 144A</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-23</span>
+<span class="eh">2025 10-K: top-2 customers 58.7%; semis 95.7% of revenue</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">UCT’s 2025 Form 10-K reiterated that Applied Materials and Lam Research each exceeded 10% of revenue and, together, accounted for 58.7% of total revenue; 95.7% of revenue came from semiconductor segments. This sustains structural concentration exposure into the AI cycle.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">two largest revenue customers</span>
+<span class="span">Applied Materials, Inc. and Lam Research Corporation</span>
+<span class="span">58.7%</span>
+<span class="span">Approximately 95.7% of our total revenues</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-23</span>
+<span class="eh">Q4 2025 results; AI ramp-readiness emphasized</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$507M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">UCT reported Q4 2025 revenue of $506.6M and highlighted increasing ramp-readiness to align with AI-related customer roadmaps and sustained, multi-year growth opportunities.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Ultra Clean Reports Fourth Quarter and Full Year 2025 Financial Results</span>
+<span class="span">Total revenue was $506.6 million.</span>
+<span class="span">AI adoption gains momentum</span>
+<span class="span">ramp-readiness</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Concentration baseline ahead of AI-led WFE cycle</h2>
+<div class='range'>2024-06-03 → 2026-02-22</div>
+<div class='psum'>Ultra Clean Holdings entered the AI acceleration period with a highly concentrated customer base in semiconductor capital equipment. The 2023 Form 10-K (filed June 3, 2024) disclosed that Applied Materials and Lam Research each represented more than 10% of revenue, and together accounted for over half of total revenue, underscoring structural concentration risk tied to leading WFE OEMs.
+Through 2025 year-end (reported Feb 23, 2026), this concentration remained elevated, with the top two customers again surpassing the 10% threshold and representing the majority of revenue. The company’s revenue mix remained overwhelmingly tied to semiconductor industry segments, positioning UCT to benefit from AI-driven WFE demand while sustaining customer concentration exposure.</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-06-03</span>
+<span class="eh">2023 10-K: elevated customer concentration with AMAT and LRCX</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">UCT’s 2023 Form 10-K disclosed that Applied Materials and Lam Research were each &gt;10% customers and, as a pair, represented 57.4% of revenue in 2023; 93.2% of revenue came from semiconductor-related segments. This concentration frames structural dependency on leading WFE OEM cycles.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">two largest revenue customers</span>
+<span class="span">Applied Materials, Inc. and Lam Research</span>
+<span class="span">57.4%</span>
+<span class="span">Approximately 93.2% of our total revenues</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Did the convertible notes offering ultimately settle at $525M or $600M principal, and what were the final terms (e.g., conversion rate, capped call)?</li>
+<li>Are there any direct partnerships or integrations with frontier LLM providers (OpenAI, Anthropic, Google, Meta, xAI, DeepSeek) in UCT’s products, services, or workflows?</li>
+<li>What is the latest view on order momentum (orders, book-to-bill, RPO/backlog) given the Q1 disclosure gap?</li>
+<li>How quickly can services scale to 10%–12% mix at a $4B run-rate, and what incremental capex is required to reach ~$4B capacity in 6–9 months?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many WFE figures reflect customer outlooks and may change with macro/AI cycle dynamics.</li>
+<li>Convertible notes size is cited as $525M at pricing (Feb 26) and $600M at Q1 completion commentary; reconcile final principal.</li>
+<li>No direct evidence of dependency on specific frontier LLM providers; exposure is indirect via AI-driven semi cap demand.</li>
+<li>Backlog and book-to-bill metrics were not disclosed for Q1 2026, limiting near-term order visibility.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

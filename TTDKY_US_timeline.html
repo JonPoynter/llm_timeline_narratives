@@ -1,0 +1,441 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>TTDKY US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>TDK Corp <span class='sub'>(TTDKY US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.387</div>
+</header>
+<div class='stats'>
+<span class='chip'>2 phases</span>
+<span class='chip'>16 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 7</span>
+<span class='chip'>single source: 13</span>
+<span class='chip'>web-only (unverified): 2</span>
+<span class='chip'>web-only (verified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>FY2026–FY2027 AI infrastructure and storage ramp</h2>
+<div class='range'>2026-04-28 → 2026-06-30</div>
+<div class='psum'>At FY2026 results (Apr 28, 2026), TDK emphasized elevated capital intensity and product focus aligned to the AI ecosystem—particularly AI data centers and nearline HDD. FY2026 capex was ¥298.6bn, with a plan for higher capex and R&amp;D in FY2027, and an explicit FY27 capex plan of ¥370bn prioritizing small rechargeable batteries, HAMR‑related head equipment, and suspension capacity. Management highlighted AI‑linked demand lanes across passives (electrolytics, inductors, MLCC), HDD heads/suspensions, medium‑capacity batteries (BBUs), and semi‑cap equipment (load ports, flip‑chip bonders), while pushing to expand AI use‑cases in passives.
+Operationally, TDK flagged robust data‑center HDD demand, upgraded head volume growth to ~40% YoY with suspensions up ~20% for the year, targeted about 20% YoY profit growth in Magnetic Application Products despite higher depreciation, and cited an external assumption of AI server units +21% YoY to frame demand. The company also noted risk that a reversal in nearline HDD build plans or AI‑driven storage mix shifts could compress margins.</div>
+<div class="event t-single_source" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">FY2026 capex ¥298.6bn; FY2027 plan higher with AI data center focus</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$298.6B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">TDK reported FY2026 capex of ¥298.6bn and guided for higher FY2027 capex/R&amp;D, focusing on products and technologies tied to the AI ecosystem, particularly AI data centers.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Capex was ¥298.6bn in FY2026</span>
+<span class="span">FY2027 plan for higher capex and R&amp;D</span>
+<span class="span">tied to the AI ecosystem</span>
+<span class="span">particularly AI data centers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Passive Components outlook improved on AI server demand</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management provided a directional outlook for Passive Components of +5–8% YoY, citing AI server and auto demand as drivers.</p>
+<p class="cav">⚠ Range guidance (5–8% YoY) without a single point estimate.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Passive Components +5–8% YoY</span>
+<span class="span">with AI server and auto demand</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Assumption: AI server units +21% YoY frames FY2027 projections</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$21 · other</span> <span class="badge">neutral</span></div>
+<p class="narr">To frame FY2027 segment projections, management cited an external assumption of AI server units growing +21% YoY, while noting no quantified orders or deferred revenue metrics were reported.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI server units +21% YoY</span>
+<span class="span">no quantified orders or deferred revenue metrics were reported</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Data‑center HDD demand lifts heads and suspensions</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TDK reported that HDD heads and suspension assemblies were up materially on robust data‑center HDD demand.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">HDD heads and suspension assemblies</span>
+<span class="span">robust data‑center HDD demand</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Push to expand AI use‑cases in passives; MLCC visibility improving</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">In Passive Components, TDK is considering more aluminum electrolytic capacity and front‑loaded capex for low‑voltage, high‑current inductors to expand AI use‑cases; MLCC visibility is improving.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">push to expand AI use‑cases</span>
+<span class="span">more aluminum electrolytic capacity</span>
+<span class="span">front‑loaded CAPEX for low‑voltage, high‑current inductors</span>
+<span class="span">MLCC visibility improving</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Medium‑capacity BBU batteries set to expand</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TDK expects medium‑capacity batteries for BBU applications to expand from this fiscal year.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Medium‑capacity batteries for BBU applications</span>
+<span class="span">set to expand from this fiscal year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Semi‑cap equipment orders strong; bonding materials to volume next FY</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Orders for load ports and flip‑chip bonders were described as strong, with bonding materials planned to shift to volume production next fiscal year.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">orders for load ports and flip‑chip bonders are strong</span>
+<span class="span">bonding materials planned to shift to volume production next fiscal year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">FY2027 capex priorities include AI wearables and HAMR</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">TDK prioritized small rechargeable batteries, continued investment in silicon‑anode and metal cases, new products such as smart glasses and broader wearables in the AI ecosystem, and capacity expansion in HDD heads and suspensions with a particular focus on HAMR tooling.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">small rechargeable batteries</span>
+<span class="span">smart glasses and broader wearables</span>
+<span class="span">AI ecosystem</span>
+<span class="span">particular focus on HAMR tooling</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Nearline HDD heads: HAMR R&amp;D; target ~20% YoY profit growth</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Magnetic Application Products performance was led by nearline HDD heads, with added R&amp;D for HAMR and higher depreciation from capex, yet management targeted about 20% YoY profit growth for heads/suspensions.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Nearline HDD</span>
+<span class="span">added R&amp;D for HAMR</span>
+<span class="span">higher depreciation from CAPEX</span>
+<span class="span">about 20% YoY profit growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Outlook upgrade: HDD heads ~40% YoY; suspensions ~20% increase</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$40 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">TDK upgraded the HDD outlook to head volume growth of around 40% YoY, with HDD suspension production expected to increase ~20% this year.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">head volume growth now around 40% YoY</span>
+<span class="span">HDD suspension production to increase ~20% this year</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">FY2027 capex plan ¥370bn: HAMR‑related head equipment, suspensions</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$370.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">TDK set a FY March 2027 capex plan of ¥370bn, emphasizing small rechargeable batteries, HAMR‑related head equipment, and suspension capacity.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">CAPEX of 370bn yen in FY March 2027</span>
+<span class="span">HAMR‑related head equipment</span>
+<span class="span">suspension capacity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">AI‑linked demand highlighted across passives, HDD, BBUs, and semi‑cap</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management underscored AI‑linked demand across multiple lanes: passives (electrolytics, inductors, MLCC), HDD heads/suspensions, medium‑capacity batteries (BBUs), and semi‑cap (load ports, flip‑chip bonders), with bonding materials to reach volume production next fiscal year.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑linked demand lanes highlighted across passives</span>
+<span class="span">HDD heads/suspensions</span>
+<span class="span">medium‑capacity batteries (BBUs)</span>
+<span class="span">load ports, flip‑chip bonders</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Risk: nearline HDD plan reversals or AI storage mix shifts may compress margins</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">TDK warned that a reversal in nearline HDD build plans or AI‑driven storage mix shifts could compress segment profit and margins in Magnetic Application Products.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">a reversal in nearline HDD build plans</span>
+<span class="span">AI‑driven storage mix shifts could compress segment profit and margins</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI-enabled consumer device integrations (Meta, Google)</h2>
+<div class='range'>2023-10-13 → 2024-10-31</div>
+<div class='psum'>TDK’s InvenSense sensor portfolio appears in flagship AI-enabled consumer devices. iFixit&#x27;s Meta Quest 3 controller teardown in October 2023 identified a TDK‑InvenSense 6‑axis IMU on the controller board, evidencing design‑win penetration at Meta. In 2024, TechInsights teardowns of Google&#x27;s Pixel 8 and Pixel 8a point to TDK‑InvenSense barometric and motion sensors on the main boards, indicating continued attach across Google&#x27;s Tensor‑based smartphones.
+These integrations connect TDK to two frontier AI ecosystems—Meta (Llama) and Google (Gemini/DeepMind)—via hardware used to deliver AI features on‑device and in companion services. While the sources are teardowns (not commercial terms), they validate ongoing product integration exposure to leading AI providers’ device platforms.</div>
+<div class="event t-web_only_unverified" id="E0016" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-10-31</span>
+<span class="eh">TDK‑InvenSense barometric sensor noted in Google Pixel 8a</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">TechInsights’ Pixel 8a teardown lists a TDK‑InvenSense digital barometric pressure/temperature sensor, indicating continued sensor attach at Google across its 8‑series portfolio.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">TechInsights Teardown: Google Pixel 8a</span>
+<span class="span">TDK-InvenSense’s Digital barometric pressure and temperature sensor.</span>
+<span class="span">Google G3 applications processor</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0015" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-05-24</span>
+<span class="eh">TDK‑InvenSense sensors present in Google Pixel 8</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A TechInsights teardown of the Google Pixel 8 identifies TDK InvenSense digital barometric and 6‑axis motion sensors on the main board, confirming product integration at Google’s flagship AI‑enabled handset line.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">TechInsights Teardown: Google Pixel 8</span>
+<span class="span">TDK Invensense’s digital barometric pressure/temperature sensor</span>
+<span class="span">six-axis MEMS Gyroscope/accelerometer</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0014" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2023-10-13</span>
+<span class="eh">TDK‑InvenSense IMU identified in Meta Quest 3 controller</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">An iFixit chip ID for the Meta Quest 3 controller lists a TDK‑InvenSense ICM‑42686‑P 6‑axis accelerometer/gyroscope, evidencing a TDK design‑win at Meta for its latest VR platform.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Meta Quest 3 Chip ID</span>
+<span class="span">TDK-InvenSense ICM-42686-P 6-axis accelerometer &amp; gyroscope.</span>
+<span class="span">Controller Board Side 1 - Sensors</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What share of the FY2027 ¥370bn capex is specifically allocated to AI data centers vs other programs (passives, batteries, semicap)?</li>
+<li>Which customers (and hyperscalers) are driving the nearline HDD heads/suspensions volume growth, and what is the concentration risk?</li>
+<li>Does &quot;BBU&quot; in TDK’s disclosure refer to data‑center battery backup units or telecom baseband units, and what is the expected AI workload linkage?</li>
+<li>What is the timing and scale (units and revenue) of HAMR production ramps tied to AI storage demand?</li>
+<li>Are there any direct supply agreements with Meta or Google that quantify volumes or duration beyond teardown evidence?</li>
+<li>Will TDK disclose orders/backlog or deferred revenue metrics tied to AI‑linked products to improve forward visibility?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>FY2026/FY2027 commentary is from a single quarterly disclosure and lacks corroborating third‑party reporting in the inventory.</li>
+<li>Teardown sources confirm component presence but do not reveal pricing, volume, or contract terms.</li>
+<li>No direct evidence in the inventory of contracts with frontier LLM providers; exposure is inferred via device integrations and AI data‑center demand.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

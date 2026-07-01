@@ -1,0 +1,332 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>8046 TT — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Nan Ya Printed Circuit Board Corp <span class='sub'>(8046 TT)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.384</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>9 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>single source: 6</span>
+<span class='chip'>web-only (unverified): 2</span>
+<span class='chip'>web-only (verified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>26Q1 financial backbone: backlog down, investment elevated</h2>
+<div class='range'>2026-06-06 → 2026-06-06</div>
+<div class='psum'>Nan Ya PCB’s 26Q1 disclosure shows contract liabilities (a proxy for prepaid order coverage/backlog) of TWD 4.96bn as of March 31, 2026, down both quarter-on-quarter and year-on-year. Revenue recognized from opening contract liabilities in the quarter was TWD 554.5m, indicating backlog conversion.
+
+Free cash flow in Q1 was approximately TWD -735m as PPE additions of TWD 3.224bn outpaced operating cash flow of TWD 2.489bn. Management cautioned that sustained high investment for substrate capacity could pressure near-term cash generation and flagged exposure to servers/AI demand and mix risk.</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-06</span>
+<span class="eh">Contract liabilities TWD 4.96bn, down q/q and y/y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Q1 2026 filing reports contract liabilities of TWD 4,960.7m at 2026-03-31, down from both 2025 year-end and the prior-year period, signaling softer prepaid order coverage versus prior periods.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">contract liabilities (a proxy for customer prepayments/backlog)</span>
+<span class="span">total TWD 4,960.7m at 2026-03-31</span>
+<span class="span">TWD 5,515.2m at 2025-12-31</span>
+<span class="span">TWD 7,178.8m at 2025-03-31</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-06</span>
+<span class="eh">TWD 554.5m revenue recognized from opening contract liabilities in Q1</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$554M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Nan Ya PCB recognized TWD 554.5m from opening contract liabilities during Q1 2026, reflecting conversion of prior prepayments into current-period revenue.</p>
+<div class="ev-ch">channels: <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Revenue recognized from opening contract liabilities</span>
+<span class="span">Q1 2026</span>
+<span class="span">TWD 554.5m</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-06</span>
+<span class="eh">Negative FCF on elevated capex for substrate capacity</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$735M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Q1 2026 free cash flow was approximately TWD -735m as PPE additions of TWD 3.224bn exceeded operating cash flow of TWD 2.489bn, reflecting continued investment in substrate capacity and near-term cash pressure.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q1 2026 free cash flow</span>
+<span class="span">approximately TWD -735m</span>
+<span class="span">PPE additions (TWD 3.224bn)</span>
+<span class="span">operating cash flow (TWD 2.489bn)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-06</span>
+<span class="eh">Order visibility risk signaled by declining contract liabilities</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$5.0B · contract_value</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Management highlighted that total contract liabilities fell to TWD 4.96bn at March 31, 2026 from TWD 7.18bn a year earlier and TWD 5.52bn at 2025-12-31, implying reduced prepaid order coverage/backlog and lower visibility.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">fell to TWD 4.96bn at 2026-03-31</span>
+<span class="span">from TWD 7.18bn a year earlier</span>
+<span class="span">TWD 5.52bn at 2025-12-31</span>
+<span class="span">lower prepaid order coverage/backlog</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-06</span>
+<span class="eh">Exposure to servers/AI demand and mix risk reiterated</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The filing notes results depend on demand for high-end IC substrates and PCB for servers/AI and other electronics, underscoring end-market concentration and mix sensitivity.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Results depend on demand</span>
+<span class="span">high-end IC substrates and PCB</span>
+<span class="span">servers/AI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI demand validation and supply-chain positioning</h2>
+<div class='range'>2026-05-01 → 2026-05-31</div>
+<div class='psum'>By May 2026, external research flagged Nan Ya PCB among suppliers for Google’s TPU program across successive generations, indicating engagement in the ABF substrate value chain for large, high-layer substrates. Concurrently, local press reported the company expects revenue growth mainly from IC substrates amid rising AI demand and plans to expand advanced IC substrate lines for AI servers and networking.
+
+Markets, however, showed signs of fragility in crowded AI trades during mid-May, underscoring sentiment and valuation risk for AI-linked supply chains, even as operating fundamentals and customer engagement were strengthening.</div>
+<div class="event t-single_source" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-15</span>
+<span class="eh">AI-crowded trade volatility highlighted by Kospi plunge</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">AP News reported a sharp Kospi sell-off tied to profit taking and AI crowding risk, underscoring macro and sentiment volatility that can affect AI-linked supply chains including advanced substrate vendors such as Nan Ya PCB.</p>
+<p class="cav">⚠ Macro market event; indirect to company fundamentals.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Kospi plunges 6.12 percent</span>
+<span class="span">sidecar triggered</span>
+<span class="span">AI crowding risk</span>
+<span class="span">A violent reversal in Korea</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-14</span>
+<span class="eh">Company forecasts growth led by IC substrates; plans AI substrate capacity expansion</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Taiwan News reported that Nan Ya PCB expects revenue growth mainly from the IC substrate segment amid AI demand and plans to expand advanced IC substrate production lines for AI servers and networking; IC substrates are the dominant revenue stream.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">revenue growth will be driven mainly by the IC substrate segment</span>
+<span class="span">plans to expand production lines for advanced IC substrates</span>
+<span class="span">about 80% of its production capacity</span>
+<span class="span">IC substrates account for nearly 90% of total revenue</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-05-01</span>
+<span class="eh">Meritz research lists Nan Ya PCB as TPU ABF substrate supplier</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A Meritz Securities report includes Nan Ya PCB among suppliers for Google’s TPU v7 and v8 ABF substrates, signaling participation in the large-size, high-layer substrate value chain for hyperscale AI accelerators.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<p class="cav">⚠ Third-party research; not an official customer announcement.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">TPU v7 80*85 20-22L</span>
+<span class="span">Nanya PCB</span>
+<span class="span">TPU v8 90*100 22-24L</span>
+<span class="span">Unimicron, Toppan, Nanya PCB</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI substrate strategy articulation</h2>
+<div class='range'>2024-05-03 → 2024-12-31</div>
+<div class='psum'>Nan Ya Printed Circuit Board used its 2024 Annual Report to explicitly tie its product roadmap to the generative AI upcycle. Management highlighted rapid demand growth linked to high-end graphics chips and ASICs and said the company had jointly developed large-size, high-layer-count IC substrates with customers for cloud server processors, 800G switches, and high-end AI chips. The company also stated an intention to enter the AI server supply chain for related PCB to strengthen product mix and profitability.
+
+This phase marks strategic positioning rather than named design wins. It set the foundation for later capacity moves and customer engagement around advanced IC substrates used in AI servers and networking equipment.</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-05-03</span>
+<span class="eh">Annual Report outlines AI-focused IC substrate and PCB strategy</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Nan Ya PCB’s 2024 Annual Report details that the firm has jointly developed large-size, high-layer-count IC substrates with customers for cloud/AI servers and is entering the AI server PCB supply chain to improve mix and profitability.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Generative AI demand is growing rapidly</span>
+<span class="span">jointly developed large-size, high-layer counts IC substrates</span>
+<span class="span">cloud server processors, 800G switches, and high-end AI chips</span>
+<span class="span">actively enters into the AI server supply chain</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Does Nan Ya PCB have formal, disclosed purchase orders or qualification milestones with Google TPU programs, and what are the expected volumes/timeframes by generation (v7/v8)?</li>
+<li>What is the 2026–2027 capex plan and expected incremental ABF/IC substrate capacity (layer counts, panel sizes), and when does management expect capex to normalize versus operating cash flow?</li>
+<li>Beyond AI servers and networking, which specific end customers or chip programs (e.g., GPU, custom ASIC) represent the largest substrate revenue drivers and how concentrated is demand?</li>
+<li>How sensitive are pricing and mix for advanced IC substrates to cycle shifts, and what actions can mitigate utilization risk if AI order visibility softens further?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Supplier inclusion in the Meritz research is third-party analysis and not an official customer confirmation.</li>
+<li>AP News Kospi sell-off is a macro event and indirectly related to company fundamentals.</li>
+<li>Financial magnitudes are reported in TWD as disclosed; no currency conversion to USD is applied.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

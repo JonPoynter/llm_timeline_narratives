@@ -1,0 +1,392 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>SPSC US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>SPS Commerce Inc <span class='sub'>(SPSC US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.355</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>12 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>web-only (unverified): 4</span>
+<span class='chip'>web-only (verified): 3</span>
+<span class='chip'>single source: 3</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Q1’26 results: MAX launch reiterated; AI-driven efficiencies and monetization risks</h2>
+<div class='range'>2026-04-30 → 2026-04-30</div>
+<div class='psum'>On April 30, 2026, SPS reported Q1 2026 results and reiterated the launch of MAX as an AI capability embedded in supply chain workflows and powered by proprietary network data. Management emphasized AI-driven and AI-enabled efficiencies as contributors to operating leverage and 2026 adjusted EBITDA growth guidance of approximately 14–16% versus 2025.
+Management also highlighted execution risks: scaling AI features from beta to paid usage and embedding into workflows are strategic priorities, and slower‑than‑expected monetization or adoption could constrain the growth and margin expansion assumed in guidance.</div>
+<div class="event t-corroborated" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1’26 filing: MAX launched as embedded AI capability with early ROI anecdotes</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management disclosed the launch of MAX, an AI capability embedded in supply-chain workflows, noting initial customer ROI anecdotes as the company begins to scale usage.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[5]</div>
+<span class="span">launched MAX, an AI capability embedded in supply‑chain workflows</span>
+<span class="span">initial customer ROI anecdotes.</span>
+<span class="span">Embedded into existing supply chain workflows</span>
+<span class="span">powered by proprietary network data</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1’26 filing: Risk that AI monetization/adoption may lag guidance assumptions</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">SPS cautioned that scaling AI features from beta to paid usage and embedding into customer workflows is a priority, but slower-than-expected monetization or adoption could limit margin expansion and growth embedded in guidance.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Scaling AI features from beta to paid usage</span>
+<span class="span">embedding into customer workflows is a strategic priority</span>
+<span class="span">slower-than-expected monetization</span>
+<span class="span">limit the margin expansion and growth</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1’26 filing: MAX powered by proprietary network data; guides partner connections</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management positioned MAX as embedded within existing workflows, powered by proprietary network data to guide trading‑partner connections, and emphasized customer value and cross‑sell momentum.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[5]</div>
+<span class="span">embedded within existing workflows and powered by proprietary network data</span>
+<span class="span">guide trading‑partner connections</span>
+<span class="span">cross‑sell momentum</span>
+<span class="span">MAX guides customer connections</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1’26 filing: AI-driven efficiencies support 2026 EBITDA growth outlook</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized operating leverage and AI-driven efficiencies underpinning 2026 adjusted EBITDA growth guidance of approximately 14–16% versus 2025.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑driven efficiencies</span>
+<span class="span">full‑year 2026 guidance</span>
+<span class="span">adjusted EBITDA growth of approximately 14–16%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1’26 filing: AI-enabled efficiencies expected to support 2026 EBITDA</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SPS reiterated that AI-enabled efficiencies and operating leverage are expected to support adjusted EBITDA growth in 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-enabled efficiencies and operating leverage</span>
+<span class="span">expected to support adjusted EBITDA growth in 2026</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q1’26 press release reiterates MAX launch and AI-driven efficiencies</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The company’s Q1 press release highlighted the launch of MAX, embedded into existing supply chain workflows and powered by proprietary network data to guide customer connections, and reinforced focus on margin expansion through AI-driven efficiencies.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">launch of MAX, our new set of AI capabilities</span>
+<span class="span">Embedded into existing supply chain workflows and powered by proprietary network data, MAX guides customer connections</span>
+<span class="span">AI-driven efficiencies</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Agentic AI productization: MAX launch, standards, and risk framing</h2>
+<div class='range'>2026-01-08 → 2026-03-31</div>
+<div class='psum'>In early 2026 SPS announced new AI-enabled capabilities for Fulfillment aligned to an industry trend of AI-powered supply chain orchestration and reaffirmed its founding role in the Commerce Operations Foundation and onX specification to connect with emerging AI systems. On February 10, 2026, SPS formally introduced MAX—an agentic AI embedded within existing workflows—initially offering Chat, Monitor, and Connect features, and supporting the Model Context Protocol for cross-agent collaboration. A Help Center article later outlined the MAX Chat beta and Connect’s ability to collaborate with external agents, ERPs, CRMs, and data platforms via MCP.
+Concurrently, SPS’s 10-K expanded disclosure of AI/ML risks, including potential issues like hallucinations, data leakage, and prompt injection, and noted dependencies and unpredictability when integrating third‑party AI/ML technologies and tooling.</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-26</span>
+<span class="eh">MAX Chat beta detailed; MCP-based collaboration with agents and enterprise apps</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">A Help Center article describes MAX Chat as SPS’s AI agent embedded in Fulfillment and Monitor, with a beta program starting soon. MAX Connect supports MCPs to collaborate with other agents, ERPs, CRMs, and data platforms.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">MAX Chat is SPS Commerce&#x27;s AI Agent</span>
+<span class="span">Beta program of MAX Chat</span>
+<span class="span">MAX Connect</span>
+<span class="span">supports MCPs (Model Context Protocols)</span>
+<span class="span">bring network intelligence to your workflows</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-19</span>
+<span class="eh">10-K outlines AI/ML risks including hallucinations and data leakage</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">SPS’s Form 10-K warns that AI/ML-enabled products and third‑party technologies may produce unexpected outcomes, including hallucinations, data leakage, and harmful prompt injections, potentially impairing product acceptance or causing reputational harm.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">adopting and delivering AI/ML-enabled products and services</span>
+<span class="span">may result in incidents that impair the acceptance</span>
+<span class="span">third-party AI/ML technologies, models, or tools</span>
+<span class="span">hallucinations, data leakage, and harmful prompt injections</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-10</span>
+<span class="eh">SPS launches MAX—agentic AI embedded in supply chain workflows</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SPS introduced MAX, an agentic AI drawing on its network intelligence and billions of transactions, embedded directly in workflows with initial features Chat, Monitor, and Connect. MAX supports the Model Context Protocol to collaborate with other agents and systems.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 2 source(s), 6 span(s)</summary>
+<div class="ev-src">web_search_findings[3], web_search_findings[7]</div>
+<span class="span">MAX</span>
+<span class="span">agentic capabilities</span>
+<span class="span">embedded into existing supply chain workflows</span>
+<span class="span">Chat, Monitor, and Connect</span>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">embedding agentic AI directly into supply chain workflows</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-08</span>
+<span class="eh">SPS previews AI-enabled Fulfillment and supports onX as Founding Member</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SPS announced product innovations including AI-powered supply chain orchestration and said it will deliver AI-enabled Fulfillment capabilities in early 2026. The company also confirmed joining the Commerce Operations Foundation as a Founding Member to support onX for interoperability with emerging AI systems.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Trend 1: AI-Powered Supply Chain Orchestration</span>
+<span class="span">AI-enabled capabilities for Fulfillment in early 2026</span>
+<span class="span">Founding Member</span>
+<span class="span">Order Network eXchange (onX)</span>
+<span class="span">emerging AI systems</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early AI groundwork and ecosystem alignment</h2>
+<div class='range'>2024-07-01 → 2025-12-31</div>
+<div class='psum'>SPS Commerce began publicly describing how it applies artificial intelligence to its retail supply chain network in mid-2024, highlighting use of AI on trading-partner data and citing the use of established cloud AI providers for security and governance. The company’s scale (over 120,000 customers and over $500M in 2023 revenue) positions it to embed AI into existing workflows rather than launching standalone tools.
+In late 2025, SPS joined industry peers to found the Commerce Operations Foundation and support the Order Network eXchange (onX), an open specification designed to move orders, inventory, and fulfillment data across commerce, logistics, and emerging AI systems. The initiative explicitly contemplates orders originating from AI assistants such as ChatGPT, Gemini, and Claude, signaling SPS’s intent to interoperate with multiple model ecosystems via standards like the Model Context Protocol (MCP).</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-11-18</span>
+<span class="eh">SPS joins Commerce Operations Foundation supporting onX for agentic commerce</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1000.0B · other</span> <span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">SPS Commerce was named among vendors founding the Commerce Operations Foundation and launching the Order Network eXchange (onX), an MCP-based standard intended to link selling channels and AI assistants like ChatGPT, Gemini, and Claude with fulfillment networks.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Participation indicates interoperability intent; not a direct commercial integration with named LLM providers.</p>
+<details>
+<summary>evidence — 1 source(s), 6 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Commerce Operations Foundation</span>
+<span class="span">Order Network eXchange (onX)</span>
+<span class="span">SPS Commerce</span>
+<span class="span">AI-powered assistants such as ChatGPT, Gemini, and Claude</span>
+<span class="span">based on the Model Context Protocol (MCP)</span>
+<span class="span">over $1 trillion in GMV</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-07-01</span>
+<span class="eh">SPS details AI use on trading-partner data; cites Microsoft and AWS</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$537M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Digital Commerce 360 reported SPS is applying AI to trading partner transaction data for forecasting and marketing, noting security addressed by working with Microsoft and AWS. The article also cites SPS’s 2023 revenue and customer scale.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">applying artificial intelligence</span>
+<span class="span">trading partner transactions</span>
+<span class="span">$536.9 million in 2023 revenue</span>
+<span class="span">Microsoft Corp. and Amazon Web Services</span>
+<span class="span">has 120,000 customers</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which underlying LLM(s) power MAX Chat/Monitor/Connect in production (e.g., OpenAI, Anthropic, Google, others)?</li>
+<li>What portion of customers have access to MAX features and what are early paid adoption/ARPU uplift metrics?</li>
+<li>Are there any direct commercial or technical integrations between MAX Connect (via MCP) and ChatGPT, Gemini, or Claude in customer deployments?</li>
+<li>What incremental gross margin/EBITDA contribution is explicitly attributed to AI-driven efficiencies in 2026 guidance?</li>
+<li>Does SPS utilize Azure OpenAI Service or Bedrock for any MAX workloads, and are there material multi-year commitments?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Provider relationships are inferred from public statements about interoperability (e.g., onX referencing ChatGPT/Gemini/Claude); no direct commercial agreements with LLM labs are disclosed in the evidence.</li>
+<li>No dollar figures are provided for MAX monetization, AI feature attach rates, or AI-related capex/opex within the sources.</li>
+<li>Some filing highlights are thematically overlapping (AI-driven/AI-enabled efficiencies) but are recorded as separate events to preserve the evidence granularity.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

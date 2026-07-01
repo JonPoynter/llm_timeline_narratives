@@ -1,0 +1,631 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>BBAI US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>BigBear.ai Holdings Inc <span class='sub'>(BBAI US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.462</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>27 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 8</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>single source: 20</span>
+<span class='chip'>web-only (verified): 5</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Market context: speculative ‘profitless tech’ rally and stock move</h2>
+<div class='range'>2026-06-02 → 2026-06-22</div>
+<div class='psum'>Through June 2026, multiple outlets highlighted a sharp rally in a Goldman Sachs basket of money-losing tech names—up 27% in May and 57% year-to-date—frequently citing BigBear.ai among exemplars. Strategists across JPMorgan and others warned on fragility if yields stayed high, recommending rotation toward higher-quality, buyback-supported names.
+On June 22, 2026, BBAI closed at $3.83, down 2.3% on the day, as coverage pointed to upcoming earnings estimates (consensus EPS -$0.05; revenue $35.24M) and a Zacks Rank of #4 (Sell). These items frame market risk sentiment and valuation sensitivity for BBAI amid broader AI- and data center–driven narratives.</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-22</span>
+<span class="eh">BBAI closes at $3.83 (-2.3%); focus on estimates and Zacks Rank #4</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">On June 22, 2026, BBAI closed at $3.83 (-2.3%), with context including upcoming estimates (EPS -$0.05; revenue $35.24M) and a Zacks Rank of #4 (Sell), amid mixed major index performance.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">closed at $3.83, a 2.3% decline</span>
+<span class="span">consensus EPS of -$0.05 and revenue of $35.24 million</span>
+<span class="span">Zacks Rank of #4 (Sell)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-19</span>
+<span class="eh">NAI500: ‘Profitless tech’ +57% YTD; strategists urge rotation; BBAI noted</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Coverage emphasized the Goldman Sachs basket’s 57% YTD surge, citing BigBear.ai among examples while strategists urged shifting toward higher-quality, buyback-backed tech.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">up 57% year‑to‑date</span>
+<span class="span">Examples cited in the rally include NextNav, BigBear.ai, and Unusual Machines</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-14</span>
+<span class="eh">NAI500: Momentum persists—basket +27% in May; +57% YTD incl. BBAI</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">NAI500 reported the basket’s outsized gains and warned the move appears momentum-driven amid higher borrowing costs and heavy AI data center capex.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">rose 27% in May and 57% year‑to‑date</span>
+<span class="span">Examples of speculative leaders cited include NextNav, BigBear.ai, and Unusual Machines</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">NAI500: Basket +27% in May; +57% YTD—warnings on froth; BBAI cited</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">NAI500 reiterated the 27% May and 57% YTD rally in a Goldman Sachs basket of money‑losing tech firms, naming BigBear.ai. Strategists advised caution on the ‘hottest’ names if yields remain high.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">surged 27% in May and is up 57% year‑to‑date</span>
+<span class="span">beating the Nasdaq 100 by 17 percentage points</span>
+<span class="span">NextNav (NN), BigBear.ai (BBAI) and Unusual Machines (UMAC)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-07</span>
+<span class="eh">TradingView: Rally beats Nasdaq 100 by 17 ppts; BBAI among leaders</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Coverage highlighted a 27% May and 57% YTD surge for the Goldman basket, outperforming the Nasdaq 100 by 17 ppts, with NextNav, BigBear.ai and Unusual Machines among speculative leaders.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[4]</div>
+<span class="span">rose 27% in May and 57% year to date</span>
+<span class="span">beating the Nasdaq 100 by 17 percentage points</span>
+<span class="span">NextNav (NN), BigBear.ai (BBAI), and Unusual Machines (UMAC)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-06</span>
+<span class="eh">TradingView: ‘Profitless tech’ basket +27% in May; +57% YTD; BBAI included</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">TradingView noted the Goldman Sachs-tracked basket’s strong May and YTD gains and listed BigBear.ai among examples, while JPMorgan’s desk led by Andrew Tyler warned on the riskiest names.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">+27% in May; +57% YTD</span>
+<span class="span">NextNav, BigBear.ai, and Unusual Machines</span>
+<span class="span">JPMorgan’s Market Intelligence desk, led by Andrew Tyler</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">Basket up 27% in May 2026; ~57% YTD—BBAI cited among exemplars</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">NAI500 reported a 27% May surge and about 57% YTD gain for a Goldman basket of unprofitable tech stocks, naming BigBear.ai among leaders. Desks cautioned about vulnerability if bond yields remain elevated.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[6]</div>
+<span class="span">surged 27% in May 2026</span>
+<span class="span">up about 57% year‑to‑date</span>
+<span class="span">NextNav, BigBear.ai, and Unusual Machines</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">Goldman ‘profitless tech’ basket +27% in May; +57% YTD, includes BBAI</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">TradingView summarized that a Goldman Sachs basket of money‑losing tech stocks surged 27% in May and is up 57% YTD, featuring names like BigBear.ai. JPMorgan’s Market Intelligence desk cautioned on speculative corners if yields remain elevated.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[7]</div>
+<span class="span">surged 27% in May</span>
+<span class="span">is up 57% YTD</span>
+<span class="span">NextNav, BigBear.ai, and Unusual Machines</span>
+<span class="span">JPMorgan’s Market Intelligence desk</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Integration and Q1 2026 execution: backlog expansion, margin mix, and financing cleanup</h2>
+<div class='range'>2026-03-02 → 2026-05-05</div>
+<div class='psum'>BigBear.ai’s 2026 10-K underscored reliance on third-party cloud providers (AWS, GCP, Azure) for hosting and operations. On May 5, 2026, the company reported Q1 results indicating modest revenue pressure at $34.4 million (-1% y/y) but material gross margin expansion to 34.0% driven by higher-margin Ask Sage GenAI platforms and products. Backlog rose to $281.9 million (+14% q/q), including a classified sole‑source prime award of approximately $53 million, and the CEO cited wins “close to $75M.”
+The firm affirmed FY2026 revenue guidance of $135–$165 million (midpoint $150 million), while emphasizing cash discipline: it closed the quarter with $431.5 million in cash and investments and no long-term debt after settling $124.6 million of 2029 convertible notes; however, operating cash flow was -$18.0 million and free cash flow approximately -$18.32 million. Management highlighted Ask Sage’s role in mix/margin improvements and noted a small CargoSeer asset acquisition on January 16, 2026. Risk factors included U.S. government appropriations timing, integration execution on the recent acquisitions, and potential runway compression if cash burn persists.</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Backlog reaches $281.9M (+14% q/q), incl. ~$53M classified award</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$282M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Q1 2026 backlog was $281.9 million, up 14% sequentially, supported by more than $60 million in National Security awards, including a classified sole-source prime award of approximately $53 million.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Backlog: $281.9M at 3/31/26, up 14% sequentially</span>
+<span class="span">aided by &gt;$60M in National Security awards</span>
+<span class="span">classified sole‑source prime award of ~$53M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">RPO totals $7.84M with staged recognition</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$8M · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Remaining Performance Obligations were $7.84 million with an outlined recognition schedule over the next 36+ months.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">RPO: $7.84M total</span>
+<span class="span">next 12 months $5.13M</span>
+<span class="span">months 13–24 $1.59M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">FY2026 revenue guidance affirmed at $135–$165M (midpoint $150M)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$150M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management affirmed FY2026 revenue guidance with a midpoint of $150 million, implying continued scaling of the product and services mix post-Ask Sage acquisition.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">FY2026 revenue: affirmed at $135–$165M (midpoint $150M).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1 2026 cash burn: OCF $(18.0)M; capex $0.32M; FCF ≈ $(18.32)M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$18M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Operating cash flow was negative $18.0 million in Q1 with approximately $0.32 million in capex, resulting in free cash flow of about -$18.32 million.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow: $(18.00)M. Capex: $0.32M. Free cash flow ≈ $(18.32)M.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Cash &amp; investments $431.5M; no long‑term debt post conversion</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$432M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BigBear.ai ended Q1 2026 with $431.5 million in cash, cash equivalents, and investments, and reported no long-term debt after the Q1 conversion of 2029 notes.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Cash, cash equivalents and investments: $431.5M</span>
+<span class="span">no long‑term debt post Q1 conversion of 2029 notes</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Settled $124.6M of 2029 converts; interest expense -$4.8M y/y</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$125M · loan</span> <span class="badge">positive_demand</span></div>
+<p class="narr">The company settled the remaining $124.6 million of its 2029 convertible notes, primarily via conversion in January 2026, reducing quarterly interest expense by $4.8 million year-over-year.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Settled remaining $124.6M of 2029 convertible notes</span>
+<span class="span">interest expense fell by $4.8M y/y</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Ask Sage GenAI cited as margin driver; Adj. EBITDA $(9.9)M</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$10M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Management highlighted gross margin expansion from higher‑margin Generative AI products (Ask Sage). Adjusted EBITDA for Q1 2026 was $(9.9) million, reflecting ongoing investment and integration.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">gross margin expansion from higher‑margin Generative AI products (Ask Sage)</span>
+<span class="span">Adjusted EBITDA was $(9.9)M.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Integration update: Ask Sage contribution; CargoSeer assets acquired 1/16/26</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">BigBear.ai noted Ask Sage contributed to mix/margin following the 12/31/25 close and that Q1 included a small asset acquisition of CargoSeer on January 16, 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Ask Sage (closed 12/31/25) contributed to mix/margin</span>
+<span class="span">small asset acquisition of CargoSeer (1/16/26)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">CEO cites wins “close to $75M” across National Security &amp; Trade/Travel</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$75M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted approximately $75 million of wins spanning National Security and Trade &amp; Travel, aligned with a broader internal realignment of sales, technology, delivery, and customer success.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">wins “close to $75M” across National Security and Trade &amp; Travel</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk: U.S. government funding/appropriations may delay backlog conversion</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">The company warned that heavy exposure to U.S. government contracts entails risks from budget constraints, cancellation rights, and lapses in appropriations that could slow or reduce backlog-to-revenue conversion.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">A high share of revenue is from U.S. government contracts</span>
+<span class="span">budget constraints, cancellations for convenience</span>
+<span class="span">lapses in appropriations</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk: Integration/execution on Ask Sage and CargoSeer</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management cautioned that achieving targeted mix/margin and growth depends on successful integration of Ask Sage and CargoSeer while managing elevated SG&amp;A and transaction costs.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">require successful integration</span>
+<span class="span">elevated SG&amp;A and integration/transaction costs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Risk: Cash burn could compress investment runway</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$18M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Given Q1 operating cash flow of -$18 million and negative Adjusted EBITDA, management warned that sustained cash burn could compress the investment runway if growth and margin expansion lag plans.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow was negative $(18)M</span>
+<span class="span">compress the investment runway</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-05</span>
+<span class="eh">Q1 2026: Revenue $34.4M (-1% y/y); gross margin 34.0% on Ask Sage mix</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$34M · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Revenue decreased 1% to $34.4 million in Q1 2026, while gross margin rose to 34.0% due to increased volume from Ask Sage’s higher-margin GenAI platforms and products.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Revenue decreased 1% to $34.4 million</span>
+<span class="span">Gross margin was 34.0%</span>
+<span class="span">Ask Sage’s higher margin GenAI Platforms and Products</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-02</span>
+<span class="eh">10-K: Dependence on AWS, GCP, and Azure infrastructure</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">BigBear.ai disclosed reliance on third-party cloud infrastructure (AWS, GCP, Azure) for hosting and core operations, with potential adverse business impacts from disruptions or performance issues.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">We depend on computing infrastructure operated by Amazon Web Services (AWS), Google Cloud Platform (GCP), Microsoft Azure</span>
+<span class="span">cloud-based services</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Acquisition of Ask Sage and new federal health footprint</h2>
+<div class='range'>2025-11-10 → 2025-12-31</div>
+<div class='psum'>BigBear.ai moved to consolidate its position in secure, regulated GenAI by signing a definitive agreement to acquire Ask Sage for $250 million in November 2025, citing Ask Sage&#x27;s ARR of about $25 million for 2025. This targeted the combination of BigBear.ai&#x27;s defense/Intel reach with Ask Sage’s IL5-cleared, model-agnostic orchestration platform.
+In December 2025, Ask Sage announced an enterprise-wide agreement with the Defense Health Agency, positioning its IL5-authorized solution to process PHI across DHA workflows. BigBear.ai closed the $250 million all-cash acquisition on December 31, 2025, integrating Ask Sage&#x27;s platform and government footprint into its portfolio.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-31</span>
+<span class="eh">BigBear.ai closes $250M all-cash acquisition of Ask Sage</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$250M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BigBear.ai finalized the acquisition of Ask Sage for $250 million in cash, adding a secure, production-ready GenAI platform with significant government adoption to its portfolio as of December 31, 2025.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">successful completion of its acquisition of Ask Sage</span>
+<span class="span">for $250 million in cash</span>
+<span class="span">December 31, 2025</span>
+<span class="span">mission-ready AI for national security</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-08</span>
+<span class="eh">Ask Sage and DHA launch enterprise-wide GenAI; IL5-authorized to process PHI</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Ask Sage announced an enterprise-wide agreement with the Defense Health Agency, leveraging its status as the first and only IL5-authorized GenAI solution approved to process PHI. The agreement supports clinical, operational, and administrative workflows across DHA.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">enterprise-wide agreement</span>
+<span class="span">Defense Health Agency (DHA)</span>
+<span class="span">first and only IL5-authorized</span>
+<span class="span">Protected Health Information (PHI)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-11-10</span>
+<span class="eh">BigBear.ai signs $250M definitive agreement to acquire Ask Sage; ARR ≈ $25M in 2025</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$250M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">BigBear.ai announced a definitive agreement to acquire Ask Sage for $250 million, noting Ask Sage’s expected 2025 ARR of approximately $25 million. The deal targets secure distribution of AI models and agentic capabilities for defense and other regulated sectors.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">definitive agreement to acquire Ask Sage</span>
+<span class="span">annual recurring revenues (ARR) of approximately $25 million</span>
+<span class="span">will pay a total of $250 million</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ask Sage establishes DoD-grade GenAI foothold (pre-acquisition)</h2>
+<div class='range'>2024-09-10 → 2024-10-10</div>
+<div class='psum'>Ask Sage, later acquired by BigBear.ai, cemented its position in U.S. defense environments in late 2024. On September 10, 2024, Ask Sage announced a successful launch of its Generative AI platform on the U.S. Army’s cARMY cloud, initiating with 400 user accounts and explicitly unlocking access to Azure Gov OpenAI on a CUI fabric. This marks early, concrete exposure to OpenAI models within secure DoD infrastructure.
+In October 2024, Ask Sage announced it had become the first Generative AI platform to achieve DoD Impact Level 5 (IL5) Provisional Authorization from DISA, enabling adoption in highly sensitive military contexts. These pre-acquisition milestones created a strong regulatory and deployment foundation that BigBear.ai would later integrate and scale.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-10-10</span>
+<span class="eh">Ask Sage first GenAI platform to achieve DoD IL5 PA</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Ask Sage announced it is the first Generative AI platform to obtain DISA’s IL5 Provisional Authorization, expanding eligibility for sensitive DoD workloads. This authorization underpins subsequent enterprise-scale government deployments later integrated into BigBear.ai.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">First Generative AI platform to achieve DoD Impact Level 5 (IL5) authorization</span>
+<span class="span">Impact Level 5 (IL5) Provisional Authorization (PA)</span>
+<span class="span">Defense Information Systems Agency (DISA)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-09-10</span>
+<span class="eh">Ask Sage launches on cARMY, unlocking Azure Gov OpenAI access</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Ask Sage deployed its Generative AI platform onto the U.S. Army&#x27;s cARMY cloud with an initial 400 accounts and enterprise-wide ambitions, explicitly enabling soldier access to Azure Gov OpenAI on a CUI fabric. This establishes direct exposure to OpenAI models within a secure DoD environment.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2], web_search_findings[3]</div>
+<span class="span">successful launch of its Generative AI platform on cARMY</span>
+<span class="span">initiated with 400 new user accounts</span>
+<span class="span">unlocks soldier access to Azure Gov OpenAI</span>
+<span class="span">Impact Level 5</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Beyond Azure Gov OpenAI access noted for cARMY, which specific LLMs (e.g., Anthropic Claude, Google Gemini, Meta Llama) are actively orchestrated by Ask Sage in BigBear.ai customer deployments, and at what share of usage or revenue?</li>
+<li>What are the durations and funding profiles of the &gt;$60M National Security awards referenced in Q1 2026 backlog, including the ~$53M classified award (e.g., period of performance, options)?</li>
+<li>How much of BigBear.ai’s cost of revenue is attributable to third‑party cloud (AWS, GCP, Azure) and to model API costs (e.g., Azure OpenAI) versus internal infrastructure?</li>
+<li>What is the integration roadmap and expected revenue/margin synergy from the CargoSeer asset acquisition within FY2026–FY2027?</li>
+<li>What portion of backlog and new wins (the “close to $75M”) is tied directly to Ask Sage GenAI offerings versus legacy analytics/services?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Market context articles on the ‘profitless tech’ basket are macro commentary and not company guidance; they may not reflect BigBear.ai’s fundamentals.</li>
+<li>Ask Sage pre‑acquisition deployments (Army cARMY and IL5 authorization) occurred before the December 31, 2025 close; revenue realization within BigBear.ai may lag deployment dates.</li>
+<li>Providers_touched are limited to explicit mentions in sources (e.g., Azure Gov OpenAI); Ask Sage’s model‑agnostic stance implies broader LLM orchestration that is not enumerated in the provided evidence.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

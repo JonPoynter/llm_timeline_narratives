@@ -1,0 +1,614 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>PD US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>PagerDuty Inc <span class='sub'>(PD US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.463</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>25 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 2</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 13</span>
+<span class='chip'>single source: 12</span>
+<span class='chip'>web-only (verified): 11</span>
+<span class='chip'>corroborated: 1</span>
+<span class='chip'>web-only (unverified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Acceleration: SRE Agent skills, MCP adoption, connectors and security risk</h2>
+<div class='range'>2026-05-20 → 2026-06-29</div>
+<div class='psum'>PagerDuty reported rising customer momentum with AI-native buyers, expanded its AI integration ecosystem, and rolled out SRE Agent skills and documentation to harden and scale agentic workflows. The company highlighted hundreds of adopters for its MCP server while deepening integration surfaces via Claude marketplace plugins and public previews like the Google Gemini Enterprise connector.
+Amid this acceleration, third-party research surfaced a potential security risk vector (“agentjacking”) related to AI coding agents and external event ingestion patterns, naming PagerDuty among platforms with analogous exposure. While the disclosure centered on Sentry, it raised cross-ecosystem questions for MCP-mediated agents. PagerDuty’s financial disclosures also detailed RPO trends and operational priorities under new leadership.</div>
+<div class="event t-web_only_verified" id="E0022" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-29</span>
+<span class="eh">Google launches Gemini Enterprise connector for PagerDuty (public preview)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google Cloud published a PagerDuty connector for Gemini Enterprise in public preview, enabling natural-language actions such as creating and updating incidents and adding notes within PagerDuty.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">PagerDuty connector for Gemini Enterprise</span>
+<span class="span">public preview</span>
+<span class="span">Create incident</span>
+<span class="span">Add note to incident</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-29</span>
+<span class="eh">Security research flags ‘agentjacking’ risk path; PagerDuty named analogous exposure</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Coverage of Tenet Security’s June disclosure on ‘agentjacking’ via Sentry warned of similar exposure where AI agents ingest external content via MCP, naming Datadog, PagerDuty, and Jira. The research cited an 85% success rate across tests and thousands of organizations with injectable DSNs; Sentry reportedly called a platform-level fix “technically not defensible.”</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Third-party security research; PagerDuty was named as an analogous risk surface rather than a confirmed exploited vulnerability.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">agentjacking</span>
+<span class="span">Datadog, PagerDuty, and Jira</span>
+<span class="span">85% success rate</span>
+<span class="span">2,388 organizations</span>
+<span class="span">technically not defensible</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0021" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-25</span>
+<span class="eh">PagerDuty publishes MCP Server docs for secure AI assistant access</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">PagerDuty documented its Model Context Protocol (MCP) Server, allowing AI assistants like Claude Desktop and Cursor to interact securely with PagerDuty accounts to retrieve and manage incident and on-call data.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Model Context Protocol (MCP) Server</span>
+<span class="span">interact securely with your PagerDuty account</span>
+<span class="span">Claude Desktop, Cursor, or VS Code</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0024" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-20</span>
+<span class="eh">Zapier offers no‑code PagerDuty + ChatGPT (OpenAI) automation</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Zapier listed a no-code integration connecting PagerDuty with ChatGPT (OpenAI), enabling triggers from PagerDuty incidents to drive AI actions and end-to-end automated workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">PagerDuty + ChatGPT (OpenAI)</span>
+<span class="span">no code necessary</span>
+<span class="span">A trigger is the event</span>
+<span class="span">You’re connected!</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0020" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-11</span>
+<span class="eh">SRE Agent Skills open for Early Access via PagerDuty Claude plugin</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">PagerDuty opened Early Access for SRE Agent Skills, configurable through the PagerDuty Claude plugin or SRE Agent configuration, enabling agents to execute specialized troubleshooting skills.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">SRE Agent Skills</span>
+<span class="span">Early Access</span>
+<span class="span">PagerDuty Claude plugin</span>
+<span class="span">intelligently deduce the next steps</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0019" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-01</span>
+<span class="eh">Anthropic marketplace lists PagerDuty Pre-Commit Risk Score plugin</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic’s Claude marketplace listed the PagerDuty Pre-Commit Risk Score plugin for Claude Code, enabling pre-commit risk assessment against incident history via a PagerDuty API key.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">PagerDuty Pre-Commit Risk Score</span>
+<span class="span">Install in Claude Code</span>
+<span class="span">0-5 score</span>
+<span class="span">Requires a PagerDuty API key</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Q1: AI integration ecosystem grows; Advance SRE Agent enhanced</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">PagerDuty reported continued expansion of its AI integration ecosystem, citing partnerships with Anthropic, Cursor, and LangChain, and noted enhancements to the PagerDuty Advance SRE Agent.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI integration ecosystem</span>
+<span class="span">partnerships with Anthropic, Cursor, and LangChain</span>
+<span class="span">Advance SRE Agent</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Q1: Customer wins include Coreweave and global enterprises</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted notable customer wins and expansions including Coreweave, BCG, Gap, GM, Palo Alto Networks, and Vodafone.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Coreweave</span>
+<span class="span">Palo Alto Networks</span>
+<span class="span">Vodafone</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Q1: Rising demand from AI-native customers; usage-based pricing progress</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PagerDuty cited increasing demand from AI-native customers alongside progress in Operations Cloud usage-based pricing, improved renewals, and more multi-year, multiproduct agreements.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-native customers</span>
+<span class="span">Operations Cloud usage-based pricing</span>
+<span class="span">multi-year, multiproduct agreements</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Q1: Internal AI usage boosts capacity and pace of innovation</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PagerDuty reported that broad internal use of AI within engineering created capacity and increased product velocity, supporting margin expansion and faster innovation.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">broad internal use of AI</span>
+<span class="span">created capacity</span>
+<span class="span">product velocity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Q1: Plan to continue deploying AI internally for productivity</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said it will continue deploying AI internally to sustain product velocity and margin expansion via productivity gains.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Continued deployment of AI internally</span>
+<span class="span">drive productivity</span>
+<span class="span">sustain product velocity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">Leadership update: New CEO notes favorable AI-driven dynamics</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">New CEO DiLullo characterized it as early days, citing favorable AI-driven market dynamics and deep product integration at customers, suggesting the company may be underappreciated by investors.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">early days</span>
+<span class="span">favorable AI-driven market dynamics</span>
+<span class="span">underappreciated by investors</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-28</span>
+<span class="eh">RPO reported at $441M; 72% due within 12 months</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$441M · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">PagerDuty reported remaining performance obligations of $441M as of April 30, 2026, with roughly 72% expected to convert within 12 months.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Remaining performance obligations (RPO) were $441M</span>
+<span class="span">72%</span>
+<span class="span">over the next 12 months</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0011" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-20</span>
+<span class="eh">Webinar: MCP server sees hundreds of adopters; connects Claude, Cursor, OpenAI</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">PagerDuty described its MCP server enabling natural-language access to operational data from AI tools like Claude Code, Cursor, and OpenAI, noting hundreds of adopters in the first few months.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Model Context Protocol (MCP) server</span>
+<span class="span">natural language commands</span>
+<span class="span">Claude Code, Cursor, or OpenAI</span>
+<span class="span">Hundreds have adopted in the first few months.</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>MCP and ecosystem build-out; early customer traction</h2>
+<div class='range'>2025-10-08 → 2026-04-10</div>
+<div class='psum'>PagerDuty advanced from point features to an architecture-first approach centered on the Model Context Protocol (MCP) to connect AI agents with operational data. The company launched an end-to-end AI Agent Suite and made its MCP server generally available, citing rapid early adoption. Strategic partnerships expanded, with deeper integrations across Anthropic/Claude, Cursor, and LangChain.
+Concurrently, financial disclosures reinforced the strategy’s importance to growth, and the ecosystem footprint broadened across the company’s integrations catalog. PagerDuty also reported notable enterprise lands and expands, including with AI-native customers, while acknowledging execution risk tied to the pace of AI adoption and integration complexity.</div>
+<div class="event t-web_only_verified" id="E0023" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2026-04-10</span>
+<span class="eh">Workato publishes DeepSeek–PagerDuty integration for automated workflows</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
+<p class="narr">Workato listed DeepSeek and PagerDuty integrations enabling automated actions across both platforms, including chat completions and PagerDuty incident updates.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">DeepSeek and Pagerduty</span>
+<span class="span">Generate Chat Completion</span>
+<span class="span">List Models</span>
+<span class="span">Update incident</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-03-15</span>
+<span class="eh">Integrations catalog highlights Anthropic Claude Connector and Cursor</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">PagerDuty’s integrations directory emphasized its breadth with 750+ platform integrations, including the Anthropic Claude Connector and Cursor, reinforcing its multi-AI tooling posture.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">750+ platform integrations</span>
+<span class="span">Anthropic Claude Connector</span>
+<span class="span">Cursor</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0004" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">AI ecosystem expansion; Claude Code plugin and 30+ partners</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">PagerDuty expanded AI-first operations and agentic capabilities, highlighting integrations with Anthropic/Claude, Cursor, and LangChain. The company also listed a new plugin for Claude Code in Anthropic’s marketplace and disclosed 30+ AI partners across 11 categories.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1], web_search_findings[3]</div>
+<span class="span">AI-first operations and agentic capabilities</span>
+<span class="span">Anthropic/Claude, Cursor, LangChain</span>
+<span class="span">more than 30 AI partners across 11 categories</span>
+<span class="span">plugin for Claude Code</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Risk flagged: AI adoption pace and integration complexity may delay benefits</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management cautioned that the growth thesis is increasingly tied to agentic AI adoption, and slower-than-expected customer adoption or integration complexity could delay expected consumption benefits.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">increasingly tied to adoption of agentic AI and automation</span>
+<span class="span">slower-than-expected customer adoption</span>
+<span class="span">integration complexity could delay</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Plan to continue MCP and AI agent ecosystem build-out</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PagerDuty outlined continued investment in MCP and agentic AI capabilities supporting shift-left reliability, noting no new quantitative targets disclosed in the Q&amp;A.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Continued ecosystem build-out around MCP and AI agents</span>
+<span class="span">no new quantitative targets disclosed</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Focus remains on enterprise and AI-native customers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated that as consumption grows, sensitivity to customer hiring should diminish, with strategic focus on enterprise and AI-native customers.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">enterprise and AI-native customers</span>
+<span class="span">sensitivity to customer hiring should diminish</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">RPO reported at $449M; 70% due within 12 months</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$449M · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">PagerDuty reported remaining performance obligations of $449M as of January 31, 2026, with approximately 70% expected to be recognized over the next 12 months.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Remaining performance obligations (RPO) were $449M</span>
+<span class="span">70% ($314M) expected to be recognized</span>
+<span class="span">over the next 12 months</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-12</span>
+<span class="eh">Customer momentum: lands and expands include Anthropic and NVIDIA</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">In its FY26 results, PagerDuty highlighted lands and expands with enterprises including Anthropic, PBC and NVIDIA Corporation, signaling traction with AI-native and infrastructure customers.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Lands and expands include: Anthropic, PBC;</span>
+<span class="span">NVIDIA Corporation</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-10-08</span>
+<span class="eh">PagerDuty debuts end-to-end AI Agent Suite; MCP server GA with rapid uptake</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">PagerDuty launched an end-to-end AI Agent Suite and announced GA of its MCP server, built on an open standard introduced by Anthropic. The company reported over 250 customers adopting the MCP server within two months.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Industry’s First End-to-End AI Agent Suite</span>
+<span class="span">Model Context Protocol (MCP) server</span>
+<span class="span">introduced by Anthropic</span>
+<span class="span">over 250 customers</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations of genAI in Operations Cloud</h2>
+<div class='range'>2023-11-29 → 2024-07-30</div>
+<div class='psum'>PagerDuty began formalizing its generative AI strategy within the Operations Cloud by introducing assistive capabilities embedded in responder workflows. The company announced a Slack-based, generative AI assistant under the PagerDuty Copilot umbrella to accelerate incident response and reduce toil from event to resolution.
+Through 2024, PagerDuty broadened the footprint of these capabilities with the introduction of PagerDuty Advance, positioning genAI across Incident Management, AIOps, Automation, and Customer Service Operations. New assistants and features emphasized in-channel guidance and automated communications to compress response times and improve operational resilience.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2024-07-30</span>
+<span class="eh">PagerDuty launches Advance to expand genAI across Operations Cloud</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PagerDuty introduced PagerDuty Advance, embedding genAI across its Operations Cloud, including an Assistant for Slack and automated status update generation to streamline manual work during incidents.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">PagerDuty Advance</span>
+<span class="span">PagerDuty Advance Assistant for Slack</span>
+<span class="span">genAI chatbot</span>
+<span class="span">auto-generate an audience-specific status update</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2023-11-29</span>
+<span class="eh">PagerDuty unveils Slack-based Copilot generative AI assistant</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">PagerDuty announced a new Slack-based generative AI assistant within PagerDuty Copilot to provide insights across the incident lifecycle, from event to resolution, aiming to reduce repetitive work for responders.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Slack-based, generative AI assistant</span>
+<span class="span">helpful insights from event to resolution</span>
+<span class="span">PagerDuty Copilot</span>
+<span class="span">November 29, 2023</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of ARR or new bookings is attributable to AI-enabled products (Copilot, Advance, SRE Agent) and MCP-based agent workflows?</li>
+<li>How many active deployments and daily active users leverage the Claude marketplace plugin and SRE Agent Skills, and what is their conversion to paid tiers?</li>
+<li>What security mitigations has PagerDuty implemented to reduce MCP/agent ingestion risks like the ‘agentjacking’ pathway highlighted in June 2026 research?</li>
+<li>What are the commercial terms, if any, associated with Anthropic marketplace distribution (e.g., revenue share, listing prioritization), and how do they compare with other AI channels like Gemini and Zapier?</li>
+<li>How is PagerDuty measuring ROI of internal AI usage on engineering throughput and margin expansion (e.g., quantified capacity gains, cycle-time reductions)?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items originate from company press releases and documentation; adoption metrics (e.g., “hundreds have adopted”, “over 250 customers”) are company-reported and may not be independently verified.</li>
+<li>The ‘agentjacking’ disclosure cites PagerDuty as an analogous risk surface rather than a confirmed incident impacting PagerDuty customers.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

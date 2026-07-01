@@ -1,0 +1,457 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>TENB US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Tenable Holdings Inc <span class='sub'>(TENB US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.402</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>16 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 11</span>
+<span class='chip'>web-only (verified): 7</span>
+<span class='chip'>single source: 5</span>
+<span class='chip'>web-only (unverified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Agentic Hexa AI, Anthropic/OpenAI partnerships, and federal validation</h2>
+<div class='range'>2026-01-28 → 2026-06-29</div>
+<div class='psum'>Early 2026 formalized compliance workflows for AI governance: the Tenable AI Exposure user guide detailed integration steps for OpenAI’s ChatGPT Enterprise Compliance API, explicitly requiring OpenAI approval. In Q1, Tenable launched Tenable Hexa AI (agentic orchestration) and introduced unified asset-based pricing to streamline adoption. Management also flagged an AI-enabled vulnerability discovery &quot;tsunami&quot; as both a demand catalyst and a source of execution risk, and reiterated competitive pressures across security categories.
+In May, Tenable deepened its LLM supplier mix: it announced a partnership with Anthropic to power new agentic workflows in Tenable Hexa AI, launched a Claude Compliance API integration for governance, and published documentation noting Google Vertex AI and AWS Bedrock/Anthropic usage—reinforcing a multi-model approach. Tenable also joined OpenAI’s Daybreak Cyber Partner Program to evaluate GPT-5.5 in secure product integrations.
+By late June, Tenable secured FedRAMP High and IL5 authorization for Tenable One Cloud Exposure—broadening federal addressability and underscoring compliance credibility alongside its AI governance and agentic initiatives.</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-29</span>
+<span class="eh">Tenable One Cloud Exposure achieves FedRAMP High and IL5 authorization</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tenable announced FedRAMP High and Impact Level 5 authorization for Tenable One Cloud Exposure, among the most stringent U.S. government cloud security certifications, expanding addressability in highly sensitive federal environments.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">FedRAMP High and Impact Level 5</span>
+<span class="span">stock rose roughly 7% intraday</span>
+<span class="span">FedRAMP Moderate authorizations</span>
+<span class="span">UberEther’s AIM Advantage</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0015" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-22</span>
+<span class="eh">Tenable joins OpenAI Daybreak Cyber Partner Program (evaluating GPT-5.5)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Tenable announced participation in OpenAI’s Daybreak Cyber Partner Program to evaluate GPT-5.5 for secure product integrations under OpenAI’s Trusted Access for Cyber, expanding its multi-provider LLM engagement.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">OpenAI Daybreak Cyber Partner Program</span>
+<span class="span">GPT-5.5</span>
+<span class="span">Trusted Access for Cyber</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0014" data-providers="google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-22</span>
+<span class="eh">Documentation: Tenable uses Google Vertex AI and AWS Bedrock/Anthropic</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Tenable published documentation describing its use of Google’s Vertex AI for Tenable One and AWS Bedrock/Anthropic for Hexa AI, underscoring a multi-model, safety-aware approach to generative features and agentic reasoning.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Google’s Vertex AI</span>
+<span class="span">AWS Bedrock and Athropic is used for Tenable Hexa AI</span>
+<span class="span">partners with Anthropic</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0013" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-21</span>
+<span class="eh">Strategic integration with the Claude Compliance API for AI governance</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Tenable launched a Claude Compliance API integration to provide visibility and governance over Claude usage directly within Tenable One, available immediately and aligned to regulations like the EU AI Act.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Claude Compliance API</span>
+<span class="span">visibility into Claude usage</span>
+<span class="span">available immediately for all Tenable One customers</span>
+<span class="span">EU AI Act</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0012" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-20</span>
+<span class="eh">Tenable partners with Anthropic; Claude powers new Hexa AI workflows</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">At EXPOSURE 2026, Tenable announced new AI initiatives with Anthropic, introducing Claude-powered workflows in Tenable Hexa AI to accelerate agentic capabilities across its platform.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Partners with Anthropic</span>
+<span class="span">Claude-powered workflows</span>
+<span class="span">Tenable Hexa AI</span>
+<span class="span">EXPOSURE 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Q1: Tenable debuts Hexa AI (agentic orchestration) with unified asset-based pricing</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">On its Q1 release, Tenable introduced Tenable Hexa AI with agentic orchestration and a new unified, asset-based pricing model to reduce friction and speed platform expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Tenable Hexa AI (agentic orchestration)</span>
+<span class="span">new unified, asset‑based pricing</span>
+<span class="span">reduce procurement friction</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Q1: Larger platform deals; urgency around AI-driven exposure risk</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited larger platform deals in new business and rising customer urgency to address AI-driven exposure risks, indicating strengthening demand drivers for Tenable One.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">larger platform deals</span>
+<span class="span">increasing customer urgency</span>
+<span class="span">AI‑driven exposure risk</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Q1: AI-enabled vulnerability discovery “tsunami” poses execution risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Tenable warned of a surge in AI-enabled vulnerability discovery which supports exposure-management demand but may shift budgets and deal timing, adding execution volatility.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“tsunami” of new AI‑enabled vulnerability discovery</span>
+<span class="span">supports exposure‑management demand</span>
+<span class="span">shift budgets and timing</span>
+<span class="span">deal‑level volatility and execution risk</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Q1: Competitive intensity across VM, cloud, identity and OT persists</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management noted platform consolidation tailwinds but emphasized large, well‑funded competitors across core categories; pricing changes and new AI features must sustain win-rates and NRR.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">large, well‑funded competitors</span>
+<span class="span">pricing changes and new AI features</span>
+<span class="span">sustained win‑rates and NRR</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">AI Exposure user guide formalizes OpenAI Compliance API integration requirements</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Tenable documentation detailed how to integrate with the ChatGPT Enterprise platform via OpenAI’s Compliance API, emphasizing that OpenAI approval is mandatory prior to enablement—highlighting both capability and provider gatekeeping.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">ChatGPT Enterprise platform by OpenAI</span>
+<span class="span">Important! You MUST receive approval from OpenAI</span>
+<span class="span">Compliance API</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Enterprise AI governance build-out and multi-model posture</h2>
+<div class='range'>2025-02-12 → 2025-09-30</div>
+<div class='psum'>In 2025, Tenable advanced into enterprise AI governance and compliance. It integrated with OpenAI’s ChatGPT Enterprise Compliance API, positioning Tenable One to help customers monitor and enforce policies across popular enterprise AI tools. Concurrently, Tenable’s AI Aware introduced detection content for DeepSeek usage, indicating readiness to address emergent, non-U.S. frontier models.
+The company previewed Tenable AI Exposure for broader AI risk visibility and control (including ChatGPT Enterprise and Microsoft Copilot), targeting GA by year-end 2025. Tenable Research also disclosed the &quot;Gemini Trifecta&quot;—three now-remediated vulnerabilities in Google’s Gemini assistants—signaling both thought leadership in AI security and the dynamic risk surface created by LLM platforms.</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-09-30</span>
+<span class="eh">Tenable Research discloses Google Gemini &quot;Trifecta&quot; vulnerabilities (remediated)</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Tenable reported three vulnerabilities affecting Google’s Gemini assistants—covering search-injection and log-to-prompt injection vectors—later remediated by Google. The findings highlight security risks inherent in LLM platforms and underscore Tenable’s research posture.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Gemini Trifecta</span>
+<span class="span">search-injection attacks</span>
+<span class="span">log-to-prompt injection</span>
+<span class="span">remediated all three vulnerabilities</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-08-06</span>
+<span class="eh">Tenable AI Exposure preview to govern enterprise AI (ChatGPT, Copilot)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">At Black Hat 2025, Tenable unveiled Tenable AI Exposure for end-to-end AI risk management across widely used tools like ChatGPT Enterprise and Microsoft Copilot, with private preview immediately and GA expected by end of 2025.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Tenable AI Exposure</span>
+<span class="span">ChatGPT Enterprise and Microsoft Copilot</span>
+<span class="span">private customer preview program</span>
+<span class="span">General availability is expected by the end of 2025.</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2025-04-30</span>
+<span class="eh">AI Aware content to detect DeepSeek usage and risks</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
+<p class="narr">Tenable published guidance and introduced AI Aware detection plugins to identify DeepSeek tools, APIs, and infrastructure usage, reflecting coverage for emerging LLMs outside of U.S. incumbents.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">DeepSeek R1</span>
+<span class="span">AI Aware for DeepSeek Detection</span>
+<span class="span">Detect known DeepSeek executables</span>
+<span class="span">DeepSeek infrastructure</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-02-12</span>
+<span class="eh">Integration with OpenAI’s ChatGPT Enterprise Compliance API</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Tenable launched a compliance integration with ChatGPT Enterprise to extend visibility, policy enforcement, and AI detection/response, adding OpenAI as a key enterprise AI partner within Tenable One.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">ChatGPT Enterprise Compliance API</span>
+<span class="span">on the list of ChatGPT Enterprise integrators</span>
+<span class="span">We are thankful to OpenAI for working with us</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational GenAI rollout and Google Gemini alignment</h2>
+<div class='range'>2023-08-09 → 2024-03-13</div>
+<div class='psum'>Tenable began formalizing its generative AI strategy by launching ExposureAI within the Tenable One platform in August 2023, positioning AI as core to its exposure management vision. Early messaging emphasized the company&#x27;s long-standing use of AI for prioritization and extended this to generative AI to empower security teams.
+By March 2024, Tenable expanded ExposureAI with features for summarizing attack paths and an AI assistant, explicitly tying its generative capabilities to Google Cloud’s Vertex AI, including Gemini models. This marked a concrete provider linkage to Google/DeepMind for model supply while maintaining a platform-centric approach.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-03-13</span>
+<span class="eh">ExposureAI adds Gemini-powered features via Google Cloud Vertex AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Tenable announced enhancements to ExposureAI, enabling attack path summarization and an AI assistant, fueled by Google Cloud’s Vertex AI with Gemini models, reinforcing a supplier relationship with Google for LLM capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">enhancements to ExposureAI</span>
+<span class="span">Gemini models in Vertex AI</span>
+<span class="span">ask questions of an AI assistant</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2023-08-09</span>
+<span class="eh">Tenable launches ExposureAI across its cybersecurity platform</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Tenable introduced ExposureAI within Tenable One, extending its historical AI use into generative AI to bolster exposure management and decision support for security teams.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">applied AI techniques to help organizations</span>
+<span class="span">AI is a part of our DNA.</span>
+<span class="span">Introducing ExposureAI in Tenable One</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of new bookings and NRR uplift is attributable to ExposureAI/Hexa AI features versus core Tenable One modules?</li>
+<li>Did Tenable AI Exposure reach general availability by end of 2025 as targeted, and what is current customer adoption?</li>
+<li>What (if any) commercial terms or minimums underpin the Anthropic partnership and OpenAI Daybreak participation?</li>
+<li>How materially does FedRAMP High/IL5 expand federal pipeline and cycle times for Tenable One Cloud Exposure?</li>
+<li>To what extent do provider gating requirements (e.g., OpenAI Compliance API approvals) impact sales velocity and deployment timelines?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items rely on Tenable press releases and documentation; limited third-party corroboration is available for technical integration details.</li>
+<li>No explicit financial magnitudes or contract values were disclosed for provider partnerships (OpenAI, Anthropic, Google).</li>
+<li>The documentation excerpt references &quot;Athropic&quot; which appears to be a misspelling of Anthropic; verbatim spans reflect the source text.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

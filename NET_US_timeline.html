@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Cloudflare Inc <span class='sub'>(NET US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.465</div>
@@ -72,262 +82,13 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (verified): 9</span>
 <span class='chip'>web-only (unverified): 5</span>
 </div>
-<div class='phase'>
-<h2>Edge AI foundations and gateway launch</h2>
-<div class='range'>2023-09-26 → 2023-12-31</div>
-<div class='psum'>Cloudflare initiated its AI platform push by partnering with Meta to make Llama 2 available to developers on Workers, positioning its edge network to run LLM inference with data localization controls. Within 24 hours, Cloudflare announced AI Gateway, a meta‑infrastructure layer that intermediates traffic to model APIs like OpenAI with caching, retries, and analytics.
-During the same quarter, Cloudflare expanded its model catalog with image and code generation models and rapidly scaled Workers AI inference to 100 cities, demonstrating progress toward a globally distributed AI inference fabric at the edge.</div>
-<div class="event t-web_only_verified" id="E0001">
-<div class="ev-top">
-<span class="date">2023-09-26</span>
-<span class="eh">Cloudflare partners with Meta to offer Llama 2 on Workers</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Cloudflare announced a collaboration with Meta to make the Llama 2 LLM available to developers on Workers, enabling edge inference with data localization controls and a privacy‑first approach.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">Llama 2</span>
-<span class="span">Workers</span>
-<span class="span">Data Localization Suite</span>
-<span class="span">open source large language model (LLM)</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0002">
-<div class="ev-top">
-<span class="date">2023-09-27</span>
-<span class="eh">AI Gateway beta launched; supports OpenAI and others</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Cloudflare launched AI Gateway in beta to sit between applications and AI APIs like OpenAI, adding caching, retries, and analytics with a one‑line configuration change and a universal endpoint.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">beta of AI Gateway</span>
-<span class="span">one line of code</span>
-<span class="span">OpenAI</span>
-<span class="span">universal endpoint</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2023-11-23</span>
-<span class="eh">Workers AI adds Stable Diffusion and Code Llama; scaled to 100 cities</span>
-<span class="badge">model_release</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Cloudflare expanded Workers AI to include Stable Diffusion and Code Llama and reported inference running across 100 cities, advancing its goal to deliver AI at the network edge.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">Stable Diffusion</span>
-<span class="span">Code Llama</span>
-<span class="span">in 100 cities</span>
-<span class="span">Workers AI</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Model catalog expansion and content control</h2>
-<div class='range'>2024-01-01 → 2024-12-31</div>
-<div class='psum'>Cloudflare became a launch partner for Meta’s Llama 3, adding the 8B model to Workers AI and reinforcing its strategy to offer leading open models at the edge. This broadened Cloudflare’s appeal to developers building AI applications that benefit from proximity to users and data.
-To address customer concerns around unauthorized data scraping for AI training, Cloudflare introduced a one‑click control to block AI crawlers such as GPTBot and ClaudeBot across its customer base, signaling both a product response and a stance on data rights and governance.</div>
-<div class="event t-web_only_verified" id="E0004">
-<div class="ev-top">
-<span class="date">2024-04-18</span>
-<span class="eh">Meta Llama 3 (8B) launches on Workers AI as Cloudflare acts as launch partner</span>
-<span class="badge">model_release</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Cloudflare made Meta Llama 3 available on Workers AI as a launch partner, enabling developers to build with the 8B model via its edge inference platform.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">Meta Llama 3</span>
-<span class="span">Workers AI</span>
-<span class="span">launch partner</span>
-<span class="span">8B</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0005">
-<div class="ev-top">
-<span class="date">2024-07-03</span>
-<span class="eh">Cloudflare adds one-click block for AI bots including GPTBot and ClaudeBot</span>
-<span class="badge">other</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Cloudflare launched an &quot;easy button&quot; to block AI scrapers and crawlers across all plan tiers, naming GPTBot and ClaudeBot among the top AI crawlers, addressing content owners’ data rights concerns.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">block all AI bots</span>
-<span class="span">AI Scrapers and Crawlers</span>
-<span class="span">ClaudeBot</span>
-<span class="span">GPTBot</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>Ecosystem deepening with Anthropic and OpenAI; CASB coverage</h2>
-<div class='range'>2025-01-01 → 2025-12-31</div>
-<div class='psum'>Cloudflare worked with Anthropic to simplify secure connections to Claude via MCP, highlighting adoption by leading SaaS firms and positioning Cloudflare as connective tissue for AI agents. Cloudflare also partnered with OpenAI as a Day 0 launch partner to distribute OpenAI’s open‑weight models through Workers AI.
-Separately, Cloudflare announced its CASB as the first to integrate with ChatGPT Enterprise, Claude, and Google Gemini, reinforcing enterprise‑grade governance and visibility across the top generative AI tools.</div>
-<div class="event t-web_only_verified" id="E0006">
-<div class="ev-top">
-<span class="date">2025-05-01</span>
-<span class="eh">Cloudflare enables secure Claude MCP integrations for leading SaaS</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Cloudflare announced tooling to quickly and securely connect SaaS services to Anthropic’s Claude via MCP, citing engagement from companies like Asana, Atlassian, Block, PayPal, Sentry, and Stripe.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[8]</div>
-<span class="span">Claude</span>
-<span class="span">MCP</span>
-<span class="span">Asana, Atlassian, Block, PayPal, Sentry, Stripe</span>
-<span class="span">first and only simple toolkit</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0007">
-<div class="ev-top">
-<span class="date">2025-08-05</span>
-<span class="eh">OpenAI open-weight models arrive on Workers AI with Cloudflare as Day 0 partner</span>
-<span class="badge">model_release</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Cloudflare partnered with OpenAI as a Day 0 launch partner to offer newly announced open‑weight GPT models through Workers AI, expanding model choice for developers.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[6]</div>
-<span class="span">open-weight models</span>
-<span class="span">Day 0 launch partner</span>
-<span class="span">@cf/openai/gpt-oss-120b</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0008">
-<div class="ev-top">
-<span class="date">2025-08-26</span>
-<span class="eh">Cloudflare CASB integrates with ChatGPT Enterprise, Claude, and Google Gemini</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Cloudflare became the first CASB to integrate with all three leading generative AI tools—ChatGPT Enterprise, Claude by Anthropic, and Google Gemini—adding real‑time visibility and controls for enterprise AI usage.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[14]</div>
-<span class="span">first Cloud Access Security Broker (CASB) to integrate</span>
-<span class="span">ChatGPT Enterprise</span>
-<span class="span">Claude by Anthropic</span>
-<span class="span">Google Gemini</span>
-</details>
-</div>
-</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
 <h2>Agent Cloud, multi‑model expansion, and AI-first operating pivot</h2>
 <div class='range'>2026-01-01 → 2026-06-27</div>
 <div class='psum'>Cloudflare broadened Workers AI to include Google’s Gemma 4 26B A4B, DeepSeek Coder variants, and catalog updates featuring DeepSeek R1 distillations and OpenAI’s Whisper, while also adding xAI Grok support via AI Gateway. OpenAI highlighted that millions of enterprises can access OpenAI frontier models like GPT‑5.4 through Cloudflare’s Agent Cloud. OpenAI’s sub‑processor list named Cloudflare, Ltd. as a content delivery network provider for several OpenAI services.
 Financially, Cloudflare’s February print emphasized AI/agent demand with above‑consensus 2026 guidance. On May 7, Cloudflare announced a shift to an agentic AI‑first operating model with an approximately 20% workforce reduction and estimated $140–$150m restructuring charges, while stressing sales capacity was largely preserved. Management underscored GPU fleet utilization trending 70–80%, a utilization‑first approach to inference (&quot;we are not renting an H100&quot;), and a plan to lean into inference demand while maintaining margin discipline. RPO reached $2.543b (+36% y/y), FCF was $84.1m, and liquidity stood at $4.164b, alongside higher expected FY26 capex intensity of 14–15% of revenue and noted risks around execution, margin mix, and capital intensity.</div>
-<div class="event t-web_only_unverified" id="E0009">
-<div class="ev-top">
-<span class="date">2026-04-04</span>
-<span class="eh">Google Gemma 4 26B A4B available on Workers AI</span>
-<span class="badge">model_release</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Cloudflare partnered with Google to bring Gemma 4 26B A4B, an MoE model informed by Gemini 3 research, to Workers AI with OpenAI‑compatible endpoints and documented pricing and context window.</p>
-<details>
-<summary>evidence — 2 source(s), 5 span(s)</summary>
-<div class="ev-src">web_search_findings[10], web_search_findings[11]</div>
-<span class="span">Gemma 4 26B A4B</span>
-<span class="span">Mixture-of-Experts (MoE)</span>
-<span class="span">OpenAI-compatible endpoint</span>
-<span class="span">gemma-4-26b-a4b-it</span>
-<span class="span">Context Window  256,000 tokens</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0010">
-<div class="ev-top">
-<span class="date">2026-04-13</span>
-<span class="eh">OpenAI: Cloudflare Agent Cloud enables agents with GPT‑5.4 for enterprises</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">OpenAI announced that enterprises can deploy agents powered by OpenAI frontier models like GPT‑5.4 directly within Cloudflare’s Agent Cloud, built atop Workers AI.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[7]</div>
-<span class="span">Millions of enterprises</span>
-<span class="span">Agent Cloud</span>
-<span class="span">GPT‑5.4</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0011">
-<div class="ev-top">
-<span class="date">2026-04-20</span>
-<span class="eh">AI Gateway adds documented support for xAI Grok endpoint</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
-<p class="narr">Cloudflare’s AI Gateway documentation added a specific endpoint for xAI’s Grok models, enabling traffic mediation, analytics, and controls for xAI API usage.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[9]</div>
-<span class="span">xAI</span>
-<span class="span">Endpoint</span>
-<span class="span">grok</span>
-<span class="span">https://gateway.ai.cloudflare.com/v1/{account_id}/{gateway_id}/grok</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0012">
-<div class="ev-top">
-<span class="date">2026-04-30</span>
-<span class="eh">DeepSeek Coder models available on Workers AI</span>
-<span class="badge">model_release</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
-<p class="narr">Cloudflare documented availability and usage of DeepSeek Coder 6.7B variants on Workers AI, adding code generation options for developers.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[13]</div>
-<span class="span">DeepSeek Coder</span>
-<span class="span">@hf/thebloke/deepseek-coder-6.7b-instruct-awq</span>
-<span class="span">Last updated Apr 30, 2026</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0013">
-<div class="ev-top">
-<span class="date">2026-06-02</span>
-<span class="eh">OpenAI lists Cloudflare, Ltd. as CDN sub-processor</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">OpenAI’s sub‑processor list includes Cloudflare, Ltd. as a content delivery network provider for multiple OpenAI services, indicating formal vendor participation in OpenAI’s delivery stack.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">Cloudflare, Ltd.</span>
-<span class="span">Content delivery network provider</span>
-<span class="span">Processing is performed at the data center that is closest to the End User</span>
-<span class="span">OpenAI Sub-processor list</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0014">
+<div class="event t-web_only_verified" id="E0014" data-providers="deepseek openai_chatgpt google_gemini_deepmind">
 <div class="ev-top">
 <span class="date">2026-06-27</span>
 <span class="eh">Workers AI catalog highlights DeepSeek R1 distill and OpenAI Whisper; Google embeddings</span>
@@ -336,6 +97,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
 <p class="narr">Cloudflare’s Workers AI models page lists DeepSeek‑R1‑Distill‑Qwen‑32B for text generation, OpenAI Whisper for ASR, and Google embedding models, underscoring a multi‑provider catalog.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · DSK <b>3</b> OAI <b>3</b> GEM <b>2</b></span> <span class="chchip">product_integration_exposure · DSK <b>3</b> OAI <b>4</b> GEM <b>3</b></span> <span class="chchip">provider_specificity · DSK <b>1</b> OAI <b>1</b> GEM <b>1</b></span> <span class="chchip">multi_model_hedge · DSK <b>5</b> OAI <b>5</b> GEM <b>5</b></span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
 <div class="ev-src">web_search_findings[12]</div>
@@ -345,24 +107,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">Text Embeddings • Google</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0015">
-<div class="ev-top">
-<span class="date">2026-02-10</span>
-<span class="eh">Q4 beat and above-consensus 2026 guide as AI/agent demand accelerates</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$2.8B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Following earnings, shares rose after hours as Cloudflare cited AI/agent demand, with Q4 revenue of $614.5m and 2026 revenue guidance at $2.79b, above consensus.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[1]</div>
-<span class="span">NET +12 percent after hours</span>
-<span class="span">Q4 revenue 614.5m</span>
-<span class="span">2026 revenue guidance 2.79b</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0016">
+<div class="event t-single_source" id="E0016" data-providers="">
 <div class="ev-top">
 <span class="date">2026-06-22</span>
 <span class="eh">TechCrunch lists Cloudflare’s ~20% layoffs among AI-driven restructurings</span>
@@ -378,7 +123,26 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">AI is increasingly cited as the reason</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0017">
+<div class="event t-web_only_unverified" id="E0013" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">OpenAI lists Cloudflare, Ltd. as CDN sub-processor</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI’s sub‑processor list includes Cloudflare, Ltd. as a content delivery network provider for multiple OpenAI services, indicating formal vendor participation in OpenAI’s delivery stack.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · OAI <b>3</b></span> <span class="chchip">product_integration_exposure · OAI <b>4</b></span> <span class="chchip">contractual_commitment_strength · OAI <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Cloudflare, Ltd.</span>
+<span class="span">Content delivery network provider</span>
+<span class="span">Processing is performed at the data center that is closest to the End User</span>
+<span class="span">OpenAI Sub-processor list</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Management flags AI/agentic workloads as largest secular tailwind</span>
@@ -394,7 +158,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">both building and internally adopting AI/agent tools</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0018">
+<div class="event t-single_source" id="E0018" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Cloudflare announces agentic AI-first shift with ~20% workforce reduction</span>
@@ -411,7 +175,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">$140–$150m</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0019">
+<div class="event t-single_source" id="E0019" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Restructuring framed as not a cost-cutting exercise</span>
@@ -426,7 +190,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">not a cost‑cutting exercise</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0020">
+<div class="event t-single_source" id="E0020" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">AE and quota-carrying capacity largely preserved</span>
@@ -442,7 +206,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">we hardly touched that</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0021">
+<div class="event t-single_source" id="E0021" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">GPU fleet utilization trending 70–80%, approaching CPU levels</span>
@@ -451,6 +215,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management highlighted GPU efficiency, noting utilization up in the 70–80% range and approaching CPU levels.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -458,7 +223,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">70% to 80% range</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0022">
+<div class="event t-single_source" id="E0022" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Cloudflare emphasizes utilization-first approach, not renting H100s</span>
@@ -467,6 +232,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
 <p class="narr">Cloudflare contrasted its utilization‑first model with hyperscaler server leasing, stating it is not renting H100s and dynamically schedules CPU/GPU based on need and customer tier.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -474,7 +240,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">scheduling workloads across CPU/GPU</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0023">
+<div class="event t-single_source" id="E0023" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">No restriction on leaning into AI inference opportunity while optimizing margins</span>
@@ -490,7 +256,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">optimize margins</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0024">
+<div class="event t-single_source" id="E0024" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Developer mix shift viewed as P&amp;L neutral despite lower gross margins</span>
@@ -506,7 +272,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">a wash</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0025">
+<div class="event t-single_source" id="E0025" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">RPO reaches $2.543b, up 36% y/y and 2% q/q</span>
@@ -515,6 +281,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="mag">$2.5B · contract_value</span> <span class="badge">positive_demand</span></div>
 <p class="narr">Cloudflare reported remaining performance obligations of $2.543b, growing 36% year‑over‑year and 2% sequentially, indicating robust demand pipeline including AI workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -522,7 +289,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">+36% y/y; +2% q/q</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0026">
+<div class="event t-single_source" id="E0026" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Capex intensity 9% in Q1; FY26 expected at 14–15% of revenue</span>
@@ -538,7 +305,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">full-year capex expected at 14–15% of revenue</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0027">
+<div class="event t-single_source" id="E0027" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Free cash flow of $84.1m (13% of revenue) in Q1</span>
@@ -554,7 +321,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">13% of revenue</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0028">
+<div class="event t-single_source" id="E0028" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Liquidity of $4.164b in cash and securities</span>
@@ -570,7 +337,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">at 3/31/26</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0029">
+<div class="event t-single_source" id="E0029" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Risk: execution of AI-first restructuring could disrupt operations</span>
@@ -586,7 +353,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">productivity gains from agentic AI adoption</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0030">
+<div class="event t-single_source" id="E0030" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Risk: elevated capex may pressure FCF if utilization underperforms</span>
@@ -602,7 +369,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">14–15% of FY26 revenue</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0031">
+<div class="event t-single_source" id="E0031" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Risk: margin pressure from developer/mix shift</span>
@@ -618,7 +385,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">cap near-term margin expansion</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0032">
+<div class="event t-single_source" id="E0032" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Capacity strategy: lean into inference demand with dynamic CPU/GPU routing</span>
@@ -627,6 +394,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Cloudflare outlined its AI inference capacity strategy to invest behind demand, prioritize utilization gains, and dynamically route workloads across CPU and GPU to preserve unit economics.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -634,7 +402,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">dynamically route workloads across CPU/GPU</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0033">
+<div class="event t-single_source" id="E0033" data-providers="">
 <div class="ev-top">
 <span class="date">2026-05-07</span>
 <span class="eh">Strategy: monetize AI agent/bot traffic; non-human may surpass human by 2027</span>
@@ -643,6 +411,7 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Cloudflare described a micro‑transaction vision for agent requests and predicted non‑human traffic could exceed human traffic around 2027, positioning the company to broker access and controls for model builders and content owners.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">user_lock_in_relevance</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[0]</div>
@@ -651,31 +420,310 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <span class="span">broker access and controls</span>
 </details>
 </div>
+<div class="event t-web_only_unverified" id="E0012" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">DeepSeek Coder models available on Workers AI</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
+<p class="narr">Cloudflare documented availability and usage of DeepSeek Coder 6.7B variants on Workers AI, adding code generation options for developers.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · DSK <b>3</b></span> <span class="chchip">product_integration_exposure · DSK <b>3</b></span> <span class="chchip">provider_specificity · DSK <b>1</b></span> <span class="chchip">multi_model_hedge · DSK <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">DeepSeek Coder</span>
+<span class="span">@hf/thebloke/deepseek-coder-6.7b-instruct-awq</span>
+<span class="span">Last updated Apr 30, 2026</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0011" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2026-04-20</span>
+<span class="eh">AI Gateway adds documented support for xAI Grok endpoint</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Cloudflare’s AI Gateway documentation added a specific endpoint for xAI’s Grok models, enabling traffic mediation, analytics, and controls for xAI API usage.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · XAI <b>1</b></span> <span class="chchip">product_integration_exposure · XAI <b>2</b></span> <span class="chchip">provider_specificity · XAI <b>1</b></span> <span class="chchip">multi_model_hedge · XAI <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">xAI</span>
+<span class="span">Endpoint</span>
+<span class="span">grok</span>
+<span class="span">https://gateway.ai.cloudflare.com/v1/{account_id}/{gateway_id}/grok</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0010" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-04-13</span>
+<span class="eh">OpenAI: Cloudflare Agent Cloud enables agents with GPT‑5.4 for enterprises</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI announced that enterprises can deploy agents powered by OpenAI frontier models like GPT‑5.4 directly within Cloudflare’s Agent Cloud, built atop Workers AI.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · OAI <b>3</b></span> <span class="chchip">product_integration_exposure · OAI <b>4</b></span> <span class="chchip">enterprise_adoption_exposure · OAI <b>3</b></span> <span class="chchip">strategic_option_value · OAI <b>3</b></span> <span class="chchip">user_lock_in_relevance · OAI <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Millions of enterprises</span>
+<span class="span">Agent Cloud</span>
+<span class="span">GPT‑5.4</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-04</span>
+<span class="eh">Google Gemma 4 26B A4B available on Workers AI</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Cloudflare partnered with Google to bring Gemma 4 26B A4B, an MoE model informed by Gemini 3 research, to Workers AI with OpenAI‑compatible endpoints and documented pricing and context window.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · GEM <b>2</b></span> <span class="chchip">product_integration_exposure · GEM <b>3</b></span> <span class="chchip">provider_specificity · GEM <b>1</b></span> <span class="chchip">multi_model_hedge · GEM <b>5</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[10], web_search_findings[11]</div>
+<span class="span">Gemma 4 26B A4B</span>
+<span class="span">Mixture-of-Experts (MoE)</span>
+<span class="span">OpenAI-compatible endpoint</span>
+<span class="span">gemma-4-26b-a4b-it</span>
+<span class="span">Context Window  256,000 tokens</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-10</span>
+<span class="eh">Q4 beat and above-consensus 2026 guide as AI/agent demand accelerates</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.8B · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Following earnings, shares rose after hours as Cloudflare cited AI/agent demand, with Q4 revenue of $614.5m and 2026 revenue guidance at $2.79b, above consensus.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">NET +12 percent after hours</span>
+<span class="span">Q4 revenue 614.5m</span>
+<span class="span">2026 revenue guidance 2.79b</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem deepening with Anthropic and OpenAI; CASB coverage</h2>
+<div class='range'>2025-01-01 → 2025-12-31</div>
+<div class='psum'>Cloudflare worked with Anthropic to simplify secure connections to Claude via MCP, highlighting adoption by leading SaaS firms and positioning Cloudflare as connective tissue for AI agents. Cloudflare also partnered with OpenAI as a Day 0 launch partner to distribute OpenAI’s open‑weight models through Workers AI.
+Separately, Cloudflare announced its CASB as the first to integrate with ChatGPT Enterprise, Claude, and Google Gemini, reinforcing enterprise‑grade governance and visibility across the top generative AI tools.</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="openai_chatgpt anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-08-26</span>
+<span class="eh">Cloudflare CASB integrates with ChatGPT Enterprise, Claude, and Google Gemini</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Cloudflare became the first CASB to integrate with all three leading generative AI tools—ChatGPT Enterprise, Claude by Anthropic, and Google Gemini—adding real‑time visibility and controls for enterprise AI usage.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · OAI <b>4</b> ANT <b>3</b> GEM <b>3</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>3</b> ANT <b>2</b> GEM <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>1</b> ANT <b>1</b> GEM <b>1</b></span> <span class="chchip">multi_model_hedge · OAI <b>5</b> ANT <b>5</b> GEM <b>5</b></span> <span class="chchip">user_lock_in_relevance · OAI <b>3</b> ANT <b>2</b> GEM <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">first Cloud Access Security Broker (CASB) to integrate</span>
+<span class="span">ChatGPT Enterprise</span>
+<span class="span">Claude by Anthropic</span>
+<span class="span">Google Gemini</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-08-05</span>
+<span class="eh">OpenAI open-weight models arrive on Workers AI with Cloudflare as Day 0 partner</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Cloudflare partnered with OpenAI as a Day 0 launch partner to offer newly announced open‑weight GPT models through Workers AI, expanding model choice for developers.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · OAI <b>3</b></span> <span class="chchip">product_integration_exposure · OAI <b>4</b></span> <span class="chchip">provider_specificity · OAI <b>1</b></span> <span class="chchip">multi_model_hedge · OAI <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">open-weight models</span>
+<span class="span">Day 0 launch partner</span>
+<span class="span">@cf/openai/gpt-oss-120b</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-05-01</span>
+<span class="eh">Cloudflare enables secure Claude MCP integrations for leading SaaS</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Cloudflare announced tooling to quickly and securely connect SaaS services to Anthropic’s Claude via MCP, citing engagement from companies like Asana, Atlassian, Block, PayPal, Sentry, and Stripe.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure · ANT <b>3</b></span> <span class="chchip">provider_specificity · ANT <b>1</b></span> <span class="chchip">multi_model_hedge · ANT <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Claude</span>
+<span class="span">MCP</span>
+<span class="span">Asana, Atlassian, Block, PayPal, Sentry, Stripe</span>
+<span class="span">first and only simple toolkit</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Model catalog expansion and content control</h2>
+<div class='range'>2024-01-01 → 2024-12-31</div>
+<div class='psum'>Cloudflare became a launch partner for Meta’s Llama 3, adding the 8B model to Workers AI and reinforcing its strategy to offer leading open models at the edge. This broadened Cloudflare’s appeal to developers building AI applications that benefit from proximity to users and data.
+To address customer concerns around unauthorized data scraping for AI training, Cloudflare introduced a one‑click control to block AI crawlers such as GPTBot and ClaudeBot across its customer base, signaling both a product response and a stance on data rights and governance.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-07-03</span>
+<span class="eh">Cloudflare adds one-click block for AI bots including GPTBot and ClaudeBot</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Cloudflare launched an &quot;easy button&quot; to block AI scrapers and crawlers across all plan tiers, naming GPTBot and ClaudeBot among the top AI crawlers, addressing content owners’ data rights concerns.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure · OAI <b>3</b> ANT <b>1</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>3</b> ANT <b>2</b></span> <span class="chchip">traffic_or_distribution_bypass_risk · OAI <b>1</b> ANT <b>1</b></span> <span class="chchip">data_rights_or_content_commoditization_risk · OAI <b>2</b> ANT <b>2</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">block all AI bots</span>
+<span class="span">AI Scrapers and Crawlers</span>
+<span class="span">ClaudeBot</span>
+<span class="span">GPTBot</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-04-18</span>
+<span class="eh">Meta Llama 3 (8B) launches on Workers AI as Cloudflare acts as launch partner</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Cloudflare made Meta Llama 3 available on Workers AI as a launch partner, enabling developers to build with the 8B model via its edge inference platform.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · LLA <b>3</b></span> <span class="chchip">product_integration_exposure · LLA <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Meta Llama 3</span>
+<span class="span">Workers AI</span>
+<span class="span">launch partner</span>
+<span class="span">8B</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Edge AI foundations and gateway launch</h2>
+<div class='range'>2023-09-26 → 2023-12-31</div>
+<div class='psum'>Cloudflare initiated its AI platform push by partnering with Meta to make Llama 2 available to developers on Workers, positioning its edge network to run LLM inference with data localization controls. Within 24 hours, Cloudflare announced AI Gateway, a meta‑infrastructure layer that intermediates traffic to model APIs like OpenAI with caching, retries, and analytics.
+During the same quarter, Cloudflare expanded its model catalog with image and code generation models and rapidly scaled Workers AI inference to 100 cities, demonstrating progress toward a globally distributed AI inference fabric at the edge.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2023-11-23</span>
+<span class="eh">Workers AI adds Stable Diffusion and Code Llama; scaled to 100 cities</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Cloudflare expanded Workers AI to include Stable Diffusion and Code Llama and reported inference running across 100 cities, advancing its goal to deliver AI at the network edge.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · LLA <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Stable Diffusion</span>
+<span class="span">Code Llama</span>
+<span class="span">in 100 cities</span>
+<span class="span">Workers AI</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-09-27</span>
+<span class="eh">AI Gateway beta launched; supports OpenAI and others</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Cloudflare launched AI Gateway in beta to sit between applications and AI APIs like OpenAI, adding caching, retries, and analytics with a one‑line configuration change and a universal endpoint.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · OAI <b>3</b></span> <span class="chchip">product_integration_exposure · OAI <b>4</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>3</b></span> <span class="chchip">switching_flexibility · OAI <b>4</b></span> <span class="chchip">user_lock_in_relevance · OAI <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">beta of AI Gateway</span>
+<span class="span">one line of code</span>
+<span class="span">OpenAI</span>
+<span class="span">universal endpoint</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2023-09-26</span>
+<span class="eh">Cloudflare partners with Meta to offer Llama 2 on Workers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Cloudflare announced a collaboration with Meta to make the Llama 2 LLM available to developers on Workers, enabling edge inference with data localization controls and a privacy‑first approach.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · LLA <b>3</b></span> <span class="chchip">product_integration_exposure · LLA <b>3</b></span> <span class="chchip">provider_specificity · LLA <b>1</b></span> <span class="chchip">multi_model_hedge · LLA <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Llama 2</span>
+<span class="span">Workers</span>
+<span class="span">Data Localization Suite</span>
+<span class="span">open source large language model (LLM)</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0032'>E0032</a></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0032'>E0032</a></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0005'>E0005</a></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0033'>E0033</a></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0.9</td><td>0.05</td><td>0.4</td><td>0.6</td><td>0.2</td><td>0.6</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>1.05</td><td>0.4</td><td>0.55</td><td>0.45</td><td>0.3</td><td>0.45</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>-0.2</td><td>-0.2</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.79</td><td>0.805</td><td>0.805</td><td>0.775</td><td>0.775</td><td>0.775</td></tr>
+<tr><td class='k'>NET effective</td><td>0.6571</td><td>0.0957</td><td>0.3375</td><td>0.3868</td><td>0.1447</td><td>0.3591</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What portion of RPO and revenue is attributable specifically to AI inference (Workers AI/Agent Cloud) versus security/network products?</li>
@@ -689,4 +737,19 @@ Financially, Cloudflare’s February print emphasized AI/agent demand with above
 <li>Restructuring charge estimates were presented as a range ($140–$150m) and may change upon finalization.</li>
 <li>OpenAI’s sub-processor listing confirms a relationship but does not disclose commercial terms, duration, or revenue impact.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

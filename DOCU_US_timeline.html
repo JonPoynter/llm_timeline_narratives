@@ -1,0 +1,845 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>DOCU US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Docusign Inc <span class='sub'>(DOCU US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.427</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>39 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 1</span>
+<span class='chip'>web 14</span>
+<span class='chip'>single source: 26</span>
+<span class='chip'>web-only (unverified): 9</span>
+<span class='chip'>web-only (verified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>MCP connectors across ChatGPT/Codex and Gemini; FY27 Q1 updates; ecosystem documentation and risks</h2>
+<div class='range'>2026-06-01 → 2026-06-30</div>
+<div class='psum'>In June 2026, Docusign expanded distribution by launching a Docusign app available in ChatGPT and Codex, powered by Docusign Iris, while reaffirming a broad MCP ecosystem across Anthropic Claude, Gemini Enterprise, and OpenAI. A new Chief Product Officer was appointed, and documentation for connecting Docusign to Google Gemini Enterprise went live, alongside developer blogs and community threads outlining MCP server connectors for Claude, Gemini, Copilot, and more.
+FY27 Q1 results highlighted 40,000 customers investing in the IAM roadmap, IAM at 12.6% of ARR, AI‑powered Web Forms, and strong partner‑sourced revenue growth. The company nudged FY27 revenue guidance higher. Concurrently, a multi‑state probe into OpenAI introduced an external regulatory overhang for a key provider within Docusign’s AI ecosystem. Third‑party automations also surfaced linking Docusign with xAI’s Grok via Zapier.</div>
+<div class="event t-web_only_unverified" id="E0039" data-providers="xai_grok">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Zapier exposes Docusign + Grok by xAI automation pathway</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">xai_grok</span></div>
+<p class="narr">Zapier listed a no‑code integration between Docusign and Grok by xAI, enabling triggers like Docusign events and actions including text categorization in Grok, widening potential agentic workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">Docusign + Grok by xAI</span>
+<span class="span">Connect Docusign and Grok by xAI</span>
+<span class="span">&#x27;Click Agreed&#x27; from Docusign</span>
+<span class="span">&#x27;Categorize Text&#x27; in Grok by xAI</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0038" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-18</span>
+<span class="eh">Google publishes guide to connect Docusign to Gemini Enterprise</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google Cloud documentation described how to create a data store and connect Docusign to Gemini Enterprise using a Google‑managed OAuth app, including authorization steps; documentation was updated June 18, 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">connect Docusign to Gemini Enterprise</span>
+<span class="span">Google-managed OAuth app</span>
+<span class="span">authorize Gemini Enterprise to access Docusign</span>
+<span class="span">Last updated 2026-06-18 UTC</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0037" data-providers="anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">Developers blog: Docusign MCP Server supports Claude and Gemini clients</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Docusign’s developer blog described the MCP Server design and noted available connectors for Anthropic Claude and Google Gemini, with additional connectors rolling out in 2026.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">MCP Server is designed to connect</span>
+<span class="span">connectors such as Claude and Gemini</span>
+<span class="span">MCP connectors for Anthropic Claude, Google Gemini</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-13</span>
+<span class="eh">State AG coalition opens probe into OpenAI; subpoena served</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Multiple outlets reported a multistate investigation into OpenAI with a broad subpoena on data practices and user impacts, introducing an external regulatory overhang for a key Docusign AI provider.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">frontier_events[0]</div>
+<span class="span">probe into OpenAI</span>
+<span class="span">subpoena served</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0035" data-providers="anthropic_claude google_gemini_deepmind openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">Community: MCP Server connectors open beta for Claude, ChatGPT, Gemini, Copilot Studio</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">A Docusign product manager announced an open thread on using Docusign MCP Server connectors in popular agents including Claude, ChatGPT, and Gemini Enterprise, noting the MCP Server is in open beta.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">popular agents like Claude, ChatGPT, Gemini Enterprise, and Copilot Studio</span>
+<span class="span">MCP Server (open beta)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">FY27 Q1: 40,000 customers investing in IAM roadmap</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited continued demand for the AI‑native IAM platform, with 40,000 customers investing in the roadmap during the quarter, alongside durable revenue growth, FCF, and buybacks.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">40,000 customers investing in the roadmap</span>
+<span class="span">continued demand for the AI-native Intelligent Agreement Management (IAM) platform</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">FY27 Q1: AI‑powered Web Forms launched</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Product updates included AI‑powered Web Forms for instant form creation, extending IAM’s native AI capabilities into form generation.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI-powered Web Forms</span>
+<span class="span">instant form creation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">FY27 Q1: IAM reaches 12.6% of ARR</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">IAM represented 12.6% of total ARR as of 2026‑04‑30, up from 10.8% as of 2026‑01‑31, indicating accelerating mix shift toward AI‑native agreement management.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">represented 12.6% of total ARR</span>
+<span class="span">as of 2026-04-30 (vs 10.8% as of 2026-01-31)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">FY27 Q1: IAM adoption drives ‘meaningful’ eSign consumption uplift</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said IAM adoption drives a meaningful lift in eSignature consumption but declined to quantify the impact.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">drives a &quot;meaningful&quot; lift</span>
+<span class="span">&quot;we&#x27;re not going to start that&quot;</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">FY27 Q1: IAM Platform Plan and 1,100+ ISV integrations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Docusign launched the IAM Platform Plan with credit‑based, outcome‑oriented pricing and emphasized a customizable platform with 1,100+ ISV integrations rather than numerous SKUs.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">IAM Platform Plan (credit-based, outcome-oriented pricing)</span>
+<span class="span">1,100+ ISV integrations</span>
+<span class="span">customizable platform</span>
+<span class="span">rather than numerous SKUs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">FY27 Q1: IAM positioned as broader than CLM; ‘center of gravity’ for workflows</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management framed IAM as broader than contract lifecycle management and positioned Docusign as the center of gravity for agreement data and workflows.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">broader than CLM</span>
+<span class="span">&quot;center of gravity&quot; for agreement data/workflows</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">FY27 Q1: Expanding integrations including Anthropic and OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Docusign emphasized unique data and orchestration with expanding integrations, explicitly naming Anthropic and OpenAI among enterprise platforms it connects with.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">expanding integrations (Anthropic, OpenAI</span>
+<span class="span">unique data, orchestration</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">FY27 Q1: Unprecedented inbound interest in MCP beta</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described inbound interest in the MCP beta as unprecedented, signaling strong developer and customer appetite for agentic agreement workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">MCP beta was described as unprecedented</span>
+<span class="span">Inbound interest in the MCP beta</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">FY27 Q1: Partner‑contributed revenue growing faster than company</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Docusign said partner‑contributed revenue is growing significantly faster than overall revenue and described heavier enablement for SIs and resellers, including resell‑first models in certain secondary markets.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">partner contributed revenue is growing significantly faster than our overall revenue</span>
+<span class="span">resell-first models in certain secondary markets</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">FY27 Q1: Risk from competitive intensity in e‑signature and IAM</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management flagged ongoing competition from large platforms and emerging AI‑native vendors, warning that failure to convert IAM interest into sustained ARR growth could slow expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">competition from large platforms and emerging AI-native vendors</span>
+<span class="span">failure to convert IAM interest into sustained ARR growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">FY27 Q1: IAM mix ‘roughly linear’ trajectory with visibility caveats</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management said IAM mix progression could be roughly linear toward year‑end targets but caveated visibility as larger enterprises adopt.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">roughly linear</span>
+<span class="span">caveated visibility</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">DocuSign posts $830.2M Q1 revenue; nudges FY27 guidance to $3.49–$3.50B</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$830M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">PR reporting noted fiscal Q1 FY27 revenue of $830.2M (up 9% YoY), non‑GAAP EPS of $1.09, and a slight lift to full‑year revenue guidance to $3.49–$3.50B as IAM adoption grows.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">revenue of $830.2M, up 9% year over year</span>
+<span class="span">FY27 revenue guidance to $3.49–$3.50B</span>
+<span class="span">non-GAAP diluted EPS of $1.09</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0021" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">Docusign app launches in ChatGPT and Codex, powered by Iris</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Docusign announced a new app available in ChatGPT and Codex that brings IAM directly into OpenAI’s products, powered by Docusign Iris and available globally in English.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">app is available in ChatGPT and Codex</span>
+<span class="span">directly into OpenAI&#x27;s products</span>
+<span class="span">powered by Docusign Iris</span>
+<span class="span">available globally in English today in ChatGPT</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0022" data-providers="anthropic_claude google_gemini_deepmind openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-02</span>
+<span class="eh">Docusign names Graham Sheldon CPO; highlights MCP connectors to Claude, Gemini, ChatGPT</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Docusign appointed Graham Sheldon as Chief Product Officer and noted recently launched MCP server connectors with Anthropic Claude, Gemini, and OpenAI ChatGPT as part of its partner ecosystem.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Appoints Graham Sheldon as Chief Product Officer</span>
+<span class="span">MCP server connectors with Anthropic Claude, Gemini, and OpenAI ChatGPT</span>
+<span class="span">over a billion users</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0020" data-providers="anthropic_claude google_gemini_deepmind openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-01</span>
+<span class="eh">Investor overview: IAM now in ChatGPT; MCP connects to Claude and Gemini</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Docusign’s investor overview detailed more than 1,100 integrations and reiterated that IAM is available in ChatGPT and connects via MCP to Anthropic Claude and Gemini Enterprise, with new APIs for IAM Navigator and Maestro.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">more than 1,100 third-party integrations</span>
+<span class="span">IAM is now available in ChatGPT</span>
+<span class="span">connects to Anthropic Claude, Gemini Enterprise</span>
+<span class="span">APIs allowing for third-party integrations into IAM Navigator and Maestro</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Multi‑model expansion and FY26 exit metrics; Anthropic Cowork and internal Gemini adoption</h2>
+<div class='range'>2026-02-24 → 2026-05-13</div>
+<div class='psum'>In early 2026, Docusign expanded beyond OpenAI by launching an Anthropic Cowork integration using MCP, enabling natural‑language orchestration of end‑to‑end agreement workflows. The FY26 Q4 release emphasized AI‑native IAM features, $350M+ IAM ARR, and plans for enterprise‑grade consumption‑credit pricing, while targeting IAM to ~18% of ARR exiting FY27. Microsoft channel momentum and stronger early IAM cohort retention were noted, with risks flagged if IAM adoption stalls or competition intensifies.
+Docusign also became an early adopter of Google’s Gemini for internal productivity (Workspace), and the broader ecosystem acknowledged Docusign among MCP connectors for Claude, reinforcing a multi‑model posture across Anthropic, OpenAI, and Google.</div>
+<div class="event t-web_only_verified" id="E0019" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-13</span>
+<span class="eh">Anthropic expands Claude legal tools; MCP connectors include Docusign</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">TechRadar reported Anthropic adding 20+ MCP connectors and 12 plugins for legal work, noting connections to DocuSign among others, underscoring growing agentic integrations for legal workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">20+ MCP connectors and 12 plugins</span>
+<span class="span">connections to the likes of DocuSign</span>
+<span class="span">legal space</span>
+<span class="span">most engaged Claude Cowork users</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0018" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-25</span>
+<span class="eh">Docusign adopts Google Workspace with Gemini to scale internal AI use</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google reported Docusign moved from Office365 to Google Workspace and became an early adopter of Gemini, achieving notable productivity impacts across the workforce.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">early adopter of Gemini</span>
+<span class="span">90% reduction in time spent on performance review preparation</span>
+<span class="span">1-4 hours per employee per week</span>
+<span class="span">80% of employees feel Gemini has a positive impact</span>
+<span class="span">move from Office365 to Google Workspace</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: AI‑native IAM features progress highlighted</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized continued progress on AI‑native IAM features including Agreement Desk, AI‑Assisted Review and Summaries, automated preparation, and 3rd‑party data verification.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Intelligent Agreement Management (IAM) and broader AI-native features</span>
+<span class="span">AI‑Assisted Review</span>
+<span class="span">AI‑Assisted Agreement Summaries</span>
+<span class="span">3rd‑party data verification</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: IAM ARR exceeds $350M run‑rate</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$350M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Docusign reported IAM ARR above $350M alongside record highs for operating margin and free cash flow, evidencing growing monetization of AI‑native agreement capabilities.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">IAM ARR exceeded $350M</span>
+<span class="span">record highs for operating margin and free cash flow</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: 200M consented agreements strengthen AI models and cost</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited 200 million consented agreements processed that improve AI model accuracy and materially lower processing cost, reinforcing Docusign’s data advantage for IAM.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">200 million consented agreements</span>
+<span class="span">improve model accuracy</span>
+<span class="span">materially lower processing cost</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: Integrations with leading chatbots Anthropic/OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Docusign positioned IAM as the agreement system of record and action, surfacing actions and data across core UI, major enterprise apps, and leading chatbots including Anthropic and OpenAI.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">leading chatbots (Anthropic/OpenAI)</span>
+<span class="span">surface actions/data</span>
+<span class="span">agreement system of record and action</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: IAM ARR mix targeted to ~18% exiting FY27</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management guided IAM’s share of ARR from 2.3% to 10.8% in FY26 and to approximately 18% by end‑FY27, with renewal timing as a key determinant.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">~18% by end‑FY27</span>
+<span class="span">progressing “pretty linear,” from 2.3% to 10.8%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: Enterprise IAM consumption‑credit model to launch</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Docusign detailed a subscription with consumption of service credits (generalizing envelopes) validated over six months of trials, with rollout beginning the following month and included in ARR expectations.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">consumption of service credits (a generalization of envelopes)</span>
+<span class="span">rollout begins “next month,”</span>
+<span class="span">included in ARR expectations</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: Aon Meridian highlighted as complex IAM deployment</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited Aon’s Meridian program as an iconic, complex IAM deployment and discussed sales motions to accelerate out‑of‑cycle enterprise discussions.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Aon’s Meridian program</span>
+<span class="span">iconic, complex IAM deployment</span>
+<span class="span">out‑of‑cycle discussions</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: Microsoft channel momentum via Azure commitments</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Docusign reported Microsoft is leaning in, with enterprise transactions through Azure commitments, and highlighted a BOQ onboarding workflow enabled by IAM and Microsoft integrations.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Microsoft is “leaning in,”</span>
+<span class="span">enterprise transactions through Azure commitments</span>
+<span class="span">end‑to‑end onboarding workflow</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: Early IAM cohorts show stronger retention</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Early IAM renewal cohorts showed gross and net dollar retention above company averages, albeit from small samples, indicating potential for durable adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Early IAM renewal cohorts</span>
+<span class="span">gross retention and dollar net retention above company averages</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: Risk that IAM adoption or competition could pressure ARR</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned that failure to drive IAM adoption or competitive responses could pressure ARR growth and retention.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">could pressure ARR growth and retention metrics</span>
+<span class="span">competitive responses</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: Consumption‑credit pricing expected to expand usage</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The enterprise IAM consumption‑credit pricing model is expected to facilitate usage expansion and simplify upsell, especially in complex deployments.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">expected to facilitate usage expansion and simplify upsell</span>
+<span class="span">complex multi‑workflow deployments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: Plan to accelerate enterprise IAM adoption pre‑renewal</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Docusign plans to push out‑of‑cycle enterprise IAM deals using tailored structures to accelerate adoption outside normal renewal cycles.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">push out‑of‑cycle enterprise IAM deals</span>
+<span class="span">tailored contract structures to accelerate adoption</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-17</span>
+<span class="eh">FY26 Q4: FY27 reinvestment prioritizes enterprise and AI</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said FY27 reinvestment is prioritized to enterprise and AI, legal‑tech roadmap, U.S. federal, and security, implying continued velocity in regulated and high‑value workflows.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">FY27 reinvestment prioritized to enterprise and AI</span>
+<span class="span">legal‑tech roadmap, U.S. federal, and security</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-02-24</span>
+<span class="eh">Docusign launches IAM integration for Anthropic Cowork via MCP (beta)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Docusign announced its IAM platform is available in Anthropic’s Cowork, enabling secure agreement creation, review, and management through natural language, built on MCP, with a global English beta at launch.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">available as part of Anthropic&#x27;s Cowork</span>
+<span class="span">natural language prompts in Cowork</span>
+<span class="span">Model Context Protocol (MCP)</span>
+<span class="span">available today in beta globally</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational LLM integrations via Azure OpenAI; early ChatGPT pathway</h2>
+<div class='range'>2023-05-23 → 2025-10-30</div>
+<div class='psum'>Docusign’s AI journey surfaced publicly in 2023 through Microsoft’s Build keynote and an ensuing earnings call, where the company highlighted Agreement Summarization powered by Microsoft’s Azure OpenAI Service. These steps established baseline product capabilities for extracting key datapoints and summarizing contracts, while reinforcing a deepening relationship with Microsoft and OpenAI technology via Azure.
+By late 2025, Docusign announced that its Intelligent Agreement Management (IAM) capabilities would be accessible directly in ChatGPT via the Model Context Protocol (MCP), signaling a strategic shift toward multi‑agent, natural‑language workflows executed in third‑party AI interfaces. This created a direct integration surface with OpenAI’s ecosystem, expanding distribution and potential usage while beginning to externalize IAM actions beyond Docusign’s native UI.</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-10-30</span>
+<span class="eh">Docusign announces IAM access in ChatGPT via MCP</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Docusign announced its IAM platform would be available in ChatGPT through the Model Context Protocol (MCP), enabling users to create and analyze contracts directly in ChatGPT. OpenAI’s CCO highlighted the partnership’s productivity benefits.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">available in ChatGPT through the Model Context Protocol (MCP)</span>
+<span class="span">create and analyze contracts directly in ChatGPT</span>
+<span class="span">Chief Commercial Officer at OpenAI</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-06-08</span>
+<span class="eh">Earnings call details Agreement Summarization via Azure OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">On its FY24 Q1 call, Docusign described a new limited availability Agreement Summarization feature enabled by Microsoft’s Azure OpenAI service and noted it was showcased in Microsoft’s Build keynote, underscoring the collaboration.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Agreement Summarization</span>
+<span class="span">integration with Microsoft’s Azure Open AI service</span>
+<span class="span">main keynote at Microsoft’s Build Conference</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-05-23</span>
+<span class="eh">Microsoft Build showcases Docusign’s Azure OpenAI use for contract summaries</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Microsoft’s Build keynote highlighted Docusign using Azure OpenAI Service to extract contract datapoints and produce AI‑generated summaries, demonstrating early generative AI integration into Docusign workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Azure OpenAI Service</span>
+<span class="span">DocuSign extracts key datapoints</span>
+<span class="span">AI generated summary of a contract</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0039'>E0039</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0039'>E0039</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0036'>E0036</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0038'>E0038</a>, <a class='evref' href='#E0039'>E0039</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0037'>E0037</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0037'>E0037</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of IAM usage and ARR is attributable to actions initiated via third‑party AI agents (ChatGPT, Claude Cowork, Gemini Enterprise) versus native Docusign UI?</li>
+<li>How quickly is MCP connector usage growing across providers, and what is the attach rate among enterprise cohorts?</li>
+<li>What is the revenue contribution and margin impact from partner‑sourced and marketplace‑driven transactions (e.g., Azure commitments)?</li>
+<li>How would a prolonged or adverse regulatory action against OpenAI affect Docusign’s ChatGPT/Codex integrations and customer usage patterns?</li>
+<li>What share of IAM workflows are executed with each provider (OpenAI, Anthropic, Google) and how is that mix trending?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some integration announcements are in beta or early availability; production scaling and monetization may lag initial launches.</li>
+<li>Third‑party articles and documentation (e.g., TechRadar, Google docs, Zapier) reflect capability availability but not Docusign‑reported revenue impact.</li>
+<li>Filings emphasize strategic direction and risks; certain qualitative claims (e.g., ‘meaningful’ uplift) are not quantified.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

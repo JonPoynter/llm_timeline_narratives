@@ -1,0 +1,769 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>PEGA US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Pegasystems Inc <span class='sub'>(PEGA US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.459</div>
+</header>
+<div class='stats'>
+<span class='chip'>5 phases</span>
+<span class='chip'>34 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 14</span>
+<span class='chip'>single source: 21</span>
+<span class='chip'>web-only (verified): 11</span>
+<span class='chip'>web-only (unverified): 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Operationalization: multi‑provider governance, AI agents, and 26Q1 performance</h2>
+<div class='range'>2026-03-30 → 2026-06-08</div>
+<div class='psum'>In early 2026, Pega formalized multi‑provider GenAI operations: support materials emphasized provider‑agnostic architecture (Azure OpenAI, AWS Bedrock, Google Vertex) and documented model‑specific nuances, including known Gemini extraction issues. Pega’s FAQ clarified data residency (Azure regions) and safety practices. Pega then announced MCP-based agent interoperability, allowing third-party agents (Claude, Gemini, OpenAI, AWS AgentCore) to discover and execute Pega workflows.
+Financially, 26Q1 showed strong Pega Cloud revenue growth (+36% y/y to $205M), ACV of $1.622B with cloud ACV +29% y/y (~56% mix), and RPO of ~$2.01B (+16% y/y). Management highlighted Blueprint AI momentum and pipeline skew to 2H, while flagging renewal seasonality, procurement-driven deal slips, sovereign-cloud related elongation, and back-end-loaded renewals as execution risks. Capital return exceeded 80% of FCF, including $167M of buybacks.</div>
+<div class="event t-web_only_verified" id="E0013" data-providers="anthropic_claude google_gemini_deepmind openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">Pega adds MCP support for third‑party AI agents (Claude, Gemini, OpenAI, AWS AgentCore)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">At PegaWorld 2026, Pega enabled MCP-based discovery and execution of Pega processes by authorized third-party AI agents, including agents built on Anthropic Claude, Google Gemini, and OpenAI, extending Pega workflows into agent ecosystems.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">open MCP (Model Context Protocol)</span>
+<span class="span">Anthropic Claude, Google Gemini, OpenAI</span>
+<span class="span">authorized third-party agents</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-01</span>
+<span class="eh">Pega GenAI architecture detailed: provider‑agnostic gateway (Azure, Bedrock, Vertex)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Pega Academy described GenAI as a secure, governed bridge with a layered, provider‑agnostic design, supporting Azure OpenAI, AWS Bedrock, Google Vertex, and others through centralized policy enforcement.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Pega GenAI™ acts as a secure and managed bridge</span>
+<span class="span">Azure OpenAI, AWS Bedrock, Google Vertex</span>
+<span class="span">layered design for flexibility, security, and abstraction</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0011" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-10</span>
+<span class="eh">Pega GenAI FAQ clarifies Pega Cloud prerequisites, Azure regions, and safety practices</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">The FAQ confirmed Pega GenAI availability for Pega Cloud clients or via PremBridge, with deployments tied to Microsoft Azure regions and security practices including OpenAI Safety Best Practices and Microsoft AI Red Team methodology.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">Pega GenAI™ — Frequently Asked Questions</span>
+<span class="span">Pega Cloud clients with active subscriptions</span>
+<span class="span">Microsoft Azure deployment regions</span>
+<span class="span">OpenAI Safety Best Practices</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1 2026: Pega Cloud revenue $205.03M (+36% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$205M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Pega reported Q1 Pega Cloud revenue of $205.03M, up 36% year over year, reflecting ongoing cloud mix shift and adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Disaggregation of revenue (Q1 y/y)</span>
+<span class="span">Pega Cloud $205.03M (+36%)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1 2026: ACV $1.622B; Cloud ACV +29% y/y (~56% mix)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.6B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Total ACV reached $1.622B with Pega Cloud ACV up 29% year over year and comprising approximately 56% of total ACV.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ACV: $1.622B</span>
+<span class="span">Pega Cloud ACV +29% y/y</span>
+<span class="span">~56% of total ACV</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1 2026: RPO/Backlog $2.01B (+16% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Remaining performance obligations as of March 31, 2026 were $2,010.74M, up 16% year over year, underpinning forward revenue visibility.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Backlog/RPO</span>
+<span class="span">$2,010.74M</span>
+<span class="span">as of 2026-03-31</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1 2026 cash generation: OCF $212M; FCF $207M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$207M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Pega delivered strong cash flow in Q1 with operating cash flow of $212.25M and free cash flow of $206.53M.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow: $212.25M</span>
+<span class="span">Free cash flow: $206.53M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">FY26 guide reiterated: revenue ~$2.0B; OCF ~$595M; FCF ~$575M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Pega maintained its FY26 outlook provided on Feb 10, 2026, including revenue of approximately $2.0B and strong cash flow targets.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Full-year 2026 (provided 2026-02-10</span>
+<span class="span">revenue ~$2.0B</span>
+<span class="span">operating cash flow ~$595M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Management: strong momentum from Blueprint AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted strong momentum from Blueprint AI alongside continued Pega Cloud adoption, reinforcing the GenAI-led design strategy.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">momentum from Blueprint AI</span>
+<span class="span">continued Pega Cloud adoption</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Pipeline linked to Blueprint; conversions skewing to 2H</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Pega noted that almost all new pipeline growth was connected to Blueprint usage, with conversion expected to skew to the second half as deals progress.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">almost all of our new pipeline growth</span>
+<span class="span">connected to the use of Blueprint</span>
+<span class="span">conversion expected to skew to 2H</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Pega frames itself as an LLM runtime/design‑time &#x27;harness&#x27;</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized disciplined LLM usage, positioning Pega as a runtime and design-time harness to apply LLMs to the right problems within governed workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">disciplined use of LLMs</span>
+<span class="span">LLMs do magical things</span>
+<span class="span">runtime and design-time ‘harness’</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Renewal seasonality: light Q2; heavier Q3–Q4</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management reiterated renewal cadence with Q2 not a major renewal quarter and a portfolio weighted to the back half (Q3–Q4).</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q2 is not a major renewal quarter</span>
+<span class="span">weighted to Q3–Q4</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">US government procurement changes delayed some Q1 deals</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Pega said a few deals and a renewal slipped out of Q1 due to evolving US government procurement processes, creating backlog but not lost deals; some confusion could persist into Q2.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">slipped out of Q1</span>
+<span class="span">procurement-process changes</span>
+<span class="span">GSA processes evolve</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Sovereign‑cloud requirements elongate sales cycles</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Pega noted that sovereign-cloud considerations (e.g., AWS) can elongate cycles, with Cloud Choice helping to navigate regional preferences.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">sovereign-cloud considerations</span>
+<span class="span">elongate cycles</span>
+<span class="span">Cloud Choice</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">GenAI commoditizes point features; pressure on low‑end tools</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management argued that GenAI commoditizes certain point features, pressuring low-end workflow tools, while Pega’s enterprise-scale orchestration remains advantaged.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">GenAI commoditizes</span>
+<span class="span">“point features,” pressuring low-end</span>
+<span class="span">enterprise-scale orchestration</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Rising LLM costs refocus buyers on ROI</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management suggested that rising LLM costs are shifting client focus from experimentation to ROI, aligning with Pega’s outcome-based model.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">rising LLM costs</span>
+<span class="span">shift focus from experimentation to ROI</span>
+<span class="span">outcome-based model</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1 2026 net ACV add roughly +$20M (cc), near plan</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$20M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Pega reported constant-currency net ACV growth of about $20M in Q1, only modestly below internal expectations.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q1 2026</span>
+<span class="span">net ACV growth of roughly $20 million</span>
+<span class="span">rounding error</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Returned &gt;80% of Q1 FCF to shareholders</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Pega returned more than 80% of free cash flow to shareholders in Q1 via buybacks and dividends.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">&gt;80% of FCF</span>
+<span class="span">buybacks and dividend in Q1</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Q1 2026 buybacks: ~$167M (~3.5M shares)</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$167M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Pega repurchased approximately 3.5 million shares for $167M in Q1 and paid about $5M in dividends, with plans for opportunistic repurchases.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">repurchased ~3.5M shares</span>
+<span class="span">for $167M in Q1</span>
+<span class="span">opportunistic buybacks</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Long‑term aim: Pega Cloud ACV to ~75%+ of total</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Pega reiterated its long-term intent for Pega Cloud ACV to exceed 75% of total ACV over time as the mix shift continues.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">reach ~75%+ of total ACV</span>
+<span class="span">long-term intent</span>
+<span class="span">cloud mix rises</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Macro/government and EMEA delays extend cycles</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cited slower decisions and delays in government and parts of EMEA, extending sales cycles and deferring ACV and revenue conversion.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">slower decision cycles</span>
+<span class="span">delays in government</span>
+<span class="span">parts of EMEA</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Back‑end‑loaded renewals create execution risk</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Pega warned that a back-end-loaded renewal portfolio and heavier term-license recognition in 2H can create quarter-to-quarter volatility and execution risk if deals slip.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">back‑end‑loaded renewal portfolio</span>
+<span class="span">execution risk if deals slip</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Cloud mix shift pressures near‑term reported revenue</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management noted that the shift to Pega Cloud ACV and revenue depresses term and maintenance in the near term, weighing on reported growth despite healthier cloud KPIs.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">depresses term and maintenance revenue</span>
+<span class="span">weigh on reported growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Pega Cloud revenue beat external estimate in Q1 2026</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$205M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Pega highlighted that Q1 Pega Cloud revenue of $205.03M exceeded a three-analyst average estimate on Yahoo Finance.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Pega Cloud revenue of $205.03M</span>
+<span class="span">exceeded a three-analyst average estimate</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0010" data-providers="openai_chatgpt anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-30</span>
+<span class="eh">Support guidance on LLM choices; notes known Gemini doc extraction issues</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Pega Support outlined available LLMs (Azure OpenAI GPT‑4, Bedrock Claude, Vertex Gemini) and documented known issues such as Gemini models sometimes extracting random docx content, guiding model selection and configurations.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Azure OpenAI – GPT‑4 / GPT‑4‑class</span>
+<span class="span">Google Vertex AI – Gemini</span>
+<span class="span">known issues where Gemini models extract random content</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AWS collaboration and ecosystem accelerators</h2>
+<div class='range'>2025-01-15 → 2025-07-14</div>
+<div class='psum'>Pega Platform &#x27;24.1 expanded services based on Azure OpenAI, increasing out‑of‑the‑box GenAI features. Third‑party accelerators like the Stateless ChatGPT Enabler emerged to integrate Azure ChatGPT with Pega. Pega then signed a five‑year strategic collaboration agreement with AWS, integrating Amazon Bedrock as the primary GenAI foundation while enabling access to models from Anthropic, Amazon, Cohere, and Meta.</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="anthropic_claude meta_llama">
+<div class="ev-top">
+<span class="date">2025-07-14</span>
+<span class="eh">Five‑year AWS strategic collaboration; Amazon Bedrock as primary GenAI foundation</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Pega signed a five‑year SCA with AWS, integrating Amazon Bedrock as the primary GenAI foundation powering Pega Blueprint and Pega Platform, enabling access to models from Anthropic, Amazon, Cohere, Meta, and more.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">five-year strategic collaboration agreement (SCA)</span>
+<span class="span">integrate Amazon Bedrock</span>
+<span class="span">primary generative AI foundation</span>
+<span class="span">Anthropic, Amazon, Cohere, Meta and more</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-04-12</span>
+<span class="eh">Marketplace accelerator: Stateless ChatGPT Enabler integrates Azure ChatGPT with Pega</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">A Pega Marketplace accelerator demonstrated integration of Azure ChatGPT with Pega, enabling quick-start AI use cases without custom LLM training, targeted at clients not yet on Pega SaaS.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">Stateless ChatGPT Enabler</span>
+<span class="span">integrates Pega with Azure Chat GPT</span>
+<span class="span">out of box generic Chat GPT</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-01-15</span>
+<span class="eh">Pega Platform &#x27;24.1 expands out‑of‑the‑box features based on Azure OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Pega Academy detailed that Platform &#x27;24.1 broadened services leveraging Microsoft Azure OpenAI Service, unlocking new out‑of‑the‑box Pega GenAI functionalities subject to configuration.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Pega Platform™ &#x27;24.1</span>
+<span class="span">based on Microsoft Azure OpenAI Service</span>
+<span class="span">out-of-the-box Pega GenAI™ functionalities</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Blueprint launch and multi‑model GenAI expansion</h2>
+<div class='range'>2024-02-12 → 2024-10-29</div>
+<div class='psum'>Pega introduced Pega GenAI Blueprint, powered by Azure OpenAI, to accelerate enterprise workflow app design. By mid‑2024, Pega expanded GenAI connectivity to include AWS (Amazon Bedrock/Titan) and Google (Vertex AI/Gemini) as well as Anthropic Claude, reinforcing a multi‑model strategy. By October 2024, Pega Infinity 24.2 made this broader LLM flexibility generally available beyond the initial OpenAI integrations.</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-10-29</span>
+<span class="eh">Pega Infinity 24.2 GA with expanded LLM flexibility beyond OpenAI (Bedrock, Vertex AI)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Pega announced general availability of Infinity 24.2, extending LLM choice beyond OpenAI to include AWS Bedrock and Google Vertex AI, aimed at boosting productivity and customer experience.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Pega Infinity™  24.2</span>
+<span class="span">flexibility beyond OpenAI</span>
+<span class="span">support Amazon Bedrock</span>
+<span class="span">Vertex AI from Google Cloud</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-06-10</span>
+<span class="eh">Pega expands GenAI framework to AWS (Bedrock/Titan) and Google (Vertex/Gemini), adds Anthropic Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">At PegaWorld, Pega announced expanded GenAI connectivity to AWS and Google services, including Amazon Bedrock/Titan, Google Vertex AI and Gemini, and Anthropic Claude—broadening enterprise LLM choice within Pega solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3], web_search_findings[9]</div>
+<span class="span">expand its Pega GenAI™ capabilities</span>
+<span class="span">Amazon Bedrock</span>
+<span class="span">Google Gemini</span>
+<span class="span">Claude from Anthropic</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-02-12</span>
+<span class="eh">Pega GenAI Blueprint launched, powered by Azure OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Pega introduced GenAI Blueprint to accelerate app design, leveraging Azure OpenAI alongside Pega’s best practices to generate workflow blueprints from high-level descriptions.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Pega GenAI Blueprint™</span>
+<span class="span">Powered by Azure OpenAI</span>
+<span class="span">CAMBRIDGE, Mass – February 12, 2024</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>GenAI foundation and Google Cloud distribution</h2>
+<div class='range'>2023-05-23 → 2023-06-13</div>
+<div class='psum'>Pega introduced Pega GenAI in 2023 with connectors to OpenAI and Azure OpenAI, embedding generative AI boosters across Pega Infinity &#x27;23. Soon after, Pega Cloud became available as a fully managed offering on Google Cloud and listed in Google Cloud Marketplace, expanding distribution and data integration options.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-06-13</span>
+<span class="eh">Pega Cloud available on Google Cloud and in Google Marketplace</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Pega announced Pega Cloud on Google Cloud as a fully managed service and availability via Google Marketplace, enabling procurement against existing Google Cloud commitments and deeper data integrations.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Pega Cloud™ solutions on Google Cloud</span>
+<span class="span">Pega Cloud is now available in Google Marketplace</span>
+<span class="span">apply their investment towards their Google Cloud commitment</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-05-23</span>
+<span class="eh">Pega GenAI announced with initial connectors to OpenAI and Azure OpenAI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Pega unveiled Pega GenAI with 20 generative AI boosters across Infinity &#x27;23 and initial connectors to OpenAI’s API and Microsoft Azure’s OpenAI APIs, enabling use cases like auto-generating workflows from prompts.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Pega GenAI™</span>
+<span class="span">models like those from OpenAI</span>
+<span class="span">connectors to OpenAI’s API</span>
+<span class="span">Microsoft Azure’s OpenAI APIs</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Pre‑GenAI connectors and open AI approach</h2>
+<div class='range'>2019-06-04 → 2019-06-04</div>
+<div class='psum'>Pega signaled an open, provider-agnostic AI stance early by introducing Real-Time AI Connectors to plug external AI engines into its platform. The initial focus integrated Google Cloud&#x27;s ML Engine and Amazon SageMaker, establishing patterns for API-level extensibility that later carried over to generative AI.
+This groundwork set expectations that Pega would embrace third-party model ecosystems rather than building monolithic AI stacks, foreshadowing its multi-model GenAI strategy.</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2019-06-04</span>
+<span class="eh">Pega launches Real‑Time AI Connectors (Google Cloud ML, Amazon SageMaker)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">At PegaWorld 2019, Pega released Real-Time AI Connectors to plug external AI into Pega AI, including Google Cloud Machine Learning Engine and Amazon SageMaker. This established an open integration pattern that later extended to LLMs.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Real-Time AI Connectors</span>
+<span class="span">Google Cloud Machine Learning Engine</span>
+<span class="span">Amazon SageMaker</span>
+<span class="span">scheduled for availability by the end of Q3 2019</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0034'>E0034</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0011'>E0011</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of Blueprint AI usage is powered by each LLM provider (OpenAI via Azure, Anthropic via Bedrock, Google Vertex/Gemini) and how is usage metered/billed to clients?</li>
+<li>Does the five-year AWS SCA include any minimum spend, co-selling targets, or incentives that could affect model/provider selection inside Pega GenAI?</li>
+<li>How often do model-specific issues (for example, Gemini document extraction anomalies) materially impact deployment timelines or customer satisfaction metrics?</li>
+<li>What is the revenue contribution and growth trajectory from Google Cloud Marketplace distribution for Pega Cloud?</li>
+<li>To what extent does Pega pass through third-party LLM costs versus bundling them inside Pega Cloud subscription pricing?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several 26Q1 outlook elements were noted as provided on 2026-02-10 and not updated with Q1; subsequent changes may not be reflected.</li>
+<li>Provider integrations cited in support and academy documents reflect product capabilities and guidance at publication; customers’ actual enablement can vary by configuration and region.</li>
+<li>The 2019 Real-Time AI Connectors were classic ML integrations and predate today’s LLM landscape; their relevance is architectural rather than direct LLM dependency.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

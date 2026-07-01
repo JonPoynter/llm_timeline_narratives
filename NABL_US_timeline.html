@@ -1,0 +1,501 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>NABL US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>N-able Inc/US <span class='sub'>(NABL US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.424</div>
+</header>
+<div class='stats'>
+<span class='chip'>5 phases</span>
+<span class='chip'>18 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 4</span>
+<span class='chip'>web 8</span>
+<span class='chip'>single source: 10</span>
+<span class='chip'>web-only (verified): 6</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Frontier provider developments (Q2 2026) impacting platform context</h2>
+<div class='range'>2026-05-18 → 2026-06-22</div>
+<div class='psum'>Several external developments by major AI providers shaped the broader operating context for N-able’s multi-model strategy. OpenAI and Dell partnered to bring Codex into hybrid and on-prem contexts, aligning with enterprise deployment patterns.
+Meanwhile, Meta’s AI ecosystem faced both expansion—through leasing capacity at a 168 MW AI-enabled data center—and security challenges tied to AI chatbot-driven account takeovers. Anthropic adjusted its privacy policy to enable targeted age/ID verification using Persona, an indicator of evolving compliance requirements MSPs may encounter.</div>
+<div class="event t-single_source" id="E0018" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-22</span>
+<span class="eh">Anthropic to enable targeted age/ID verification via Persona</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Anthropic updated its privacy policy to allow age or identity checks for certain flagged accounts using Persona, reflecting an evolving compliance posture that may affect enterprise AI governance expectations.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[0]</div>
+<span class="span">updates privacy policy</span>
+<span class="span">age or identity checks</span>
+<span class="span">using Persona for verification</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">Meta to lease capacity at Reliance-built 168 MW AI data center</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$168 · other</span> <span class="badge">neutral</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta announced an agreement to lease capacity at Reliance’s planned 168 MW AI-enabled data center in Jamnagar, India, indicating continuing expansion of provider-side infrastructure.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[1]</div>
+<span class="span">lease capacity</span>
+<span class="span">168 MW</span>
+<span class="span">AI-enabled data center</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Meta AI support chatbot exploited in Instagram account takeovers</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Instagram notified users targeted in account takeovers enabled by Meta’s AI support chatbot, highlighting a security incident that underscores risks tied to AI-driven support automation.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">frontier_events[2]</div>
+<span class="span">support chatbot exploited</span>
+<span class="span">Instagram account takeovers</span>
+<span class="span">security incident</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-18</span>
+<span class="eh">OpenAI and Dell to integrate Codex for hybrid/on-prem enterprise</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI and Dell announced plans to integrate Codex with Dell’s AI Data Platform and explore connectivity to Dell AI Factory, enabling secure hybrid and on-prem deployments that are relevant to MSP/enterprise environments.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">frontier_events[3]</div>
+<span class="span">OpenAI, Dell partner</span>
+<span class="span">integrate Codex</span>
+<span class="span">hybrid and on‑premises</span>
+<span class="span">Dell’s AI Data Platform</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Telemetry and governance: Shadow AI and endpoint AI visibility</h2>
+<div class='range'>2026-06-01 → 2026-06-11</div>
+<div class='psum'>Following its platform shift, N-able delivered capabilities to inventory and govern AI usage. Shadow AI Visibility (via Adlumin) surfaces which AI tools are being used across environments, leveraging DNS telemetry to track interactions with services like ChatGPT, Copilot, Gemini, and Claude—including calls to provider APIs.
+N-central and N-sight added AI Services visibility within Assets View, classifying installed AI tools and exposing signals via GraphQL API, MCP Server, and N-zo. N-able’s security blog contextualized rising risks in developer ecosystems, noting threats targeting AI coding toolchains (e.g., Claude Code, Gemini CLI).</div>
+<div class="event t-web_only_verified" id="E0014" data-providers="anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-11</span>
+<span class="eh">Security advisory: threats targeting AI coding tools</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">A company blog post warned about credential-stealing malware and risks in developer ecosystems, citing AI coding tools like Claude Code and Gemini CLI among those potentially affected, and advised clients on response steps.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Three separate Microsoft security stories</span>
+<span class="span">Claude Code, Gemini CLI, Cursor, and VS Code</span>
+<span class="span">credential collectors</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0013" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-05</span>
+<span class="eh">Assets View: endpoint inventory adds AI Services classification</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">N-central and N-sight now detect and classify AI tools as a distinct category and expose signals via GraphQL API, MCP Server, and N-zo. This supports immediate action via existing queries, automations, and AI-driven workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">AI Services visibility in Assets View</span>
+<span class="span">identify every AI tool installed</span>
+<span class="span">AI is treated as its own detection category</span>
+<span class="span">GraphQL API, MCP Server, and N-zo</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="openai_chatgpt google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-01</span>
+<span class="eh">Shadow AI Visibility: DNS-based detection of AI tool usage</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">N-able introduced Shadow AI Visibility to detect unauthorized AI tool usage across environments, highlighting adoption of ChatGPT, Copilot, Gemini, and Claude and the related governance risks. The feature leverages existing DNS disruption detection and notes calls to the Anthropic API.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Shadow AI Visibility</span>
+<span class="span">ChatGPT, Copilot, Gemini, Claude</span>
+<span class="span">Every AI tool interaction begins with a DNS query</span>
+<span class="span">Anthropic API</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Q1’26 earnings: AI strategy, monetization stance, and risks</h2>
+<div class='range'>2026-05-07 → 2026-05-07</div>
+<div class='psum'>On Q1 2026 results, management reiterated the MCP and N-zo launches and highlighted intended outcomes such as faster incident resolution. They communicated a deliberate choice not to monetize N-zo initially, aiming first to improve customer experience and gross retention (GRR) before exploring monetization paths.
+Commentary acknowledged heightened urgency from AI/agentic threats, yet with limited near-term pipeline conversion visibility. Leadership adopted a &quot;fight fire with fire&quot; posture, positioning for the agentic era while noting execution risks from early-stage AI features and timing hedges around previews and later-half launches. The roadmap emphasized efficiency and resilience outcomes across Data Protection and MDR.</div>
+<div class="event t-corroborated" id="E0005" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Q1’26: Reiterates MCP and N-zo; cites up to 70% faster operations</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$70 · other</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">N-able’s Q1’26 results release reiterated the MCP server introduction and N-zo launch, claiming material operational gains. The filing highlights align with the press release positioning around embedded AI guidance and real-time actions.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4], filings[0]</div>
+<span class="span">introduced its custom Model Context Protocol (MCP) server</span>
+<span class="span">launched N-zo</span>
+<span class="span">up to 70% faster IT operations across certain tasks</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">N-zo initially not monetized; focus on GRR and efficiency</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management stated that N-zo would not be directly monetized in the initial phase, targeting customer experience and GRR improvements first, with monetization options to follow later.</p>
+<div class="ev-ch">channels: <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">will not be directly monetized</span>
+<span class="span">intended to improve customer experience and GRR</span>
+<span class="span">monetization avenues to follow</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">AI/agentic threats increase urgency; not yet visible in pipeline</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management noted increased urgency around patching and vulnerability management due to AI/agentic threats but said this is not yet specifically visible in pipeline conversion metrics.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">making patching and vulnerability management &quot;more top of mind&quot;</span>
+<span class="span">not yet specifically visible in pipeline conversion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">CEO: must &quot;fight fire with fire&quot; using AI-infused capabilities</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The CEO emphasized deploying AI-infused capabilities to counter AI-driven threats and competitive dynamics, reinforcing N-able’s strategic direction toward embedded AI.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">fight fire with fire</span>
+<span class="span">AI‑infused capabilities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Positioning for the agentic era; hedging on timing</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management framed N-able as well positioned for the agentic era while using hedging language about timing, citing limited previews and back-half launches.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">really well positioned in this agentic era</span>
+<span class="span">limited previews, back‑half launches</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Risk: early-stage AI features may face adoption/integration delays</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">The company cautioned that N-zo and MCP integrations are early-stage and that delays in adoption or integration complexity could limit cross-sell/upsell benefits and margin leverage.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">early‑stage features</span>
+<span class="span">delays in adoption or integration complexity</span>
+<span class="span">could limit cross‑sell/upsell benefits</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">AI-infused roadmap: DRaaS, Google backup, pricing uplift trimmed</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management guided to back-half-weighted ARR tied to DRaaS and Google backup launches, with a trimmed 2026 pricing/packaging uplift of about 1 point and continued MDR cross-sell to support NRR.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI‑infused roadmap</span>
+<span class="span">Back‑half‑weighted net new ARR</span>
+<span class="span">Google backup launches</span>
+<span class="span">trimmed to about 1 point</span>
+<span class="span">MDR cross‑sell</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI-native platform shift: MCP server and N-zo assistant</h2>
+<div class='range'>2026-04-13 → 2026-04-28</div>
+<div class='psum'>In April 2026, N-able advanced from point integrations to an AI-native platform stance. The company launched a custom Model Context Protocol (MCP) server to securely connect external AI tools to live UEM data and introduced N-zo, an in-product AI assistant embedded in N-central and N-sight. Public Preview and subsequent N-central release documentation highlighted multi-model flexibility (Claude, ChatGPT, Copilot) and governance controls.
+This phase signaled a strategic move away from rigid API ties and platform lock-in toward a connective layer enabling real-time queries and actions across systems. By exposing AI capabilities via MCP and product UI, N-able aimed to standardize how MSPs orchestrate AI across their operations, including on-prem environments.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">N-central 2026.2 GA includes N-zo (Preview) and MCP server option</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">N-able’s N-central 2026.2 became Generally Available, with N-zo available in Preview and MCP servers enabling external AI tools—such as Copilot, Claude, or ChatGPT—to interact securely with live N-central data. This reinforced the multi-model approach and admin controls.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Announcing the GA of N-central 2026.2</span>
+<span class="span">N‑zo: Embedded AI Assistant with AI Management (Preview)</span>
+<span class="span">MCP (Model Context Protocol) Servers</span>
+<span class="span">Copilot, Claude, or ChatGPT</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-04-14</span>
+<span class="eh">Public Preview: N-zo and MCP server across N-central and N-sight</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">N-able opened Public Preview for N-zo and the MCP server, enabling embedded guidance and external AI connectivity using live data. The MCP adheres to an open standard and is available to all N-central and N-sight customers, including on-prem, with emphasis on low-friction adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Public Preview of N-zo</span>
+<span class="span">built directly into N-central and N-sight</span>
+<span class="span">MCP (Model Context Protocol) is an open standard</span>
+<span class="span">No custom code. No stale snapshots.</span>
+<span class="span">available in Public Preview now</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0002" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-04-13</span>
+<span class="eh">N-able launches MCP server and unveils N-zo AI assistant</span>
+<span class="badge">product_integration</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">At Empower, N-able introduced its custom MCP server to connect external AI tools directly to live UEM data and launched N-zo, an embedded AI assistant. The announcement emphasized flexibility across third-party AI platforms (e.g., Claude, ChatGPT) and movement from AI insights to day-to-day operations. The earnings release corroborated these launches.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1], filings[0]</div>
+<span class="span">custom Model Context Protocol (MCP) server</span>
+<span class="span">N‑zo, an in-product AI assistant</span>
+<span class="span">Claude, ChatGPT, or Copilot</span>
+<span class="span">securely connecting every day AI tools directly to live data</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early AI enablement in RMM</h2>
+<div class='range'>2023-10-31 → 2023-12-31</div>
+<div class='psum'>N-able&#x27;s first material AI integration surfaced in late 2023, embedded directly into its RMM product line via AI Assisted Scripting tied to ChatGPT. This step required customers to bring their own ChatGPT account/token, signaling an initial, lightweight integration approach that leveraged a leading LLM without deep commercial coupling.
+The feature positioned N-able to accelerate technician workflows with generative script creation, while also beginning to establish governance considerations around third-party AI tokens and credentials within managed environments.</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-10-31</span>
+<span class="eh">N-central 2023.8 GA adds AI Assisted Scripting via ChatGPT token</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">N-able announced General Availability of N-central 2023.8 with AI Assisted Scripting that leverages ChatGPT to generate scripts, requiring users to provide a ChatGPT account/token. This marked N-able’s first in-product generative AI workflow for RMM users.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">AI Assisted Scripting</span>
+<span class="span">leverage ChatGPT’s artificial intelligence</span>
+<span class="span">You will also need an account with ChatGPT</span>
+<span class="span">provide a user token</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What is the timeline and structure for N-zo monetization once initial GRR/efficiency targets are met?</li>
+<li>What portion of N-able customers are actively using MCP with external AI tools (Claude, ChatGPT, Copilot), and how does usage split by provider?</li>
+<li>How are Shadow AI Visibility and AI Services inventory features impacting security outcomes (e.g., incident reduction, policy enforcement) and NRR?</li>
+<li>To what extent will on-prem deployments of MCP/N-zo drive incremental ARR versus cannibalize existing modules?</li>
+<li>Are there any formal commercial agreements or SLAs between N-able and frontier model providers beyond standards-based MCP connectivity?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several sources are N-able-owned release notes, status pages, and press materials; independent third-party validation is limited.</li>
+<li>No disclosed dollar-value contracts, RPO/backlog, or quantified ARR contribution specifically tied to AI features; operational metrics (e.g., 70% faster) are directional claims.</li>
+<li>Provider references (Claude, ChatGPT, Copilot, Gemini) indicate interoperability rather than formal partnerships; absence of contractual details limits dependency assessment.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Broadcom Inc <span class='sub'>(AVGO US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.52</div>
@@ -73,65 +83,686 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (verified): 5</span>
 <span class='chip'>web-only (unverified): 1</span>
 </div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
-<h2>Foundation of hyperscaler AI silicon relationships and early competitive signals</h2>
-<div class='range'>2023-09-21 → 2024-12-31</div>
-<div class='psum'>Broadcom’s modern AI cycle footing solidified with Google publicly signaling no change to its Broadcom TPU relationship in late 2023 despite media speculation. In 2024, OpenAI’s intent to build its first in‑house AI chip with Broadcom and TSMC surfaced, laying groundwork for a deeper collaboration. 
-Concurrently, competitive Ethernet dynamics intensified as NVIDIA announced Spectrum‑X powering xAI’s Colossus supercomputer, underscoring that standards‑based Ethernet fabrics will be a battleground for hyperscale AI networking in which Broadcom and NVIDIA compete.</div>
-<div class="event t-web_only_verified" id="E0001">
+<h2>FY26 Q2 ramp, Meta extension, Apollo XPV financing, and OpenAI Jalapeño reveal</h2>
+<div class='range'>2026-04-14 → 2026-06-27</div>
+<div class='psum'>Broadcom extended and deepened hyperscaler programs in Q2 FY26. A multi‑year, multi‑generation Meta partnership to support MTIA through 2029 launched with an initial commitment exceeding 1GW (frontier reporting framed a $35B scope), and Broadcom disclosed massive AI bookings and multi‑year visibility. Apollo and partners announced a $35B capital solution for Broadcom’s new AI XPV platform, with the first 1GW tranche enabling Anthropic’s buildout and plans toward &gt;20GW by 2028.
+Quarterly results showed AI semi revenue of $10.8B (+143% y/y), Q3 AI semi guide of ~$16B, bookings &gt;$30B with visibility to 2028, and reiteration of $100B+ AI semi revenue in FY27. Risks remained: hyperscaler concentration, supply/power constraints, and consolidated gross margin pressure from AI ASIC mix. Late in the quarter, OpenAI and Broadcom unveiled the Jalapeño inference accelerator, delivering lab‑running samples nine months from design to production.</div>
+<div class="event t-corroborated" id="E0045" data-providers="openai_chatgpt">
 <div class="ev-top">
-<span class="date">2023-09-21</span>
-<span class="eh">Google says it expects no change in Broadcom TPU relationship after report</span>
-<span class="badge">risk</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Reuters reported Google does not see any change in its relationship with Broadcom following a report it considered dropping Broadcom as an AI chip supplier by 2027, mitigating an immediate displacement risk while acknowledging prior diversification discussions.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[4]</div>
-<span class="span">does not see any change in its relationship</span>
-<span class="span">as early as 2027</span>
-<span class="span">Broadcom</span>
-<span class="span">tensor processing units</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0002">
-<div class="ev-top">
-<span class="date">2024-10-28</span>
-<span class="eh">NVIDIA unveils Spectrum‑X Ethernet powering xAI’s Colossus (competitive pressure on Broadcom Ethernet)</span>
-<span class="badge">competitive_threat</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">xai_grok</span></div>
-<p class="narr">NVIDIA announced that xAI’s 100,000‑GPU Colossus supercomputer uses NVIDIA’s Spectrum‑X Ethernet platform, highlighting Ethernet competition versus Broadcom’s Tomahawk leadership and indicating hyperscalers may adopt NVIDIA end‑to‑end networking stacks.</p>
-<p class="cav">⚠ Competitive implication for Broadcom inferred from NVIDIA Ethernet design‑win; no direct Broadcom data center displacement quantified.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[8]</div>
-<span class="span">xAI’s Colossus supercomputer</span>
-<span class="span">100,000 NVIDIA Hopper</span>
-<span class="span">Spectrum-X</span>
-<span class="span">Spectrum SN5600 Ethernet switch</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2024-10-29</span>
-<span class="eh">Reuters: OpenAI building first in‑house chip with Broadcom and TSMC (inference focus)</span>
+<span class="date">2026-06-24</span>
+<span class="eh">OpenAI and Broadcom unveil Jalapeño, OpenAI’s first custom inference chip</span>
 <span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
+<span class="badge b-corroborated">corroborated</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">Reuters reported OpenAI has been working with Broadcom to build its first in‑house inference chip, with TSMC manufacturing targeted for 2026, and has scaled back foundry ambitions. This prefigured the 2026 Jalapeño reveal.</p>
-<p class="cav">⚠ Pre‑announcement reporting; specifications and volumes were not disclosed.</p>
+<p class="narr">OpenAI and Broadcom introduced Jalapeño, OpenAI’s first Intelligence Processor for LLM inference, with engineering samples running ML workloads at production targets after nine months from design to production; initial deployment targeted by end‑2026 and ramping through 2027.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · OAI <b>5</b></span> <span class="chchip">product_integration_exposure · OAI <b>5</b></span> <span class="chchip">customer_experience_enhancement · OAI <b>3</b></span> <span class="chchip">provider_as_platform_absorber · OAI <b>2</b></span> <span class="chchip">provider_specificity · OAI <b>4</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b></span></div>
 <details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">working with Broadcom</span>
-<span class="span">first in-house chip</span>
-<span class="span">make its first custom-designed chip in 2026</span>
-<span class="span">scales back foundry ambition</span>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[0], frontier_events[0], web_search_findings[0]</div>
+<span class="span">Jalapeño</span>
+<span class="span">first Intelligence Processor</span>
+<span class="span">Developed from design to production in nine months</span>
+<span class="span">initial deployment targeted by end‑2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0044" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-17</span>
+<span class="eh">Ars: Tesco moving 40,000 VMware workloads off platform amid pricing dispute</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$24M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">UK court filings cited by Ars Technica say Tesco is migrating 40,000 VMware workloads off the platform after Broadcom allegedly ended support for perpetual licenses and proposed $23.5M for a year of VCF 9.0 plus mainframe software/support, a 175% increase Tesco disputes.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">user_lock_in_relevance</span></div>
+<p class="cav">⚠ Broadcom denies the pricing is unfair and disputes damages; litigation ongoing.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">moving 40,000 server workloads off VMware</span>
+<span class="span">175% price hike</span>
+<span class="span">$23.5 million for a year of VMware Cloud Foundation 9.0</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0043" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-15</span>
+<span class="eh">Tensordyne expects &gt;$200M in orders for new inference system developed with Broadcom</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$200M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Reuters reported Tensordyne expects more than $200M in orders for its Napier inference system developed with Broadcom and Juniper, manufactured by TSMC, with multiple LOIs and interest from AI infrastructure providers.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<p class="cav">⚠ Figure represents management expectation; order conversion and timing may vary.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">expects more than $200 million in orders</span>
+<span class="span">developed with Broadcom</span>
+<span class="span">manufactured by TSMC</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0042" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-09</span>
+<span class="eh">Apollo and partners lead $35B financing for Anthropic via Broadcom’s AI XPV platform</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$35.0B · loan</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Apollo announced an initial $35B capital solution, with Blackstone and banks, tied to Broadcom’s AI XPV Platform to accelerate Anthropic’s compute buildout toward more than 20GW by 2028; the first tranche enables &gt;1GW from mid‑2026.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure · ANT <b>4</b></span> <span class="chchip">strategic_option_value · ANT <b>4</b></span></div>
+<p class="cav">⚠ Structure and pricing of the XPV financing were not detailed in the summary.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">initial $35 billion capital solution</span>
+<span class="span">more than 20 gigawatts of AI capacity by 2028</span>
+<span class="span">first tranche facilitating Anthropic’s previously announced expansion of more than 1 gigawatt</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0041" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-04</span>
+<span class="eh">CNBC: Shares plunge ~15% after Q2 revenue miss and no upgrade to $100B FY27 target</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">CNBC reported Broadcom shares fell about 15% after Q2 revenue of $22.19B narrowly missed and management kept the FY27 AI semi target at &gt;$100B, pressuring elevated expectations.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[4]</div>
+<span class="span">plunges about 15%</span>
+<span class="span">revenue of $22.19B</span>
+<span class="span">unchanged $100B 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Q2 FY26: AI semiconductor revenue $10.8B (+143% y/y)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10.8B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Broadcom reported Q2 AI semiconductor revenue of $10.8B, up 143% year‑over‑year, reflecting rapid hyperscale AI accelerator and networking demand.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI semiconductor revenue (company KPI): $10.8B in Q2 (+143% y/y).</span>
+<span class="span">$10.8B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Q3 FY26 guide: AI semis ~$16.0B (&gt;200% y/y)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$16.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management guided Q3 AI semiconductor revenue to approximately $16.0B (&gt;200% y/y), with consolidated semiconductor revenue of ~$20.5B.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI semis ~$16.0B, &gt;200% y/y</span>
+<span class="span">semiconductor revenue ~ $20.5B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">AI semiconductor bookings over $30B in the quarter; visibility to 2028</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$30.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management cited over $30B of AI semiconductor bookings in Q2, nearly 3x quarterly AI shipments, and order visibility extending to 2028.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">bookings of over $30B</span>
+<span class="span">order visibility extending to 2028</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Reiterated: 2027 AI chip revenue in excess of $100B</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100.0B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management restated that 2027 AI semiconductor revenue is in excess of $100B, with strong bookings and multi‑year visibility.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">2027 AI chip revenue is “in excess of $100 billion,”</span>
+<span class="span">visibility runs all the way to 2028.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Visibility “runs all the way to 2028”</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized multi‑year program visibility, stating visibility runs all the way to 2028.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">visibility runs all the way to 2028.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">2027 XPU shipments around 10GW; 2028 expected to be “a lot more”</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Broadcom said 2027 XPU shipments are around 10GW and back‑half‑weighted, with 2028 expected to be a lot more.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">XPU shipments in 2027 are around 10 gigawatts</span>
+<span class="span">with 2028 “a lot more.”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Google LTA characterized as a “very substantial” dollar commitment</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Management described Google’s long‑term agreement as a very substantial dollar commitment, secured by multi‑generation product/IP roadmaps.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · GEM <b>5</b></span> <span class="chchip">contractual_commitment_strength · GEM <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">a “very substantial” dollar commitment</span>
+<span class="span">multi‑generation product/IP roadmaps</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">AI networking mix likely maxed at ~40%, trending toward ~30%</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Broadcom said AI networking’s share likely peaked around 40%, guiding toward ~30% over time as custom XPUs ramp.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">40% “as high as” networking’s share</span>
+<span class="span">guided toward ~30% over time</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Supply secured for 2026–2027; ability to add more “by and large”</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said supply is secured for 2026–2027 and they are working on 2028–2029, with the ability to obtain incremental supply by and large.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Supply secured 2026–2027</span>
+<span class="span">“by and large, yes”</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0033" data-providers="anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Anthropic arrangement clarified: Broadcom provides TPU‑based compute capacity</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Management clarified Broadcom provides TPU‑based compute capacity to Anthropic, not a backstopped financing arrangement, aligning with the expanded TPU access framework.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · ANT <b>3</b> GEM <b>3</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[3]</div>
+<span class="span">provides TPU‑based compute capacity to Anthropic</span>
+<span class="span">it was not a backstopped financing arrangement</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Strategy: “only chips,” no rack‑scale systems</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Broadcom emphasized it will not pursue rack‑scale systems, reiterating a strategy focused on chips.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">“only chips,”</span>
+<span class="span">will not pursue rack‑scale systems</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0035" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">VMware uplift from CPU+GPU deployments; acceleration expected</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said VMware benefits from high‑core‑count CPU plus GPU deployments, with expected acceleration in Q3 and the next multiple quarters.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">VMware is benefiting from high‑core‑count CPU plus GPU</span>
+<span class="span">accelerate in Q3 and for “the next multiple quarters.”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0036" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Demand still concentrated among a few frontier model developers</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management noted most compute demand originates from a few frontier model developers serving consumers and enterprises via the cloud; direct enterprise demand remains early.</p>
+<div class="ev-ch">channels: <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">most compute demand still originates with a few frontier model developers</span>
+<span class="span">direct enterprise demand remains early‑stage</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0037" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Risk: AI customer concentration/program timing and diversification</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Broadcom warned large multi‑GW custom AI programs with a small number of hyperscalers drive mix and growth; roadmap changes or diversification across suppliers could impact volumes and pricing.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">small number of hyperscalers drive mix and growth</span>
+<span class="span">diversification across suppliers could impact volumes and pricing</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0038" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Risk: Supply/power constraints could limit AI build‑out</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cited availability of HBM, power infrastructure, and other non‑chip elements as potential constraints on converting bookings to shipments.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Availability of advanced memory (HBM), power infrastructure</span>
+<span class="span">constrain Broadcom’s ability to convert strong bookings into shipments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0039" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Risk: AI ASIC mix could pressure consolidated gross margin</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Rapid growth in AI semiconductors vs software compresses consolidated gross margin; while operating leverage offsets near‑term, sustained mix shift could pressure profitability.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">compresses consolidated gross margin</span>
+<span class="span">sustained mix shift could pressure profitability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0040" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Strategy: invest in AI custom silicon, Ethernet switching, and CPO</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Broadcom reiterated multi‑year agreements with hyperscalers and continued investment in AI custom silicon, Ethernet switching (Tomahawk), and co‑packaged optics.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Multi‑year agreements with hyperscalers</span>
+<span class="span">co‑packaged optics</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-22</span>
+<span class="eh">Meta, Broadcom and others back $125m UCLA chip hub</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">UCLA announced an academia‑industry chip hub backed by Meta, Broadcom, Applied Materials, GlobalFoundries and Synopsys, supporting AI semiconductor ecosystem development and workforce.</p>
+<p class="cav">⚠ Announcement does not itemize Broadcom’s specific financial contribution.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">news_rows[5]</div>
+<span class="span">Meta, Broadcom, AMAT, GF, Synopsys back 125m UCLA chip hub</span>
+<span class="span">Ecosystem build supports multi-year AI capex</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0022" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-04-14</span>
+<span class="eh">Meta extends Broadcom AI chip partnership; initial &gt;1GW; frontier reporting at $35B through 2029</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$35.0B · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Broadcom and Meta announced a multi‑year, multi‑generation strategic partnership supporting MTIA through 2029, with an initial commitment exceeding 1GW; frontier reporting characterized it as a $35B deal.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · LLA <b>4</b></span> <span class="chchip">data_center_power_exposure · LLA <b>4</b></span> <span class="chchip">product_integration_exposure · LLA <b>4</b></span> <span class="chchip">strategic_option_value · LLA <b>4</b></span> <span class="chchip">provider_as_platform_absorber · LLA <b>2</b></span> <span class="chchip">provider_specificity · LLA <b>4</b></span> <span class="chchip">multi_model_hedge · LLA <b>4</b></span> <span class="chchip">dependency_duration · LLA <b>4</b></span></div>
+<p class="cav">⚠ Dollar magnitude appears in frontier reporting; company press materials emphasize multi‑GW scope but do not state a dollar value.</p>
+<details>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[6], web_search_findings[5], frontier_events[1]</div>
+<span class="span">initial commitment exceeds 1GW</span>
+<span class="span">plans to extend through 2029</span>
+<span class="span">Meta-Broadcom $35B MTIA chip deal</span>
+<span class="span">multi‑gigawatt rollout</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>FY26 Q1 inflection and Google/Anthropic agreements; supply positioning</h2>
+<div class='range'>2026-01-28 → 2026-04-06</div>
+<div class='psum'>Q1 FY26 established Broadcom’s AI revenue surge and supply positioning: AI semiconductor revenue reached $8.4B (+106% YoY) with Q2 AI semi guidance of $10.7B, and management reiterated locked‑in critical materials. Product mix clarity emphasized chips (XPUs, switch chips, DSPs), with AI networking expected to represent roughly one‑third to two‑fifths of AI revenue. Risks flagged included hyperscaler concentration and tightness in HBM/advanced packaging.
+On April 6, Broadcom filed an 8‑K disclosing a long‑term Google TPU agreement through up to 2031 and an expanded collaboration enabling Anthropic to access approximately 3.5GW of next‑gen TPU compute via Broadcom beginning in 2027, reinforcing long‑dated demand visibility tied to hyperscalers and model labs.</div>
+<div class="event t-web_only_unverified" id="E0020" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-06</span>
+<span class="eh">8‑K: Google LTA to develop and supply future TPUs; supply assurance through up to 2031</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Broadcom filed that it entered a Long Term Agreement with Google to develop and supply future TPUs, plus a supply assurance agreement for networking and rack components through up to 2031.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · GEM <b>5</b></span> <span class="chchip">product_integration_exposure · GEM <b>4</b></span> <span class="chchip">strategic_option_value · GEM <b>4</b></span> <span class="chchip">provider_as_platform_absorber · GEM <b>2</b></span> <span class="chchip">provider_specificity · GEM <b>4</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b></span> <span class="chchip">dependency_duration · GEM <b>5</b></span> <span class="chchip">contractual_commitment_strength · GEM <b>5</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Long Term Agreement</span>
+<span class="span">custom Tensor Processing Units (“TPUs”)</span>
+<span class="span">through up to 2031</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0021" data-providers="anthropic_claude google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-04-06</span>
+<span class="eh">8‑K: Anthropic to access ~3.5GW next‑gen TPU compute via Broadcom beginning in 2027</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">The 8‑K disclosed Broadcom, Google, and Anthropic expanded their collaboration for Anthropic to access approximately 3.5GW of next‑gen TPU compute via Broadcom starting in 2027, contingent on Anthropic’s commercial success.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure · ANT <b>3</b> GEM <b>3</b></span> <span class="chchip">product_integration_exposure · ANT <b>4</b> GEM <b>4</b></span> <span class="chchip">strategic_option_value · ANT <b>4</b> GEM <b>4</b></span> <span class="chchip">provider_specificity · ANT <b>3</b> GEM <b>4</b></span> <span class="chchip">multi_model_hedge · ANT <b>4</b> GEM <b>4</b></span></div>
+<p class="cav">⚠ Anthropic’s consumption is dependent on its continued commercial success per the 8‑K.</p>
+<details>
+<summary>evidence — 3 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3], frontier_events[2], filings[0]</div>
+<span class="span">approximately 3.5 gigawatts</span>
+<span class="span">beginning in 2027</span>
+<span class="span">access through Broadcom</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">Q1 FY26: AI semiconductor revenue $8.4B (+106% YoY)</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$8.4B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Broadcom reported AI semiconductor revenue of $8.4B in Q1 (+106% YoY), underscoring rapid adoption of custom accelerators and Ethernet networking from hyperscale customers.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1], news_rows[7]</div>
+<span class="span">AI semiconductor revenue $8.4B (+106% YoY)</span>
+<span class="span">Q1 revenue 19.311b</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">Q2 FY26 outlook: AI semiconductor revenue guided to $10.7B</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10.7B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management guided Q2 AI semiconductor revenue to $10.7B and consolidated revenue to ~$22.0B, sustaining momentum into the next quarter.</p>
+<details>
+<summary>evidence — 2 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1], news_rows[7]</div>
+<span class="span">expects AI semiconductor revenue of $10.7B</span>
+<span class="span">guided consolidated revenue to ~$22.0B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">Secured supply in leading‑edge wafers/HBM/substrates for AI ramps</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said Broadcom secured key inputs (wafers/HBM/substrates) to support AI ramps, positioning for sustained deliveries.</p>
+<div class="ev-ch">channels: <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">secured supply in leading‑edge wafers/HBM/substrates</span>
+<span class="span">support AI ramps</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">2027 AI deployments described as “close to 10 gigawatts”</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Broadcom indicated 2027 deployments are close to 10 gigawatts, with chip dollars per GW varying by customer.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">“close to 10 gigawatts”</span>
+<span class="span">chip dollars per gigawatt</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">Strategy reaffirmed: focus on chips — XPUs, switch chips, DSPs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reaffirmed the focus on chips across XPUs, switch chips, and DSPs, rather than building rack‑scale systems.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">focus is “chips … XPUs, switch chips, DSPs.”</span>
+<span class="span">time‑to‑market, yields, production at volume</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">COT competition assessed as not competitive for “many years”</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The CEO said chip‑on‑tile (COT) efforts face execution and scale barriers, and are unlikely to be competitive for many years.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">not competitive for “many years”</span>
+<span class="span">execution and scale barriers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">AI networking to be roughly one‑third to two‑fifths of AI revenue</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Broadcom highlighted Tomahawk 6 leadership and unique 1.6T DSPs; AI networking expected to comprise roughly one‑third to two‑fifths of AI revenue.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Tomahawk 6 leadership (100 Tbps)</span>
+<span class="span">1.6T</span>
+<span class="span">roughly one‑third to two‑fifths of AI revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">Rack mix GM impact described as “not going to be substantial”</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management pushed back on margin concerns, indicating the impact from racks is not expected to be substantial.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">impact from racks “is not going to be substantial”</span>
+<span class="span">consolidated GM should remain stable</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">Early move to lock up T‑glass/substrates; capacity to grow in 2028</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Broadcom moved early to secure T‑glass substrates and affirmed the ability to grow into 2028 on multi‑year roadmaps.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">lock up key materials (e.g., T‑glass substrates)</span>
+<span class="span">grow in 2028</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">Copper expected to persist through 400G SerDes; Ethernet interest rising</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management expects direct‑attach copper to persist through 400G SerDes, with rising interest in Ethernet for scale‑up.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">stay on direct‑attach copper through 400G SerDes</span>
+<span class="span">growing interest in Ethernet for scale‑up</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">Risk flagged: Hyperscaler concentration and timing</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management cautioned AI growth is anchored in a small set of hyperscaler programs; order timing and specification changes could impact cadence.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">anchored in a small set of hyperscaler programs</span>
+<span class="span">could affect revenue cadence</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-04</span>
+<span class="eh">Risk flagged: HBM/wafers/substrates constraints could limit shipments</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Despite secured capacity, management warned industry tightness in HBM/advanced packaging could still constrain shipments or mix/margins.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">HBM/advanced packaging could still constrain</span>
+<span class="span">impact mix and margins</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0047" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Reuters: U.S. lawmaker alleges NVIDIA helped DeepSeek hone AI later used by China’s military</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">deepseek</span></div>
+<p class="narr">Reuters reported a U.S. lawmaker’s letter alleging NVIDIA aided DeepSeek model efficiency; while not about Broadcom, it illustrates geopolitical and regulatory headwinds in AI infrastructure markets relevant to hyperscaler planning.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk · DSK <b>1</b></span></div>
+<p class="cav">⚠ Allegations in a congressional letter; not an adjudicated finding.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">DeepSeek-V3 requires only 2.788M H800 GPU hours</span>
+<span class="span">used by the Chinese military</span>
+<span class="span">NVIDIA technology development personnel</span>
 </details>
 </div>
 </div>
@@ -140,7 +771,62 @@ Concurrently, competitive Ethernet dynamics intensified as NVIDIA announced Spec
 <div class='range'>2025-09-05 → 2025-12-31</div>
 <div class='psum'>Broadcom’s AI narrative strengthened through 2025 with positive stock reactions to AI results and the announcement of a 10GW custom accelerator collaboration with OpenAI targeted for 2026–2029, highlighting Ethernet‑scaled racks and term‑sheet alignment. Broadcom also helped inaugurate OCP’s ESUN workstream alongside industry leaders to advance Ethernet for scale‑up AI.
 Late 2025 also brought volatility: Reuters reported shares fell on concerns that a growing AI systems mix could compress margins, signaling investor sensitivity to profitability as AI ramps.</div>
-<div class="event t-single_source" id="E0004">
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-12</span>
+<span class="eh">Reuters: Shares plunge on outlook for thinner AI margins despite revenue beat</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Reuters and others reported Broadcom shares fell on concerns that a growing AI systems mix could compress margins, despite strong top‑line performance, signaling investor focus on profitability during the AI capex cycle.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[8]</div>
+<span class="span">outlook for thinner AI margins</span>
+<span class="span">AVGO -11.4 percent</span>
+<span class="span">mix shift compressing margins</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0005" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-10-13</span>
+<span class="eh">OpenAI and Broadcom announce 10GW custom accelerator collaboration (2026–2029)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">OpenAI and Broadcom announced a strategic collaboration to deploy 10GW of OpenAI‑designed accelerators with Broadcom networking, starting 2H26 and completing by end‑2029; the parties signed a term sheet to deploy Ethernet‑scaled racks.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · OAI <b>5</b></span> <span class="chchip">data_center_power_exposure · OAI <b>4</b></span> <span class="chchip">product_integration_exposure · OAI <b>5</b></span> <span class="chchip">strategic_option_value · OAI <b>5</b></span> <span class="chchip">provider_specificity · OAI <b>4</b></span> <span class="chchip">multi_model_hedge · OAI <b>4</b></span> <span class="chchip">dependency_duration · OAI <b>4</b></span> <span class="chchip">contractual_commitment_strength · OAI <b>3</b></span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[9], web_search_findings[1]</div>
+<span class="span">10 gigawatts</span>
+<span class="span">to start in the second half of 2026</span>
+<span class="span">to complete by end of 2029</span>
+<span class="span">have signed a term sheet</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-13</span>
+<span class="eh">OCP launches ESUN workstream; Broadcom among initiators for scale‑up Ethernet</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The Open Compute Project introduced the Ethernet for Scale‑Up Networking (ESUN) workstream, with Broadcom joining industry peers to advance Ethernet for accelerated AI infrastructure, building on prior SUE contributions.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Ethernet for Scale-Up Networking (ESUN)</span>
+<span class="span">AMD, Arista, ARM, Broadcom, Cisco, HPE</span>
+<span class="span">the OCP Community now has the opportunity</span>
+<span class="span">seeded with the Broadcom contribution</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0004" data-providers="">
 <div class="ev-top">
 <span class="date">2025-09-05</span>
 <span class="eh">CNBC: Broadcom surges on AI results and guide</span>
@@ -158,738 +844,112 @@ Late 2025 also brought volatility: Reuters reported shares fell on concerns that
 <span class="span">Hyperscaler demand</span>
 </details>
 </div>
-<div class="event t-corroborated" id="E0005">
-<div class="ev-top">
-<span class="date">2025-10-13</span>
-<span class="eh">OpenAI and Broadcom announce 10GW custom accelerator collaboration (2026–2029)</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-corroborated">corroborated</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">OpenAI and Broadcom announced a strategic collaboration to deploy 10GW of OpenAI‑designed accelerators with Broadcom networking, starting 2H26 and completing by end‑2029; the parties signed a term sheet to deploy Ethernet‑scaled racks.</p>
-<details>
-<summary>evidence — 2 source(s), 4 span(s)</summary>
-<div class="ev-src">news_rows[9], web_search_findings[1]</div>
-<span class="span">10 gigawatts</span>
-<span class="span">to start in the second half of 2026</span>
-<span class="span">to complete by end of 2029</span>
-<span class="span">have signed a term sheet</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0006">
+<div class='phase'>
+<h2>Foundation of hyperscaler AI silicon relationships and early competitive signals</h2>
+<div class='range'>2023-09-21 → 2024-12-31</div>
+<div class='psum'>Broadcom’s modern AI cycle footing solidified with Google publicly signaling no change to its Broadcom TPU relationship in late 2023 despite media speculation. In 2024, OpenAI’s intent to build its first in‑house AI chip with Broadcom and TSMC surfaced, laying groundwork for a deeper collaboration. 
+Concurrently, competitive Ethernet dynamics intensified as NVIDIA announced Spectrum‑X powering xAI’s Colossus supercomputer, underscoring that standards‑based Ethernet fabrics will be a battleground for hyperscale AI networking in which Broadcom and NVIDIA compete.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt">
 <div class="ev-top">
-<span class="date">2025-10-13</span>
-<span class="eh">OCP launches ESUN workstream; Broadcom among initiators for scale‑up Ethernet</span>
+<span class="date">2024-10-29</span>
+<span class="eh">Reuters: OpenAI building first in‑house chip with Broadcom and TSMC (inference focus)</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">The Open Compute Project introduced the Ethernet for Scale‑Up Networking (ESUN) workstream, with Broadcom joining industry peers to advance Ethernet for accelerated AI infrastructure, building on prior SUE contributions.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Reuters reported OpenAI has been working with Broadcom to build its first in‑house inference chip, with TSMC manufacturing targeted for 2026, and has scaled back foundry ambitions. This prefigured the 2026 Jalapeño reveal.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure · OAI <b>5</b></span> <span class="chchip">product_integration_exposure · OAI <b>5</b></span> <span class="chchip">provider_as_platform_absorber · OAI <b>2</b></span></div>
+<p class="cav">⚠ Pre‑announcement reporting; specifications and volumes were not disclosed.</p>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[7]</div>
-<span class="span">Ethernet for Scale-Up Networking (ESUN)</span>
-<span class="span">AMD, Arista, ARM, Broadcom, Cisco, HPE</span>
-<span class="span">the OCP Community now has the opportunity</span>
-<span class="span">seeded with the Broadcom contribution</span>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">working with Broadcom</span>
+<span class="span">first in-house chip</span>
+<span class="span">make its first custom-designed chip in 2026</span>
+<span class="span">scales back foundry ambition</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0007">
+<div class="event t-web_only_verified" id="E0002" data-providers="xai_grok">
 <div class="ev-top">
-<span class="date">2025-12-12</span>
-<span class="eh">Reuters: Shares plunge on outlook for thinner AI margins despite revenue beat</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Reuters and others reported Broadcom shares fell on concerns that a growing AI systems mix could compress margins, despite strong top‑line performance, signaling investor focus on profitability during the AI capex cycle.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[8]</div>
-<span class="span">outlook for thinner AI margins</span>
-<span class="span">AVGO -11.4 percent</span>
-<span class="span">mix shift compressing margins</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>FY26 Q1 inflection and Google/Anthropic agreements; supply positioning</h2>
-<div class='range'>2026-01-28 → 2026-04-06</div>
-<div class='psum'>Q1 FY26 established Broadcom’s AI revenue surge and supply positioning: AI semiconductor revenue reached $8.4B (+106% YoY) with Q2 AI semi guidance of $10.7B, and management reiterated locked‑in critical materials. Product mix clarity emphasized chips (XPUs, switch chips, DSPs), with AI networking expected to represent roughly one‑third to two‑fifths of AI revenue. Risks flagged included hyperscaler concentration and tightness in HBM/advanced packaging.
-On April 6, Broadcom filed an 8‑K disclosing a long‑term Google TPU agreement through up to 2031 and an expanded collaboration enabling Anthropic to access approximately 3.5GW of next‑gen TPU compute via Broadcom beginning in 2027, reinforcing long‑dated demand visibility tied to hyperscalers and model labs.</div>
-<div class="event t-corroborated" id="E0008">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">Q1 FY26: AI semiconductor revenue $8.4B (+106% YoY)</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$8.4B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Broadcom reported AI semiconductor revenue of $8.4B in Q1 (+106% YoY), underscoring rapid adoption of custom accelerators and Ethernet networking from hyperscale customers.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1], news_rows[7]</div>
-<span class="span">AI semiconductor revenue $8.4B (+106% YoY)</span>
-<span class="span">Q1 revenue 19.311b</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0009">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">Q2 FY26 outlook: AI semiconductor revenue guided to $10.7B</span>
-<span class="badge">other</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$10.7B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Management guided Q2 AI semiconductor revenue to $10.7B and consolidated revenue to ~$22.0B, sustaining momentum into the next quarter.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1], news_rows[7]</div>
-<span class="span">expects AI semiconductor revenue of $10.7B</span>
-<span class="span">guided consolidated revenue to ~$22.0B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0010">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">Secured supply in leading‑edge wafers/HBM/substrates for AI ramps</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management said Broadcom secured key inputs (wafers/HBM/substrates) to support AI ramps, positioning for sustained deliveries.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">secured supply in leading‑edge wafers/HBM/substrates</span>
-<span class="span">support AI ramps</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0011">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">2027 AI deployments described as “close to 10 gigawatts”</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Broadcom indicated 2027 deployments are close to 10 gigawatts, with chip dollars per GW varying by customer.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">“close to 10 gigawatts”</span>
-<span class="span">chip dollars per gigawatt</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0012">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">Strategy reaffirmed: focus on chips — XPUs, switch chips, DSPs</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Management reaffirmed the focus on chips across XPUs, switch chips, and DSPs, rather than building rack‑scale systems.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">focus is “chips … XPUs, switch chips, DSPs.”</span>
-<span class="span">time‑to‑market, yields, production at volume</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0013">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">COT competition assessed as not competitive for “many years”</span>
+<span class="date">2024-10-28</span>
+<span class="eh">NVIDIA unveils Spectrum‑X Ethernet powering xAI’s Colossus (competitive pressure on Broadcom Ethernet)</span>
 <span class="badge">competitive_threat</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">The CEO said chip‑on‑tile (COT) efforts face execution and scale barriers, and are unlikely to be competitive for many years.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">not competitive for “many years”</span>
-<span class="span">execution and scale barriers</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0014">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">AI networking to be roughly one‑third to two‑fifths of AI revenue</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Broadcom highlighted Tomahawk 6 leadership and unique 1.6T DSPs; AI networking expected to comprise roughly one‑third to two‑fifths of AI revenue.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">Tomahawk 6 leadership (100 Tbps)</span>
-<span class="span">1.6T</span>
-<span class="span">roughly one‑third to two‑fifths of AI revenue</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0015">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">Rack mix GM impact described as “not going to be substantial”</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Management pushed back on margin concerns, indicating the impact from racks is not expected to be substantial.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">impact from racks “is not going to be substantial”</span>
-<span class="span">consolidated GM should remain stable</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0016">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">Early move to lock up T‑glass/substrates; capacity to grow in 2028</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Broadcom moved early to secure T‑glass substrates and affirmed the ability to grow into 2028 on multi‑year roadmaps.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">lock up key materials (e.g., T‑glass substrates)</span>
-<span class="span">grow in 2028</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0017">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">Copper expected to persist through 400G SerDes; Ethernet interest rising</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management expects direct‑attach copper to persist through 400G SerDes, with rising interest in Ethernet for scale‑up.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">stay on direct‑attach copper through 400G SerDes</span>
-<span class="span">growing interest in Ethernet for scale‑up</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0018">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">Risk flagged: Hyperscaler concentration and timing</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Management cautioned AI growth is anchored in a small set of hyperscaler programs; order timing and specification changes could impact cadence.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">anchored in a small set of hyperscaler programs</span>
-<span class="span">could affect revenue cadence</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0019">
-<div class="ev-top">
-<span class="date">2026-03-04</span>
-<span class="eh">Risk flagged: HBM/wafers/substrates constraints could limit shipments</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Despite secured capacity, management warned industry tightness in HBM/advanced packaging could still constrain shipments or mix/margins.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[1]</div>
-<span class="span">HBM/advanced packaging could still constrain</span>
-<span class="span">impact mix and margins</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0020">
-<div class="ev-top">
-<span class="date">2026-04-06</span>
-<span class="eh">8‑K: Google LTA to develop and supply future TPUs; supply assurance through up to 2031</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Broadcom filed that it entered a Long Term Agreement with Google to develop and supply future TPUs, plus a supply assurance agreement for networking and rack components through up to 2031.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[3]</div>
-<span class="span">Long Term Agreement</span>
-<span class="span">custom Tensor Processing Units (“TPUs”)</span>
-<span class="span">through up to 2031</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0021">
-<div class="ev-top">
-<span class="date">2026-04-06</span>
-<span class="eh">8‑K: Anthropic to access ~3.5GW next‑gen TPU compute via Broadcom beginning in 2027</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">The 8‑K disclosed Broadcom, Google, and Anthropic expanded their collaboration for Anthropic to access approximately 3.5GW of next‑gen TPU compute via Broadcom starting in 2027, contingent on Anthropic’s commercial success.</p>
-<p class="cav">⚠ Anthropic’s consumption is dependent on its continued commercial success per the 8‑K.</p>
-<details>
-<summary>evidence — 3 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[3], frontier_events[2], filings[0]</div>
-<span class="span">approximately 3.5 gigawatts</span>
-<span class="span">beginning in 2027</span>
-<span class="span">access through Broadcom</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0047">
-<div class="ev-top">
-<span class="date">2026-01-28</span>
-<span class="eh">Reuters: U.S. lawmaker alleges NVIDIA helped DeepSeek hone AI later used by China’s military</span>
-<span class="badge">regulatory</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">deepseek</span></div>
-<p class="narr">Reuters reported a U.S. lawmaker’s letter alleging NVIDIA aided DeepSeek model efficiency; while not about Broadcom, it illustrates geopolitical and regulatory headwinds in AI infrastructure markets relevant to hyperscaler planning.</p>
-<p class="cav">⚠ Allegations in a congressional letter; not an adjudicated finding.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span> <span class="prov">xai_grok</span></div>
+<p class="narr">NVIDIA announced that xAI’s 100,000‑GPU Colossus supercomputer uses NVIDIA’s Spectrum‑X Ethernet platform, highlighting Ethernet competition versus Broadcom’s Tomahawk leadership and indicating hyperscalers may adopt NVIDIA end‑to‑end networking stacks.</p>
+<div class="ev-ch">channels: <span class="chchip">competitive_threat_from_provider · XAI <b>2</b></span></div>
+<p class="cav">⚠ Competitive implication for Broadcom inferred from NVIDIA Ethernet design‑win; no direct Broadcom data center displacement quantified.</p>
 <details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[9]</div>
-<span class="span">DeepSeek-V3 requires only 2.788M H800 GPU hours</span>
-<span class="span">used by the Chinese military</span>
-<span class="span">NVIDIA technology development personnel</span>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">xAI’s Colossus supercomputer</span>
+<span class="span">100,000 NVIDIA Hopper</span>
+<span class="span">Spectrum-X</span>
+<span class="span">Spectrum SN5600 Ethernet switch</span>
 </details>
 </div>
-</div>
-<div class='phase'>
-<h2>FY26 Q2 ramp, Meta extension, Apollo XPV financing, and OpenAI Jalapeño reveal</h2>
-<div class='range'>2026-04-14 → 2026-06-27</div>
-<div class='psum'>Broadcom extended and deepened hyperscaler programs in Q2 FY26. A multi‑year, multi‑generation Meta partnership to support MTIA through 2029 launched with an initial commitment exceeding 1GW (frontier reporting framed a $35B scope), and Broadcom disclosed massive AI bookings and multi‑year visibility. Apollo and partners announced a $35B capital solution for Broadcom’s new AI XPV platform, with the first 1GW tranche enabling Anthropic’s buildout and plans toward &gt;20GW by 2028.
-Quarterly results showed AI semi revenue of $10.8B (+143% y/y), Q3 AI semi guide of ~$16B, bookings &gt;$30B with visibility to 2028, and reiteration of $100B+ AI semi revenue in FY27. Risks remained: hyperscaler concentration, supply/power constraints, and consolidated gross margin pressure from AI ASIC mix. Late in the quarter, OpenAI and Broadcom unveiled the Jalapeño inference accelerator, delivering lab‑running samples nine months from design to production.</div>
-<div class="event t-corroborated" id="E0022">
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
 <div class="ev-top">
-<span class="date">2026-04-14</span>
-<span class="eh">Meta extends Broadcom AI chip partnership; initial &gt;1GW; frontier reporting at $35B through 2029</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$35.0B · contract_value</span> <span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
-<p class="narr">Broadcom and Meta announced a multi‑year, multi‑generation strategic partnership supporting MTIA through 2029, with an initial commitment exceeding 1GW; frontier reporting characterized it as a $35B deal.</p>
-<p class="cav">⚠ Dollar magnitude appears in frontier reporting; company press materials emphasize multi‑GW scope but do not state a dollar value.</p>
-<details>
-<summary>evidence — 3 source(s), 4 span(s)</summary>
-<div class="ev-src">news_rows[6], web_search_findings[5], frontier_events[1]</div>
-<span class="span">initial commitment exceeds 1GW</span>
-<span class="span">plans to extend through 2029</span>
-<span class="span">Meta-Broadcom $35B MTIA chip deal</span>
-<span class="span">multi‑gigawatt rollout</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0023">
-<div class="ev-top">
-<span class="date">2026-05-22</span>
-<span class="eh">Meta, Broadcom and others back $125m UCLA chip hub</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">UCLA announced an academia‑industry chip hub backed by Meta, Broadcom, Applied Materials, GlobalFoundries and Synopsys, supporting AI semiconductor ecosystem development and workforce.</p>
-<p class="cav">⚠ Announcement does not itemize Broadcom’s specific financial contribution.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">news_rows[5]</div>
-<span class="span">Meta, Broadcom, AMAT, GF, Synopsys back 125m UCLA chip hub</span>
-<span class="span">Ecosystem build supports multi-year AI capex</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0024">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Q2 FY26: AI semiconductor revenue $10.8B (+143% y/y)</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$10.8B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Broadcom reported Q2 AI semiconductor revenue of $10.8B, up 143% year‑over‑year, reflecting rapid hyperscale AI accelerator and networking demand.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">AI semiconductor revenue (company KPI): $10.8B in Q2 (+143% y/y).</span>
-<span class="span">$10.8B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0025">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Q3 FY26 guide: AI semis ~$16.0B (&gt;200% y/y)</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$16.0B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Management guided Q3 AI semiconductor revenue to approximately $16.0B (&gt;200% y/y), with consolidated semiconductor revenue of ~$20.5B.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">AI semis ~$16.0B, &gt;200% y/y</span>
-<span class="span">semiconductor revenue ~ $20.5B</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0026">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">AI semiconductor bookings over $30B in the quarter; visibility to 2028</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$30.0B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Management cited over $30B of AI semiconductor bookings in Q2, nearly 3x quarterly AI shipments, and order visibility extending to 2028.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">bookings of over $30B</span>
-<span class="span">order visibility extending to 2028</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0027">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Reiterated: 2027 AI chip revenue in excess of $100B</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$100.0B · other</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Management restated that 2027 AI semiconductor revenue is in excess of $100B, with strong bookings and multi‑year visibility.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">2027 AI chip revenue is “in excess of $100 billion,”</span>
-<span class="span">visibility runs all the way to 2028.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0028">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Visibility “runs all the way to 2028”</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management emphasized multi‑year program visibility, stating visibility runs all the way to 2028.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">visibility runs all the way to 2028.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0029">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">2027 XPU shipments around 10GW; 2028 expected to be “a lot more”</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Broadcom said 2027 XPU shipments are around 10GW and back‑half‑weighted, with 2028 expected to be a lot more.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">XPU shipments in 2027 are around 10 gigawatts</span>
-<span class="span">with 2028 “a lot more.”</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0030">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Google LTA characterized as a “very substantial” dollar commitment</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Management described Google’s long‑term agreement as a very substantial dollar commitment, secured by multi‑generation product/IP roadmaps.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">a “very substantial” dollar commitment</span>
-<span class="span">multi‑generation product/IP roadmaps</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0031">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">AI networking mix likely maxed at ~40%, trending toward ~30%</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Broadcom said AI networking’s share likely peaked around 40%, guiding toward ~30% over time as custom XPUs ramp.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">40% “as high as” networking’s share</span>
-<span class="span">guided toward ~30% over time</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0032">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Supply secured for 2026–2027; ability to add more “by and large”</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management said supply is secured for 2026–2027 and they are working on 2028–2029, with the ability to obtain incremental supply by and large.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Supply secured 2026–2027</span>
-<span class="span">“by and large, yes”</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0033">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Anthropic arrangement clarified: Broadcom provides TPU‑based compute capacity</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Management clarified Broadcom provides TPU‑based compute capacity to Anthropic, not a backstopped financing arrangement, aligning with the expanded TPU access framework.</p>
-<details>
-<summary>evidence — 2 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0], web_search_findings[3]</div>
-<span class="span">provides TPU‑based compute capacity to Anthropic</span>
-<span class="span">it was not a backstopped financing arrangement</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0034">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Strategy: “only chips,” no rack‑scale systems</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Broadcom emphasized it will not pursue rack‑scale systems, reiterating a strategy focused on chips.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">“only chips,”</span>
-<span class="span">will not pursue rack‑scale systems</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0035">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">VMware uplift from CPU+GPU deployments; acceleration expected</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management said VMware benefits from high‑core‑count CPU plus GPU deployments, with expected acceleration in Q3 and the next multiple quarters.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">VMware is benefiting from high‑core‑count CPU plus GPU</span>
-<span class="span">accelerate in Q3 and for “the next multiple quarters.”</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0036">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Demand still concentrated among a few frontier model developers</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
-<p class="narr">Management noted most compute demand originates from a few frontier model developers serving consumers and enterprises via the cloud; direct enterprise demand remains early.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">most compute demand still originates with a few frontier model developers</span>
-<span class="span">direct enterprise demand remains early‑stage</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0037">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Risk: AI customer concentration/program timing and diversification</span>
+<span class="date">2023-09-21</span>
+<span class="eh">Google says it expects no change in Broadcom TPU relationship after report</span>
 <span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Broadcom warned large multi‑GW custom AI programs with a small number of hyperscalers drive mix and growth; roadmap changes or diversification across suppliers could impact volumes and pricing.</p>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Reuters reported Google does not see any change in its relationship with Broadcom following a report it considered dropping Broadcom as an AI chip supplier by 2027, mitigating an immediate displacement risk while acknowledging prior diversification discussions.</p>
 <details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">small number of hyperscalers drive mix and growth</span>
-<span class="span">diversification across suppliers could impact volumes and pricing</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0038">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Risk: Supply/power constraints could limit AI build‑out</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Management cited availability of HBM, power infrastructure, and other non‑chip elements as potential constraints on converting bookings to shipments.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Availability of advanced memory (HBM), power infrastructure</span>
-<span class="span">constrain Broadcom’s ability to convert strong bookings into shipments</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0039">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Risk: AI ASIC mix could pressure consolidated gross margin</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">Rapid growth in AI semiconductors vs software compresses consolidated gross margin; while operating leverage offsets near‑term, sustained mix shift could pressure profitability.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">compresses consolidated gross margin</span>
-<span class="span">sustained mix shift could pressure profitability</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0040">
-<div class="ev-top">
-<span class="date">2026-06-03</span>
-<span class="eh">Strategy: invest in AI custom silicon, Ethernet switching, and CPO</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Broadcom reiterated multi‑year agreements with hyperscalers and continued investment in AI custom silicon, Ethernet switching (Tomahawk), and co‑packaged optics.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Multi‑year agreements with hyperscalers</span>
-<span class="span">co‑packaged optics</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0041">
-<div class="ev-top">
-<span class="date">2026-06-04</span>
-<span class="eh">CNBC: Shares plunge ~15% after Q2 revenue miss and no upgrade to $100B FY27 target</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">CNBC reported Broadcom shares fell about 15% after Q2 revenue of $22.19B narrowly missed and management kept the FY27 AI semi target at &gt;$100B, pressuring elevated expectations.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[4]</div>
-<span class="span">plunges about 15%</span>
-<span class="span">revenue of $22.19B</span>
-<span class="span">unchanged $100B 2027</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0042">
-<div class="ev-top">
-<span class="date">2026-06-09</span>
-<span class="eh">Apollo and partners lead $35B financing for Anthropic via Broadcom’s AI XPV platform</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$35.0B · loan</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
-<p class="narr">Apollo announced an initial $35B capital solution, with Blackstone and banks, tied to Broadcom’s AI XPV Platform to accelerate Anthropic’s compute buildout toward more than 20GW by 2028; the first tranche enables &gt;1GW from mid‑2026.</p>
-<p class="cav">⚠ Structure and pricing of the XPV financing were not detailed in the summary.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[3]</div>
-<span class="span">initial $35 billion capital solution</span>
-<span class="span">more than 20 gigawatts of AI capacity by 2028</span>
-<span class="span">first tranche facilitating Anthropic’s previously announced expansion of more than 1 gigawatt</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0043">
-<div class="ev-top">
-<span class="date">2026-06-15</span>
-<span class="eh">Tensordyne expects &gt;$200M in orders for new inference system developed with Broadcom</span>
-<span class="badge">product_integration</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$200M · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">Reuters reported Tensordyne expects more than $200M in orders for its Napier inference system developed with Broadcom and Juniper, manufactured by TSMC, with multiple LOIs and interest from AI infrastructure providers.</p>
-<p class="cav">⚠ Figure represents management expectation; order conversion and timing may vary.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[2]</div>
-<span class="span">expects more than $200 million in orders</span>
-<span class="span">developed with Broadcom</span>
-<span class="span">manufactured by TSMC</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0044">
-<div class="ev-top">
-<span class="date">2026-06-17</span>
-<span class="eh">Ars: Tesco moving 40,000 VMware workloads off platform amid pricing dispute</span>
-<span class="badge">regulatory</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$24M · other</span> <span class="badge">negative_displacement</span></div>
-<p class="narr">UK court filings cited by Ars Technica say Tesco is migrating 40,000 VMware workloads off the platform after Broadcom allegedly ended support for perpetual licenses and proposed $23.5M for a year of VCF 9.0 plus mainframe software/support, a 175% increase Tesco disputes.</p>
-<p class="cav">⚠ Broadcom denies the pricing is unfair and disputes damages; litigation ongoing.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">news_rows[1]</div>
-<span class="span">moving 40,000 server workloads off VMware</span>
-<span class="span">175% price hike</span>
-<span class="span">$23.5 million for a year of VMware Cloud Foundation 9.0</span>
-</details>
-</div>
-<div class="event t-corroborated" id="E0045">
-<div class="ev-top">
-<span class="date">2026-06-24</span>
-<span class="eh">OpenAI and Broadcom unveil Jalapeño, OpenAI’s first custom inference chip</span>
-<span class="badge">product_integration</span>
-<span class="badge b-corroborated">corroborated</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
-<p class="narr">OpenAI and Broadcom introduced Jalapeño, OpenAI’s first Intelligence Processor for LLM inference, with engineering samples running ML workloads at production targets after nine months from design to production; initial deployment targeted by end‑2026 and ramping through 2027.</p>
-<details>
-<summary>evidence — 3 source(s), 4 span(s)</summary>
-<div class="ev-src">news_rows[0], frontier_events[0], web_search_findings[0]</div>
-<span class="span">Jalapeño</span>
-<span class="span">first Intelligence Processor</span>
-<span class="span">Developed from design to production in nine months</span>
-<span class="span">initial deployment targeted by end‑2026</span>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">does not see any change in its relationship</span>
+<span class="span">as early as 2027</span>
+<span class="span">Broadcom</span>
+<span class="span">tensor processing units</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0033'>E0033</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0045'>E0045</a></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0042'>E0042</a></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0040'>E0040</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0043'>E0043</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0035'>E0035</a>, <a class='evref' href='#E0044'>E0044</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0045'>E0045</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0042'>E0042</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0040'>E0040</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0043'>E0043</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0045'>E0045</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0043'>E0043</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0037'>E0037</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0044'>E0044</a>, <a class='evref' href='#E0037'>E0037</a></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0044'>E0044</a>, <a class='evref' href='#E0037'>E0037</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0044'>E0044</a>, <a class='evref' href='#E0047'>E0047</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0045'>E0045</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0036'>E0036</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0034'>E0034</a>, <a class='evref' href='#E0032'>E0032</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0044'>E0044</a></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0.95</td><td>1.4</td><td>1.5</td><td>0.8</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0.9</td><td>0.6</td><td>0.6</td><td>0.6</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>-0.3</td><td>0</td><td>-0.3</td><td>-0.3</td><td>-0.5</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>-0.05</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.85</td><td>0.82</td><td>0.895</td><td>0.865</td><td>0.73</td><td>0.73</td></tr>
+<tr><td class='k'>NET effective</td><td>0.83</td><td>0.9758</td><td>1.0375</td><td>0.5661</td><td>-0.1533</td><td>-0.0141</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>What is the quantitative revenue and margin profile of Broadcom’s TPU-based compute capacity arrangement with Anthropic (pricing, utilization, and accounting treatment)?</li>
@@ -904,4 +964,19 @@ Quarterly results showed AI semi revenue of $10.8B (+143% y/y), Q3 AI semi guide
 <li>Legal and regulatory matters (e.g., Tesco litigation, NVIDIA/DeepSeek letter) are evolving; allegations may not be adjudicated.</li>
 <li>Bookings and visibility metrics are management-reported and may be sensitive to program timing, qualification, and supply (HBM/power) constraints.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

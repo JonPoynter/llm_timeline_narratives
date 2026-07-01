@@ -52,11 +52,21 @@ summary{cursor:pointer;font-size:12px;color:var(--mut)}
 table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
 table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
 table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
 .noev{color:#9ca3af}
 section.block{margin-top:30px}
 section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
 ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
 </style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
 <header>
 <h1>Digital Realty Trust Inc <span class='sub'>(DLR US)</span></h1>
 <div class='sub'>AI Relationship Timeline · as of 2026-06-27 · built by gpt-5 · $0.475</div>
@@ -72,170 +82,47 @@ ul.q{font-size:14px;color:#374151}
 <span class='chip'>web-only (verified): 6</span>
 <span class='chip'>web-only (unverified): 4</span>
 </div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
 <div class='phase'>
-<h2>Foundational cloud interconnects</h2>
-<div class='range'>2019-05-09 → 2021-03-23</div>
-<div class='psum'>Digital Realty established foundational private connectivity to major public clouds. In 2019, the company achieved the AWS Direct Connect Service Delivery designation, enabling customers to connect privately to AWS through Digital Realty’s interconnection platforms.
-In 2021, Digital Realty expanded secure, private access to Google Cloud’s global network with new on-ramps across multiple metros, reinforcing low-latency hybrid networking paths that are prerequisites for modern AI and data workloads.</div>
-<div class="event t-web_only_unverified" id="E0001">
+<h2>Ecosystem validation and AI colocation positioning</h2>
+<div class='range'>2026-05-01 → 2026-06-20</div>
+<div class='psum'>Digital Realty’s positioning as an AI colocation provider was reinforced by its NVIDIA DGX-Ready partnership messaging and a CoreWeave case study highlighting rapid deployment of high-density colocation on PlatformDIGITAL. These materials underscore the company’s role in enabling GPU-intensive AI workloads and accelerating customer time-to-value.</div>
+<div class="event t-web_only_unverified" id="E0032" data-providers="">
 <div class="ev-top">
-<span class="date">2019-05-09</span>
-<span class="eh">Digital Realty achieves AWS Direct Connect Service Delivery designation</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Digital Realty was recognized for AWS Direct Connect Service Delivery, authorizing it to provision higher-capacity hosted connections and enabling enterprises to establish private, high-performance links to AWS via Digital Realty’s Service Exchange.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[5]</div>
-<span class="span">Service Delivery designation for AWS Direct Connect</span>
-<span class="span">greater than 500 Mbps</span>
-<span class="span">connect to AWS privately via dedicated connections</span>
-<span class="span">Digital Realty Service Exchange</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0002">
-<div class="ev-top">
-<span class="date">2021-03-23</span>
-<span class="eh">New direct connections to Google Cloud across five key metros</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
-<p class="narr">Digital Realty expanded secure, private access to Google Cloud with new on-ramps across Atlanta, Los Angeles, Vienna, Düsseldorf and an additional interconnect in Frankfurt, enabling direct, high-speed, low-latency hybrid connections.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[0]</div>
-<span class="span">expanded secure, private access to Google Cloud&#x27;s global network</span>
-<span class="span">on-ramps will enable direct, high-speed, low-latency connections</span>
-<span class="span">Atlanta and Los Angeles</span>
-<span class="span">Digital Realty Internet Exchange (DRIX)</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>OCI connectivity expansion</h2>
-<div class='range'>2023-02-28 → 2023-02-28</div>
-<div class='psum'>Digital Realty added Oracle Cloud Infrastructure (OCI) connectivity in Chicago via FastConnect at 350 E. Cermak. This extended Oracle access to nine FastConnect PoPs hosted on Digital Realty’s global platform, broadening choices for enterprise hybrid cloud architectures relevant to AI data pipelines.</div>
-<div class="event t-web_only_verified" id="E0003">
-<div class="ev-top">
-<span class="date">2023-02-28</span>
-<span class="eh">Access to Oracle Cloud via FastConnect in Chicago</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Digital Realty began offering connectivity to an OCI FastConnect PoP in the Oracle Cloud Chicago Region, located at 350 E. Cermak, expanding its hosted OCI FastConnect presence across four continents.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[1]</div>
-<span class="span">Oracle Cloud Chicago Region</span>
-<span class="span">Oracle Cloud Infrastructure (OCI) FastConnect point-of-presence (PoP)</span>
-<span class="span">350 E. Cermak Road</span>
-<span class="span">hosts nine OCI FastConnect PoPs</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>AI compute hosting and Azure on-ramps</h2>
-<div class='range'>2024-04-02 → 2025-04-24</div>
-<div class='psum'>Digital Realty was selected to host a state-of-the-art NVIDIA-powered AI supercomputer in Copenhagen, enhancing its role in supporting cutting-edge AI research and compute-intensive workloads with renewable-powered infrastructure. The system features NVIDIA DGX SuperPOD architecture with H100 GPUs and Quantum-2 InfiniBand networking.
-In parallel, Digital Realty expanded Microsoft Azure ExpressRoute connectivity with new peering locations in Atlanta, Brussels, and Vienna, growing to 15 Azure cloud on-ramps and promoting low-latency, secure private access pathways foundational for hybrid IT and future private AI capabilities.</div>
-<div class="event t-web_only_verified" id="E0004">
-<div class="ev-top">
-<span class="date">2024-04-02</span>
-<span class="eh">DLR to host NVIDIA-powered AI supercomputer in Denmark</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">The Novo Nordisk Foundation and EIFO selected a Digital Realty data center in Copenhagen to host an NVIDIA DGX SuperPOD-based AI supercomputer with H100 GPUs and Quantum-2 InfiniBand, supporting researchers across Denmark’s public and private sectors.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[8]</div>
-<span class="span">selected to host one of the world&#x27;s most powerful AI supercomputers</span>
-<span class="span">Copenhagen, Denmark</span>
-<span class="span">NVIDIA DGX SuperPOD</span>
-<span class="span">over 1,500 NVIDIA H100 Tensor Core GPUs</span>
-</details>
-</div>
-<div class="event t-web_only_unverified" id="E0005">
-<div class="ev-top">
-<span class="date">2025-04-24</span>
-<span class="eh">Three new Azure ExpressRoute on-ramps on PlatformDIGITAL</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Digital Realty added Microsoft Azure ExpressRoute peering in Atlanta, Brussels, and Vienna, bringing its total hosted Azure on-ramps to 15 and reinforcing private, low-latency connections suited for hybrid IT and emerging private AI use cases.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[2]</div>
-<span class="span">Microsoft Azure ExpressRoute peering locations in Atlanta, Brussels, and Vienna</span>
-<span class="span">now hosts 15 Azure ExpressRoute cloud on-ramps</span>
-<span class="span">ServiceFabric®</span>
-<span class="span">lowest latency and most highly secure path</span>
-</details>
-</div>
-</div>
-<div class='phase'>
-<h2>AI cloud customers and partner ecosystem</h2>
-<div class='range'>2025-08-01 → 2025-10-13</div>
-<div class='psum'>Evidence of AI cloud customer demand included third-party reporting that CoreWeave leases capacity from multiple providers including Digital Realty. Digital Realty also announced a strategic partnership with Vultr to deploy GPU-accelerated AI infrastructure on PlatformDIGITAL across key markets. Additionally, Digital Realty partnered with Lumen to expand its Private AI Exchange (AIPx), adding rapid deployment and high-capacity connectivity to more than 700 locations.</div>
-<div class="event t-web_only_verified" id="E0006">
-<div class="ev-top">
-<span class="date">2025-08-01</span>
-<span class="eh">CoreWeave footprint spans multiple landlords including Digital Realty</span>
+<span class="date">2026-06-20</span>
+<span class="eh">CoreWeave case study: high-density AI colocation accelerates outcomes</span>
 <span class="badge">customer_adoption</span>
-<span class="badge b-web_only_verified">web-only (verified)</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Data Center Dynamics reported that CoreWeave’s leased estate includes several providers such as Digital Realty, underscoring rising third-party AI infrastructure demand across the sector.</p>
-<p class="cav">⚠ Indirect reference; not a DLR-specific lease disclosure. Magnitudes cited pertain to another operator.</p>
+<p class="narr">A Digital Realty case study (CoreWeave) describes rapid revenue attainment via high-density colocation on PlatformDIGITAL, crediting expert solution design and reduced deployment time.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<p class="cav">⚠ Case study language is French; performance claims are customer-reported.</p>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[10]</div>
-<span class="span">lease an additional 150MW of capacity</span>
-<span class="span">CoreWeave leases data center space from the likes of</span>
-<span class="span">Digital Realty</span>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Cas client — CoreWeave atteint rapidement ses objectifs</span>
+<span class="span">colocation High-Density sur PlatformDIGITAL®</span>
+<span class="span">réduire de moitié le temps de déploiement prévu</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0007">
+<div class="event t-web_only_verified" id="E0031" data-providers="">
 <div class="ev-top">
-<span class="date">2025-08-27</span>
-<span class="eh">Digital Realty and Vultr partner on GPU-accelerated AI infrastructure</span>
-<span class="badge">product_integration</span>
-<span class="badge b-web_only_unverified">web-only (unverified)</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Digital Realty and Vultr announced deployment of enterprise-ready, GPU-accelerated AI infrastructure on PlatformDIGITAL, including NVIDIA HGX B200 and AMD Instinct MI325X systems, with integration to ServiceFabric and the AI Private Exchange (AIPx).</p>
-<details>
-<summary>evidence — 1 source(s), 5 span(s)</summary>
-<div class="ev-src">web_search_findings[14]</div>
-<span class="span">strategic partnership with Vultr</span>
-<span class="span">GPU-accelerated AI infrastructure</span>
-<span class="span">NVIDIA HGX B200 and AMD Instinct™ MI325X</span>
-<span class="span">ServiceFabric®</span>
-<span class="span">AI Private Exchange (AIPx)</span>
-</details>
-</div>
-<div class="event t-web_only_verified" id="E0008">
-<div class="ev-top">
-<span class="date">2025-10-13</span>
-<span class="eh">DLR and Lumen expand Private AI Exchange (AIPx) reach</span>
+<span class="date">2026-05-01</span>
+<span class="eh">NVIDIA DGX-Ready AI colocation positioning on PlatformDIGITAL</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Digital Realty partnered with Lumen to expand its AIPx ecosystem, connecting enterprise customers to over 700 locations with rapid deployment and high-capacity connectivity for AI-ready data services.</p>
+<p class="narr">Digital Realty highlighted its collaboration with NVIDIA as a DGX-Ready AI colocation provider designed to support scalable power, processing, and cooling for AI workloads on PlatformDIGITAL.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<p class="cav">⚠ Web resource date not specified; treated as positioning current in 2026.</p>
 <details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">web_search_findings[13]</div>
-<span class="span">expanding its Private AI Exchange (AIPx) ecosystem</span>
-<span class="span">over 700 locations</span>
-<span class="span">high-capacity connectivity</span>
-<span class="span">forward-looking statements</span>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">DGX-Ready AI colocation provider</span>
+<span class="span">PlatformDIGITAL®</span>
+<span class="span">In partnership with NVIDIA</span>
 </details>
 </div>
 </div>
@@ -244,7 +131,242 @@ In parallel, Digital Realty expanded Microsoft Azure ExpressRoute connectivity w
 <div class='range'>2026-02-05 → 2026-04-23</div>
 <div class='psum'>Across 25Q4 and 26Q1, Digital Realty reported a step-up in AI-oriented demand, with DLR-share backlog rising from $817 million at year-end 2025 to $1.0 billion by 26Q1 and new bookings increasing from $175 million (Q4 at DLR share) to $423 million in 26Q1. Management highlighted the largest hyperscale lease in company history, record 0–1 MW plus interconnection bookings, and pricing power as escalators moved to 3–4% and hyperscale terms around 15 years.
 The company guided 2026 net development CapEx to $3.5–$4.0 billion with targeted 10%+ stabilized yields, raised ~$1.3 billion via its ATM program, and cited ~3 GW operating with 1.2 GW under construction (~60% pre-leased). Risks include a longer average commencement lag (to ~19 months) driven by a single 200 MW phased lease, execution and power availability, and heightened concentration from very large hyperscale deals. The firm also noted an ~873-acre Atlanta land bank and a 15 MW development in Cyberjaya.</div>
-<div class="event t-single_source" id="E0009">
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Backlog rises to $1.0B at DLR share; 19-month average lag</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">DLR reported signed-but-not-commenced backlog at $1.8B (100% share) and $1.0B at DLR share with a weighted-average 19-month lag to commencement.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$1.8 billion annualized GAAP base rent at 100% share</span>
+<span class="span">$1.0 billion at DLR share</span>
+<span class="span">weighted-average lag to commencement 19 months</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">26Q1 new bookings $707M (100%); $423M at DLR share</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$423M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">New quarterly bookings reached $707M annualized GAAP base rent at 100% share, or $423M at DLR share, reflecting accelerating demand including AI-oriented capacity and interconnection.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">$707 million annualized GAAP base rent at 100% share</span>
+<span class="span">$423 million at DLR share</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Largest hyperscale lease; record 0–1MW plus interconnection bookings</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted AI-driven demand with the largest hyperscale lease in company history and record bookings in 0–1MW plus interconnection categories.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">largest hyperscale lease in company history</span>
+<span class="span">record 0–1 MW plus interconnection bookings</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">2026 net development CapEx guided to $3.5–$4.0B; 10%+ yields targeted</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.5B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">DLR guided to $3.5–$4.0B of net development CapEx for 2026 with targeted stabilized yields of 10%+, aligning capacity delivery to strong AI and hyperscale demand.</p>
+<p class="cav">⚠ Magnitude set to lower-bound of range.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">net development CapEx to $3.5–$4.0 billion for 2026</span>
+<span class="span">10%+ stabilized yields targeted</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">ATM equity issuance raises ~$1.3B to fund growth</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.3B · other</span> <span class="badge">neutral</span></div>
+<p class="narr">Since year-end 2025, DLR issued 7.3 million shares via its ATM program for approximately $1.3B in proceeds to support growth initiatives.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">7.3 million shares under its ATM program</span>
+<span class="span">~$1.3 billion of proceeds to support growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">AI demand advances from pilot to production</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated that customer AI demand has shifted from pilots to production, signaling a durable consumption trend for capacity and interconnection.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Demand has definitely converted from pilot to production.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Hyperscale contracts ~15 years; escalators ≥3%</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">DLR described hyperscale contract tenors of roughly 15 years with escalators at or above 3%, supporting long-duration, inflation-protected cash flows.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">hyperscale contracts are, call it, 15 years</span>
+<span class="span">escalators are certainly 3% or maybe even higher</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Pricing power outpaces build-cost inflation</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted market rent growth remains ahead of build-cost inflation, supporting development economics amid elevated AI demand.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">market rent growth outpacing inflationary pressure in build costs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Risk: 19-month sign-to-commence driven by single 200 MW phased lease</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The elevated ~19-month average sign-to-commence interval was mainly due to one 200 MW lease commencing in phases into 2028, adding timing risk to revenue recognition.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~19‑month average sign‑to‑commence interval</span>
+<span class="span">single 200 MW lease</span>
+<span class="span">commences in phases into 2028</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Installed base ~3 GW; 1.2 GW under construction ~60% pre-leased</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">DLR framed roughly 3 GW operating capacity, ~6 GW owned, and 1.2 GW under construction that is approximately 60% pre-leased, underscoring scale and visibility.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">roughly 3 GW operating</span>
+<span class="span">~6 GW owned</span>
+<span class="span">1.2 GW under construction</span>
+<span class="span">~60% pre‑leased</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Atlanta mega-campus land bank (~873 acres)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited an approximately 873-acre, contiguous land bank in Greater Atlanta, reinforcing future expansion capacity in a key AI/cloud market.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">~873‑acre land bank</span>
+<span class="span">one contiguous parcel in Greater Atlanta</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Risk: power and project timing could delay commencements</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">DLR flagged risks around project timing, power availability, and delivery that could delay commencements and push revenue recognition.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Project timing, power availability, and delivery risks could delay commencements</span>
+<span class="span">19‑month average lag from sign to start</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">Risk: concentration from largest hyperscale lease and &gt;1MW mix</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management noted that the quarter’s very large hyperscale lease and a mix weighted to &gt;1MW deployments elevate concentration risk.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">largest hyperscale lease in company history</span>
+<span class="span">mix weighted to &gt;1 MW deployments</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-23</span>
+<span class="eh">APAC expansion: 15 MW development in Cyberjaya (Malaysia)</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Digital Realty announced a subsequent 15 MW development in Cyberjaya, expanding AI-ready capacity in the APAC region.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">15 MW development in Cyberjaya</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
 <div class="ev-top">
 <span class="date">2026-02-05</span>
 <span class="eh">Q4 2025 bookings of $175M at DLR share (incl. 0–1MW and interconnection)</span>
@@ -253,6 +375,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="mag">$175M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
 <p class="narr">Digital Realty reported new signings expected to generate ~$400M at 100% share, with $175M at DLR share including ~$96M from 0–1MW plus interconnection, reflecting balanced AI and connectivity demand.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[1]</div>
@@ -261,7 +384,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 <span class="span">~$96M from 0–1MW plus interconnection</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0010">
+<div class="event t-single_source" id="E0010" data-providers="">
 <div class="ev-top">
 <span class="date">2026-02-05</span>
 <span class="eh">Backlog $817M at DLR share; ~8-month average commencement lag</span>
@@ -270,6 +393,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="mag">$817M · contract_value</span> <span class="badge">positive_demand</span></div>
 <p class="narr">At year-end 2025, the company reported $817M annualized GAAP base rent at DLR’s share in signed-but-not-commenced backlog, with an average ~8 months from signing to commencement.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[1]</div>
@@ -277,7 +401,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 <span class="span">weighted‑average lag from sign to commencement ~8 months</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0011">
+<div class="event t-single_source" id="E0011" data-providers="">
 <div class="ev-top">
 <span class="date">2026-02-05</span>
 <span class="eh">Pricing escalators pushed to 3–4% (often CPI-linked)</span>
@@ -286,6 +410,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">Management emphasized stronger pricing with minimum 3% escalators, as high as 4% or above, often CPI-linked, while shorter 0–1MW contracts roll more frequently to market.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[1]</div>
@@ -294,7 +419,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 <span class="span">zero‑to‑one MW contracts are shorter</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0012">
+<div class="event t-single_source" id="E0012" data-providers="">
 <div class="ev-top">
 <span class="date">2026-02-05</span>
 <span class="eh">Record pipeline; near-100 MW booking; larger enterprise blocks emerging</span>
@@ -303,6 +428,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
 <p class="narr">DLR noted a record pipeline, highlighted a near-100 MW booking in Q4, and observed enterprise interest shifting toward larger contiguous blocks as inference use cases develop.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[1]</div>
@@ -311,7 +437,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 <span class="span">enterprise interest is skewing to larger contiguous blocks</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0013">
+<div class="event t-single_source" id="E0013" data-providers="">
 <div class="ev-top">
 <span class="date">2026-02-05</span>
 <span class="eh">Risk: labor tightness; pre-positioned capacity for &gt;$10B program</span>
@@ -329,7 +455,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 <span class="span">&gt;$10B under‑construction program</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0014">
+<div class="event t-single_source" id="E0014" data-providers="">
 <div class="ev-top">
 <span class="date">2026-02-05</span>
 <span class="eh">Regulatory stance: grid-reliant with behind-the-meter as bridge</span>
@@ -338,6 +464,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
 <p class="narr">DLR addressed data center impact misconceptions, affirming reliance on the grid and viewing behind-the-meter only as a bridge, citing contributions to grid stability and modest water usage.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
 <details>
 <summary>evidence — 1 source(s), 4 span(s)</summary>
 <div class="ev-src">filings[1]</div>
@@ -347,7 +474,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 <span class="span">contributions to grid stability</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0015">
+<div class="event t-single_source" id="E0015" data-providers="">
 <div class="ev-top">
 <span class="date">2026-02-05</span>
 <span class="eh">Private-capital partnerships provide ~$15B &quot;dry powder&quot;</span>
@@ -356,6 +483,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="mag">$15.0B · other</span> <span class="badge">positive_demand</span></div>
 <p class="narr">DLR cited an oversubscribed inaugural fund and broader private-capital partnerships totaling about $15B of available capital to fund hyperscale growth and support per-share economics.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
 <div class="ev-src">filings[1]</div>
@@ -364,7 +492,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 <span class="span">flexibility to fund hyperscale growth</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0016">
+<div class="event t-single_source" id="E0016" data-providers="">
 <div class="ev-top">
 <span class="date">2026-02-05</span>
 <span class="eh">Risk: backlog conversion timing (~8 months average lag)</span>
@@ -373,6 +501,7 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
 <p class="narr">Management highlighted timing risk given an average ~8-month lag from signing to commencement and a large signed-but-not-commenced backlog.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span></div>
 <details>
 <summary>evidence — 1 source(s), 2 span(s)</summary>
 <div class="ev-src">filings[1]</div>
@@ -380,298 +509,223 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 <span class="span">large signed‑but‑not‑commenced backlog</span>
 </details>
 </div>
-<div class="event t-single_source" id="E0017">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Backlog rises to $1.0B at DLR share; 19-month average lag</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$1.0B · contract_value</span> <span class="badge">positive_demand</span></div>
-<p class="narr">DLR reported signed-but-not-commenced backlog at $1.8B (100% share) and $1.0B at DLR share with a weighted-average 19-month lag to commencement.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">$1.8 billion annualized GAAP base rent at 100% share</span>
-<span class="span">$1.0 billion at DLR share</span>
-<span class="span">weighted-average lag to commencement 19 months</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0018">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">26Q1 new bookings $707M (100%); $423M at DLR share</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$423M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
-<p class="narr">New quarterly bookings reached $707M annualized GAAP base rent at 100% share, or $423M at DLR share, reflecting accelerating demand including AI-oriented capacity and interconnection.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">$707 million annualized GAAP base rent at 100% share</span>
-<span class="span">$423 million at DLR share</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0019">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Largest hyperscale lease; record 0–1MW plus interconnection bookings</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management highlighted AI-driven demand with the largest hyperscale lease in company history and record bookings in 0–1MW plus interconnection categories.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">largest hyperscale lease in company history</span>
-<span class="span">record 0–1 MW plus interconnection bookings</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0020">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">2026 net development CapEx guided to $3.5–$4.0B; 10%+ yields targeted</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$3.5B · capex</span> <span class="badge">positive_demand</span></div>
-<p class="narr">DLR guided to $3.5–$4.0B of net development CapEx for 2026 with targeted stabilized yields of 10%+, aligning capacity delivery to strong AI and hyperscale demand.</p>
-<p class="cav">⚠ Magnitude set to lower-bound of range.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">net development CapEx to $3.5–$4.0 billion for 2026</span>
-<span class="span">10%+ stabilized yields targeted</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0021">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">ATM equity issuance raises ~$1.3B to fund growth</span>
-<span class="badge">financing</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="mag">$1.3B · other</span> <span class="badge">neutral</span></div>
-<p class="narr">Since year-end 2025, DLR issued 7.3 million shares via its ATM program for approximately $1.3B in proceeds to support growth initiatives.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">7.3 million shares under its ATM program</span>
-<span class="span">~$1.3 billion of proceeds to support growth</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0022">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">AI demand advances from pilot to production</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management stated that customer AI demand has shifted from pilots to production, signaling a durable consumption trend for capacity and interconnection.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Demand has definitely converted from pilot to production.</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0023">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Hyperscale contracts ~15 years; escalators ≥3%</span>
-<span class="badge">customer_adoption</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">DLR described hyperscale contract tenors of roughly 15 years with escalators at or above 3%, supporting long-duration, inflation-protected cash flows.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">hyperscale contracts are, call it, 15 years</span>
-<span class="span">escalators are certainly 3% or maybe even higher</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0024">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Pricing power outpaces build-cost inflation</span>
-<span class="badge">other</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management noted market rent growth remains ahead of build-cost inflation, supporting development economics amid elevated AI demand.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">market rent growth outpacing inflationary pressure in build costs</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0025">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Risk: 19-month sign-to-commence driven by single 200 MW phased lease</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
-<p class="narr">The elevated ~19-month average sign-to-commence interval was mainly due to one 200 MW lease commencing in phases into 2028, adding timing risk to revenue recognition.</p>
-<details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">~19‑month average sign‑to‑commence interval</span>
-<span class="span">single 200 MW lease</span>
-<span class="span">commences in phases into 2028</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0026">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Installed base ~3 GW; 1.2 GW under construction ~60% pre-leased</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">DLR framed roughly 3 GW operating capacity, ~6 GW owned, and 1.2 GW under construction that is approximately 60% pre-leased, underscoring scale and visibility.</p>
-<details>
-<summary>evidence — 1 source(s), 4 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">roughly 3 GW operating</span>
-<span class="span">~6 GW owned</span>
-<span class="span">1.2 GW under construction</span>
-<span class="span">~60% pre‑leased</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0027">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Atlanta mega-campus land bank (~873 acres)</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Management cited an approximately 873-acre, contiguous land bank in Greater Atlanta, reinforcing future expansion capacity in a key AI/cloud market.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">~873‑acre land bank</span>
-<span class="span">one contiguous parcel in Greater Atlanta</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0028">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Risk: power and project timing could delay commencements</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">DLR flagged risks around project timing, power availability, and delivery that could delay commencements and push revenue recognition.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">Project timing, power availability, and delivery risks could delay commencements</span>
-<span class="span">19‑month average lag from sign to start</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0029">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">Risk: concentration from largest hyperscale lease and &gt;1MW mix</span>
-<span class="badge">risk</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
-<p class="narr">Management noted that the quarter’s very large hyperscale lease and a mix weighted to &gt;1MW deployments elevate concentration risk.</p>
-<details>
-<summary>evidence — 1 source(s), 2 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">largest hyperscale lease in company history</span>
-<span class="span">mix weighted to &gt;1 MW deployments</span>
-</details>
-</div>
-<div class="event t-single_source" id="E0030">
-<div class="ev-top">
-<span class="date">2026-04-23</span>
-<span class="eh">APAC expansion: 15 MW development in Cyberjaya (Malaysia)</span>
-<span class="badge">infra_deal</span>
-<span class="badge b-single_source">single source</span>
-</div>
-<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Digital Realty announced a subsequent 15 MW development in Cyberjaya, expanding AI-ready capacity in the APAC region.</p>
-<details>
-<summary>evidence — 1 source(s), 1 span(s)</summary>
-<div class="ev-src">filings[0]</div>
-<span class="span">15 MW development in Cyberjaya</span>
-</details>
-</div>
 </div>
 <div class='phase'>
-<h2>Ecosystem validation and AI colocation positioning</h2>
-<div class='range'>2026-05-01 → 2026-06-20</div>
-<div class='psum'>Digital Realty’s positioning as an AI colocation provider was reinforced by its NVIDIA DGX-Ready partnership messaging and a CoreWeave case study highlighting rapid deployment of high-density colocation on PlatformDIGITAL. These materials underscore the company’s role in enabling GPU-intensive AI workloads and accelerating customer time-to-value.</div>
-<div class="event t-web_only_verified" id="E0031">
+<h2>AI cloud customers and partner ecosystem</h2>
+<div class='range'>2025-08-01 → 2025-10-13</div>
+<div class='psum'>Evidence of AI cloud customer demand included third-party reporting that CoreWeave leases capacity from multiple providers including Digital Realty. Digital Realty also announced a strategic partnership with Vultr to deploy GPU-accelerated AI infrastructure on PlatformDIGITAL across key markets. Additionally, Digital Realty partnered with Lumen to expand its Private AI Exchange (AIPx), adding rapid deployment and high-capacity connectivity to more than 700 locations.</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
 <div class="ev-top">
-<span class="date">2026-05-01</span>
-<span class="eh">NVIDIA DGX-Ready AI colocation positioning on PlatformDIGITAL</span>
+<span class="date">2025-10-13</span>
+<span class="eh">DLR and Lumen expand Private AI Exchange (AIPx) reach</span>
 <span class="badge">product_integration</span>
 <span class="badge b-web_only_verified">web-only (verified)</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">Digital Realty highlighted its collaboration with NVIDIA as a DGX-Ready AI colocation provider designed to support scalable power, processing, and cooling for AI workloads on PlatformDIGITAL.</p>
-<p class="cav">⚠ Web resource date not specified; treated as positioning current in 2026.</p>
+<p class="narr">Digital Realty partnered with Lumen to expand its AIPx ecosystem, connecting enterprise customers to over 700 locations with rapid deployment and high-capacity connectivity for AI-ready data services.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
 <details>
-<summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[9]</div>
-<span class="span">DGX-Ready AI colocation provider</span>
-<span class="span">PlatformDIGITAL®</span>
-<span class="span">In partnership with NVIDIA</span>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[13]</div>
+<span class="span">expanding its Private AI Exchange (AIPx) ecosystem</span>
+<span class="span">over 700 locations</span>
+<span class="span">high-capacity connectivity</span>
+<span class="span">forward-looking statements</span>
 </details>
 </div>
-<div class="event t-web_only_unverified" id="E0032">
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
 <div class="ev-top">
-<span class="date">2026-06-20</span>
-<span class="eh">CoreWeave case study: high-density AI colocation accelerates outcomes</span>
-<span class="badge">customer_adoption</span>
+<span class="date">2025-08-27</span>
+<span class="eh">Digital Realty and Vultr partner on GPU-accelerated AI infrastructure</span>
+<span class="badge">product_integration</span>
 <span class="badge b-web_only_unverified">web-only (unverified)</span>
 </div>
 <div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
-<p class="narr">A Digital Realty case study (CoreWeave) describes rapid revenue attainment via high-density colocation on PlatformDIGITAL, crediting expert solution design and reduced deployment time.</p>
-<p class="cav">⚠ Case study language is French; performance claims are customer-reported.</p>
+<p class="narr">Digital Realty and Vultr announced deployment of enterprise-ready, GPU-accelerated AI infrastructure on PlatformDIGITAL, including NVIDIA HGX B200 and AMD Instinct MI325X systems, with integration to ServiceFabric and the AI Private Exchange (AIPx).</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[14]</div>
+<span class="span">strategic partnership with Vultr</span>
+<span class="span">GPU-accelerated AI infrastructure</span>
+<span class="span">NVIDIA HGX B200 and AMD Instinct™ MI325X</span>
+<span class="span">ServiceFabric®</span>
+<span class="span">AI Private Exchange (AIPx)</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-01</span>
+<span class="eh">CoreWeave footprint spans multiple landlords including Digital Realty</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Data Center Dynamics reported that CoreWeave’s leased estate includes several providers such as Digital Realty, underscoring rising third-party AI infrastructure demand across the sector.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ Indirect reference; not a DLR-specific lease disclosure. Magnitudes cited pertain to another operator.</p>
 <details>
 <summary>evidence — 1 source(s), 3 span(s)</summary>
-<div class="ev-src">web_search_findings[11]</div>
-<span class="span">Cas client — CoreWeave atteint rapidement ses objectifs</span>
-<span class="span">colocation High-Density sur PlatformDIGITAL®</span>
-<span class="span">réduire de moitié le temps de déploiement prévu</span>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">lease an additional 150MW of capacity</span>
+<span class="span">CoreWeave leases data center space from the likes of</span>
+<span class="span">Digital Realty</span>
 </details>
 </div>
 </div>
-<section class='block'><h2>Channel addressability (23)</h2><table class='ch'>
+<div class='phase'>
+<h2>AI compute hosting and Azure on-ramps</h2>
+<div class='range'>2024-04-02 → 2025-04-24</div>
+<div class='psum'>Digital Realty was selected to host a state-of-the-art NVIDIA-powered AI supercomputer in Copenhagen, enhancing its role in supporting cutting-edge AI research and compute-intensive workloads with renewable-powered infrastructure. The system features NVIDIA DGX SuperPOD architecture with H100 GPUs and Quantum-2 InfiniBand networking.
+In parallel, Digital Realty expanded Microsoft Azure ExpressRoute connectivity with new peering locations in Atlanta, Brussels, and Vienna, growing to 15 Azure cloud on-ramps and promoting low-latency, secure private access pathways foundational for hybrid IT and future private AI capabilities.</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-04-24</span>
+<span class="eh">Three new Azure ExpressRoute on-ramps on PlatformDIGITAL</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Digital Realty added Microsoft Azure ExpressRoute peering in Atlanta, Brussels, and Vienna, bringing its total hosted Azure on-ramps to 15 and reinforcing private, low-latency connections suited for hybrid IT and emerging private AI use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Microsoft Azure ExpressRoute peering locations in Atlanta, Brussels, and Vienna</span>
+<span class="span">now hosts 15 Azure ExpressRoute cloud on-ramps</span>
+<span class="span">ServiceFabric®</span>
+<span class="span">lowest latency and most highly secure path</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2024-04-02</span>
+<span class="eh">DLR to host NVIDIA-powered AI supercomputer in Denmark</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The Novo Nordisk Foundation and EIFO selected a Digital Realty data center in Copenhagen to host an NVIDIA DGX SuperPOD-based AI supercomputer with H100 GPUs and Quantum-2 InfiniBand, supporting researchers across Denmark’s public and private sectors.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">selected to host one of the world&#x27;s most powerful AI supercomputers</span>
+<span class="span">Copenhagen, Denmark</span>
+<span class="span">NVIDIA DGX SuperPOD</span>
+<span class="span">over 1,500 NVIDIA H100 Tensor Core GPUs</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>OCI connectivity expansion</h2>
+<div class='range'>2023-02-28 → 2023-02-28</div>
+<div class='psum'>Digital Realty added Oracle Cloud Infrastructure (OCI) connectivity in Chicago via FastConnect at 350 E. Cermak. This extended Oracle access to nine FastConnect PoPs hosted on Digital Realty’s global platform, broadening choices for enterprise hybrid cloud architectures relevant to AI data pipelines.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2023-02-28</span>
+<span class="eh">Access to Oracle Cloud via FastConnect in Chicago</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Digital Realty began offering connectivity to an OCI FastConnect PoP in the Oracle Cloud Chicago Region, located at 350 E. Cermak, expanding its hosted OCI FastConnect presence across four continents.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Oracle Cloud Chicago Region</span>
+<span class="span">Oracle Cloud Infrastructure (OCI) FastConnect point-of-presence (PoP)</span>
+<span class="span">350 E. Cermak Road</span>
+<span class="span">hosts nine OCI FastConnect PoPs</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational cloud interconnects</h2>
+<div class='range'>2019-05-09 → 2021-03-23</div>
+<div class='psum'>Digital Realty established foundational private connectivity to major public clouds. In 2019, the company achieved the AWS Direct Connect Service Delivery designation, enabling customers to connect privately to AWS through Digital Realty’s interconnection platforms.
+In 2021, Digital Realty expanded secure, private access to Google Cloud’s global network with new on-ramps across multiple metros, reinforcing low-latency hybrid networking paths that are prerequisites for modern AI and data workloads.</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-03-23</span>
+<span class="eh">New direct connections to Google Cloud across five key metros</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Digital Realty expanded secure, private access to Google Cloud with new on-ramps across Atlanta, Los Angeles, Vienna, Düsseldorf and an additional interconnect in Frankfurt, enabling direct, high-speed, low-latency hybrid connections.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure · GEM <b>3</b></span> <span class="chchip">product_integration_exposure · GEM <b>3</b></span> <span class="chchip">customer_experience_enhancement · GEM <b>2</b></span> <span class="chchip">provider_specificity · GEM <b>1</b></span> <span class="chchip">multi_model_hedge · GEM <b>4</b></span> <span class="chchip">switching_flexibility · GEM <b>3</b></span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">expanded secure, private access to Google Cloud&#x27;s global network</span>
+<span class="span">on-ramps will enable direct, high-speed, low-latency connections</span>
+<span class="span">Atlanta and Los Angeles</span>
+<span class="span">Digital Realty Internet Exchange (DRIX)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2019-05-09</span>
+<span class="eh">Digital Realty achieves AWS Direct Connect Service Delivery designation</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Digital Realty was recognized for AWS Direct Connect Service Delivery, authorizing it to provision higher-capacity hosted connections and enabling enterprises to establish private, high-performance links to AWS via Digital Realty’s Service Exchange.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Service Delivery designation for AWS Direct Connect</span>
+<span class="span">greater than 500 Mbps</span>
+<span class="span">connect to AWS privately via dedicated connections</span>
+<span class="span">Digital Realty Service Exchange</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
 <tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
 <tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
 <tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
 <tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
-<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
-<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
 <tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0032'>E0032</a></td></tr>
-<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
 <tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0027'>E0027</a>, <a class='evref' href='#E0030'>E0030</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0031'>E0031</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
 <tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
-<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
 <tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
 <tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
 <tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
 <tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
 <tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0023'>E0023</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
 <tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
 <tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Net exposure by cluster (scored)</h2>
+<table class='ch'><tr><td class='k'>cluster \ provider</td><td><b>OAI</b></td><td><b>ANT</b></td><td><b>GEM</b></td><td><b>LLA</b></td><td><b>XAI</b></td><td><b>DSK</b></td></tr>
+<tr><td class='k'>Equity</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Infra/Capex</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Product&amp;Dist</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>CompetCannib</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>Content&amp;Reg</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><td class='k'>× Concentration</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr>
+<tr><td class='k'>× Durability</td><td>0.73</td><td>0.73</td><td>0.73</td><td>0.73</td><td>0.73</td><td>0.73</td></tr>
+<tr><td class='k'>NET effective</td><td>0</td><td>0</td><td>0.2726</td><td>0</td><td>0</td><td>0</td></tr>
 </table></section>
 <section class='block'><h2>Open questions</h2><ul class='q'>
 <li>Who is the counterparty behind the single 200 MW phased lease driving the 19-month lag, and what is the detailed phasing schedule into 2028?</li>
@@ -685,4 +739,19 @@ The company guided 2026 net development CapEx to $3.5–$4.0 billion with target
 <li>Third-party reporting on CoreWeave references Digital Realty among multiple landlords and should be viewed as indirect exposure rather than a DLR-specific contract disclosure.</li>
 <li>Select magnitudes reflect ranges or directional figures from management commentary (e.g., CapEx range, under-construction program size) and may not represent fixed commitments.</li>
 </ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
 </div></body></html>

@@ -1,0 +1,428 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>AMT US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>American Tower Corp <span class='sub'>(AMT US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.392</div>
+</header>
+<div class='stats'>
+<span class='chip'>2 phases</span>
+<span class='chip'>15 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 8</span>
+<span class='chip'>single source: 7</span>
+<span class='chip'>web-only (unverified): 4</span>
+<span class='chip'>web-only (verified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>2026 AI demand inflection: Google peering gold, capex scale-up, and interconnection growth</h2>
+<div class='range'>2026-03-24 → 2026-06-30</div>
+<div class='psum'>In early 2026, CoreSite became a Google Gold Verified Peering Provider, one of the first carrier-neutral operators in North America to reach this tier, reinforcing low-latency access to Google services including Google Cloud. Google Cloud documentation concurrently listed multiple CoreSite facilities, such as Reston (VA3), as supported locations for Dedicated Interconnect up to 400 Gbps, and CoreSite’s own product pages emphasized ML service access and up to 100 GBps connectivity across key campuses.
+American Tower’s Q1 2026 results highlighted accelerating AI-related tailwinds: record construction activity at CoreSite, interconnection activity inflecting with supportive pricing and stickiness, and robust data center segment growth. Management committed $695 million of 2026 capex to data centers, while data center property revenues reached $289 million in the quarter, up 18.4% year-over-year. Management also noted an uptick in permitting, but said it hasn’t led to project scrappage. A CoreSite blog flagged governance risks from public GenAI tools like OpenAI’s ChatGPT, noting that organizations are adopting private GenAI tools to contain data exposure.</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">CoreSite flags data-governance risks from public GenAI tools like ChatGPT</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">A CoreSite blog highlighted enterprise data-governance risks from public GenAI tools, noting that employees may unknowingly expose proprietary data when using ChatGPT. The post says many organizations, including CoreSite, are adopting private GenAI tools to mitigate these risks.</p>
+<div class="ev-ch">channels: <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Blog content reflects CoreSite perspective; illustrative risk rather than a quantified incident.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">OpenAI was adopted at a record pace.</span>
+<span class="span">more than 80% of businesses have embraced AI</span>
+<span class="span">risks OpenAI can create.</span>
+<span class="span">upload proprietary information or data into ChatGPT</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0013" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Google Cloud docs list CoreSite Reston (VA3) for Dedicated Interconnect up to 400 Gbps</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$400 · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google Cloud documentation identifies CoreSite’s Reston (VA3) facility as a colocation site for Dedicated Interconnect supporting 10/100/400 Gbps, reinforcing CoreSite’s role in private on-ramps for Google services including ML workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Dedicated Interconnect connections are available from 161 locations.</span>
+<span class="span">CoreSite - Reston (VA3)</span>
+<span class="span">10 Gbps</span>
+<span class="span">100 Gbps</span>
+<span class="span">400 Gbps</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0014" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Any2Exchange participant list shows Meta peering presence</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">CoreSite’s Any2Exchange participant roster includes Meta Platforms (ASN 32934), indicating active peering in its interconnection fabric. This broadens CoreSite’s ecosystem relevance to AI-oriented platforms.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span></div>
+<p class="cav">⚠ Participant lists can change over time; snapshot as of the cited page date.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Meta Platforms, Inc. (formerly Facebook, Inc.)</span>
+<span class="span">Any2West</span>
+<span class="span">32934</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0015" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">CoreSite markets Google Cloud Interconnect for ML services with up to 100 GBps</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100 · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CoreSite’s product page highlights Google Cloud Interconnect as a dedicated onramp for computing, data analytics, and machine learning services, with on-demand connections and up to 100 GBps capacity across key campuses via the Open Cloud Exchange.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Low-Latency, Private, High-Performance Connectivity</span>
+<span class="span">machine learning services.</span>
+<span class="span">Open Cloud Exchange®</span>
+<span class="span">up to 100GBps</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">AMT sets 2026 plan with $695m data center development capex</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$695M · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">American Tower’s 2026 capex plan totals $1.8–$1.91 billion, including $695 million for data centers alongside construction of 1,700–2,300 sites. This underwrites CoreSite capacity additions to address AI, cloud, and interconnection demand.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">2026 capex $1,800–$1,910m (incl. $695m for Data Centers</span>
+<span class="span">plan to construct 1,700–2,300 sites).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Data Centers property revenue reaches $289m in Q1 2026</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$289M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">American Tower reported Q1 2026 Data Centers segment property revenue of $289 million, reflecting strong demand for interconnection and hybrid IT workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q1 2026 segment revenues (property/services, $m):</span>
+<span class="span">Data Centers $289</span>
+<span class="span">Total revenue $2,738.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Data Centers revenue grows +18.4% YoY</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$18 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CoreSite’s momentum continued with Data Centers revenue up 18.4% year-over-year in Q1 2026, supported by rising interconnection and hybrid workloads tied to AI and cloud adoption.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Data Centers +18.4% (289 vs 244)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Management cites AI-driven workloads as secular tailwind</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">American Tower highlighted secular tailwinds from mobile data growth, cloud adoption, and AI-driven workloads in Q1 2026, reinforcing multi-year demand visibility for CoreSite’s interconnection campuses.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">secular tailwinds</span>
+<span class="span">AI-driven workloads.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">CoreSite construction running at record pace</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted CoreSite has executed more construction over the past couple of years than at any time in its history, reflecting robust capacity expansion to meet AI, cloud, and interconnection demand.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">more construction over the past couple of years than at any time in CoreSite history.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Permitting uptick noted; no project scrappage issues</span>
+<span class="badge">regulatory</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">American Tower observed an uptick in permitting activity but stated it hasn’t been an issue requiring project scrappage, citing company expertise in navigating local concerns.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">On permitting, management noted an uptick</span>
+<span class="span">hasn’t been an issue</span>
+<span class="span">project scrappage</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Interconnection inflects; pricing and stickiness supported</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">CoreSite’s interconnection activity is inflecting, with supportive pricing and stickiness. Management referenced longer-dated land/power procurement and record recent construction underpinning capacity additions.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">interconnection activity is inflecting, supportive of pricing and stickiness.</span>
+<span class="span">Longer-dated land/power procurement</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">CoreSite attains Google Gold Verified Peering Provider status</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CoreSite achieved Google Gold Verified Peering Provider certification, positioning it as one of the first carrier-neutral data center operators in North America to offer simplified, enterprise-grade connectivity to Google’s internet-based services, including Google Cloud. This strengthens CoreSite’s role in high-performance routes critical to AI workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Google Gold Verified Peering Provider</span>
+<span class="span">one of the first, carrier-neutral</span>
+<span class="span">Simplified, Enterprise-Grade Connectivity</span>
+<span class="span">CoreSite achieved Google Gold VPP status</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Pre-genAI cloud interconnect build-out and campus expansions</h2>
+<div class='range'>2021-07-20 → 2023-12-12</div>
+<div class='psum'>American Tower’s CoreSite subsidiary deepened its role as a neutral interconnection platform for hyperscale clouds ahead of the generative AI surge. In 2021, CoreSite brought Google Cloud Dedicated Interconnect on-net to its Silicon Valley campus and expanded Partner Interconnect access via the Open Cloud Exchange, enabling private, low-latency connectivity up to 100 Gbps.
+Through 2023, CoreSite enhanced its software-defined networking capabilities to offer higher-bandwidth virtual connections with Google Cloud (20G and 50G) to support AI/ML and other high-bandwidth applications. It also announced major campus expansions in New York and Denver—adding 685,000 square feet—to address growing capacity and power demand from public and private cloud providers and enterprises, explicitly citing increased AI adoption.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2023-12-12</span>
+<span class="eh">CoreSite announces major New York and Denver campus expansions amid AI-driven demand</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$685,000 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">CoreSite detailed expansions that will add 685,000 square feet across New York and Denver to meet surging capacity and power needs from public/private clouds and enterprises. The company cited increased AI adoption and named hyperscale clouds present in the ecosystem, reinforcing demand tailwinds for AMT’s interconnection data centers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">December 12, 2023</span>
+<span class="span">685,000 Square Feet</span>
+<span class="span">including AWS, Google Cloud, Microsoft Azure and Oracle Cloud.</span>
+<span class="span">increased adoption of artificial intelligence</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-10-10</span>
+<span class="eh">CoreSite launches OCX 20G/50G virtual connections with Google Cloud</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$50 · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CoreSite introduced enhanced Open Cloud Exchange capabilities enabling rapid creation of higher-bandwidth virtual connections to Google Cloud at 20G and 50G, targeted at AI/ML and other low-latency applications. The move reduces time to scale capacity and supports the next wave of AI-driven workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Bandwidth Connections Up to 50G</span>
+<span class="span">20G and 50G services.</span>
+<span class="span">artificial intelligence (AI), machine learning</span>
+<span class="span">Open Cloud Exchange®</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-07-20</span>
+<span class="eh">CoreSite adds Google Cloud Dedicated Interconnect on-net at Silicon Valley campus</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100 · other</span> <span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">CoreSite announced on-net availability of Google Cloud Dedicated Interconnect at its Silicon Valley campus, along with Partner Interconnect access via the Open Cloud Exchange, supporting secure, low-latency connectivity up to 100 Gbps. This strengthened CoreSite’s position as a neutral platform for enterprise and cloud workloads.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Google Cloud Dedicated Interconnect</span>
+<span class="span">Silicon Valley</span>
+<span class="span">up to 100Gbps</span>
+<span class="span">Partner Interconnect</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0011'>E0011</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0011'>E0011</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What proportion of CoreSite’s Data Centers revenue is directly attributable to AI/ML workloads versus general enterprise or network interconnection use cases?</li>
+<li>Beyond peering and interconnect, does AMT/CoreSite have any direct commercial partnerships or multi-year commitments with OpenAI, Anthropic, or Meta related to model hosting or specialized AI infrastructure?</li>
+<li>How is the $695m 2026 data center capex allocated among land/power procurement, construction fit-out, and network/interconnection investments, and what is the expected in-service timing?</li>
+<li>What is the sensitivity of CoreSite’s interconnection pricing and utilization to hyperscaler procurement cycles and potential self-build or single-tenant facilities in AMT markets?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>A significant portion of the 2023–2026 evidence originates from CoreSite or Business Wire press materials; independent third-party corroboration is limited.</li>
+<li>Interconnect capacity figures (e.g., 100/400 Gbps) reflect supported maxima and may not indicate customer-specific deployments.</li>
+<li>Any2Exchange participant rosters are dynamic and may change; observations are as of the cited page snapshot.</li>
+<li>Filings reference AI tailwinds qualitatively without discrete AI revenue disclosure or backlog detail.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

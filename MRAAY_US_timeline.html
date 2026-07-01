@@ -1,0 +1,543 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>MRAAY US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Murata Manufacturing Co Ltd <span class='sub'>(MRAAY US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.365</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>20 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 6</span>
+<span class='chip'>single source: 10</span>
+<span class='chip'>web-only (unverified): 5</span>
+<span class='chip'>corroborated: 4</span>
+<span class='chip'>web-only (verified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>AI server capacitor surge, program reset/succession, and capacity expansions</h2>
+<div class='range'>2026-01-01 → 2026-06-30</div>
+<div class='psum'>In FY2025–FY2027 disclosures (released April 30, 2026), Murata reported a sharp acceleration in AI/data-center MLCC demand: sales growth of roughly 85–90% y/y and guidance suggesting “doubling-like” trajectories over the next 2–3 years, supported by stronger Q4 orders tied to clearer AI server counts and early buys. Pricing held firm in data-center MLCCs with no requests for price cuts and ASP uplift from mix/miniaturization. Management targeted sustained high utilization (~90–95%) and asserted ability to meet smartphone/auto commitments while ramping servers. Capacity overlaps with auto are limited mainly to higher-voltage server MLCCs.
+A hyperscaler power-module first program was dropped near mass production due to a firmware issue/short life, but a larger successor with the same customer was set to start around June, with 2–3 certified suppliers. Murata prioritized capacitor and power-module growth with additional capex of about ¥80bn across FY2026–FY2027 and another ¥80bn across FY2027–FY2028. Markets reacted positively, with shares up nearly 14% on May 29, 2026 alongside AI component strength. The company also sought AI/ML talent with multi-model LLM fluency, including OpenAI, Llama, Gemini, and Claude.</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-29</span>
+<span class="eh">Shares jump nearly 14% on AI device demand momentum</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Murata’s stock rallied alongside AI component peers as investors priced in AI phone/auto demand and broader AI value chain strength in Japan.</p>
+<p class="cav">⚠ Market moves reflect sentiment and may not be solely attributable to Murata-specific fundamentals.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">Murata Manufacturing soars nearly 14 percent</span>
+<span class="span">components rally on AI phone/auto demand</span>
+<span class="span">Murata +13.9 percent</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">AI/data-center MLCC sales up ~85–90% y/y; 2–3 years could be “doubling-like”</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management lifted expectations for AI/data-center MLCCs, citing roughly 85–90% year-on-year sales growth and describing the next 2–3 years as potentially “doubling-like,” albeit with limited visibility beyond that horizon.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">roughly 85–90% year-on-year sales growth</span>
+<span class="span">next 2–3 years</span>
+<span class="span">“doubling-like”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Q4 orders boosted by clearer AI server counts and early buys</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Murata attributed Q4 order strength to greater clarity on AI server unit counts and some early-buy behavior amid talk of price increases.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Q4 order strength</span>
+<span class="span">AI server unit counts</span>
+<span class="span">early-buy behavior</span>
+<span class="span">price increases</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">MLCC orders rose sharply in Q4 on hyperscaler strength</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported Q4 MLCC orders rose sharply quarter-on-quarter, consistent with strength from hyperscaler customers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">rose sharply QoQ</span>
+<span class="span">strength from hyperscalers</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Data-center MLCC pricing firm; no requests to lower prices; ASP uplift from mix</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Murata emphasized procurement priority over price in data-center MLCCs, noting no requests to lower prices and ASP uplift from mix/miniaturization. Earlier remarks similarly stated customers prioritize procurement and had not requested price cuts.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1], filings[0]</div>
+<span class="span">“there have been no requests to lower prices”</span>
+<span class="span">ASP uplift</span>
+<span class="span">customers prioritize procurement</span>
+<span class="span">have not received requests to lower prices</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Server MLCC capacity overlap limited mainly to higher-voltage with auto</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Murata clarified that low-voltage server MLCC capacity does not overlap with auto, while overlap exists mainly at higher voltages; this limits cross-application contention.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1], filings[0]</div>
+<span class="span">low‑voltage server MLCCs</span>
+<span class="span">does not overlap with auto</span>
+<span class="span">high‑voltage server MLCCs overlap</span>
+<span class="span">cross‑application contention</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">High utilization maintained; Q4 FY2025 near 95%, plan ~90–95% going forward</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Murata reported Q4 FY2025 MLCC utilization close to 95% and plans to sustain roughly 90–95% as server MLCC demand stays strong.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">close to 95%</span>
+<span class="span">sustain roughly 90–95%</span>
+<span class="span">high utilization (~90–95%)</span>
+<span class="span">demand stays strong</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Capacity additions enable ramp of servers while meeting smartphone/auto commitments</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said capacity additions and process improvements allow supply of committed volumes to smartphone/auto customers while ramping servers; low-voltage server lines do not compete with automotive lines.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">supply committed volumes</span>
+<span class="span">ramping servers</span>
+<span class="span">do not compete for the same lines</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Risk: first-gen hyperscaler power-module dropped near mass production</span>
+<span class="badge">risk</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">A first-generation power-module program for a hyperscaler was dropped due to a firmware defect/issue and the platform’s short lifecycle; volume was covered by an already-approved/certified supplier.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 5 span(s)</summary>
+<div class="ev-src">filings[1], filings[0]</div>
+<span class="span">first project was dropped</span>
+<span class="span">firmware defect</span>
+<span class="span">near mass-production</span>
+<span class="span">first‑generation module was dropped</span>
+<span class="span">already certified vendor</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Successor hyperscaler power-module slated ~June start; larger volume; 2–3 suppliers</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">A successor power module with the same customer is targeted to begin around June with larger expected volume. Management noted 2–3 certified suppliers would participate.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Competitive supplier set (2–3) may temper ultimate share/margin.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], filings[1]</div>
+<span class="span">targeted to start around June</span>
+<span class="span">larger expected volume</span>
+<span class="span">slated to begin around June</span>
+<span class="span">2–3 certified suppliers</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Additional ~¥80bn capacitor capex planned for FY2026–FY2027</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$80.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Murata outlined additional capacitor investments totaling about JPY80bn over FY2026–FY2027, implying just over 20% load-basis capacity increase across two years.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">about JPY80bn</span>
+<span class="span">FY2026–FY2027</span>
+<span class="span">just over 20%</span>
+<span class="span">+10–15%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Approximately ¥80bn incremental capacitor investments in FY2027–FY2028</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$80.0B · capex</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Murata prioritized data-center capacitors and power modules with approximately ¥80bn of incremental capacity investments across FY2027–FY2028, including about ¥40bn in FY2027.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">approximately ¥80bn</span>
+<span class="span">FY2027–FY2028</span>
+<span class="span">about ¥40bn</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">FY2027 guide: server-capacitor sales ~85–90% YoY; ASP up ~5–10%</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Murata guided for FY2027 server-related capacitor sales to rise roughly 85–90% YoY, with overall capacitor ASP up about 5–10%, reflecting strong AI server mix and pricing.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">server-related capacitor sales expected to rise ~85–90% YoY</span>
+<span class="span">FY2027</span>
+<span class="span">ASP up ~5–10%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-30</span>
+<span class="eh">Risk: FY2027 growth depends on AI data-center demand</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management cautioned that FY2027 growth is predicated on data-center/AI demand, with guidance hinging on strong server-related capacitor sales and ASP gains.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">predicated on data-center/AI demand</span>
+<span class="span">server-related capacitor sales up ~85–90% YoY</span>
+<span class="span">ASP gains</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="openai_chatgpt meta_llama google_gemini_deepmind anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-04-13</span>
+<span class="eh">Murata posts AI/ML intern role citing OpenAI, Llama, Gemini, and Claude</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">A U.S. job listing sought an AI/ML intern to work with LLMs from OpenAI, Llama, and Gemini, develop agent frameworks using Agentic AI, and noted familiarity with models including GPT5, Llama, Gemini, and Claude.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<p class="cav">⚠ Job postings can change or be removed; details reflect the posting as captured.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">large language models (LLMs) from sources such as OpenAI, Llama, and Gemini.</span>
+<span class="span">Agentic AI</span>
+<span class="span">GPT5, Llama, Gemini, and Claude.</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Applied LLM R&amp;D and privacy tooling</h2>
+<div class='range'>2025-01-01 → 2025-12-31</div>
+<div class='psum'>Murata described research on personal-information masking using generative AI, developing a small language model specialized for PII extraction in internal documents through PEFT and fine-tuning of open-source and Japan-focused SLMs, exemplified by Llama-family models. This work supports secure internal data processing aligned with privacy needs.</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2025-09-11</span>
+<span class="eh">Murata develops PII masking approach using fine-tuned Llama-family SLMs (PEFT)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">meta_llama</span></div>
+<p class="narr">In a technical article, Murata reported building a privacy-focused SLM using PEFT and subsets of proprietary datasets, noting the rapid progress of GenAI including ChatGPT, and highlighting usage of Llama-family models in the solution.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>Llama系モデル</span>
+<span class="span">PEFT</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>個人情報</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>生成AI</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Enterprise GenAI enablement and DX</h2>
+<div class='range'>2023-01-01 → 2024-06-30</div>
+<div class='psum'>Murata began formal enterprise use of generative AI via Microsoft’s Azure OpenAI Service, launching a trial of “Murata Copilot powered by ChatGPT” for roughly 30,000 domestic employees to improve productivity in development and document work. The service was run within a private Azure environment with data protection controls.
+By early 2024, Murata’s DX leadership reported company-provided access to ChatGPT as part of a broader program to democratize IT usage, strengthen cloud utilization, and enhance security. These steps institutionalized GenAI usage patterns across the organization.</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-02-22</span>
+<span class="eh">DX program: Murata provides ChatGPT internally with supporting cloud and security measures</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Murata’s DX leadership highlighted company-provided access to ChatGPT, along with initiatives to build a cloud utilization structure and strengthen security, supporting democratized access to digital technologies across the company.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>ChatGPTを提供しています</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>クラウド活用推進体制</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>セキュリティ強化</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-07-03</span>
+<span class="eh">Murata launches internal trial of ‘Murata Copilot powered by ChatGPT’ using Azure OpenAI</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Murata started a domestic trial of an enterprise GenAI service for about 30,000 employees, leveraging Azure OpenAI Service in a company-only Azure environment with data not used for training and purged after a period. The trial window was scheduled from July 3 to August 31, 2023.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Azure OpenAI Service</span>
+<span class="span">Murata Copilot powered by ChatGPT</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>国内従業員約3万人</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>2023年7月3日－8月31日（予定）</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Edge-AI hardware collaboration and recognition</h2>
+<div class='range'>2020-01-06 → 2022-12-31</div>
+<div class='psum'>Murata established an early position in edge AI by partnering with Google to package the Edge TPU into the Coral Accelerator Module, targeting on-device inference in space- and power-constrained deployments. This collaboration underscored Murata’s capability to miniaturize AI accelerators and integrate them into robust modules suitable for various industries.
+In 2022, Murata’s edge AI modules garnered industry recognition, winning the CEATEC AWARD 2022 Key Technology Grand Prix for two edge AI modules, including a variant featuring Google’s Edge TPU. These milestones anchored Murata’s role in enabling AI at the device edge, complementary to the later surge in data-center demand.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2022-10-17</span>
+<span class="eh">Murata wins CEATEC AWARD 2022 for edge AI modules including Coral-based Type1WV</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Murata received the CEATEC AWARD 2022 Key Technology Grand Prix for two edge AI modules, including Type1WV that incorporates Google’s Edge TPU to add inference offload to various SoCs via PCIe or USB, supporting compact, power-efficient edge devices.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">CEATEC AWARD 2022</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>キーテクノロジー部門 グランプリ</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>エッジAIモジュール「Type1WV」「Type2DA」</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>Googleが開発したEdge TPU</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2020-01-06</span>
+<span class="eh">Murata and Google launch Coral Accelerator Module for on-device AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Murata announced a partnership with Google to deliver the Coral Accelerator Module integrating Google’s Edge TPU in a miniaturized package, aimed at simplifying PCB design and enabling on-device AI across industries. The module was to be showcased at CES 2020 and made available for sale in early 2020.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">world’s smallest artificial intelligence (AI) module</span>
+<span class="span">Coral Accelerator Module</span>
+<span class="span">Google’s Edge TPU ASIC</span>
+<span class="span">available for sale in early 2020</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0019'>E0019</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0005'>E0005</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which hyperscaler(s) are tied to Murata’s dropped and successor power-module programs, and what share of volume might Murata secure versus 2–3 certified suppliers?</li>
+<li>How much of the ~¥80bn FY2026–FY2027 and ~¥80bn FY2027–FY2028 capex is specifically allocated to server MLCCs versus power modules, and what is the expected payback period?</li>
+<li>What proportion of Murata’s total capacitor revenue is represented by AI/data-center end-markets in FY2026 and guided FY2027?</li>
+<li>Beyond trials and internal provisioning, has Murata standardized on any LLM providers for production-grade workflows (e.g., OpenAI via Azure vs. in-house Llama variants)?</li>
+<li>Are there additional firmware or qualification risks in the successor power-module slated to start around June, and what mitigations are in place?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Some DX/AI adoption details are drawn from Japanese-language Murata articles; interpretations are constrained to verbatim excerpts.</li>
+<li>Capex figures are presented in JPY as disclosed; currency conversion to USD is not applied.</li>
+<li>Job posting details may change or be removed; they are included as captured.</li>
+<li>Earlier Google Coral collaboration predates the last 2–3 years but is included due to its relevance to Murata’s AI module capability.</li>
+<li>Management guidance and comments reflect forward-looking statements subject to demand variability in AI data centers.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

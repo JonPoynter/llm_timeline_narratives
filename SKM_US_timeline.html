@@ -1,0 +1,694 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>SKM US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>SK Telecom Co Ltd <span class='sub'>(SKM US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.379</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>30 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 1</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 12</span>
+<span class='chip'>single source: 19</span>
+<span class='chip'>web-only (verified): 11</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Infrastructure scaling, financial disclosure, and emerging regulatory risks</h2>
+<div class='range'>2026-05-07 → 2026-06-19</div>
+<div class='psum'>In Q1 2026, SKT reported rapid growth in AI Data Center (AIDC) revenue (+89% YoY) supported by high utilization and GPUaaS, while signaling plans to expand its footprint (Ulsan underway; additional Seoul capacity) and participate across the AI DC value chain. Management noted AIDC profitability is comparable to the core telecom business, but withheld detailed profitability KPIs, backlog, and capex guidance. Network strategy emphasized AI‑RAN research with Samsung, DOCOMO, and NVIDIA, cautioning that commercialization remains contingent on maturation, and that AI traffic share is still low.
+Separately, in June 2026, NVIDIA and SK Telecom announced plans to build a gigawatt‑scale AI cloud using NVIDIA’s DSX architecture, aiming for the first &quot;AI factory&quot; to come online in 2027. Shortly thereafter, press reporting described a regulatory flashpoint: Anthropic reportedly revoked SKT’s access to its Claude Mythos model at the U.S. government’s request, highlighting export‑control sensitivities and reputational risk around access to frontier models.</div>
+<div class="event t-web_only_verified" id="E0030" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-19</span>
+<span class="eh">Report: Anthropic revoked SKT access to Claude Mythos at U.S. request</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Press reporting indicated the U.S. government asked Anthropic to revoke SK Telecom’s access to its Claude Mythos model due to export‑control concerns; Anthropic reportedly complied immediately, highlighting regulatory and reputational risks around frontier model access.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<p class="cav">⚠ Single-source media report; details on scope/duration of revoked access not independently corroborated in filings.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">export controls on Anthropic’s most powerful AI technology</span>
+<span class="span">SK Telecom access to its Claude Mythos model</span>
+<span class="span">asked Anthropic to revoke SK Telecom’s access to Mythos</span>
+<span class="span">immediately complied</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-08</span>
+<span class="eh">NVIDIA and SK Telecom to build gigawatt‑scale AI cloud using DSX; first factory in 2027</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">NVIDIA announced SK Telecom will use its DSX architecture to build a gigawatt‑scale AI cloud, with the first AI factory slated to come online in 2027, positioning SKT for large‑scale AI infrastructure provisioning.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">use NVIDIA’s DSX architecture</span>
+<span class="span">gigawatt‑scale AI cloud</span>
+<span class="span">first AI factory slated to come online in 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Q1’26: AI Data Center revenue KRW 131.4bn, +89.3% YoY</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SKT disclosed AI Data Center revenue of KRW 131.4bn in Q1 2026, up 89.3% year over year, reflecting strong utilization trends within its AIDC footprint.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI Data Center revenue KRW 131.4bn (+89.3% YoY).</span>
+<span class="span">Company-specific KPIs</span>
+<span class="span">operating income KRW 116.6bn (+21.4% YoY)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Q1’26: AI B2B/B2C revenue 45.0, down 10.3% YoY</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">AI B2B/B2C revenue was reported at 45.0 for the quarter, down 10.3% year over year, indicating uneven momentum across SKT’s AI service lines versus the AIDC segment.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI B2B/B2C 45.0 (-10.3% YoY).</span>
+<span class="span">AI-related: AI Data Center 131.4 (+89.3% YoY); AI B2B/B2C 45.0 (-10.3% YoY).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">AIDC +89% YoY; GPUaaS and footprint expansion plan</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management attributed AIDC growth to higher utilization and GPU‑as‑a‑Service, outlining plans to expand the infrastructure footprint and strengthen capabilities across the AI data center value chain.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">supported by higher utilization and GPUaaS</span>
+<span class="span">plan to expand infrastructure footprint</span>
+<span class="span">across the AI DC value chain</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Consumer AI agent ‘A.’ continues leveraging in‑house foundation model</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">SKT reported ongoing enhancements of its consumer AI agent A., emphasizing use of an in‑house foundation model to power the service.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">consumer AI agent service ‘A.’</span>
+<span class="span">leveraging an in-house foundation model</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Enterprise organization integrated under CEO to accelerate AI B2B</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">SKT integrated its enterprise organization under the CEO to quicken AI B2B execution, signaling internal alignment for scaling enterprise AI solutions.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">integrated enterprise organization</span>
+<span class="span">reporting to the CEO</span>
+<span class="span">accelerate AI B2B</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">AIDC profitability said to be comparable to telecom; limited KPI disclosure</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">While the CFO stated AIDC profitability is comparable to SKT’s telecom business with room to improve, the company reiterated it only discloses AIDC revenue and not profitability KPIs.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">discloses AIDC revenue only</span>
+<span class="span">does not share profitability KPIs</span>
+<span class="span">comparable to the existing telecom business</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">AI‑RAN roadmap with Samsung, DOCOMO, NVIDIA; early stage caution</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">SKT’s network strategy highlighted AI‑RAN research and standardization with Samsung, DOCOMO and NVIDIA along two tracks, while noting the technology remains in an early stage.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Samsung, DOCOMO and NVIDIA</span>
+<span class="span">RAN as an AI services platform</span>
+<span class="span">AI‑RAN is still in an early stage.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">AI traffic share remains low</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management indicated that AI traffic currently represents a small portion of overall network traffic, underscoring early ecosystem adoption and distribution challenges.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">AI traffic share remains low</span>
+<span class="span">ongoing work on distribution</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Strong AIDC utilization and GPUaaS demand; no quantitative order metrics</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Forward indicators cited strong data center utilization, including the Gasan site, and continued GPUaaS demand, while noting the absence of disclosed order or booking metrics.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">strong AI data center utilization</span>
+<span class="span">continued GPUaaS demand</span>
+<span class="span">no quantitative order metrics provided</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">AIDC build‑out: Ulsan underway; additional DCs including Seoul; global partnerships</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SKT reported AIDC construction at Ulsan is underway and intends to scale with more data centers, including Seoul, while pursuing partnerships with global players.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">data_center_power_exposure</span> <span class="chchip">dependency_duration</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">construction at Ulsan underway</span>
+<span class="span">additional data centers (including Seoul)</span>
+<span class="span">pursue partnerships with global players</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">AI‑RAN commercialization contingent on maturation/validation</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">SKT emphasized ongoing AI‑RAN R&amp;D and standardization efforts, noting that commercialization depends on further maturation and validation of the technology.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">active participation in AI‑RAN R&amp;D/standardization</span>
+<span class="span">commercialization contingent on maturation and validation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">No AIDC profitability KPIs or timeline disclosed</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The company provided no margin or profitability KPIs for the AIDC business beyond revenue and did not specify a timeline for margin inflection.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">No AIDC margin/KPI disclosure beyond revenue</span>
+<span class="span">nor a timeline for when it turns meaningfully accretive</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">No quantified AIDC capex guidance for 2026 expansion</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">SKT did not provide quantitative capex guidance for AIDC expansion (Ulsan/Seoul) or network modernization in 2026.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">No quantified capex guidance for AIDC expansion (Ulsan/Seoul)</span>
+<span class="span">or network modernization in 2026.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">No backlog/RPO/bookings disclosure for AIDC</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The company does not report backlog, remaining performance obligations, or bookings for the AI data center business.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">does not report backlog, RPO, or bookings.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Enterprise AI tool adoption and AX call‑center transformation</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SKT reported organization‑wide AI tool adoption and call‑center AX transformation initiatives as part of productivity and cost‑efficiency programs.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">enterprise‑wide AI tool adoption</span>
+<span class="span">AX call‑center transformation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Outlook prioritizes scaling AI DC and AI B2B businesses</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management’s qualitative outlook includes scaling AI DC and AI B2B as part of restoring earnings and strengthening MNO profitability.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">prioritize restoring earnings</span>
+<span class="span">scale AI businesses (AI DC, AI B2B).</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">CFO targets FY26 improvement via AI business profitability and AI/AX efficiency</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">The CFO highlighted Q1 operating profit of KRW 537.6B and a goal to improve full‑year earnings through telecom fundamentals, structural profitability improvements in AI, and company‑wide AI/AX cost efficiency.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">operating profit of KRW 537.6B</span>
+<span class="span">structural profitability improvements in AI business</span>
+<span class="span">company‑wide AI/AX cost efficiency</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Risk: AIDC expansion capex and potential GPU/onboarding delays</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">SKT cautioned that rapid AIDC growth requires sustained capex and utilization, and that delays in footprint expansion, GPU supply, or customer onboarding could pressure returns.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">requires sustained capex and utilization</span>
+<span class="span">GPU supply</span>
+<span class="span">customer onboarding could pressure returns</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Ecosystem expansion: Perplexity, JV formation, and consumer AI agent upgrades</h2>
+<div class='range'>2024-02-26 → 2025-03-18</div>
+<div class='psum'>In 2024 SKT broadened its AI ecosystem by partnering with Perplexity to bring paid features to subscribers and by investing $10 million in the AI search startup, including commitments to provide Korean-language data to fine-tune models. The GTAA parties also signed a joint venture agreement with equal initial investments to co-develop and launch a multilingual Telco LLM for a combined reach of roughly 1.3 billion customers.
+On the consumer front, SKT revamped its A. personal assistant app to expose multiple LLM agents, including OpenAI’s ChatGPT variants and Anthropic’s Claude family, offered free of charge initially. In early 2025 SKT added Google’s Gemini 2.0 Flash, further strengthening a multi‑model integration strategy within A. and deepening optionality across providers.</div>
+<div class="event t-web_only_verified" id="E0010" data-providers="google_gemini_deepmind openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-03-18</span>
+<span class="eh">Google Gemini 2.0 Flash added to A.; SKT expands multi‑model lineup</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">SK Telecom added Google’s latest Gemini 2.0 Flash to the A. agent alongside existing options from OpenAI and Anthropic, reinforcing a multi‑model strategy that lets users compare and select responses across engines.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span nonlatin"><span class="tag">non-Latin</span>제미나이 2.0 플래시(Flash)</span>
+<span class="span">GPT 4o, 4o mini, o3-mini, o1-mini, o1-preview</span>
+<span class="span nonlatin"><span class="tag">non-Latin</span>클로드 3.5 Sonnet, 3.5 Haiku, 3 Opus</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0009" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2024-08-26</span>
+<span class="eh">SKT revamps A. app with seven multi‑LLM agents including ChatGPT and Claude</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">SK Telecom overhauled its A. personal assistant app to include seven multi‑LLM agents such as ChatGPT 3.5 turbo, ChatGPT 4o, Claude Haiku, Claude Opus, and Claude Sonnet, initially offered free of charge to enhance user experience.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">seven multi-LLM agents</span>
+<span class="span">ChatGPT 3.5 turbo, ChatGPT 4o, Claude Haiku, Claude Opus and Claude Sonnet</span>
+<span class="span">will be provided free of charge</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2024-06-19</span>
+<span class="eh">GTAA founders sign JV agreement to co-develop multilingual Telco LLM</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The GTAA founding parties, including SKT, signed a JV agreement with equal investments to develop and launch a multilingual Telco LLM and deploy AI applications across a combined footprint of approximately 1.3 billion customers in 50 countries.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">signed a Joint Venture agreement</span>
+<span class="span">equal investments</span>
+<span class="span">approximately 1.3 billion across 50 countries</span>
+<span class="span">co-develop and launch multilingual Large Language Models</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2024-06-13</span>
+<span class="eh">SKT invests $10 million in Perplexity; to support Korean data fine‑tuning</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10M · equity_stake</span> <span class="badge">positive_demand</span></div>
+<p class="narr">SK Telecom invested $10 million into Perplexity and agreed to provide Korean-language data and cultural content to help fine-tune Perplexity’s LLM and improve its search solution’s sophistication in the Korean market.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">data_rights_or_content_commoditization_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">invests $10M into AI startup Perplexity</span>
+<span class="span">provide Korean-language data and cultural content</span>
+<span class="span">fine tune its large language model</span>
+<span class="span">invested $10 million in Perplexity</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2024-02-26</span>
+<span class="eh">SKT partners with Perplexity; paid version to subscribers for free and model access</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SK Telecom partnered with Perplexity to let subscribers use the paid version at no cost and to access Perplexity&#x27;s proprietary models for building personal AI assistants, with potential expansion to investment or joint ventures under consideration.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">partnering with U.S. AI startup Perplexity</span>
+<span class="span">use the paid version of Perplexity for free</span>
+<span class="span">access to Perplexity&#x27;s proprietary models</span>
+<span class="span">did not rule out possibilities to invest</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational alliances and LLM partnerships</h2>
+<div class='range'>2023-07-27 → 2023-10-22</div>
+<div class='psum'>SK Telecom initiated its AI strategy by co-founding the Global Telco AI Alliance (GTAA) in July 2023, committing to co-develop a Telco AI Platform with other major operators. Shortly thereafter, SKT deepened its AI posture with a $100 million strategic investment in Anthropic, pairing capital with a commercial plan to co-develop a multilingual, telco‑specific LLM.
+Complementing these moves, SKT engaged OpenAI in community and developer outreach through a joint AI hackathon in Korea. The company then formalized a broader, multi‑LLM strategy to blend in‑house models with external partners (Anthropic, OpenAI, and others), and partnered with Deutsche Telekom to co‑develop a telco‑specific LLM collaborating with Anthropic (Claude 2) and Meta (Llama2), with an initial version planned for early 2024.
+Together these steps established SKT’s strategic options across industry alliances, model providers, and commercialization pathways for AI-enhanced telco operations and customer experiences.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="anthropic_claude meta_llama">
+<div class="ev-top">
+<span class="date">2023-10-22</span>
+<span class="eh">SKT and Deutsche Telekom to co-develop telco‑specific LLM with Anthropic and Meta</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">meta_llama</span></div>
+<p class="narr">SK Telecom and Deutsche Telekom agreed to co-develop a multilingual telco LLM, collaborating with Anthropic (Claude 2) and Meta (Llama2), targeting applications such as AI contact centers and aiming to unveil a first version in Q1 2024.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Telco-specific LLM</span>
+<span class="span">Anthropic (Claude 2)</span>
+<span class="span">Meta (Llama2)</span>
+<span class="span">first quarter of 2024</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-09-26</span>
+<span class="eh">SKT unveils AI Pyramid Strategy; adopts multi‑LLM approach and lifts AI investment mix</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">SK Telecom announced an AI strategy that roughly triples AI-related investment share from historic levels and pursues a multi‑LLM approach, advancing its own LLM while collaborating with Anthropic, OpenAI, and Konan Technology.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">multi-LLM strategy</span>
+<span class="span">approximately triple from 12%</span>
+<span class="span">to 33% (2024-2028)</span>
+<span class="span">collaborating with a diverse range of partners, including Anthropic, OpenAI</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-08-16</span>
+<span class="eh">SKT and OpenAI to co-host Prompter Day Seoul 2023 hackathon</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">SK Telecom and OpenAI announced a joint AI hackathon in Seoul with token credits and access to ChatGPT Plus, aiming to surface product and service ideas under the theme &#x27;Prompt for Humanity.&#x27;</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">co-host an AI hackathon</span>
+<span class="span">Prompter Day Seoul 2023</span>
+<span class="span">KRW 100 million</span>
+<span class="span">ChatGPT Plus</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2023-08-13</span>
+<span class="eh">SK Telecom invests $100M in Anthropic; partnership to build telco‑custom LLM</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$100M · equity_stake</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">SKT made an additional $100 million strategic investment in Anthropic and entered a commercial partnership to jointly develop a multilingual LLM customized for telco use cases, leveraging Claude and SKT’s telecommunications domain expertise.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0], web_search_findings[1]</div>
+<span class="span">investing additional USD 100 million in Anthropic</span>
+<span class="span">to build a large language model (LLM) customized for telcos</span>
+<span class="span">custom version of our LLM Claude</span>
+<span class="span">additional $100 million</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2023-07-27</span>
+<span class="eh">Global Telco AI Alliance launched; multilateral MOU to build Telco AI Platform</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">SK Telecom and three peer operators formed the Global Telco AI Alliance and signed a multilateral MOU to co-develop a Telco AI Platform intended as the foundation for future AI services and super apps.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">Global Telco AI Alliance</span>
+<span class="span">Multilateral MOU</span>
+<span class="span">co-development of the Telco AI Platform</span>
+<span class="span">core foundation for new AI services</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0017'>E0017</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0022'>E0022</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0029'>E0029</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0029'>E0029</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What are the quantitative capex plans and timeline for AIDC expansion at Ulsan and Seoul, and the associated expected returns?</li>
+<li>When will SKT disclose AIDC profitability KPIs and/or backlog, RPO, or bookings to better gauge demand visibility?</li>
+<li>What is the contractual scope and financial commitment associated with the NVIDIA DSX gigawatt‑scale AI cloud build and the 2027 ‘AI factory’ milestone?</li>
+<li>How did the reported revocation of Claude Mythos access impact SKT’s AI roadmap, and has access been restored or substituted?</li>
+<li>What commercialization milestones and deployment timelines are targeted for the GTAA Telco LLM JV across member markets?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many items rely on company press releases and media reporting; independent financial magnitudes beyond disclosed figures (e.g., AIDC revenue in KRW, JV funding size) are not available.</li>
+<li>Regulatory reporting regarding Claude Mythos access is based on a single media source (WIRED) and may evolve; no corroboration in SKT filings.</li>
+<li>KRW-denominated figures were not converted to USD; only explicitly USD-denominated amounts are reflected in magnitude_usd.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

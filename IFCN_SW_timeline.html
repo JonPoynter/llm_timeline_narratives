@@ -1,0 +1,489 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>IFCN SW — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Inficon Holding AG <span class='sub'>(IFCN SW)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.394</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>18 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 5</span>
+<span class='chip'>single source: 13</span>
+<span class='chip'>web-only (unverified): 4</span>
+<span class='chip'>web-only (verified): 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Positioning for AI data centers and AI-enabled talent</h2>
+<div class='range'>2026-06-30 → 2026-06-30</div>
+<div class='psum'>By June 2026, INFICON was explicitly addressing AI data-center cooling reliability and talent enablement. A June blog post detailed leak-prevention and thermal-risk considerations in liquid-cooled AI and HPC data centers, contextualizing market adoption rates and the urgency created by dense GPU deployments. On the talent front, an Associate Research Scientist role referenced use of AI platforms like Claude Code, indicating hands-on AI tooling familiarity is increasingly valued in R&amp;D.
+These steps reinforce INFICON’s positioning around AI data-center infrastructure risks while deepening internal AI literacy. They do not specify any contracted relationships with named frontier-model providers, but they suggest alignment of product marketing and hiring with AI-driven infrastructure trends.</div>
+<div class="event t-web_only_unverified" id="E0017" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">Hiring signals AI tooling use; job cites Claude Code</span>
+<span class="badge">personnel</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$90,000 · other</span> <span class="badge">neutral</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">An INFICON Associate Research Scientist job post highlights familiarity with AI platforms, specifically naming Claude Code, and provides a stated compensation range. This indicates growing internal value placed on AI-enabled development.</p>
+<div class="ev-ch">channels: <span class="chchip">provider_specificity</span></div>
+<p class="cav">⚠ Provider mention appears in a job listing; no confirmation of production use.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Associate Research Scientist</span>
+<span class="span">Familiarity with using AI platforms (such as Claude Code)</span>
+<span class="span">$70,000 to $90,000</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-30</span>
+<span class="eh">INFICON outlines liquid-cooling leak risks in AI data centers</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">INFICON published guidance on preventing fluid loss and managing thermal events in AI data centers as liquid-cooled architectures accelerate, citing market adoption levels and risk to expensive hardware.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">AI workloads</span>
+<span class="span">liquid-cooled architectures</span>
+<span class="span">22 % of all data centers already employ liquid cooling</span>
+<span class="span">According to IDC</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Semiconductor upturn, early data-center HVAC, and 2026 guidance</h2>
+<div class='range'>2026-03-24 → 2026-04-24</div>
+<div class='psum'>With its March 2026 year-end release, INFICON highlighted a broadening semiconductor upcycle, including HBM-driven memory and lithography strength, alongside rising orders and book-to-bill above 1 for four consecutive quarters. Management initiated 2026 sales guidance of USD 680–720 million, flagged 2026 CapEx above CHF 30m (possibly ~CHF 40m) to expand capacity, and described footprint optimization including a Malaysia plant opened in 2025 to get closer to customers and mitigate geopolitical risks.
+INFICON also flagged an emerging opportunity in data-center thermal systems, noting new HVAC applications are early with first products launched, while emphasizing a partnership approach with key semiconductor accounts and limited pricing pressure. Management remained cautious given geopolitical/logistics uncertainty and potential costs from tariffs, FX, and capacity duplication. The April 2026 Q1 call corroborated strong demand with $181m in sales, book-to-bill well above one, strong Asia Pacific trends tied to AI-driven semiconductor manufacturing, and traction in a nascent data-center supply market.</div>
+<div class="event t-web_only_verified" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-24</span>
+<span class="eh">Q1 2026 sales $181m; book-to-bill well above one; AI-driven APAC strength</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$181M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">INFICON reported Q1 2026 sales of $181 million with book-to-bill well above one, broad regional growth led by Asia Pacific tied to AI-driven semiconductor manufacturing, and early traction supplying data-center air conditioning with first product launch from INFICON.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Q1 sales reached $181 million</span>
+<span class="span">book-to-bill ratio well above one</span>
+<span class="span">Asia Pacific</span>
+<span class="span">data center supply</span>
+<span class="span">first product launch also from our end</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Management sees broad semi acceleration including HBM and lithography</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">INFICON reported a broadening semiconductor upcycle with memory (including HBM) now matching leading-edge logic intensity, strong lithography activity, and notable China dynamics pulling along second-tier markets.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">incl. HBM</span>
+<span class="span">lithography</span>
+<span class="span">notable China dynamics</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Early-stage data-center HVAC with first products launched</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management described new HVAC applications for data centers as early but noted that INFICON has already launched its first products, with meaningful contribution expected later.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">New HVAC applications for data centers are early</span>
+<span class="span">launched first products</span>
+<span class="span">meaningful contribution later</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">2026 CapEx guided above CHF 30m to expand capacity</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">INFICON guided 2026 CapEx to be above CHF 30m, possibly around CHF 40m, aimed largely at expanding capacity tied to semiconductor demand and footprint shifts after a 2025 reconfiguration.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">for sure over CHF 30 [m], might be even CHF 40,</span>
+<span class="span">expand capacity tied to semi demand</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Order momentum continues into 2026; book-to-bill going higher</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">INFICON said order momentum continued into early 2026 with book-to-bill rising, and noted active customer discussions on capacity build-outs.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Order momentum continued into early 2026</span>
+<span class="span">book-to-bill “going higher,”</span>
+<span class="span">customer capacity build‑out</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Book-to-bill above 1 for four straight quarters in 2025</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted sustained demand strength in 2025 with orders exceeding sales each quarter and book-to-bill above 1 for four consecutive quarters.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Orders exceeded sales</span>
+<span class="span">book‑to‑bill was above 1</span>
+<span class="span">four consecutive quarters</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">2026 sales guidance set at USD 680–720 million, 17–19% margin</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$680M · run_rate_annual</span> <span class="badge">neutral</span></div>
+<p class="narr">INFICON initiated 2026 guidance with sales of USD 680–720 million and operating income margin of 17–19%.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">sales USD 680–720 million</span>
+<span class="span">operating income margin 17–19%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Outlook: semi upturn through 2026 with efficiency gains</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">INFICON’s qualitative outlook called for a semiconductor upturn through 2026 alongside continued operational efficiency benefits.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">semiconductor upturn through 2026</span>
+<span class="span">operational efficiency benefits</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Footprint optimized; new Malaysia plant to be closer to customers</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">INFICON highlighted a global manufacturing footprint shift, including opening a Malaysia plant in 2025 to be closer to key customers and mitigate geopolitical risks.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">opening a plant in Malaysia in 2025</span>
+<span class="span">closer to key customers</span>
+<span class="span">mitigate geopolitical risks</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Management cautious amid geopolitics/logistics; no quarterly guidance</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Despite stronger semiconductor ramp and rising orders, INFICON remained cautious due to geopolitical and logistics uncertainties and reiterated it would provide no quarterly guidance, though it noted Q1 would be good.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">cautious stance</span>
+<span class="span">geopolitical and logistics uncertainties</span>
+<span class="span">no quarterly guidance</span>
+<span class="span">Q1 “will be good”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Risk: tariffs, FX, and capacity-duplication costs from trade disputes</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">INFICON cited costs related to tariffs, foreign exchange, and capacity duplication driven by trade disputes as ongoing risks affecting operations and profitability.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">tariffs, FX, and capacity duplication</span>
+<span class="span">trade disputes</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Hiring shift toward Asia alongside 2026 CapEx expansion</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">INFICON expects 2026 CapEx to exceed CHF 30m (possibly ~CHF 40m) to expand capacity and plans to rebalance headcount toward Asia as part of footprint optimization.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">2026 CapEx guided “&gt;CHF 30m, possibly ~CHF 40m”</span>
+<span class="span">headcount to be rebalanced toward Asia</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Semi demand drivers: HBM and litho; capacity build-outs; rising B2B</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management emphasized a broadening semi upcycle to memory (HBM) and lithography, ongoing conversations with top customers on capacity build-outs, and continuing order momentum with rising book-to-bill.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Semi upcycle broadening to memory (HBM) and litho</span>
+<span class="span">capacity build‑outs</span>
+<span class="span">book‑to‑bill rising</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-24</span>
+<span class="eh">Partnership approach with key accounts; pricing not main pressure</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">INFICON described working in partnership with key semiconductor accounts and indicated that pricing is not currently a primary source of pressure.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Pricing not a primary source of pressure</span>
+<span class="span">partnership approach with key semi accounts</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational AI assistants in INFICON software</h2>
+<div class='range'>2024-12-03 → 2025-03-28</div>
+<div class='psum'>INFICON began embedding large-language-model capabilities into its semiconductor software toolset. In December 2024, the company introduced AskJen for FabTime, positioning it as an AI-powered expert chat feature built on a RAG architecture to surface deep operational insights and citations from a 25-year knowledge base. In March 2025, INFICON expanded this approach with Ask INFICON, initially integrated into FabGuard FDC to provide real-time, LLM-powered support across product documentation and training materials.
+These launches signaled an internal productization of AI to improve customer support and usability across INFICON&#x27;s fab software, while not naming a specific frontier model provider. The emphasis was on instant, cited answers and integration into existing workflows rather than on a specific external AI platform relationship.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-03-28</span>
+<span class="eh">INFICON debuts Ask INFICON, an AI-powered expert integrated with FabGuard</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">INFICON announced Ask INFICON, an LLM-powered expert initially integrated with FabGuard FDC to deliver real-time support using product help and training content. The tool aims to speed troubleshooting and improve understanding of FDC and sensorization.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Ask INFICON</span>
+<span class="span">AI-powered expert</span>
+<span class="span">FabGuard</span>
+<span class="span">large language model (LLM) technology</span>
+<span class="span">March 28, 2025</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2024-12-03</span>
+<span class="eh">INFICON launches AskJen AI expert chat for FabTime</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">INFICON introduced AskJen for FabTime, an AI-powered expert chat feature leveraging RAG to deliver cited insights on semiconductor operations. The tool provides 24/7 assistance drawing from FabTime’s deep knowledge base.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">AskJen</span>
+<span class="span">AI-powered expert chat</span>
+<span class="span">FabTime</span>
+<span class="span">Dec. 3, 2024</span>
+<span class="span">Retrieval-Augmented Generation (RAG)</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which specific LLM providers (if any) power AskJen and Ask INFICON in production, and are there commercial contracts?</li>
+<li>Have the new data-center HVAC products secured named design wins or purchase orders tied to AI data centers?</li>
+<li>How much of 2026 CapEx is dedicated specifically to AI-related demand (HBM, lithography, data-center cooling) versus other segments?</li>
+<li>What is the expected timing and scale for data-center HVAC revenue contribution beyond the ‘early’ stage?</li>
+<li>Are there additional regional or trade-related risks that could impact the Malaysia footprint or Asia-focused hiring plans?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several events rely on company-authored materials; independent corroboration for AI assistant provider choices is not disclosed.</li>
+<li>CapEx figures are provided in CHF; no USD conversion or exchange-rate assumptions are applied here.</li>
+<li>The Q1 2026 transcript is sourced from a third-party transcript host; wording may reflect editorial formatting.</li>
+<li>Job-post mention of Claude Code indicates tool familiarity but does not confirm enterprise-wide deployment or vendor contracts.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

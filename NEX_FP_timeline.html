@@ -1,0 +1,411 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>NEX FP — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Nexans SA <span class='sub'>(NEX FP)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-07-01 · built by gpt-5 · $0.34</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>13 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>web-only (unverified): 6</span>
+<span class='chip'>web-only (verified): 3</span>
+<span class='chip'>corroborated: 3</span>
+<span class='chip'>single source: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Monetizing AI/data center electrification; backlog and timing risks</h2>
+<div class='range'>2026-04-28 → 2026-06-29</div>
+<div class='psum'>Q1 2026 updates emphasized strong data center activity across the U.S. and Europe, with large orders expected in H2 and deliveries weighted to H2 2026. Nexans is reallocating MV capacity to meet U.S. data center demand and ramping its U.S. Grid sales organization, leveraging Republic Wire for additional channels.
+At the same time, transmission backlog reached €7.9bn, but included €1.2bn for the Great Sea Interconnector under rescheduling—posing timing risks for revenue, cash, and asset utilization. The company also progressed product and standards leadership for data center electrification with a DC microgrid pilot at its AmpaCity hub and published an integrated data center offer highlighting readiness for AI-scale power demands and BIM-integrated planning.</div>
+<div class="event t-web_only_verified" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-29</span>
+<span class="eh">Integrated data center offer positioned for AI-scale power; BIM-enabled planning</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Nexans published an integrated data center solutions page emphasizing readiness for AI-scale power demands, lifecycle efficiency, and BIM/digital twin integration to de-risk design and installation.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">ready for AI-scale power demands</span>
+<span class="span">secure every kilowatt</span>
+<span class="span">50% Of operating costs in a data center come from energy</span>
+<span class="span">BIM objects integrated into your digital twin</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-11</span>
+<span class="eh">AmpaCity DC microgrid pilot commissioned; architecture applicable to data centers</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Nexans commissioned the first phase of its DC microgrid pilot at the AmpaCity hub in Lyon, noting the DC cable can be directly applied to data centers and aligns with prospective 700–800 V DC architectures and power electronics standards.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">first phase of its direct current (DC) microgrid pilot</span>
+<span class="span">AmpaCity global innovation hub in Lyon, France</span>
+<span class="span">can be directly applied to data centers</span>
+<span class="span">700–800 V DC</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Q1 2026: Strong DC activity; large H2 orders; MV capacity rerouted to U.S. DC demand</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Nexans reported robust data center activity in the U.S. and Europe, expecting large orders in H2 and deliveries weighted to H2 2026, while rerouting MV capacity from South America/Canada to serve accelerating U.S. data center demand.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[6]</div>
+<span class="span">strong data center activity in the U.S. and Europe, with some large orders expected to land in H2.</span>
+<span class="span">deliveries weighted to H2 2026</span>
+<span class="span">Nexans is rerouting MV capacity</span>
+<span class="span">Q1 2026 was particularly supported by call-offs under framework agreements and data center activity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">U.S. Grid ramp-up; Republic Wire expected to expand channels</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management highlighted the ramp-up of the U.S. Grid sales organization, established in 2025, and expects Republic Wire to open channels for selling more Grid products into the U.S. market.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">U.S. Grid is in ramp-up with a sales organization established in 2025</span>
+<span class="span">expects Republic Wire to provide channels to sell more Grid products into the U.S.</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">Risk: Transmission backlog rescheduling including €1.2bn Great Sea Interconnector</span>
+<span class="badge">risk</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.2B · contract_value</span> <span class="badge">mixed</span></div>
+<p class="narr">Nexans warned that concentration and scheduling changes in PWR-Transmission backlog—specifically the €1.2bn Great Sea Interconnector under rescheduling—could shift revenue and cash timing and affect utilization of cable-laying assets.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[6]</div>
+<span class="span">Great Sea Interconnector €1.2bn under rescheduling</span>
+<span class="span">could shift revenue/cash timing</span>
+<span class="span">including €1.2 billion corresponding to the Great Sea Interconnector project under rescheduling</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-28</span>
+<span class="eh">PWR-Transmission adjusted backlog at €7.9bn as of March 31, 2026</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$7.9B · contract_value</span> <span class="badge">neutral</span></div>
+<p class="narr">Nexans reported an adjusted PWR-Transmission backlog of €7.9bn at March 31, 2026, up from €7.7bn at December 31, 2025, including the rescheduled Great Sea Interconnector component.</p>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[6]</div>
+<span class="span">Adjusted backlog in PWR-Transmission was €7.9bn at March 31, 2026</span>
+<span class="span">versus €7.7bn at December 31, 2025</span>
+<span class="span">includes €1.2bn related to the Great Sea Interconnector</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI-scale data center pivot accelerates</h2>
+<div class='range'>2025-01-01 → 2025-12-17</div>
+<div class='psum'>As AI workloads drove hyperscale demand, Nexans formalized internal guardrails for using ChatGPT, signaling measured enterprise adoption with data-protection practices. The company unveiled a world-first demonstration of superconducting LV AC/DC cables for data hall electrification at its new Stella Nova Center of Excellence and highlighted rising needs for connecting data centers in its H1 2025 update.
+Nexans also completed the acquisition of Electro Cables Inc., strengthening North American low-voltage capabilities aligned with expanding data center and infrastructure markets.</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2025-12-17</span>
+<span class="eh">Nexans completes Electro Cables acquisition, expanding North American LV portfolio</span>
+<span class="badge">equity</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$125M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Nexans closed the acquisition of Electro Cables Inc., strengthening low-voltage cable systems for North America’s infrastructure and data center sectors; the acquired business generated roughly €125 million revenue in the twelve months to July 2025.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Deal value not disclosed in the excerpt; magnitude reflects target revenue, not purchase consideration.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">completes the acquisition of Electro Cables</span>
+<span class="span">low‑voltage cable systems</span>
+<span class="span">data center</span>
+<span class="span">125 million euros in revenue</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2025-07-30</span>
+<span class="eh">H1 2025: needs for connecting data centers accelerate; smart solutions gain traction</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Nexans’ H1 2025 press release noted strong PWR-Grid trends with accelerating needs for connecting data centers and solar farms, while smart solutions help mitigate operational constraints for customers.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">PWR-Grid remained very strong</span>
+<span class="span">needs for connecting data centers and solar farms accelerate</span>
+<span class="span">smart solutions also help mitigate operational constraints</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-06-04</span>
+<span class="eh">Stella Nova inaugurated with world-first superconducting LV AC/DC demo for data halls</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Nexans opened its Stella Nova Center of Excellence and demonstrated superconducting LV AC and DC cables designed to meet massive power demands in hyperscale data centers, emphasizing energy efficiency and compactness.</p>
+<div class="ev-ch">channels: <span class="chchip">data_center_power_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">inaugurates Stella Nova</span>
+<span class="span">world-first demonstration</span>
+<span class="span">electrification of data hall infrastructures in data centers</span>
+<span class="span">superconducting LV AC and LV DC cables</span>
+<span class="span">massive power demands of tomorrow’s hyperscale data centers</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-01-01</span>
+<span class="eh">Internal policy sets rules for enterprise use of ChatGPT and Copilot</span>
+<span class="badge">regulatory</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Nexans issued an internal flyer with guidelines for ChatGPT use, preferring Copilot or Nexans AI where possible, instructing users to submit OpenAI user content exclusion requests, and noting the free version will be blocked at end-2025 while paid remains available.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">regulatory_or_reputational_risk</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">dependency_duration</span> <span class="chchip">user_lock_in_relevance</span></div>
+<p class="cav">⚠ Internal flyer; scope of deployment and actual usage volumes not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Golden rules for Work use of CHATGPT</span>
+<span class="span">#1 Prioritize the use of copilot or Nexans ai</span>
+<span class="span">#2 Prefer ChatGPT Plus or Pro</span>
+<span class="span">Fill out OpenAI’s user content exclusion request</span>
+<span class="span">The free version will be blocked at the end of 2025</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Digital and AI enablement groundwork</h2>
+<div class='range'>2021-02-24 → 2023-03-01</div>
+<div class='psum'>Nexans advanced its digital capabilities with a collaboration leveraging Microsoft Azure to accelerate AI- and analytics-enabled services across operations and customer experience. The company also publicly engaged in thought leadership around big data and AI in electrification, noting the rapid progress of generative AI.
+These steps indicated internal capability building around AI and analytics rather than direct dependencies on frontier LLM providers.</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2023-03-01</span>
+<span class="eh">Perspective piece highlights generative AI’s impact on electrification</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Nexans published an article discussing big data and AI in electrification, referencing ChatGPT and the accelerating impact of generative AI on application development and support technologies.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">buzz around ChatGPT</span>
+<span class="span">generative AI and adjacent models are changing the game</span>
+<span class="span">monitoring of networks for all segments</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2021-02-24</span>
+<span class="eh">Collaboration leveraging Microsoft Azure, AI and analytics for digital services</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Nexans announced a collaboration to use Microsoft Azure to develop AI- and cloud-enabled digital solutions for customers and installers, focusing on data management, analytics, and operational efficiencies.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Microsoft Azure</span>
+<span class="span">artificial intelligence (AI) and cloud solutions</span>
+<span class="span">electrify the future</span>
+<span class="span">streamline supply chains</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations in data center cabling</h2>
+<div class='range'>2017-07-27 → 2020-12-31</div>
+<div class='psum'>Nexans established an early strategic footing in the data center market by launching a dedicated Data Center Solutions business unit in 2017. This provided a portfolio covering cabling, connectivity, pre-terminated assemblies, transceivers and fiber containment systems aimed at hyperscale operators.
+While predating the current generative AI surge, this foundation positioned Nexans to serve power- and connectivity-intensive digital infrastructure customers that would later be propelled by AI workloads.</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2017-07-27</span>
+<span class="eh">Nexans launches Data Center Solutions BU targeting hyperscale operators</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Nexans announced a dedicated Data Center Solutions business unit to support hyperscale data centers with scalable, resilient physical layer infrastructure, establishing an early presence in a segment that later benefited from AI-driven demand.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Nexans launches Nexans Data Center Solutions</span>
+<span class="span">hyperscale data centers operators</span>
+<span class="span">scalable and resilient physical layer infrastructure</span>
+<span class="span">data cabling, connectivity and pre-terminated assemblies</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0009'>E0009</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0004'>E0004</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What proportion of Nexans’ 2025–2026 orders/backlog is directly tied to data center projects, and how much is attributable to AI-driven capacity expansions?</li>
+<li>Which U.S. and EU hyperscalers or colocation operators are referenced by the ‘large orders expected to land in H2’ and what is the magnitude and timing?</li>
+<li>Has the superconducting LV AC/DC data hall solution progressed to commercial pilots with customers, and are there quantified efficiency gains or TCO outcomes?</li>
+<li>What is the scale of internal paid ChatGPT/Copilot usage at Nexans (users, spend), and are there any enterprise agreements with OpenAI or Microsoft?</li>
+<li>How much MV capacity was rerouted to U.S. DC demand, and is this shift expected to persist into 2027?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Most items are Nexans-originated press releases or web pages without third-party corroboration; quantitative details beyond those quoted may be incomplete.</li>
+<li>Backlog and rescheduling figures are reported in euros; magnitude fields are presented numerically without FX conversion to USD.</li>
+<li>Internal ChatGPT policy indicates usage guidelines but does not quantify adoption, spend, or contractual terms with OpenAI or Microsoft.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

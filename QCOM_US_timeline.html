@@ -1,0 +1,724 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>QCOM US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>QUALCOMM Inc <span class='sub'>(QCOM US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.483</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>31 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 7</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 11</span>
+<span class='chip'>single source: 18</span>
+<span class='chip'>web-only (unverified): 9</span>
+<span class='chip'>web-only (verified): 2</span>
+<span class='chip'>corroborated: 2</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Data center ramp, execution risks, and new platforms (XR, AR) with strategic M&amp;A</h2>
+<div class='range'>2026-02-04 → 2026-06-25</div>
+<div class='psum'>In early 2026, Qualcomm’s earnings reiterated a multibillion-dollar data-center opportunity beginning 2027, with management indicating HUMAIN shipments and AI250 execution. However, handset end-markets faced near-term headwinds from DRAM supply redirecting to HBM for AI, capping Q2 FY26 handsets around $6B and making the outlook highly dependent on memory availability. The company also completed the Alphawave IP acquisition to accelerate data-center expansion and emphasized platform qualifications across memory vendors.
+On April 29, Qualcomm guided to initial shipments of a custom data-center product to a leading hyperscaler in December 2026, framing the engagement as margin-accretive and flexible across merchant/custom approaches, while acknowledging execution risks in this new category. Through June, Qualcomm broadened its AI hardware and software footprint, unveiling the Snapdragon Reality Elite XR platform and START toolkit, seeing customer traction like Snap’s consumer AR ‘Specs’, investing in NEURA Robotics’ large Series C, announcing the all-stock acquisition of AI software firm Modular (~$3.9B), and disclosing at Investor Day a multi-generation Meta deal for the Dragonfly C1000 CPU with first-gen production in 2H 2028 and long-term non-handset targets that include ~$15B data-center AI revenue by FY2029.</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">Qualcomm to acquire Modular in all-stock deal valued around $3.9B</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$3.9B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Qualcomm announced an all-stock acquisition of Modular Inc., issuing up to 19.2 million shares in a transaction valued around $3.9–$3.92B, with expected closing in 2H 2026, bolstering its AI software stack across hardware targets.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<p class="cav">⚠ Valuation is based on share price context and reported range.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[1]</div>
+<span class="span">acquire Modular Inc.</span>
+<span class="span">all‑stock transaction</span>
+<span class="span">roughly $3.9–$3.92B</span>
+<span class="span">up to 19.2 million shares</span>
+<span class="span">expected to close in the second half of 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2026-06-24</span>
+<span class="eh">Investor Day: Dragonfly CPU/AI unveiled; multi-generation Meta deal; FY2029 targets lifted</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$15.0B · run_rate_annual</span> <span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">At Investor Day, Qualcomm introduced the Dragonfly C1000 CPU and Dragonfly AI300, disclosed a multi-generation agreement with Meta planning to use C1000 for next-gen servers (first-gen production in 2H 2028), and raised FY2029 non-handset targets, including ~$15B data-center AI revenue.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<p class="cav">⚠ Revenue targets and production timing are forward-looking and subject to change.</p>
+<details>
+<summary>evidence — 1 source(s), 5 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">multi‑generation Meta deal</span>
+<span class="span">Dragonfly C1000</span>
+<span class="span">2H 2028</span>
+<span class="span">$40B</span>
+<span class="span">$15B of data‑center AI revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">Qualcomm introduces Snapdragon Reality Elite XR platform and START toolkit</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Qualcomm announced the Snapdragon Reality Elite XR platform and START toolkit to accelerate AI wearables and smart glasses, citing on-device inference of a 3B-parameter LLM at ~45 tokens/s and early device partners.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[2]</div>
+<span class="span">Snapdragon Reality Elite</span>
+<span class="span">START (Scalable Turnkey AI‑Ready Toolkit)</span>
+<span class="span">3B‑parameter LLM</span>
+<span class="span">~45 tokens/s</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">Snap unveils consumer AR ‘Specs’ using dual Qualcomm Snapdragon processors</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Snap’s ‘Specs’ AR glasses launched at $2,195 with preorders via a $200 refundable deposit and fall 2026 shipments, featuring dual Qualcomm Snapdragon processors and support for AI/AR Lens experiences.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[3]</div>
+<span class="span">$2,195</span>
+<span class="span">$200 refundable deposit</span>
+<span class="span">dual Qualcomm Snapdragon</span>
+<span class="span">shipments slated for fall 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-10</span>
+<span class="eh">Qualcomm participates in NEURA Robotics’ up to $1.4B Series C</span>
+<span class="badge">equity</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$1.4B · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">NEURA Robotics announced an up to $1.4B Series C with a broad investor group including Qualcomm; proceeds are earmarked for scaling humanoid/physical AI production and platform expansion.</p>
+<div class="ev-ch">channels: <span class="chchip">equity_investment_exposure</span></div>
+<p class="cav">⚠ Qualcomm’s specific check size and terms were not disclosed.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[4]</div>
+<span class="span">up to $1.4 billion</span>
+<span class="span">Qualcomm</span>
+<span class="span">Series C financing</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Initial shipments of custom data-center silicon to a leading hyperscaler slated for 2026</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Qualcomm guided to initial shipments later in 2026 for a custom data-center silicon engagement with a leading hyperscaler, signaling the company’s entry into a new category beyond smartphones.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], news_rows[5]</div>
+<span class="span">planned initial shipments</span>
+<span class="span">custom data‑center silicon engagement</span>
+<span class="span">leading hyperscaler</span>
+<span class="span">later in 2026</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">December shipments for a custom hyperscaler product; multi-generation scope envisioned</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management noted December shipments for a custom product with a large hyperscaler and indicated the potential for longer multi-generation agreements.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">shipments in December</span>
+<span class="span">a custom product</span>
+<span class="span">multi‑generation</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Strategy positioned across merchant and custom; engagement expected margin-accretive</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Qualcomm framed a flexible data-center strategy across merchant and custom silicon, with CFO indicating the current engagement is expected to be accretive at the operating margin level.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">flexible across merchant and custom</span>
+<span class="span">accretive at the operating margin</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Custom data-center engagement expected to be operating-margin accretive</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated the custom data-center engagement is expected to be accretive at the operating margin level.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">custom data‑center engagement</span>
+<span class="span">accretive at the operating margin level.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Initial December shipments to hyperscaler; merchant and custom paths in play</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Qualcomm again guided to initial December shipments to a hyperscaler and emphasized it is positioning for both merchant and custom silicon approaches.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Initial shipments</span>
+<span class="span">to a hyperscaler in December</span>
+<span class="span">merchant and custom silicon paths.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Execution risk flagged on new data-center category ramp</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Qualcomm cautioned that design, ramp, or competitive execution risks could affect outcomes as it enters this new data-center category.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">new category for Qualcomm</span>
+<span class="span">design, ramp, or competitive execution risks</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Memory constraints continue to weigh on handset OEM demand</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Management noted industry-wide memory constraints persisted, with QCT Handsets revenue down 13% y/y and guidance embedding ongoing pressure.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">memory constraints</span>
+<span class="span">Handsets revenue declined 13% y/y</span>
+<span class="span">continued pressure</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">HBM-driven DRAM shift constrains handsets; Q2 FY26 handset guide ~ $6B</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$6.0B · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Management cited DRAM supply redirected to HBM for AI as a headwind, guiding Q2 FY26 handsets to roughly $6B and indicating seasonality through June until memory normalizes.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">HBM for AI</span>
+<span class="span">~ $6B</span>
+<span class="span">handset demand</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Handset outlook said to be ‘100% related to memory’</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Qualcomm emphasized that near-term handset market size is determined by memory availability despite strong demand indicators, underscoring supply-driven volatility.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">&#x27;100% related to memory&#x27;</span>
+<span class="span">determined by memory availability.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Hyperscaler engagements progress; HUMAIN shipping; RISC‑V + AI250; revenue start 2027</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Qualcomm reported progress with hyperscalers and cloud providers, noted it had started shipping to HUMAIN, added a RISC‑V CPU alongside Oryon, is executing AI250 with a new memory architecture, and expects initial data-center revenue in 2027.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">engagements with hyperscalers</span>
+<span class="span">&#x27;started shipping&#x27; to HUMAIN</span>
+<span class="span">RISC‑V CPU</span>
+<span class="span">expects revenue contribution to begin in 2027.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Customer adoption: ‘started shipping’ to HUMAIN; data center revenue expected 2027</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management stated it had started shipping to HUMAIN for data-center solutions and reiterated that the data-center business should begin contributing revenue in 2027.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">&#x27;started shipping&#x27; to HUMAIN</span>
+<span class="span">begin contributing revenue in 2027</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Data center characterized as multibillion-dollar opportunity within a couple of years</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Qualcomm’s CFO reiterated a multibillion-dollar data-center opportunity on the horizon as the business scales over the next couple of years.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">multibillion‑dollar revenue opportunity</span>
+<span class="span">a couple of years</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Alphawave IP acquisition completed to accelerate data-center expansion</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Qualcomm completed the Alphawave IP Group plc acquisition, highlighting it as a lever to accelerate its data-center expansion efforts.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Alphawave IP Group plc acquisition</span>
+<span class="span">accelerate data‑center expansion</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-04</span>
+<span class="eh">Platform qualified across multiple memory generations and vendors, including CXMT</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management clarified that Qualcomm platforms are qualified across multiple memory generations and vendors, including CXMT, aiming to mitigate supply constraints at customers.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">qualified across multiple memory generations</span>
+<span class="span">including CXMT</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>PC/Auto push and first large data center customer milestone</h2>
+<div class='range'>2025-02-04 → 2025-10-27</div>
+<div class='psum'>In 2025, Qualcomm expanded its on-device AI reach to Windows on Snapdragon PCs and deepened automotive collaborations. Qualcomm’s developer content highlighted DeepSeek-R1 models running on Windows on Snapdragon, and OpenAI’s gpt-oss-20b became available for on-device inference with Snapdragon. Qualcomm and Google Cloud announced an expanded collaboration to bring Gemini-powered agentic AI to the auto sector via Snapdragon Digital Chassis.
+Late 2025 marked a turning point in Qualcomm’s data-center trajectory: the company launched AI200/AI250 accelerators and secured an initial large-scale customer deployment with Humain reportedly planning around 200MW, alongside management comments of HUMAIN shipments beginning and AI250 execution noted in subsequent filings.</div>
+<div class="event t-corroborated" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-27</span>
+<span class="eh">Qualcomm launches AI200/AI250 accelerators; first-customer Humain seen planning ~200MW</span>
+<span class="badge">infra_deal</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Coverage reported Qualcomm’s AI200/AI250 accelerator launch and a first-customer deal with Humain targeting a roughly 200MW deployment. Filings around this timeframe also indicated Qualcomm had ‘started shipping’ to HUMAIN and was executing on AI250.</p>
+<div class="ev-ch">channels: <span class="chchip">chip_accelerator_exposure</span> <span class="chchip">data_center_power_exposure</span></div>
+<p class="cav">⚠ Scale in MW is reported; dollar value and timing of revenue not disclosed.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">news_rows[6], filings[1]</div>
+<span class="span">AI200/AI250 accelerators</span>
+<span class="span">planned 200MW deployment</span>
+<span class="span">Humain</span>
+<span class="span">&#x27;started shipping&#x27; to HUMAIN</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0011" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2025-09-08</span>
+<span class="eh">Qualcomm and Google Cloud deepen auto collaboration with Gemini-powered agents</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Qualcomm and Google Cloud expanded their relationship to enable automakers to build multimodal, hybrid edge-to-cloud AI agents using Google’s Gemini models and Snapdragon Digital Chassis solutions.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">Google Gemini models</span>
+<span class="span">Automotive AI Agent</span>
+<span class="span">Snapdragon® Digital Chassis™</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0010" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2025-08-05</span>
+<span class="eh">OpenAI’s first open-weights reasoning model runs on devices with Snapdragon</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Qualcomm announced early access and integration testing for OpenAI’s gpt-oss-20b on devices with flagship Snapdragon processors via the Qualcomm AI Stack, marking a milestone for on-device OpenAI models.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">gpt-oss-20b</span>
+<span class="span">runs directly on devices</span>
+<span class="span">Snapdragon</span>
+<span class="span">Qualcomm AI Stack</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="deepseek">
+<div class="ev-top">
+<span class="date">2025-02-04</span>
+<span class="eh">Qualcomm guides developers to run DeepSeek models on Windows on Snapdragon</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">deepseek</span></div>
+<p class="narr">A Qualcomm developer blog detailed running DeepSeek-R1 and its distilled models on Windows on Snapdragon using LM Studio, expanding on-device reasoning capabilities on Snapdragon PCs.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">DeepSeek-R1</span>
+<span class="span">Windows on Snapdragon</span>
+<span class="span">LM Studio</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>On-device AI enablement and model ecosystem build-out</h2>
+<div class='range'>2023-07-18 → 2024-10-25</div>
+<div class='psum'>From mid-2023 through 2024, Qualcomm concentrated on enabling on-device generative AI across phones, PCs, XR, and automotive. It publicly aligned with key model ecosystems from Meta and Google, and launched developer infrastructure to simplify deploying models on Snapdragon platforms. Qualcomm and Meta announced work to optimize Llama 2 for on-device use starting in 2024, while Google’s foundation models were brought to Snapdragon 8 Gen 3.
+Qualcomm also expanded developer tooling via the Qualcomm AI Hub (with 75+ optimized models) and documented heterogeneous computing approaches running OpenAI’s Whisper and Meta’s Llama 2-7B locally. Meta’s Llama 3 added hardware support for Qualcomm, and Qualcomm partnered with Meta and Ollama on quantized Llama 3.2 for AI PCs. In automotive, Qualcomm and Google highlighted a multi-year collaboration involving Gemini Nano and the Snapdragon Digital Chassis. Mistral AI additionally noted support for running its models locally on Snapdragon.</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-10-25</span>
+<span class="eh">Qualcomm partners with Meta and Ollama on quantized Llama 3.2 for AI PCs</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Qualcomm announced collaboration with Meta and Ollama to support quantized Llama 3.2 models on AI PCs powered by Snapdragon X Elite and X Plus, broadening on-device LLM availability.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Meta and Ollama</span>
+<span class="span">Llama 3.2</span>
+<span class="span">Snapdragon X Elite</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-10-23</span>
+<span class="eh">Qualcomm and Google preview multi-year automotive AI collaboration using Gemini Nano</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">At Snapdragon Summit 2024, Qualcomm and Google highlighted a multi-year collaboration spanning Snapdragon Digital Chassis, Android Automotive OS, Google Cloud, and Gemini Nano to enable generative AI in-vehicle experiences.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">multi-year collaboration</span>
+<span class="span">Snapdragon Digital Chassis</span>
+<span class="span">Google Cloud and Gemini Nano</span>
+<span class="span">generative AI</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2024-10-22</span>
+<span class="eh">Mistral AI highlights running its models locally on Snapdragon devices</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">In Qualcomm’s partner quotes, Mistral AI underscored the ability for its models to run locally on Snapdragon, emphasizing reduced cost and energy demands; this expands Qualcomm’s multi-model ecosystem, though Mistral is outside the six tracked frontier providers.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Mistral AI</span>
+<span class="span">run locally on devices</span>
+<span class="span">Snapdragon platforms</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2024-04-19</span>
+<span class="eh">Meta’s Llama 3 adds hardware platform support that includes Qualcomm</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Meta announced that Llama 3 models will have support across multiple hardware platforms, explicitly including Qualcomm, reinforcing Qualcomm’s role in the Llama ecosystem.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">Llama 3</span>
+<span class="span">plataformas de hardware</span>
+<span class="span">Qualcomm</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="openai_chatgpt">
+<div class="ev-top">
+<span class="date">2024-02-26</span>
+<span class="eh">Qualcomm AI Hub launches with 75+ optimized models for on-device AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Qualcomm introduced the AI Hub, a library of 75+ pre-optimized AI and gen-AI models (e.g., Whisper, ControlNet, Stable Diffusion) to streamline deployment on Snapdragon and Qualcomm platforms with significant inference speedups.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Qualcomm AI Hub</span>
+<span class="span">more than 75</span>
+<span class="span">Whisper, ControlNet, Stable Diffusion</span>
+<span class="span">4X faster</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="openai_chatgpt meta_llama">
+<div class="ev-top">
+<span class="date">2024-02-01</span>
+<span class="eh">Qualcomm whitepaper showcases on-device Whisper ASR and Llama 2-7B</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span></div>
+<p class="narr">A Qualcomm whitepaper detailed heterogeneous computing for an on-device assistant on Snapdragon 8 Gen 3, running OpenAI’s Whisper for ASR and Meta’s Llama 2-7B for LLM response generation.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Whisper, OpenAI’s generative AI model</span>
+<span class="span">Llama 2-7B</span>
+<span class="span">Snapdragon 8 Gen 3</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-10-25</span>
+<span class="eh">Google’s foundation AI models coming to Snapdragon 8 Gen 3</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">Google and Qualcomm said Google’s state-of-the-art foundation models will run on Snapdragon 8 Gen 3 using the Hexagon NPU, extending Pixel 8 Pro on-device AI experiences to broader Android devices.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">Snapdragon 8 Gen 3</span>
+<span class="span">Google’s foundation AI models</span>
+<span class="span">partnered to bring powerful generative AI</span>
+<span class="span">Hexagon NPU</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="meta_llama">
+<div class="ev-top">
+<span class="date">2023-07-18</span>
+<span class="eh">Qualcomm and Meta team to enable Llama 2 on-device across Snapdragon platforms</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">meta_llama</span></div>
+<p class="narr">Qualcomm and Meta announced efforts to optimize Llama 2 for on-device inference on Snapdragon-powered smartphones and PCs beginning in 2024, aiming to lower costs and improve privacy by reducing reliance on cloud-only deployments.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Llama 2-based AI implementations</span>
+<span class="span">starting from 2024 onwards</span>
+<span class="span">directly on-device</span>
+<span class="span">without relying on the sole use of cloud services.</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0027'>E0027</a></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0028'>E0028</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0030'>E0030</a>, <a class='evref' href='#E0018'>E0018</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0017'>E0017</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0028'>E0028</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0001'>E0001</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0004'>E0004</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0021'>E0021</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0031'>E0031</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0024'>E0024</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>Which hyperscaler is the counterparty for Qualcomm’s December 2026 custom data-center product shipments, and what is the initial volume/ASP profile?</li>
+<li>What is the expected revenue and margin profile by generation for the Meta Dragonfly C1000 multi-generation agreement, and how much of the FY2029 ~$15B data-center AI target depends on it?</li>
+<li>What specific share count and vesting/escrow terms apply to the Modular all-stock acquisition, and what revenue/cost synergies does Qualcomm target by segment?</li>
+<li>What dollar amount did Qualcomm commit to NEURA Robotics’ up to $1.4B Series C, and are there strategic commercial agreements tied to the investment?</li>
+<li>What is the production ramp cadence and qualification status for AI200/AI250 and Dragonfly AI300 across key customers, and how does supply (HBM, packaging) constrain near-term deliveries?</li>
+<li>How are Google Gemini (Nano/Cloud) licensing and data-handling terms structured in the automotive collaboration relative to on-device vs. cloud workloads?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items reflect forward-looking targets (e.g., FY2029 non-handset and data-center AI revenue, 2H 2028 C1000 production) that may change.</li>
+<li>NEURA Robotics financing discloses round size but not Qualcomm’s specific investment amount.</li>
+<li>Press/blog and vendor documents (including Qualcomm’s own) may reflect marketing emphasis; independent financial details are limited.</li>
+<li>Spanish-language Meta post used for Llama 3 hardware support; translations may vary though spans are verbatim.</li>
+<li>Snap AR ‘Specs’ pricing is device-level and not a Qualcomm revenue figure.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

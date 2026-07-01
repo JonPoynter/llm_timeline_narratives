@@ -1,0 +1,627 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>BLND US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Blend Labs Inc <span class='sub'>(BLND US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.434</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>26 events</span>
+<span class='chip'>filings 1</span>
+<span class='chip'>news 0</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 13</span>
+<span class='chip'>single source: 14</span>
+<span class='chip'>web-only (verified): 6</span>
+<span class='chip'>web-only (unverified): 5</span>
+<span class='chip'>corroborated: 1</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>Autopilot launch, MCP server opening platform to AI agents, and 26Q1 traction</h2>
+<div class='range'>2026-03-03 → 2026-06-16</div>
+<div class='psum'>Blend launched Autopilot in March 2026 as the first agent of Intelligent Origination to automate real‑time compliance reviews and borrower follow‑ups. In April–May, Blend shipped and publicly launched the Autopilot MCP Server—built on the Model Context Protocol introduced by Anthropic—opening its platform to lender‑ and partner‑built agents with programmatic access across credit, underwriting, compliance, disclosures, and closing. Borrower chat and pricing/rate‑lock alignment were also introduced as the MCP platform hardened.
+Q1 FY2026 results (reported May 7) were ahead of guidance, with management attributing performance to execution and early Autopilot/agent‑first traction. The company emphasized a free‑trial period through Q2 with no Autopilot revenue assumed in guidance, while noting an Autopilot pipeline of about $10 million and outlining a monetization path from free, to flat‑fee, then per‑funded‑loan. Management highlighted rapid self‑serve adoption by large financial institutions, improving conversion and cycle‑time reductions, and signaled 2026 AI budgets at large banks had ‘flipped on.’ Integrations continued, including an expanded partnership with MeridianLink to streamline data sharing across origination systems.</div>
+<div class="event t-web_only_verified" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-16</span>
+<span class="eh">Expanded integration with MeridianLink for secure data sharing across origination</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blend announced an expanded partnership with MeridianLink to enable more efficient and secure data sharing between platforms, citing automation, compliance, trusted AI, and a robust network as enablers of quality and efficiency.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">expanded partnership with MeridianLink</span>
+<span class="span">more efficiently and securely share data</span>
+<span class="span">Powered by smarter automation, built-in compliance, trusted AI</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">26Q1 ahead of guidance; early Autopilot/agent‑first traction cited</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported Q1 results ahead of guidance on revenue and non‑GAAP operating income, attributing performance in part to execution and early Autopilot/agent‑first traction.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">ahead of guidance on revenue</span>
+<span class="span">early traction from Autopilot/agent-first</span>
+</details>
+</div>
+<div class="event t-corroborated" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Q2 guidance: no Autopilot revenue assumed; evPFL ~$79–$80; free trial through June</span>
+<span class="badge">other</span>
+<span class="badge b-corroborated">corroborated</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$79 · other</span> <span class="badge">mixed</span></div>
+<p class="narr">Blend’s Q2 guidance assumed no Autopilot revenue given a free‑trial period through June, with assumptions including evPFL of approximately $79–$80 and modest y/y revenue growth ranges by segment.</p>
+<div class="ev-ch">channels: <span class="chchip">dependency_duration</span></div>
+<p class="cav">⚠ evPFL presented as a ~$79–$80 range; magnitude shown as a representative value.</p>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[0], web_search_findings[5]</div>
+<span class="span">no Autopilot revenue assumed in Q2</span>
+<span class="span">free trial through June</span>
+<span class="span">evPFL ~$79–$80</span>
+<span class="span">+1% to +7%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Risk highlighted: uncertain near‑term Autopilot monetization</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management underscored uncertainty in near‑term Autopilot monetization, reflecting free‑trial dynamics and early stage of agentic adoption.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q2 guidance assumes no Autopilot revenue</span>
+<span class="span">uncertainty in near-term monetization</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Autopilot pipeline about $10M; frames path to +10–15% top‑line</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$10M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Blend reiterated an Autopilot pipeline of roughly $10 million and articulated a path to 10–15% incremental top‑line growth if adoption momentum persists.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Autopilot pipeline of about $10 million</span>
+<span class="span">10%–15% incremental top‑line growth</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Autopilot monetization model: free → flat fee → per‑funded‑loan</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management outlined Autopilot’s pricing path: initial free use, an interim flat‑fee tier, and migration to a per‑funded‑loan model over time.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">paid tiers begin after a free period</span>
+<span class="span">flat‑fee approach</span>
+<span class="span">per‑funded‑loan model</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Positioning vs startups and foundation‑model vendors; orchestration layer advantage</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Blend emphasized rapid self‑serve enterprise adoption and asserted that its embedded ‘orchestration’ layer offers an advantage relative to startups and foundation‑model vendors, highlighting competitive dynamics at the workflow layer.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">self‑serve adoption by large FIs</span>
+<span class="span">‘orchestration’ layer</span>
+<span class="span">advantage versus startups or foundation‑model vendors</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Measured ROI: cycle time cut from 29 to 21 days; early conversion uplifts</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management cited tangible ROI, including a reduction in cycle time from application‑complete to closing disclosures from 29 to 21 days and early signs of conversion improvement.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">cycle time from application complete to closing disclosures</span>
+<span class="span">29 to 21 days</span>
+<span class="span">early conversion uplifts</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">‘Rapid + Autopilot’ integration enables real‑time offers and faster fulfillment</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blend described the ‘Rapid + Autopilot’ flow enabling real‑time offers and faster fulfillment, with work underway to make activation as simple as flipping a switch.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">‘Rapid + Autopilot’</span>
+<span class="span">real‑time offers</span>
+<span class="span">‘flip‑a‑switch’</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Autopilot expected to add pricing leverage and improve unit economics</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">The CFO noted mechanics around PFL variability and outlined levers such as Rapid Refi adoption; Autopilot was cited as supportive of pricing leverage and better unit economics as it scales.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">PFL variability is mechanically lower</span>
+<span class="span">Rapid Refi</span>
+<span class="span">Autopilot can also provide pricing leverage</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Embedded workflow with natural agent invocation points viewed as advantage</span>
+<span class="badge">competitive_threat</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Blend argued that being embedded in origination workflows with natural agent invocation points is a structural advantage amid rising competition from model‑centric vendors.</p>
+<div class="ev-ch">channels: <span class="chchip">strategic_option_value</span> <span class="chchip">competitive_threat_from_provider</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">embedded in origination workflows</span>
+<span class="span">agent invocation points</span>
+<span class="span">advantage</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Large banks independently turned on Autopilot; AI budgets ‘flipped on’ for 2026</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reported that many large banks enabled Autopilot independently and that 2026 AI budgets have ‘flipped on,’ with value expected to increasingly map to labor savings.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">many large banks turned Autopilot on independently</span>
+<span class="span">2026 budgets for AI have ‘flipped on’</span>
+<span class="span">labor savings</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Self‑serve adoption: some large banks enabled Autopilot without Blend’s involvement</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blend highlighted that some large banks enabled Autopilot in beta/production without Blend’s involvement, reinforcing self‑serve dynamics at scale.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">enabled Autopilot in beta/production</span>
+<span class="span">without Blend’s involvement</span>
+<span class="span">self‑serve adoption</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Near‑term go‑lives for Rapid + Autopilot; Rapid Home Equity implementations</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Two large banks targeted near‑term go‑lives for Rapid + Autopilot flows, and several top home‑equity originators were implementing Rapid Home Equity, implying 2H adoption catalysts.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">near‑term go‑lives</span>
+<span class="span">Rapid + Autopilot flows</span>
+<span class="span">Rapid Home Equity</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">2026 shift to dedicated AI budgets and broader agentic use cases via Autopilot MCP</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management said 2026 marked a shift to dedicated AI budgets at large banks, supporting faster adoption cycles and broader agentic use cases beyond mortgage through Autopilot MCP.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">shift to dedicated AI budgets</span>
+<span class="span">broader agentic use cases</span>
+<span class="span">Autopilot MCP</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Autopilot described as a ‘great product’ with sci‑fi‑like capabilities (tempered near‑term)</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Leadership characterized Autopilot’s capabilities as akin to ‘science fiction’ while emphasizing the early stage and the need to avoid over‑committing on near‑term revenue.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">‘great product’</span>
+<span class="span">science fiction</span>
+<span class="span">early and execution remains key</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Autopilot adoption metrics: 65 lenders activated; 22 live; 7,000+ applications touched</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Prepared remarks reported rapid early adoption: 65 lenders had activated Autopilot, 22 were live in production, and more than 7,000 applications had been touched by the agent during the period, aided by the free Q2 trial.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">65 lenders have activated Autopilot</span>
+<span class="span">22 are running it live in production</span>
+<span class="span">over 7,000 applications have already been touched</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0025" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-05-07</span>
+<span class="eh">Autopilot positioned as orchestration over ‘best available models’ (multi‑model)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">Management emphasized Autopilot is not a foundation model; it orchestrates work using the best available models underneath, with discussion explicitly referencing Anthropic or OpenAI as model providers.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 2 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5], web_search_findings[6]</div>
+<span class="span">It is not a model</span>
+<span class="span">best available models underneath</span>
+<span class="span">Anthropic or OpenAI</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-05-04</span>
+<span class="eh">Autopilot MCP Server opens Blend platform to third‑party AI agents (MCP standard)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">Blend launched Autopilot MCP Server, built on the Model Context Protocol introduced by Anthropic, enabling lender‑ and partner‑built AI agents to securely access and act across the full Blend lending platform through a single interface.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 3 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1], web_search_findings[3], web_search_findings[4]</div>
+<span class="span">Autopilot MCP</span>
+<span class="span">Model Context Protocol</span>
+<span class="span">introduced by Anthropic in 2024</span>
+<span class="span">programmatic access to the full Blend platform</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-22</span>
+<span class="eh">Borrower chat enabled; MCP platform hardening with pricing and rate‑lock alignment</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blend enabled borrower chat with Autopilot in beta and aligned pricing/rate‑lock tooling with production endpoints, improving agent accuracy and auditability within origination workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">Borrower, meet Autopilot.</span>
+<span class="span">borrower chat is available</span>
+<span class="span">rate-lock</span>
+<span class="span">Agents get accurate pricing</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-03</span>
+<span class="eh">Blend launches Autopilot to accelerate loan origination reviews</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$11,000 · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Blend announced Autopilot, a non‑decisioning AI agent that automates document review, compliance checks, and borrower follow‑ups, claiming completion of tasks in as little as 15 seconds and targeting an industry context where origination costs can be $11,000+ per loan.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">Blend Launches Autopilot</span>
+<span class="span">in as little as 15 seconds</span>
+<span class="span">non-decisioning tool</span>
+<span class="span">$11,000 or more per loan</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>AI feature build‑out and ‘Intelligent Origination’ vision</h2>
+<div class='range'>2025-05-06 → 2025-10-15</div>
+<div class='psum'>In 2025 Blend expanded AI‑driven functionality and partner integrations. It embedded Glia’s human+AI interaction suite into its Digital Banking platform and showcased DocAI’s automation benefits in mortgage workflows. In October 2025, Blend unveiled its Intelligent Origination vision—embedding agentic intelligence at the core of lending operations rather than as bolt‑on features—signaling a shift toward executional AI systems within core workflows.</div>
+<div class="event t-web_only_verified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-10-15</span>
+<span class="eh">‘Intelligent Origination’ announced as AI‑powered operating model for lending</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blend announced Intelligent Origination, an AI‑powered system embedded in its lending platform, moving from assistive tools to executional agentic intelligence at the heart of lending workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Intelligent Origination</span>
+<span class="span">AI-powered system</span>
+<span class="span">embedding agentic intelligence</span>
+<span class="span">operating model for lending</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2025-08-18</span>
+<span class="eh">Blend highlights DocAI gains in speed, quality, and satisfaction</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blend showcased DocAI capabilities that automate document classification and extraction to shorten reviews and improve borrower experience, suggesting operational savings and higher NPS for mortgage lenders.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">Blend’s DocAI automates document</span>
+<span class="span">eliminate days of manual review</span>
+<span class="span">higher NPS scores</span>
+<span class="span">from hours to minutes</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2025-05-06</span>
+<span class="eh">Glia integration embeds real‑time human+AI support into Blend Digital Banking</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Blend announced an integration with Glia to bring chat, voice, video, and AI tools directly into its Digital Banking platform so lenders can guide applicants in real time without leaving the loan application.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Blend Labs, Inc. (NYSE: BLND)</span>
+<span class="span">new integration with Glia</span>
+<span class="span">chat, voice, video and AI</span>
+<span class="span">directly into Blend’s Digital Banking platform</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Early multi‑model footing and cloud dependency</h2>
+<div class='range'>2023-11-20 → 2025-03-11</div>
+<div class='psum'>Blend’s AI journey surfaced publicly in late 2023 with external reporting that its copilot leveraged multiple large language model providers, including OpenAI’s GPT and Anthropic’s Claude. This established an early multi‑model approach aligned with Blend’s platform strategy.
+By March 2025, Blend’s annual report reiterated the company’s reliance on Amazon Web Services for hosting its platform, flagging operational risk tied to third‑party cloud infrastructure. This period set foundational patterns: multi‑model AI usage at the application layer and dependence on hyperscale cloud for delivery.</div>
+<div class="event t-web_only_unverified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2025-03-11</span>
+<span class="eh">10‑K: AWS hosting dependency flagged as risk</span>
+<span class="badge">risk</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">Blend’s 2024 Annual Report disclosed that its platform is hosted on AWS data centers, noting that issues with Amazon Web Services could adversely affect operations. This underscores infrastructure concentration risk.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">Amazon Web Services could adversely affect</span>
+<span class="span">We currently host our platform</span>
+<span class="span">data centers provided by Amazon Web Services</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2023-11-20</span>
+<span class="eh">American Banker: Blend copilot uses multiple LLMs (OpenAI GPT, Claude)</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">American Banker reported that Blend’s copilot uses multiple large language models, including OpenAI’s GPT and Anthropic’s Claude, reflecting a multi‑model integration strategy for banking workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">Blend uses large language model</span>
+<span class="span">OpenAI&#x27;s GPT</span>
+<span class="span">Amazon&#x27;s Bedrock</span>
+<span class="span">Claude</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0024'>E0024</a>, <a class='evref' href='#E0015'>E0015</a>, <a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a>, <a class='evref' href='#E0021'>E0021</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0026'>E0026</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0016'>E0016</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0026'>E0026</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0018'>E0018</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0025'>E0025</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0025'>E0025</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>How quickly will free‑trial Autopilot usage convert to paid tiers (flat‑fee and per‑funded‑loan), and what ARPU uplift should be assumed?</li>
+<li>Does Autopilot MCP materially steer customers toward specific model vendors (e.g., Anthropic via MCP) or remain model‑agnostic in production?</li>
+<li>What portion of the ~$10M Autopilot pipeline is tied to signed SOWs vs. informal interest, and what is the expected conversion timing?</li>
+<li>Are there any emerging regulatory constraints on AI agents in lending workflows that could affect Autopilot deployment at large banks?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Much of the 2026 detail is sourced from company press materials and earnings commentary; independent customer validation is limited in the inventory.</li>
+<li>The MCP standard attribution to Anthropic is cited from company materials; broader industry governance of the standard is not detailed here.</li>
+<li>Guidance references include non‑GAAP framing and trial‑period dynamics; near‑term monetization remains uncertain as acknowledged by management.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

@@ -1,0 +1,518 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>ADP US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>Automatic Data Processing Inc <span class='sub'>(ADP US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.427</div>
+</header>
+<div class='stats'>
+<span class='chip'>4 phases</span>
+<span class='chip'>20 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 3</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 10</span>
+<span class='chip'>single source: 10</span>
+<span class='chip'>web-only (unverified): 6</span>
+<span class='chip'>web-only (verified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>FY26 execution, pricing mix context, and workforce sentiment</h2>
+<div class='range'>2026-04-29 → 2026-06-17</div>
+<div class='psum'>On the April 2026 quarter, ADP emphasized continued AI investment, strong qualitative client feedback on ADP Assist, and an ongoing focus on productivity and margin through FY27. Management detailed pricing mix — notably higher seat-based exposure in larger segments — amidst broader industry debates about AI’s net impact on seats.
+ADP also reiterated execution risk around AI investments and adoption timelines. Separately, ADP Research’s People at Work 2026 survey captured workforce sentiment and AI usage patterns, noting low job-security confidence and that daily AI users reported feeling less productive than non-users, underscoring adoption nuance in the broader market.</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-17</span>
+<span class="eh">ADP Research People at Work 2026: sentiment and AI usage findings</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">ADP Research reported only 22% strongly agreed their job was safe from elimination; on AI, daily users were four times more likely than non‑users to say they felt less productive, reflecting adoption complexity across workforces.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">news_rows[0]</div>
+<span class="span">People at Work 2026</span>
+<span class="span">22% strongly agreed their job was safe</span>
+<span class="span">four times more likely</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">CEO: continued AI investment across products, service delivery, and sales</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">ADP reiterated ongoing AI investments across product, service, and sales organizations to support long-term HCM opportunities.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">continued investment in AI across products, service delivery, and sales</span>
+<span class="span">support long‑term HCM opportunities</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">ADP Assist client feedback described as “incredible”; no new KPIs</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management characterized ADP Assist client feedback as ‘incredible’ and said the company remains early in realizing benefits; no new quantified engagement KPIs were provided.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">client feedback as “incredible”</span>
+<span class="span">did not provide new quantified engagement KPIs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Pricing mix context amid seat-compression debate</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">ADP detailed that about 80% of down‑market revenue is base‑fee, while mid‑ to up‑market is more seat‑based; overall ES exposure to seat‑based pricing is higher than 25%, framing sensitivity to seat trends in AI debates.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">about 80% of revenue is base‑fee</span>
+<span class="span">Mid‑market and up‑market are more seat‑based</span>
+<span class="span">exposure to seat‑based pricing is higher than 25%</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Focus on AI-driven productivity and margins into FY27</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management reiterated a continued focus on margin expansion and AI-driven productivity benefits into FY27; no new incremental FY27 numerical targets were provided.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">continued focus on margin expansion and productivity benefits from AI</span>
+<span class="span">FY27</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-29</span>
+<span class="eh">Risk flagged: execution and adoption timing for AI investments</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">ADP cautioned that increasing AI investments across products and service operations carry execution and adoption risks that could defer anticipated margin and growth benefits.</p>
+<div class="ev-ch">channels: <span class="chchip">regulatory_or_reputational_risk</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">increasing AI investments across products and service operations</span>
+<span class="span">delays in delivery or lower‑than‑expected adoption</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Channels and agents: Teams/Copilot, AI agents, and Marketplace</h2>
+<div class='range'>2026-01-16 → 2026-04-13</div>
+<div class='psum'>In early 2026, ADP expanded Assist’s distribution and capability footprint. A Microsoft 365 certification page confirmed ADP Assist access within Microsoft Teams/Copilot and AWS hosting, while prior guidance underscored ADP’s ability to reach OpenAI via Microsoft and Anthropic via AWS.
+ADP launched new ADP Assist agents designed to ‘think, plan and act’ with oversight, and introduced an AI Agents destination within ADP Marketplace to help clients discover and deploy partner AI agents tightly integrated with ADP workflows. ADP also released a new Global Payroll agent for variance detection and remediation now available for enterprise clients. Concurrently, quarterly filings framed ongoing AI investment, adoption progress, and workforce/sales resourcing.</div>
+<div class="event t-web_only_unverified" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-04-13</span>
+<span class="eh">Global Payroll: new AI agent for variance detection/remediation</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ADP introduced a new ADP Assist agent within Global Payroll that automatically identifies payroll variances and suggests remediations, now available to all enterprise clients.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">new AI agent within ADP Global Payroll</span>
+<span class="span">automatically identifies payroll variances</span>
+<span class="span">now available for all ADP enterprise clients</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0013" data-providers="">
+<div class="ev-top">
+<span class="date">2026-03-02</span>
+<span class="eh">ADP Marketplace debuts AI Agents destination with curated partners</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ADP launched a new destination within ADP Marketplace to help organizations discover and deploy AI agents integrated with ADP, featuring a curated set of partner agents across HR use cases.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">ADP Marketplace Launches AI Agents</span>
+<span class="span">world&#x27;s largest digital HR storefront</span>
+<span class="span">curated set of AI agents include partners like</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">ADP launches new ADP Assist AI agents to reduce friction across HR/payroll</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ADP announced new ADP Assist agents that think, plan, and take action with oversight, leveraging ADP’s global data platform spanning 1.1 million clients to drive productivity and reduce manual effort.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Launch of New AI Agents</span>
+<span class="span">agents that think, plan and take action</span>
+<span class="span">1.1 million clients</span>
+<span class="span">75+ years of workforce data</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Mgmt: no AI-driven labor weakness visible in ADP data</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">On the Q2 FY26 call, ADP stated its data did not show discernible AI-driven labor weakness across at‑risk verticals, and layoffs remained muted.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">do not show discernible AI-driven weakness</span>
+<span class="span">layoffs remain muted</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0010" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Sales headcount to expand as AI improves seller efficiency</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ADP guided that sales headcount will continue to grow while AI tools improve seller efficiency, indicating simultaneous investment in people and tooling.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">continue growing sales headcount</span>
+<span class="span">AI tools improve seller efficiency</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0011" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">ADP Assist expanding across domains</span>
+<span class="badge">product_integration</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated ADP Assist’s expansion across domains, signaling continued embedding of gen‑AI capabilities into workflows.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">ADP Assist expansion across domains</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0012" data-providers="">
+<div class="ev-top">
+<span class="date">2026-01-28</span>
+<span class="eh">Ongoing investment in AI-enabled tools; still early innings</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">ADP emphasized continued investment in sales headcount and AI-enabled tools aimed at productivity gains, characterizing the effort as early with more lift expected over coming years.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Continued investment in sales headcount and AI‑enabled tools</span>
+<span class="span">early innings</span>
+<span class="span">more lift expected over coming years</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2026-01-16</span>
+<span class="eh">ADP Assist enabled in Microsoft Teams/Copilot; AWS hosting noted</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">ADP documented ADP Assist’s availability within Microsoft Teams/Copilot and indicated AWS as the hosting cloud. Combined with ADP’s technical guidebook, this supports access to OpenAI via Microsoft and Anthropic via AWS Bedrock models.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span></div>
+<details>
+<summary>evidence — 2 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1], web_search_findings[0]</div>
+<span class="span">access and view their ADP account data</span>
+<span class="span">Microsoft Teams/Copilot</span>
+<span class="span">OpenAI through Microsoft</span>
+<span class="span">Anthropic through AWS</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Assist platform expansion and provider disclosures</h2>
+<div class='range'>2025-09-03 → 2025-10-01</div>
+<div class='psum'>In late 2025, ADP used its Innovation Day to unveil new AI-powered features across core HCM suites, positioning ADP Assist as the orchestration layer to eliminate manual processes and speed analytics and compliance tasks. This indicated the company’s shift from pilots to embedded AI assistants within flagship products.
+Shortly after, ADP published a technical guidebook detailing a partner ecosystem including AWS, Microsoft, Databricks, and Salesforce. Crucially, it disclosed access to OpenAI models via Microsoft and Anthropic via AWS Bedrock, reinforcing a multi-model, multi-cloud approach with explicit vendor data-protection standards.</div>
+<div class="event t-web_only_unverified" id="E0006" data-providers="openai_chatgpt anthropic_claude">
+<div class="ev-top">
+<span class="date">2025-10-01</span>
+<span class="eh">Technical Guidebook: Multi-cloud, multi-model with OpenAI and Anthropic</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">anthropic_claude</span></div>
+<p class="narr">ADP disclosed partnerships with AWS, Microsoft, Databricks, and Salesforce, and said it extends reach to OpenAI through Microsoft and Anthropic through AWS. It relies on closed-source models including Microsoft‑OpenAI’s GPT family and AWS Bedrock-based models with strict client data protections.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">OpenAI through Microsoft</span>
+<span class="span">Anthropic through AWS</span>
+<span class="span">GPT family</span>
+<span class="span">AWS Bedrock-based models</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2025-09-03</span>
+<span class="eh">Innovation Day 2025: New AI features leveraging ADP Assist</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ADP unveiled new AI-powered features across Workforce Now, Global Payroll, and Lyric HCM, emphasizing purpose-built AI to remove manual work and highlighting ADP Assist as the enabling platform.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">unveiled new AI-powered features</span>
+<span class="span">Innovation Day</span>
+<span class="span">leverage ADP Assist</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundations, early gen-AI rollout, and Salesforce integration</h2>
+<div class='range'>2018-06-25 → 2024-06-10</div>
+<div class='psum'>ADP’s enterprise AI journey traces public roots to at least 2018, when the company highlighted machine learning and AI efforts around its data assets and ecosystem partners at an internal Datathon. This period established ADP’s data culture and partner collaborations as the groundwork for later generative AI initiatives.
+By late 2023 and early 2024, ADP began explicitly productizing gen‑AI in client‑facing and service workflows. The December 2023 expansion with Salesforce brought generative AI into ADP’s service operations to accelerate knowledge retrieval for support teams. In early 2024, ADP rolled out ADP Assist in early release, describing a hybrid approach that uses external and proprietary LLMs deployed in ADP’s private instances across AWS and/or Microsoft Azure — with models not trained on ADP data. In June 2024, ADP reiterated that ADP Assist had launched earlier in the year as a cross‑platform gen‑AI solution.</div>
+<div class="event t-web_only_verified" id="E0004" data-providers="">
+<div class="ev-top">
+<span class="date">2024-06-10</span>
+<span class="eh">ADP notes ADP Assist launch earlier in 2024 as cross‑platform gen‑AI</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">Marking its 75th anniversary, ADP reiterated that ADP Assist launched earlier in 2024 as a cross‑platform generative AI solution to enhance HR productivity with natural‑language interactions.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">user_lock_in_relevance</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[5]</div>
+<span class="span">ADP Assist was launched earlier this year</span>
+<span class="span">cross-platform generative AI solution</span>
+<span class="span">natural language conversations</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0003" data-providers="">
+<div class="ev-top">
+<span class="date">2024-02-15</span>
+<span class="eh">ADP Assist early release; hybrid LLM approach and private cloud instances</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ADP rolled out ADP Assist in early release, using both external and proprietary LLMs. The company said models are generally not trained or fine‑tuned with ADP data and are deployed in ADP’s private instances within AWS and/or Microsoft Azure.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">data_rights_or_content_commoditization_risk</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">ADP last month rolled out ADP Assist</span>
+<span class="span">external and proprietary LLMs</span>
+<span class="span">not pre-trained or fine-tuned with ADP&#x27;s data</span>
+<span class="span">AWS and/or Microsoft Azure infrastructure</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="">
+<div class="ev-top">
+<span class="date">2023-12-12</span>
+<span class="eh">ADP and Salesforce expand work with generative AI for client service</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">ADP announced an expansion with Salesforce to use generative AI to enhance the client experience and empower service teams to retrieve answers quickly from ADP’s knowledge content.</p>
+<div class="ev-ch">channels: <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">provider_as_platform_absorber</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Salesforce Generative AI</span>
+<span class="span">reimagine ADP’s client experience</span>
+<span class="span">query thousands of ADP FAQ and knowledge articles</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0001" data-providers="">
+<div class="ev-top">
+<span class="date">2018-06-25</span>
+<span class="eh">ADP spotlights AI/ML data initiatives and partners at Datathon</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">ADP publicized its internal Datathon and broader AI/ML push, emphasizing its data culture and collaborations with partners such as H2O.ai and Cloudera — building foundations for future AI products.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Machine Learning and Artificial Intelligence</span>
+<span class="span">second annual Datathon at ADP</span>
+<span class="span">H2O.ai</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0016'>E0016</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0007'>E0007</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><a class='evref' href='#E0019'>E0019</a>, <a class='evref' href='#E0020'>E0020</a></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0007'>E0007</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0003'>E0003</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0006'>E0006</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0013'>E0013</a>, <a class='evref' href='#E0014'>E0014</a></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What percentage of ADP Assist inference traffic routes to OpenAI models versus Anthropic Bedrock models, and how has that mix changed since launch?</li>
+<li>What quantified adoption and engagement KPIs (e.g., DAU/MAU, task completion, NPS uplift) are associated with ADP Assist and new AI agents across key client segments?</li>
+<li>Are there minimum term lengths, SLAs, or volume commitments in ADP’s agreements accessing OpenAI (via Microsoft) and Anthropic (via AWS Bedrock)?</li>
+<li>How much revenue is tied to seat‑based pricing within AI-enhanced SKUs, and what sensitivity analysis has management run under potential AI-driven seat compression?</li>
+<li>What guardrails and audit mechanisms govern ADP’s use of external LLMs to ensure data segregation and compliance across jurisdictions?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Many sources are company press releases or documentation and may reflect marketing positioning rather than independently-audited operating metrics.</li>
+<li>No dollar-value contract sizes, capex, or revenue run-rate figures were disclosed in the cited materials; magnitudes are therefore left null.</li>
+<li>Provider mappings (OpenAI via Microsoft; Anthropic via AWS) come from ADP’s technical guidebook and may evolve with model availability and performance.</li>
+<li>Microsoft 365 App Certification details are developer-supplied and may not capture all runtime architecture or provider routing behaviors.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>

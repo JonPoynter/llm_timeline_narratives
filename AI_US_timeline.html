@@ -1,0 +1,742 @@
+<!doctype html><html lang='en'><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='robots' content='noindex, nofollow'>
+<title>AI US — AI Timeline</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1a1a1a;--mut:#6b7280;--line:#e5e7eb;
+--corr:#16a34a;--single:#2563eb;--webv:#d97706;--webu:#9ca3af;}
+*{box-sizing:border-box}
+body{font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+background:var(--bg);margin:0;padding:0 0 80px}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:8px}
+h1{margin:0 0 4px;font-size:24px}
+.sub{color:var(--mut);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{background:#eef2ff;border:1px solid #e0e7ff;border-radius:999px;
+padding:3px 10px;font-size:12px;color:#3730a3}
+.phase{margin:26px 0 8px}
+.phase h2{font-size:19px;margin:0 0 2px}
+.phase .range{color:var(--mut);font-size:12px}
+.phase .psum{color:#374151;font-size:14px;margin:6px 0 14px;white-space:pre-wrap}
+.event{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--webu);
+border-radius:8px;padding:12px 14px;margin:10px 0}
+.event.t-corroborated{border-left-color:var(--corr)}
+.event.t-single_source{border-left-color:var(--single)}
+.event.t-web_only_verified{border-left-color:var(--webv)}
+.event.t-web_only_unverified{border-left-color:var(--webu)}
+.event{scroll-margin-top:14px}
+.event:target{box-shadow:0 0 0 3px #fde68a;border-left-width:7px}
+a.evref{color:#2563eb;text-decoration:none;font-variant-numeric:tabular-nums}
+a.evref:hover{text-decoration:underline}
+table.ch td a.evref{margin-right:2px}
+.ev-top{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.date{font-variant-numeric:tabular-nums;color:var(--mut);font-size:13px;min-width:88px}
+.eh{font-weight:600;font-size:15px;flex:1 1 auto}
+.badge{font-size:11px;padding:2px 8px;border-radius:6px;background:#f3f4f6;color:#374151;border:1px solid var(--line)}
+.b-corroborated{background:#dcfce7;color:#166534;border-color:#bbf7d0}
+.b-single_source{background:#dbeafe;color:#1e40af;border-color:#bfdbfe}
+.b-web_only_verified{background:#fef3c7;color:#92400e;border-color:#fde68a}
+.b-web_only_unverified{background:#f3f4f6;color:#6b7280}
+.mag{font-weight:600;color:#065f46}
+.neg{color:#b91c1c}
+.prov{font-size:11px;color:#5b21b6;background:#f5f3ff;border:1px solid #ede9fe;border-radius:6px;padding:1px 6px}
+.narr{margin:8px 0 0;font-size:14px;color:#1f2937}
+.cav{margin:6px 0 0;font-size:12.5px;color:#b45309;font-style:italic}
+details{margin-top:8px}
+summary{cursor:pointer;font-size:12px;color:var(--mut)}
+.ev-src{font-size:12px;color:#374151;margin:6px 0 0;font-family:ui-monospace,Consolas,monospace}
+.span{display:block;color:#4b5563;font-family:ui-monospace,Consolas,monospace;font-size:12px;margin:2px 0;padding-left:10px;border-left:2px solid var(--line)}
+.nonlatin{color:#7c2d12}
+.tag{font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-right:4px}
+table.ch{border-collapse:collapse;width:100%;font-size:13px;margin-top:8px}
+table.ch td{border:1px solid var(--line);padding:4px 8px;vertical-align:top}
+table.ch td.k{width:280px;color:#374151}
+table.ch td.grp{background:#f6f8fc;font-weight:700;color:#1f2937}
+.noev{color:#9ca3af}
+section.block{margin-top:30px}
+section.block h2{font-size:18px;border-bottom:1px solid var(--line);padding-bottom:6px}
+ul.q{font-size:14px;color:#374151}
+.backlink{display:inline-block;margin-bottom:8px;font-size:13px;color:#2563eb;text-decoration:none}
+.backlink:hover{text-decoration:underline}
+.filterbar{position:sticky;top:0;background:var(--bg);padding:10px 0;margin:6px 0;border-bottom:1px solid var(--line);z-index:5;display:flex;flex-wrap:wrap;gap:6px}
+.filterbar button{font:inherit;font-size:12px;cursor:pointer;border:1px solid var(--line);background:#fff;color:#374151;border-radius:999px;padding:3px 12px}
+.filterbar button.active{background:#eef2ff;border-color:#c7d2fe;color:#3730a3;font-weight:600}
+.ev-ch{margin:8px 0 0;font-size:12px;color:#374151}
+.chchip{display:inline-block;background:#f1f5f9;border:1px solid var(--line);border-radius:6px;padding:1px 7px;margin:2px 3px 0 0;font-family:ui-monospace,Consolas,monospace}
+.chchip b{color:#065f46;font-weight:700}
+</style></head><body><div class='wrap'>
+<a class='backlink' href='index.html'>&larr; All timelines</a>
+<header>
+<h1>C3.ai Inc <span class='sub'>(AI US)</span></h1>
+<div class='sub'>AI Relationship Timeline · as of 2026-06-30 · built by gpt-5 · $0.439</div>
+</header>
+<div class='stats'>
+<span class='chip'>3 phases</span>
+<span class='chip'>34 events</span>
+<span class='chip'>filings 2</span>
+<span class='chip'>news 15</span>
+<span class='chip'>frontier 0</span>
+<span class='chip'>web 13</span>
+<span class='chip'>single source: 21</span>
+<span class='chip'>web-only (unverified): 9</span>
+<span class='chip'>web-only (verified): 4</span>
+</div>
+<div class='filterbar'><button data-f='all' class='active'>All</button><button data-f='openai_chatgpt'>OpenAI</button><button data-f='anthropic_claude'>Claude</button><button data-f='google_gemini_deepmind'>Gemini</button><button data-f='meta_llama'>Llama</button><button data-f='xai_grok'>Grok</button><button data-f='deepseek'>DeepSeek</button></div>
+<div class='phase'>
+<h2>2026 Productization, Multi‑LLM Posture, and Operating Reset</h2>
+<div class='range'>2026-02-25 → 2026-06-30</div>
+<div class='psum'>C3.ai underscored its multi‑LLM approach in 2026 with the launch of C3 Code and documentation emphasizing LLM‑agnostic operation across Claude, GPT/Codex, Gemini, Grok, Mistral, and Llama. Operationally, Q3 FY2026 disclosed modest bookings and rising federal mix, while management initiated a substantial restructuring program to cut costs.
+In Q4 FY2026, Thomas M. Siebel returned as CEO and refocused the organization on revenue growth and cash generation. The company highlighted cash balances post an insider purchase, targeted $135M in annualized opex savings, guided FY2027 revenue to $210–$240M, and flagged execution issues, reduced services mix targets, and the absence of RPO disclosures as risk markers.</div>
+<div class="event t-single_source" id="E0022" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Thomas M. Siebel returns as CEO; organization restructured</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">C3.ai announced Thomas M. Siebel resumed the CEO role and described a restructured organization focused on revenue growth, cash generation, and achieving non‑GAAP profitability.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Thomas M. Siebel resuming CEO</span>
+<span class="span">restructured organization</span>
+<span class="span">focused on revenue growth, cash generation, and achieving non-GAAP profitability</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0023" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Liquidity update: $673M cash after CEO open‑market share purchase</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$673M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">C3.ai reported $673 million in cash and liquidity as of June 3, 2026, noting the CEO’s open‑market purchase of 6.17 million shares at $11.16 per share.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">open-market purchase of 6.17M shares</span>
+<span class="span">$11.16 per share</span>
+<span class="span">cash on hand to $673M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0024" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Targeting ~$135M annualized non‑GAAP opex savings</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$135M · run_rate_annual</span> <span class="badge">positive_demand</span></div>
+<p class="narr">Management reiterated a restructuring plan targeting approximately $135 million in annualized non‑GAAP operating expense savings and reduced cash burn.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">targeting approximately $135M annualized non-GAAP operating expense savings</span>
+<span class="span">reduced cash burn</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0025" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Deferred revenue snapshot: $34.9M current; $1.6M non‑current</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$35M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">C3.ai disclosed current deferred revenue of $34.9 million and non‑current deferred revenue of $1.6 million, slightly down year over year.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Deferred revenue: current $34.9M</span>
+<span class="span">non-current $1.6M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0026" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Risk: RPO metrics not provided in Q4 release</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">The company did not disclose remaining performance obligations (RPO) or current RPO in the Q4 press release, limiting visibility into contracted backlog.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Remaining performance obligations (RPO)</span>
+<span class="span">were not provided in the press release.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0027" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">FY2026 cash burn: operating cash flow $(190.2)M; FCF $(192.1)M</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag neg">-$192M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">C3.ai reported FY2026 operating cash outflow of $(190.2) million and free cash flow of $(192.1) million, highlighting ongoing cash usage ahead of targeted savings.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Operating cash flow $(190.2)M</span>
+<span class="span">free cash flow $(192.1)M</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0028" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Services mix expectation set at roughly 10%–15% of revenue</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management guided professional services, including prioritized engineering services (PES), to approximately 10%–15% of total revenue going forward.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">professional services (including PES) are expected to be roughly 10%–15% of total revenue</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0029" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Sales coverage expansion: targeting order of 1,000+ accounts per region</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">C3.ai plans to expand account coverage materially in each major region from roughly 100–150 to on the order of 1,000+ accounts to drive pipeline and bookings.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">order of 1,000+” accounts</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0030" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Risk: Management cites unacceptable sales execution and sharp decline</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">negative_displacement</span></div>
+<p class="narr">The CEO characterized recent sales execution as unacceptable, noting sales &quot;fell off a cliff,&quot; indicating internal execution risk rather than product-market fit issues.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">sales “fell off a cliff”</span>
+<span class="span">“unacceptable.”</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0031" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Risk: USAF RSO contract ceiling raised, but ramp clarity lacking</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management acknowledged not being up to speed on the USAF Rapid Sustainment Office contract details, with the CFO noting the ceiling had been raised, implying execution/ramp uncertainty.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">not up to speed</span>
+<span class="span">ceiling had been raised</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0032" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Emphasis on software-led revenue; services held to ~10%–15%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">C3.ai reiterated a software-led revenue focus with services maintained around 10%–15% of total; PES remains part of services but is not a core growth engine.</p>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Emphasis on software‑led revenue</span>
+<span class="span">services at roughly 10%–15% of total</span>
+<span class="span">PES remains part of services</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0033" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">PES revenue declines to $2.14M vs $17.0M y/y</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$2M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">Prioritized engineering services revenue fell to $2.14 million from $17.0 million year over year, consistent with deprioritizing services as a growth driver.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">were $2.14M (vs $17.0M y/y)</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0034" data-providers="">
+<div class="ev-top">
+<span class="date">2026-06-03</span>
+<span class="eh">Guidance: Q1 FY27 $50–$54M; FY27 $210–$240M</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$225M · other</span> <span class="badge">positive_demand</span></div>
+<p class="narr">C3.ai guided Q1 FY2027 revenue to $50–$54 million and FY2027 revenue to $210–$240 million, aligning with a reset go‑to‑market under the returning CEO.</p>
+<p class="cav">⚠ Magnitude reflects midpoint of FY2027 revenue guidance.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[0]</div>
+<span class="span">Q1 FY2027 revenue $50–$54M</span>
+<span class="span">FY2027 revenue $210–$240M</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0012" data-providers="anthropic_claude openai_chatgpt">
+<div class="ev-top">
+<span class="date">2026-04-08</span>
+<span class="eh">C3 Code launched to automate AI app lifecycle; third‑party model comparison cited</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">openai_chatgpt</span></div>
+<p class="narr">C3.ai introduced C3 Code to automate the AI application lifecycle. The company cited an evaluation using Anthropic’s Claude that scored C3 Code 9.2/10 versus OpenAI’s Codex 6.0 and Palantir 7.7, positioning Code within a competitive toolchain landscape.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<p class="cav">⚠ Comparative scores are described by C3.ai based on an internal evaluation using Claude; independent replication not provided in the excerpt.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[10]</div>
+<span class="span">C3 Code automates the entire application lifecycle</span>
+<span class="span">Anthropic’s Claude</span>
+<span class="span">scored C3 Code 9.2 out of 10 overall</span>
+<span class="span">OpenAI’s Codex (6.0)</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0013" data-providers="anthropic_claude google_gemini_deepmind xai_grok openai_chatgpt meta_llama">
+<div class="ev-top">
+<span class="date">2026-04-08</span>
+<span class="eh">C3 Code datasheet emphasizes LLM‑agnostic support including Grok and Mistral</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">xai_grok</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span></div>
+<p class="narr">C3.ai’s C3 Code datasheet highlights flexibility to work across multiple LLM providers, including Claude, GPT/Codex, Gemini, Grok, Mistral, and Llama, asserting no dependence on a single model and easy switching.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">provider_specificity</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[11]</div>
+<span class="span">LLM-Agnostic: Works with Claude, Codex/GPT, Gemini, Grok, Mistral, and More –– ✓</span>
+<span class="span">No dependence on any single AI model or provider.</span>
+<span class="span">Switch between Claude, Codex/GPT, Gemini, Grok, Mistral, Llama</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0014" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Q3 FY2026: $46.9m bookings across 44 agreements; 14 incremental IPDs</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$47M · contract_value</span> <span class="badge">positive_demand</span></div>
+<p class="narr">C3.ai reported Q3 bookings of $46.9 million with 44 agreements signed and 14 additional Industry Problem Definitions (IPDs), indicating sales activity breadth amid transition.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">bookings were $46.9m</span>
+<span class="span">signed 44 agreements</span>
+<span class="span">14 incremental IPDs</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0015" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Federal/defense bookings +134% y/y; 55% of total in Q3</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">C3.ai’s public sector mix rose sharply, with federal/defense/aerospace bookings up 134% year over year, representing 55% of total bookings in Q3 FY2026.</p>
+<div class="ev-ch">channels: <span class="chchip">enterprise_adoption_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">bookings +134% y/y</span>
+<span class="span">represented 55% of total bookings</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0016" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Q3 FY2026 liquidity: $621.9m cash and marketable securities</span>
+<span class="badge">financing</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$622M · other</span> <span class="badge">neutral</span></div>
+<p class="narr">C3.ai ended Q3 FY2026 with $621.9 million in cash, cash equivalents, and marketable securities, providing runway amid restructuring.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">Cash, cash equivalents and marketable securities $621.9m at quarter-end.</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0017" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Restructuring: ~26% headcount cut targeting ~$135m annual opex savings</span>
+<span class="badge">personnel</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$135M · run_rate_annual</span> <span class="badge">mixed</span></div>
+<p class="narr">C3.ai approved a global workforce reduction of about 26% (~280 employees) and ~30% vendor cost cuts, targeting ~$135 million annual non‑GAAP operating expense savings by 2H FY2027.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">~26% global workforce reduction</span>
+<span class="span">(~280 employees)</span>
+<span class="span">~30% non-employee cost cuts</span>
+<span class="span">targeting ~$135m annual non-GAAP opex savings</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0018" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Risk: Public sector concentration and procurement timing</span>
+<span class="badge">risk</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">mixed</span></div>
+<p class="narr">Management flagged concentration and timing risks as federal/defense bookings comprised 55% of total, with public sector budget and procurement dynamics potentially affecting revenue timing and mix.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">comprised 55% of total</span>
+<span class="span">procurement risks in the public sector</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0019" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">FY2026 revenue guidance reduced to $246.7–$250.7m</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$249M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">C3.ai cut its FY2026 revenue guidance to a range of $246.7–$250.7 million from a prior $289.5–$309.5 million, signaling a weaker revenue outlook during restructuring.</p>
+<p class="cav">⚠ Magnitude reflects midpoint of the guided range for representation; actual outcome may vary.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">reduced to $246.7–$250.7 million</span>
+<span class="span">from $289.5–$309.5 million previously</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0020" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Q4 FY2026 outlook: $48–$52m revenue; $(56)–$(64)m non‑GAAP op loss</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$50M · other</span> <span class="badge">negative_displacement</span></div>
+<p class="narr">For Q4 FY2026, C3.ai guided revenue to $48–$52 million and a non‑GAAP operating loss of $(56)–$(64) million, indicating continued operating losses near term.</p>
+<p class="cav">⚠ Magnitude uses midpoint of the revenue guidance range.</p>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">revenue $48–$52m</span>
+<span class="span">non-GAAP operating loss $(56)–$(64)m</span>
+</details>
+</div>
+<div class="event t-single_source" id="E0021" data-providers="">
+<div class="ev-top">
+<span class="date">2026-02-25</span>
+<span class="eh">Professional services non‑GAAP gross margin reported at 82%</span>
+<span class="badge">other</span>
+<span class="badge b-single_source">single source</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">neutral</span></div>
+<p class="narr">Management highlighted an 82% non‑GAAP gross margin in professional services, reflecting margin profile of services mix.</p>
+<details>
+<summary>evidence — 1 source(s), 1 span(s)</summary>
+<div class="ev-src">filings[1]</div>
+<span class="span">non-GAAP professional services gross margin of 82%</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>2024 Multi‑cloud Expansion, Gemini Support, and Partner Network Scale</h2>
+<div class='range'>2024-03-05 → 2024-12-31</div>
+<div class='psum'>In early 2024, C3.ai launched C3 Generative AI: Standard Edition on Google Cloud Marketplace with explicit support for Gemini, positioning a no‑code, self‑service entry point for enterprises. The company achieved AWS’s Generative AI Competency, further validating multi‑cloud depth on Amazon services including Bedrock.
+The FY2024 10‑K highlighted 115 agreements closed through C3.ai’s partner network (Google Cloud, AWS, Microsoft, and others), and reiterated Google Cloud and AWS collaborations, including the Standard Edition support for Gemini and an expanded AWS Strategic Collaboration Agreement.</div>
+<div class="event t-web_only_unverified" id="E0009" data-providers="">
+<div class="ev-top">
+<span class="date">2024-07-22</span>
+<span class="eh">C3 AI attains AWS Generative AI Competency</span>
+<span class="badge">other</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">C3.ai achieved the AWS Generative AI Competency, highlighting customer success and technical proficiency, and noted use of AWS services including Amazon Bedrock across its products.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[7]</div>
+<span class="span">Achieves the AWS Generative AI Competency</span>
+<span class="span">utilize AWS services, including Amazon Bedrock</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0010" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-06-26</span>
+<span class="eh">FY2024 10‑K: 115 agreements closed via partner network; Gemini support reiterated</span>
+<span class="badge">customer_adoption</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">C3.ai reported closing 115 agreements with and through its partner network in FY2024, and reiterated Google Cloud collaboration including Standard Edition support for Gemini, alongside an expanded AWS strategic collaboration.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[8]</div>
+<span class="span">closed 115 agreements</span>
+<span class="span">with and through our partner network</span>
+<span class="span">C3 Generative AI: Standard Edition</span>
+<span class="span">supporting Google’s latest large language model (LLM), Gemini</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0008" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2024-03-05</span>
+<span class="eh">Standard Edition of C3 Generative AI debuts on GCP Marketplace with Gemini support</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">C3.ai introduced a no‑code, self‑service Standard Edition of C3 Generative AI on Google Cloud Marketplace, optimized for Vertex AI and explicitly supporting Google’s Gemini LLM.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[6]</div>
+<span class="span">C3 Generative AI: Standard Edition</span>
+<span class="span">now available on Google Cloud Marketplace</span>
+<span class="span">supporting Google’s newest and most advanced large language model (LLM), Gemini</span>
+<span class="span">no-code, self-service</span>
+</details>
+</div>
+</div>
+<div class='phase'>
+<h2>Foundational Cloud Alliances and Initial Generative AI Launch</h2>
+<div class='range'>2021-09-01 → 2023-12-31</div>
+<div class='psum'>C3.ai established a deep go-to-market and product alignment with Google Cloud beginning in 2021, enabling co-selling and native operation of C3 AI applications on Google Cloud infrastructure and services including Kubernetes Engine, BigQuery, and Vertex AI. In 2022, the firms expanded the partnership under a three-year framework to scale joint selling, co-development, and customer pilots.
+In 2023, C3.ai launched the C3 Generative AI Product Suite, initially for Enterprise Search, integrating leading large language models (LLMs) from OpenAI and Google. The suite rapidly moved into hyperscaler distribution, appearing on Google Cloud Marketplace in May 2023 and on AWS Marketplace days later. By September 2023, C3.ai emphasized LLM-agnostic support across multiple frontier and open models (e.g., OpenAI GPT-3.5, Google PaLM 2, Anthropic Claude 2 via Bedrock, Meta Llama 2), and introduced a standardized deployment motion and pricing, including a 12‑week production timeline at $250,000.</div>
+<div class="event t-web_only_verified" id="E0006" data-providers="anthropic_claude google_gemini_deepmind openai_chatgpt meta_llama">
+<div class="ev-top">
+<span class="date">2023-09-06</span>
+<span class="eh">C3 Generative AI suite updated with broad multi‑LLM support and standardized deployment</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="mag">$250,000 · other</span> <span class="badge">positive_demand</span> <span class="prov">anthropic_claude</span> <span class="prov">google_gemini_deepmind</span> <span class="prov">openai_chatgpt</span> <span class="prov">meta_llama</span></div>
+<p class="narr">C3.ai released updates to its Generative AI suite emphasizing LLM-agnostic operation across OpenAI, Google, Anthropic (via Bedrock), Meta and others, with a 12‑week production motion priced at $250,000 before usage-based fees.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">enterprise_adoption_exposure</span> <span class="chchip">strategic_option_value</span> <span class="chchip">multi_model_hedge</span> <span class="chchip">switching_flexibility</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[12]</div>
+<span class="span">LLM support is immediately available for Falcon 40B, Llama 2, Flan-T5, Azure GPT-3.5, AWS Bedrock Claude 2, Google PaLM 2, OpenAI GPT-3.5, and MPT-7B.</span>
+<span class="span">LLM agnostic, C3 Generative AI allows enterprises to interchange LLMs at will</span>
+<span class="span">within 12 weeks at a cost of $250,000.</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0005" data-providers="">
+<div class="ev-top">
+<span class="date">2023-05-30</span>
+<span class="eh">C3 Generative AI becomes available on AWS Marketplace</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">C3.ai expanded distribution by listing C3 Generative AI on AWS Marketplace, aiming to accelerate procurement and onboarding for AWS customers with a natural language interface over enterprise data.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[4]</div>
+<span class="span">C3 Generative AI Now Available on AWS Marketplace</span>
+<span class="span">AWS Marketplace</span>
+<span class="span">natural language search interface</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0004" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-05-24</span>
+<span class="eh">C3 Generative AI listed on Google Cloud Marketplace; eligible for committed spend</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">C3.ai made its Generative AI Product Suite publicly available on Google Cloud Marketplace, enabling customers to procure via Google and have purchases count toward their Google Cloud committed spend, streamlining enterprise onboarding.</p>
+<div class="ev-ch">channels: <span class="chchip">cloud_compute_revenue_exposure</span> <span class="chchip">distribution_channel_exposure</span> <span class="chchip">product_integration_exposure</span> <span class="chchip">traffic_or_distribution_bypass_risk</span> <span class="chchip">customer_relationship_disintermediation</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 3 span(s)</summary>
+<div class="ev-src">web_search_findings[3]</div>
+<span class="span">Google Cloud Marketplace</span>
+<span class="span">public offering on Google Cloud Marketplace</span>
+<span class="span">count towards a customer’s committed spending with Google Cloud</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0007" data-providers="">
+<div class="ev-top">
+<span class="date">2023-03-02</span>
+<span class="eh">AWS funds enhancement of C3 AI Law Enforcement; continued Google Cloud optimization</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span></div>
+<p class="narr">C3.ai disclosed progress optimizing products for Google Cloud and noted AWS funded enhancements to C3 AI Law Enforcement, integrating Amazon OpenSearch and AWS ML services, highlighting multi‑cloud GTM and technical alignment.</p>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">Substantial progress has been made to ensure that all C3 AI products perform optimally in the Google Cloud environment.</span>
+<span class="span">AWS funded C3 AI</span>
+<span class="span">C3 AI Law Enforcement</span>
+<span class="span">integrating Amazon OpenSearch and AWS Machine Learning services</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0011" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-03-02</span>
+<span class="eh">C3 AI platform confirmed interoperable with new LLMs from OpenAI, Google and others</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">C3.ai stated that its platform and applications are immediately compatible with the surge of new LLMs and GPTs from OpenAI, Google, Microsoft and others, underscoring a multi‑model architecture.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">strategic_option_value</span></div>
+<details>
+<summary>evidence — 1 source(s), 2 span(s)</summary>
+<div class="ev-src">web_search_findings[9]</div>
+<span class="span">The recent explosion of innovation and availability of large-language models and generative pre-trained transformers provided by OpenAI, Google, Microsoft</span>
+<span class="span">immediately compatible and interoperable</span>
+</details>
+</div>
+<div class="event t-web_only_unverified" id="E0003" data-providers="openai_chatgpt google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2023-01-31</span>
+<span class="eh">C3 Generative AI Product Suite launched; first app for Enterprise Search</span>
+<span class="badge">model_release</span>
+<span class="badge b-web_only_unverified">web-only (unverified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">openai_chatgpt</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">C3.ai introduced the C3 Generative AI Product Suite, beginning with Enterprise Search. The suite integrates leading models and capabilities from OpenAI and Google, including ChatGPT and GPT‑3, into C3 AI’s enterprise products.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">customer_experience_enhancement</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[2]</div>
+<span class="span">C3 Generative AI Product Suite</span>
+<span class="span">C3 Generative AI for Enterprise Search</span>
+<span class="span">Open AI, Google</span>
+<span class="span">ChatGPT and GPT-3</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0002" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2022-09-13</span>
+<span class="eh">Three-year expansion of Google Cloud partnership to scale co-selling and co-development</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">C3.ai and Google Cloud expanded their partnership for three years to accelerate joint selling, expand pilots with Fortune 2000 firms, and co-develop new AI-driven applications leveraging Google Cloud’s ML and analytics stack.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">ecosystem_control_loss</span> <span class="chchip">dependency_duration</span> <span class="chchip">contractual_commitment_strength</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[1]</div>
+<span class="span">three-year expansion of their partnership</span>
+<span class="span">scale their joint go-to-market strategy</span>
+<span class="span">expand their joint customer pilot programs</span>
+<span class="span">co-develop new AI-driven applications</span>
+</details>
+</div>
+<div class="event t-web_only_verified" id="E0001" data-providers="google_gemini_deepmind">
+<div class="ev-top">
+<span class="date">2021-09-01</span>
+<span class="eh">C3 AI and Google Cloud announce co-sell alliance and native platform integration</span>
+<span class="badge">product_integration</span>
+<span class="badge b-web_only_verified">web-only (verified)</span>
+</div>
+<div class="ev-top" style="margin-top:6px"><span class="badge">positive_demand</span> <span class="prov">google_gemini_deepmind</span></div>
+<p class="narr">C3.ai and Google Cloud formed an alliance to co-sell C3 AI applications and run them natively on Google Cloud services, including Kubernetes Engine, BigQuery, and Vertex AI. The agreement established a foundation for joint go-to-market and product interoperability.</p>
+<div class="ev-ch">channels: <span class="chchip">product_integration_exposure</span> <span class="chchip">ecosystem_control_loss</span></div>
+<details>
+<summary>evidence — 1 source(s), 4 span(s)</summary>
+<div class="ev-src">web_search_findings[0]</div>
+<span class="span">first-of-its-kind partnership</span>
+<span class="span">co-sell C3 AI&#x27;s enterprise AI applications</span>
+<span class="span">now available on Google Cloud&#x27;s</span>
+<span class="span">Google Kubernetes Engine, Google BigQuery, and Vertex AI</span>
+</details>
+</div>
+</div>
+<section class='block'><h2>Channels by cluster (addressability)</h2><table class='ch'>
+<tr><td class='grp' colspan='2'>Equity [+]</td></tr>
+<tr><td class='k'>equity_investment_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>AI Infrastructure / Capex [+]</td></tr>
+<tr><td class='k'>cloud_compute_revenue_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0009'>E0009</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>chip_accelerator_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>data_center_power_exposure</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>enterprise_adoption_exposure</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0010'>E0010</a>, <a class='evref' href='#E0014'>E0014</a>, <a class='evref' href='#E0015'>E0015</a></td></tr>
+<tr><td class='k'>strategic_option_value</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='grp' colspan='2'>Product &amp; Distribution [net]</td></tr>
+<tr><td class='k'>product_integration_exposure</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0011'>E0011</a>, <a class='evref' href='#E0012'>E0012</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>customer_experience_enhancement</td><td><a class='evref' href='#E0003'>E0003</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0012'>E0012</a></td></tr>
+<tr><td class='k'>distribution_channel_exposure</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>traffic_or_distribution_bypass_risk</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>Competitive Cannibalisation [-]</td></tr>
+<tr><td class='k'>competitive_threat_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>provider_as_platform_absorber</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>pricing_pressure_from_provider</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>ecosystem_control_loss</td><td><a class='evref' href='#E0001'>E0001</a>, <a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>customer_relationship_disintermediation</td><td><a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0005'>E0005</a>, <a class='evref' href='#E0008'>E0008</a></td></tr>
+<tr><td class='grp' colspan='2'>Content &amp; Regulatory [-]</td></tr>
+<tr><td class='k'>data_rights_or_content_commoditization_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='k'>regulatory_or_reputational_risk</td><td><span class='noev'>no_evidence</span></td></tr>
+<tr><td class='grp' colspan='2'>Modifiers (scalers, not summed)</td></tr>
+<tr><td class='k'>provider_specificity</td><td><a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>multi_model_hedge</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>switching_flexibility</td><td><a class='evref' href='#E0006'>E0006</a>, <a class='evref' href='#E0013'>E0013</a></td></tr>
+<tr><td class='k'>dependency_duration</td><td><a class='evref' href='#E0002'>E0002</a></td></tr>
+<tr><td class='k'>contractual_commitment_strength</td><td><a class='evref' href='#E0002'>E0002</a>, <a class='evref' href='#E0004'>E0004</a>, <a class='evref' href='#E0010'>E0010</a></td></tr>
+<tr><td class='k'>user_lock_in_relevance</td><td><span class='noev'>no_evidence</span></td></tr>
+</table></section>
+<section class='block'><h2>Open questions</h2><ul class='q'>
+<li>What portion of C3.ai’s annual bookings and revenue is transacted through hyperscaler marketplaces (GCP/AWS/Azure), and how does this affect gross margin and deal control?</li>
+<li>What is the production usage mix across LLM providers (OpenAI, Google/Gemini, Anthropic/Claude, Meta/Llama, others) within C3 Generative AI and C3 Code deployments?</li>
+<li>What is the updated ceiling, funding profile, and rollout schedule for the USAF RSO engagement, and how is it reflected in backlog/RPO?</li>
+<li>How much of the targeted ~$135M annualized opex savings has been realized to date, and what is the timeline to non‑GAAP profitability under the new sales motion?</li>
+</ul></section>
+<section class='block'><h2>Caveats</h2><ul class='q'>
+<li>Several items originate from company press releases or investor communications and may reflect optimistic positioning; third‑party validation is limited in the provided excerpts.</li>
+<li>The C3 Code comparative scoring is described as based on an evaluation using Anthropic’s Claude; independent verification details are not included in the excerpt.</li>
+<li>Macro news items were provided but not incorporated as firm‑specific events due to lack of direct linkage to C3.ai’s contracts, products, or disclosures in the evidence set.</li>
+</ul></section>
+<script>
+const btns=document.querySelectorAll('.filterbar button');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const f=b.dataset.f;
+  btns.forEach(x=>x.classList.toggle('active',x===b));
+  document.querySelectorAll('.event').forEach(ev=>{
+    const ps=(ev.dataset.providers||'').split(' ');
+    ev.style.display=(f==='all'||ps.includes(f))?'':'none';
+  });
+  document.querySelectorAll('.phase').forEach(ph=>{
+    const vis=[...ph.querySelectorAll('.event')].some(e=>e.style.display!=='none');
+    ph.style.display=vis?'':'none';
+  });
+}));
+</script>
+</div></body></html>
